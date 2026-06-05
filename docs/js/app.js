@@ -219,19 +219,18 @@ async function loadChapter(index) {
         }
     }
 
-    // Force re-animation
+    // Force re-animation asynchronously to avoid layout thrashing
     chapterEl.style.animation = 'none';
-    chapterEl.offsetHeight; // reflow
-    chapterEl.style.animation = '';
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            chapterEl.style.animation = '';
+        });
+    });
 
     // Update TOC active state
     document.querySelectorAll('.toc-item').forEach((el, i) => {
         el.classList.toggle('active', i === index);
     });
-
-    // Scroll TOC item into view
-    const activeItem = document.querySelector('.toc-item.active');
-    if (activeItem) activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 
     // Update nav buttons
     document.getElementById('prev-chapter').disabled = index === 0;
@@ -242,8 +241,14 @@ async function loadChapter(index) {
     document.getElementById('progress-text').textContent = pct + '%';
     document.getElementById('progress-fill').style.width = pct + '%';
 
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Defer layout-dependent scroll actions to next animation frame
+    requestAnimationFrame(() => {
+        const activeItem = document.querySelector('.toc-item.active');
+        if (activeItem) {
+            activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Save position
     localStorage.setItem('tochka-opory-chapter', index);
