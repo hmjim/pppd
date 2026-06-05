@@ -174,7 +174,7 @@ body {
 
 .sidebar-subtitle {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -189,7 +189,7 @@ body {
 .toc-module {
     padding: 8px 24px 4px;
     font-size: 0.7rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
@@ -246,7 +246,7 @@ body {
 
 .book-progress {
     font-size: 0.82rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 #progress-text {
@@ -284,7 +284,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 50vh;
-    color: var(--text-muted);
+    color: var(--text-secondary);
 }
 
 .spinner {
@@ -621,7 +621,7 @@ body {
     margin-top: 20px;
     display: inline-block;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     text-decoration: underline;
     transition: color var(--transition);
 }
