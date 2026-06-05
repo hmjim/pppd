@@ -107,10 +107,19 @@
     <!-- Main content area -->
     <main id="content" class="content">
         <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Навигация" style="max-width:720px;width:100%;margin-bottom:16px;font-size:0.85rem;">
-            <a href="../" style="color:var(--accent);text-decoration:none;">Точка Опоры</a>
-            <span style="color:var(--text-muted);margin:0 8px;">→</span>
-            <span style="color:var(--text-muted);">Мышечный панцирь</span>
+        <nav class="breadcrumb" aria-label="Навигация" style="max-width:720px;width:100%;margin-bottom:16px;font-size:0.85rem;" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="../" style="color:var(--accent);text-decoration:none;">
+                    <span itemprop="name">Точка Опоры</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </span>
+            <span style="color:var(--text-secondary);margin:0 8px;">→</span>
+            <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name" style="color:var(--text-secondary);">Мышечный панцирь</span>
+                <link itemprop="item" href="https://hmjim.github.io/pppd/chapters/04_muscle_armor.html" />
+                <meta itemprop="position" content="2" />
+            </span>
         </nav>
 
         <article class="chapter" itemscope itemtype="https://schema.org/Article">

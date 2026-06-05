@@ -37,6 +37,8 @@ let currentIndex = 0;
 // ── Build TOC ──
 function buildTOC() {
     const toc = document.getElementById('toc');
+    if (!toc) return;
+    toc.innerHTML = ''; // Clear statically pre-rendered links to prevent duplication
     let lastModule = null;
 
     CHAPTERS.forEach((ch, i) => {
