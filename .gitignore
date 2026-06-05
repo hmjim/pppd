@@ -1,0 +1,10 @@
+# ===== WHITELIST MODE =====
+# Ignore EVERYTHING by default
+*
+
+# Allow only the docs directory (deployed site)
+!docs/
+!docs/**
+
+# Allow .gitignore itself
+!.gitignore
