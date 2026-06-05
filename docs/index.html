@@ -194,7 +194,7 @@
     <!-- Sidebar / Table of Contents -->
     <aside id="sidebar" class="sidebar">
         <div class="sidebar-header">
-            <h2 class="sidebar-title">Точка Опоры</h2>
+            <h2 class="sidebar-title"><a href="#" id="home-link" style="text-decoration:none;color:inherit;">Точка Опоры</a></h2>
             <p class="sidebar-subtitle">Выход из ПППГ</p>
         </div>
         <nav id="toc" class="toc" aria-label="Оглавление"></nav>
@@ -210,92 +210,94 @@
 
     <!-- Main content area -->
     <main id="content" class="content">
-        <article id="chapter" class="chapter">
-            <!-- SEO Landing: visible to crawlers AND users on first load -->
-            <div id="seo-landing" class="seo-landing">
-                <h1>ПППГ — Полное руководство по выходу из головокружения</h1>
-                <p class="subtitle">Пошаговая система выхода из ПППГ, невроза, шаткости и тревоги. Книга «Точка Опоры» от Максима — человека, который прошёл через это и полностью выздоровел.</p>
+        <!-- SEO Landing: visible to crawlers AND users on first load -->
+        <div id="seo-landing" class="seo-landing">
+            <h1>ПППГ — Полное руководство по выходу из головокружения</h1>
+            <p class="subtitle">Пошаговая система выхода из ПППГ, невроза, шаткости и тревоги. Книга «Точка Опоры» от Максима — человека, который прошёл через это и полностью выздоровел.</p>
 
-                <div class="seo-stats">
-                    <div class="seo-stat"><span class="seo-stat-num">26</span><span class="seo-stat-label">глав</span></div>
-                    <div class="seo-stat"><span class="seo-stat-num">5</span><span class="seo-stat-label">модулей</span></div>
-                    <div class="seo-stat"><span class="seo-stat-num">9</span><span class="seo-stat-label">бесплатных глав</span></div>
-                    <div class="seo-stat"><span class="seo-stat-num">100%</span><span class="seo-stat-label">выздоровление</span></div>
-                </div>
-
-                <h2>Оглавление</h2>
-                <nav class="seo-toc" aria-label="Полное оглавление книги">
-                    <div class="seo-toc-module">Модуль 0: База</div>
-                    <a href="chapters/00_introduction.html" class="seo-toc-item"><span class="ch-num">0.</span> Вступление<span class="ch-desc">История выздоровления Максима после ДППГ. С чего всё началось.</span></a>
-                    <a href="chapters/01_what_is_pppg.html" class="seo-toc-item"><span class="ch-num">1.</span> Что такое ПППГ<span class="ch-desc">Симптомы, причины, механизм. Простым языком — как программист, не как пациент.</span></a>
-                    <a href="chapters/02_medical_checkup.html" class="seo-toc-item"><span class="ch-num">2.</span> Закрываем дверь в поликлинику<span class="ch-desc">Какие обследования пройти. Почему ВСД и остеохондроз — пустышки.</span></a>
-                    <a href="chapters/03_baseline_tests.html" class="seo-toc-item"><span class="ch-num">3.</span> Оцифровка: тесты HADS и DHI<span class="ch-desc">Как измерить тяжесть и отслеживать прогресс выздоровления.</span></a>
-
-                    <div class="seo-toc-module">Модуль 1: Тело</div>
-                    <a href="chapters/04_muscle_armor.html" class="seo-toc-item"><span class="ch-num">4.</span> Мышечный панцирь<span class="ch-desc">Почему тело зажато и как хроническое напряжение усиливает головокружение.</span></a>
-                    <a href="chapters/05_relaxation.html" class="seo-toc-item"><span class="ch-num">5.</span> Релаксация по Джекобсону<span class="ch-desc">Прогрессивная мышечная релаксация — пошаговая инструкция.</span></a>
-                    <a href="chapters/06_vestibular.html" class="seo-toc-item"><span class="ch-num">6.</span> Вестибулярная гимнастика<span class="ch-desc">Комплекс упражнений при ПППГ: глаза, голова, равновесие. Программа на 6 месяцев.</span></a>
-                    <a href="chapters/07_neurophysiology_basics.html" class="seo-toc-item"><span class="ch-num">7.</span> Нейрофизиология: базовые настройки<span class="ch-desc">Как мозг обрабатывает сигналы равновесия и почему возникают «ошибки».</span></a>
-                    <a href="chapters/08_visual_dependence.html" class="seo-toc-item"><span class="ch-num">8.</span> Зрительная зависимость<span class="ch-desc">Почему кружится голова в супермаркете и как переучить мозг.</span></a>
-
-                    <div class="seo-toc-module">Модуль 2: Батарейка 🔒</div>
-                    <span class="seo-toc-item locked"><span class="ch-num">9.</span> Адреналиновая петля</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">10.</span> Капкан CAS</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">11.</span> Ипохондрия</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">12.</span> Экспозиция</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">13.</span> Спорт и перезагрузка</span>
-
-                    <div class="seo-toc-module">Модуль 3: Мышление 🔒</div>
-                    <span class="seo-toc-item locked"><span class="ch-num">14.</span> Нейропластичность</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">15.</span> Метакогнитивная терапия</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">16.</span> Когнитивные искажения</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">17.</span> Где мы свернули не туда?</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">18.</span> Эго: ложная личность</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">19.</span> Внутренний ребёнок</span>
-
-                    <div class="seo-toc-module">Модуль 4: Выход 🔒</div>
-                    <span class="seo-toc-item locked"><span class="ch-num">20.</span> Анатомия отката</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">21.</span> Стратегия «Шторм»</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">22.</span> Новая личность</span>
-                    <span class="seo-toc-item locked"><span class="ch-num">23.</span> Выход в жизнь</span>
-                </nav>
-
-                <div class="seo-cta">
-                    <h2>Начни читать бесплатно</h2>
-                    <p>Первые 9 глав — бесплатно и без регистрации. Модули 2–4 доступны по ключу.</p>
-                    <a href="chapters/00_introduction.html" class="seo-cta-btn">Читать вступление →</a>
-                </div>
-
-                <h2>Часто задаваемые вопросы</h2>
-                <div class="seo-faq">
-                    <details>
-                        <summary>Что такое ПППГ?</summary>
-                        <div class="faq-answer">ПППГ (персистирующее постурально-перцептивное головокружение) — это функциональное расстройство нервной системы. Человек постоянно ощущает шаткость, неустойчивость и головокружение, хотя все обследования в норме. ПППГ — вторая по частоте причина обращений к отоневрологам в мире. Диагностируется у 15–20% пациентов вестибулярных клиник. <a href="chapters/01_what_is_pppg.html">Подробнее о ПППГ →</a></div>
-                    </details>
-                    <details>
-                        <summary>Можно ли вылечить ПППГ?</summary>
-                        <div class="faq-answer">Да, ПППГ излечимо. Основные методы: <a href="chapters/06_vestibular.html">вестибулярная реабилитация</a>, когнитивно-поведенческая терапия (КПТ), экспозиция, физическая активность. Процесс занимает от 2 до 6 месяцев при ежедневной работе. Автор книги полностью выздоровел за полгода. <a href="chapters/00_introduction.html">Читать историю →</a></div>
-                    </details>
-                    <details>
-                        <summary>Чем ПППГ отличается от ДППГ?</summary>
-                        <div class="faq-answer">ДППГ — это короткие приступы вращательного головокружения при смене положения головы, вызванные отолитами. ПППГ — хроническое ощущение шаткости, часто развивающееся ПОСЛЕ ДППГ. <a href="chapters/01_what_is_pppg.html">Подробнее →</a></div>
-                    </details>
-                    <details>
-                        <summary>Какие упражнения помогают при ПППГ?</summary>
-                        <div class="faq-answer">При ПППГ помогает <a href="chapters/06_vestibular.html">вестибулярная гимнастика</a>: упражнения для глаз, повороты головы, тренировка равновесия. Также эффективна <a href="chapters/05_relaxation.html">прогрессивная мышечная релаксация по Джекобсону</a> и регулярная физическая активность.</div>
-                    </details>
-                    <details>
-                        <summary>Какие обследования нужно пройти?</summary>
-                        <div class="faq-answer">МРТ головного мозга, УЗДГ сосудов, консультация отоневролога и невролога. Важно исключить органическую патологию. Подробный чек-лист — в главе <a href="chapters/02_medical_checkup.html">«Закрываем дверь в поликлинику»</a>.</div>
-                    </details>
-                </div>
-
-                <hr>
-                <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
-                    © Максим, 2026. Книга «Точка Опоры» — пошаговая система выхода из ПППГ.<br>
-                    Связь: <a href="https://t.me/Hmjim" style="color: var(--accent);">Telegram @Hmjim</a>
-                </p>
+            <div class="seo-stats">
+                <div class="seo-stat"><span class="seo-stat-num">26</span><span class="seo-stat-label">глав</span></div>
+                <div class="seo-stat"><span class="seo-stat-num">5</span><span class="seo-stat-label">модулей</span></div>
+                <div class="seo-stat"><span class="seo-stat-num">9</span><span class="seo-stat-label">бесплатных глав</span></div>
+                <div class="seo-stat"><span class="seo-stat-num">100%</span><span class="seo-stat-label">выздоровление</span></div>
             </div>
+
+            <h2>Оглавление</h2>
+            <nav class="seo-toc" aria-label="Полное оглавление книги">
+                <div class="seo-toc-module">Модуль 0: База</div>
+                <a href="chapters/00_introduction.html" class="seo-toc-item"><span class="ch-num">0.</span> Вступление<span class="ch-desc">История выздоровления Максима после ДППГ. С чего всё началось.</span></a>
+                <a href="chapters/01_what_is_pppg.html" class="seo-toc-item"><span class="ch-num">1.</span> Что такое ПППГ<span class="ch-desc">Симптомы, причины, механизм. Простым языком — как программист, не как пациент.</span></a>
+                <a href="chapters/02_medical_checkup.html" class="seo-toc-item"><span class="ch-num">2.</span> Закрываем дверь в поликлинику<span class="ch-desc">Какие обследования пройти. Почему ВСД и остеохондроз — пустышки.</span></a>
+                <a href="chapters/03_baseline_tests.html" class="seo-toc-item"><span class="ch-num">3.</span> Оцифровка: тесты HADS и DHI<span class="ch-desc">Как измерить тяжесть и отслеживать прогресс выздоровления.</span></a>
+
+                <div class="seo-toc-module">Модуль 1: Тело</div>
+                <a href="chapters/04_muscle_armor.html" class="seo-toc-item"><span class="ch-num">4.</span> Мышечный панцирь<span class="ch-desc">Почему тело зажато и как хроническое напряжение усиливает головокружение.</span></a>
+                <a href="chapters/05_relaxation.html" class="seo-toc-item"><span class="ch-num">5.</span> Релаксация по Джекобсону<span class="ch-desc">Прогрессивная мышечная релаксация — пошаговая инструкция.</span></a>
+                <a href="chapters/06_vestibular.html" class="seo-toc-item"><span class="ch-num">6.</span> Вестибулярная гимнастика<span class="ch-desc">Комплекс упражнений при ПППГ: глаза, голова, равновесие. Программа на 6 месяцев.</span></a>
+                <a href="chapters/07_neurophysiology_basics.html" class="seo-toc-item"><span class="ch-num">7.</span> Нейрофизиология: базовые настройки<span class="ch-desc">Как мозг обрабатывает сигналы равновесия и почему возникают «ошибки».</span></a>
+                <a href="chapters/08_visual_dependence.html" class="seo-toc-item"><span class="ch-num">8.</span> Зрительная зависимость<span class="ch-desc">Почему кружится голова в супермаркете и как переучить мозг.</span></a>
+
+                <div class="seo-toc-module">Модуль 2: Батарейка 🔒</div>
+                <span class="seo-toc-item locked"><span class="ch-num">9.</span> Адреналиновая петля</span>
+                <span class="seo-toc-item locked"><span class="ch-num">10.</span> Капкан CAS</span>
+                <span class="seo-toc-item locked"><span class="ch-num">11.</span> Ипохондрия</span>
+                <span class="seo-toc-item locked"><span class="ch-num">12.</span> Экспозиция</span>
+                <span class="seo-toc-item locked"><span class="ch-num">13.</span> Спорт и перезагрузка</span>
+
+                <div class="seo-toc-module">Модуль 3: Мышление 🔒</div>
+                <span class="seo-toc-item locked"><span class="ch-num">14.</span> Нейропластичность</span>
+                <span class="seo-toc-item locked"><span class="ch-num">15.</span> Метакогнитивная терапия</span>
+                <span class="seo-toc-item locked"><span class="ch-num">16.</span> Когнитивные искажения</span>
+                <span class="seo-toc-item locked"><span class="ch-num">17.</span> Где мы свернули не туда?</span>
+                <span class="seo-toc-item locked"><span class="ch-num">18.</span> Эго: ложная личность</span>
+                <span class="seo-toc-item locked"><span class="ch-num">19.</span> Внутренний ребёнок</span>
+
+                <div class="seo-toc-module">Модуль 4: Выход 🔒</div>
+                <span class="seo-toc-item locked"><span class="ch-num">20.</span> Анатомия отката</span>
+                <span class="seo-toc-item locked"><span class="ch-num">21.</span> Стратегия «Шторм»</span>
+                <span class="seo-toc-item locked"><span class="ch-num">22.</span> Новая личность</span>
+                <span class="seo-toc-item locked"><span class="ch-num">23.</span> Выход в жизнь</span>
+            </nav>
+
+            <div class="seo-cta">
+                <h2>Начни читать бесплатно</h2>
+                <p>Первые 9 глав — бесплатно и без регистрации. Модули 2–4 доступны по ключу.</p>
+                <a href="chapters/00_introduction.html" class="seo-cta-btn">Читать вступление →</a>
+            </div>
+
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="seo-faq">
+                <details>
+                    <summary>Что такое ПППГ?</summary>
+                    <div class="faq-answer">ПППГ (персистирующее постурально-перцептивное головокружение) — это функциональное расстройство нервной системы. Человек постоянно ощущает шаткость, неустойчивость и головокружение, хотя все обследования в норме. ПППГ — вторая по частоте причина обращений к отоневрологам в мире. Диагностируется у 15–20% пациентов вестибулярных клиник. <a href="chapters/01_what_is_pppg.html">Подробнее о ПППГ →</a></div>
+                </details>
+                <details>
+                    <summary>Можно ли вылечить ПППГ?</summary>
+                    <div class="faq-answer">Да, ПППГ излечимо. Основные методы: <a href="chapters/06_vestibular.html">вестибулярная реабилитация</a>, когнитивно-поведенческая терапия (КПТ), экспозиция, физическая активность. Процесс занимает от 2 до 6 месяцев при ежедневной работе. Автор книги полностью выздоровел за полгода. <a href="chapters/00_introduction.html">Читать историю →</a></div>
+                </details>
+                <details>
+                    <summary>Чем ПППГ отличается от ДППГ?</summary>
+                    <div class="faq-answer">ДППГ — это короткие приступы вращательного головокружения при смене положения головы, вызванные отолитами. ПППГ — хроническое ощущение шаткости, часто развивающееся ПОСЛЕ ДППГ. <a href="chapters/01_what_is_pppg.html">Подробнее →</a></div>
+                </details>
+                <details>
+                    <summary>Какие упражнения помогают при ПППГ?</summary>
+                    <div class="faq-answer">При ПППГ помогает <a href="chapters/06_vestibular.html">вестибулярная гимнастика</a>: упражнения для глаз, повороты головы, тренировка равновесия. Также эффективна <a href="chapters/05_relaxation.html">прогрессивная мышечная релаксация по Джекобсону</a> и регулярная физическая активность.</div>
+                </details>
+                <details>
+                    <summary>Какие обследования нужно пройти?</summary>
+                    <div class="faq-answer">МРТ головного мозга, УЗДГ сосудов, консультация отоневролога и невролога. Важно исключить органическую патологию. Подробный чек-лист — в главе <a href="chapters/02_medical_checkup.html">«Закрываем дверь в поликлинику»</a>.</div>
+                </details>
+            </div>
+
+            <hr>
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
+                © Максим, 2026. Книга «Точка Опоры» — пошаговая система выхода из ПППГ.<br>
+                Связь: <a href="https://t.me/Hmjim" style="color: var(--accent);">Telegram @Hmjim</a>
+            </p>
+        </div>
+
+        <article id="chapter" class="chapter" style="display:none;">
+            <!-- Chapter content will be loaded here -->
         </article>
 
         <!-- Chapter navigation (hidden on landing to prevent CLS) -->

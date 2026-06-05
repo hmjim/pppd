@@ -180,9 +180,10 @@ async function loadChapter(index) {
     // Show loading
     chapterEl.innerHTML = '<div class="chapter-loading"><div class="spinner"></div><p>Загрузка...</p></div>';
 
-    // Hide SEO landing, show chapter nav
+    // Hide SEO landing, show chapter content and nav
     const seoLanding = document.getElementById('seo-landing');
     if (seoLanding) seoLanding.style.display = 'none';
+    chapterEl.style.display = '';
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = '';
 
@@ -355,6 +356,22 @@ function initCopyProtection() {
     });
 }
 
+// ── Show Landing Page ──
+function showLanding() {
+    const seoLanding = document.getElementById('seo-landing');
+    if (seoLanding) seoLanding.style.display = '';
+    const chapterEl = document.getElementById('chapter');
+    if (chapterEl) chapterEl.style.display = 'none';
+    const navBar = document.getElementById('chapter-nav-bar');
+    if (navBar) navBar.style.display = 'none';
+    
+    // Reset TOC active state
+    document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
+    
+    // Save position
+    localStorage.removeItem('tochka-opory-chapter');
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
     buildTOC();
@@ -367,7 +384,46 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prev-chapter').addEventListener('click', () => loadChapter(currentIndex - 1));
     document.getElementById('next-chapter').addEventListener('click', () => loadChapter(currentIndex + 1));
 
-    // Restore last read position
+    // Home link listener
+    const homeLink = document.getElementById('home-link');
+    if (homeLink) {
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showLanding();
+        });
+    }
+
+    // Intercept clicks on landing page TOC items to prevent full page reloads in SPA
+    document.querySelectorAll('.seo-toc-item').forEach(link => {
+        if (!link.classList.contains('locked')) {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('chapters/')) {
+                    const id = href.replace('chapters/', '').replace('.html', '');
+                    const idx = CHAPTERS.findIndex(ch => ch.id === id);
+                    if (idx !== -1) {
+                        e.preventDefault();
+                        loadChapter(idx);
+                    }
+                }
+            });
+        }
+    });
+
+    // Intercept CTA button click
+    const ctaBtn = document.querySelector('.seo-cta-btn');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadChapter(0);
+        });
+    }
+
+    // Restore last read position (if empty, stay on landing page)
     const saved = parseInt(localStorage.getItem('tochka-opory-chapter'), 10);
-    loadChapter(isNaN(saved) ? 0 : saved);
+    if (!isNaN(saved)) {
+        loadChapter(saved);
+    } else {
+        showLanding();
+    }
 });
