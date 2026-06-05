@@ -249,6 +249,11 @@ async function loadChapter(index) {
             activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Recalculate dimensions after layout settles
+        requestAnimationFrame(() => {
+            updateCachedHeight();
+        });
     });
 
     // Save position
@@ -293,19 +298,26 @@ function initMobileMenu() {
 }
 
 // ── Scroll Progress ──
+let cachedDocHeight = 0;
+
+function updateCachedHeight() {
+    cachedDocHeight = document.documentElement.scrollHeight - window.innerHeight;
+}
+
 function initScrollProgress() {
     window.addEventListener('scroll', () => {
+        if (cachedDocHeight <= 0) return;
         const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (docHeight > 0) {
-            // Blend chapter progress with scroll progress within current chapter
-            const scrollPct = scrollTop / docHeight;
-            const chapterBase = currentIndex / CHAPTERS.length;
-            const chapterStep = 1 / CHAPTERS.length;
-            const totalPct = Math.round((chapterBase + chapterStep * scrollPct) * 100);
-            document.getElementById('progress-fill').style.width = totalPct + '%';
-        }
-    });
+        const scrollPct = Math.min(1, Math.max(0, scrollTop / cachedDocHeight));
+        const chapterBase = currentIndex / CHAPTERS.length;
+        const chapterStep = 1 / CHAPTERS.length;
+        const totalPct = Math.round((chapterBase + chapterStep * scrollPct) * 100);
+        document.getElementById('progress-fill').style.width = totalPct + '%';
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+        updateCachedHeight();
+    }, { passive: true });
 }
 
 // ── Keyboard Nav ──
@@ -370,6 +382,11 @@ function showLanding() {
     
     // Save position
     localStorage.removeItem('tochka-opory-chapter');
+
+    // Recalculate dimensions
+    requestAnimationFrame(() => {
+        updateCachedHeight();
+    });
 }
 
 // ── Init ──
