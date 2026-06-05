@@ -52,7 +52,12 @@ function buildTOC() {
         link.className = 'toc-item';
         link.textContent = ch.title;
         link.dataset.index = i;
-        link.addEventListener('click', () => loadChapter(i));
+        // SEO: add crawlable href to static pages
+        link.href = 'chapters/' + ch.id + '.html';
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadChapter(i);
+        });
         toc.appendChild(link);
     });
 }
@@ -174,6 +179,12 @@ async function loadChapter(index) {
 
     // Show loading
     chapterEl.innerHTML = '<div class="chapter-loading"><div class="spinner"></div><p>Загрузка...</p></div>';
+
+    // Hide SEO landing, show chapter nav
+    const seoLanding = document.getElementById('seo-landing');
+    if (seoLanding) seoLanding.style.display = 'none';
+    const navBar = document.getElementById('chapter-nav-bar');
+    if (navBar) navBar.style.display = '';
 
     const savedKey = localStorage.getItem('tochka-opory-license-key');
     const isLicensed = !!savedKey;
