@@ -13,24 +13,25 @@ const CHAPTERS = [
     { id: '06_vestibular',             title: 'Вестибулярная гимнастика',            module: 'Модуль 1: Тело' },
     { id: '07_neurophysiology_basics', title: 'Базовые настройки',                   module: 'Модуль 1: Тело' },
     { id: '08_visual_dependence',      title: 'Зрительная зависимость',              module: 'Модуль 1: Тело' },
-    { id: '09_adrenaline_loop',        title: 'Адреналиновая петля',                 module: 'Модуль 2: Батарейка' },
-    { id: '10_cas_trap',               title: 'Капкан CAS',                          module: 'Модуль 2: Батарейка' },
-    { id: '11_hypochondria',           title: 'Ипохондрия',                          module: 'Модуль 2: Батарейка' },
-    { id: '12_exposure',               title: 'Экспозиция',                          module: 'Модуль 2: Батарейка' },
-    { id: '13_sport',                  title: 'Спорт и перезагрузка',                module: 'Модуль 2: Батарейка' },
-    { id: '14_neuroplasticity',        title: 'Нейропластичность',                   module: 'Модуль 3: Мышление' },
-    { id: '15_metacognition',          title: 'Метакогнитивная терапия',              module: 'Модуль 3: Мышление' },
-    { id: '16_cognitive_distortions',  title: 'Когнитивные искажения',               module: 'Модуль 3: Мышление' },
-    { id: '17_root_causes',            title: 'Где мы свернули не туда?',            module: 'Модуль 3: Мышление' },
-    { id: '18_ego',                    title: 'Эго: ложная личность',                module: 'Модуль 3: Мышление' },
-    { id: '19_inner_child',            title: 'Внутренний ребёнок',                  module: 'Модуль 3: Мышление' },
-    { id: '20_setback_anatomy',        title: 'Анатомия отката',                     module: 'Модуль 4: Выход' },
-    { id: '21_storm_strategy',         title: 'Стратегия «Шторм»',                   module: 'Модуль 4: Выход' },
-    { id: '22_new_identity',           title: 'Новая личность',                      module: 'Модуль 4: Выход' },
-    { id: '23_farewell',               title: 'Выход в жизнь',                       module: 'Модуль 4: Выход' },
-    { id: '24_case_studies',           title: 'Истории выздоровления',               module: 'Кейсы' },
-    { id: '25_appendix',              title: 'Приложения',                           module: 'Приложения' },
-    { id: '26_sleep',                  title: 'Сон и ПППГ',                          module: 'Модуль 2: Батарейка' },
+    { id: '26_sleep',                  title: 'Сон и ПППГ',                          module: 'Модуль 1: Тело' },
+    { id: '09_adrenaline_loop',        title: 'Адреналиновая петля',                 module: 'Модуль 2: Батарейка', paid: true },
+    { id: '10_cas_trap',               title: 'Капкан CAS',                          module: 'Модуль 2: Батарейка', paid: true },
+    { id: '11_hypochondria',           title: 'Ипохондрия',                          module: 'Модуль 2: Батарейка', paid: true },
+    { id: '12_exposure',               title: 'Экспозиция',                          module: 'Модуль 2: Батарейка', paid: true },
+    { id: '13_sport',                  title: 'Спорт и перезагрузка',                module: 'Модуль 2: Батарейка', paid: true },
+    { id: '27_depersonalization',      title: 'Дереализация',                      module: 'Модуль 2: Батарейка', paid: true },
+    { id: '14_neuroplasticity',        title: 'Нейропластичность',                   module: 'Модуль 3: Мышление', paid: true },
+    { id: '15_metacognition',          title: 'Метакогнитивная терапия',              module: 'Модуль 3: Мышление', paid: true },
+    { id: '16_cognitive_distortions',  title: 'Когнитивные искажения',               module: 'Модуль 3: Мышление', paid: true },
+    { id: '17_root_causes',            title: 'Где мы свернули не туда?',            module: 'Модуль 3: Мышление', paid: true },
+    { id: '18_ego',                    title: 'Эго: ложная личность',                module: 'Модуль 3: Мышление', paid: true },
+    { id: '19_inner_child',            title: 'Внутренний ребёнок',                  module: 'Модуль 3: Мышление', paid: true },
+    { id: '20_setback_anatomy',        title: 'Анатомия отката',                     module: 'Модуль 4: Выход', paid: true },
+    { id: '21_storm_strategy',         title: 'Стратегия «Шторм»',                   module: 'Модуль 4: Выход', paid: true },
+    { id: '22_new_identity',           title: 'Новая личность',                      module: 'Модуль 4: Выход', paid: true },
+    { id: '23_farewell',               title: 'Выход в жизнь',                       module: 'Модуль 4: Выход', paid: true },
+    { id: '24_case_studies',           title: 'Истории выздоровления',               module: 'Кейсы', paid: true },
+    { id: '25_appendix',              title: 'Приложения',                           module: 'Приложения', paid: true },
 ];
 
 let currentIndex = 0;
@@ -194,7 +195,7 @@ async function loadChapter(index) {
     const isLicensed = !!savedKey;
     let isPaywall = false;
 
-    if (index >= 9 && !isLicensed) {
+    if (ch.paid && !isLicensed) {
         isPaywall = true;
         renderPaywall(chapterEl, index);
     } else {
@@ -205,7 +206,7 @@ async function loadChapter(index) {
             } else {
                 let md = await res.text();
 
-                if (index >= 9) {
+                if (ch.paid) {
                     try {
                         md = await decryptContent(md, savedKey);
                     } catch (e) {
