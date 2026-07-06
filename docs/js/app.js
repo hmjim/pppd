@@ -30,6 +30,7 @@ const CHAPTERS = [
     { id: '23_farewell',               title: 'Выход в жизнь',                       module: 'Модуль 4: Выход' },
     { id: '24_case_studies',           title: 'Истории выздоровления',               module: 'Кейсы' },
     { id: '25_appendix',              title: 'Приложения',                           module: 'Приложения' },
+    { id: '26_sleep',                  title: 'Сон и ПППГ',                          module: 'Модуль 2: Батарейка' },
 ];
 
 let currentIndex = 0;
@@ -216,6 +217,15 @@ async function loadChapter(index) {
                 }
 
                 chapterEl.innerHTML = marked.parse(md);
+
+                // Inject PDF download button for licensed users
+                if (isLicensed) {
+                    const pdfBtn = document.createElement('button');
+                    pdfBtn.className = 'pdf-download-btn';
+                    pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
+                    pdfBtn.addEventListener('click', () => window.print());
+                    chapterEl.insertBefore(pdfBtn, chapterEl.firstChild.nextSibling);
+                }
             }
         } catch {
             chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Глава «${ch.title}» пока не написана.</p>`;
