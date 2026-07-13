@@ -128,28 +128,97 @@
             <meta itemprop="headline" content="Синдром когнитивного внимания (CAS) при ПППГ | Точка Опоры">
             <meta itemprop="author" content="Максим">
             
-            <h1>Капкан CAS</h1>
-            <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
-                CAS (Cognitive Attentional Syndrome) при ПППГ: как мониторинг симптомов, руминация и избегание удерживают вас в болезни. Метакогнитивный подход.
-            </p>
-            <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:32px;text-align:center;margin:32px 0;">
-                <p style="font-size:1.5rem;margin-bottom:8px;">🔒</p>
-                <h2 style="font-family:var(--font-heading);margin-bottom:12px;">Эта глава доступна по ключу</h2>
-                <p style="color:var(--text-secondary);margin-bottom:8px;">Глава «Капкан CAS» входит в Модуль 2: Батарейка.</p>
-                <p style="color:var(--text-secondary);margin-bottom:24px;">Первые 10 глав книги «Точка Опоры» — <strong>бесплатно</strong>. Модули 2–4 доступны по лицензионному ключу.</p>
-                <a href="../" style="display:inline-block;padding:14px 32px;background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;">Читать бесплатные главы →</a>
-                <p style="margin-top:16px;font-size:0.85rem;color:var(--text-muted);">Связь: <a href="https://t.me/Hmjim" style="color:var(--accent);">Telegram @Hmjim</a></p>
+            <div id="paywall-screen">
+                <h1>Капкан CAS</h1>
+                <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
+                    CAS (Cognitive Attentional Syndrome) при ПППГ: как мониторинг симптомов, руминация и избегание удерживают вас в болезни. Метакогнитивный подход.
+                </p>
+                <div class="paywall-container">
+                    <span class="paywall-icon">🔐</span>
+                    <h2 class="paywall-title">Эта глава доступна по ключу</h2>
+                    <p class="paywall-text">Глава «Капкан CAS» входит в Модуль 2: Батарейка. Первые 10 глав — <strong>бесплатно</strong>. Модули 2–4 доступны по лицензионному ключу.</p>
+                    <div class="paywall-form">
+                        <input type="text" id="paywall-key" class="paywall-input" placeholder="Введи ключ доступа">
+                        <button id="paywall-submit" class="paywall-btn">Активировать доступ</button>
+                        <p id="paywall-error" style="color:#ff6b6b;font-size:0.85rem;display:none;margin-top:4px;"></p>
+                    </div>
+                    <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Связаться с автором в Telegram (@Hmjim) для покупки доступа</a>
+                </div>
+                <h3 style="margin-top:32px;">Бесплатные главы книги</h3>
+                <ul style="line-height:2;">
+                    <li><a href="00_introduction.html" style="color:var(--accent);">Вступление — история выздоровления</a></li>
+                    <li><a href="01_what_is_pppg.html" style="color:var(--accent);">Что такое ПППГ — симптомы, причины</a></li>
+                    <li><a href="02_medical_checkup.html" style="color:var(--accent);">Какие обследования пройти</a></li>
+                    <li><a href="06_vestibular.html" style="color:var(--accent);">Вестибулярная гимнастика — упражнения</a></li>
+                    <li><a href="07_neurophysiology_basics.html" style="color:var(--accent);">Нейрофизиология головокружения</a></li>
+                </ul>
             </div>
-            <h3>Что вы узнаете в этой главе</h3>
-            <p style="color:var(--text-secondary);line-height:1.7;">CAS (Cognitive Attentional Syndrome) при ПППГ: как мониторинг симптомов, руминация и избегание удерживают вас в болезни. Метакогнитивный подход.</p>
-            <h3 style="margin-top:32px;">Бесплатные главы книги</h3>
-            <ul style="line-height:2;">
-                <li><a href="00_introduction.html" style="color:var(--accent);">Вступление — история выздоровления</a></li>
-                <li><a href="01_what_is_pppg.html" style="color:var(--accent);">Что такое ПППГ — симптомы, причины</a></li>
-                <li><a href="02_medical_checkup.html" style="color:var(--accent);">Какие обследования пройти</a></li>
-                <li><a href="06_vestibular.html" style="color:var(--accent);">Вестибулярная гимнастика — упражнения</a></li>
-                <li><a href="07_neurophysiology_basics.html" style="color:var(--accent);">Нейрофизиология головокружения</a></li>
-            </ul>
+            <div id="chapter-content" style="display:none;"></div>
+            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+            <script>
+            (function() {
+                var CHAPTER_ID = '10_cas_trap';
+
+                async function decryptContent(payload, password) {
+                    var parts = payload.split('.');
+                    if (parts.length !== 2) throw new Error('Invalid format');
+                    var ivBuf = Uint8Array.from(atob(parts[0]), function(c) { return c.charCodeAt(0); }).buffer;
+                    var combined = Uint8Array.from(atob(parts[1]), function(c) { return c.charCodeAt(0); }).buffer;
+                    var enc = new TextEncoder();
+                    var hash = await crypto.subtle.digest('SHA-256', enc.encode(password.trim()));
+                    var key = await crypto.subtle.importKey('raw', hash, { name: 'AES-GCM' }, false, ['decrypt']);
+                    var dec = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: ivBuf }, key, combined);
+                    return new TextDecoder().decode(dec);
+                }
+
+                async function tryUnlock(password) {
+                    var res = await fetch(CHAPTER_ID + '.md');
+                    if (!res.ok) throw new Error('Fetch failed');
+                    var encrypted = await res.text();
+                    return await decryptContent(encrypted, password);
+                }
+
+                // Auto-unlock if key is saved
+                var savedKey = localStorage.getItem('tochka-opory-license-key');
+                if (savedKey) {
+                    tryUnlock(savedKey).then(function(md) {
+                        document.getElementById('paywall-screen').style.display = 'none';
+                        var el = document.getElementById('chapter-content');
+                        el.style.display = '';
+                        el.innerHTML = marked.parse(md);
+                    }).catch(function() {
+                        localStorage.removeItem('tochka-opory-license-key');
+                    });
+                }
+
+                // Manual unlock
+                document.getElementById('paywall-submit').addEventListener('click', async function() {
+                    var input = document.getElementById('paywall-key');
+                    var key = input.value.trim();
+                    var errEl = document.getElementById('paywall-error');
+                    var btn = document.getElementById('paywall-submit');
+                    if (!key) { errEl.textContent = 'Введите ключ'; errEl.style.display = ''; return; }
+                    btn.textContent = 'Проверка...'; btn.disabled = true; errEl.style.display = 'none';
+                    try {
+                        var md = await tryUnlock(key);
+                        localStorage.setItem('tochka-opory-license-key', key);
+                        document.getElementById('paywall-screen').style.display = 'none';
+                        var el = document.getElementById('chapter-content');
+                        el.style.display = '';
+                        el.innerHTML = marked.parse(md);
+                    } catch(e) {
+                        errEl.textContent = 'Неверный ключ. Проверьте правильность ввода.';
+                        errEl.style.display = '';
+                        btn.textContent = 'Активировать доступ'; btn.disabled = false;
+                    }
+                });
+
+                // Enter key support
+                document.getElementById('paywall-key').addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') document.getElementById('paywall-submit').click();
+                });
+            })();
+            </script>
         </article>
 
         <!-- Related chapters (interlinking) -->
