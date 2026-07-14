@@ -217,7 +217,12 @@ async function loadChapter(index) {
                     }
                 }
 
-                chapterEl.innerHTML = marked.parse(md);
+                let html = marked.parse(md);
+                // Fix relative paths: in SPA context (URL is /pppd/),
+                // ../materials/ resolves to /materials/ (wrong).
+                // Rewrite to materials/ which resolves to /pppd/materials/ (correct).
+                html = html.replace(/href="\.\.\/materials\//g, 'href="materials/');
+                chapterEl.innerHTML = html;
 
                 // Inject PDF download button for licensed users
                 if (isLicensed) {
