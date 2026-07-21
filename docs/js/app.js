@@ -230,14 +230,13 @@ async function loadChapter(index) {
                     pdfBtn.className = 'pdf-download-btn';
                     pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
                     pdfBtn.addEventListener('click', async () => {
-                        // Telegram WebView ignores window.print() — generate PDF in-place via html2pdf.js
                         const ua = navigator.userAgent || '';
                         const isTelegramWebView = /Telegram/i.test(ua) || (typeof window.TelegramWebviewProxy !== 'undefined');
                         if (!isTelegramWebView) {
                             window.print();
                             return;
                         }
-                        // Lazy-load html2pdf.js from CDN (only when needed)
+                        // Lazy-load html2pdf.js
                         if (!window.html2pdf) {
                             pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Загрузка...';
                             pdfBtn.disabled = true;
@@ -250,7 +249,7 @@ async function loadChapter(index) {
                                     document.head.appendChild(s);
                                 });
                             } catch {
-                                alert('Не удалось загрузить модуль PDF. Попробуй открыть во внешнем браузере.');
+                                alert('Не удалось загрузить модуль PDF. Открой страницу во внешнем браузере (⋮ → Open in...)');
                                 pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
                                 pdfBtn.disabled = false;
                                 return;
@@ -259,20 +258,76 @@ async function loadChapter(index) {
                         pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Генерация PDF...';
                         pdfBtn.disabled = true;
                         try {
+                            // Clone chapter into a clean print-friendly container
+                            // html2canvas renders live DOM including dark theme CSS vars → garbage
+                            const clone = chapterEl.cloneNode(true);
+                            // Remove PDF button from clone
+                            const cloneBtn = clone.querySelector('.pdf-download-btn');
+                            if (cloneBtn) cloneBtn.remove();
+
+                            const wrapper = document.createElement('div');
+                            wrapper.style.cssText = 'position:fixed;left:-9999px;top:0;width:680px;padding:20px;' +
+                                'background:#fff;color:#1a1a2e;font-family:Inter,-apple-system,sans-serif;' +
+                                'font-size:15px;line-height:1.7;';
+                            // Force all children to inherit print-safe colors
+                            const style = document.createElement('style');
+                            style.textContent = `
+                                .pdf-print-clone, .pdf-print-clone * {
+                                    color: #1a1a2e !important;
+                                    background: transparent !important;
+                                    border-color: #ccc !important;
+                                    box-shadow: none !important;
+                                    text-shadow: none !important;
+                                }
+                                .pdf-print-clone h1, .pdf-print-clone h2, .pdf-print-clone h3 {
+                                    color: #1a1a2e !important;
+                                    font-family: Georgia, serif !important;
+                                }
+                                .pdf-print-clone h1 { font-size: 22px !important; margin-bottom: 10px !important; }
+                                .pdf-print-clone h2 { font-size: 18px !important; margin: 28px 0 12px !important; border-bottom: 1px solid #ccc !important; padding-bottom: 6px !important; }
+                                .pdf-print-clone h3 { font-size: 15px !important; margin: 20px 0 8px !important; }
+                                .pdf-print-clone p { margin-bottom: 12px !important; }
+                                .pdf-print-clone strong { color: #2a4a8f !important; }
+                                .pdf-print-clone em { color: #444 !important; }
+                                .pdf-print-clone blockquote {
+                                    background: #f5f5ff !important;
+                                    border-left: 3px solid #4a6adf !important;
+                                    padding: 12px 16px !important;
+                                    margin: 16px 0 !important;
+                                    border-radius: 0 6px 6px 0 !important;
+                                }
+                                .pdf-print-clone a { color: #2a4a8f !important; }
+                                .pdf-print-clone ul, .pdf-print-clone ol { padding-left: 20px !important; }
+                                .pdf-print-clone li { margin-bottom: 6px !important; }
+                                .pdf-print-clone table { border-collapse: collapse !important; width: 100% !important; }
+                                .pdf-print-clone th, .pdf-print-clone td {
+                                    padding: 8px 12px !important;
+                                    border: 1px solid #ccc !important;
+                                    background: #fff !important;
+                                }
+                                .pdf-print-clone th { background: #f0f0f5 !important; font-weight: 600 !important; }
+                            `;
+                            wrapper.appendChild(style);
+                            clone.className = 'pdf-print-clone';
+                            wrapper.appendChild(clone);
+                            document.body.appendChild(wrapper);
+
                             const chTitle = CHAPTERS[currentIndex]?.title || 'chapter';
                             const safeTitle = chTitle.replace(/[^\wа-яёА-ЯЁ\s-]/g, '').trim();
                             await window.html2pdf()
                                 .set({
-                                    margin: [15, 15, 15, 15],
+                                    margin: [10, 10, 10, 10],
                                     filename: safeTitle + '.pdf',
-                                    image: { type: 'jpeg', quality: 0.95 },
-                                    html2canvas: { scale: 2, useCORS: true },
+                                    image: { type: 'jpeg', quality: 0.92 },
+                                    html2canvas: { scale: 1.5, useCORS: true, backgroundColor: '#ffffff', width: 680 },
                                     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                                    pagebreak: { mode: ['css', 'legacy'] }
                                 })
-                                .from(chapterEl)
+                                .from(wrapper)
                                 .save();
-                        } catch {
+
+                            document.body.removeChild(wrapper);
+                        } catch (e) {
                             alert('Ошибка генерации PDF.');
                         }
                         pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
