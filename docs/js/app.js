@@ -257,32 +257,52 @@ async function loadChapter(index) {
                         }
                         pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Генерация PDF...';
                         pdfBtn.disabled = true;
+                        let pdfStyle = null;
                         try {
                             // Temporarily switch to light theme so html2canvas sees dark text on white bg
                             const wasLight = document.body.classList.contains('light');
                             if (!wasLight) document.body.classList.add('light');
+                            // Force maximum contrast black text for PDF
+                            pdfStyle = document.createElement('style');
+                            pdfStyle.textContent = '#chapter, #chapter * { color: #000 !important; } #chapter strong { color: #1a3a7a !important; } #chapter em { color: #333 !important; } #chapter blockquote, #chapter blockquote * { color: #222 !important; }';
+                            document.head.appendChild(pdfStyle);
                             // Hide the PDF button during render
                             pdfBtn.style.display = 'none';
 
                             const chTitle = CHAPTERS[currentIndex]?.title || 'chapter';
                             const safeTitle = chTitle.replace(/[^\wа-яёА-ЯЁ\s-]/g, '').trim();
-                            await window.html2pdf()
+                            const filename = safeTitle + '.pdf';
+
+                            // Use outputPdf('blob') + <a download> to force download instead of preview
+                            const pdfBlob = await window.html2pdf()
                                 .set({
                                     margin: [10, 15, 10, 15],
-                                    filename: safeTitle + '.pdf',
+                                    filename: filename,
                                     image: { type: 'jpeg', quality: 0.92 },
                                     html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
                                     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
                                     pagebreak: { mode: ['css', 'legacy'] }
                                 })
                                 .from(chapterEl)
-                                .save();
+                                .outputPdf('blob');
+
+                            // Trigger download via <a download>
+                            const url = URL.createObjectURL(pdfBlob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = filename;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            setTimeout(() => URL.revokeObjectURL(url), 5000);
 
                             // Restore theme
                             if (!wasLight) document.body.classList.remove('light');
+                            pdfStyle.remove();
                             pdfBtn.style.display = '';
                         } catch (e) {
                             document.body.classList.remove('light');
+                            if (pdfStyle) pdfStyle.remove();
                             pdfBtn.style.display = '';
                             alert('Ошибка генерации PDF.');
                         }
