@@ -266,7 +266,7 @@ async function loadChapter(index) {
                             if (cloneBtn) cloneBtn.remove();
 
                             const wrapper = document.createElement('div');
-                            wrapper.style.cssText = 'position:fixed;left:-9999px;top:0;width:680px;padding:20px;' +
+                            wrapper.style.cssText = 'position:absolute;left:0;top:0;z-index:-1;width:680px;padding:20px;' +
                                 'background:#fff;color:#1a1a2e;font-family:Inter,-apple-system,sans-serif;' +
                                 'font-size:15px;line-height:1.7;';
                             // Force all children to inherit print-safe colors
