@@ -229,19 +229,46 @@ async function loadChapter(index) {
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';
                     pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
-                    pdfBtn.addEventListener('click', () => {
+                    pdfBtn.addEventListener('click', async () => {
                         const ua = navigator.userAgent || '';
                         const isTelegramWebView = /Telegram/i.test(ua) || (typeof window.TelegramWebviewProxy !== 'undefined');
                         if (!isTelegramWebView) {
                             window.print();
                             return;
                         }
-                        // iOS WKWebView cannot download blob/data URI files.
-                        // Pass license key via URL hash to external browser where print() works.
+                        // iOS WKWebView cannot download files or open external browser programmatically.
+                        // Copy URL with embedded license key to clipboard + show instruction.
                         const key = encodeURIComponent(savedKey);
                         const baseUrl = window.location.origin + window.location.pathname;
                         const printUrl = baseUrl + '#tochka-print=' + key + '&ch=' + currentIndex;
-                        window.open(printUrl, '_blank');
+                        try {
+                            await navigator.clipboard.writeText(printUrl);
+                        } catch {
+                            // Fallback for clipboard API failure
+                            const ta = document.createElement('textarea');
+                            ta.value = printUrl;
+                            ta.style.cssText = 'position:fixed;left:-9999px';
+                            document.body.appendChild(ta);
+                            ta.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(ta);
+                        }
+                        // Show instruction overlay
+                        const overlay = document.createElement('div');
+                        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
+                        overlay.innerHTML = `
+                            <div style="background:#1a1a2e;border-radius:16px;padding:28px 24px;max-width:340px;text-align:center;color:#fff;font-family:Inter,sans-serif;">
+                                <div style="font-size:40px;margin-bottom:12px;">✅</div>
+                                <div style="font-size:17px;font-weight:600;margin-bottom:16px;">Ссылка скопирована!</div>
+                                <div style="font-size:14px;line-height:1.6;color:#aab;margin-bottom:20px;">
+                                    Telegram не поддерживает скачивание PDF.<br><br>
+                                    <strong style="color:#fff;">Открой Safari</strong> и вставь ссылку из буфера обмена — PDF скачается автоматически.
+                                </div>
+                                <button onclick="this.parentElement.parentElement.remove()" style="background:#4a6adf;color:#fff;border:none;border-radius:10px;padding:12px 32px;font-size:15px;font-weight:600;cursor:pointer;">Понятно</button>
+                            </div>
+                        `;
+                        document.body.appendChild(overlay);
+                        overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
                     });
                     chapterEl.insertBefore(pdfBtn, chapterEl.firstChild.nextSibling);
                 }
