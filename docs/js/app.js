@@ -229,85 +229,19 @@ async function loadChapter(index) {
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';
                     pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
-                    pdfBtn.addEventListener('click', async () => {
+                    pdfBtn.addEventListener('click', () => {
                         const ua = navigator.userAgent || '';
                         const isTelegramWebView = /Telegram/i.test(ua) || (typeof window.TelegramWebviewProxy !== 'undefined');
                         if (!isTelegramWebView) {
                             window.print();
                             return;
                         }
-                        // Lazy-load html2pdf.js
-                        if (!window.html2pdf) {
-                            pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Загрузка...';
-                            pdfBtn.disabled = true;
-                            try {
-                                await new Promise((resolve, reject) => {
-                                    const s = document.createElement('script');
-                                    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';
-                                    s.onload = resolve;
-                                    s.onerror = reject;
-                                    document.head.appendChild(s);
-                                });
-                            } catch {
-                                alert('Не удалось загрузить модуль PDF. Открой страницу во внешнем браузере (⋮ → Open in...)');
-                                pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
-                                pdfBtn.disabled = false;
-                                return;
-                            }
-                        }
-                        pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Генерация PDF...';
-                        pdfBtn.disabled = true;
-                        let pdfStyle = null;
-                        try {
-                            // Temporarily switch to light theme so html2canvas sees dark text on white bg
-                            const wasLight = document.body.classList.contains('light');
-                            if (!wasLight) document.body.classList.add('light');
-                            // Force maximum contrast black text for PDF
-                            pdfStyle = document.createElement('style');
-                            pdfStyle.textContent = '#chapter, #chapter * { color: #000 !important; } #chapter strong { color: #1a3a7a !important; } #chapter em { color: #333 !important; } #chapter blockquote, #chapter blockquote * { color: #222 !important; }';
-                            document.head.appendChild(pdfStyle);
-                            // Hide the PDF button during render
-                            pdfBtn.style.display = 'none';
-
-                            const chTitle = CHAPTERS[currentIndex]?.title || 'chapter';
-                            const safeTitle = chTitle.replace(/[^\wа-яёА-ЯЁ\s-]/g, '').trim();
-                            const filename = safeTitle + '.pdf';
-
-                            // Use outputPdf('blob') + <a download> to force download instead of preview
-                            const pdfBlob = await window.html2pdf()
-                                .set({
-                                    margin: [10, 15, 10, 15],
-                                    filename: filename,
-                                    image: { type: 'jpeg', quality: 0.92 },
-                                    html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
-                                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                                    pagebreak: { mode: ['css', 'legacy'] }
-                                })
-                                .from(chapterEl)
-                                .outputPdf('blob');
-
-                            // Trigger download via <a download>
-                            const url = URL.createObjectURL(pdfBlob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = filename;
-                            document.body.appendChild(a);
-                            a.click();
-                            document.body.removeChild(a);
-                            setTimeout(() => URL.revokeObjectURL(url), 5000);
-
-                            // Restore theme
-                            if (!wasLight) document.body.classList.remove('light');
-                            pdfStyle.remove();
-                            pdfBtn.style.display = '';
-                        } catch (e) {
-                            document.body.classList.remove('light');
-                            if (pdfStyle) pdfStyle.remove();
-                            pdfBtn.style.display = '';
-                            alert('Ошибка генерации PDF.');
-                        }
-                        pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
-                        pdfBtn.disabled = false;
+                        // iOS WKWebView cannot download blob/data URI files.
+                        // Pass license key via URL hash to external browser where print() works.
+                        const key = encodeURIComponent(savedKey);
+                        const baseUrl = window.location.origin + window.location.pathname;
+                        const printUrl = baseUrl + '#tochka-print=' + key + '&ch=' + currentIndex;
+                        window.open(printUrl, '_blank');
                     });
                     chapterEl.insertBefore(pdfBtn, chapterEl.firstChild.nextSibling);
                 }
@@ -495,6 +429,32 @@ function showLanding() {
 
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
+    // Import license key from URL hash (sent by Telegram WebView PDF button)
+    const hashParams = window.location.hash;
+    if (hashParams.startsWith('#tochka-print=')) {
+        const match = hashParams.match(/^#tochka-print=([^&]+)&ch=(\d+)$/);
+        if (match) {
+            const importedKey = decodeURIComponent(match[1]);
+            const chapterIdx = parseInt(match[2], 10);
+            // Save key and clean URL hash
+            localStorage.setItem('tochka-opory-license-key', importedKey);
+            history.replaceState(null, '', window.location.pathname);
+            // Load chapter and auto-print after render
+            buildTOC();
+            initTheme();
+            initMobileMenu();
+            initScrollProgress();
+            initKeyboard();
+            initCopyProtection();
+            document.getElementById('prev-chapter').addEventListener('click', () => loadChapter(currentIndex - 1));
+            document.getElementById('next-chapter').addEventListener('click', () => loadChapter(currentIndex + 1));
+            loadChapter(chapterIdx);
+            // Wait for chapter to render, then print
+            setTimeout(() => window.print(), 1500);
+            return; // Skip normal init
+        }
+    }
+
     buildTOC();
     initTheme();
     initMobileMenu();
