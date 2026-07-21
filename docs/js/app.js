@@ -229,9 +229,64 @@ async function loadChapter(index) {
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';
                     pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
-                    pdfBtn.addEventListener('click', () => window.print());
+                    pdfBtn.addEventListener('click', async () => {
+                        // Telegram WebView ignores window.print() — generate PDF in-place via html2pdf.js
+                        const ua = navigator.userAgent || '';
+                        const isTelegramWebView = /Telegram/i.test(ua) || (typeof window.TelegramWebviewProxy !== 'undefined');
+                        if (!isTelegramWebView) {
+                            window.print();
+                            return;
+                        }
+                        // Lazy-load html2pdf.js from CDN (only when needed)
+                        if (!window.html2pdf) {
+                            pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Загрузка...';
+                            pdfBtn.disabled = true;
+                            try {
+                                await new Promise((resolve, reject) => {
+                                    const s = document.createElement('script');
+                                    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';
+                                    s.onload = resolve;
+                                    s.onerror = reject;
+                                    document.head.appendChild(s);
+                                });
+                            } catch {
+                                alert('Не удалось загрузить модуль PDF. Попробуй открыть во внешнем браузере.');
+                                pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
+                                pdfBtn.disabled = false;
+                                return;
+                            }
+                        }
+                        pdfBtn.innerHTML = '<span class="pdf-icon">⏳</span> Генерация PDF...';
+                        pdfBtn.disabled = true;
+                        try {
+                            const chTitle = CHAPTERS[currentIndex]?.title || 'chapter';
+                            const safeTitle = chTitle.replace(/[^\wа-яёА-ЯЁ\s-]/g, '').trim();
+                            await window.html2pdf()
+                                .set({
+                                    margin: [15, 15, 15, 15],
+                                    filename: safeTitle + '.pdf',
+                                    image: { type: 'jpeg', quality: 0.95 },
+                                    html2canvas: { scale: 2, useCORS: true },
+                                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                                })
+                                .from(chapterEl)
+                                .save();
+                        } catch {
+                            alert('Ошибка генерации PDF.');
+                        }
+                        pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
+                        pdfBtn.disabled = false;
+                    });
                     chapterEl.insertBefore(pdfBtn, chapterEl.firstChild.nextSibling);
                 }
+
+                // Fix PDF material links for Telegram WebView:
+                // Add download attribute so in-app browser triggers download instead of inline render
+                chapterEl.querySelectorAll('a[href$=".pdf"]').forEach(link => {
+                    link.setAttribute('download', '');
+                    link.setAttribute('target', '_blank');
+                });
             }
         } catch {
             chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Глава «${ch.title}» пока не написана.</p>`;
