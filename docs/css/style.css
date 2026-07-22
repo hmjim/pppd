@@ -255,7 +255,8 @@ body {
     color: var(--text-secondary);
 }
 
-.sidebar-footer .sidebar-pdf {
+.sidebar-footer .sidebar-pdf,
+.sidebar-footer .sidebar-tg {
     flex-basis: 100%;
 }
 
@@ -264,66 +265,74 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     margin-bottom: 4px;
-    background: rgba(108, 140, 255, 0.08);
-    border: 1px solid rgba(108, 140, 255, 0.25);
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(108, 140, 255, 0.12), rgba(139, 92, 246, 0.12));
+    border: 1px solid rgba(108, 140, 255, 0.3);
+    border-radius: 10px;
     color: var(--accent);
     text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 500;
-    transition: all 0.25s;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
 }
 
 .sidebar-pdf:hover {
-    background: rgba(108, 140, 255, 0.18);
+    background: linear-gradient(135deg, rgba(108, 140, 255, 0.22), rgba(139, 92, 246, 0.22));
     border-color: var(--accent);
-    transform: translateX(2px);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(108, 140, 255, 0.2);
 }
 
 .seo-cta-pdf {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     padding: 14px 28px;
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(108, 140, 255, 0.1), rgba(139, 92, 246, 0.1));
     color: var(--text-primary);
     text-decoration: none;
-    border: 1px solid var(--border-light);
-    border-radius: 10px;
+    border: 1px solid rgba(108, 140, 255, 0.35);
+    border-radius: 12px;
     font-weight: 600;
-    transition: all 0.25s;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(108, 140, 255, 0.08);
 }
 
 .seo-cta-pdf:hover {
-    background: var(--bg-hover);
+    background: linear-gradient(135deg, rgba(108, 140, 255, 0.2), rgba(139, 92, 246, 0.2));
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 140, 255, 0.2);
 }
 
 .sidebar-tg {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 8px 12px;
+    padding: 10px 14px;
     margin-bottom: 8px;
-    background: rgba(0,136,204,0.08);
-    border: 1px solid rgba(0,136,204,0.2);
-    border-radius: 8px;
-    color: #0088cc;
+    background: linear-gradient(135deg, rgba(0,136,204,0.1), rgba(0,180,220,0.08));
+    border: 1px solid rgba(0,136,204,0.25);
+    border-radius: 10px;
+    color: #0aa4e0;
     text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 500;
-    transition: all 0.25s;
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
 }
 
 .sidebar-tg:hover {
-    background: rgba(0,136,204,0.15);
-    border-color: #0088cc;
-    transform: translateX(2px);
+    background: linear-gradient(135deg, rgba(0,136,204,0.2), rgba(0,180,220,0.15));
+    border-color: #0aa4e0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0,136,204,0.2);
 }
 
 #progress-text {
@@ -554,6 +563,10 @@ body {
     
     .sidebar.open { transform: translateX(0); }
 
+    .sidebar-header {
+        padding-left: 56px;
+    }
+
     .content {
         margin-left: 0;
         padding: 60px 24px 80px;
@@ -563,12 +576,28 @@ body {
     .chapter h2 { font-size: 1.3rem; }
 
     html { font-size: 16px; }
+
+    .seo-cta-pdf {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .seo-cta-tg {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     .content { padding: 50px 16px 60px; }
     .chapter h1 { font-size: 1.5rem; }
     .chapter-nav { flex-direction: column; }
+
+    .seo-cta-pdf {
+        padding: 11px 16px;
+        font-size: 0.85rem;
+    }
 }
 
 /* ── Scrollbar (dark theme) ── */
