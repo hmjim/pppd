@@ -159,15 +159,16 @@
     </noscript>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .seo-landing { max-width: 720px; width: 100%; }
+        .seo-landing { max-width: 720px; width: 100%; overflow-wrap: break-word; word-break: break-word; }
         .seo-landing h1 { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
         .seo-landing .subtitle { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-style: italic; margin-bottom: 40px; }
         .seo-toc { margin: 32px 0; }
         .seo-toc-module { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 24px 0 8px; }
-        .seo-toc-item { display: block; padding: 12px 20px; margin: 4px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; color: var(--text-primary); text-decoration: none; transition: all 0.25s ease; font-size: 0.95rem; }
+        .seo-toc-item { display: block; padding: 12px 20px; margin: 4px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; color: var(--text-primary); text-decoration: none; transition: all 0.25s ease; font-size: 0.95rem; overflow-wrap: break-word; box-sizing: border-box; }
         .seo-toc-item:hover { background: var(--accent-glow); border-color: var(--accent); transform: translateX(4px); }
         .seo-toc-item .ch-num { color: var(--accent); font-weight: 600; margin-right: 8px; }
         .seo-toc-item .ch-desc { display: block; font-size: 0.82rem; color: var(--text-secondary); margin-top: 2px; }
+        @media (max-width: 480px) { .seo-landing h1 { font-size: 1.5rem; } .seo-landing .subtitle { font-size: 0.95rem; } .seo-toc-item { padding: 10px 14px; font-size: 0.88rem; } }
         .seo-toc-item.locked { opacity: 0.5; }
         .seo-toc-item.locked::after { content: " 🔒"; }
         .seo-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 32px 0; }
