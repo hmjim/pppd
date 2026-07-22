@@ -20,6 +20,9 @@ try {
     console.error('Failed to generate PDF:', e.message);
 }
 
+// Cache-busting version for PDF links (forces fresh download after every build)
+const pdfVersion = Date.now();
+
 // Read and minify CSS
 const cssPath = path.join(DOCS_DIR, 'css', 'style.css');
 const cssContent = fs.readFileSync(cssPath, 'utf8');
@@ -413,7 +416,7 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
             ${tocHTML}
         </nav>
         <div class="sidebar-footer">
-            <a href="../pppg_course_script.pdf" download="Точка_Опоры_Выход_из_ПППГ.pdf" class="sidebar-pdf" title="Скачать всю книгу в PDF">
+            <a href="../pppg_course_script.pdf?v=${pdfVersion}" download="Точка_Опоры_Выход_из_ПППГ.pdf" class="sidebar-pdf" title="Скачать всю книгу в PDF">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Скачать книгу (PDF)
             </a>
@@ -727,6 +730,10 @@ if (fs.existsSync(templatePath)) {
         .replace(
             /<nav id="toc" class="toc" aria-label="Оглавление"><\/nav>/g,
             `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`
+        )
+        .replace(
+            /pppg_course_script\.pdf/g,
+            `pppg_course_script.pdf?v=${pdfVersion}`
         );
 
     fs.writeFileSync(path.join(DOCS_DIR, 'index.html'), updatedHtml, 'utf8');
