@@ -11,8 +11,7 @@ async function buildFullPDF() {
     const CHAPTERS_DIR = path.join(__dirname, 'chapters_src');
     const DOCS_DIR = path.join(__dirname, 'docs');
     const OUTPUT_HTML = path.join(__dirname, 'full_book_export.html');
-    const OUTPUT_PDF = path.join(DOCS_DIR, 'pppg_course_script.pdf');
-    const OUTPUT_PDF_ALT = path.join(DOCS_DIR, 'tochka_opory.pdf');
+    const OUTPUT_PDF = path.join(DOCS_DIR, 'dl_a7f3e9d2c1b8.pdf');
 
     // Chapters order according to build_seo.js
     const CHAPTER_FILES = [
@@ -350,8 +349,7 @@ async function buildFullPDF() {
     const cmd = `"${edgePath}" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="${OUTPUT_PDF}" "file:///${OUTPUT_HTML.replace(/\\/g, '/')}"`;
     execSync(cmd);
 
-    // Copy to alt name
-    fs.copyFileSync(OUTPUT_PDF, OUTPUT_PDF_ALT);
+
 
     const pdfStats = fs.statSync(OUTPUT_PDF);
     console.log(`🎉 Full Book PDF successfully created!`);
