@@ -1,9 +1,16 @@
 User-agent: *
 Allow: /
+Disallow: /*.pdf$
+Disallow: /pppg_course_script.pdf
+Disallow: /tochka_opory.pdf
 
 User-agent: Yandex
 Allow: /
+Disallow: /*.pdf$
+Disallow: /pppg_course_script.pdf
+Disallow: /tochka_opory.pdf
 Crawl-delay: 2
+Clean-param: v /pppg_course_script.pdf
 
 Sitemap: https://hmjim.github.io/pppd/sitemap.xml
 Host: https://hmjim.github.io/pppd
