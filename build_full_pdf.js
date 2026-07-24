@@ -22,6 +22,7 @@ async function buildFullPDF() {
         { id: '04_muscle_armor', num: '4', title: 'Мышечный панцирь', module: 'Модуль 1: Тело' },
         { id: '05_relaxation', num: '5', title: 'Релаксация по Джекобсону', module: 'Модуль 1: Тело' },
         { id: '06_vestibular', num: '6', title: 'Вестибулярная гимнастика', module: 'Модуль 1: Тело' },
+        { id: '06b_biofeedback', num: '6b', title: 'Тренажёры: перекалибровка мозга', module: 'Модуль 1: Тело' },
         { id: '07_neurophysiology_basics', num: '7', title: 'Нейрофизиология: базовые настройки', module: 'Модуль 1: Тело' },
         { id: '08_visual_dependence', num: '8', title: 'Зрительная зависимость', module: 'Модуль 1: Тело' },
         { id: '26_sleep', num: '9', title: 'Сон и ПППГ', module: 'Модуль 1: Тело' },
