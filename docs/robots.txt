@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /*.pdf$
 
 User-agent: Yandex
 Allow: /
+Disallow: /*.pdf$
 Crawl-delay: 2
 
 Sitemap: https://hmjim.github.io/pppd/sitemap.xml

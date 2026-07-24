@@ -688,9 +688,11 @@ CHAPTERS.forEach((chapter, i) => {
 // ── Generate robots.txt ──
 const robotsTxt = `User-agent: *
 Allow: /
+Disallow: /*.pdf$
 
 User-agent: Yandex
 Allow: /
+Disallow: /*.pdf$
 Crawl-delay: 2
 
 Sitemap: ${SITE_URL}/sitemap.xml
