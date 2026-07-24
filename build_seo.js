@@ -512,7 +512,7 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
         // Show PDF download only for licensed users
         if (localStorage.getItem('tochka-opory-license-key')) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
-            if (pdfLink) { pdfLink.href = '../dl_a7f3e9d2c1b8.pdf?v=' + Date.now(); pdfLink.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; pdfLink.style.display = ''; }
+            if (pdfLink) { pdfLink.href = '../r_015744dc3f28b49e.pdf?v=' + Date.now(); pdfLink.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; pdfLink.style.display = ''; }
         }
     })();
     </script>
@@ -748,8 +748,8 @@ if (fs.existsSync(templatePath)) {
             `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`
         )
         .replace(
-            /dl_a7f3e9d2c1b8\.pdf/g,
-            `dl_a7f3e9d2c1b8.pdf?v=${pdfVersion}`
+            /r_015744dc3f28b49e\.pdf/g,
+            `r_015744dc3f28b49e.pdf?v=${pdfVersion}`
         );
 
     fs.writeFileSync(path.join(DOCS_DIR, 'index.html'), updatedHtml, 'utf8');
