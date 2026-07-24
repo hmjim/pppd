@@ -60,7 +60,8 @@ function buildTOC() {
         link.textContent = ch.title;
         link.dataset.index = i;
         // SEO: add crawlable href to static pages
-        link.href = 'chapters/' + ch.id + '.html';
+        const isSubdir = window.location.pathname.includes('/chapters/');
+        link.href = isSubdir ? (ch.id + '.html') : ('chapters/' + ch.id + '.html');
         link.addEventListener('click', (e) => {
             e.preventDefault();
             loadChapter(i);
@@ -158,7 +159,9 @@ function renderPaywall(chapterEl, index) {
         try {
             // Fetch the current chapter to verify the key mathematically
             const ch = CHAPTERS[index];
-            const res = await fetch(`chapters/${ch.id}.md`);
+            const isSubdir = window.location.pathname.includes('/chapters/');
+            const mdUrl = isSubdir ? `${ch.id}.md` : `chapters/${ch.id}.md`;
+            const res = await fetch(mdUrl);
             if (!res.ok) throw new Error('Failed to fetch');
             const encryptedPayload = await res.text();
 
@@ -211,7 +214,9 @@ async function loadChapter(index) {
         renderPaywall(chapterEl, index);
     } else {
         try {
-            const res = await fetch(`chapters/${ch.id}.md`);
+            const isSubdir = window.location.pathname.includes('/chapters/');
+            const mdUrl = isSubdir ? `${ch.id}.md` : `chapters/${ch.id}.md`;
+            const res = await fetch(mdUrl);
             if (!res.ok) {
                 chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Глава «${ch.title}» пока не написана.<br>Скоро будет.</p>`;
             } else {
