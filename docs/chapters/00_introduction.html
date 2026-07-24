@@ -100,7 +100,7 @@
 <div class="toc-module">Приложения</div><a class="toc-item" href="25_appendix.html">Приложения</a>
         </nav>
         <div class="sidebar-footer">
-            <a id="sidebar-pdf-link" href="../dl_a7f3e9d2c1b8.pdf?v=1784916262147" download="Точка_Опоры_Выход_из_ПППГ.pdf" class="sidebar-pdf" title="Скачать всю книгу в PDF" style="display:none">
+            <a id="sidebar-pdf-link" class="sidebar-pdf" title="Скачать всю книгу в PDF" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Скачать книгу (PDF)
             </a>
@@ -351,7 +351,7 @@
         // Show PDF download only for licensed users
         if (localStorage.getItem('tochka-opory-license-key')) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
-            if (pdfLink) pdfLink.style.display = '';
+            if (pdfLink) { pdfLink.href = '../dl_a7f3e9d2c1b8.pdf?v=' + Date.now(); pdfLink.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; pdfLink.style.display = ''; }
         }
     })();
     </script>
