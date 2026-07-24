@@ -184,6 +184,12 @@ async function loadChapter(index) {
     const ch = CHAPTERS[index];
     const chapterEl = document.getElementById('chapter');
 
+    // Update URL hash (skip if triggered by popstate to avoid duplicate entries)
+    if (!loadChapter._fromPopState) {
+        history.pushState({ chapterIndex: index }, ch.title, '#' + ch.id);
+    }
+    loadChapter._fromPopState = false;
+
     // Show loading
     chapterEl.innerHTML = '<div class="chapter-loading"><div class="spinner"></div><p>Загрузка...</p></div>';
 
@@ -445,6 +451,9 @@ function showLanding() {
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = 'none';
     
+    // Update URL — remove hash
+    history.pushState(null, '', window.location.pathname);
+    
     // Reset TOC active state
     document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
     
@@ -530,11 +539,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Restore last read position (if empty, stay on landing page)
-    const saved = parseInt(localStorage.getItem('tochka-opory-chapter'), 10);
-    if (!isNaN(saved)) {
-        loadChapter(saved);
+    // Handle browser back/forward
+    window.addEventListener('popstate', (e) => {
+        if (e.state && typeof e.state.chapterIndex === 'number') {
+            loadChapter._fromPopState = true;
+            loadChapter(e.state.chapterIndex);
+        } else if (!window.location.hash) {
+            showLanding();
+        }
+    });
+
+    // Restore position: hash > localStorage > landing
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+        const hashIdx = CHAPTERS.findIndex(ch => ch.id === hash);
+        if (hashIdx !== -1) {
+            loadChapter(hashIdx);
+        } else {
+            showLanding();
+        }
     } else {
-        showLanding();
+        const saved = parseInt(localStorage.getItem('tochka-opory-chapter'), 10);
+        if (!isNaN(saved)) {
+            loadChapter(saved);
+        } else {
+            showLanding();
+        }
     }
 });
