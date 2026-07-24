@@ -184,9 +184,11 @@ async function loadChapter(index) {
     const ch = CHAPTERS[index];
     const chapterEl = document.getElementById('chapter');
 
-    // Update URL hash (skip if triggered by popstate to avoid duplicate entries)
+    // Update URL to match sitemap format: chapters/CHAPTER_ID.html
     if (!loadChapter._fromPopState) {
-        history.pushState({ chapterIndex: index }, ch.title, '#' + ch.id);
+        const isSubdir = window.location.pathname.includes('/chapters/');
+        const targetUrl = isSubdir ? (ch.id + '.html') : ('chapters/' + ch.id + '.html');
+        history.pushState({ chapterIndex: index }, ch.title, targetUrl);
     }
     loadChapter._fromPopState = false;
 
@@ -451,8 +453,13 @@ function showLanding() {
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = 'none';
     
-    // Update URL — remove hash
-    history.pushState(null, '', window.location.pathname);
+    // Update URL to landing root
+    if (!showLanding._fromPopState) {
+        const isSubdir = window.location.pathname.includes('/chapters/');
+        const targetUrl = isSubdir ? '../' : './';
+        history.pushState(null, 'Точка Опоры — Выход из ПППГ', targetUrl);
+    }
+    showLanding._fromPopState = false;
     
     // Reset TOC active state
     document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
@@ -541,20 +548,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle browser back/forward
     window.addEventListener('popstate', (e) => {
+        const match = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
+        if (match) {
+            const idx = CHAPTERS.findIndex(ch => ch.id === match[1]);
+            if (idx !== -1) {
+                loadChapter._fromPopState = true;
+                loadChapter(idx);
+                return;
+            }
+        }
         if (e.state && typeof e.state.chapterIndex === 'number') {
             loadChapter._fromPopState = true;
             loadChapter(e.state.chapterIndex);
-        } else if (!window.location.hash) {
+        } else {
+            showLanding._fromPopState = true;
             showLanding();
         }
     });
 
-    // Restore position: hash > localStorage > landing
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-        const hashIdx = CHAPTERS.findIndex(ch => ch.id === hash);
-        if (hashIdx !== -1) {
-            loadChapter(hashIdx);
+    // Restore position: URL pathname > localStorage > landing
+    const initialMatch = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
+    if (initialMatch) {
+        const idx = CHAPTERS.findIndex(ch => ch.id === initialMatch[1]);
+        if (idx !== -1) {
+            loadChapter(idx);
         } else {
             showLanding();
         }
