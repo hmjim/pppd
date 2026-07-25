@@ -84,6 +84,42 @@ const CHAPTERS = [
         hidden: true,
     },
     {
+        id: '32_unsteadiness',
+        title: 'Шатает при ходьбе',
+        seoTitle: 'Шатает при ходьбе — причины, почему ноги ватные | Точка Опоры',
+        description: 'Почему шатает и заносит при ходьбе, ноги как вата, земля уходит из-под ног. Причины неустойчивости при ПППГ и как от этого избавиться.',
+        keywords: 'шатает при ходьбе, ноги как вата, ватные ноги причины, заносит при ходьбе, земля уходит из под ног, неустойчивость при ходьбе, шаткость ПППГ',
+        module: 'Модуль 0: База',
+        hidden: true,
+    },
+    {
+        id: '33_brain_fog',
+        title: 'Туман в голове',
+        seoTitle: 'Туман в голове — причины, тяжесть в голове и головокружение | Точка Опоры',
+        description: 'Почему возникают туман в голове, тяжесть, заторможенность и ватная голова при тревоге и ПППГ. Как убрать когнитивный туман.',
+        keywords: 'туман в голове, тяжесть в голове, ватная голова, заторможенность, brain fog причины, психогенный туман в голове, туман и головокружение',
+        module: 'Модуль 0: База',
+        hidden: true,
+    },
+    {
+        id: '34_cbt_for_dizziness',
+        title: 'КПТ при головокружении',
+        seoTitle: 'КПТ при головокружении и ПППГ — как работает метод | Точка Опоры',
+        description: 'Когнитивно-поведенческая терапия (КПТ) при головокружении и ПППГ. Как работы с тревогой, катастрофизацией и избеганием помогают выздороветь.',
+        keywords: 'КПТ при головокружении, когнитивно поведенческая терапия ПППГ, психотерапия головокружение, лечение тревожного головокружения',
+        module: 'Модуль 0: База',
+        hidden: true,
+    },
+    {
+        id: '35_psychosomatic_dizziness',
+        title: 'Психосоматическое головокружение',
+        seoTitle: 'Психосоматическое головокружение — симптомы и лечение | Точка Опоры',
+        description: 'Психосоматическое (психогенное) головокружение: причины, симптомы, отличие от органических болезней. Как вылечить головокружение от нервов.',
+        keywords: 'психосоматическое головокружение, психогенное головокружение, головокружение от нервов, головокружение на нервной почве, психосоматика головокружение',
+        module: 'Модуль 0: База',
+        hidden: true,
+    },
+    {
         id: '04_muscle_armor',
         title: 'Мышечный панцирь',
         seoTitle: 'Мышечный панцирь при ПППГ — зажимы в теле и головокружение | Точка Опоры',
@@ -566,24 +602,26 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
 }
 
 function getPrevLink(chapter) {
-    const idx = CHAPTERS.findIndex(c => c.id === chapter.id);
+    const visibleChapters = CHAPTERS.filter(c => !c.hidden);
+    const idx = visibleChapters.findIndex(c => c.id === chapter.id);
     if (idx <= 0) return '<span></span>';
-    const prev = CHAPTERS[idx - 1];
+    const prev = visibleChapters[idx - 1];
     const href = idx === 1 ? '../' : `${prev.id}.html`;
     return `<a href="${href}" class="nav-btn prev-btn">← ${prev.title}</a>`;
 }
 
 function getNextLink(chapter) {
-    const idx = CHAPTERS.findIndex(c => c.id === chapter.id);
-    if (idx >= CHAPTERS.length - 1) return '<span></span>';
-    const next = CHAPTERS[idx + 1];
+    const visibleChapters = CHAPTERS.filter(c => !c.hidden);
+    const idx = visibleChapters.findIndex(c => c.id === chapter.id);
+    if (idx < 0 || idx >= visibleChapters.length - 1) return '<span></span>';
+    const next = visibleChapters[idx + 1];
     return `<a href="${next.id}.html" class="nav-btn next-btn">${next.title} →</a>`;
 }
 
 function getRelatedLinks(chapter) {
-    const idx = CHAPTERS.findIndex(c => c.id === chapter.id);
-    // Show all OTHER chapters as related links
-    return CHAPTERS.filter((_, i) => i !== idx).map(ch => {
+    const visibleChapters = CHAPTERS.filter(c => !c.hidden);
+    const idx = visibleChapters.findIndex(c => c.id === chapter.id);
+    return visibleChapters.filter((_, i) => i !== idx).map(ch => {
         return `<a href="${ch.id}.html" style="display:block;padding:10px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.9rem;transition:all 0.25s;"
             onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateX(4px)'"
             onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}</a>`;
@@ -750,9 +788,10 @@ if (fs.existsSync(templatePath)) {
     const templateHtml = fs.readFileSync(templatePath, 'utf8');
     
     // Pre-render TOC links for the landing page sidebar to optimize Yandex sitelinks
-    const indexTocHTML = CHAPTERS.map((ch, i) => {
+    const visibleChapters = CHAPTERS.filter(ch => !ch.hidden);
+    const indexTocHTML = visibleChapters.map((ch, i) => {
         const chUrl = `chapters/${ch.id}.html`;
-        const moduleHeader = (ch.module && (i === 0 || CHAPTERS[i - 1].module !== ch.module))
+        const moduleHeader = (ch.module && (i === 0 || visibleChapters[i - 1].module !== ch.module))
             ? `<div class="toc-module">${ch.module}</div>` : '';
         return `${moduleHeader}<a class="toc-item" href="${chUrl}">${ch.title}</a>`;
     }).join('\n');
