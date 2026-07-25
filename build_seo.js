@@ -72,6 +72,7 @@ const CHAPTERS = [
         description: 'Как лечить ПППГ: 5 доказательных методов (вестибулярная гимнастика, КПТ, экспозиция, спорт, СИОЗС). Что работает, что нет. Сроки выздоровления. Полный гид.',
         keywords: 'лечение ПППГ, как лечить ПППГ, можно ли вылечить ПППГ, PPPD лечение, методы лечения головокружения, вестибулярная реабилитация, КПТ головокружение',
         module: 'Модуль 0: База',
+        hidden: true,
     },
     {
         id: '31_chronic_dizziness',
@@ -80,6 +81,7 @@ const CHAPTERS = [
         description: 'Постоянное головокружение: причины, виды, когда это ПППГ. Шаткость при ходьбе, туман в голове, ватные ноги — что делать и как лечить.',
         keywords: 'постоянное головокружение, причины головокружения, шатает при ходьбе, туман в голове, ватные ноги, хроническое головокружение, функциональное головокружение',
         module: 'Модуль 0: База',
+        hidden: true,
     },
     {
         id: '04_muscle_armor',
@@ -360,11 +362,12 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
         ],
     });
 
-    // Build TOC nav for sidebar
-    const tocHTML = CHAPTERS.map((ch, i) => {
-        const chUrl = i === 0 ? '../' : `${ch.id}.html`;
+    // Build TOC nav for sidebar (exclude hidden satellite pages)
+    const visibleChapters = CHAPTERS.filter(ch => !ch.hidden);
+    const tocHTML = visibleChapters.map((ch, i) => {
+        const chUrl = ch.id === '00_introduction' ? '../' : `${ch.id}.html`;
         const isActive = ch.id === chapter.id;
-        const moduleHeader = (ch.module && (i === 0 || CHAPTERS[i - 1].module !== ch.module))
+        const moduleHeader = (ch.module && (i === 0 || visibleChapters[i - 1].module !== ch.module))
             ? `<div class="toc-module">${ch.module}</div>` : '';
         return `${moduleHeader}<a class="toc-item${isActive ? ' active' : ''}" href="${chUrl}">${ch.title}</a>`;
     }).join('\n');
