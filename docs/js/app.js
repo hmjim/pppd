@@ -5,6 +5,7 @@
 
 const CHAPTERS = [
     { id: '00_introduction',           title: 'Вступление',                          module: null },
+    { id: '41_psychosomatics',         title: 'Психосоматика: универсальный ключ',    module: 'Модуль 0: База' },
     { id: '01_what_is_pppg',           title: 'Что такое ПППГ',                      module: 'Модуль 0: База' },
     { id: '02_medical_checkup',        title: 'Закрываем дверь в поликлинику',       module: 'Модуль 0: База' },
     { id: '03_baseline_tests',         title: 'Оцифровка: тесты',                    module: 'Модуль 0: База' },
@@ -20,6 +21,7 @@ const CHAPTERS = [
     { id: '11_hypochondria',           title: 'Ипохондрия',                          module: 'Модуль 2: Батарейка', paid: true },
     { id: '12_exposure',               title: 'Экспозиция',                          module: 'Модуль 2: Батарейка', paid: true },
     { id: '13_sport',                  title: 'Спорт и перезагрузка',                module: 'Модуль 2: Батарейка', paid: true },
+    { id: '42_vestibular_migraine',    title: 'Вестибулярная мигрень',               module: 'Модуль 2: Батарейка', paid: true },
     { id: '27_depersonalization',      title: 'Дереализация',                      module: 'Модуль 2: Батарейка', paid: true },
     { id: '14_neuroplasticity',        title: 'Нейропластичность',                   module: 'Модуль 3: Мышление', paid: true },
     { id: '15_metacognition',          title: 'Метакогнитивная терапия',              module: 'Модуль 3: Мышление', paid: true },

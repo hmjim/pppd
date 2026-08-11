@@ -321,7 +321,7 @@ async function buildFullPDF() {
         <div class="cover-subtitle">Пошаговая система выхода из ПППГ, невроза, шаткости и тревожных расстройств</div>
         <div class="cover-meta">
             <div class="cover-author">Автор: Максим</div>
-            <div>30 глав &nbsp;|&nbsp; 5 модулей &nbsp;|&nbsp; Доказательный подход</div>
+            <div>33 главы &nbsp;|&nbsp; 5 модулей &nbsp;|&nbsp; Доказательный подход</div>
             <div style="margin-top:8px;font-size:9pt;color:#9ca3af;">Издание 2026 года</div>
         </div>
     </div>
