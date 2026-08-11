@@ -34,6 +34,7 @@ async function buildFullPDF() {
         { id: '13_sport', num: '14', title: 'Спорт и перезагрузка', module: 'Модуль 2: Батарейка' },
         { id: '42_vestibular_migraine', num: '14b', title: 'Вестибулярная мигрень', module: 'Модуль 2: Батарейка' },
         { id: '27_depersonalization', num: '15', title: 'Дереализация и деперсонализация', module: 'Модуль 2: Батарейка' },
+        { id: '43_ptsd_emdr', num: '15b', title: 'ПТСР и техника ДПДГ (EMDR)', module: 'Модуль 2: Батарейка' },
         { id: '14_neuroplasticity', num: '16', title: 'Нейропластичность', module: 'Модуль 3: Мышление' },
         { id: '15_metacognition', num: '17', title: 'Метакогнитивная терапия', module: 'Модуль 3: Мышление' },
         { id: '16_cognitive_distortions', num: '18', title: 'Когнитивные искажения', module: 'Модуль 3: Мышление' },
@@ -323,7 +324,7 @@ async function buildFullPDF() {
         <div class="cover-subtitle">Пошаговая система выхода из ПППГ, невроза, шаткости и тревожных расстройств</div>
         <div class="cover-meta">
             <div class="cover-author">Автор: Максим</div>
-            <div>33 главы &nbsp;|&nbsp; 5 модулей &nbsp;|&nbsp; Доказательный подход</div>
+            <div>34 главы &nbsp;|&nbsp; 5 модулей &nbsp;|&nbsp; Доказательный подход</div>
             <div style="margin-top:8px;font-size:9pt;color:#9ca3af;">Издание 2026 года</div>
         </div>
     </div>

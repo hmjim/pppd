@@ -23,6 +23,7 @@ const CHAPTERS = [
     { id: '13_sport',                  title: 'Спорт и перезагрузка',                module: 'Модуль 2: Батарейка', paid: true },
     { id: '42_vestibular_migraine',    title: 'Вестибулярная мигрень',               module: 'Модуль 2: Батарейка', paid: true },
     { id: '27_depersonalization',      title: 'Дереализация',                      module: 'Модуль 2: Батарейка', paid: true },
+    { id: '43_ptsd_emdr',              title: 'ПТСР и техника ДПДГ (EMDR)',        module: 'Модуль 2: Батарейка', paid: true },
     { id: '14_neuroplasticity',        title: 'Нейропластичность',                   module: 'Модуль 3: Мышление', paid: true },
     { id: '15_metacognition',          title: 'Метакогнитивная терапия',              module: 'Модуль 3: Мышление', paid: true },
     { id: '16_cognitive_distortions',  title: 'Когнитивные искажения',               module: 'Модуль 3: Мышление', paid: true },
