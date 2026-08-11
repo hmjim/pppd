@@ -16,6 +16,7 @@ async function buildFullPDF() {
     // Chapters order according to build_seo.js
     const CHAPTER_FILES = [
         { id: '00_introduction', num: '0', title: 'Вступление', module: 'Вводная часть' },
+        { id: '41_psychosomatics', num: '0b', title: 'Психосоматика: универсальный ключ', module: 'Модуль 0: База' },
         { id: '01_what_is_pppg', num: '1', title: 'Что такое ПППГ', module: 'Модуль 0: База' },
         { id: '02_medical_checkup', num: '2', title: 'Закрываем дверь в поликлинику', module: 'Модуль 0: База' },
         { id: '03_baseline_tests', num: '3', title: 'Оцифровка: тесты HADS и DHI', module: 'Модуль 0: База' },
@@ -31,6 +32,7 @@ async function buildFullPDF() {
         { id: '11_hypochondria', num: '12', title: 'Ипохондрия', module: 'Модуль 2: Батарейка' },
         { id: '12_exposure', num: '13', title: 'Экспозиция', module: 'Модуль 2: Батарейка' },
         { id: '13_sport', num: '14', title: 'Спорт и перезагрузка', module: 'Модуль 2: Батарейка' },
+        { id: '42_vestibular_migraine', num: '14b', title: 'Вестибулярная мигрень', module: 'Модуль 2: Батарейка' },
         { id: '27_depersonalization', num: '15', title: 'Дереализация и деперсонализация', module: 'Модуль 2: Батарейка' },
         { id: '14_neuroplasticity', num: '16', title: 'Нейропластичность', module: 'Модуль 3: Мышление' },
         { id: '15_metacognition', num: '17', title: 'Метакогнитивная терапия', module: 'Модуль 3: Мышление' },
