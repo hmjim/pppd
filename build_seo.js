@@ -228,6 +228,14 @@ const CHAPTERS = [
         keywords: 'сон ПППГ, бессонница головокружение, утренняя шаткость, кортизол сон, гигиена сна тревога, инсомния невроз',
         module: 'Модуль 1: Тело',
     },
+    {
+        id: '44_attention_training',
+        title: 'Фокус внимания при тревоге',
+        seoTitle: 'Фокус внимания при тревоге и ПППГ — техники тренировки | Точка Опоры',
+        description: 'Фокус внимания при тревоге и ПППГ: почему гиперфокус на теле усиливает симптомы в 10 раз. Доказательные техники тренировки внимания: ATT Уэллса, Open Focus, экстероцепция.',
+        keywords: 'фокус внимания тревога, тренировка внимания при тревоге, ATT тренировка внимания, Open Focus, ПППГ внимание, гиперфокус на симптомах, как отвлечься от тревоги, метакогнитивная терапия внимание, экстероцепция',
+        module: 'Модуль 1: Тело',
+    },
     // ── Paid chapters ──
     {
         id: '09_adrenaline_loop',
@@ -723,7 +731,7 @@ CHAPTERS.forEach((chapter, i) => {
                 <div class="paywall-container">
                     <span class="paywall-icon">🔐</span>
                     <h2 class="paywall-title">Эта глава доступна по ключу</h2>
-                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 12 глав — <strong>бесплатно</strong>. Модули 2–4 доступны по лицензионному ключу.</p>
+                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 13 глав — <strong>бесплатно</strong>. Модули 2–4 доступны по лицензионному ключу.</p>
                     <div class="paywall-form">
                         <input type="text" id="paywall-key" class="paywall-input" placeholder="Введи ключ доступа">
                         <button id="paywall-submit" class="paywall-btn">Активировать доступ</button>
