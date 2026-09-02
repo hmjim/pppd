@@ -518,7 +518,7 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
     <meta name="description" content="${chapter.description}">
     <meta name="keywords" content="${chapter.keywords}">
     <meta name="author" content="Максим">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="${url}">
 
     <!-- Open Graph -->
@@ -681,7 +681,15 @@ function buildHTML(chapter, bodyContent, isIndex = false) {
                     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
                     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
                 })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109681708', 'ym');
-                ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+                var ymRef = document.referrer;
+                try {
+                    var storedRef = sessionStorage.getItem('ym_orig_ref');
+                    if (storedRef) {
+                        ymRef = storedRef;
+                        sessionStorage.removeItem('ym_orig_ref');
+                    }
+                } catch(e) {}
+                ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce:true, trackLinks:true});
             }
             const triggerEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
             triggerEvents.forEach(function(event) {
@@ -848,7 +856,6 @@ Disallow: /*.pdf$
 Crawl-delay: 2
 
 Sitemap: ${SITE_URL}/sitemap.xml
-Host: ${SITE_URL}
 `;
 
 fs.writeFileSync(path.join(DOCS_DIR, 'robots.txt'), robotsTxt, 'utf8');

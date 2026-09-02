@@ -8,4 +8,3 @@ Disallow: /*.pdf$
 Crawl-delay: 2
 
 Sitemap: https://hmjim.github.io/pppd/sitemap.xml
-Host: https://hmjim.github.io/pppd

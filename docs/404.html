@@ -8,8 +8,13 @@
     <meta http-equiv="refresh" content="0;url=https://hmjim.github.io/pppd/" />
     <meta name="robots" content="noindex, follow" />
     <script>
-        // Immediate redirect for any 404 page (including old PDF URLs indexed by Google)
-        window.location.replace('https://hmjim.github.io/pppd/');
+        (function() {
+            var ref = document.referrer;
+            if (ref) {
+                try { sessionStorage.setItem('ym_orig_ref', ref); } catch(e) {}
+            }
+            window.location.replace('https://hmjim.github.io/pppd/' + window.location.search + window.location.hash);
+        })();
     </script>
 </head>
 <body>

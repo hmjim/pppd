@@ -14,7 +14,7 @@
     <meta name="description" content="Психосоматика: почему головокружение, ком в горле, боль в спине, СРК, тремор и тахикардия — симптомы одной перегруженной нервной системы. Центральная сенситизация, доказательная база КПТ, универсальный протокол лечения.">
     <meta name="keywords" content="психосоматика, психосоматические симптомы, функциональное расстройство, центральная сенситизация, ком в горле, СРК психосоматика, боль в спине психосоматика, тремор от нервов, тахикардия тревога, КПТ психосоматика, лечение психосоматики">
     <meta name="author" content="Максим">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://hmjim.github.io/pppd/chapters/41_psychosomatics.html">
 
     <!-- Open Graph -->
@@ -36,7 +36,7 @@
 
     <!-- Schema.org -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Точка Опоры — Полное руководство по выходу из ПППГ","author":{"@type":"Person","name":"Максим"},"inLanguage":"ru","genre":"Здоровье","description":"Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.","url":"https://hmjim.github.io/pppd"}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Психосоматика — почему все симптомы лечатся одинаково | Точка Опоры","description":"Психосоматика: почему головокружение, ком в горле, боль в спине, СРК, тремор и тахикардия — симптомы одной перегруженной нервной системы. Центральная сенситизация, доказательная база КПТ, универсальный протокол лечения.","author":{"@type":"Person","name":"Максим"},"publisher":{"@type":"Person","name":"Максим"},"datePublished":"2026-06-01","dateModified":"2026-09-01","mainEntityOfPage":"https://hmjim.github.io/pppd/chapters/41_psychosomatics.html","inLanguage":"ru"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Психосоматика — почему все симптомы лечатся одинаково | Точка Опоры","description":"Психосоматика: почему головокружение, ком в горле, боль в спине, СРК, тремор и тахикардия — симптомы одной перегруженной нервной системы. Центральная сенситизация, доказательная база КПТ, универсальный протокол лечения.","author":{"@type":"Person","name":"Максим"},"publisher":{"@type":"Person","name":"Максим"},"datePublished":"2026-06-01","dateModified":"2026-09-02","mainEntityOfPage":"https://hmjim.github.io/pppd/chapters/41_psychosomatics.html","inLanguage":"ru"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Точка Опоры","item":"https://hmjim.github.io/pppd/"},{"@type":"ListItem","position":2,"name":"Психосоматика: универсальный ключ","item":"https://hmjim.github.io/pppd/chapters/41_psychosomatics.html"}]}</script>
     
 
@@ -610,7 +610,15 @@
                     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
                     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
                 })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109681708', 'ym');
-                ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+                var ymRef = document.referrer;
+                try {
+                    var storedRef = sessionStorage.getItem('ym_orig_ref');
+                    if (storedRef) {
+                        ymRef = storedRef;
+                        sessionStorage.removeItem('ym_orig_ref');
+                    }
+                } catch(e) {}
+                ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce:true, trackLinks:true});
             }
             const triggerEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
             triggerEvents.forEach(function(event) {
