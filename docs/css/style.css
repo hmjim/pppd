@@ -601,6 +601,8 @@ body.light .sidebar-social-btn.vk {
     line-height: 1.25;
     margin-bottom: 12px;
     color: var(--text-primary);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .chapter h1+p:first-of-type {
@@ -609,6 +611,8 @@ body.light .sidebar-social-btn.vk {
     line-height: 1.6;
     margin-bottom: 40px;
     font-style: italic;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .chapter h2 {
@@ -619,6 +623,8 @@ body.light .sidebar-social-btn.vk {
     color: var(--text-primary);
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .chapter h3 {
@@ -627,6 +633,8 @@ body.light .sidebar-social-btn.vk {
     font-weight: 700;
     margin: 36px 0 14px;
     color: var(--text-primary);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .chapter p {
@@ -766,6 +774,44 @@ body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-soci
     background: var(--bg-hover);
 }
 
+/* ── Code & Preformatted Blocks ── */
+.chapter pre {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 24px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.chapter pre code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: inherit;
+    color: var(--text-primary);
+    background: transparent;
+    padding: 0;
+    border: none;
+    display: block;
+    white-space: pre;
+    word-break: normal;
+}
+
+.chapter code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+    color: var(--accent);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+    word-break: break-word;
+}
+
 /* ── Chapter navigation ── */
 .chapter-nav {
     max-width: var(--content-max);
@@ -858,6 +904,13 @@ body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-soci
 
     .chapter h1 {
         font-size: 1.5rem;
+    }
+
+    .chapter pre {
+        font-size: 0.74rem;
+        padding: 12px 14px;
+        margin: 18px 0;
+        border-radius: 8px;
     }
 
     .chapter-nav {
