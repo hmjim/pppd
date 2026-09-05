@@ -32,6 +32,8 @@ const CHAPTERS = [
     { id: '18_ego',                    title: 'Эго: ложная личность',                module: 'Модуль 3: Мышление', paid: true },
     { id: '19_inner_child',            title: 'Внутренний ребёнок',                  module: 'Модуль 3: Мышление', paid: true },
     { id: '28_suppressed_emotions',    title: 'Подавленные эмоции',                  module: 'Модуль 3: Мышление', paid: true },
+    { id: '46_victim_state',           title: 'Выход из позиции Жертвы',             module: 'Модуль 3: Мышление', paid: true },
+    { id: '45_shadow_work',            title: 'Принятие Тени',                       module: 'Модуль 3: Мышление', paid: true },
     { id: '20_setback_anatomy',        title: 'Анатомия отката',                     module: 'Модуль 4: Выход', paid: true },
     { id: '21_storm_strategy',         title: 'Стратегия «Шторм»',                   module: 'Модуль 4: Выход', paid: true },
     { id: '22_new_identity',           title: 'Новая личность',                      module: 'Модуль 4: Выход', paid: true },

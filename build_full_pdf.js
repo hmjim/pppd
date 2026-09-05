@@ -43,6 +43,8 @@ async function buildFullPDF() {
         { id: '18_ego', num: '20', title: 'Эго: ложная личность', module: 'Модуль 3: Мышление' },
         { id: '19_inner_child', num: '21', title: 'Внутренний ребёнок', module: 'Модуль 3: Мышление' },
         { id: '28_suppressed_emotions', num: '22', title: 'Подавленные эмоции', module: 'Модуль 3: Мышление' },
+        { id: '46_victim_state', num: '22a', title: 'Выход из позиции Жертвы', module: 'Модуль 3: Мышление' },
+        { id: '45_shadow_work', num: '22b', title: 'Принятие Тени: интеграция подавленного', module: 'Модуль 3: Мышление' },
         { id: '20_setback_anatomy', num: '23', title: 'Анатомия отката', module: 'Модуль 4: Выход' },
         { id: '21_storm_strategy', num: '24', title: 'Стратегия «Шторм»', module: 'Модуль 4: Выход' },
         { id: '22_new_identity', num: '25', title: 'Новая личность', module: 'Модуль 4: Выход' },
