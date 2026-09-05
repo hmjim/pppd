@@ -17,6 +17,7 @@ const CHAPTERS = [
     { id: '08_visual_dependence',      title: 'Зрительная зависимость',              module: 'Модуль 1: Тело' },
     { id: '26_sleep',                  title: 'Сон и ПППГ',                          module: 'Модуль 1: Тело' },
     { id: '44_attention_training',     title: 'Фокус внимания при тревоге',          module: 'Модуль 1: Тело' },
+    { id: '47_meditation',             title: 'Медитация при ПППГ и тревоге',        module: 'Модуль 1: Тело' },
     { id: '09_adrenaline_loop',        title: 'Адреналиновая петля',                 module: 'Модуль 2: Батарейка', paid: true },
     { id: '10_cas_trap',               title: 'Капкан CAS',                          module: 'Модуль 2: Батарейка', paid: true },
     { id: '11_hypochondria',           title: 'Ипохондрия',                          module: 'Модуль 2: Батарейка', paid: true },
