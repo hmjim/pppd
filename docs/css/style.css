@@ -336,6 +336,132 @@ body {
     box-shadow: 0 4px 16px rgba(0,136,204,0.2);
 }
 
+.sidebar-socials {
+    width: 100%;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.sidebar-social-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 3px;
+    border-radius: 9px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.sidebar-social-btn svg {
+    flex-shrink: 0;
+}
+
+.sidebar-social-btn.tg {
+    background: linear-gradient(135deg, rgba(0,136,204,0.1), rgba(0,180,220,0.08));
+    border: 1px solid rgba(0,136,204,0.25);
+    color: #0aa4e0;
+}
+
+.sidebar-social-btn.tg:hover {
+    background: linear-gradient(135deg, rgba(0,136,204,0.22), rgba(0,180,220,0.18));
+    border-color: #0aa4e0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,136,204,0.2);
+}
+
+.sidebar-social-btn.yt {
+    background: linear-gradient(135deg, rgba(255,0,0,0.08), rgba(255,80,80,0.06));
+    border: 1px solid rgba(255,68,68,0.25);
+    color: #ff4444;
+}
+
+.sidebar-social-btn.yt:hover {
+    background: linear-gradient(135deg, rgba(255,0,0,0.2), rgba(255,80,80,0.15));
+    border-color: #ff4444;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255,68,68,0.2);
+}
+
+.sidebar-social-btn.vk {
+    background: linear-gradient(135deg, rgba(0,119,255,0.08), rgba(70,140,255,0.06));
+    border: 1px solid rgba(0,119,255,0.25);
+    color: #2787f5;
+}
+
+.sidebar-social-btn.vk:hover {
+    background: linear-gradient(135deg, rgba(0,119,255,0.2), rgba(70,140,255,0.15));
+    border-color: #2787f5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,119,255,0.2);
+}
+
+.seo-cta-socials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.seo-cta-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.seo-cta-social-btn.tg {
+    background: linear-gradient(135deg, rgba(0,136,204,0.1), rgba(0,180,220,0.08));
+    border: 1px solid rgba(0,136,204,0.3);
+    color: #0aa4e0;
+}
+
+.seo-cta-social-btn.tg:hover {
+    background: linear-gradient(135deg, rgba(0,136,204,0.2), rgba(0,180,220,0.15));
+    border-color: #0aa4e0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,136,204,0.2);
+}
+
+.seo-cta-social-btn.yt {
+    background: linear-gradient(135deg, rgba(255,0,0,0.08), rgba(255,80,80,0.06));
+    border: 1px solid rgba(255,68,68,0.3);
+    color: #ff4444;
+}
+
+.seo-cta-social-btn.yt:hover {
+    background: linear-gradient(135deg, rgba(255,0,0,0.18), rgba(255,80,80,0.14));
+    border-color: #ff4444;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255,68,68,0.2);
+}
+
+.seo-cta-social-btn.vk {
+    background: linear-gradient(135deg, rgba(0,119,255,0.08), rgba(70,140,255,0.06));
+    border: 1px solid rgba(0,119,255,0.3);
+    color: #2787f5;
+}
+
+.seo-cta-social-btn.vk:hover {
+    background: linear-gradient(135deg, rgba(0,119,255,0.18), rgba(70,140,255,0.14));
+    border-color: #2787f5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,119,255,0.2);
+}
+
 #progress-text {
     color: var(--accent);
     font-weight: 600;
