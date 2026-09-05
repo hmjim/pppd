@@ -107,7 +107,10 @@ a {
     transition: color var(--transition);
 }
 
-a:visited {
+a:not([class]):visited,
+.chapter p a:visited,
+.chapter li a:visited,
+.chapter td a:visited {
     color: #6c8cff;
 }
 
@@ -120,7 +123,10 @@ body.light a {
     color: var(--accent);
 }
 
-body.light a:visited {
+body.light a:not([class]):visited,
+body.light .chapter p a:visited,
+body.light .chapter li a:visited,
+body.light .chapter td a:visited {
     color: #4a6adf;
 }
 
@@ -331,15 +337,36 @@ body.light a:hover {
     box-shadow: 0 4px 16px rgba(108, 140, 255, 0.2);
 }
 
-.seo-cta-pdf {
+.seo-cta-btn,
+.seo-cta-btn:visited,
+.seo-cta-btn:active,
+.seo-cta-btn:focus {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s;
+}
+
+.seo-cta-btn:hover {
+    background: #5073f0;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.seo-cta-pdf,
+.seo-cta-pdf:visited {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 14px 28px;
     background: linear-gradient(135deg, rgba(108, 140, 255, 0.1), rgba(139, 92, 246, 0.1));
-    color: var(--text-primary);
-    text-decoration: none;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
     border: 1px solid rgba(108, 140, 255, 0.35);
     border-radius: 12px;
     font-weight: 600;
@@ -351,7 +378,7 @@ body.light a:hover {
 .seo-cta-pdf:hover {
     background: linear-gradient(135deg, rgba(108, 140, 255, 0.2), rgba(139, 92, 246, 0.2));
     border-color: var(--accent);
-    color: var(--accent);
+    color: var(--accent) !important;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(108, 140, 255, 0.2);
 }
