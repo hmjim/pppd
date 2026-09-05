@@ -93,6 +93,35 @@ body {
     transition: background var(--transition), color var(--transition);
 }
 
+a {
+    color: #6c8cff;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition);
+}
+
+a:visited {
+    color: #6c8cff;
+}
+
+a:hover {
+    color: #8ba5ff;
+}
+
+body.light a {
+    color: #4a6adf;
+    color: var(--accent);
+}
+
+body.light a:visited {
+    color: #4a6adf;
+}
+
+body.light a:hover {
+    color: #3b55b8;
+}
+
 /* ── Progress Bar ── */
 .progress-bar {
     position: fixed;
@@ -589,11 +618,40 @@ body.light .sidebar-social-btn.vk {
     color: var(--text-secondary);
 }
 
-.chapter a {
+.chapter a,
+.seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf) {
+    color: #6c8cff;
     color: var(--accent);
     word-break: break-all;
     text-decoration: underline;
     text-underline-offset: 3px;
+    transition: color var(--transition);
+}
+
+.chapter a:visited,
+.seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):visited {
+    color: #6c8cff;
+}
+
+.chapter a:hover,
+.seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):hover {
+    color: #8ba5ff;
+}
+
+body.light .chapter a,
+body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf) {
+    color: #4a6adf;
+    color: var(--accent);
+}
+
+body.light .chapter a:visited,
+body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):visited {
+    color: #4a6adf;
+}
+
+body.light .chapter a:hover,
+body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):hover {
+    color: #3b55b8;
 }
 
 /* ── Blockquotes (речевые блоки / инсайты) ── */

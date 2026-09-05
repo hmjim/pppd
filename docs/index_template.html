@@ -162,6 +162,29 @@
         .seo-landing { max-width: 720px; width: 100%; overflow-wrap: break-word; word-break: break-word; }
         .seo-landing h1 { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; }
         .seo-landing .subtitle { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-style: italic; margin-bottom: 40px; }
+        .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf) {
+            color: #6c8cff;
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color var(--transition);
+        }
+        .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):visited {
+            color: #6c8cff;
+        }
+        .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):hover {
+            color: #8ba5ff;
+        }
+        body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf) {
+            color: #4a6adf;
+            color: var(--accent);
+        }
+        body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):visited {
+            color: #4a6adf;
+        }
+        body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf):hover {
+            color: #3b55b8;
+        }
         .seo-toc { margin: 32px 0; }
         .seo-toc-module { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin: 24px 0 8px; }
         .seo-toc-item { display: block; padding: 12px 20px; margin: 4px 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; color: var(--text-primary); text-decoration: none; transition: all 0.25s ease; font-size: 0.95rem; overflow-wrap: break-word; box-sizing: border-box; }
