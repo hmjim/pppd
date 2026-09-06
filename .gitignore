@@ -9,6 +9,7 @@
 # Allow build scripts
 !build_seo.js
 !build_full_pdf.js
+!build_metodichka_pdf.js
 
 # Allow .gitignore itself
 !.gitignore

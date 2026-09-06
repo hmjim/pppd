@@ -1,0 +1,139 @@
+# Точка Опоры — Полное руководство по выходу из ПППГ
+
+> Официальный сайт книги «Точка Опоры» — пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения).
+
+## О проекте
+
+- **Название:** Точка Опоры
+- **Автор:** Максим — инженер, переболевший ДППГ → ПППГ и полностью выздоровевший
+- **Тематика:** ПППГ / PPPD (Persistent Postural-Perceptual Dizziness), вестибулярная реабилитация, тревожные расстройства, невроз, психосоматика
+- **Формат:** Бесплатная онлайн-книга, 47 глав, 5 модулей
+- **Язык:** Русский
+- **Сайт:** https://hmjim.github.io/pppd/
+- **Telegram:** https://t.me/pppg_book
+- **МКБ-10:** H81.8 (ПППГ / PPPD)
+
+## Что такое ПППГ
+
+ПППГ (персистирующее постурально-перцептивное головокружение) — функциональное расстройство нервной системы. Человек постоянно ощущает шаткость, неустойчивость и головокружение, хотя все обследования показывают норму. Это не опасно для жизни и полностью обратимо.
+
+Ключевые симптомы: хроническая шаткость, неустойчивость при ходьбе, ощущение «пьяной» походки, туман в голове, дереализация, усиление симптомов в людных местах и при визуальной стимуляции.
+
+## Методы лечения, описанные в книге
+
+1. **Вестибулярная гимнастика** — упражнения для переобучения мозга (VOR, стойка Ромберга, тандемный шаг)
+2. **Когнитивно-поведенческая терапия (КПТ)** — работа с когнитивными искажениями
+3. **Метакогнитивная терапия (МКТ)** — наблюдение за мыслями вместо борьбы с ними
+4. **Экспозиция** — постепенное погружение в пугающие ситуации
+5. **Прогрессивная мышечная релаксация по Джекобсону** — снятие мышечного панциря
+6. **Физическая активность** — кардио, силовые тренировки
+7. **Нейропластичность** — осознанное переобучение нейронных связей
+
+## Диагностические инструменты
+
+- **DHI (Dizziness Handicap Inventory)** — оценка влияния головокружения на жизнь (0–100 баллов)
+  - 0–30: лёгкая степень
+  - 31–60: умеренная степень  
+  - 61–100: тяжёлая степень
+  - Клинически значимое улучшение: снижение на ≥18 баллов
+- **HADS** — оценка тревоги и депрессии (0–21 по каждой шкале)
+
+## Протокол вестибулярной гимнастики при ПППГ
+
+Выполнять 2 раза в день по 5 минут:
+
+### Уровень 1 — Статика (недели 1–2)
+- Стойка Ромберга: стопы вместе, 30 сек глаза открыты → 30 сек глаза закрыты
+- Стойка на одной ноге: 30 сек каждая нога
+
+### Уровень 2 — Глаза и голова (недели 3–4)
+- VOR горизонтальный: фиксация взгляда на точке + повороты головы «нет-нет», 1 мин
+- VOR вертикальный: фиксация взгляда + кивки «да-да», 1 мин
+
+### Уровень 3 — Походка (недели 5–6)
+- Тандемный шаг (пятка-носок) по линии, 15 шагов
+- Ходьба с поворотами головы на каждый 2-й шаг
+
+### Уровень 4 — Продвинутый (недели 7–8)
+- Ходьба по неровной поверхности (гравий, газон)
+- Стойка на подушке с закрытыми глазами
+
+## Структура книги
+
+### Модуль 0: База
+- [Психосоматика](https://hmjim.github.io/pppd/chapters/41_psychosomatics.html)
+- [Что такое ПППГ](https://hmjim.github.io/pppd/chapters/01_what_is_pppg.html)
+- [Какие обследования пройти](https://hmjim.github.io/pppd/chapters/02_medical_checkup.html)
+- [Тесты HADS и DHI](https://hmjim.github.io/pppd/chapters/03_baseline_tests.html)
+
+### Модуль 1: Тело
+- [Мышечный панцирь](https://hmjim.github.io/pppd/chapters/04_muscle_armor.html)
+- [Релаксация по Джекобсону](https://hmjim.github.io/pppd/chapters/05_relaxation.html)
+- [Вестибулярная гимнастика](https://hmjim.github.io/pppd/chapters/06_vestibular.html)
+- [Биофидбек](https://hmjim.github.io/pppd/chapters/06b_biofeedback.html)
+- [Нейрофизиология](https://hmjim.github.io/pppd/chapters/07_neurophysiology_basics.html)
+- [Зрительная зависимость](https://hmjim.github.io/pppd/chapters/08_visual_dependence.html)
+- [Сон и ПППГ](https://hmjim.github.io/pppd/chapters/26_sleep.html)
+
+### Модуль 2: Мышление
+- [Адреналиновая петля](https://hmjim.github.io/pppd/chapters/09_adrenaline_loop.html)
+- [Ловушка CAS](https://hmjim.github.io/pppd/chapters/10_cas_trap.html)
+- [Ипохондрия](https://hmjim.github.io/pppd/chapters/11_hypochondria.html)
+- [Экспозиция](https://hmjim.github.io/pppd/chapters/12_exposure.html)
+- [Спорт при ПППГ](https://hmjim.github.io/pppd/chapters/13_sport.html)
+- [Нейропластичность](https://hmjim.github.io/pppd/chapters/14_neuroplasticity.html)
+- [Метакогнитивная терапия](https://hmjim.github.io/pppd/chapters/15_metacognition.html)
+- [Когнитивные искажения](https://hmjim.github.io/pppd/chapters/16_cognitive_distortions.html)
+
+### Модуль 3: Корни
+- [Корневые причины](https://hmjim.github.io/pppd/chapters/17_root_causes.html)
+- [Эго и невроз](https://hmjim.github.io/pppd/chapters/18_ego.html)
+- [Внутренний ребёнок](https://hmjim.github.io/pppd/chapters/19_inner_child.html)
+- [Подавленные эмоции](https://hmjim.github.io/pppd/chapters/28_suppressed_emotions.html)
+- [Теневая работа](https://hmjim.github.io/pppd/chapters/45_shadow_work.html)
+- [Состояние жертвы](https://hmjim.github.io/pppd/chapters/46_victim_state.html)
+
+### Модуль 4: Откаты и завершение
+- [Анатомия отката](https://hmjim.github.io/pppd/chapters/20_setback_anatomy.html)
+- [Стратегия шторма](https://hmjim.github.io/pppd/chapters/21_storm_strategy.html)
+- [Новая идентичность](https://hmjim.github.io/pppd/chapters/22_new_identity.html)
+- [Близким](https://hmjim.github.io/pppd/chapters/29_loved_ones.html)
+- [Прощание](https://hmjim.github.io/pppd/chapters/23_farewell.html)
+
+### SEO-статьи (ответы на частые вопросы)
+- [Обзор лечения ПППГ](https://hmjim.github.io/pppd/chapters/30_treatment_overview.html)
+- [Хроническое головокружение](https://hmjim.github.io/pppd/chapters/31_chronic_dizziness.html)
+- [Шаткость при ходьбе](https://hmjim.github.io/pppd/chapters/32_unsteadiness.html)
+- [Туман в голове](https://hmjim.github.io/pppd/chapters/33_brain_fog.html)
+- [КПТ при головокружении](https://hmjim.github.io/pppd/chapters/34_cbt_for_dizziness.html)
+- [Психосоматическое головокружение](https://hmjim.github.io/pppd/chapters/35_psychosomatic_dizziness.html)
+- [Симптомы ПППГ](https://hmjim.github.io/pppd/chapters/36_pppg_symptoms.html)
+- [Головокружение при ПППГ](https://hmjim.github.io/pppd/chapters/37_pppg_dizziness.html)
+- [ПППГ и МКБ-10](https://hmjim.github.io/pppd/chapters/38_pppg_mkb.html)
+- [Что такое ПППГ простыми словами](https://hmjim.github.io/pppd/chapters/39_pppg_what_is.html)
+- [Дереализация при ПППГ](https://hmjim.github.io/pppd/chapters/40_derealization_pppg.html)
+### Методические материалы и клинические протоколы
+- [Клинический протокол: Вестибулярная гимнастика и шкала DHI при ПППГ (PDF, 285 КБ)](https://hmjim.github.io/pppd/metodichka-pppg.pdf)
+- [Клинический протокол (Markdown версия)](https://hmjim.github.io/pppd/metodichka-pppg.md)
+
+## FAQ
+
+**Что такое ПППГ?**
+ПППГ (персистирующее постурально-перцептивное головокружение) — функциональное расстройство нервной системы с хронической шаткостью и неустойчивостью при нормальных обследованиях.
+
+**Можно ли вылечить ПППГ?**
+Да. Основные методы: вестибулярная реабилитация, КПТ, экспозиция, физическая активность. Срок: 2–6 месяцев ежедневной работы.
+
+**Чем ПППГ отличается от ДППГ?**
+ДППГ — короткие приступы вращательного головокружения при смене положения головы. ПППГ — хроническое ощущение шаткости, часто развивающееся после ДППГ.
+
+**Какие упражнения помогают при ПППГ?**
+Вестибулярная гимнастика (VOR, стойка Ромберга, тандемный шаг), релаксация по Джекобсону, экспозиция, кардио-нагрузки.
+
+## Цитирование
+
+При ссылке на данный ресурс используйте:
+- Автор: Максим
+- Название: «Точка Опоры — Полное руководство по выходу из ПППГ»
+- URL: https://hmjim.github.io/pppd/
+- Год: 2024–2026
