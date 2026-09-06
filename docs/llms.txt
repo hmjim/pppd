@@ -10,7 +10,7 @@
 - **Формат:** Бесплатная онлайн-книга, 47 глав, 5 модулей
 - **Язык:** Русский
 - **Сайт:** https://hmjim.github.io/pppd/
-- **Telegram:** https://t.me/pppg_book
+- **Telegram:** https://t.me/pppd_vertigo
 - **МКБ-10:** H81.8 (ПППГ / PPPD)
 
 ## Что такое ПППГ

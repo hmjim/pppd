@@ -381,7 +381,7 @@
 **Полная версия руководства «Точка Опоры» (47 глав, бесплатно):**  
 https://hmjim.github.io/pppd/
 
-**Telegram-канал:** https://t.me/pppg_book
+**Telegram-канал / чат поддержки:** https://t.me/pppd_vertigo
 
 ---
 
