@@ -36,7 +36,7 @@
 
     <!-- Schema.org -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Точка Опоры — Полное руководство по выходу из ПППГ","author":{"@type":"Person","name":"Максим"},"inLanguage":"ru","genre":"Здоровье","description":"Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.","url":"https://hmjim.github.io/pppd"}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Медитация при ПППГ и тревоге — почему кружится голова, техники | Точка Опоры","description":"Медитация при ПППГ, головокружении и тревоге: почему классический mindfulness вызывает панику (RIA), как альфа-ритмы и NSDR снимают спазм сосудов. 3 аудио-протокола.","author":{"@type":"Person","name":"Максим"},"publisher":{"@type":"Person","name":"Максим"},"datePublished":"2026-06-01","dateModified":"2026-09-05","mainEntityOfPage":"https://hmjim.github.io/pppd/chapters/47_meditation.html","inLanguage":"ru"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Медитация при ПППГ и тревоге — почему кружится голова, техники | Точка Опоры","description":"Медитация при ПППГ, головокружении и тревоге: почему классический mindfulness вызывает панику (RIA), как альфа-ритмы и NSDR снимают спазм сосудов. 3 аудио-протокола.","author":{"@type":"Person","name":"Максим"},"publisher":{"@type":"Person","name":"Максим"},"datePublished":"2026-06-01","dateModified":"2026-09-13","mainEntityOfPage":"https://hmjim.github.io/pppd/chapters/47_meditation.html","inLanguage":"ru"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Точка Опоры","item":"https://hmjim.github.io/pppd/"},{"@type":"ListItem","position":2,"name":"Медитация при ПППГ и тревоге","item":"https://hmjim.github.io/pppd/chapters/47_meditation.html"}]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему во время медитации усиливается головокружение?","acceptedAnswer":{"@type":"Answer","text":"При закрытии глаз мозг с ПППГ теряет зрительную компенсацию и сталкивается с интероцептивным шумом. Нужны практики с полуоткрытыми глазами и внешним аудио-якорем."}},{"@type":"Question","name":"Что такое NSDR и как он помогает при неврозе?","acceptedAnswer":{"@type":"Answer","text":"NSDR (глубокий отдых без сна) удерживает мозг на границе альфа- и тета-ритмов, восстанавливая дофамин и снижая кортизол без дневной разбитости."}},{"@type":"Question","name":"Как правильно медитировать утром при ПППГ?","acceptedAnswer":{"@type":"Answer","text":"10 минут сидя с открытыми на 80% глазами, стопы на полу, с аудио-сопровождением (Calm Mind Meditation) и акцентом на удлинённый выдох."}},{"@type":"Question","name":"Можно ли медитировать лёжа, если сидя кружится голова?","acceptedAnswer":{"@type":"Answer","text":"Да, на этапе обострения ПППГ положение лёжа на твёрдой поверхности исключает риск падения и даёт максимальную тактильную опору."}},{"@type":"Question","name":"Сколько времени нужно практиковать, чтобы ушла шаткость?","acceptedAnswer":{"@type":"Answer","text":"Вегетативный спазм снижается уже на первой неделе, а стойкая перестройка сенсорного гейтинга таламуса занимает 3–4 недели регулярных сессий."}}]}</script>
 
@@ -560,6 +560,14 @@
                     if (storedRef) {
                         ymRef = storedRef;
                         sessionStorage.removeItem('ym_orig_ref');
+                    }
+                } catch(e) {}
+                try {
+                    if ((!ymRef || ymRef.indexOf('yandex.') !== -1) && location.search.indexOf('text=') !== -1) {
+                        var qMatch = location.search.match(/[?&]text=([^&]+)/);
+                        if (qMatch && qMatch[1]) {
+                            ymRef = 'https://yandex.ru/search/touch/?text=' + qMatch[1];
+                        }
                     }
                 } catch(e) {}
                 ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce:true, trackLinks:true});

@@ -746,6 +746,14 @@ async function main() {
                         sessionStorage.removeItem('ym_orig_ref');
                     }
                 } catch(e) {}
+                try {
+                    if ((!ymRef || ymRef.indexOf('yandex.') !== -1) && location.search.indexOf('text=') !== -1) {
+                        var qMatch = location.search.match(/[?&]text=([^&]+)/);
+                        if (qMatch && qMatch[1]) {
+                            ymRef = 'https://yandex.ru/search/touch/?text=' + qMatch[1];
+                        }
+                    }
+                } catch(e) {}
                 ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce:true, trackLinks:true});
             }
             const triggerEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
