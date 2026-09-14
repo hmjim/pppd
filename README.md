@@ -15,9 +15,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Chapters-34-6366f1" alt="34 chapters">
+  <img src="https://img.shields.io/badge/Chapters-38-6366f1" alt="38 chapters">
   <img src="https://img.shields.io/badge/Modules-5-10b981" alt="5 modules">
-  <img src="https://img.shields.io/badge/Free_Chapters-12-f59e0b" alt="12 free chapters">
+  <img src="https://img.shields.io/badge/Free_Chapters-14-f59e0b" alt="14 free chapters">
   <img src="https://img.shields.io/badge/Lighthouse-95%2B-00c853" alt="Lighthouse 95+">
 </p>
 
@@ -27,7 +27,7 @@
 
 **“Point of Support”** is a comprehensive guide for individuals dealing with **PPPD** (Persistent Postural-Perceptual Dizziness), written by an author who personally navigated through six months of unsteadiness, derealization, and severe anxiety — and achieved **full recovery**.
 
-This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 34 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
+This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 38 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
 
 ---
 
@@ -41,7 +41,7 @@ This is not a purely theoretical monograph. It is an **engineering-grade manual*
 | 3 | **Mindset** | Neuroplasticity, metacognitive therapy (MCT), cognitive distortions, root causes, ego dynamics, inner child, suppressed emotions | 🔒 Key Access |
 | 4 | **Recovery** | Setback anatomy, the “Storm” protocol, identity transformation, navigating relationships & PPPD | 🔒 Key Access |
 
-The first **12 chapters are free** — accessible immediately without registration or limitations.
+The first **14 chapters are free** — accessible immediately without registration or limitations.
 
 ---
 
