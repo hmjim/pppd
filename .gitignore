@@ -15,5 +15,13 @@
 # Allow .gitignore itself
 !.gitignore
 
+# Allow source chapters and translation scripts
+!chapters_src/
+!chapters_src/**
+!chapters_en/
+!chapters_en/**
+!scripts/
+!scripts/**
+
 # Allow README
 !README.md

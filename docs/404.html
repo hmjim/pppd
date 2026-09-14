@@ -12,16 +12,20 @@
             if (ref) {
                 try { sessionStorage.setItem('ym_orig_ref', ref); } catch(e) {}
             }
-            window.location.replace('https://hmjim.github.io/pppd/' + window.location.search + window.location.hash);
+            var isEn = window.location.pathname.includes('/en');
+            var target = isEn ? 'https://hmjim.github.io/pppd/en/' : 'https://hmjim.github.io/pppd/';
+            window.location.replace(target + window.location.search + window.location.hash);
         })();
     </script>
 </head>
 <body>
-    <p>Страница перемещена. <a id="redirect-link" href="https://hmjim.github.io/pppd/">Перейти на главную</a></p>
+    <p>Page moved. <a id="redirect-link" href="https://hmjim.github.io/pppd/">Go to main page</a></p>
     <script>
+        var isEn = window.location.pathname.includes('/en');
         var link = document.getElementById('redirect-link');
         if (link) {
-            link.href = 'https://hmjim.github.io/pppd/' + window.location.search + window.location.hash;
+            link.href = (isEn ? 'https://hmjim.github.io/pppd/en/' : 'https://hmjim.github.io/pppd/') + window.location.search + window.location.hash;
+            if (isEn) link.textContent = 'Go to main page';
         }
     </script>
 </body>

@@ -91,6 +91,44 @@ const LICENSE_KEY_STORAGE = isEn ? 'point-of-support-license-key' : 'tochka-opor
 
 let currentIndex = 0;
 
+// ── Update TOC URLs to Prevent Double /chapters/ Nesting ──
+function updateTocHrefs() {
+    const isSubdir = window.location.pathname.includes('/chapters/');
+    document.querySelectorAll('.toc-item').forEach(link => {
+        const i = parseInt(link.dataset.index, 10);
+        if (!isNaN(i) && CHAPTERS[i]) {
+            link.href = isSubdir ? (CHAPTERS[i].id + '.html') : ('chapters/' + CHAPTERS[i].id + '.html');
+        }
+    });
+}
+
+// ── Update Language Switcher Links ──
+function updateLangSwitcher(index) {
+    const isSubdir = window.location.pathname.includes('/chapters/');
+    const container = document.querySelector('.lang-switch-container');
+    if (!container) return;
+
+    if (index === -1) {
+        if (isEn) {
+            const ruTarget = isSubdir ? '../../' : '../';
+            container.innerHTML = `<a href="${ruTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a><span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>`;
+        } else {
+            const enTarget = isSubdir ? '../en/' : 'en/';
+            container.innerHTML = `<span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">RU</span><a href="${enTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">EN</a>`;
+        }
+        return;
+    }
+
+    const chId = (index >= 0 && index < CHAPTERS.length) ? CHAPTERS[index].id : '00_introduction';
+    if (isEn) {
+        const ruTarget = isSubdir ? `../../chapters/${chId}.html` : `../chapters/${chId}.html`;
+        container.innerHTML = `<a href="${ruTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a><span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>`;
+    } else {
+        const enTarget = isSubdir ? `../en/chapters/${chId}.html` : `en/chapters/${chId}.html`;
+        container.innerHTML = `<span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">RU</span><a href="${enTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">EN</a>`;
+    }
+}
+
 // ── Build TOC ──
 function buildTOC() {
     const toc = document.getElementById('toc');
@@ -307,6 +345,9 @@ async function loadChapter(index) {
                 chapterEl.innerHTML = html;
 
                 if (isLicensed) {
+                    const isSubdir = window.location.pathname.includes('/chapters/');
+                    const pdfFile = isEn ? 'point_of_support.pdf' : 'r_015744dc3f28b49e.pdf';
+                    const pdfPath = (isSubdir ? '../' : '') + pdfFile + '?v=' + Date.now();
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';
                     pdfBtn.innerHTML = `<span class="pdf-icon">📄</span> ${isEn ? 'Download PDF' : 'Скачать PDF'}`;
@@ -380,6 +421,9 @@ async function loadChapter(index) {
     const progFill = document.getElementById('progress-fill');
     if (progText) progText.textContent = pct + '%';
     if (progFill) progFill.style.width = pct + '%';
+
+    updateTocHrefs();
+    updateLangSwitcher(index);
 
     requestAnimationFrame(() => {
         const activeItem = document.querySelector('.toc-item.active');
@@ -528,6 +572,9 @@ function showLanding() {
     document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
     
     localStorage.removeItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter');
+
+    updateTocHrefs();
+    updateLangSwitcher(-1);
 
     requestAnimationFrame(() => {
         updateCachedHeight();
