@@ -1,10 +1,12 @@
 User-agent: *
 Allow: /
 Disallow: /*.pdf$
+Disallow: /*?*text=
 
 User-agent: Yandex
 Allow: /
 Disallow: /*.pdf$
+Clean-param: text /
 Crawl-delay: 2
 
 Sitemap: https://hmjim.github.io/pppd/sitemap.xml

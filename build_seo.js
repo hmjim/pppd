@@ -922,10 +922,12 @@ async function main() {
     const robotsTxt = `User-agent: *
 Allow: /
 Disallow: /*.pdf$
+Disallow: /*?*text=
 
 User-agent: Yandex
 Allow: /
 Disallow: /*.pdf$
+Clean-param: text /
 Crawl-delay: 2
 
 Sitemap: ${SITE_URL}/sitemap.xml
