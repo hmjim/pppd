@@ -1,93 +1,93 @@
 <p align="center">
-  <img src="docs/favicon.svg" width="80" alt="Точка Опоры">
+  <img src="docs/favicon.svg" width="80" alt="Point of Support (Точка Опоры)">
 </p>
 
-<h1 align="center">Точка Опоры</h1>
+<h1 align="center">Point of Support (Точка Опоры)</h1>
 
 <p align="center">
-  <strong>Пошаговая система выхода из ПППГ</strong><br>
-  <em>Персистирующее постурально-перцептивное головокружение (PPPD)</em>
-</p>
-
-<p align="center">
-  <a href="https://hmjim.github.io/pppd/"><img src="https://img.shields.io/badge/🌐_Читать_онлайн-hmjim.github.io%2Fpppd-6366f1?style=for-the-badge" alt="Читать онлайн"></a>
-  <a href="https://t.me/pppd_vertigo"><img src="https://img.shields.io/badge/Telegram-Группа_ПППГ-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
+  <strong>A Step-by-Step System for Overcoming PPPD</strong><br>
+  <em>Persistent Postural-Perceptual Dizziness</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Глав-34-6366f1" alt="34 главы">
-  <img src="https://img.shields.io/badge/Модулей-5-10b981" alt="5 модулей">
-  <img src="https://img.shields.io/badge/Бесплатных-12-f59e0b" alt="12 бесплатных">
+  <a href="https://hmjim.github.io/pppd/"><img src="https://img.shields.io/badge/🌐_Read_Online-hmjim.github.io%2Fpppd-6366f1?style=for-the-badge" alt="Read Online"></a>
+  <a href="https://t.me/pppd_vertigo"><img src="https://img.shields.io/badge/Telegram-PPPD_Community-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Chapters-34-6366f1" alt="34 chapters">
+  <img src="https://img.shields.io/badge/Modules-5-10b981" alt="5 modules">
+  <img src="https://img.shields.io/badge/Free_Chapters-12-f59e0b" alt="12 free chapters">
   <img src="https://img.shields.io/badge/Lighthouse-95%2B-00c853" alt="Lighthouse 95+">
 </p>
 
 ---
 
-## 📖 О книге
+## 📖 About the Book
 
-**«Точка Опоры»** — книга для людей с **ПППГ** (Persistent Postural-Perceptual Dizziness), написанная человеком, который сам прошёл через полугодовой ад шаткости, дереализации и тревоги — и **полностью выздоровел**.
+**“Point of Support”** is a comprehensive guide for individuals dealing with **PPPD** (Persistent Postural-Perceptual Dizziness), written by an author who personally navigated through six months of unsteadiness, derealization, and severe anxiety — and achieved **full recovery**.
 
-Это не теоретическая монография. Это **инженерная инструкция** из 34 глав и 5 модулей, построенная на доказательных терапевтических протоколах.
-
----
-
-## 📚 Структура книги
-
-| # | Модуль | Что внутри | Доступ |
-|---|--------|------------|--------|
-| 0 | **База** | Что такое ПППГ, какие обследования пройти, тесты HADS/DHI | 🟢 Бесплатно |
-| 1 | **Тело** | Мышечный панцирь, релаксация Джекобсона, вестибулярная гимнастика, нейрофизиология, зрительная зависимость, сон | 🟢 Бесплатно |
-| 2 | **Батарейка** | Адреналиновая петля, CAS, ипохондрия, экспозиция, спорт, вестибулярная мигрень, дереализация | 🔒 По ключу |
-| 3 | **Мышление** | Нейропластичность, метакогнитивная терапия, когнитивные искажения, корневые причины, эго, внутренний ребёнок, подавленные эмоции | 🔒 По ключу |
-| 4 | **Выход** | Анатомия отката, стратегия «Шторм», новая личность, близкие и ПППГ | 🔒 По ключу |
-
-Первые **12 глав бесплатны** — без регистрации и без ограничений.
+This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 34 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
 
 ---
 
-## 🧠 Что такое ПППГ?
+## 📚 Book Structure
 
-**ПППГ** (МКБ-11: AB32.0) — хроническое функциональное расстройство нервной системы. Человек постоянно ощущает шаткость, неустойчивость и головокружение, хотя все обследования в норме.
+| # | Module | Core Topics | Access |
+|---|--------|-------------|--------|
+| 0 | **Basics** | Understanding PPPD, diagnostic checklist, HADS / DHI assessments | 🟢 Free |
+| 1 | **Body** | Muscle armor, Jacobson progressive relaxation, vestibular rehabilitation (VRT), neurophysiology, visual dependence, sleep optimization | 🟢 Free |
+| 2 | **Battery** | Adrenaline loop, Cognitive Attentional Syndrome (CAS), health anxiety & hypochondria, graded exposure, physical exercise, vestibular migraine, derealization | 🔒 Key Access |
+| 3 | **Mindset** | Neuroplasticity, metacognitive therapy (MCT), cognitive distortions, root causes, ego dynamics, inner child, suppressed emotions | 🔒 Key Access |
+| 4 | **Recovery** | Setback anatomy, the “Storm” protocol, identity transformation, navigating relationships & PPPD | 🔒 Key Access |
 
-ПППГ — **вторая по частоте** причина обращений к отоневрологам после ДППГ. Диагностируется у 15–20% пациентов вестибулярных клиник.
-
-**ПППГ излечимо.** Книга объединяет пять направлений доказательной медицины:
-
-1. 🏋️ Вестибулярная реабилитация
-2. 🧩 Когнитивно-поведенческая терапия (КПТ)
-3. 🎯 Экспозиция
-4. 🏃 Физическая активность
-5. 💊 Фармакотерапия (СИОЗС)
+The first **12 chapters are free** — accessible immediately without registration or limitations.
 
 ---
 
-## ✨ Возможности сайта
+## 🧠 What is PPPD?
 
-- 🌗 **Тёмная / светлая тема** с автосохранением
-- 📊 **Прогресс-бар** чтения
-- 📱 **Адаптивный дизайн** — мобильные, планшеты, десктоп
-- 📄 **PDF-экспорт** глав для офлайн-чтения
-- ⚡ **Lighthouse**: Performance 95+, Accessibility 100, SEO 100
+**PPPD** (ICD-11: AB32.0) is a chronic functional disorder of the nervous system and vestibular processing. Individuals experience persistent sensations of rocking, swaying, floating, or non-spinning dizziness despite standard diagnostic tests (MRI, CT, ENT examinations) showing normal results.
+
+PPPD is the **second most common cause** of dizziness consultations in otoneurology clinics (following BPPV), diagnosed in 15–20% of vestibular patients.
+
+**PPPD is fully treatable and reversible.** The framework integrates five proven pillars of evidence-based practice:
+
+1. 🏋️ **Vestibular Rehabilitation Therapy (VRT)**
+2. 🧩 **Cognitive Behavioral Therapy (CBT) & Metacognitive Therapy (MCT)**
+3. 🎯 **Graded Exposure & Desensitization**
+4. 🏃 **Somatic Regulation & Physical Activity**
+5. 💊 **Pharmacotherapy (SSRIs/SNRIs context and clinical guidance)**
 
 ---
 
-## 🔗 Ссылки
+## ✨ Web Platform Features
 
-| | |
+- 🌗 **Dark / Light theme** with persistent state storage
+- 📊 **Reading progress indicator**
+- 📱 **Fully responsive design** — optimized for mobile, tablet, and desktop
+- 📄 **PDF export** of individual chapters for offline reading
+- ⚡ **Lighthouse certified**: Performance 95+, Accessibility 100, Best Practices 100, SEO 100
+
+---
+
+## 🔗 Links
+
+| Resource | Link |
 |---|---|
-| 🌐 **Читать** | [hmjim.github.io/pppd](https://hmjim.github.io/pppd/) |
-| 💬 **Telegram-группа** | [@pppd_vertigo](https://t.me/pppd_vertigo) |
-| ✉️ **Автор** | [@Hmjim](https://t.me/Hmjim) |
+| 🌐 **Web Version** | [hmjim.github.io/pppd](https://hmjim.github.io/pppd/) |
+| 💬 **Telegram Community** | [@pppd_vertigo](https://t.me/pppd_vertigo) |
+| ✉️ **Author** | [@Hmjim](https://t.me/Hmjim) |
 
 ---
 
-## 📝 Лицензия
+## 📝 License & Copyright
 
-Все права на контент книги «Точка Опоры» принадлежат автору.  
-Воспроизведение, распространение и перепродажа без письменного согласия запрещены.
+All intellectual property rights to the contents of “Point of Support” (Точка Опоры) are reserved by the author.  
+Reproduction, distribution, or commercial reuse without explicit written consent is strictly prohibited.
 
 ---
 
 <p align="center">
-  <sub>© 2026 Максим · Книга «Точка Опоры» — пошаговая система выхода из ПППГ</sub>
+  <sub>© 2026 Maxim · “Point of Support” — A step-by-step system for overcoming PPPD</sub>
 </p>
