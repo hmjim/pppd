@@ -1,9 +1,9 @@
 /* ═══════════════════════════════════════════
-   ТОЧКА ОПОРЫ — App Controller
-   Loads MD chapters, builds TOC, handles navigation
+   ТОЧКА ОПОРЫ / POINT OF SUPPORT — App Controller
+   Loads MD chapters, builds TOC, handles navigation & paywall
    ═══════════════════════════════════════════ */
 
-const CHAPTERS = [
+const CHAPTERS_RU = [
     { id: '00_introduction',           title: 'Вступление',                          module: null },
     { id: '41_psychosomatics',         title: 'Психосоматика: универсальный ключ',    module: 'Модуль 0: База' },
     { id: '01_what_is_pppg',           title: 'Что такое ПППГ',                      module: 'Модуль 0: База' },
@@ -44,13 +44,58 @@ const CHAPTERS = [
     { id: '25_appendix',              title: 'Приложения',                           module: 'Приложения', paid: true },
 ];
 
+const CHAPTERS_EN = [
+    { id: '00_introduction',           title: 'Introduction',                        module: null },
+    { id: '41_psychosomatics',         title: 'Psychosomatics: Universal Key',       module: 'Module 0: Foundation' },
+    { id: '01_what_is_pppg',           title: 'What is PPPD',                        module: 'Module 0: Foundation' },
+    { id: '02_medical_checkup',        title: 'Closing the Clinic Door',             module: 'Module 0: Foundation' },
+    { id: '03_baseline_tests',         title: 'Baseline Assessment & Tests',         module: 'Module 0: Foundation' },
+    { id: '04_muscle_armor',           title: 'Muscle Armor',                        module: 'Module 1: Body' },
+    { id: '05_relaxation',             title: 'Jacobson Progressive Relaxation',     module: 'Module 1: Body' },
+    { id: '06_vestibular',             title: 'Vestibular Rehabilitation',           module: 'Module 1: Body' },
+    { id: '06b_biofeedback',           title: 'Simulators & Brain Recalibration',    module: 'Module 1: Body' },
+    { id: '07_neurophysiology_basics', title: 'Neurophysiology Basics',              module: 'Module 1: Body' },
+    { id: '08_visual_dependence',      title: 'Visual Dependence',                   module: 'Module 1: Body' },
+    { id: '26_sleep',                  title: 'Sleep & PPPD',                        module: 'Module 1: Body' },
+    { id: '44_attention_training',     title: 'Attention Focus in Anxiety',          module: 'Module 1: Body' },
+    { id: '47_meditation',             title: 'Meditation in PPPD & Anxiety',        module: 'Module 1: Body' },
+    { id: '09_adrenaline_loop',        title: 'The Adrenaline Loop',                 module: 'Module 2: Battery', paid: true },
+    { id: '10_cas_trap',               title: 'The CAS Trap',                        module: 'Module 2: Battery', paid: true },
+    { id: '11_hypochondria',           title: 'Health Anxiety & Hypochondria',       module: 'Module 2: Battery', paid: true },
+    { id: '12_exposure',               title: 'Graded Exposure',                     module: 'Module 2: Battery', paid: true },
+    { id: '13_sport',                  title: 'Physical Activity & Reset',           module: 'Module 2: Battery', paid: true },
+    { id: '42_vestibular_migraine',    title: 'Vestibular Migraine',                 module: 'Module 2: Battery', paid: true },
+    { id: '27_depersonalization',      title: 'Derealization & Depersonalization',   module: 'Module 2: Battery', paid: true },
+    { id: '43_ptsd_emdr',              title: 'PTSD & EMDR Therapy',                 module: 'Module 2: Battery', paid: true },
+    { id: '14_neuroplasticity',        title: 'Neuroplasticity & Rewiring',          module: 'Module 3: Cognition', paid: true },
+    { id: '15_metacognition',          title: 'Metacognitive Therapy (MCT)',         module: 'Module 3: Cognition', paid: true },
+    { id: '16_cognitive_distortions',  title: 'Cognitive Distortions',               module: 'Module 3: Cognition', paid: true },
+    { id: '17_root_causes',            title: 'Where Did We Go Wrong?',              module: 'Module 3: Cognition', paid: true },
+    { id: '18_ego',                    title: 'The Ego: The False Identity',         module: 'Module 3: Cognition', paid: true },
+    { id: '19_inner_child',            title: 'The Inner Child & Trauma',            module: 'Module 3: Cognition', paid: true },
+    { id: '28_suppressed_emotions',    title: 'Suppressed Emotions',                 module: 'Module 3: Cognition', paid: true },
+    { id: '46_victim_state',           title: 'Exiting the Victim Role',             module: 'Module 3: Cognition', paid: true },
+    { id: '45_shadow_work',            title: 'Shadow Work & Integration',           module: 'Module 3: Cognition', paid: true },
+    { id: '20_setback_anatomy',        title: 'Anatomy of a Setback',                module: 'Module 4: Breakthrough', paid: true },
+    { id: '21_storm_strategy',         title: 'The Storm Protocol',                  module: 'Module 4: Breakthrough', paid: true },
+    { id: '22_new_identity',           title: 'New Identity & Integration',          module: 'Module 4: Breakthrough', paid: true },
+    { id: '23_farewell',               title: 'Return to Full Life',                 module: 'Module 4: Breakthrough', paid: true },
+    { id: '29_loved_ones',             title: 'Loved Ones & PPPD Support',           module: 'Module 4: Breakthrough', paid: true },
+    { id: '24_case_studies',           title: 'Clinical Case Studies',               module: 'Case Studies', paid: true },
+    { id: '25_appendix',              title: 'Clinical Protocols & Exercises',      module: 'Appendix', paid: true },
+];
+
+const isEn = document.documentElement.lang === 'en' || window.location.pathname.includes('/en/');
+const CHAPTERS = isEn ? CHAPTERS_EN : CHAPTERS_RU;
+const LICENSE_KEY_STORAGE = isEn ? 'point-of-support-license-key' : 'tochka-opory-license-key';
+
 let currentIndex = 0;
 
 // ── Build TOC ──
 function buildTOC() {
     const toc = document.getElementById('toc');
     if (!toc) return;
-    toc.innerHTML = ''; // Clear statically pre-rendered links to prevent duplication
+    toc.innerHTML = '';
     let lastModule = null;
 
     CHAPTERS.forEach((ch, i) => {
@@ -66,7 +111,6 @@ function buildTOC() {
         link.className = 'toc-item';
         link.textContent = ch.title;
         link.dataset.index = i;
-        // SEO: add crawlable href to static pages
         const isSubdir = window.location.pathname.includes('/chapters/');
         link.href = isSubdir ? (ch.id + '.html') : ('chapters/' + ch.id + '.html');
         link.addEventListener('click', (e) => {
@@ -98,7 +142,6 @@ async function decryptContent(encryptedPayload, password) {
         const iv = base64ToArrayBuffer(ivBase64);
         const combined = base64ToArrayBuffer(ciphertextBase64);
 
-        // Hash the password with SHA-256 to generate the 256-bit key
         const encoder = new TextEncoder();
         const keyData = encoder.encode(password.trim());
         const hash = await window.crypto.subtle.digest('SHA-256', keyData);
@@ -126,45 +169,71 @@ async function decryptContent(encryptedPayload, password) {
 
 // ── Render Paywall ──
 function renderPaywall(chapterEl, index) {
-    chapterEl.innerHTML = `
-        <div class="paywall-container">
-            <span class="paywall-icon">🔐</span>
-            <h2 class="paywall-title">Доступ ограничен: Модули 2–4</h2>
-            <p class="paywall-text">
-                Практическая и терапевтическая часть системы «Точка Опоры» по работе с адреналиновыми петлями, 
-                когнитивными ловушками, вторичными выгодами и выходом в полноценную жизнь заблокирована.
-            </p>
-            <div class="paywall-features">
-                <ul>
-                    <li>Работа с адреналиновой петлей и переключение сканера 5-4-3-2-1</li>
-                    <li>Соматический трекинг и тренировка фокуса внимания</li>
-                    <li>Экспозиция страхов и парадоксальная интенция</li>
-                    <li>Метакогнитивная терапия, разбор Эго и Внутреннего ребенка</li>
-                    <li>Анализ вторичных выгод, синдрома жертвы и преодоление откатов</li>
-                </ul>
+    if (isEn) {
+        chapterEl.innerHTML = `
+            <div class="paywall-container">
+                <span class="paywall-icon">🔐</span>
+                <h2 class="paywall-title">Restricted Access: Modules 2–4</h2>
+                <p class="paywall-text">
+                    The clinical and therapeutic system of "Point of Support" covering adrenaline loops, 
+                    cognitive traps, secondary gain, and full neuro-vestibular recovery is locked.
+                </p>
+                <div class="paywall-features">
+                    <ul>
+                        <li>Adrenaline loop regulation and 5-4-3-2-1 scanner switching</li>
+                        <li>Somatic tracking and attention focus recalibration</li>
+                        <li>Graded exposure and paradoxical intention protocols</li>
+                        <li>Metacognitive therapy, Ego analysis, and Inner Child healing</li>
+                        <li>Secondary gain analysis, victim mindset exit, and setback mastery</li>
+                    </ul>
+                </div>
+                <div class="paywall-form">
+                    <input type="text" id="paywall-key" class="paywall-input" placeholder="Enter license key">
+                    <button id="paywall-submit" class="paywall-btn">Unlock All Modules</button>
+                </div>
+                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Contact the author on Telegram (@Hmjim) to purchase access</a>
             </div>
-            <div class="paywall-form">
-                <input type="text" id="paywall-key" class="paywall-input" placeholder="Введи ключ доступа">
-                <button id="paywall-submit" class="paywall-btn">Активировать доступ</button>
+        `;
+    } else {
+        chapterEl.innerHTML = `
+            <div class="paywall-container">
+                <span class="paywall-icon">🔐</span>
+                <h2 class="paywall-title">Доступ ограничен: Модули 2–4</h2>
+                <p class="paywall-text">
+                    Практическая и терапевтическая часть системы «Точка Опоры» по работе с адреналиновыми петлями, 
+                    когнитивными ловушками, вторичными выгодами и выходом в полноценную жизнь заблокирована.
+                </p>
+                <div class="paywall-features">
+                    <ul>
+                        <li>Работа с адреналиновой петлей и переключение сканера 5-4-3-2-1</li>
+                        <li>Соматический трекинг и тренировка фокуса внимания</li>
+                        <li>Экспозиция страхов и парадоксальная интенция</li>
+                        <li>Метакогнитивная терапия, разбор Эго и Внутреннего ребенка</li>
+                        <li>Анализ вторичных выгод, синдрома жертвы и преодоление откатов</li>
+                    </ul>
+                </div>
+                <div class="paywall-form">
+                    <input type="text" id="paywall-key" class="paywall-input" placeholder="Введи ключ доступа">
+                    <button id="paywall-submit" class="paywall-btn">Активировать доступ</button>
+                </div>
+                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Связаться с автором в Telegram (@Hmjim) для покупки доступа</a>
             </div>
-            <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Связаться с автором в Telegram (@Hmjim) для покупки доступа</a>
-        </div>
-    `;
+        `;
+    }
 
     document.getElementById('paywall-submit').addEventListener('click', async () => {
         const keyInput = document.getElementById('paywall-key').value.trim();
         if (!keyInput) {
-            alert('Пожалуйста, введи ключ доступа.');
+            alert(isEn ? 'Please enter your license key.' : 'Пожалуйста, введи ключ доступа.');
             return;
         }
 
         const btn = document.getElementById('paywall-submit');
         const origText = btn.textContent;
-        btn.textContent = 'Проверка...';
+        btn.textContent = isEn ? 'Verifying...' : 'Проверка...';
         btn.disabled = true;
 
         try {
-            // Fetch the current chapter to verify the key mathematically
             const ch = CHAPTERS[index];
             const isSubdir = window.location.pathname.includes('/chapters/');
             const mdUrl = isSubdir ? `${ch.id}.md` : `chapters/${ch.id}.md`;
@@ -172,15 +241,13 @@ function renderPaywall(chapterEl, index) {
             if (!res.ok) throw new Error('Failed to fetch');
             const encryptedPayload = await res.text();
 
-            // Attempt decryption
             await decryptContent(encryptedPayload, keyInput);
 
-            // Decryption succeeded! Store the key and reload
-            localStorage.setItem('tochka-opory-license-key', keyInput);
-            alert('Доступ успешно активирован! Все модули разблокированы.');
+            localStorage.setItem(LICENSE_KEY_STORAGE, keyInput);
+            alert(isEn ? 'Access granted! All modules unlocked.' : 'Доступ успешно активирован! Все модули разблокированы.');
             loadChapter(index);
         } catch (err) {
-            alert('Неверный ключ доступа. Пожалуйста, проверьте правильность ввода.');
+            alert(isEn ? 'Invalid license key. Please verify and try again.' : 'Неверный ключ доступа. Пожалуйста, проверьте правильность ввода.');
             btn.textContent = origText;
             btn.disabled = false;
         }
@@ -194,7 +261,6 @@ async function loadChapter(index) {
     const ch = CHAPTERS[index];
     const chapterEl = document.getElementById('chapter');
 
-    // Update URL to match sitemap format: chapters/CHAPTER_ID.html
     if (!loadChapter._fromPopState) {
         const isSubdir = window.location.pathname.includes('/chapters/');
         const targetUrl = isSubdir ? (ch.id + '.html') : ('chapters/' + ch.id + '.html');
@@ -202,22 +268,20 @@ async function loadChapter(index) {
     }
     loadChapter._fromPopState = false;
 
-    // Show loading
-    chapterEl.innerHTML = '<div class="chapter-loading"><div class="spinner"></div><p>Загрузка...</p></div>';
+    chapterEl.innerHTML = isEn 
+        ? '<div class="chapter-loading"><div class="spinner"></div><p>Loading chapter...</p></div>'
+        : '<div class="chapter-loading"><div class="spinner"></div><p>Загрузка...</p></div>';
 
-    // Hide SEO landing, show chapter content and nav
     const seoLanding = document.getElementById('seo-landing');
     if (seoLanding) seoLanding.style.display = 'none';
     chapterEl.style.display = '';
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = '';
 
-    const savedKey = localStorage.getItem('tochka-opory-license-key');
+    const savedKey = localStorage.getItem(LICENSE_KEY_STORAGE) || localStorage.getItem('point-of-support-license-key') || localStorage.getItem('tochka-opory-license-key');
     const isLicensed = !!savedKey;
-    let isPaywall = false;
 
     if (ch.paid && !isLicensed) {
-        isPaywall = true;
         renderPaywall(chapterEl, index);
     } else {
         try {
@@ -225,7 +289,7 @@ async function loadChapter(index) {
             const mdUrl = isSubdir ? `${ch.id}.md` : `chapters/${ch.id}.md`;
             const res = await fetch(mdUrl);
             if (!res.ok) {
-                chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Глава «${ch.title}» пока не написана.<br>Скоро будет.</p>`;
+                chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Chapter "${ch.title}" is coming soon.</p>`;
             } else {
                 let md = await res.text();
 
@@ -233,8 +297,7 @@ async function loadChapter(index) {
                     try {
                         md = await decryptContent(md, savedKey);
                     } catch (e) {
-                        // Stored key is invalid or failed to decrypt
-                        localStorage.removeItem('tochka-opory-license-key');
+                        localStorage.removeItem(LICENSE_KEY_STORAGE);
                         renderPaywall(chapterEl, index);
                         return;
                     }
@@ -243,11 +306,10 @@ async function loadChapter(index) {
                 let html = marked.parse(md);
                 chapterEl.innerHTML = html;
 
-                // Inject PDF download button for licensed users
                 if (isLicensed) {
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';
-                    pdfBtn.innerHTML = '<span class="pdf-icon">📄</span> Скачать PDF';
+                    pdfBtn.innerHTML = `<span class="pdf-icon">📄</span> ${isEn ? 'Download PDF' : 'Скачать PDF'}`;
                     pdfBtn.addEventListener('click', async () => {
                         const ua = navigator.userAgent || '';
                         const isTelegramWebView = /Telegram/i.test(ua) || (typeof window.TelegramWebviewProxy !== 'undefined');
@@ -255,15 +317,12 @@ async function loadChapter(index) {
                             window.print();
                             return;
                         }
-                        // iOS WKWebView cannot download files or open external browser programmatically.
-                        // Copy URL with embedded license key to clipboard + show instruction.
                         const key = encodeURIComponent(savedKey);
                         const baseUrl = window.location.origin + window.location.pathname;
                         const printUrl = baseUrl + '#tochka-print=' + key + '&ch=' + currentIndex;
                         try {
                             await navigator.clipboard.writeText(printUrl);
                         } catch {
-                            // Fallback for clipboard API failure
                             const ta = document.createElement('textarea');
                             ta.value = printUrl;
                             ta.style.cssText = 'position:fixed;left:-9999px';
@@ -272,18 +331,16 @@ async function loadChapter(index) {
                             document.execCommand('copy');
                             document.body.removeChild(ta);
                         }
-                        // Show instruction overlay
                         const overlay = document.createElement('div');
                         overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
                         overlay.innerHTML = `
                             <div style="background:#1a1a2e;border-radius:16px;padding:28px 24px;max-width:340px;text-align:center;color:#fff;font-family:Inter,sans-serif;">
                                 <div style="font-size:40px;margin-bottom:12px;">✅</div>
-                                <div style="font-size:17px;font-weight:600;margin-bottom:16px;">Ссылка скопирована!</div>
+                                <div style="font-size:17px;font-weight:600;margin-bottom:16px;">${isEn ? 'Link Copied!' : 'Ссылка скопирована!'}</div>
                                 <div style="font-size:14px;line-height:1.6;color:#aab;margin-bottom:20px;">
-                                    Telegram не поддерживает скачивание PDF.<br><br>
-                                    <strong style="color:#fff;">Открой Safari</strong> и вставь ссылку из буфера обмена — PDF скачается автоматически.
+                                    ${isEn ? 'Open Safari / Chrome and paste the link to download the complete PDF book.' : 'Telegram не поддерживает скачивание PDF.<br><br><strong style="color:#fff;">Открой Safari</strong> и вставь ссылку из буфера обмена — PDF скачается автоматически.'}
                                 </div>
-                                <button onclick="this.parentElement.parentElement.remove()" style="background:#4a6adf;color:#fff;border:none;border-radius:10px;padding:12px 32px;font-size:15px;font-weight:600;cursor:pointer;">Понятно</button>
+                                <button onclick="this.parentElement.parentElement.remove()" style="background:#4a6adf;color:#fff;border:none;border-radius:10px;padding:12px 32px;font-size:15px;font-weight:600;cursor:pointer;">OK</button>
                             </div>
                         `;
                         document.body.appendChild(overlay);
@@ -292,19 +349,16 @@ async function loadChapter(index) {
                     chapterEl.insertBefore(pdfBtn, chapterEl.firstChild.nextSibling);
                 }
 
-                // Fix PDF material links for Telegram WebView:
-                // Add download attribute so in-app browser triggers download instead of inline render
                 chapterEl.querySelectorAll('a[href$=".pdf"]').forEach(link => {
                     link.setAttribute('download', '');
                     link.setAttribute('target', '_blank');
                 });
             }
         } catch {
-            chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Глава «${ch.title}» пока не написана.</p>`;
+            chapterEl.innerHTML = `<p style="color:var(--text-muted);text-align:center;padding:80px 0;">Error loading chapter.</p>`;
         }
     }
 
-    // Force re-animation asynchronously to avoid layout thrashing
     chapterEl.style.animation = 'none';
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
@@ -312,40 +366,38 @@ async function loadChapter(index) {
         });
     });
 
-    // Update TOC active state
     document.querySelectorAll('.toc-item').forEach((el, i) => {
         el.classList.toggle('active', i === index);
     });
 
-    // Update nav buttons
-    document.getElementById('prev-chapter').disabled = index === 0;
-    document.getElementById('next-chapter').disabled = index === CHAPTERS.length - 1;
+    const prevBtn = document.getElementById('prev-chapter');
+    const nextBtn = document.getElementById('next-chapter');
+    if (prevBtn) prevBtn.disabled = index === 0;
+    if (nextBtn) nextBtn.disabled = index === CHAPTERS.length - 1;
 
-    // Update progress
     const pct = Math.round(((index + 1) / CHAPTERS.length) * 100);
-    document.getElementById('progress-text').textContent = pct + '%';
-    document.getElementById('progress-fill').style.width = pct + '%';
+    const progText = document.getElementById('progress-text');
+    const progFill = document.getElementById('progress-fill');
+    if (progText) progText.textContent = pct + '%';
+    if (progFill) progFill.style.width = pct + '%';
 
-    // Defer layout-dependent scroll actions to next animation frame
     requestAnimationFrame(() => {
         const activeItem = document.querySelector('.toc-item.active');
         if (activeItem) {
             activeItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Recalculate dimensions after layout settles
         requestAnimationFrame(() => {
             updateCachedHeight();
         });
     });
 
-    // Save position
-    localStorage.setItem('tochka-opory-chapter', index);
+    localStorage.setItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter', index);
 
-    // Close mobile sidebar
-    document.getElementById('sidebar').classList.remove('open');
-    document.getElementById('menu-toggle').classList.remove('active');
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menu-toggle');
+    if (sidebar) sidebar.classList.remove('open');
+    if (menuToggle) menuToggle.classList.remove('active');
 }
 
 // ── Theme Toggle ──
@@ -353,15 +405,20 @@ function initTheme() {
     const saved = localStorage.getItem('tochka-opory-theme');
     if (saved === 'light') {
         document.body.classList.add('light');
-        document.querySelector('.theme-icon').textContent = '☀️';
+        const icon = document.querySelector('.theme-icon');
+        if (icon) icon.textContent = '☀️';
     }
 
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-        document.body.classList.toggle('light');
-        const isLight = document.body.classList.contains('light');
-        document.querySelector('.theme-icon').textContent = isLight ? '☀️' : '🌙';
-        localStorage.setItem('tochka-opory-theme', isLight ? 'light' : 'dark');
-    });
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light');
+            const isLight = document.body.classList.contains('light');
+            const icon = document.querySelector('.theme-icon');
+            if (icon) icon.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('tochka-opory-theme', isLight ? 'light' : 'dark');
+        });
+    }
 }
 
 // ── Mobile Menu ──
@@ -369,16 +426,20 @@ function initMobileMenu() {
     const toggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
 
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        sidebar.classList.toggle('open');
-    });
+    if (toggle && sidebar) {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
 
-    // Close on content click (mobile)
-    document.getElementById('content').addEventListener('click', () => {
-        sidebar.classList.remove('open');
-        toggle.classList.remove('active');
-    });
+        const content = document.getElementById('content');
+        if (content) {
+            content.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                toggle.classList.remove('active');
+            });
+        }
+    }
 }
 
 // ── Scroll Progress ──
@@ -396,7 +457,8 @@ function initScrollProgress() {
         const chapterBase = currentIndex / CHAPTERS.length;
         const chapterStep = 1 / CHAPTERS.length;
         const totalPct = Math.round((chapterBase + chapterStep * scrollPct) * 100);
-        document.getElementById('progress-fill').style.width = totalPct + '%';
+        const fill = document.getElementById('progress-fill');
+        if (fill) fill.style.width = totalPct + '%';
     }, { passive: true });
 
     window.addEventListener('resize', () => {
@@ -414,37 +476,32 @@ function initKeyboard() {
 
 // ── Copy Protection ──
 function initCopyProtection() {
-    // Disable right click
     document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
     });
 
-    // Disable text selection start (except inputs)
     document.addEventListener('selectstart', (e) => {
         if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
             e.preventDefault();
         }
     });
 
-    // Disable copy
     document.addEventListener('copy', (e) => {
         e.preventDefault();
-        alert('Копирование материалов книги «Точка Опоры» защищено авторским правом.');
+        alert(isEn 
+            ? 'The materials of "Point of Support" are protected by copyright.' 
+            : 'Копирование материалов книги «Точка Опоры» защищено авторским правом.');
     });
 
-    // Disable key shortcuts
     document.addEventListener('keydown', (e) => {
-        // Ctrl+C, Ctrl+A, Ctrl+U, Ctrl+S
         if (e.ctrlKey && ['c', 'a', 'u', 's'].includes(e.key.toLowerCase())) {
             e.preventDefault();
             return false;
         }
-        // F12
         if (e.key === 'F12') {
             e.preventDefault();
             return false;
         }
-        // Ctrl+Shift+I / Ctrl+Shift+J
         if (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(e.key.toLowerCase())) {
             e.preventDefault();
             return false;
@@ -461,21 +518,17 @@ function showLanding() {
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = 'none';
     
-    // Update URL to landing root
     if (!showLanding._fromPopState) {
         const isSubdir = window.location.pathname.includes('/chapters/');
         const targetUrl = isSubdir ? '../' : './';
-        history.pushState(null, 'Точка Опоры — Выход из ПППГ', targetUrl);
+        history.pushState(null, isEn ? 'Point of Support — Overcoming PPPD' : 'Точка Опоры — Выход из ПППГ', targetUrl);
     }
     showLanding._fromPopState = false;
     
-    // Reset TOC active state
     document.querySelectorAll('.toc-item').forEach(el => el.classList.remove('active'));
     
-    // Save position
-    localStorage.removeItem('tochka-opory-chapter');
+    localStorage.removeItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter');
 
-    // Recalculate dimensions
     requestAnimationFrame(() => {
         updateCachedHeight();
     });
@@ -483,29 +536,27 @@ function showLanding() {
 
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
-    // Import license key from URL hash (sent by Telegram WebView PDF button)
     const hashParams = window.location.hash;
     if (hashParams.startsWith('#tochka-print=')) {
         const match = hashParams.match(/^#tochka-print=([^&]+)&ch=(\d+)$/);
         if (match) {
             const importedKey = decodeURIComponent(match[1]);
             const chapterIdx = parseInt(match[2], 10);
-            // Save key and clean URL hash
-            localStorage.setItem('tochka-opory-license-key', importedKey);
+            localStorage.setItem(LICENSE_KEY_STORAGE, importedKey);
             history.replaceState(null, '', window.location.pathname);
-            // Load chapter and auto-print after render
             buildTOC();
             initTheme();
             initMobileMenu();
             initScrollProgress();
             initKeyboard();
             initCopyProtection();
-            document.getElementById('prev-chapter').addEventListener('click', () => loadChapter(currentIndex - 1));
-            document.getElementById('next-chapter').addEventListener('click', () => loadChapter(currentIndex + 1));
+            const prevBtn = document.getElementById('prev-chapter');
+            const nextBtn = document.getElementById('next-chapter');
+            if (prevBtn) prevBtn.addEventListener('click', () => loadChapter(currentIndex - 1));
+            if (nextBtn) nextBtn.addEventListener('click', () => loadChapter(currentIndex + 1));
             loadChapter(chapterIdx);
-            // Wait for chapter to render, then print
             setTimeout(() => window.print(), 1500);
-            return; // Skip normal init
+            return;
         }
     }
 
@@ -516,10 +567,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initKeyboard();
     initCopyProtection();
 
-    document.getElementById('prev-chapter').addEventListener('click', () => loadChapter(currentIndex - 1));
-    document.getElementById('next-chapter').addEventListener('click', () => loadChapter(currentIndex + 1));
+    const prevBtn = document.getElementById('prev-chapter');
+    const nextBtn = document.getElementById('next-chapter');
+    if (prevBtn) prevBtn.addEventListener('click', () => loadChapter(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => loadChapter(currentIndex + 1));
 
-    // Home link listener
     const homeLink = document.getElementById('home-link');
     if (homeLink) {
         homeLink.addEventListener('click', (e) => {
@@ -528,7 +580,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intercept clicks on landing page TOC items to prevent full page reloads in SPA
     document.querySelectorAll('.seo-toc-item').forEach(link => {
         if (!link.classList.contains('locked')) {
             link.addEventListener('click', (e) => {
@@ -545,7 +596,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Intercept CTA button click
     const ctaBtn = document.querySelector('.seo-cta-btn');
     if (ctaBtn) {
         ctaBtn.addEventListener('click', (e) => {
@@ -554,7 +604,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle browser back/forward
     window.addEventListener('popstate', (e) => {
         const match = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
         if (match) {
@@ -574,7 +623,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Restore position: URL pathname > localStorage > landing
     const initialMatch = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
     if (initialMatch) {
         const idx = CHAPTERS.findIndex(ch => ch.id === initialMatch[1]);
@@ -584,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showLanding();
         }
     } else {
-        const saved = parseInt(localStorage.getItem('tochka-opory-chapter'), 10);
+        const saved = parseInt(localStorage.getItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter'), 10);
         if (!isNaN(saved)) {
             loadChapter(saved);
         } else {

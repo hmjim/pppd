@@ -1,14 +1,3 @@
-# Unsteadiness and "Cotton-Wool" Legs: Neurological Mechanism
+# Unsteadiness and Swaying When Walking: Mechanisms and Solutions
 
-*Why your legs feel like rubber, the ground feels unstable, and why you will not collapse.*
-
----
-
-The sensation of "cotton-wool legs" and unsteadiness while walking is one of the most distressing symptoms of PPPD.
-
-**The Physiology Behind the Sensation:**
-When the brain's autonomic alarm is active, postural muscle groups undergo chronic micro-spasms. Antagonist and agonist muscle groups contract simultaneously in a "high-stiffness" protective strategy. 
-
-This simultaneous contraction exhausts muscular energy reserves rapidly and alters proprioceptive feedback signals traveling up the spinal cord to the cerebellum. The brain interprets this altered sensory stream as "instability," generating the false perception of swaying.
-
-You have not lost motor control. Your reflexes and muscular strength are intact. As autonomic hyper-vigilance drops and muscle tone normalizes, stability returns.
+*Why you feel like you are walking on a boat deck or soft sponge, and proprioceptive restoration.*\n\n## The "Walking on Sponges" Mechanism\nWhen suboccipital muscles and ankle stabilizers lock in chronic co-contraction, plantar mechanoreceptor signals become muffled. The brain loses crisp proprioceptive tactile feedback, creating the illusion of walking on marshmallows or floating floorboards. Regular barefoot walking on diverse natural surfaces and Romberg ladder balance training restore ground fidelity.

@@ -1,13 +1,3 @@
-# Brain Fog and Cognitive Fatigue in Vestibular Disorders
+# Brain Fog in PPPD: Causes, Neurobiology, and Treatment
 
-*Why thinking feels sluggish, memory lapses occur, and your head feels filled with heavy cotton.*
-
----
-
-Cognitive sluggishness, heavy head pressure, and brain fog in PPPD stem directly from **computational resource allocation**.
-
-Under healthy conditions, balance integration occurs automatically in subcortical structures (cerebellum and vestibular nuclei), consuming almost zero conscious cortical bandwidth.
-
-In PPPD, the brain shifts balance into conscious, cortical control. The prefrontal cortex is forced to micro-manage every footstep, posture adjustment, and visual glance. This high-load processing monopolizes working memory and executive function, resulting in intense cognitive fatigue and brain fog.
-
-Once balance is returned to automatic subconscious processing via vestibular rehabilitation, full cognitive clarity returns.
+*Why chronic disequilibrium causes cognitive exhaustion, memory lapses, and mental fog.*\n\n## The Bandwidth Problem\nHuman balance is designed to run in background firmware (zero conscious effort). In PPPD, because the brain perceives a threat of falling, it routes up to 70% of conscious prefrontal computational capacity to manually micro-manage every step. This leaves minimal bandwidth for working memory, focus, and analytical tasks, producing severe brain fog. As balance recalibrates, cognitive clarity returns.

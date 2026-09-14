@@ -1,11 +1,3 @@
-# PPPD in ICD-11: Official Diagnostic Classification
+# PPPD in ICD-11: Code AB32.0 and Official Diagnostic Criteria
 
-*International recognition, clinical taxonomy under code AB32.0, and clinical legitimacy.*
-
----
-
-For decades, functional balance disorders were categorized under ambiguous terms such as Phobic Postural Vertigo, Space-Motion Discomfort, or Chronic Subjective Dizziness.
-
-In 2017, the World Health Organization (WHO) formally integrated **PPPD** into the 11th Revision of the International Classification of Diseases (**ICD-11: AB32.0**).
-
-This inclusion cemented PPPD as an officially validated, non-psychotic functional neuro-vestibular disorder, opening the door for standardized, evidence-based clinical protocols worldwide.
+*The formal medical recognition of Persistent Postural-Perceptual Dizziness by the WHO and Barany Society.*\n\n## Official ICD-11 Definition\nIn 2017, the World Health Organization officially adopted PPPD into the International Classification of Diseases 11th Revision (ICD-11) under code **AB32.0**. This established global consensus that PPPD is a genuine, treatable neuro-otological disorder.

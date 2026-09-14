@@ -1,11 +1,3 @@
-# Psychosomatic & Psychogenic Dizziness: Breaking the Stigma
+# Psychosomatic Dizziness: When the Mind Alters Balance
 
-*Why functional dizziness is physical, measurable, and fundamentally treatable.*
-
----
-
-Calling dizziness "psychosomatic" does not mean it is fabricated or "in your head." 
-
-It means that psychological stress, prolonged nervous system exhaustion, and autonomic dysregulation have produced tangible, physical alterations in vestibular sensory weighting.
-
-The brain actively down-regulates vestibular canal signals and over-weights visual and proprioceptive inputs. By addressing the nervous system holistically through somatic regulation and desensitization, normal sensory equilibrium is restored.
+*The mind-body connection, how emotional distress converts into physical vestibular symptoms, and central sensitization.*\n\n## The Somatization Mechanism\nThe amygdala, insula, and vestibular nuclei are directly connected via monosynaptic neural pathways. Emotional distress, chronic anxiety, and repressed conflict trigger sympathetic vasoconstriction, cervical muscle clamping, and sensory gain inflation, generating physically real disequilibrium.

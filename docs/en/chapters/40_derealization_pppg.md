@@ -1,12 +1,3 @@
-# Derealization & Depersonalization in Vestibular Disorders
+# Derealization and Brain Fog in PPPD: The Autonomic Connection
 
-*Why the world feels surreal, flat, or behind glass—and why it is a protective neurological reflex.*
-
----
-
-Derealization (feeling detached from surroundings) and depersonalization (feeling disconnected from one's own body) are among the most frightening co-symptoms of PPPD.
-
-**The Neurological Fuse:**
-When sensory input (conflicting balance signals) and autonomic anxiety reach an overwhelming threshold, the temporoparietal junction and limbic system activate an involuntary "circuit breaker."
-
-This blunts emotional perception and sensory sharpness to prevent neural overload. It is **not psychosis, schizophrenia, or cognitive damage.** It is a protective reflex that automatically switches off once autonomic safety is re-established.
+*Why the world feels fake, dreamlike, or behind glass when you have PPPD, and how to snap out of it.*\n\n## The Polyvagal Freeze State\nWhen the vestibular nuclei flood the brain with continuous error signals, the autonomic nervous system shifts from sympathetic fight-or-flight into the **dorsal vagal freeze response**. This protective shield creates the subjective feeling of being detached from reality. Grounding techniques and somatic release deactivate the freeze.

@@ -1,15 +1,3 @@
-# Chronic Dizziness: Differential Diagnosis & When It Is PPPD
+# Chronic Dizziness: Causes, Types, and Differences from PPPD
 
-*Understanding the root causes of constant unsteadiness, floating sensations, and non-vertiginous dizziness.*
-
----
-
-Chronic non-spinning dizziness lasting longer than three months is most frequently caused by functional neuro-vestibular dysregulation rather than structural damage.
-
-**Key Characteristics of PPPD Dizziness:**
-- Non-rotational (rocking, floating, swaying like on a boat).
-- Continuous background presence that waxes and wanes depending on sensory load and stress.
-- Worsened by upright posture and complex visual environments (visual vertigo).
-- Preserved motor strength and normal cranial imaging.
-
-Understanding that chronic dizziness is an acquired software miscalibration removes the paralyzing fear that fuels symptom chronification.
+*Understanding non-spinning vertigo, disequilibrium, lightheadedness, and systemic causes.*\n\n## Differentiating Types of Dizziness\n* **Rotational Vertigo (True Spinning)**: Semicircular canal pathology (BPPV, acute vestibular neuritis, Meniere disease).\n* **Functional Disequilibrium (PPPD)**: Chronic swaying, rocking, floor dropping sensations lasting >3 months with clean scans.\n* **Presyncope (Faintness)**: Orthostatic hypotension, cardiovascular causes.\n* **Psychogenic Dizziness**: Acute panic attacks and somatic anxiety states.

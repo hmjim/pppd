@@ -1,14 +1,3 @@
-# Cognitive Behavioral Therapy & MCT for PPPD
+# Cognitive Behavioral Therapy (CBT) for PPPD
 
-*How cognitive restructuring and metacognitive detachment dismantle the vicious anxiety-dizziness loop.*
-
----
-
-Psychotherapy for PPPD is not about "pretending symptoms don't exist." It is targeted neuro-cognitive retraining.
-
-**The CBT/MCT Framework:**
-- **Symptom Interpretation:** Transforming catastrophic appraisals (*"I am collapsing," "My brain is damaged"*) into neutral biological observations (*"This is temporary sympathetic arousal"*).
-- **Elimination of Hyper-Scanning:** Training attentional focus away from internal balance sensations back to external reality.
-- **De-escalation of Safety Behaviors:** Stopping unnecessary grip-holding, wall-touching, and sunglasses usage in indoor environments.
-
-Metacognitive therapy teaches the nervous system to process balance signals without generating secondary fear responses.
+*Evidence-based cognitive restructuring, identifying catastrophic thought patterns, and behavioral experiments.*\n\n## Core CBT Interventions for PPPD\n1. **Decatastrophizing**: Testing the actual probability of passing out or collapsing.\n2. **Behavioral Experiments**: Deliberately walking in trigger environments without holding safety objects to violate threat expectations.\n3. **Interoceptive Exposure**: Reproducing mild dizziness through spinning or hyperventilation in a safe setting to eliminate fear of sensations.

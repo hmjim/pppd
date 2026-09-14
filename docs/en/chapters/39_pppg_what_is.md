@@ -1,14 +1,3 @@
-# Understanding PPPD in Simple Terms: The Complete Guide
+# What is PPPD in Plain Language: An Engineer's Guide
 
-*A straightforward, non-technical explanation of how balance works and how the brain can be recalibrated.*
-
----
-
-Imagine your brain balance center as a three-legged stool supported by:
-1. Your inner ears (vestibular system)
-2. Your eyes (visual system)
-3. Your joints and muscles (proprioception)
-
-When your nervous system is overwhelmed by prolonged stress or an acute vertigo episode, it stops trusting the inner ears and tries to balance exclusively using the eyes and stiffened muscles.
-
-This causes extreme fatigue, visual vertigo in stores, and rocking sensations. Recovery consists of teaching the brain to trust the inner ears again and relax the over-stiffened muscles.
+*A simple, clear explanation of PPPD mechanics without confusing medical jargon.*\n\n## The Computer Analogy\nImagine your balance system is a computer. Your inner ears, eyes, and neck muscles are the webcams and sensors. In PPPD, all the hardware sensors are 100% brand new and undamaged. However, the driver software connecting them has glitched into an infinite alarm loop. This manual provides the step-by-step instructions to patch the software and restore factory stability.

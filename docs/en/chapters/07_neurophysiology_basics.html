@@ -156,47 +156,86 @@
         <article class="chapter" itemscope itemtype="https://schema.org/Article">
             <meta itemprop="headline" content="Neurophysiology of PPPD — How the Brain Creates Dizziness | Point of Support">
             <meta itemprop="author" content="Maxim">
-            <h1>Neurophysiology of Dizziness: Factory Default Settings</h1>
-<p><em>How the vestibular nuclei, cerebellum, thalamus, and amygdala process balance—and where the software corrupted.</em></p>
+            <h1>Neurophysiology Basics: Factory Settings and Sensory Integration</h1>
+<p><em>How the human balance system synthesizes vestibular, visual, and proprioceptive data, and why software miscalibration produces persistent disequilibrium.</em></p>
 <hr>
-<h2>The Multi-Sensory Triad of Equilibrium</h2>
-<p>Human balance is not controlled by a single organ. It is computed in the <strong>Vestibular Nuclei Complex (VNC)</strong> within the brainstem through the continuous integration of three distinct sensory streams:</p>
-<pre><code>       [ Inner Ear (Vestibular) ]  
-                  │
-                  ▼
-[ Visual System ] ──▶ [ Brainstem / Vestibular Nuclei ] ◀── [ Proprioceptors (Neck &amp; Feet) ]
-                                  │
-                                  ▼
-                        [ Cerebellar Engine ]
-                                  │
-                                  ▼
-                   [ Automatic Postural Output ]
+<h2>1. The Triad of Equilibrium</h2>
+<p>Human balance is not governed by a single sensory organ. It is a continuous, high-speed computational synthesis of three distinct sensory streams orchestrated by the <strong>vestibular nuclei in the brainstem</strong> and the <strong>cerebellum</strong>:</p>
+<pre><code>                       ┌──────────────────────────────┐
+                       │    THE SENSORY BALANCE TRIAD  │
+                       └──────────────────────────────┘
+                                      │
+         ┌────────────────────────────┼────────────────────────────┐
+         ▼                            ▼                            ▼
+┌──────────────────┐        ┌──────────────────┐        ┌──────────────────┐
+│ 1. VESTIBULAR    │        │ 2. VISUAL        │        │ 3. PROPRIOCEPTIVE│
+│ • Semicircular   │        │ • Foveal focus   │        │ • Muscle spindles│
+│   Canals (angles)│        │ • Peripheral     │        │   (neck &amp; spine) │
+│ • Otoliths       │        │   optic flow     │        │ • Plantar pressure│
+│   (gravity/accel)│        │   (motion cues)  │        │   mechanoreceptor│
+└──────────────────┘        └──────────────────┘        └──────────────────┘
+         │                            │                            │
+         └────────────────────────────┼────────────────────────────┘
+                                      ▼
+                       ┌──────────────────────────────┐
+                       │ Vestibular Nuclei &amp; Cerebella│
+                       │ Forward Predictive Model (OK)│
+                       └──────────────────────────────┘
 </code></pre>
 <ol>
-<li><strong>Vestibular Apparatus:</strong> Three semicircular canals (angular acceleration) and two otolith organs (saccule and utricle for linear acceleration and gravity).</li>
-<li><strong>Visual System:</strong> Environmental orientation, horizon alignment, and optical flow velocity.</li>
-<li><strong>Proprioceptive System:</strong> Muscle spindles and joint mechanoreceptors in the soles of the feet, ankles, and cervical spine.</li>
-</ol>
-<hr>
-<h2>Cerebellar Forward Models</h2>
-<p>The cerebellum constantly computes <strong>forward internal models</strong>—it predicts what sensory inputs <em>should</em> occur during voluntary movement and cancels out the predicted sensations.</p>
-<p>When you walk, you do not feel dizzy because the cerebellum anticipates the movement and suppresses conscious perception of the motion.</p>
-<p>In PPPD, this predictive cancellation fails because the <strong>amygdala (fear center)</strong> injects an error signal: <em>&quot;Danger! Do not suppress balance signals; monitor every millimeter of sway conscious-level!&quot;</em></p>
-<hr>
-<h2>The Pathological Loop</h2>
-<p>When balance is processed consciously in the prefrontal cortex instead of automatically in the cerebellum:</p>
-<ul>
-<li>Balance reactions become jerky, stiff, and over-reactive.</li>
-<li>Postural sway increases due to micro-corrections.</li>
-<li>The conscious brain misinterprets its own jerky corrections as &quot;imminent falling,&quot; which triggers more fear, cementing the loop.</li>
+<li><strong>Vestibular Apparatus (Inner Ear)</strong>:<ul>
+<li><strong>Semicircular Canals (Horizontal, Anterior, Posterior)</strong>: Detect angular acceleration (rotation, nodding, tilting) via endolymph fluid deflecting hair cell stereocilia in the cupula.</li>
+<li><strong>Otolith Organs (Utricle and Saccule)</strong>: Detect linear acceleration and gravity via calcium carbonate crystals (otoconia) resting on a gelatinous macula.</li>
 </ul>
-<hr>
-<h2>Action Protocol</h2>
-<ol>
-<li>Visualize your cerebellum as an expert autopilot and your conscious mind as an anxious passenger.</li>
-<li>Every time you feel swaying, consciously repeat: <strong>&quot;My autopilot knows how to balance. I am relinquishing conscious micromanagement.&quot;</strong></li>
-<li>Walk across the room while counting backwards from 100 by 7s (forcing conscious focus away from balance into mental arithmetic).</li>
+</li>
+<li><strong>Visual System</strong>: Provides spatial orientation relative to external vertical and horizontal horizons and computes self-motion velocity via retinal optic flow.</li>
+<li><strong>Proprioceptive &amp; Somatosensory System</strong>: High-density mechanoreceptors in the soles of the feet, ankle joints, and cervical muscle spindles report gravitational load and head-on-body position.</li>
 </ol>
+<hr>
+<h2>2. Predictive Processing and the Cerebellar Model</h2>
+<p>The brain does not simply react to incoming sensory signals in real time — biological latencies (50–100 ms) are too slow to prevent a fall. Instead, the cerebellum maintains an <strong>internal forward predictive model</strong>:</p>
+<ul>
+<li>When you decide to take a step, motor cortex sends an <strong>efference copy</strong> of the motor command to the cerebellum.</li>
+<li>The cerebellum predicts the exact sensory inputs that <em>should</em> result from that step.</li>
+<li>Incoming sensory signals are compared with the predicted model (<strong>sensory reafference</strong>).</li>
+<li><strong>Zero Prediction Error</strong>: If actual sensory input matches prediction, the signal is cancelled out from conscious perception. You feel steady and stable.</li>
+<li><strong>Positive Prediction Error</strong>: If actual sensory input diverges from prediction (or if anxiety inflates sensory gain), an error signal is dispatched to the cortex.</li>
+</ul>
+<p>In <strong>PPPD</strong>, the predictive model becomes locked in a <strong>high-threat, high-gain mode</strong>. The brain expects catastrophic instability with every step. Because attention is hyper-focused on the feet and head, normal microscopic sway fluctuations are amplified by up to 1000%, registering as severe rocking or dropping sensations.</p>
+<hr>
+<h2>3. The Functional Shift: Why Diagnostic Scans Are Normal</h2>
+<p>Patients with PPPD are frequently perplexed: <em>&quot;If I feel like I&#39;m walking on a rolling ship, why is my Brain MRI, Vestibular Evoked Myogenic Potentials (VEMP), and Video Head Impulse Test (vHIT) 100% normal?&quot;</em></p>
+<p>The distinction is identical to <strong>Hardware vs. Software</strong>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Organic Pathology (e.g., Acoustic Neuroma, Stroke)</th>
+<th align="left">Functional Disorder (PPPD)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>System Analogy</strong></td>
+<td align="left">Broken camera lens or severed fiber cable</td>
+<td align="left">Corrupted graphics driver or infinite loop script</td>
+</tr>
+<tr>
+<td align="left"><strong>Diagnostic Scans</strong></td>
+<td align="left">Visible structural lesions on MRI / CT</td>
+<td align="left">Zero structural damage (Scans 100% clean)</td>
+</tr>
+<tr>
+<td align="left"><strong>Pathophysiology</strong></td>
+<td align="left">Physical destruction of vestibulocochlear nerve or brain tissue</td>
+<td align="left">Maladaptive central sensory re-weighting and hyper-sensitization</td>
+</tr>
+<tr>
+<td align="left"><strong>Treatment</strong></td>
+<td align="left">Surgery, targeted pharmacology, acute restoration</td>
+<td align="left">Neuroplastic recalibration (VRT, CBT, Somatic down-regulation)</td>
+</tr>
+</tbody></table>
+<p>PPPD is a <strong>software malfunction</strong>. The sensors (ears, eyes, muscles) are fully operational; the brainstem software that processes and filters their incoming data streams is miscalibrated. Software bugs cannot be repaired with a surgeon&#39;s scalpel, but they can be rewritten through systematic neuroplastic retraining.</p>
 
         </article>
 

@@ -1,14 +1,3 @@
-# Comprehensive Guide to PPPD Symptoms & Manifestations
+# Complete Catalog of PPPD Symptoms: From Rocking to Visual Vertigo
 
-*A complete clinical review of primary, secondary, and autonomic features of Persistent Postural-Perceptual Dizziness.*
-
----
-
-PPPD presents with a rich spectrum of neuro-sensory manifestations:
-- Rocking, swaying, and tilting sensations while upright.
-- Hypersensitivity to visual motion (grocery aisles, crowds, action movies).
-- Spatial disorientation and derealization.
-- Suboccipital neck stiffness and tension headaches.
-- Autonomic palpitations, tremors, and temperature dysregulation.
-
-Recognizing this unified symptom cluster prevents unnecessary diagnostic procedures and focuses treatment on effective rehabilitation.
+*A detailed clinical catalog of primary, secondary, and autonomic symptoms associated with PPPD.*\n\n## Primary Symptoms\n* Persistent non-spinning rocking, swaying, or floating sensation.\n* Worsening in upright stance, walking, and crowded environments.\n* Visual motion hypersensitivity (supermarkets, scrolling screens).\n\n## Secondary Symptoms\n* Suboccipital tension and cervical stiffness.\n* Derealization and cognitive brain fog.\n* Sleep disruption and morning unsteadiness.
