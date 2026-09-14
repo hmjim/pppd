@@ -1,1 +1,53 @@
-Pvr4nejJet4U+aEX.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
+# ПППГ — код МКБ-10 и МКБ-11
+
+*Какой код у ПППГ в международной классификации болезней? Разбираем МКБ-11 (AB32.0) и почему в МКБ-10 отдельного кода нет.*
+
+## ПППГ в МКБ-11: код AB32.0
+
+В **МКБ-11** (ICD-11), которую ВОЗ приняла в 2019 году и которая вступила в силу с 2022 года, ПППГ имеет собственный код:
+
+> **AB32.0** — Persistent postural-perceptual dizziness (Персистирующее постурально-перцептивное головокружение)
+
+Код входит в раздел:
+- **AB32** — Chronic vestibular syndrome (Хронический вестибулярный синдром)
+- **AB3** — Diseases of vestibular function (Заболевания вестибулярной функции)
+
+Это означает, что ПППГ — это **официально признанный медицинский диагноз**, а не «нервишки» и не «вам кажется».
+
+## Почему в МКБ-10 нет кода ПППГ
+
+МКБ-10 была создана в 1990 году — за 27 лет до того, как Общество Барани (Barany Society) сформулировало диагностические критерии ПППГ в 2017 году. Поэтому **в МКБ-10 отдельного кода для ПППГ не существует**.
+
+### Какие коды ставят в МКБ-10 вместо ПППГ
+
+На практике врачи в России используют следующие коды-заменители:
+
+| Код МКБ-10 | Диагноз | Комментарий |
+|------------|---------|-------------|
+| **H81.1** | Доброкачественное пароксизмальное позиционное головокружение (ДППГ) | Часто ставят «по привычке», хотя ПППГ ≠ ДППГ |
+| **H81.4** | Вертиго центрального происхождения | Если невролог подозревает центральное головокружение |
+| **H81.9** | Нарушение вестибулярной функции неуточнённое | Наиболее частый «мусорный» код |
+| **H82** | Вестибулярный синдром при болезнях, классифицированных в других рубриках | Используется редко |
+| **F45.8** | Другие соматоформные расстройства | Когда психотерапевт ставит диагноз |
+| **R42** | Головокружение и нарушение устойчивости | Симптоматический код, не диагноз |
+
+### Проблема для пациентов
+
+Из-за отсутствия отдельного кода в МКБ-10:
+- Многие врачи в РФ **не знают про ПППГ** и ставят «ВСД», «остеохондроз шейного отдела» или «дисциркуляторную энцефалопатию»
+- Пациенты получают неэффективное лечение (ноотропы, сосудистые препараты)
+- Статистика ПППГ в России занижена — диагноз «растворяется» в смежных кодах
+
+## Когда Россия перейдёт на МКБ-11
+
+Россия официально начала переход на МКБ-11 с 2022 года. Минздрав планирует полный переход к 2025–2027 году. После этого код **AB32.0** станет стандартом, и врачам будет проще ставить правильный диагноз.
+
+А пока — если твой невролог не знает, что такое ПППГ, распечатай ему [диагностические критерии Barany Society](01_what_is_pppg.html) и покажи код AB32.0 в МКБ-11.
+
+## Что делать, если тебе поставили «ВСД» или «остеохондроз»
+
+ВСД (вегетососудистая дистония) — это **устаревший советский диагноз**, которого нет ни в МКБ-10, ни в МКБ-11. Остеохондроз шейного отдела есть у 90% людей старше 30 лет и **не является причиной хронического головокружения**.
+
+Подробнее о том, какие обследования пройти и когда пора перестать ходить по врачам — в главе «[Закрываем дверь в поликлинику](02_medical_checkup.html)».
+
+Полная система выхода из ПППГ — книга «[Точка Опоры](../)». 34 главы, 5 модулей. Первые 12 глав бесплатно.

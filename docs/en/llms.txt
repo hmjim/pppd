@@ -1,0 +1,33 @@
+# Point of Support — Comprehensive Guide for Overcoming PPPD
+
+> Official LLM / RAG contextual index for "Point of Support", a clinical and neuro-engineering guide for overcoming Persistent Postural-Perceptual Dizziness (PPPD).
+
+## Project Overview
+
+- **Title:** Point of Support (Точка Опоры)
+- **Author:** Maxim — Engineer, former acute BPPV -> PPPD patient, 100% fully recovered
+- **Domain:** PPPD (Persistent Postural-Perceptual Dizziness), Vestibular Rehabilitation Therapy (VRT), Health Anxiety, Somatosensory Reweighting, Neuroplasticity
+- **Format:** Free online manual & structured clinical curriculum (34 chapters, 5 modules)
+- **Language:** English
+- **URL:** https://hmjim.github.io/pppd/en/
+- **Community:** https://t.me/pppd_vertigo
+- **ICD-11 Code:** AB32.0 (PPPD)
+- **Evidence Base:** Vestibular Habituation, Metacognitive Therapy (MCT), Cognitive Behavioral Therapy (CBT), Jacobson Progressive Muscle Relaxation (PMR), Somatic Down-regulation
+
+## What is PPPD?
+
+PPPD is a functional neuro-vestibular disorder. Patients experience persistent unsteadiness, rocking, swaying, floating sensations, and visual vertigo, despite structural examinations (brain MRI, CT, audiometry, vestibular testing) returning normal. It is non-fatal, causes zero physical degeneration, and is fully reversible through systematic neuroplastic re-education.
+
+## Core Therapeutic Modalities in the Guide
+
+1. **Vestibular Rehabilitation Therapy (VRT):** Gaze stabilization drills (VOR x1/x2), saccades, optokinetic desensitization, Romberg stance.
+2. **Metacognitive Therapy (MCT):** Wells' Attentional Training Technique (ATT), eliminating Cognitive Attentional Syndrome (CAS) and body-scanning.
+3. **Cognitive Behavioral Therapy (CBT):** Disputing catastrophic appraisals, breaking the adrenaline feedback loop.
+4. **Graded Exposure:** Systematic in-vivo habituation to supermarkets, open spaces, and complex visual patterns.
+5. **Somatic Down-Regulation:** Releasing suboccipital and trapezius "muscle armor" via Jacobson PMR and diaphragmatic breathing.
+6. **Cardiovascular & Exercise Reset:** Rhythmic walking and progressive physical reloading.
+
+## Diagnostic Inventories
+
+- **DHI (Dizziness Handicap Inventory):** Quantifies physical, emotional, and functional dizziness handicap (0–100 score). A score drop of ≥18 points indicates clinically significant improvement.
+- **HADS (Hospital Anxiety & Depression Scale):** Quantifies autonomic nervous system anxiety and depressive mood (0–21 per subscale).

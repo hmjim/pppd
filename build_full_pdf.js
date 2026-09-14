@@ -2,19 +2,24 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-async function buildFullPDF() {
-    console.log('🚀 Starting Full Book PDF Generation...');
-    
-    // Import marked
-    const { marked } = await import('marked');
-    
-    const CHAPTERS_DIR = path.join(__dirname, 'chapters_src');
-    const DOCS_DIR = path.join(__dirname, 'docs');
-    const OUTPUT_HTML = path.join(__dirname, 'full_book_export.html');
-    const OUTPUT_PDF = path.join(DOCS_DIR, 'r_015744dc3f28b49e.pdf');
+async function buildPDFForLang(lang) {
+    const isEn = lang === 'en';
+    const langLabel = isEn ? 'EN' : 'RU';
+    console.log(`\n🚀 Starting Full Book PDF Generation [${langLabel}]...`);
 
-    // Chapters order according to build_seo.js
-    const CHAPTER_FILES = [
+    const { marked } = await import('marked');
+
+    const CHAPTERS_DIR = path.join(__dirname, isEn ? 'chapters_en' : 'chapters_src');
+    const DOCS_DIR = path.join(__dirname, 'docs');
+    const OUTPUT_HTML = path.join(__dirname, `full_book_export_${lang}.html`);
+    const OUTPUT_PDF = isEn
+        ? path.join(DOCS_DIR, 'en', 'point_of_support.pdf')
+        : path.join(DOCS_DIR, 'r_015744dc3f28b49e.pdf');
+
+    const destDir = path.dirname(OUTPUT_PDF);
+    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+
+    const CHAPTER_FILES_RU = [
         { id: '00_introduction', num: '0', title: 'Вступление', module: 'Вводная часть' },
         { id: '41_psychosomatics', num: '0b', title: 'Психосоматика: универсальный ключ', module: 'Модуль 0: База' },
         { id: '01_what_is_pppg', num: '1', title: 'Что такое ПППГ', module: 'Модуль 0: База' },
@@ -55,6 +60,49 @@ async function buildFullPDF() {
         { id: '25_appendix', num: '29', title: 'Приложения и материалы', module: 'Приложения' }
     ];
 
+    const CHAPTER_FILES_EN = [
+        { id: '00_introduction', num: '0', title: 'Introduction', module: 'Introduction' },
+        { id: '41_psychosomatics', num: '0b', title: 'Psychosomatics: The Universal Key', module: 'Module 0: Foundation' },
+        { id: '01_what_is_pppg', num: '1', title: 'What is PPPD', module: 'Module 0: Foundation' },
+        { id: '02_medical_checkup', num: '2', title: 'Closing the Clinic Door', module: 'Module 0: Foundation' },
+        { id: '03_baseline_tests', num: '3', title: 'Quantifying Metrics: HADS and DHI', module: 'Module 0: Foundation' },
+        { id: '04_muscle_armor', num: '4', title: 'Muscle Armor', module: 'Module 1: The Body' },
+        { id: '05_relaxation', num: '5', title: 'Jacobson Progressive Relaxation', module: 'Module 1: The Body' },
+        { id: '06_vestibular', num: '6', title: 'Vestibular Rehabilitation Exercises', module: 'Module 1: The Body' },
+        { id: '06b_biofeedback', num: '6b', title: 'Simulators: Recalibrating the Brain', module: 'Module 1: The Body' },
+        { id: '07_neurophysiology_basics', num: '7', title: 'Neurophysiology: Factory Settings', module: 'Module 1: The Body' },
+        { id: '08_visual_dependence', num: '8', title: 'Visual Dependence', module: 'Module 1: The Body' },
+        { id: '26_sleep', num: '9', title: 'Sleep and PPPD', module: 'Module 1: The Body' },
+        { id: '44_attention_training', num: '9b', title: 'Attentional Focus Training', module: 'Module 1: The Body' },
+        { id: '47_meditation', num: '9c', title: 'Meditation & Vagal Protocols', module: 'Module 1: The Body' },
+        { id: '09_adrenaline_loop', num: '10', title: 'The Adrenaline Loop', module: 'Module 2: The Battery' },
+        { id: '10_cas_trap', num: '11', title: 'The CAS Trap', module: 'Module 2: The Battery' },
+        { id: '11_hypochondria', num: '12', title: 'Health Anxiety & Hypochondria', module: 'Module 2: The Battery' },
+        { id: '12_exposure', num: '13', title: 'Graded Exposure Therapy', module: 'Module 2: The Battery' },
+        { id: '13_sport', num: '14', title: 'Exercise & Cardiovascular Reset', module: 'Module 2: The Battery' },
+        { id: '42_vestibular_migraine', num: '14b', title: 'Vestibular Migraine & PPPD', module: 'Module 2: The Battery' },
+        { id: '27_depersonalization', num: '15', title: 'Derealization and Depersonalization', module: 'Module 2: The Battery' },
+        { id: '43_ptsd_emdr', num: '15b', title: 'Medical PTSD & EMDR Protocols', module: 'Module 2: The Battery' },
+        { id: '14_neuroplasticity', num: '16', title: 'Neuroplasticity in Practice', module: 'Module 3: Mindset' },
+        { id: '15_metacognition', num: '17', title: 'Metacognitive Therapy', module: 'Module 3: Mindset' },
+        { id: '16_cognitive_distortions', num: '18', title: 'Cognitive Distortions', module: 'Module 3: Mindset' },
+        { id: '17_root_causes', num: '19', title: 'Root Causes & Perfectionism', module: 'Module 3: Mindset' },
+        { id: '18_ego', num: '20', title: 'Ego & The Patient Identity', module: 'Module 3: Mindset' },
+        { id: '19_inner_child', num: '21', title: 'The Inner Child & Somatic Safety', module: 'Module 3: Mindset' },
+        { id: '28_suppressed_emotions', num: '22', title: 'Suppressed Emotions & TMS', module: 'Module 3: Mindset' },
+        { id: '46_victim_state', num: '22a', title: 'Exiting the Victim State', module: 'Module 3: Mindset' },
+        { id: '45_shadow_work', num: '22b', title: 'Shadow Work & Healthy Boundaries', module: 'Module 3: Mindset' },
+        { id: '20_setback_anatomy', num: '23', title: 'Anatomy of a Setback', module: 'Module 4: Recovery' },
+        { id: '21_storm_strategy', num: '24', title: 'The "Storm" Protocol', module: 'Module 4: Recovery' },
+        { id: '22_new_identity', num: '25', title: 'The New Identity', module: 'Module 4: Recovery' },
+        { id: '23_farewell', num: '26', title: 'Stepping Out Into the World', module: 'Module 4: Recovery' },
+        { id: '29_loved_ones', num: '27', title: 'Loved Ones & PPPD', module: 'Module 4: Recovery' },
+        { id: '24_case_studies', num: '28', title: 'Recovery Case Studies', module: 'Case Studies' },
+        { id: '25_appendix', num: '29', title: 'Appendices & Scales', module: 'Appendices' }
+    ];
+
+    const CHAPTER_FILES = isEn ? CHAPTER_FILES_EN : CHAPTER_FILES_RU;
+
     let tocListHTML = '';
     let chaptersHTML = '';
     let currentModule = null;
@@ -67,8 +115,6 @@ async function buildFullPDF() {
         }
 
         let rawMd = fs.readFileSync(filePath, 'utf8');
-
-        // Clean out any leftover prompt instruction artifacts if present
         rawMd = rawMd.replace(/МАТЕРИАЛЫ К КУРСУ[\s\S]*?(?=\n#|\n##|$)/gi, '');
 
         if (ch.module && ch.module !== currentModule) {
@@ -81,7 +127,8 @@ async function buildFullPDF() {
             `;
         }
 
-        tocListHTML += `<div class="toc-item-row"><span class="toc-num">Глава ${ch.num}.</span> <span class="toc-title">${ch.title}</span></div>\n`;
+        const chPrefix = isEn ? 'Chapter' : 'Глава';
+        tocListHTML += `<div class="toc-item-row"><span class="toc-num">${chPrefix} ${ch.num}.</span> <span class="toc-title">${ch.title}</span></div>\n`;
 
         const parsedHTML = marked.parse(rawMd);
 
@@ -92,11 +139,26 @@ async function buildFullPDF() {
         `;
     });
 
+    const docTitle = isEn
+        ? 'Point of Support — Comprehensive Guide for Overcoming PPPD'
+        : 'Точка Опоры — Полное руководство по выходу из ПППГ';
+
+    const badgeText = isEn ? 'Clinical Manual & Recovery Protocol' : 'Практическое руководство';
+    const mainTitle = isEn ? 'Point of Support' : 'Точка Опоры';
+    const subTitle = isEn
+        ? 'A Step-by-Step System for Overcoming PPPD (Persistent Postural-Perceptual Dizziness)'
+        : 'Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения)';
+    const authorText = isEn ? 'Author: Maxim' : 'Автор: Максим';
+    const metaNote = isEn
+        ? '34 Chapters · 5 Modules · Evidence-Based Neuro-Vestibular Protocols'
+        : '34 главы · 5 модулей · Доказательная база и практика';
+    const tocTitle = isEn ? 'Table of Contents' : 'Оглавление';
+
     const fullBookHTML = `<!DOCTYPE html>
-<html lang="ru">
+<html lang="${isEn ? 'en' : 'ru'}">
 <head>
     <meta charset="UTF-8">
-    <title>Точка Опоры — Полное руководство по выходу из ПППГ</title>
+    <title>${docTitle}</title>
     <style>
         @page {
             size: A4;
@@ -113,7 +175,6 @@ async function buildFullPDF() {
             padding: 0;
         }
 
-        /* ── Cover Page ── */
         .cover-page {
             height: 100vh;
             display: flex;
@@ -172,108 +233,111 @@ async function buildFullPDF() {
             margin-bottom: 6px;
         }
 
-        /* ── Table of Contents ── */
         .toc-page {
             page-break-after: always;
             padding-top: 20px;
         }
 
         .toc-heading {
-            font-size: 22pt;
-            font-weight: 700;
+            font-size: 24pt;
+            font-weight: 800;
             color: #111827;
             border-bottom: 3px solid #4f46e5;
-            padding-bottom: 8px;
-            margin-bottom: 24px;
+            padding-bottom: 12px;
+            margin-bottom: 28px;
         }
 
         .toc-module-heading {
-            font-size: 12pt;
+            font-size: 13pt;
             font-weight: 700;
             color: #4f46e5;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             margin-top: 20px;
             margin-bottom: 8px;
-            border-bottom: 1px dashed #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e0e7ff;
             padding-bottom: 4px;
         }
 
         .toc-item-row {
-            font-size: 10.5pt;
+            display: flex;
+            justify-content: space-between;
             padding: 4px 0;
-            color: #334155;
+            font-size: 10.5pt;
+            border-bottom: 1px dotted #e5e7eb;
         }
 
         .toc-num {
-            font-weight: 700;
+            font-weight: 600;
             color: #4f46e5;
-            margin-right: 6px;
+            margin-right: 8px;
         }
 
-        /* ── Module Dividers ── */
+        .toc-title {
+            color: #374151;
+            flex-grow: 1;
+        }
+
         .module-divider-page {
-            page-break-before: always;
-            page-break-after: always;
-            height: 80vh;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .module-tag {
-            font-size: 26pt;
-            font-weight: 800;
-            color: #4f46e5;
-            background: #f0fdf4;
-            border: 2px solid #86efac;
-            padding: 24px 48px;
-            border-radius: 16px;
+            page-break-before: always;
+            page-break-after: always;
             text-align: center;
         }
 
-        /* ── Chapters ── */
+        .module-tag {
+            font-size: 28pt;
+            font-weight: 800;
+            color: #4f46e5;
+            border: 3px solid #4f46e5;
+            padding: 20px 40px;
+            border-radius: 16px;
+            background: #f5f3ff;
+        }
+
         .pdf-chapter {
             page-break-before: always;
-            margin-bottom: 40px;
+            padding-top: 10px;
         }
 
         .pdf-chapter h1 {
             font-size: 20pt;
-            font-weight: 700;
+            font-weight: 800;
             color: #111827;
-            border-bottom: 2px solid #6366f1;
-            padding-bottom: 8px;
-            margin-top: 0;
-            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 16px;
             page-break-after: avoid;
         }
 
         .pdf-chapter h2 {
             font-size: 15pt;
             font-weight: 700;
-            color: #1f2937;
-            margin-top: 28px;
+            color: #374151;
+            margin-top: 24px;
             margin-bottom: 12px;
             page-break-after: avoid;
         }
 
         .pdf-chapter h3 {
-            font-size: 12.5pt;
+            font-size: 12pt;
             font-weight: 600;
-            color: #374151;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            color: #4b5563;
+            margin-top: 18px;
+            margin-bottom: 8px;
             page-break-after: avoid;
         }
 
         .pdf-chapter p {
-            margin-bottom: 14px;
+            margin: 0 0 12px 0;
             text-align: justify;
         }
 
         .pdf-chapter ul, .pdf-chapter ol {
-            margin-bottom: 16px;
+            margin: 0 0 16px 0;
             padding-left: 24px;
         }
 
@@ -282,60 +346,63 @@ async function buildFullPDF() {
         }
 
         .pdf-chapter blockquote {
-            margin: 20px 0;
-            padding: 14px 20px;
+            margin: 16px 0;
+            padding: 12px 20px;
             background: #f8fafc;
-            border-left: 4px solid #6366f1;
-            border-radius: 0 8px 8px 0;
-            color: #334155;
+            border-left: 4px solid #4f46e5;
+            color: #475569;
             font-style: italic;
+        }
+
+        .pdf-chapter table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 10pt;
+        }
+
+        .pdf-chapter th, .pdf-chapter td {
+            border: 1px solid #d1d5db;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .pdf-chapter th {
+            background: #f3f4f6;
+            font-weight: 700;
+        }
+
+        .pdf-chapter hr {
+            border: 0;
+            height: 1px;
+            background: #e5e7eb;
+            margin: 24px 0;
+        }
+
+        .pdf-chapter em {
+            color: #4b5563;
         }
 
         .pdf-chapter strong {
             color: #111827;
-        }
-
-        .pdf-chapter hr {
-            border: none;
-            border-top: 1px solid #e2e8f0;
-            margin: 28px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 8px 12px;
-            font-size: 10pt;
-            text-align: left;
-        }
-
-        th {
-            background: #f1f5f9;
-            font-weight: 700;
         }
     </style>
 </head>
 <body>
     <!-- Cover -->
     <div class="cover-page">
-        <div class="cover-badge">Книга и руководство</div>
-        <h1 class="cover-title">ТОЧКА ОПОРЫ</h1>
-        <div class="cover-subtitle">Пошаговая система выхода из ПППГ, невроза, шаткости и тревожных расстройств</div>
+        <div class="cover-badge">${badgeText}</div>
+        <h1 class="cover-title">${mainTitle}</h1>
+        <div class="cover-subtitle">${subTitle}</div>
         <div class="cover-meta">
-            <div class="cover-author">Автор: Максим</div>
-            <div>34 главы &nbsp;|&nbsp; 5 модулей &nbsp;|&nbsp; Доказательный подход</div>
-            <div style="margin-top:8px;font-size:9pt;color:#9ca3af;">Издание 2026 года</div>
+            <div class="cover-author">${authorText}</div>
+            <div>${metaNote}</div>
         </div>
     </div>
 
     <!-- TOC -->
     <div class="toc-page">
-        <div class="toc-heading">Оглавление книги</div>
+        <h2 class="toc-heading">${tocTitle}</h2>
         ${tocListHTML}
     </div>
 
@@ -345,7 +412,7 @@ async function buildFullPDF() {
 </html>`;
 
     fs.writeFileSync(OUTPUT_HTML, fullBookHTML, 'utf8');
-    console.log(`✅ Compiled full book HTML: ${OUTPUT_HTML}`);
+    console.log(`✅ Compiled full book HTML [${langLabel}]: ${OUTPUT_HTML}`);
 
     // Convert HTML to PDF using MS Edge Headless
     const edgePath = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
@@ -353,14 +420,12 @@ async function buildFullPDF() {
         throw new Error(`Edge executable not found at ${edgePath}`);
     }
 
-    console.log('⏳ Rendering PDF via MS Edge...');
+    console.log(`⏳ Rendering PDF via MS Edge [${langLabel}]...`);
     const cmd = `"${edgePath}" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf="${OUTPUT_PDF}" "file:///${OUTPUT_HTML.replace(/\\/g, '/')}"`;
     execSync(cmd);
 
-
-
     const pdfStats = fs.statSync(OUTPUT_PDF);
-    console.log(`🎉 Full Book PDF successfully created!`);
+    console.log(`🎉 Full Book PDF successfully created [${langLabel}]!`);
     console.log(`   Path: ${OUTPUT_PDF}`);
     console.log(`   Size: ${(pdfStats.size / (1024 * 1024)).toFixed(2)} MB (${pdfStats.size} bytes)`);
 
@@ -370,7 +435,17 @@ async function buildFullPDF() {
     }
 }
 
-buildFullPDF().catch(err => {
-    console.error('❌ Error building PDF:', err);
-    process.exit(1);
-});
+async function main() {
+    await buildPDFForLang('ru');
+    await buildPDFForLang('en');
+    console.log('\n🌟 Both RU and EN PDF editions compiled successfully!');
+}
+
+if (require.main === module) {
+    main().catch(err => {
+        console.error('❌ Error building PDF:', err);
+        process.exit(1);
+    });
+}
+
+module.exports = { buildPDFForLang, main };

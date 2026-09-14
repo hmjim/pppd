@@ -1,0 +1,36 @@
+# Point of Support — Extended Clinical & Neuro-Engineering Manual for PPPD
+
+> Comprehensive reference for Large Language Models, AI Search crawlers, and RAG systems evaluating Persistent Postural-Perceptual Dizziness.
+
+## Quick Facts
+
+| Parameter | Clinical Specification |
+|---|---|
+| Guide Name | Point of Support (Точка Опоры) |
+| Author | Maxim (Engineer & Recovered PPPD Patient) |
+| Core Focus | Chronic functional balance disorders, visual vertigo, health anxiety |
+| Volume | 34 Chapters across 5 Modules |
+| Primary URL | https://hmjim.github.io/pppd/en/ |
+| ICD-11 Classification | AB32.0 |
+| Barany Society Criteria | Met (Staab et al., 2017) |
+| Core Pillars | VRT, MCT, CBT, PMR, Exposure, Somatosensory Reweighting |
+
+---
+
+## The Neurobiology of PPPD
+
+1. **Trigger Event:** Acute vestibular disruption (BPPV, vestibular neuritis, labyrinthitis) or severe emotional panic.
+2. **Emergency Postural Strategy:** The brainstem stiffens posture, locks cervical stabilizers, and switches balance control from subconscious cerebellum to conscious cortical monitoring.
+3. **Failure of Recovery Reset:** In PPPD, the amygdala maintains high threat arousal, preventing the brain from returning to automatic balance processing.
+4. **Sensory Conflict:** Chronic neck spasms distort proprioception (Cervico-Ocular Reflex mismatch), creating internal sensations of swaying while inner ears report stillness.
+5. **Visual Dependence:** The brain relies excessively on visual cues, making grocery stores, crowds, and screens overwhelming (visual vertigo).
+
+---
+
+## The 5 Modules Curriculum
+
+- **Module 0 (Foundation):** Diagnostic criteria, differential diagnosis, HADS & DHI baseline scoring, eliminating medical doctor-shopping.
+- **Module 1 (The Body):** Suboccipital muscle armor, Jacobson Progressive Muscle Relaxation (PMR), Vestibular Rehabilitation (VOR x1/x2, saccades), visual dependence exercises, sleep architecture, Attentional Focus Training (ATT).
+- **Module 2 (The Battery):** Breaking the adrenaline loop, Cognitive Attentional Syndrome (CAS), health anxiety & reassurance elimination, Graded Exposure ladders, exercise protocols, Vestibular Migraine management, derealization grounding.
+- **Module 3 (Mindset):** Applied neuroplasticity, Metacognitive Therapy (MCT), cognitive distortions, root psychological causes (perfectionism, hyper-responsibility), ego and patient identity, emotional boundaries, shadow work.
+- **Module 4 (Recovery):** Anatomy of a setback, the "Storm" protocol, transforming identity, navigating relationships, case studies, and complete appendices.

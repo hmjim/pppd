@@ -1,1 +1,62 @@
-PNDz2luNFdLXxdo6.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
+# ПППГ и головокружение — почему постоянно кружится голова
+
+*Разбираемся, почему при ПППГ постоянно кружится голова при нормальных результатах всех обследований. Механизм, виды головокружения и что с этим делать.*
+
+## Головокружение при ПППГ — это не то, что ты думаешь
+
+Когда человек говорит «у меня кружится голова», обычно представляют карусель — всё вращается, стены едут, нельзя встать. Это **истинное вращательное головокружение** (vertigo). При ПППГ такого обычно нет.
+
+Головокружение при ПППГ — это другое:
+- **Покачивание** — как на корабле в штиль
+- **Плавание** — «земля как жидкая»
+- **Зыбкость** — мир слегка «дрожит» или «плывёт»
+- **Неустойчивость** — «ноги не мои», «пол уходит»
+
+Это **несистемное головокружение** — нет ощущения вращения, нет нистагма, нет падений. Но ощущается оно не менее мучительно.
+
+## Почему кружится голова при ПППГ
+
+Твой мозг получает информацию о положении тела от трёх систем:
+
+1. **Глаза** — видят, где верх и низ
+2. **Вестибулярный аппарат** (внутреннее ухо) — чувствует наклоны и повороты
+3. **Проприоцепция** — мышцы и суставы говорят, где находится каждая часть тела
+
+В норме мозг автоматически сопоставляет данные от всех трёх. При ПППГ этот процесс нарушен — не потому что «сломались датчики», а потому что **мозг застрял в режиме повышенной бдительности**.
+
+Хронический стресс → выброс кортизола → [мышечный панцирь](04_muscle_armor.html) → зажатие шеи → искажение проприоцептивных сигналов → рассинхронизация трёх систем → ощущение головокружения.
+
+## Чем отличается ПППГ от других видов головокружения
+
+| Признак | ПППГ | ДППГ | Болезнь Меньера | Вестибулярный нейронит |
+|---------|------|------|-----------------|----------------------|
+| **Тип** | Несистемное (покачивание) | Вращательное | Вращательное | Вращательное |
+| **Длительность приступа** | Часы–дни (фоновое) | 5–60 секунд | 20 мин–12 часов | Дни–недели |
+| **Триггер** | Стресс, визуальная нагрузка | Поворот головы | Спонтанно | Спонтанно |
+| **Слух** | Норма | Норма | Снижен | Норма |
+| **МРТ** | Норма | Норма | Норма | Норма |
+| **Лечение** | КПТ + гимнастика | Манёвр Эпли | Медикаменты | Гимнастика + время |
+
+**Важно:** ПППГ часто развивается **после** ДППГ или вестибулярного нейронита. Сам приступ прошёл, но мозг «запомнил» ощущение и продолжает его воспроизводить. Это [адреналиновая петля](09_adrenaline_loop.html).
+
+## Когда головокружение усиливается
+
+Характерные провокаторы при ПППГ:
+- **Вертикальное положение** — стоя и при ходьбе хуже, лёжа легче
+- **Утро** — после сна мозг не успевает «перекалибровать» баланс
+- **Магазины, ТЦ, метро** — [зрительная зависимость](08_visual_dependence.html) перегружает мозг
+- **Стресс и тревога** — любое эмоциональное напряжение усиливает шаткость
+- **Усталость и недосып** — [сон и ПППГ](26_sleep.html) тесно связаны
+- **Телефон и экраны** — скроллинг провоцирует визуальное головокружение
+
+## Как лечить головокружение при ПППГ
+
+ПППГ — это **полностью обратимое состояние**. Подробная система лечения описана в книге «[Точка Опоры](../)»:
+
+1. [Вестибулярная гимнастика](06_vestibular.html) — «переобучение» мозга обрабатывать сигналы равновесия
+2. [Экспозиция](12_exposure.html) — постепенное возвращение в пугающие ситуации
+3. [Релаксация](05_relaxation.html) — снятие мышечного напряжения, которое питает головокружение
+4. Работа с тревогой — [метакогнитивная терапия](15_metacognition.html), [когнитивные искажения](16_cognitive_distortions.html)
+5. Физическая активность — [спорт](13_sport.html) снижает кортизол и стимулирует нейропластичность
+
+Подробное [руководство по лечению ПППГ](30_treatment_overview.html) — 5 доказательных методов.

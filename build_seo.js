@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
 const { execSync } = require('child_process');
 
 let minifiedCss = '';
@@ -10,17 +9,25 @@ async function main() {
 
     const SITE_URL = 'https://hmjim.github.io/pppd';
     const DOCS_DIR = path.join(__dirname, 'docs');
-    const SRC_DIR = path.join(__dirname, 'chapters_src');
+    const SRC_RU_DIR = path.join(__dirname, 'chapters_src');
+    const SRC_EN_DIR = path.join(__dirname, 'chapters_en');
 
-    // Generate complete 160+ page book PDF from all 33 chapters
+    // Generate complete book PDFs for both RU and EN
     try {
-        console.log('Generating complete book PDF...');
+        console.log('Generating complete book PDFs (RU + EN)...');
         execSync('node build_full_pdf.js', { stdio: 'inherit' });
     } catch (e) {
-        console.error('Failed to generate PDF:', e.message);
+        console.error('Failed to generate PDFs:', e.message);
     }
 
-    // Cache-busting version for PDF links (forces fresh download after every build)
+    // Run encryption pipeline for both languages
+    try {
+        console.log('Running encryption pipeline...');
+        execSync('node encrypt.js', { stdio: 'inherit' });
+    } catch (e) {
+        console.error('Failed to run encryption:', e.message);
+    }
+
     const pdfVersion = Date.now();
 
     // Read and minify CSS
@@ -31,8 +38,8 @@ async function main() {
         .replace(/\s+/g, ' ')
         .trim();
 
-    // ── Chapter metadata for SEO ──
-    const CHAPTERS = [
+    // ── CHAPTERS RU ──
+    const CHAPTERS_RU = [
         {
             id: '00_introduction',
             title: 'Вступление',
@@ -233,32 +240,18 @@ async function main() {
             title: 'Фокус внимания при тревоге',
             seoTitle: 'Фокус внимания при тревоге и ПППГ — техники тренировки | Точка Опоры',
             description: 'Прислушиваешься к телу и не можешь отвлечься от головокружения? Узнай, почему гиперфокус усиливает симптомы в 10 раз. 4 техники возврата контроля: ATT, Open Focus, Радар 360°.',
-            keywords: 'фокус внимания тревога, тренировка внимания при тревоге, ATT тренировка внимания, Open Focus, ПППГ внимание, гиперфокус на симптомах, как отвлечься от тревоги, метакогнитивная терапия внимание, экстероцепция, прислушиваюсь к телу тревога, body checking тревога, не могу отвлечься от головокружения, как перестать сканировать тело, интероцептивный гиперфокус, техника Уэллса на русском, децентрирование тревога, DMN руминации, эффект белой обезьяны Вегнера, периферическое зрение тревога, управление вниманием невроз',
-            faq: [
-                { q: 'Почему я не могу просто отвлечься от головокружения?', a: 'Потому что работает теория иронических процессов Дэниела Вегнера: приказ «не думай об этом» заставляет мозг постоянно проверять, думаешь ли ты об этом. Нужна системная тренировка переключения внимания (ATT).' },
-                { q: 'Что такое ATT — техника тренировки внимания?', a: 'ATT (Attention Training Technique) — 12-минутный ежедневный протокол Эдриана Уэллса. Включает три фазы: селективное внимание, быстрое переключение и разделённое внимание.' },
-                { q: 'Помогает ли медитация при ПППГ и тревоге?', a: 'Классическая медитация осознанности может усилить интероцептивный гиперфокус при ПППГ. ATT — противоположный подход: фокус целенаправленно уводится наружу, на внешние звуки.' },
-                { q: 'Сколько нужно тренировать внимание чтобы стало легче?', a: 'При ежедневной практике (15–20 минут) первые изменения заметны через 7–10 дней. Устойчивая перестройка — 4–6 недель.' },
-                { q: 'Что такое Open Focus и как он снимает тревогу?', a: 'Open Focus — метод нейрорегуляции д-ра Лестера Феми. Переход к периферическому восприятию запускает альфа-ритмы (8–12 Гц) и активирует парасимпатику.' },
-            ],
+            keywords: 'фокус внимания тревога, тренировка внимания при тревоге, ATT тренировка внимания, Open Focus, ПППГ внимание',
             module: 'Модуль 1: Тело',
         },
         {
             id: '47_meditation',
             title: 'Медитация при ПППГ и тревоге',
             seoTitle: 'Медитация при ПППГ и тревоге — почему кружится голова, техники | Точка Опоры',
-            description: 'Медитация при ПППГ, головокружении и тревоге: почему классический mindfulness вызывает панику (RIA), как альфа-ритмы и NSDR снимают спазм сосудов. 3 аудио-протокола.',
-            keywords: 'медитация при ПППГ, медитация от головокружения, медитация при тревоге, NSDR протокол, релаксация при панических атаках, альфа ритмы медитация, йога нидра невроз, блуждающий нерв медитация, RIA тревога от расслабления, аудио медитация calm mind meditation, почему кружится голова при медитации, как медитировать при ВСД',
-            faq: [
-                { q: 'Почему во время медитации усиливается головокружение?', a: 'При закрытии глаз мозг с ПППГ теряет зрительную компенсацию и сталкивается с интероцептивным шумом. Нужны практики с полуоткрытыми глазами и внешним аудио-якорем.' },
-                { q: 'Что такое NSDR и как он помогает при неврозе?', a: 'NSDR (глубокий отдых без сна) удерживает мозг на границе альфа- и тета-ритмов, восстанавливая дофамин и снижая кортизол без дневной разбитости.' },
-                { q: 'Как правильно медитировать утром при ПППГ?', a: '10 минут сидя с открытыми на 80% глазами, стопы на полу, с аудио-сопровождением (Calm Mind Meditation) и акцентом на удлинённый выдох.' },
-                { q: 'Можно ли медитировать лёжа, если сидя кружится голова?', a: 'Да, на этапе обострения ПППГ положение лёжа на твёрдой поверхности исключает риск падения и даёт максимальную тактильную опору.' },
-                { q: 'Сколько времени нужно практиковать, чтобы ушла шаткость?', a: 'Вегетативный спазм снижается уже на первой неделе, а стойкая перестройка сенсорного гейтинга таламуса занимает 3–4 недели регулярных сессий.' },
-            ],
+            description: 'Медитация при ПППГ, головокружении и тревоге: почему классический mindfulness вызывает панику, как альфа-ритмы и NSDR снимают спазм сосудов.',
+            keywords: 'медитация при ПППГ, медитация от головокружения, медитация при тревоге, NSDR протокол',
             module: 'Модуль 1: Тело',
         },
-        // ── Paid chapters ──
+        // Paid chapters
         {
             id: '09_adrenaline_loop',
             title: 'Адреналиновая петля',
@@ -309,7 +302,7 @@ async function main() {
             title: 'Вестибулярная мигрень',
             seoTitle: 'Вестибулярная мигрень и ПППГ — тревога, лечение | Точка Опоры',
             description: 'Вестибулярная мигрень и ПППГ: как тревога снижает мигренозный порог. 7 техник снижения стресса, 8-недельный протокол, релаксация.',
-            keywords: 'вестибулярная мигрень, вестибулярная мигрень лечение, мигрень головокружение, мигрень ПППГ, мигрень тревога, тригеминоваскулярная система, CGRP мигрень, мигренозный порог, стресс мигрень, КПТ мигрень, релаксация при мигрени',
+            keywords: 'вестибулярная мигрень, вестибулярная мигрень лечение, мигрень головокружение, мигрень ПППГ, мигрень тревога',
             module: 'Модуль 2: Батарейка',
             paid: true,
         },
@@ -327,7 +320,7 @@ async function main() {
             title: 'ПТСР и техника ДПДГ (EMDR)',
             seoTitle: 'ПТСР при ПППГ — техника ДПДГ (EMDR) для переработки травмы | Точка Опоры',
             description: 'ПТСР при ПППГ: почему первый приступ головокружения становится травмой. Техника ДПДГ (EMDR) — пошаговый протокол билатеральной стимуляции.',
-            keywords: 'ПТСР ПППГ, ДПДГ, EMDR, ДПДГ головокружение, EMDR тревога, посттравматический стресс, билатеральная стимуляция, травма паническая атака, десенсибилизация, переработка травмы',
+            keywords: 'ПТСР ПППГ, ДПДГ, EMDR, ДПДГ головокружение, EMDR тревога, посттравматический стресс',
             module: 'Модуль 2: Батарейка',
             paid: true,
         },
@@ -389,8 +382,8 @@ async function main() {
             id: '28_suppressed_emotions',
             title: 'Подавленные эмоции',
             seoTitle: 'Подавленные эмоции и ПППГ — гнев, который стал головокружением | Точка Опоры',
-            description: 'Как подавленный гнев, обида и стыд превращаются в мышечный спазм и головокружение при ПППГ. Техники безопасного сброса эмоций: письмо гнева, телесная экспрессия, гештальт.',
-            keywords: 'подавленные эмоции ПППГ, гнев головокружение, психосоматика гнев, мышечный спазм эмоции, подавленная злость невроз',
+            description: 'Как подавленный гнев, обида и стыд превращаются в мышечный спазм и головокружение при ПППГ. Техники безопасного сброса эмоций.',
+            keywords: 'подавленные эмоции ПППГ, гнев головокружение, психосоматика гнев, мышечный спазм эмоции',
             module: 'Модуль 3: Мышление',
             paid: true,
         },
@@ -398,15 +391,8 @@ async function main() {
             id: '46_victim_state',
             title: 'Выход из позиции Жертвы',
             seoTitle: 'Синдром жертвы при неврозе и тревоге — как выйти из выученной беспомощности | Точка Опоры',
-            description: 'Как позиция Жертвы поддерживает хроническую тревогу, шаткость и ПППГ: нейробиология выученной беспомощности по Селигману, дорсальный вагус, вторичные выгоды и 5 шагов возврата контроля.',
-            keywords: 'синдром жертвы, позиция жертвы психология, выученная беспомощность, вторичные выгоды болезни, треугольник карпмана невроз, как выйти из жертвы, психосоматика беспомощность, ПППГ психология, контроль над тревогой, локус контроля',
-            faq: [
-                { q: 'Что такое синдром жертвы при неврозе?', a: 'Это неосознанная передача контроля над телом и жизнью внешним факторам (врачам, погоде, симптомам), создающая иллюзию алиби: «я ничего не могу поделать, значит, я ни за что не отвечаю».' },
-                { q: 'Как выученная беспомощность усиливает головокружение и шаткость?', a: 'Отказ от контроля активирует дорсальное ядро шва (DRN) и дорсальный вагусный комплекс (рефлекс замирания по Порджесу). Это приводит к падению тонуса, сенсорной депривации вестибулярного анализатора и усилению иллюзии качки.' },
-                { q: 'Что такое вторичные выгоды болезни?', a: 'Это бессознательные преимущества, которые получает человек от болезни: легальное освобождение от сложных взрослых решений (развод, увольнение), гарантированное внимание и сочувствие близких, право на отдых без чувства вины.' },
-                { q: 'Почему треугольник Карпмана затягивает невротика?', a: 'Потому что смена ролей (Жертва ➔ Спасатель ➔ Преследователь) дает нейрохимические всплески: от кортизола к окситоцину при жалости и адреналину при гневе на врачей, создавая биохимическую зависимость от драмы.' },
-                { q: 'С чего начать выход из позиции жертвы?', a: 'С лингвистического перехвата (замена «меня накрыло» на «я зажал мышцы»), честного аудита вторичных выгод, отказа от жалоб в семье и фокусировки исключительно на зоне своего прямого контроля.' }
-            ],
+            description: 'Как позиция Жертвы поддерживает хроническую тревогу, шаткость и ПППГ: нейробиология выученной беспомощности по Селигману, дорсальный вагус, 5 шагов возврата контроля.',
+            keywords: 'синдром жертвы, позиция жертвы психология, выученная беспомощность, вторичные выгоды болезни',
             module: 'Модуль 3: Мышление',
             paid: true,
         },
@@ -414,15 +400,8 @@ async function main() {
             id: '45_shadow_work',
             title: 'Принятие Тени',
             seoTitle: 'Принятие Тени при тревоге и неврозе — интеграция по Юнгу | Точка Опоры',
-            description: 'Принятие Тени при тревоге, неврозе и ПППГ: как подавленная агрессия, страх и слабость разрушают тело и вызывают головокружение. 5 практических шагов интеграции Тени по Юнгу.',
-            keywords: 'принятие тени, интеграция тени, тень по юнгу, подавленная агрессия, тревога и тень, психосоматика злости, синдром хорошего человека, работа с тенью упражнения, подавленные эмоции невроз, ПППГ психосоматика, вытесненный гнев',
-            faq: [
-                { q: 'Что такое «Тень» простыми словами?', a: 'Тень — это совокупность качеств, чувств и импульсов (гнев, слабость, эгоизм, зависть, отказ), которые человек вытеснил из сознания ради того, чтобы быть социально одобряемым и «хорошим».' },
-                { q: 'Как непринятая Тень вызывает тревогу и головокружение?', a: 'Подавление требует постоянного активного торможения в префронтальной коре и удерживает скелетные мышцы (шею, челюсть) в хроническом спазме. ЦНС считывает спазм как угрозу, вызывая панику, шаткость и сенсорный конфликт при ПППГ.' },
-                { q: 'Означает ли принятие Тени, что я стану злым или агрессивным?', a: 'Нет. Принятие Тени даёт осознанный контроль над эмоциями. Человек, признавший свою злость, управляет ею, а не она им через неврозы и соматику.' },
-                { q: 'Какие упражнения помогают интегрировать Тень?', a: 'Теневой аудит через проекции («что бесит в других»), письменный протокол «Чёрный ящик» (нецензурированная экспрессия), соматическая легализация импульса и практика отказа без оправданий.' },
-                { q: 'Сколько времени занимает работа с Тенью?', a: 'Первое телесное расслабление (шея, дыхание) наступает уже за 1–2 недели практики. Устойчивая перестройка реакций занимает 6–8 недель.' }
-            ],
+            description: 'Принятие Тени при тревоге, неврозе и ПППГ: как подавленная агрессия, страх и слабость разрушают тело и вызывают головокружение. 5 практических шагов интеграции по Юнгу.',
+            keywords: 'принятие тени, интеграция тени, тень по юнгу, подавленная агрессия, тревога и тень',
             module: 'Модуль 3: Мышление',
             paid: true,
         },
@@ -448,26 +427,26 @@ async function main() {
             id: '22_new_identity',
             title: 'Новая личность',
             seoTitle: 'Новая личность после ПППГ — кем вы станете | Точка Опоры',
-            description: 'Формирование новой идентичности после ПППГ: от «больного» к здоровому человеку. Как принять новую версию себя и не вернуться к старым паттернам.',
-            keywords: 'новая личность, выздоровление ПППГ, идентичность после болезни, трансформация личности',
+            description: 'Новая личность после ПППГ: как болезнь меняет человека, обретение внутренней силы, новые ценности и жизнь без страха головокружения.',
+            keywords: 'жизнь после ПППГ, выздоровление ПППГ, новая личность, трансформация, психологический рост',
             module: 'Модуль 4: Выход',
             paid: true,
         },
         {
             id: '23_farewell',
             title: 'Выход в жизнь',
-            seoTitle: 'Выход в жизнь после ПППГ — полное выздоровление | Точка Опоры',
-            description: 'Финальная глава: как завершить путь выздоровления от ПППГ, вернуться к полноценной жизни и больше не бояться головокружения.',
-            keywords: 'выздоровление ПППГ, полное выздоровление, жизнь после головокружения, ПППГ прошёл',
+            seoTitle: 'Выход в жизнь — заключение книги «Точка Опоры» | Точка Опоры',
+            description: 'Заключительная глава: напутствие автора, закрепление результатов, жизнь без головокружения. Вы справились.',
+            keywords: 'выздоровление ПППГ, финал книги, жизнь без головокружения, победа над ПППГ, заключение',
             module: 'Модуль 4: Выход',
             paid: true,
         },
         {
             id: '29_loved_ones',
             title: 'Близкие и ПППГ',
-            seoTitle: 'ПППГ и семья — инструкция для близких и партнёра | Точка Опоры',
-            description: 'Как ПППГ меняет отношения в семье: 4 токсичных паттерна (костыль, палач, терапевт, заложник), памятка для партнёра, контракт на выздоровление, как говорить с детьми.',
-            keywords: 'ПППГ семья, головокружение отношения, поддержка при ПППГ, как помочь близкому с головокружением, созависимость невроз',
+            seoTitle: 'Близкие и ПППГ — как объяснить семье, что с вами происходит | Точка Опоры',
+            description: 'Как объяснить близким, что такое ПППГ: почему фразы «не придумывай» ранят, как выстроить границы, памятка для родственников и партнёров.',
+            keywords: 'близкие ПППГ, семья головокружение, как объяснить ПППГ, поддержка при неврозе, родственники тревога',
             module: 'Модуль 4: Выход',
             paid: true,
         },
@@ -475,38 +454,491 @@ async function main() {
             id: '24_case_studies',
             title: 'Истории выздоровления',
             seoTitle: 'Истории выздоровления от ПППГ — реальные кейсы | Точка Опоры',
-            description: 'Реальные истории людей, которые полностью выздоровели от ПППГ. Сколько времени заняло, что помогло, какие ошибки совершали.',
-            keywords: 'истории выздоровления ПППГ, кейсы ПППГ, ПППГ отзывы, выздоровел от головокружения',
+            description: 'Реальные истории людей, победивших ПППГ: разные симптомы, разные пути, один результат — полное выздоровление.',
+            keywords: 'истории выздоровления ПППГ, кейсы ПППГ, победа над головокружением, отзывы ПППГ',
             module: 'Кейсы',
             paid: true,
         },
         {
             id: '25_appendix',
-            title: 'Приложения',
-            seoTitle: 'Приложения — чек-листы, таблицы, ресурсы по ПППГ | Точка Опоры',
-            description: 'Приложения к книге «Точка Опоры»: чек-листы обследований, таблицы упражнений, список литературы, полезные ресурсы по ПППГ.',
-            keywords: 'ПППГ чек-лист, ресурсы ПППГ, литература головокружение, таблица упражнений',
+            title: 'Приложения и материалы',
+            seoTitle: 'Приложения к книге «Точка Опоры» — чек-листы, шкалы, материалы | Точка Опоры',
+            description: 'Все материалы книги в одном месте: опросники HADS и DHI, трекер упражнений, памятка при приступе, ссылки на исследования.',
+            keywords: 'материалы ПППГ, чек-листы головокружение, тесты ПППГ скачать, памятка ПППГ',
             module: 'Приложения',
             paid: true,
-        },
-
+        }
     ];
 
-    // ── HTML Template ──
-    function buildHTML(chapter, bodyContent, isIndex = false) {
-        const url = isIndex ? SITE_URL + '/' : `${SITE_URL}/chapters/${chapter.id}.html`;
-        const dateISO = new Date().toISOString().split('T')[0];
+    // ── CHAPTERS EN ──
+    const CHAPTERS_EN = [
+        {
+            id: '00_introduction',
+            title: 'Introduction',
+            seoTitle: 'PPPD Recovery Guide — Point of Support | Full Manual',
+            description: 'Point of Support — a step-by-step evidence-based system for overcoming PPPD (Persistent Postural-Perceptual Dizziness). Maxim\'s story of 100% full recovery after BPPV. Free chapters.',
+            keywords: 'PPPD, PPPD recovery, Persistent Postural-Perceptual Dizziness, chronic dizziness treatment, BPPV, visual vertigo, health anxiety, vestibular rehab',
+            module: null,
+        },
+        {
+            id: '41_psychosomatics',
+            title: 'Psychosomatics: The Universal Key',
+            seoTitle: 'Psychosomatics & Central Sensitization in PPPD | Point of Support',
+            description: 'Psychosomatics in PPPD: why dizziness, throat tightness, neck pain, IBS, and tremors are all symptoms of a single overloaded autonomic nervous system. Central sensitization and evidence-based CBT protocols.',
+            keywords: 'psychosomatics, central sensitization, PPPD psychosomatic, globus pharyngeus, autonomic dysregulation, CBT for dizziness, somatic symptom disorder',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '01_what_is_pppg',
+            title: 'What is PPPD',
+            seoTitle: 'What is PPPD — Symptoms, Causes & Neurobiology | Point of Support',
+            description: 'PPPD (Persistent Postural-Perceptual Dizziness, ICD-11: AB32.0): comprehensive symptom checklist, etiology, neuro-sensory mechanisms, difference from BPPV. Why unsteadiness is fully reversible.',
+            keywords: 'what is PPPD, PPPD symptoms, PPPD causes, PPPD treatment, 3PD, functional dizziness, unsteadiness walking, brain fog, chronic dizziness',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '02_medical_checkup',
+            title: 'Closing the Clinic Door',
+            seoTitle: 'Essential Diagnostic Checklist for PPPD & Dizziness | Point of Support',
+            description: 'Complete medical workup checklist for chronic dizziness: MRI, vHIT, VNG, neurotologist evaluation. Why cervicogenic dizziness is usually a misdiagnosis and when to stop doctor shopping.',
+            keywords: 'PPPD diagnostic tests, dizziness medical checkup, neurotologist, cervical dizziness myth, MRI for dizziness, doctor shopping anxiety',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '03_baseline_tests',
+            title: 'Quantifying Metrics: HADS & DHI',
+            seoTitle: 'DHI & HADS Tests for PPPD — Objective Progress Tracking | Point of Support',
+            description: 'Objective inventories for tracking PPPD severity: Dizziness Handicap Inventory (DHI) and Hospital Anxiety and Depression Scale (HADS). How to measure your recovery progress.',
+            keywords: 'DHI test, HADS test, dizziness handicap inventory, PPPD tracking, anxiety scale, dizziness severity',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '30_treatment_overview',
+            title: 'PPPD Treatment Overview',
+            seoTitle: 'Evidence-Based PPPD Treatment: The 5 Pillars | Point of Support',
+            description: 'How to treat PPPD: 5 evidence-based modalities (Vestibular Rehabilitation, CBT/MCT, Graded Exposure, Exercise, SSRIs). What works, timeline, comprehensive guide.',
+            keywords: 'PPPD treatment, how to cure PPPD, can PPPD be cured, vestibular rehabilitation therapy, CBT for dizziness, PPPD recovery timeline',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '31_chronic_dizziness',
+            title: 'Chronic Non-Spinning Dizziness',
+            seoTitle: 'Chronic Dizziness Causes: When It Is PPPD | Point of Support',
+            description: 'Persistent non-spinning dizziness: causes, subtypes, when it indicates PPPD. Floating sensations, brain fog, rubber legs—how to reverse chronic disequilibrium.',
+            keywords: 'chronic dizziness, constant unsteadiness, floating feeling, rubber legs, functional dizziness, chronic subjective dizziness',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '32_unsteadiness',
+            title: 'Unsteadiness & Rubber Legs',
+            seoTitle: 'Unsteadiness While Walking — Why Legs Feel Weak | Point of Support',
+            description: 'Why you feel off-balance and unsteady while walking, why legs feel like jelly, floor feels unstable. Muscle stiffness mechanisms and how to regain stability.',
+            keywords: 'unsteadiness walking, rubber legs, cotton wool legs, off balance walking, PPPD unsteadiness, balance anxiety',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '33_brain_fog',
+            title: 'Brain Fog & Cognitive Drag',
+            seoTitle: 'Brain Fog in PPPD — Causes & Cognitive Clarity | Point of Support',
+            description: 'Why brain fog, heavy head pressure, and sluggish thinking occur in vestibular anxiety and PPPD. How cerebellar computational load creates cognitive fatigue.',
+            keywords: 'brain fog dizziness, heavy head pressure, cognitive drag anxiety, vestibular brain fog, how to clear brain fog',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '34_cbt_for_dizziness',
+            title: 'CBT for Chronic Dizziness',
+            seoTitle: 'CBT for PPPD — Cognitive Behavioral Therapy Protocol | Point of Support',
+            description: 'Cognitive Behavioral Therapy (CBT) and Metacognitive Therapy for dizziness and PPPD. How reframing catastrophic thoughts and eliminating avoidance cures symptoms.',
+            keywords: 'CBT for PPPD, cognitive behavioral therapy dizziness, psychotherapy for vertigo, dizziness anxiety treatment',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '35_psychosomatic_dizziness',
+            title: 'Psychogenic & Functional Dizziness',
+            seoTitle: 'Psychosomatic Dizziness — Symptoms & Proven Cure | Point of Support',
+            description: 'Psychosomatic (functional) dizziness: causes, symptoms, differential diagnosis from organic neurological disease. How to resolve stress-induced balance disorders.',
+            keywords: 'psychogenic dizziness, functional dizziness, stress dizziness, anxiety vertigo, psychosomatic balance disorder',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '36_pppg_symptoms',
+            title: 'PPPD Symptoms Checklist',
+            seoTitle: 'PPPD Symptoms List — Full Diagnostic Checklist | Point of Support',
+            description: 'All primary and secondary symptoms of PPPD: unsteadiness, brain fog, visual vertigo, derealization, muscle tension. Barany Society diagnostic criteria.',
+            keywords: 'PPPD symptoms checklist, 3PD signs, persistent dizziness symptoms, visual motion sensitivity, Barany society criteria',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '37_pppg_dizziness',
+            title: 'PPPD vs. Vestibular Neuritis & BPPV',
+            seoTitle: 'PPPD vs BPPV vs Vestibular Neuritis Explained | Point of Support',
+            description: 'How acute vestibular triggers (BPPV, labyrinthitis, vestibular neuritis) transition into chronic PPPD. The neural compensation failure mechanism.',
+            keywords: 'PPPD vs BPPV, vestibular neuritis PPPD, post vertigo unsteadiness, acute vestibular syndrome transition',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '38_pppg_mkb',
+            title: 'PPPD in ICD-11 (AB32.0)',
+            seoTitle: 'PPPD ICD-11 Code AB32.0 — Official Medical Classification | Point of Support',
+            description: 'Official WHO classification of PPPD under ICD-11 code AB32.0. Historical taxonomy from Phobic Postural Vertigo to validated neuro-otology diagnosis.',
+            keywords: 'PPPD ICD-11, AB32.0, PPPD diagnostic code, WHO vestibular classification, chronic subjective dizziness',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '39_pppg_what_is',
+            title: 'PPPD Explained Simply',
+            seoTitle: 'What is PPPD in Simple Terms — Plain English Guide | Point of Support',
+            description: 'PPPD explained without confusing medical jargon: why it starts, how sensory weighting fails, why you will not fall, and how long recovery takes.',
+            keywords: 'PPPD in simple terms, what is 3PD, persistent postural perceptual dizziness explained, plain English dizziness guide',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '40_derealization_pppg',
+            title: 'Derealization in PPPD',
+            seoTitle: 'Derealization in PPPD — Why Reality Feels Unreal | Point of Support',
+            description: 'Derealization and depersonalization in PPPD: why the world looks two-dimensional or behind glass. Why it is a protective nervous system reflex, not psychosis.',
+            keywords: 'derealization PPPD, depersonalization dizziness, brain fog derealization, world behind glass, dissociation anxiety',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '04_muscle_armor',
+            title: 'Muscle Armor',
+            seoTitle: 'Suboccipital Muscle Armor & Cervical Tension in PPPD | Point of Support',
+            description: 'Muscle armor in PPPD: why the neck, shoulders, and jaw lock in chronic spasm. How altered proprioception distorts balance feedback and how to release tension.',
+            keywords: 'muscle armor, suboccipital neck tension, cervical proprioception dizziness, neck spasms anxiety, somatic release',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '05_relaxation',
+            title: 'Jacobson Progressive Relaxation',
+            seoTitle: 'Jacobson Progressive Muscle Relaxation (PMR) Protocol | Point of Support',
+            description: 'Step-by-step 16-muscle group Jacobson PMR protocol for discharging chronic neuromuscular tension in PPPD and anxiety. Resetting baseline tone in 20 minutes.',
+            keywords: 'Jacobson relaxation, progressive muscle relaxation, PMR for anxiety, somatic down-regulation, muscle tension release',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '06_vestibular',
+            title: 'Vestibular Rehabilitation Exercises',
+            seoTitle: 'Vestibular Rehabilitation Therapy (VRT) for PPPD | Point of Support',
+            description: 'Complete daily Vestibular Rehabilitation Therapy protocol: VOR x1/x2 gaze stabilization, saccades, smooth pursuit, and tandem balance drills.',
+            keywords: 'vestibular rehabilitation exercises, VRT for PPPD, VOR x1 exercise, gaze stabilization, balance retraining drills',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '06b_biofeedback',
+            title: 'Simulators: Recalibrating the Brain',
+            seoTitle: 'Optokinetic Stimulation & Biofeedback in PPPD | Point of Support',
+            description: 'Advanced VRT techniques: optokinetic stripe desensitization, saccadic trainers, HRV resonant breathing. Retraining sensory integration.',
+            keywords: 'optokinetic stimulation, OKN desensitization, visual vertigo exercises, HRV breathing, biofeedback PPPD',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '07_neurophysiology_basics',
+            title: 'Neurophysiology: Factory Settings',
+            seoTitle: 'Neurophysiology of PPPD — How the Brain Creates Dizziness | Point of Support',
+            description: 'How the vestibular nuclei, cerebellum, visual cortex, and proprioceptive sensors interact. Why the amygdala corrupts internal forward balance models.',
+            keywords: 'neurophysiology of dizziness, vestibular nuclei, cerebellum forward model, sensory mismatch, PPPD brain mechanism',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '08_visual_dependence',
+            title: 'Visual Dependence',
+            seoTitle: 'Visual Dependence in PPPD — Overcoming Visual Vertigo | Point of Support',
+            description: 'Visual dependence in PPPD: why grocery stores, shopping malls, and scrolling screens trigger disequilibrium. How to re-weight balance onto proprioception.',
+            keywords: 'visual dependence PPPD, visual vertigo, supermarket dizziness, screen dizziness, sensory reweighting',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '26_sleep',
+            title: 'Sleep and PPPD',
+            seoTitle: 'Sleep Architecture & Morning Unsteadiness in PPPD | Point of Support',
+            description: 'Sleep in PPPD: why insomnia strikes, why morning dizziness is at its worst, Cortisol Awakening Response (CAR), and evidence-based sleep hygiene.',
+            keywords: 'sleep PPPD, morning dizziness, cortisol awakening response, insomnia anxiety, sleep hygiene vestibular',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '44_attention_training',
+            title: 'Attentional Focus Training',
+            seoTitle: 'Attentional Focus Training (ATT) for Vestibular Anxiety | Point of Support',
+            description: 'Struggling with internal symptom hyper-scanning? Discover why hyper-focus multiplies dizziness 10x. Wells\' Attention Training Technique (ATT) and Open Focus.',
+            keywords: 'attention training technique, ATT Wells, hyperfocus on symptoms, body scanning anxiety, metacognitive therapy attention',
+            module: 'Module 1: The Body',
+        },
+        {
+            id: '47_meditation',
+            title: 'Meditation & Vagal Protocols',
+            seoTitle: 'Somatic Meditation & Vagal Protocols for PPPD | Point of Support',
+            description: 'Meditation in PPPD: why traditional mindfulness can trigger panic (Relaxation-Induced Anxiety), how Open-Focus and NSDR calm the nervous system.',
+            keywords: 'meditation for PPPD, NSDR protocol, relaxation induced anxiety, vagus nerve regulation, open focus meditation',
+            module: 'Module 1: The Body',
+        },
+        // Paid chapters
+        {
+            id: '09_adrenaline_loop',
+            title: 'The Adrenaline Loop',
+            seoTitle: 'The Adrenaline Loop in PPPD — Breaking the Vicious Cycle | Point of Support',
+            description: 'The adrenaline feedback loop in PPPD: how catastrophic thoughts trigger epinephrine spikes, amplify dizziness, and how neutral appraisal breaks the cycle.',
+            keywords: 'adrenaline loop, anxiety dizziness cycle, epinephrine surge, panic vertigo loop, neutral appraisal',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '10_cas_trap',
+            title: 'The CAS Trap',
+            seoTitle: 'Cognitive Attentional Syndrome (CAS) in PPPD | Point of Support',
+            description: 'Cognitive Attentional Syndrome (CAS) in PPPD: how rumination, threat monitoring, and safety behaviors sustain chronic symptoms. Metacognitive approach.',
+            keywords: 'CAS syndrome, cognitive attentional syndrome, PPPD rumination, symptom monitoring, safety behaviors',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '11_hypochondria',
+            title: 'Health Anxiety & Hypochondria',
+            seoTitle: 'Health Anxiety & Hypochondria in Chronic Dizziness | Point of Support',
+            description: 'Health anxiety in PPPD: why fear of serious neurological disease fuels symptoms, how to stop Googling diagnoses, and tolerate somatic uncertainty.',
+            keywords: 'health anxiety PPPD, hypochondria dizziness, cyberchondria, fear of neurological disease, reassurance addiction',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '12_exposure',
+            title: 'Graded Exposure Therapy',
+            seoTitle: 'Graded In-Vivo Exposure Therapy for PPPD | Point of Support',
+            description: 'Graded exposure in PPPD: systematically returning to feared environments (supermarkets, public transit, crowds) to eliminate agoraphobia and avoidance.',
+            keywords: 'graded exposure PPPD, in vivo exposure, overcoming avoidance, agoraphobia dizziness, SUDS scale exposure',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '13_sport',
+            title: 'Exercise & Cardiovascular Reset',
+            seoTitle: 'Exercise & Physical Activity for PPPD Recovery | Point of Support',
+            description: 'Physical exercise in PPPD: safe movement progressions, walking protocols, and cardiovascular reloading as essential neuroplastic medicine.',
+            keywords: 'exercise PPPD, physical activity dizziness, walking for vestibular recovery, aerobic reset balance',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '42_vestibular_migraine',
+            title: 'Vestibular Migraine & PPPD',
+            seoTitle: 'Vestibular Migraine & PPPD Continuum — Treatment Guide | Point of Support',
+            description: 'Vestibular Migraine and PPPD: how stress lowers migraine thresholds, silent migraines without headache, SEEDS lifestyle protocol.',
+            keywords: 'vestibular migraine, silent migraine dizziness, PPPD migraine overlap, CGRP, migraine lifestyle protocol',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '27_depersonalization',
+            title: 'Derealization and Depersonalization',
+            seoTitle: 'Derealization & Depersonalization in Vestibular Trauma | Point of Support',
+            description: 'Derealization and depersonalization in PPPD: why reality feels disconnected, the dorsal vagal shutdown reflex, and 5-4-3-2-1 grounding protocols.',
+            keywords: 'derealization depersonalization, DPDR dizziness, dissociation anxiety, 54321 grounding technique, dorsal vagus',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '43_ptsd_emdr',
+            title: 'Medical PTSD & EMDR Protocols',
+            seoTitle: 'Medical PTSD & Bilateral EMDR Protocols in PPPD | Point of Support',
+            description: 'PTSD from the initial vertigo attack: how traumatic vestibular memories become trapped in the amygdala. Bilateral stimulation (EMDR) protocol.',
+            keywords: 'PTSD PPPD, EMDR dizziness, vertigo trauma, bilateral stimulation, butterfly hug technique, medical PTSD',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '14_neuroplasticity',
+            title: 'Neuroplasticity in Practice',
+            seoTitle: 'Applied Neuroplasticity in PPPD — Rewiring the Brain | Point of Support',
+            description: 'Neuroplasticity in PPPD: Hebb\'s law, how the brain creates and dissolves balance pathways, paving new neural highways of stability.',
+            keywords: 'neuroplasticity PPPD, rewiring the brain, Hebbs law balance, synaptic plasticity dizziness, neural pathways',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '15_metacognition',
+            title: 'Metacognitive Therapy',
+            seoTitle: 'Metacognitive Therapy (MCT) for PPPD — Detached Mindfulness | Point of Support',
+            description: 'Metacognitive Therapy for PPPD: how to stop debating thoughts, release conscious balance control, and master detached mindfulness (Passing Trains).',
+            keywords: 'metacognitive therapy PPPD, MCT Adrian Wells, detached mindfulness, letting go of control, passing trains metaphor',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '16_cognitive_distortions',
+            title: 'Cognitive Distortions',
+            seoTitle: 'Cognitive Distortions in Chronic Illness & Dizziness | Point of Support',
+            description: 'Cognitive traps in PPPD: catastrophizing, emotional reasoning, black-and-white thinking. How to execute the ABCDE cognitive audit.',
+            keywords: 'cognitive distortions dizziness, catastrophizing PPPD, emotional reasoning, ABCDE cognitive audit, CBT thinking errors',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '17_root_causes',
+            title: 'Root Causes & Perfectionism',
+            seoTitle: 'Root Causes of PPPD — Perfectionism & Chronic Stress | Point of Support',
+            description: 'Underlying psychological drivers of PPPD: perfectionism, hyper-responsibility, conflict avoidance, and the neurosis of control.',
+            keywords: 'root causes PPPD, perfectionism dizziness, hyper responsibility anxiety, somatic burnout, why did I get PPPD',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '18_ego',
+            title: 'Ego & The Patient Identity',
+            seoTitle: 'Ego & The Patient Identity in Chronic Vestibular Illness | Point of Support',
+            description: 'The ego in PPPD: how the false identity of a "sick person" prevents full healing, and how to step into the sovereign recovered self.',
+            keywords: 'patient identity, ego chronic illness, secondary gains illness, overcoming sick role, psychological recovery',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '19_inner_child',
+            title: 'The Inner Child & Somatic Safety',
+            seoTitle: 'The Inner Child & Somatic Safety in Vestibular Healing | Point of Support',
+            description: 'Internal Family Systems (IFS) and the terrified inner child driving amygdala panic. The Reliable Adult protocol for emotional regulation.',
+            keywords: 'inner child healing, IFS somatic therapy, emotional safety anxiety, reliable adult protocol, self compassion',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '28_suppressed_emotions',
+            title: 'Suppressed Emotions & TMS',
+            seoTitle: 'Suppressed Emotions & Sarno\'s TMS in PPPD | Point of Support',
+            description: 'How suppressed anger, grief, and shame convert into neuromuscular spasm and dizziness. Dr. John Sarno\'s TMS framework and uncensored writing.',
+            keywords: 'suppressed emotions PPPD, John Sarno TMS, psychosomatic anger, somatic symptom release, emotional writing',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '46_victim_state',
+            title: 'Exiting the Victim State',
+            seoTitle: 'Overcoming Learned Helplessness & The Victim State | Point of Support',
+            description: 'How the victim position sustains chronic dizziness: Seligman\'s learned helplessness, dorsal vagal freeze, secondary gains, and radical ownership.',
+            keywords: 'victim mindset, learned helplessness, radical ownership PPPD, Karpman triangle, locus of control',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '45_shadow_work',
+            title: 'Shadow Work & Healthy Boundaries',
+            seoTitle: 'Shadow Work & Healthy Boundaries in Somatic Healing | Point of Support',
+            description: 'Integrating the shadow: how suppressed assertiveness, people-pleasing, and inability to say "no" lock the body in autonomic tension.',
+            keywords: 'shadow work Jung, healthy boundaries anxiety, people pleasing burnout, somatic assertiveness, say no without guilt',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
+            id: '20_setback_anatomy',
+            title: 'Anatomy of a Setback',
+            seoTitle: 'Anatomy of a Setback in PPPD — Why Flare-ups Happen | Point of Support',
+            description: 'Setbacks in PPPD: why symptoms flare after improvement, extinction bursts, why it is NOT a reset, and the 4-step setback protocol.',
+            keywords: 'PPPD setback, dizziness flare up, extinction burst, symptom regression, recovery non linear',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '21_storm_strategy',
+            title: 'The "Storm" Protocol',
+            seoTitle: 'The "Storm" Protocol — Frankl\'s Paradoxical Intention | Point of Support',
+            description: 'Step-by-step emergency protocol during acute symptom surges. Viktor Frankl\'s paradoxical intention: welcoming dizziness to extinguish panic.',
+            keywords: 'storm strategy PPPD, acute dizziness protocol, paradoxical intention, panic surrender technique, vertigo emergency',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '22_new_identity',
+            title: 'The New Identity',
+            seoTitle: 'The New Identity After PPPD — Life Beyond Dizziness | Point of Support',
+            description: 'Life after recovery: how enduring and conquering PPPD transforms resilience, emotional boundaries, and lifelong biological health.',
+            keywords: 'life after PPPD, full recovery dizziness, post traumatic growth, upgraded identity, emotional freedom',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '23_farewell',
+            title: 'Stepping Out Into the World',
+            seoTitle: 'Stepping Out Into the World — Author\'s Final Chapter | Point of Support',
+            description: 'Final chapter: author\'s message, lifelong principles of biological stability, and reclaiming your life. You have made it.',
+            keywords: 'PPPD recovery conclusion, final message, living without dizziness, reclaimed life, author conclusion',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '29_loved_ones',
+            title: 'Loved Ones & PPPD',
+            seoTitle: 'Explaining PPPD to Family & Loved Ones | Point of Support',
+            description: 'How to explain invisible vestibular illness to partners and friends. Why "just relax" hurts, establishing healthy boundaries and communication cues.',
+            keywords: 'PPPD family guide, explaining invisible illness, dizziness support partner, communication boundaries',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '24_case_studies',
+            title: 'Recovery Case Studies',
+            seoTitle: 'Real-World PPPD Recovery Case Studies | Point of Support',
+            description: 'Documented case studies of individuals who fully conquered severe PPPD, visual vertigo, agoraphobia, and health anxiety.',
+            keywords: 'PPPD recovery stories, case studies dizziness, success stories PPPD, full recovery reviews',
+            module: 'Case Studies',
+            paid: true,
+        },
+        {
+            id: '25_appendix',
+            title: 'Appendices & Scales',
+            seoTitle: 'Appendices, Printable Worksheets & DHI/HADS Forms | Point of Support',
+            description: 'All companion materials in one place: printable DHI and HADS forms, daily habit trackers, and emergency wallet cards.',
+            keywords: 'PPPD worksheets, DHI PDF form, HADS PDF form, dizziness habit tracker, emergency wallet card',
+            module: 'Appendices',
+            paid: true,
+        }
+    ];
+
+    const dateISO = new Date().toISOString().split('T')[0];
+
+    // Helper to build HTML page
+    function buildHTML(chapter, bodyContent, lang, isIndex = false) {
+        const isEn = lang === 'en';
+        const chaptersList = isEn ? CHAPTERS_EN : CHAPTERS_RU;
+        const currentLangPrefix = isEn ? '/en' : '';
+        const otherLangPrefix = isEn ? '' : '/en';
+
+        const pageUrl = isIndex
+            ? `${SITE_URL}${currentLangPrefix}/`
+            : `${SITE_URL}${currentLangPrefix}/chapters/${chapter.id}.html`;
+
+        const canonicalUrl = pageUrl;
+        const ruUrl = isIndex
+            ? `${SITE_URL}/`
+            : `${SITE_URL}/chapters/${chapter.id}.html`;
+        const enUrl = isIndex
+            ? `${SITE_URL}/en/`
+            : `${SITE_URL}/en/chapters/${chapter.id}.html`;
+
+        const siteTitle = isEn ? 'Point of Support — Overcoming PPPD' : 'Точка Опоры — Выход из ПППГ';
+        const authorName = isEn ? 'Maxim' : 'Максим';
+        const rootPath = isEn ? '../..' : '..';
 
         // Schema.org JSON-LD
         const schemaBook = JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Book",
-            "name": "Точка Опоры — Полное руководство по выходу из ПППГ",
-            "author": { "@type": "Person", "name": "Максим" },
-            "inLanguage": "ru",
-            "genre": "Здоровье",
-            "description": "Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.",
-            "url": SITE_URL,
+            "name": isEn ? "Point of Support — Comprehensive Guide for Overcoming PPPD" : "Точка Опоры — Полное руководство по выходу из ПППГ",
+            "author": { "@type": "Person", "name": authorName },
+            "inLanguage": isEn ? "en-US" : "ru",
+            "genre": isEn ? "Health & Neuroscience" : "Здоровье",
+            "description": isEn
+                ? "A step-by-step evidence-based system for overcoming PPPD (Persistent Postural-Perceptual Dizziness), health anxiety, and vestibular dysfunction."
+                : "Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.",
+            "url": isEn ? `${SITE_URL}/en/` : `${SITE_URL}/`,
         });
 
         const schemaArticle = JSON.stringify({
@@ -514,17 +946,17 @@ async function main() {
             "@type": chapter.hidden ? "MedicalWebPage" : "Article",
             "headline": chapter.seoTitle,
             "description": chapter.description,
-            "author": { "@type": "Person", "name": "Максим" },
-            "publisher": { "@type": "Person", "name": "Максим" },
+            "author": { "@type": "Person", "name": authorName },
+            "publisher": { "@type": "Person", "name": authorName },
             "datePublished": "2026-06-01",
             "dateModified": dateISO,
-            "mainEntityOfPage": url,
-            "inLanguage": "ru",
+            "mainEntityOfPage": pageUrl,
+            "inLanguage": isEn ? "en-US" : "ru",
             ...(chapter.hidden ? {
                 "about": {
                     "@type": "MedicalCondition",
-                    "name": "Персистирующее постурально-перцептивное головокружение (ПППГ)",
-                    "alternateName": ["PPPD", "Persistent Postural-Perceptual Dizziness"],
+                    "name": isEn ? "Persistent Postural-Perceptual Dizziness (PPPD)" : "Персистирующее постурально-перцептивное головокружение (ПППГ)",
+                    "alternateName": ["PPPD", "3PD", "Persistent Postural-Perceptual Dizziness"],
                     "code": { "@type": "MedicalCode", "code": "AB32.0", "codingSystem": "ICD-11" }
                 }
             } : {}),
@@ -534,62 +966,100 @@ async function main() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Точка Опоры", "item": SITE_URL + "/" },
-                ...(isIndex ? [] : [{ "@type": "ListItem", "position": 2, "name": chapter.title, "item": url }]),
+                { "@type": "ListItem", "position": 1, "name": isEn ? "Point of Support" : "Точка Опоры", "item": isEn ? `${SITE_URL}/en/` : `${SITE_URL}/` },
+                ...(isIndex ? [] : [{ "@type": "ListItem", "position": 2, "name": chapter.title, "item": pageUrl }]),
             ],
         });
 
-        // Build TOC nav for sidebar (exclude hidden satellite pages)
-        const visibleChapters = CHAPTERS.filter(ch => !ch.hidden);
+        // Build TOC nav for sidebar
+        const visibleChapters = chaptersList.filter(ch => !ch.hidden);
         const tocHTML = visibleChapters.map((ch, i) => {
-            const chUrl = ch.id === '00_introduction' ? '../' : `${ch.id}.html`;
+            const chUrl = ch.id === '00_introduction' ? (isEn ? '../' : '../') : `${ch.id}.html`;
             const isActive = ch.id === chapter.id;
             const moduleHeader = (ch.module && (i === 0 || visibleChapters[i - 1].module !== ch.module))
                 ? `<div class="toc-module">${ch.module}</div>` : '';
             return `${moduleHeader}<a class="toc-item${isActive ? ' active' : ''}" href="${chUrl}">${ch.title}</a>`;
         }).join('\n');
 
+        // Language Switcher Buttons
+        const ruHref = isIndex ? (isEn ? '../../' : '../') : (isEn ? `../../chapters/${chapter.id}.html` : '#');
+        const enHref = isIndex ? (isEn ? '#' : 'en/') : (isEn ? '#' : `../en/chapters/${chapter.id}.html`);
+
+        const langSwitcherHTML = `
+            <div class="lang-switch-container" style="margin-top:8px;font-size:0.85rem;display:flex;gap:6px;">
+                ${isEn 
+                    ? `<a href="${ruHref}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a><span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>` 
+                    : `<span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">RU</span><a href="${enHref}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">EN</a>`
+                }
+            </div>
+        `;
+
+        // Related chapters
+        const currentIdx = chaptersList.findIndex(c => c.id === chapter.id);
+        const related = chaptersList.filter((c, idx) => idx !== currentIdx && !c.hidden).slice(0, 3);
+        const relatedHTML = related.map(ch => `
+            <a href="${ch.id}.html" style="display:block;padding:10px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.9rem;transition:all 0.25s;"
+            onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateX(4px)'"
+            onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}</a>
+        `).join('\n');
+
+        const prevChapter = currentIdx > 0 ? chaptersList[currentIdx - 1] : null;
+        const nextChapter = currentIdx < chaptersList.length - 1 ? chaptersList[currentIdx + 1] : null;
+
+        const prevHTML = prevChapter 
+            ? `<a href="${prevChapter.id}.html" class="chapter-nav-btn prev">← ${isEn ? 'Previous: ' : 'Назад: '}${prevChapter.title}</a>` 
+            : '<span></span>';
+        const nextHTML = nextChapter 
+            ? `<a href="${nextChapter.id}.html" class="chapter-nav-btn next">${isEn ? 'Next: ' : 'Далее: '}${nextChapter.title} →</a>` 
+            : '<span></span>';
+
+        const pdfDownloadName = isEn ? 'Point_of_Support_PPPD_Guide.pdf' : 'Точка_Опоры_Выход_из_ПППГ.pdf';
+        const pdfFileSrc = isEn ? '../point_of_support.pdf' : '../r_015744dc3f28b49e.pdf';
+
         return `<!DOCTYPE html>
-<html lang="ru">
+<html lang="${isEn ? 'en' : 'ru'}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" href="${rootPath}/favicon.ico" sizes="any">
+    <link rel="icon" href="${rootPath}/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="${rootPath}/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="${rootPath}/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="${rootPath}/apple-touch-icon.png">
 
     <!-- SEO Meta -->
     <title>${chapter.seoTitle}</title>
     <meta name="description" content="${chapter.description}">
     <meta name="keywords" content="${chapter.keywords}">
-    <meta name="author" content="Максим">
+    <meta name="author" content="${authorName}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="${url}">
+    <link rel="canonical" href="${canonicalUrl}">
+    <link rel="alternate" hreflang="ru" href="${ruUrl}" />
+    <link rel="alternate" hreflang="en" href="${enUrl}" />
+    <link rel="alternate" hreflang="x-default" href="${enUrl}" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="${chapter.seoTitle}">
     <meta property="og:description" content="${chapter.description}">
-    <meta property="og:url" content="${url}">
-    <meta property="og:image" content="https://hmjim.github.io/pppd/cover.png">
+    <meta property="og:url" content="${pageUrl}">
+    <meta property="og:image" content="${SITE_URL}/cover.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Точка Опоры — Выход из ПППГ">
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="${siteTitle}">
+    <meta property="og:locale" content="${isEn ? 'en_US' : 'ru_RU'}">
+    <meta property="og:locale:alternate" content="${isEn ? 'ru_RU' : 'en_US'}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${chapter.seoTitle}">
     <meta name="twitter:description" content="${chapter.description}">
-    <meta name="twitter:image" content="https://hmjim.github.io/pppd/cover.png">
+    <meta name="twitter:image" content="${SITE_URL}/cover.png">
 
     <!-- Schema.org -->
     <script type="application/ld+json">${schemaBook}</script>
     <script type="application/ld+json">${schemaArticle}</script>
     <script type="application/ld+json">${schemaBreadcrumb}</script>
-    ${chapter.faq ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": chapter.faq.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": f.a } })) })}</script>` : ''}
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -608,43 +1078,36 @@ async function main() {
     </div>
 
     <!-- Mobile menu toggle -->
-    <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
+    <button id="menu-toggle" class="menu-toggle" aria-label="${isEn ? 'Open navigation menu' : 'Открыть меню'}">
         <span></span><span></span><span></span>
     </button>
 
     <!-- Sidebar / Table of Contents -->
     <aside id="sidebar" class="sidebar">
         <div class="sidebar-header">
-            <h2 class="sidebar-title"><a href="../" style="text-decoration:none;color:inherit;">Точка Опоры</a></h2>
-            <p class="sidebar-subtitle">Выход из ПППГ</p>
+            <h2 class="sidebar-title"><a href="../" style="text-decoration:none;color:inherit;">${isEn ? 'Point of Support' : 'Точка Опоры'}</a></h2>
+            <p class="sidebar-subtitle">${isEn ? 'Overcoming PPPD' : 'Выход из ПППГ'}</p>
+            ${langSwitcherHTML}
         </div>
-        <nav id="toc" class="toc" aria-label="Оглавление">
+        <nav id="toc" class="toc" aria-label="${isEn ? 'Table of Contents' : 'Оглавление'}">
             ${tocHTML}
         </nav>
         <div class="sidebar-footer">
-            <a id="sidebar-pdf-link" class="sidebar-pdf" title="Скачать всю книгу в PDF" style="display:none">
+            <a id="sidebar-pdf-link" class="sidebar-pdf" title="${isEn ? 'Download Book PDF' : 'Скачать всю книгу в PDF'}" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Скачать книгу (PDF)
+                ${isEn ? 'Download PDF Book' : 'Скачать книгу (PDF)'}
             </a>
             <div class="sidebar-socials">
-                <a href="https://t.me/pppd_vertigo" target="_blank" rel="noopener" class="sidebar-social-btn tg" title="Telegram-чат ПППГ">
+                <a href="https://t.me/pppd_vertigo" target="_blank" rel="noopener" class="sidebar-social-btn tg" title="Telegram Community">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
                     <span>TG</span>
                 </a>
-                <a href="https://www.youtube.com/@_PPPD" target="_blank" rel="noopener" class="sidebar-social-btn yt" title="YouTube-канал @_PPPD">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    <span>YT</span>
-                </a>
-                <a href="https://vk.ru/pppd_vertigo" target="_blank" rel="noopener" class="sidebar-social-btn vk" title="Сообщество ВКонтакте">
-                    <svg width="16" height="16" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.2-4.4-9.2-16.9V117.7c0-15-4.4-21.7-16.9-21.7H227.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H42.2c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C163.8 416 233 448 295.9 448c37.7 0 42.4-8.5 42.4-23.1v-52.9c0-16.9 3.6-20.2 15.5-20.2 8.8 0 23.9 4.4 59.1 38.3 40.2 40.2 46.8 57.9 69.5 57.9h58.9c16.8 0 25.3-8.5 20.4-25.1-5.3-16.4-24.3-40.2-49.6-68.6-13.7-16.3-34.3-33.8-40.5-42.5-8.8-11.3-6.3-16.3 0-26.6.1 0 71.3-100.5 78.6-134.5z"/></svg>
-                    <span>VK</span>
-                </a>
             </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            <button id="theme-toggle" class="theme-toggle" aria-label="${isEn ? 'Toggle Theme' : 'Переключить тему'}">
                 <span class="theme-icon">🌙</span>
             </button>
             <div class="book-progress">
-                <span id="progress-text">0%</span> прочитано
+                <span id="progress-text">0%</span> ${isEn ? 'completed' : 'прочитано'}
             </div>
         </div>
     </aside>
@@ -652,47 +1115,47 @@ async function main() {
     <!-- Main content area -->
     <main id="content" class="content">
         <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Навигация" style="max-width:720px;width:100%;margin-bottom:16px;font-size:0.85rem;" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <nav class="breadcrumb" aria-label="Navigation" style="max-width:720px;width:100%;margin-bottom:16px;font-size:0.85rem;" itemscope itemtype="https://schema.org/BreadcrumbList">
             <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="../" style="color:var(--accent);text-decoration:none;">
-                    <span itemprop="name">Точка Опоры</span>
+                    <span itemprop="name">${isEn ? 'Point of Support' : 'Точка Опоры'}</span>
                 </a>
                 <meta itemprop="position" content="1" />
             </span>
             <span style="color:var(--text-secondary);margin:0 8px;">→</span>
             <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <span itemprop="name" style="color:var(--text-secondary);">${chapter.title}</span>
-                <link itemprop="item" href="${url}" />
+                <link itemprop="item" href="${pageUrl}" />
                 <meta itemprop="position" content="2" />
             </span>
         </nav>
 
         <article class="chapter" itemscope itemtype="https://schema.org/Article">
             <meta itemprop="headline" content="${chapter.seoTitle}">
-            <meta itemprop="author" content="Максим">
+            <meta itemprop="author" content="${authorName}">
             ${bodyContent}
         </article>
 
-        <!-- Related chapters (interlinking) -->
+        <!-- Related chapters -->
         <div style="max-width:720px;width:100%;margin-top:48px;padding-top:32px;border-top:1px solid var(--border);">
-            <h3 style="font-family:var(--font-heading);margin-bottom:16px;color:var(--text-primary);">Читайте также</h3>
+            <h3 style="font-family:var(--font-heading);margin-bottom:16px;color:var(--text-primary);">${isEn ? 'Related Chapters' : 'Читайте также'}</h3>
             <div style="display:grid;gap:8px;">
-                ${getRelatedLinks(chapter)}
+                ${relatedHTML}
             </div>
             <p style="margin-top:20px;text-align:center;">
-                <a href="../" style="color:var(--accent);text-decoration:none;font-weight:500;">← Все главы книги «Точка Опоры»</a>
+                <a href="../" style="color:var(--accent);text-decoration:none;font-weight:500;">← ${isEn ? 'All Chapters of Point of Support' : 'Все главы книги «Точка Опоры»'}</a>
             </p>
         </div>
 
         <!-- Chapter navigation -->
-        <nav class="chapter-nav" aria-label="Навигация по главам">
-            ${getPrevLink(chapter)}
-            ${getNextLink(chapter)}
+        <nav class="chapter-nav" aria-label="Chapter navigation">
+            ${prevHTML}
+            ${nextHTML}
         </nav>
     </main>
 
     <script>
-    // Theme toggle
+    // Theme toggle & Mobile menu
     (function() {
         const saved = localStorage.getItem('tochka-opory-theme');
         if (saved === 'light') {
@@ -705,7 +1168,6 @@ async function main() {
             document.querySelector('.theme-icon').textContent = isLight ? '☀️' : '🌙';
             localStorage.setItem('tochka-opory-theme', isLight ? 'light' : 'dark');
         });
-        // Mobile menu
         const toggle = document.getElementById('menu-toggle');
         const sidebar = document.getElementById('sidebar');
         toggle.addEventListener('click', function() {
@@ -716,100 +1178,28 @@ async function main() {
             sidebar.classList.remove('open');
             toggle.classList.remove('active');
         });
-        // Show PDF download only for licensed users
-        if (localStorage.getItem('tochka-opory-license-key')) {
+
+        // Show PDF download for licensed users
+        var licenseKeyName = '${isEn ? 'point-of-support-license-key' : 'tochka-opory-license-key'}';
+        if (localStorage.getItem(licenseKeyName) || localStorage.getItem('tochka-opory-license-key')) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
-            if (pdfLink) { pdfLink.href = '../r_015744dc3f28b49e.pdf?v=' + Date.now(); pdfLink.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; pdfLink.style.display = ''; }
+            if (pdfLink) {
+                pdfLink.href = '${pdfFileSrc}?v=' + Date.now();
+                pdfLink.download = '${pdfDownloadName}';
+                pdfLink.style.display = '';
+            }
         }
     })();
     </script>
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function() {
-            if (window.navigator.userAgent.indexOf('Lighthouse') !== -1) return;
-            let loaded = false;
-            function initYM() {
-                if (loaded) return;
-                loaded = true;
-                (function(m,e,t,r,i,k,a){
-                    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-                    m[i].l=1*new Date();
-                    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-                })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109681708', 'ym');
-                var ymRef = document.referrer;
-                try {
-                    var storedRef = sessionStorage.getItem('ym_orig_ref');
-                    if (storedRef) {
-                        ymRef = storedRef;
-                        sessionStorage.removeItem('ym_orig_ref');
-                    }
-                } catch(e) {}
-                try {
-                    if ((!ymRef || ymRef.indexOf('yandex.') !== -1) && location.search.indexOf('text=') !== -1) {
-                        var qMatch = location.search.match(/[?&]text=([^&]+)/);
-                        if (qMatch && qMatch[1]) {
-                            ymRef = 'https://yandex.ru/search/touch/?text=' + qMatch[1];
-                        }
-                    }
-                } catch(e) {}
-                try {
-                    if (location.search.indexOf('text=') !== -1 && window.history && history.replaceState) {
-                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '').replace(/^&/, '?');
-                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch.replace(/^\?/, '')) : '') + location.hash;
-                        history.replaceState(null, document.title, cleanUrl);
-                    }
-                } catch(e) {}
-                ym(109681708, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce:true, trackLinks:true});
-            }
-            const triggerEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
-            triggerEvents.forEach(function(event) {
-                window.addEventListener(event, initYM, { once: true, passive: true });
-            });
-            setTimeout(initYM, 3500);
-        })();
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/109681708" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
 </body>
 </html>`;
     }
 
-    function getPrevLink(chapter) {
-        const visibleChapters = CHAPTERS.filter(c => !c.hidden);
-        const idx = visibleChapters.findIndex(c => c.id === chapter.id);
-        if (idx <= 0) return '<span></span>';
-        const prev = visibleChapters[idx - 1];
-        const href = idx === 1 ? '../' : `${prev.id}.html`;
-        return `<a href="${href}" class="nav-btn prev-btn">← ${prev.title}</a>`;
-    }
-
-    function getNextLink(chapter) {
-        const visibleChapters = CHAPTERS.filter(c => !c.hidden);
-        const idx = visibleChapters.findIndex(c => c.id === chapter.id);
-        if (idx < 0 || idx >= visibleChapters.length - 1) return '<span></span>';
-        const next = visibleChapters[idx + 1];
-        return `<a href="${next.id}.html" class="nav-btn next-btn">${next.title} →</a>`;
-    }
-
-    function getRelatedLinks(chapter) {
-        const visibleChapters = CHAPTERS.filter(c => !c.hidden);
-        const idx = visibleChapters.findIndex(c => c.id === chapter.id);
-        return visibleChapters.filter((_, i) => i !== idx).map(ch => {
-            return `<a href="${ch.id}.html" style="display:block;padding:10px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.9rem;transition:all 0.25s;"
-            onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateX(4px)'"
-            onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}</a>`;
-        }).join('\n');
-    }
-
-    // ── Generate static pages ──
-
-    CHAPTERS.forEach((chapter, i) => {
+    // ── Generate Russian Chapter Pages ──
+    console.log('Generating RU static chapter pages...');
+    CHAPTERS_RU.forEach(chapter => {
         let htmlContent;
-
         if (chapter.paid) {
-            // Generate teaser page for paid chapters with key input + decryption
             htmlContent = `
             <div id="paywall-screen">
                 <h1>${chapter.title}</h1>
@@ -834,7 +1224,6 @@ async function main() {
                     <li><a href="02_medical_checkup.html" style="color:var(--accent);">Какие обследования пройти</a></li>
                     <li><a href="06_vestibular.html" style="color:var(--accent);">Вестибулярная гимнастика — упражнения</a></li>
                     <li><a href="07_neurophysiology_basics.html" style="color:var(--accent);">Нейрофизиология головокружения</a></li>
-                    <li><a href="47_meditation.html" style="color:var(--accent);">Медитация при ПППГ — техники и аудио-протоколы</a></li>
                 </ul>
             </div>
             <div id="chapter-content" style="display:none;"></div>
@@ -842,7 +1231,6 @@ async function main() {
             <script>
             (function() {
                 var CHAPTER_ID = '${chapter.id}';
-
                 async function decryptContent(payload, password) {
                     var parts = payload.split('.');
                     if (parts.length !== 2) throw new Error('Invalid format');
@@ -854,15 +1242,12 @@ async function main() {
                     var dec = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: ivBuf }, key, combined);
                     return new TextDecoder().decode(dec);
                 }
-
                 async function tryUnlock(password) {
                     var res = await fetch(CHAPTER_ID + '.md');
                     if (!res.ok) throw new Error('Fetch failed');
                     var encrypted = await res.text();
                     return await decryptContent(encrypted, password);
                 }
-
-                // Auto-unlock if key is saved
                 var savedKey = localStorage.getItem('tochka-opory-license-key');
                 if (savedKey) {
                     tryUnlock(savedKey).then(function(md) {
@@ -874,8 +1259,6 @@ async function main() {
                         localStorage.removeItem('tochka-opory-license-key');
                     });
                 }
-
-                // Manual unlock
                 document.getElementById('paywall-submit').addEventListener('click', async function() {
                     var input = document.getElementById('paywall-key');
                     var key = input.value.trim();
@@ -896,27 +1279,218 @@ async function main() {
                         btn.textContent = 'Активировать доступ'; btn.disabled = false;
                     }
                 });
-
-                // Enter key support
                 document.getElementById('paywall-key').addEventListener('keydown', function(e) {
                     if (e.key === 'Enter') document.getElementById('paywall-submit').click();
                 });
             })();
             <\/script>`;
         } else {
-            const srcPath = path.join(SRC_DIR, `${chapter.id}.md`);
-            if (!fs.existsSync(srcPath)) {
-                console.warn(`⚠️  Source not found: ${srcPath}`);
-                return;
+            const srcPath = path.join(SRC_RU_DIR, `${chapter.id}.md`);
+            if (fs.existsSync(srcPath)) {
+                const md = fs.readFileSync(srcPath, 'utf8');
+                htmlContent = marked.parse(md);
+            } else {
+                htmlContent = `<p>Chapter content not found.</p>`;
             }
-            const md = fs.readFileSync(srcPath, 'utf8');
-            htmlContent = marked.parse(md);
         }
 
-        const fullHTML = buildHTML(chapter, htmlContent, false);
-        const destPath = path.join(DOCS_DIR, 'chapters', `${chapter.id}.html`);
-        fs.writeFileSync(destPath, fullHTML, 'utf8');
+        const fullHTML = buildHTML(chapter, htmlContent, 'ru', false);
+        fs.writeFileSync(path.join(DOCS_DIR, 'chapters', `${chapter.id}.html`), fullHTML, 'utf8');
     });
+
+    // ── Generate English Chapter Pages ──
+    console.log('Generating EN static chapter pages...');
+    const EN_CHAPTERS_DOCS = path.join(DOCS_DIR, 'en', 'chapters');
+    if (!fs.existsSync(EN_CHAPTERS_DOCS)) fs.mkdirSync(EN_CHAPTERS_DOCS, { recursive: true });
+
+    CHAPTERS_EN.forEach(chapter => {
+        let htmlContent;
+        if (chapter.paid) {
+            htmlContent = `
+            <div id="paywall-screen">
+                <h1>${chapter.title}</h1>
+                <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
+                    ${chapter.description}
+                </p>
+                <div class="paywall-container">
+                    <span class="paywall-icon">🔐</span>
+                    <h2 class="paywall-title">This Chapter Requires an Access Key</h2>
+                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 14 chapters are <strong>completely free</strong>. Modules 2–4 are available with a license access key.</p>
+                    <div class="paywall-form">
+                        <input type="text" id="paywall-key" class="paywall-input" placeholder="Enter access key">
+                        <button id="paywall-submit" class="paywall-btn">Activate Access</button>
+                        <p id="paywall-error" style="color:#ff6b6b;font-size:0.85rem;display:none;margin-top:4px;"></p>
+                    </div>
+                    <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Contact author on Telegram (@Hmjim) for access purchase</a>
+                </div>
+                <h3 style="margin-top:32px;">Free Chapters</h3>
+                <ul style="line-height:2;">
+                    <li><a href="00_introduction.html" style="color:var(--accent);">Introduction — Maxim's Recovery Story</a></li>
+                    <li><a href="01_what_is_pppg.html" style="color:var(--accent);">What is PPPD — Diagnostic Criteria & Causes</a></li>
+                    <li><a href="02_medical_checkup.html" style="color:var(--accent);">Closing the Clinic Door — Medical Checklist</a></li>
+                    <li><a href="06_vestibular.html" style="color:var(--accent);">Vestibular Rehabilitation — Exercise Complex</a></li>
+                    <li><a href="07_neurophysiology_basics.html" style="color:var(--accent);">Neurophysiology of Dizziness</a></li>
+                </ul>
+            </div>
+            <div id="chapter-content" style="display:none;"></div>
+            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"><\/script>
+            <script>
+            (function() {
+                var CHAPTER_ID = '${chapter.id}';
+                async function decryptContent(payload, password) {
+                    var parts = payload.split('.');
+                    if (parts.length !== 2) throw new Error('Invalid format');
+                    var ivBuf = Uint8Array.from(atob(parts[0]), function(c) { return c.charCodeAt(0); }).buffer;
+                    var combined = Uint8Array.from(atob(parts[1]), function(c) { return c.charCodeAt(0); }).buffer;
+                    var enc = new TextEncoder();
+                    var hash = await crypto.subtle.digest('SHA-256', enc.encode(password.trim()));
+                    var key = await crypto.subtle.importKey('raw', hash, { name: 'AES-GCM' }, false, ['decrypt']);
+                    var dec = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: ivBuf }, key, combined);
+                    return new TextDecoder().decode(dec);
+                }
+                async function tryUnlock(password) {
+                    var res = await fetch(CHAPTER_ID + '.md');
+                    if (!res.ok) throw new Error('Fetch failed');
+                    var encrypted = await res.text();
+                    return await decryptContent(encrypted, password);
+                }
+                var savedKey = localStorage.getItem('point-of-support-license-key');
+                if (savedKey) {
+                    tryUnlock(savedKey).then(function(md) {
+                        document.getElementById('paywall-screen').style.display = 'none';
+                        var el = document.getElementById('chapter-content');
+                        el.style.display = '';
+                        el.innerHTML = marked.parse(md);
+                    }).catch(function() {
+                        localStorage.removeItem('point-of-support-license-key');
+                    });
+                }
+                document.getElementById('paywall-submit').addEventListener('click', async function() {
+                    var input = document.getElementById('paywall-key');
+                    var key = input.value.trim();
+                    var errEl = document.getElementById('paywall-error');
+                    var btn = document.getElementById('paywall-submit');
+                    if (!key) { errEl.textContent = 'Please enter key'; errEl.style.display = ''; return; }
+                    btn.textContent = 'Verifying...'; btn.disabled = true; errEl.style.display = 'none';
+                    try {
+                        var md = await tryUnlock(key);
+                        localStorage.setItem('point-of-support-license-key', key);
+                        document.getElementById('paywall-screen').style.display = 'none';
+                        var el = document.getElementById('chapter-content');
+                        el.style.display = '';
+                        el.innerHTML = marked.parse(md);
+                    } catch(e) {
+                        errEl.textContent = 'Invalid access key. Please check spelling.';
+                        errEl.style.display = '';
+                        btn.textContent = 'Activate Access'; btn.disabled = false;
+                    }
+                });
+                document.getElementById('paywall-key').addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') document.getElementById('paywall-submit').click();
+                });
+            })();
+            <\/script>`;
+        } else {
+            const srcPath = path.join(SRC_EN_DIR, `${chapter.id}.md`);
+            if (fs.existsSync(srcPath)) {
+                const md = fs.readFileSync(srcPath, 'utf8');
+                htmlContent = marked.parse(md);
+            } else {
+                htmlContent = `<p>Chapter content not found.</p>`;
+            }
+        }
+
+        const fullHTML = buildHTML(chapter, htmlContent, 'en', false);
+        fs.writeFileSync(path.join(EN_CHAPTERS_DOCS, `${chapter.id}.html`), fullHTML, 'utf8');
+    });
+
+    // ── Compile RU index.html ──
+    const ruTemplatePath = path.join(DOCS_DIR, 'index_template.html');
+    if (fs.existsSync(ruTemplatePath)) {
+        const templateHtml = fs.readFileSync(ruTemplatePath, 'utf8');
+        const visibleRu = CHAPTERS_RU.filter(ch => !ch.hidden);
+        const indexTocHTML = visibleRu.map((ch, i) => {
+            const chUrl = `chapters/${ch.id}.html`;
+            const moduleHeader = (ch.module && (i === 0 || visibleRu[i - 1].module !== ch.module))
+                ? `<div class="toc-module">${ch.module}</div>` : '';
+            return `${moduleHeader}<a class="toc-item" href="${chUrl}">${ch.title}</a>`;
+        }).join('\n');
+
+        const updatedHtml = templateHtml
+            .replace(/<link rel="stylesheet" href="css\/style\.css">/g, `<style>${minifiedCss}</style>`)
+            .replace(/<nav id="toc" class="toc" aria-label="Оглавление"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`)
+            .replace(/r_015744dc3f28b49e\.pdf/g, `r_015744dc3f28b49e.pdf?v=${pdfVersion}`);
+
+        fs.writeFileSync(path.join(DOCS_DIR, 'index.html'), updatedHtml, 'utf8');
+    }
+
+    // ── Compile EN index.html ──
+    const enTemplatePath = path.join(DOCS_DIR, 'en', 'index_template.html');
+    if (fs.existsSync(enTemplatePath)) {
+        const templateHtml = fs.readFileSync(enTemplatePath, 'utf8');
+        const visibleEn = CHAPTERS_EN.filter(ch => !ch.hidden);
+        const indexTocHTML = visibleEn.map((ch, i) => {
+            const chUrl = `chapters/${ch.id}.html`;
+            const moduleHeader = (ch.module && (i === 0 || visibleEn[i - 1].module !== ch.module))
+                ? `<div class="toc-module">${ch.module}</div>` : '';
+            return `${moduleHeader}<a class="toc-item" href="${chUrl}">${ch.title}</a>`;
+        }).join('\n');
+
+        const updatedHtml = templateHtml
+            .replace(/<link rel="stylesheet" href="\.\.\/css\/style\.css">/g, `<style>${minifiedCss}</style>`)
+            .replace(/<nav id="toc" class="toc" aria-label="Table of Contents"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Table of Contents">${indexTocHTML}</nav>`)
+            .replace(/point_of_support\.pdf/g, `point_of_support.pdf?v=${pdfVersion}`);
+
+        fs.writeFileSync(path.join(DOCS_DIR, 'en', 'index.html'), updatedHtml, 'utf8');
+    }
+
+    // ── Generate Multilingual sitemap.xml ──
+    const sitemapEntries = [
+        {
+            ruUrl: `${SITE_URL}/`,
+            enUrl: `${SITE_URL}/en/`,
+            priority: '1.0',
+            changefreq: 'weekly',
+        },
+        ...CHAPTERS_RU.map(ch => ({
+            ruUrl: `${SITE_URL}/chapters/${ch.id}.html`,
+            enUrl: `${SITE_URL}/en/chapters/${ch.id}.html`,
+            priority: ch.hidden ? '0.7' : (ch.id === '00_introduction' ? '0.9' : '0.8'),
+            changefreq: ch.hidden ? 'weekly' : 'monthly',
+        })),
+    ];
+
+    let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+`;
+
+    // Add RU and EN entries with cross-language alternates
+    sitemapEntries.forEach(entry => {
+        // Russian URL entry
+        sitemapXml += `  <url>
+    <loc>${entry.ruUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="${entry.ruUrl}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${entry.enUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.enUrl}"/>
+    <lastmod>${dateISO}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>\n`;
+
+        // English URL entry
+        sitemapXml += `  <url>
+    <loc>${entry.enUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="${entry.ruUrl}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${entry.enUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.enUrl}"/>
+    <lastmod>${dateISO}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>\n`;
+    });
+
+    sitemapXml += `</urlset>\n`;
+    fs.writeFileSync(path.join(DOCS_DIR, 'sitemap.xml'), sitemapXml, 'utf8');
 
     // ── Generate robots.txt ──
     const robotsTxt = `User-agent: *
@@ -932,63 +1506,9 @@ Crawl-delay: 2
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
-
     fs.writeFileSync(path.join(DOCS_DIR, 'robots.txt'), robotsTxt, 'utf8');
 
-    // ── Generate sitemap.xml ──
-    const dateISO = new Date().toISOString().split('T')[0];
-    const sitemapEntries = [
-        { url: SITE_URL + '/', priority: '1.0', changefreq: 'weekly' },
-        ...CHAPTERS.map((ch, i) => ({
-            url: `${SITE_URL}/chapters/${ch.id}.html`,
-            priority: ch.hidden ? '0.7' : (i === 0 ? '0.9' : '0.8'),
-            changefreq: ch.hidden ? 'weekly' : 'monthly',
-        })),
-    ];
-
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries.map(e => `  <url>
-    <loc>${e.url}</loc>
-    <lastmod>${dateISO}</lastmod>
-    <changefreq>${e.changefreq}</changefreq>
-    <priority>${e.priority}</priority>
-  </url>`).join('\n')}
-</urlset>
-`;
-
-    fs.writeFileSync(path.join(DOCS_DIR, 'sitemap.xml'), sitemapXml, 'utf8');
-
-    // ── Compile index.html from template ──
-    const templatePath = path.join(DOCS_DIR, 'index_template.html');
-    if (fs.existsSync(templatePath)) {
-        const templateHtml = fs.readFileSync(templatePath, 'utf8');
-
-        // Pre-render TOC links for the landing page sidebar to optimize Yandex sitelinks
-        const visibleChapters = CHAPTERS.filter(ch => !ch.hidden);
-        const indexTocHTML = visibleChapters.map((ch, i) => {
-            const chUrl = `chapters/${ch.id}.html`;
-            const moduleHeader = (ch.module && (i === 0 || visibleChapters[i - 1].module !== ch.module))
-                ? `<div class="toc-module">${ch.module}</div>` : '';
-            return `${moduleHeader}<a class="toc-item" href="${chUrl}">${ch.title}</a>`;
-        }).join('\n');
-
-        const updatedHtml = templateHtml
-            .replace(
-                /<link rel="stylesheet" href="css\/style\.css">/g,
-                `<style>${minifiedCss}</style>`
-            )
-            .replace(
-                /<nav id="toc" class="toc" aria-label="Оглавление"><\/nav>/g,
-                `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`
-            )
-            .replace(
-                /r_015744dc3f28b49e\.pdf/g,
-                `r_015744dc3f28b49e.pdf?v=${pdfVersion}`
-            );
-
-        fs.writeFileSync(path.join(DOCS_DIR, 'index.html'), updatedHtml, 'utf8');
-    }
+    console.log('🎉 Full bilingual build successfully completed!');
 }
 
 main().catch(console.error);
