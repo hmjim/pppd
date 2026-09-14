@@ -30,7 +30,7 @@ async function main() {
 
     // Ensure PDFs are replicated to all subdirectories (docs/, docs/chapters/, docs/en/, docs/en/chapters/)
     const ruPdfSrc = path.join(DOCS_DIR, 'r_015744dc3f28b49e.pdf');
-    const enPdfSrc = path.join(DOCS_DIR, 'en', 'point_of_support.pdf');
+    const enPdfSrc = path.join(DOCS_DIR, 'e_8b3a9c72d1f40e56.pdf');
     
     const targetDirs = [
         DOCS_DIR,
@@ -46,7 +46,7 @@ async function main() {
             if (dest !== ruPdfSrc) fs.copyFileSync(ruPdfSrc, dest);
         }
         if (fs.existsSync(enPdfSrc)) {
-            const dest = path.join(dir, 'point_of_support.pdf');
+            const dest = path.join(dir, 'e_8b3a9c72d1f40e56.pdf');
             if (dest !== enPdfSrc) fs.copyFileSync(enPdfSrc, dest);
         }
     });
@@ -1037,7 +1037,7 @@ async function main() {
             : '<span></span>';
 
         const pdfDownloadName = isEn ? 'Point_of_Support_PPPD_Guide.pdf' : 'Точка_Опоры_Выход_из_ПППГ.pdf';
-        const pdfFileSrc = isEn ? '../point_of_support.pdf' : '../r_015744dc3f28b49e.pdf';
+        const pdfFileSrc = isEn ? '../e_8b3a9c72d1f40e56.pdf' : '../r_015744dc3f28b49e.pdf';
 
         return `<!DOCTYPE html>
 <html lang="${isEn ? 'en' : 'ru'}">
@@ -1470,7 +1470,7 @@ async function main() {
         const updatedHtml = templateHtml
             .replace(/<link rel="stylesheet" href="\.\.\/css\/style\.css">/g, `<style>${minifiedCss}</style>`)
             .replace(/<nav id="toc" class="toc" aria-label="Table of Contents"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Table of Contents">${indexTocHTML}</nav>`)
-            .replace(/point_of_support\.pdf/g, `point_of_support.pdf?v=${pdfVersion}`);
+            .replace(/e_8b3a9c72d1f40e56\.pdf/g, `e_8b3a9c72d1f40e56.pdf?v=${pdfVersion}`);
 
         fs.writeFileSync(path.join(DOCS_DIR, 'en', 'index.html'), updatedHtml, 'utf8');
     }

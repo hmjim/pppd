@@ -346,7 +346,7 @@ async function loadChapter(index) {
 
                 if (isLicensed) {
                     const isSubdir = window.location.pathname.includes('/chapters/');
-                    const pdfFile = isEn ? 'point_of_support.pdf' : 'r_015744dc3f28b49e.pdf';
+                    const pdfFile = isEn ? 'e_8b3a9c72d1f40e56.pdf' : 'r_015744dc3f28b49e.pdf';
                     const pdfPath = (isSubdir ? '../' : '') + pdfFile + '?v=' + Date.now();
                     const pdfBtn = document.createElement('button');
                     pdfBtn.className = 'pdf-download-btn';

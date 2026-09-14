@@ -13,7 +13,7 @@ async function buildPDFForLang(lang) {
     const DOCS_DIR = path.join(__dirname, 'docs');
     const OUTPUT_HTML = path.join(__dirname, `full_book_export_${lang}.html`);
     const OUTPUT_PDF = isEn
-        ? path.join(DOCS_DIR, 'en', 'point_of_support.pdf')
+        ? path.join(DOCS_DIR, 'e_8b3a9c72d1f40e56.pdf')
         : path.join(DOCS_DIR, 'r_015744dc3f28b49e.pdf');
 
     const destDir = path.dirname(OUTPUT_PDF);
