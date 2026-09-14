@@ -534,7 +534,7 @@
 <div class="toc-module">Кейсы</div><a class="toc-item" href="chapters/24_case_studies.html">Истории выздоровления</a>
 <div class="toc-module">Приложения</div><a class="toc-item" href="chapters/25_appendix.html">Приложения и материалы</a></nav>
         <div class="sidebar-footer">
-            <a id="sidebar-pdf-link" class="sidebar-pdf" title="Скачать всю книгу в PDF" style="display:none">
+            <a id="sidebar-pdf-link" class="sidebar-pdf" title="Скачать всю книгу в PDF" rel="noindex nofollow" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -902,7 +902,7 @@
         (function () {
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1789386808654?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1789387034263?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; s.style.display = ''; }

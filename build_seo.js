@@ -1526,14 +1526,60 @@ async function main() {
     // ── Generate robots.txt ──
     const robotsTxt = `User-agent: *
 Allow: /
+Disallow: /*.pdf
 Disallow: /*.pdf$
+Disallow: /*.pdf*
+Disallow: /*.md
+Disallow: /*.md$
+Disallow: /*.md*
 Disallow: /*?*text=
+Disallow: /point_of_support.pdf
+Disallow: /r_015744dc3f28b49e.pdf
+Disallow: /chapters/*.pdf
+Disallow: /en/*.pdf
+Disallow: /en/chapters/*.pdf
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*.pdf
+Disallow: /*.pdf*
+Disallow: /*.md
 
 User-agent: Yandex
 Allow: /
+Disallow: /*.pdf
 Disallow: /*.pdf$
+Disallow: /*.pdf*
+Disallow: /*.md
 Clean-param: text /
 Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Disallow: /*.pdf
+Disallow: /*.pdf*
+Disallow: /*.md
+
+User-agent: GPTBot
+Disallow: /*.pdf
+Disallow: /*.md
+
+User-agent: PerplexityBot
+Disallow: /*.pdf
+Disallow: /*.md
+
+User-agent: ClaudeBot
+Disallow: /*.pdf
+Disallow: /*.md
+
+User-agent: CCBot
+Disallow: /*.pdf
+Disallow: /*.md
+
+User-agent: Applebot
+Allow: /
+Disallow: /*.pdf
+Disallow: /*.md
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
