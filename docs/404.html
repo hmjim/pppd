@@ -4,28 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перенаправление — Точка Опоры</title>
+    <meta http-equiv="refresh" content="0; url=https://hmjim.github.io/pppd/">
     <link rel="canonical" href="https://hmjim.github.io/pppd/" />
     <meta name="robots" content="noindex, follow" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 32px 24px;
+            border-radius: 12px;
+            max-width: 440px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        a.btn {
+            display: inline-block;
+            margin-top: 16px;
+            background: #0284c7;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
     <script>
         (function() {
             var ref = document.referrer;
             if (ref) {
                 try { sessionStorage.setItem('ym_orig_ref', ref); } catch(e) {}
             }
-            var isEn = window.location.pathname.includes('/en');
+            var isEn = window.location.pathname.indexOf('/en') !== -1;
             var target = isEn ? 'https://hmjim.github.io/pppd/en/' : 'https://hmjim.github.io/pppd/';
-            window.location.replace(target + window.location.search + window.location.hash);
+            window.location.replace(target);
         })();
     </script>
 </head>
 <body>
-    <p>Page moved. <a id="redirect-link" href="https://hmjim.github.io/pppd/">Go to main page</a></p>
+    <div class="card">
+        <h2>Перенаправление...</h2>
+        <p>Страница перемещена. Если перенаправление не произошло автоматически:</p>
+        <a id="redirect-link" class="btn" href="https://hmjim.github.io/pppd/">Перейти на сайт «Точка Опоры»</a>
+    </div>
     <script>
-        var isEn = window.location.pathname.includes('/en');
+        var isEn = window.location.pathname.indexOf('/en') !== -1;
         var link = document.getElementById('redirect-link');
-        if (link) {
-            link.href = (isEn ? 'https://hmjim.github.io/pppd/en/' : 'https://hmjim.github.io/pppd/') + window.location.search + window.location.hash;
-            if (isEn) link.textContent = 'Go to main page';
+        if (link && isEn) {
+            link.href = 'https://hmjim.github.io/pppd/en/';
+            link.textContent = 'Go to Point of Support';
         }
     </script>
 </body>
