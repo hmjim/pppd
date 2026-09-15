@@ -410,7 +410,7 @@ Mexidol, Actovegin, Cerebrolysin, Cavinton, betahistine - none of these drugs ha
 
         // Show PDF download for licensed users
         var licenseKeyName = 'point-of-support-license-key';
-        if (localStorage.getItem(licenseKeyName) || localStorage.getItem('tochka-opory-license-key')) {
+        if (localStorage.getItem(licenseKeyName)) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
             if (pdfLink) {
                 pdfLink.href = '../e_8b3a9c72d1f40e56.pdf?v=' + Date.now();

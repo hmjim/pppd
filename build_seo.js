@@ -1212,7 +1212,7 @@ async function main() {
 
         // Show PDF download for licensed users
         var licenseKeyName = '${isEn ? 'point-of-support-license-key' : 'tochka-opory-license-key'}';
-        if (localStorage.getItem(licenseKeyName) || localStorage.getItem('tochka-opory-license-key')) {
+        if (localStorage.getItem(licenseKeyName)) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
             if (pdfLink) {
                 pdfLink.href = '${pdfFileSrc}?v=' + Date.now();

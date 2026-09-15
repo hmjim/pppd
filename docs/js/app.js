@@ -316,7 +316,7 @@ async function loadChapter(index) {
     const navBar = document.getElementById('chapter-nav-bar');
     if (navBar) navBar.style.display = '';
 
-    const savedKey = localStorage.getItem(LICENSE_KEY_STORAGE) || localStorage.getItem('point-of-support-license-key') || localStorage.getItem('tochka-opory-license-key');
+    const savedKey = localStorage.getItem(LICENSE_KEY_STORAGE);
     const isLicensed = !!savedKey;
 
     if (ch.paid && !isLicensed) {
