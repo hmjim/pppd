@@ -1066,7 +1066,7 @@ async function main() {
     <meta property="og:title" content="${chapter.seoTitle}">
     <meta property="og:description" content="${chapter.description}">
     <meta property="og:url" content="${pageUrl}">
-    <meta property="og:image" content="${SITE_URL}/cover.png">
+    <meta property="og:image" content="${SITE_URL}/${isEn ? 'cover_en.png' : 'cover.png'}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="${siteTitle}">
@@ -1077,7 +1077,7 @@ async function main() {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${chapter.seoTitle}">
     <meta name="twitter:description" content="${chapter.description}">
-    <meta name="twitter:image" content="${SITE_URL}/cover.png">
+    <meta name="twitter:image" content="${SITE_URL}/${isEn ? 'cover_en.png' : 'cover.png'}">
 
     <!-- Schema.org -->
     <script type="application/ld+json">${schemaBook}</script>
