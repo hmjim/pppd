@@ -1106,13 +1106,7 @@ body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-soci
     color: var(--accent);
 }
 
-/* ── Copy Protection ── */
-.chapter {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
+/* ── Copy Protection removed for SEO ── */
 
 /* ── PDF Download Button (licensed users only) ── */
 .pdf-download-btn {

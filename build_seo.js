@@ -203,6 +203,78 @@ async function main() {
             hidden: true,
         },
         {
+            id: '48_can_pppg_be_cured_alone',
+            title: 'Можно ли вылечить ПППГ самому',
+            seoTitle: 'Можно ли вылечить ПППГ самому и проходит ли оно само | Точка Опоры',
+            description: 'Можно ли вылечить ПППГ самостоятельно без врачей и проходит ли оно само. Сроки восстановления, обратимость и пошаговый протокол домашней реабилитации.',
+            keywords: 'пппг можно ли самому вылечится, как избавиться от пппг, может ли пппг пройти само, можно ли вылечить пппг без врача, пппг это излечимо, как жить с пппг',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '49_pppg_lying_down_rocking',
+            title: 'ПППГ лежа: качает как на волнах',
+            seoTitle: 'ПППГ лежа — почему качает как на волнах в кровати перед сном | Точка Опоры',
+            description: 'Почему при ПППГ качает лежа в кровати как на волнах или матрасе. Нейрофизиология сенсорного шума в темноте, тревожное сканирование и техники заземления.',
+            keywords: 'пппг лежа, пппг лежа качает как на волнах, пппг лежа даже качает, качает в кровати перед сном, головокружение лежа',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '50_how_to_walk_alone_agoraphobia',
+            title: 'Как при ПППГ пойти одному по городу',
+            seoTitle: 'Как при ПППГ преодолеть страх и пойти одному по городу | Точка Опоры',
+            description: 'Как при ПППГ преодолеть агорафобию и страх выходить на улицу в одиночку. Пошаговый протокол экспозиции «Лестница смелости», супермаркеты и транспорт.',
+            keywords: 'как при пппг преодолеть страх и пойти одному по городу, головокружение в супермаркете, пошаговая инструкция от страха головокружения, чувство шаткости и тревоги',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '51_medications_for_pppg',
+            title: 'Таблетки и лекарства при ПППГ',
+            seoTitle: 'Таблетки при ПППГ — помогают ли Фенибут, Мексидол, Феназепам и СИОЗС | Точка Опоры',
+            description: 'Фармакотерапия при ПППГ: почему ноотропы и сосудистые капельницы не работают, опасность Феназепама, доказанный эффект антидепрессантов СИОЗС/СИОЗСиН.',
+            keywords: 'фазенепам усьраняет пппг, совокупность мексидола фенибута и тералиджена поможет при пппг, эльтацин помогает при пппг, таблетки от пппг, сиозс пппг',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '52_dhi_hads_niigata_tests',
+            title: 'Тест DHI, HADS и опросник Ниигаты',
+            seoTitle: 'Тест DHI, HADS и опросник Ниигаты при ПППГ — онлайн шкала | Точка Опоры',
+            description: 'Опросники и шкалы для оценки выраженности ПППГ: индекс инвалидизации DHI, госпитальная шкала тревоги HADS, японский опросник Ниигаты NPQ.',
+            keywords: 'dhi тест, тест dhi онлайн, опросник для оценки выраженности пппг, hads тест, dhi балл, опросник пппг ниигаты бесплатно, опросник dhi распечатать',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '53_cawthorne_cooksey_exercises',
+            title: 'Гимнастика Кавторна-Кукси при ПППГ',
+            seoTitle: 'Гимнастика Кавторна-Кукси при ПППГ — упражнения, этапы и сроки | Точка Опоры',
+            description: 'Вестибулярная гимнастика Кавторна-Кукси и упражнения для глаз при ПППГ: этапы тренировок (сидя, стоя, в движении), сроки адаптации, тренировка саккад.',
+            keywords: 'гимнастика кавторна кукси, самое эффективное упражнение вестибулярной гимнастики при пппг, через сколько начинает помогать вестибулярная гимнастика, саккады тренировка',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '54_dppg_vs_pppg_difference',
+            title: 'ДППГ и ПППГ: отличия и переход',
+            seoTitle: 'ДППГ и ПППГ — в чем разница и почему после ДППГ начинается ПППГ | Точка Опоры',
+            description: 'Отличия ДППГ (отолитов) от ПППГ (функционального головокружения): симптомы, диагностика, почему после вправления отолитов остаётся хроническая шаткость.',
+            keywords: 'дппг и пппг, отличие дппг от пппг, после дппг шатает, вестибулярный нейронит и пппг, отолиты и пппг',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
+            id: '55_pppg_work_disability_army',
+            title: 'ПППГ: работа, больничный и армия',
+            seoTitle: 'ПППГ и качество жизни — работа, больничный лист, вождение и армия | Точка Опоры',
+            description: 'Жизнь с ПППГ: работа за компьютером и экраном, оформление больничного листа, вождение автомобиля и правила прохождения военной медкомиссии призывников.',
+            keywords: 'люди с пппг иногда бросают работу, пппг и больничный лист, пппг и призыв, при пппг сложно наслаждаться жизнью, пппг вождение авто',
+            module: 'Модуль 0: База',
+            hidden: true,
+        },
+        {
             id: '04_muscle_armor',
             title: 'Мышечный панцирь',
             seoTitle: 'Мышечный панцирь при ПППГ — зажимы в теле и головокружение | Точка Опоры',
@@ -635,6 +707,78 @@ async function main() {
             hidden: true,
         },
         {
+            id: '48_can_pppg_be_cured_alone',
+            title: 'Can PPPD Be Cured on Your Own',
+            seoTitle: 'Can PPPD Be Cured on Your Own and Does It Go Away | Point of Support',
+            description: 'Can PPPD be cured independently and does it resolve spontaneously. Recovery timeline, neuroplastic reversibility, and home rehabilitation protocols.',
+            keywords: 'can PPPD be cured alone, does PPPD go away, how to recover from PPPD, PPPD prognosis, home vestibular rehabilitation',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '49_pppg_lying_down_rocking',
+            title: 'PPPD Lying Down: Rocking Sensations in Bed',
+            seoTitle: 'PPPD Lying Down — Why You Feel Rocking Sensations in Bed | Point of Support',
+            description: 'Why PPPD causes rocking or floating sensations in bed before sleep. Sensory noise in darkness, hypervigilant body scanning, and tactile grounding techniques.',
+            keywords: 'PPPD lying down, rocking sensation in bed, feeling like on a boat in bed, PPPD sleep dizziness, vestibular noise',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '50_how_to_walk_alone_agoraphobia',
+            title: 'Overcoming Agoraphobia and Walking Alone',
+            seoTitle: 'How to Overcome Fear and Walk Alone with PPPD | Point of Support',
+            description: 'How to overcome secondary agoraphobia and fear of walking alone with PPPD. Step-by-step graded exposure ladder, supermarkets, and crowded spaces.',
+            keywords: 'how to walk alone with PPPD, PPPD agoraphobia, supermarket dizziness, fear of walking alone, exposure therapy dizziness',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '51_medications_for_pppg',
+            title: 'Medications for PPPD',
+            seoTitle: 'Medications for PPPD — What Actually Works (SSRIs vs Suppressants) | Point of Support',
+            description: 'Evidence-based pharmacotherapy for PPPD: why nootropics fail, hazards of long-term benzodiazepine suppressants, and proven clinical benefits of SSRIs/SNRIs.',
+            keywords: 'PPPD medications, SSRI for PPPD, phenazepam dizziness, best medication for 3PD, vestibular suppressants',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '52_dhi_hads_niigata_tests',
+            title: 'DHI, HADS & Niigata Questionnaires',
+            seoTitle: 'DHI, HADS & Niigata Questionnaires for PPPD — Diagnostic Scoring | Point of Support',
+            description: 'Validated diagnostic scales for quantifying PPPD: Dizziness Handicap Inventory (DHI), Hospital Anxiety and Depression Scale (HADS), and Niigata PPPD questionnaire.',
+            keywords: 'DHI questionnaire, DHI test online, PPPD severity questionnaire, HADS test, DHI score interpretation, Niigata questionnaire',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '53_cawthorne_cooksey_exercises',
+            title: 'Cawthorne-Cooksey Vestibular Exercises',
+            seoTitle: 'Cawthorne-Cooksey Exercises for PPPD — Protocol, Stages & Timeline | Point of Support',
+            description: 'Cawthorne-Cooksey vestibular exercise protocol for PPPD: progression stages (seated, standing, moving), saccadic eye drills, and neural compensation timeline.',
+            keywords: 'Cawthorne Cooksey exercises, VRT exercises PPPD, most effective vestibular exercise, saccade training, gaze stability drills',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '54_dppg_vs_pppg_difference',
+            title: 'BPPV vs. PPPD Differences',
+            seoTitle: 'BPPV vs PPPD — Differences and Why BPPV Triggers Chronic PPPD | Point of Support',
+            description: 'Clinical distinctions between BPPV (otolith crystals) and PPPD (functional unsteadiness): symptoms, diagnostics, and why chronic dizziness persists post-Epley.',
+            keywords: 'BPPV vs PPPD, difference between BPPV and 3PD, dizziness after BPPV, otoliths vs PPPD, post vertigo anxiety',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
+            id: '55_pppg_work_disability_army',
+            title: 'PPPD: Work, Disability & Driving',
+            seoTitle: 'PPPD and Quality of Life — Work, Sick Leave, Driving & Disability | Point of Support',
+            description: 'Navigating life with PPPD: computer screen visual fatigue, sick leave documentation, safe driving guidelines, and medical evaluations.',
+            keywords: 'PPPD and work, PPPD sick leave, driving with PPPD, PPPD disability, living with chronic dizziness',
+            module: 'Module 0: Foundation',
+            hidden: true,
+        },
+        {
             id: '04_muscle_armor',
             title: 'Muscle Armor',
             seoTitle: 'Suboccipital Muscle Armor & Cervical Tension in PPPD | Point of Support',
@@ -966,7 +1110,7 @@ async function main() {
 
         const schemaArticle = JSON.stringify({
             "@context": "https://schema.org",
-            "@type": chapter.hidden ? "MedicalWebPage" : "Article",
+            "@type": "MedicalWebPage",
             "headline": chapter.seoTitle,
             "description": chapter.description,
             "author": { "@type": "Person", "name": authorName },
@@ -975,14 +1119,14 @@ async function main() {
             "dateModified": dateISO,
             "mainEntityOfPage": pageUrl,
             "inLanguage": isEn ? "en-US" : "ru",
-            ...(chapter.hidden ? {
-                "about": {
-                    "@type": "MedicalCondition",
-                    "name": isEn ? "Persistent Postural-Perceptual Dizziness (PPPD)" : "Персистирующее постурально-перцептивное головокружение (ПППГ)",
-                    "alternateName": ["PPPD", "3PD", "Persistent Postural-Perceptual Dizziness"],
-                    "code": { "@type": "MedicalCode", "code": "AB32.0", "codingSystem": "ICD-11" }
-                }
-            } : {}),
+            "about": {
+                "@type": "MedicalCondition",
+                "name": isEn ? "Persistent Postural-Perceptual Dizziness (PPPD)" : "Персистирующее постурально-перцептивное головокружение (ПППГ)",
+                "alternateName": isEn 
+                    ? ["PPPD", "3PD", "Persistent Postural-Perceptual Dizziness", "Chronic Subjective Dizziness"] 
+                    : ["ПППГ", "PPPD", "3PD", "Персистирующее постуральное перцептивное головокружение", "Хроническое субъективное головокружение"],
+                "code": { "@type": "MedicalCode", "code": "AB32.0", "codingSystem": "ICD-11" }
+            }
         });
 
         const schemaBreadcrumb = JSON.stringify({
@@ -1059,7 +1203,7 @@ async function main() {
     <link rel="canonical" href="${canonicalUrl}">
     <link rel="alternate" hreflang="ru" href="${ruUrl}" />
     <link rel="alternate" hreflang="en" href="${enUrl}" />
-    <link rel="alternate" hreflang="x-default" href="${enUrl}" />
+    <link rel="alternate" hreflang="x-default" href="${ruUrl}" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
@@ -1092,7 +1236,7 @@ async function main() {
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
     </noscript>
-    <style>${minifiedCss}</style>
+    <link rel="stylesheet" href="${isEn ? '../../css/style.css' : '../css/style.css'}">
 </head>
 <body>
     <!-- Reading progress bar -->
@@ -1448,7 +1592,6 @@ async function main() {
         }).join('\n');
 
         const updatedHtml = templateHtml
-            .replace(/<link rel="stylesheet" href="css\/style\.css">/g, `<style>${minifiedCss}</style>`)
             .replace(/<nav id="toc" class="toc" aria-label="Оглавление"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`)
             .replace(/r_015744dc3f28b49e\.pdf/g, `r_015744dc3f28b49e.pdf?v=${pdfVersion}`);
 
@@ -1468,7 +1611,6 @@ async function main() {
         }).join('\n');
 
         const updatedHtml = templateHtml
-            .replace(/<link rel="stylesheet" href="\.\.\/css\/style\.css">/g, `<style>${minifiedCss}</style>`)
             .replace(/<nav id="toc" class="toc" aria-label="Table of Contents"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Table of Contents">${indexTocHTML}</nav>`)
             .replace(/e_8b3a9c72d1f40e56\.pdf/g, `e_8b3a9c72d1f40e56.pdf?v=${pdfVersion}`);
 
@@ -1502,7 +1644,7 @@ async function main() {
     <loc>${entry.ruUrl}</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="${entry.ruUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${entry.enUrl}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.enUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.ruUrl}"/>
     <lastmod>${dateISO}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
@@ -1513,7 +1655,7 @@ async function main() {
     <loc>${entry.enUrl}</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="${entry.ruUrl}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${entry.enUrl}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.enUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${entry.ruUrl}"/>
     <lastmod>${dateISO}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
@@ -1552,7 +1694,6 @@ Disallow: /*.pdf$
 Disallow: /*.pdf*
 Disallow: /*.md
 Clean-param: text /
-Crawl-delay: 2
 
 User-agent: Bingbot
 Allow: /

@@ -26,7 +26,6 @@ Disallow: /*.pdf$
 Disallow: /*.pdf*
 Disallow: /*.md
 Clean-param: text /
-Crawl-delay: 2
 
 User-agent: Bingbot
 Allow: /
