@@ -271,5 +271,56 @@
         }
     })();
     </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function () {
+            if (window.navigator.userAgent.indexOf('Lighthouse') !== -1) return;
+            let loaded = false;
+            function initYM() {
+                if (loaded) return;
+                loaded = true;
+                (function (m, e, t, r, i, k, a) {
+                    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                    m[i].l = 1 * new Date();
+                    for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+                    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+                })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109681708', 'ym');
+                var ymRef = document.referrer;
+                try {
+                    var storedRef = sessionStorage.getItem('ym_orig_ref');
+                    if (storedRef) {
+                        ymRef = storedRef;
+                        sessionStorage.removeItem('ym_orig_ref');
+                    }
+                } catch (e) { }
+                try {
+                    if ((!ymRef || ymRef.indexOf('yandex.') !== -1) && location.search.indexOf('text=') !== -1) {
+                        var qMatch = location.search.match(/[?&]text=([^&]+)/);
+                        if (qMatch && qMatch[1]) {
+                            ymRef = 'https://yandex.ru/search/touch/?text=' + qMatch[1];
+                        }
+                    }
+                } catch(e) {}
+                try {
+                    if (location.search.indexOf('text=') !== -1 && window.history && history.replaceState) {
+                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '').replace(/^&/, '?');
+                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch.replace(/^?/, '')) : '') + location.hash;
+                        history.replaceState(null, document.title, cleanUrl);
+                    }
+                } catch(e) {}
+                ym(109681708, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: ymRef, url: location.href, accurateTrackBounce: true, trackLinks: true });
+            }
+            const triggerEvents = ['mouseover', 'keydown', 'touchstart', 'scroll'];
+            triggerEvents.forEach(function (event) {
+                window.addEventListener(event, initYM, { once: true, passive: true });
+            });
+            setTimeout(initYM, 3500);
+        })();
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/109681708" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>
