@@ -1095,47 +1095,67 @@ async function main() {
         const rootPath = isEn ? '../..' : '..';
 
         // Schema.org JSON-LD
-        const schemaBook = JSON.stringify({
+        // Schema.org 2026 Connected Knowledge Graph (for Google, Gemini, AI Overviews & Yandex)
+        const schemaGraph = JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Book",
-            "name": isEn ? "Point of Support — Comprehensive Guide for Overcoming PPPD" : "Точка Опоры — Полное руководство по выходу из ПППГ",
-            "author": { "@type": "Person", "name": authorName },
-            "inLanguage": isEn ? "en-US" : "ru",
-            "genre": isEn ? "Health & Neuroscience" : "Здоровье",
-            "description": isEn
-                ? "A step-by-step evidence-based system for overcoming PPPD (Persistent Postural-Perceptual Dizziness), health anxiety, and vestibular dysfunction."
-                : "Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.",
-            "url": isEn ? `${SITE_URL}/en/` : `${SITE_URL}/`,
-        });
-
-        const schemaArticle = JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalWebPage",
-            "headline": chapter.seoTitle,
-            "description": chapter.description,
-            "author": { "@type": "Person", "name": authorName },
-            "publisher": { "@type": "Person", "name": authorName },
-            "datePublished": "2026-06-01",
-            "dateModified": dateISO,
-            "mainEntityOfPage": pageUrl,
-            "inLanguage": isEn ? "en-US" : "ru",
-            "about": {
-                "@type": "MedicalCondition",
-                "name": isEn ? "Persistent Postural-Perceptual Dizziness (PPPD)" : "Персистирующее постурально-перцептивное головокружение (ПППГ)",
-                "alternateName": isEn 
-                    ? ["PPPD", "3PD", "Persistent Postural-Perceptual Dizziness", "Chronic Subjective Dizziness"] 
-                    : ["ПППГ", "PPPD", "3PD", "Персистирующее постуральное перцептивное головокружение", "Хроническое субъективное головокружение"],
-                "code": { "@type": "MedicalCode", "code": "AB32.0", "codingSystem": "ICD-11" }
-            }
-        });
-
-        const schemaBreadcrumb = JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": isEn ? "Point of Support" : "Точка Опоры", "item": isEn ? `${SITE_URL}/en/` : `${SITE_URL}/` },
-                ...(isIndex ? [] : [{ "@type": "ListItem", "position": 2, "name": chapter.title, "item": pageUrl }]),
-            ],
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": `${SITE_URL}/#website`,
+                    "url": `${SITE_URL}/`,
+                    "name": isEn ? "Point of Support — Overcoming PPPD" : "Точка Опоры — Выход из ПППГ",
+                    "description": isEn
+                        ? "A step-by-step evidence-based system for overcoming PPPD (Persistent Postural-Perceptual Dizziness), health anxiety, and vestibular dysfunction."
+                        : "Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения), невроза и тревожных расстройств.",
+                    "inLanguage": isEn ? "en-US" : "ru",
+                    "publisher": { "@id": `${SITE_URL}/#author` }
+                },
+                {
+                    "@type": "Person",
+                    "@id": `${SITE_URL}/#author`,
+                    "name": authorName,
+                    "description": isEn 
+                        ? "Author of the 'Point of Support' guide, researcher with personal lived experience of overcoming PPPD." 
+                        : "Автор руководства «Точка Опоры», исследователь с личным опытом полного преодоления ПППГ."
+                },
+                {
+                    "@type": "MedicalCondition",
+                    "@id": `${SITE_URL}/#condition-pppd`,
+                    "name": isEn ? "Persistent Postural-Perceptual Dizziness (PPPD)" : "Персистирующее постурально-перцептивное головокружение (ПППГ)",
+                    "alternateName": isEn 
+                        ? ["PPPD", "3PD", "Persistent Postural-Perceptual Dizziness", "Chronic Subjective Dizziness"] 
+                        : ["ПППГ", "PPPD", "3PD", "Персистирующее постуральное перцептивное головокружение", "Хроническое субъективное головокружение"],
+                    "code": {
+                        "@type": "MedicalCode",
+                        "code": "AB32.0",
+                        "codingSystem": "ICD-11"
+                    }
+                },
+                {
+                    "@type": "MedicalWebPage",
+                    "@id": `${pageUrl}#webpage`,
+                    "url": pageUrl,
+                    "headline": chapter.seoTitle,
+                    "description": chapter.description,
+                    "inLanguage": isEn ? "en-US" : "ru",
+                    "datePublished": "2026-06-01",
+                    "dateModified": dateISO,
+                    "isPartOf": { "@id": `${SITE_URL}/#website` },
+                    "author": { "@id": `${SITE_URL}/#author` },
+                    "publisher": { "@id": `${SITE_URL}/#author` },
+                    "about": { "@id": `${SITE_URL}/#condition-pppd` },
+                    "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+                    "mainEntityOfPage": pageUrl
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": `${pageUrl}#breadcrumb`,
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": isEn ? "Point of Support" : "Точка Опоры", "item": isEn ? `${SITE_URL}/en/` : `${SITE_URL}/` },
+                        ...(isIndex ? [] : [{ "@type": "ListItem", "position": 2, "name": chapter.title, "item": pageUrl }]),
+                    ]
+                }
+            ]
         });
 
         // Build TOC nav for sidebar
@@ -1250,10 +1270,8 @@ async function main() {
     <meta name="twitter:description" content="${chapter.description}">
     <meta name="twitter:image" content="${SITE_URL}/${isEn ? 'cover_en.png' : 'cover.png'}">
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">${schemaBook}</script>
-    <script type="application/ld+json">${schemaArticle}</script>
-    <script type="application/ld+json">${schemaBreadcrumb}</script>
+    <!-- Schema.org 2026 Connected Graph -->
+    <script type="application/ld+json">${schemaGraph}</script>
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
