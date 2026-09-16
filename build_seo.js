@@ -1161,11 +1161,20 @@ async function main() {
             </div>
         `;
 
-        // Related chapters
+        // Related chapters (Smart semantic clustering)
         const currentIdx = chaptersList.findIndex(c => c.id === chapter.id);
-        const related = chaptersList.filter((c, idx) => idx !== currentIdx && !c.hidden).slice(0, 3);
+        let related = [];
+        if (chapter.hidden) {
+            const otherHidden = chaptersList.filter(c => c.hidden && c.id !== chapter.id);
+            const hidden1 = otherHidden[(currentIdx + 1) % otherHidden.length];
+            const hidden2 = otherHidden[(currentIdx + 3) % otherHidden.length];
+            const coreVisible = chaptersList.filter(c => !c.hidden && (c.id === '01_what_is_pppg' || c.id === '30_treatment_overview' || c.id === '06_vestibular'));
+            related = [hidden1, hidden2, ...coreVisible].filter(Boolean).slice(0, 4);
+        } else {
+            related = chaptersList.filter((c, idx) => idx !== currentIdx && !c.hidden).slice(0, 3);
+        }
         const relatedHTML = related.map(ch => `
-            <a href="${ch.id}.html" style="display:block;padding:10px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.9rem;transition:all 0.25s;"
+            <a href="${ch.id}.html" style="display:block;padding:12px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.92rem;transition:all 0.25s;"
             onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateX(4px)'"
             onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}</a>
         `).join('\n');
@@ -1204,6 +1213,8 @@ async function main() {
     <!-- End Google tag (gtag.js) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1a">
+    <meta name="color-scheme" content="dark light">
     <link rel="icon" href="${rootPath}/favicon.ico" sizes="any">
     <link rel="icon" href="${rootPath}/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="${rootPath}/favicon-32x32.png" type="image/png" sizes="32x32">
