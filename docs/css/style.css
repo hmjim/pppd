@@ -737,10 +737,40 @@ body.light .sidebar-overlay {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 48px 36px 80px;
+    padding: 40px 32px 80px;
     overflow-x: hidden;
     max-width: 100vw;
     transition: margin-left var(--transition);
+}
+
+/* ── Breadcrumb Navigation ── */
+.breadcrumb {
+    max-width: var(--content-max);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: var(--text-muted);
+    user-select: none;
 }
 
 /* ── Chapter Article ── */
@@ -776,42 +806,48 @@ body.light .sidebar-overlay {
 
 /* ── Typography & GitHub Markdown Styles ── */
 .chapter h1 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.1rem;
+    font-weight: 700;
     line-height: 1.25;
-    margin-bottom: 12px;
+    margin: 0 0 16px 0;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
+    letter-spacing: -0.025em;
 }
 
-.chapter h1+p:first-of-type {
+.chapter h1 + p {
     font-size: 1.05rem;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-top: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
+}
+
+.chapter h1 + p em,
+.chapter h1 + p > em:only-child {
+    color: var(--text-secondary);
+    font-style: italic;
 }
 
 .chapter h2 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin: 36px 0 16px;
+    margin: 36px 0 14px 0;
     color: var(--text-primary);
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
+    line-height: 1.35;
 }
 
 .chapter h3 {
-    font-size: 1.18rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    margin: 28px 0 12px;
+    margin: 26px 0 12px 0;
     color: var(--text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.4;
 }
 
 .chapter p {
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 16px;
     color: var(--text-primary);
 }
@@ -861,6 +897,7 @@ body.light .sidebar-overlay {
 .chapter li {
     margin-bottom: 6px;
     color: var(--text-primary);
+    line-height: 1.65;
 }
 
 .chapter li::marker {
@@ -872,7 +909,7 @@ body.light .sidebar-overlay {
     border: none;
     height: 1px;
     background: var(--border);
-    margin: 36px 0;
+    margin: 28px 0;
 }
 
 /* ── Tables (GitHub Styled) ── */
