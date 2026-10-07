@@ -953,7 +953,7 @@
         (function () {
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1791392412234?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1791392554408?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; s.style.display = ''; }
@@ -994,8 +994,9 @@
                 } catch(e) {}
                 try {
                     if (location.search.indexOf('text=') !== -1 && window.history && history.replaceState) {
-                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '').replace(/^&/, '?');
-                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch.replace(/^\?/, '')) : '') + location.hash;
+                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '');
+                        if (cleanSearch.startsWith('&') || cleanSearch.startsWith('?')) cleanSearch = cleanSearch.slice(1);
+                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch) : '') + location.hash;
                         history.replaceState(null, document.title, cleanUrl);
                     }
                 } catch(e) {}

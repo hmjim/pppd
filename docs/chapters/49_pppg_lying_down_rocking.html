@@ -370,8 +370,9 @@
                 } catch(e) {}
                 try {
                     if (location.search.indexOf('text=') !== -1 && window.history && history.replaceState) {
-                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '').replace(/^&/, '?');
-                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch.replace(/^?/, '')) : '') + location.hash;
+                        var cleanSearch = location.search.replace(/[?&]text=[^&]+/, '');
+                        if (cleanSearch.startsWith('&') || cleanSearch.startsWith('?')) cleanSearch = cleanSearch.slice(1);
+                        var cleanUrl = location.pathname + (cleanSearch ? ('?' + cleanSearch) : '') + location.hash;
                         history.replaceState(null, document.title, cleanUrl);
                     }
                 } catch(e) {}
