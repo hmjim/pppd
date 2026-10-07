@@ -521,20 +521,22 @@
     </script>
     <!-- Non-Intrusive Floating Consultation Toast -->
     <div id="consultation-toast" class="consult-toast" style="display:none;">
-        <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Закрыть">✕</button>
-        <div class="consult-toast-body">
-            <div class="consult-toast-title">
-                <span>📞</span> <strong>Личные 1-on-1 звонки и разбор</strong>
+        <div class="consult-toast-header">
+            <div class="consult-toast-title-box">
+                <div class="consult-toast-title">
+                    <span>📞</span> <span>Личные 1-on-1 звонки и разбор</span>
+                </div>
                 <span class="consult-toast-badge">7 500 ₽ / час</span>
             </div>
-            <p class="consult-toast-text">
-                Индивидуальные консультации и аудит выздоровления проводятся только платно:
-            </p>
-            <div class="consult-toast-links">
-                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
-                <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max">MAX</a>
-                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
-            </div>
+            <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Закрыть">✕</button>
+        </div>
+        <p class="consult-toast-text">
+            Индивидуальные консультации и персональный аудит выздоровления проводятся платно. Запись:
+        </p>
+        <div class="consult-toast-links ">
+            <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
+            <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max">MAX</a>
+            <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
         </div>
     </div>
 
@@ -542,29 +544,34 @@
     (function() {
         var toast = document.getElementById('consultation-toast');
         if (!toast) return;
-        if (!localStorage.getItem('consult_toast_closed')) {
+        if (localStorage.getItem('consult_toast_closed')) return;
+        var views = parseInt(localStorage.getItem('consult_page_views') || '0', 10) + 1;
+        localStorage.setItem('consult_page_views', views);
+        if (views >= 3) {
             setTimeout(function() {
                 if (toast && !localStorage.getItem('consult_toast_closed')) {
                     toast.style.display = 'block';
                 }
-            }, 3000);
+            }, 2000);
         }
-        window.openConsultToast = function() {
-            var sidebar = document.getElementById('sidebar');
-            var overlay = document.getElementById('sidebar-overlay');
-            var toggle = document.getElementById('menu-toggle');
-            if (sidebar && sidebar.classList.contains('open')) {
-                sidebar.classList.remove('open');
-                if (overlay) overlay.classList.remove('active');
-                if (toggle) toggle.classList.remove('active');
-                document.body.classList.remove('sidebar-open');
-            }
-            if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
-        };
-        window.closeConsultToast = function() {
-            if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
-        };
     })();
+    window.openConsultToast = function() {
+        var sidebar = document.getElementById('sidebar');
+        var overlay = document.getElementById('sidebar-overlay');
+        var toggle = document.getElementById('menu-toggle');
+        if (sidebar && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            if (overlay) overlay.classList.remove('active');
+            if (toggle) toggle.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        }
+        var toast = document.getElementById('consultation-toast');
+        if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
+    };
+    window.closeConsultToast = function() {
+        var toast = document.getElementById('consultation-toast');
+        if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
+    };
     </script>
 </body>
 </html>

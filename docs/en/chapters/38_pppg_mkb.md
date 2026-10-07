@@ -50,4 +50,4 @@ VAD (autonomic dysfunction) (vegetative-vascular dystonia) is an **outdated Sovi
 
 For more information about what examinations to undergo and when it’s time to stop going to the doctors, see the chapter “[Closing the door to the clinic](02_medical_checkup.html).” 
 
-A complete system for exiting PPPD is the book “[Point of Support](../)”. 34 chapters, 5 modules. The first 12 chapters are free.
+A complete system for exiting PPPD is the book “[Point of Support](../)”. 58 chapters, 5 modules. The first 14 chapters are free.

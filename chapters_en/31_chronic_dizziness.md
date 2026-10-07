@@ -93,4 +93,4 @@ No. Osteochondrosis occurs in 90% of people over 30 years of age and does not ca
 
 ---
 
-> **The book “Point of Support” is a step-by-step system for exiting the PPPD. The first 10 chapters are free - no registration required.**
+> **The book “Point of Support” is a step-by-step system for exiting the PPPD. The first 14 chapters are free — no registration required.**

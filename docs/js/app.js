@@ -830,13 +830,17 @@ document.addEventListener('DOMContentLoaded', () => {
 function initConsultToast() {
     const toast = document.getElementById('consultation-toast');
     if (!toast) return;
-    const isDismissed = localStorage.getItem('consult_toast_closed');
-    if (!isDismissed) {
+    if (localStorage.getItem('consult_toast_closed')) return;
+
+    let views = parseInt(localStorage.getItem('consult_page_views') || '0', 10) + 1;
+    localStorage.setItem('consult_page_views', views);
+
+    if (views >= 3) {
         setTimeout(() => {
             if (toast && !localStorage.getItem('consult_toast_closed')) {
                 toast.style.display = 'block';
             }
-        }, 3000);
+        }, 2000);
     }
 }
 

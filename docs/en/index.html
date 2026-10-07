@@ -87,9 +87,9 @@
             "alternateName": ["3PD", "Chronic Subjective Dizziness", "Phobic Postural Vertigo"],
             "code": { "@type": "MedicalCode", "code": "AB32.0", "codingSystem": "ICD-11" }
         },
-        "description": "A clinical and engineering manual for recovering from PPPD: Vestibular Rehabilitation (VRT), Cognitive Behavioral Therapy (CBT), Metacognitive Therapy (MCT), and Somatic Down-regulation. 38 chapters across 5 modules.",
+        "description": "A clinical and engineering manual for recovering from PPPD: Vestibular Rehabilitation (VRT), Cognitive Behavioral Therapy (CBT), Metacognitive Therapy (MCT), and Somatic Down-regulation. 58 chapters across 5 modules.",
         "url": "https://hmjim.github.io/pppd/en/",
-        "numberOfPages": 38
+        "numberOfPages": 58
     }
     </script>
 
@@ -626,7 +626,7 @@
                 <li><strong>Physical Activity & Somatic Release</strong> — <a href="chapters/13_sport.html">aerobic walking</a> 30 minutes daily to stimulate BDNF, combined with <a href="chapters/05_relaxation.html">Jacobson Progressive Muscle Relaxation</a>.</li>
                 <li><strong>Pharmacotherapy</strong> — SSRIs/SNRIs (sertraline, escitalopram, venlafaxine) as central neuromodulators when indicated. Benzodiazepines are <strong>not recommended</strong> as they impair neuroplastic compensation.</li>
             </ol>
-            <p>The manual “Point of Support” synthesizes all five pillars into a <strong>structured step-by-step curriculum</strong> of 38 chapters across 5 modules. The first 14 chapters are <strong>free</strong>.</p>
+            <p>The manual “Point of Support” synthesizes all five pillars into a <strong>structured step-by-step curriculum</strong> of 58 chapters across 5 modules. The first 14 chapters are <strong>free</strong>.</p>
 
             <h2>About the Author</h2>
             <p>Maxim is an engineer who suffered acute BPPV in 2020, which transitioned into severe chronic PPPD. He consulted dozens of specialists, underwent dozens of scans, and endured six months of severe unsteadiness and agoraphobia. He achieved 100% full recovery in 6 months using the systematic neuroplastic framework documented in this guide. “Point of Support” is an <strong>applied engineering manual</strong> built upon personal recovery, peer-reviewed neuro-otology literature, and evidence-based therapeutic protocols.</p>
@@ -793,19 +793,21 @@
 
     <!-- Non-Intrusive Floating Consultation Toast -->
     <div id="consultation-toast" class="consult-toast" style="display:none;">
-        <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Close">✕</button>
-        <div class="consult-toast-body">
-            <div class="consult-toast-title">
-                <span>📞</span> <strong>1-on-1 Calls & Review</strong>
+        <div class="consult-toast-header">
+            <div class="consult-toast-title-box">
+                <div class="consult-toast-title">
+                    <span>📞</span> <span>1-on-1 Calls & Review</span>
+                </div>
                 <span class="consult-toast-badge">$150 / hour</span>
             </div>
-            <p class="consult-toast-text">
-                Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:
-            </p>
-            <div class="consult-toast-links">
-                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
-                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
-            </div>
+            <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Close">✕</button>
+        </div>
+        <p class="consult-toast-text">
+            Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:
+        </p>
+        <div class="consult-toast-links en">
+            <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
+            <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
         </div>
     </div>
 
@@ -816,7 +818,7 @@
         (function () {
             if (localStorage.getItem('point-of-support-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'e_8b3a9c72d1f40e56.pdf?v=1791392554408?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'e_8b3a9c72d1f40e56.pdf?v=1791393252748?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Point_of_Support_PPPD_Guide.pdf'; s.style.display = ''; }

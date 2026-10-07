@@ -63,6 +63,6 @@ Detailed [PPPD treatment guide](30_treatment_overview.html).
 
 ## Where to read next 
 
-The book “[Point of Support](../)” is a step-by-step system for exiting the PPPD. 34 chapters, 5 modules. Written by someone who went through PPPD himself and made a full recovery. The first 12 chapters are free. 
+The book “[Point of Support](../)” is a step-by-step system for exiting the PPPD. 58 chapters, 5 modules. Written by someone who went through PPPD himself and made a full recovery. The first 14 chapters are free. 
 
 [Telegram support group for people with PPPD →](https://t.me/pppd_vertigo)

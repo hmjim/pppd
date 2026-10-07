@@ -66,4 +66,4 @@ If you have anything from this list, you need to be further examined:
 
 All of these symptoms are manifestations of a functional failure, not organic damage. With proper work ([vestibular gymnastics](06_vestibular.html), [CBT](34_cbt_for_dizziness.html), [exposure](12_exposure.html)), symptoms go away in 2–6 months. 
 
-A detailed step-by-step system is described in the book “[Point of Support](../)” - 34 chapters, 5 modules. The first 12 chapters are free.
+A detailed step-by-step system is described in the book “[Point of Support](../)” — 58 chapters, 5 modules. The first 14 chapters are free.

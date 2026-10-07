@@ -511,20 +511,22 @@ For example:</p>
     </script>
     <!-- Non-Intrusive Floating Consultation Toast -->
     <div id="consultation-toast" class="consult-toast" style="display:none;">
-        <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Close">✕</button>
-        <div class="consult-toast-body">
-            <div class="consult-toast-title">
-                <span>📞</span> <strong>1-on-1 Calls & Review</strong>
+        <div class="consult-toast-header">
+            <div class="consult-toast-title-box">
+                <div class="consult-toast-title">
+                    <span>📞</span> <span>1-on-1 Calls & Review</span>
+                </div>
                 <span class="consult-toast-badge">$150 / hour</span>
             </div>
-            <p class="consult-toast-text">
-                Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:
-            </p>
-            <div class="consult-toast-links">
-                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
-                
-                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
-            </div>
+            <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Close">✕</button>
+        </div>
+        <p class="consult-toast-text">
+            Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:
+        </p>
+        <div class="consult-toast-links en">
+            <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
+            
+            <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
         </div>
     </div>
 
@@ -532,29 +534,34 @@ For example:</p>
     (function() {
         var toast = document.getElementById('consultation-toast');
         if (!toast) return;
-        if (!localStorage.getItem('consult_toast_closed')) {
+        if (localStorage.getItem('consult_toast_closed')) return;
+        var views = parseInt(localStorage.getItem('consult_page_views') || '0', 10) + 1;
+        localStorage.setItem('consult_page_views', views);
+        if (views >= 3) {
             setTimeout(function() {
                 if (toast && !localStorage.getItem('consult_toast_closed')) {
                     toast.style.display = 'block';
                 }
-            }, 3000);
+            }, 2000);
         }
-        window.openConsultToast = function() {
-            var sidebar = document.getElementById('sidebar');
-            var overlay = document.getElementById('sidebar-overlay');
-            var toggle = document.getElementById('menu-toggle');
-            if (sidebar && sidebar.classList.contains('open')) {
-                sidebar.classList.remove('open');
-                if (overlay) overlay.classList.remove('active');
-                if (toggle) toggle.classList.remove('active');
-                document.body.classList.remove('sidebar-open');
-            }
-            if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
-        };
-        window.closeConsultToast = function() {
-            if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
-        };
     })();
+    window.openConsultToast = function() {
+        var sidebar = document.getElementById('sidebar');
+        var overlay = document.getElementById('sidebar-overlay');
+        var toggle = document.getElementById('menu-toggle');
+        if (sidebar && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            if (overlay) overlay.classList.remove('active');
+            if (toggle) toggle.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        }
+        var toast = document.getElementById('consultation-toast');
+        if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
+    };
+    window.closeConsultToast = function() {
+        var toast = document.getElementById('consultation-toast');
+        if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
+    };
     </script>
 </body>
 </html>

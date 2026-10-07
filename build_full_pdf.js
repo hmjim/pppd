@@ -152,8 +152,8 @@ async function buildPDFForLang(lang) {
         : 'Пошаговая система выхода из ПППГ (персистирующего постурально-перцептивного головокружения)';
     const authorText = isEn ? 'Author: Maxim' : 'Автор: Максим';
     const metaNote = isEn
-        ? '34 Chapters · 5 Modules · Evidence-Based Neuro-Vestibular Protocols'
-        : '34 главы · 5 модулей · Доказательная база и практика';
+        ? '58 Chapters · 5 Modules · Evidence-Based Neuro-Vestibular Protocols'
+        : '58 глав · 5 модулей · Доказательная база и практика';
     const tocTitle = isEn ? 'Table of Contents' : 'Оглавление';
 
     const fullBookHTML = `<!DOCTYPE html>

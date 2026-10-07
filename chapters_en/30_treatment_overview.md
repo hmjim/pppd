@@ -110,4 +110,4 @@ Not necessarily. SSRIs are a tool that helps reduce the intensity of symptoms in
 
 ---
 
-> **This chapter is an overview. Each of the five treatment methods is described in detail in separate chapters of the book “Point of Support”. The first 10 chapters are free.**
+> **This chapter is an overview. Each of the five treatment methods is described in detail in separate chapters of the book “Point of Support”. The first 14 chapters are free.**
