@@ -23,5 +23,9 @@
 !scripts/
 !scripts/**
 
+# Allow GitHub Actions workflows
+!.github/
+!.github/**
+
 # Allow README
 !README.md
