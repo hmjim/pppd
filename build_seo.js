@@ -1351,6 +1351,10 @@ async function main() {
             ${tocHTML}
         </nav>
         <div class="sidebar-footer">
+            <a href="javascript:void(0)" onclick="openConsultToast()" id="sidebar-consult-btn" class="sidebar-consult-btn" title="${isEn ? '1-on-1 Personal Consultation ($150/h)' : 'Индивидуальная консультация (7 500 ₽/ч)'}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>${isEn ? '1-on-1 Call · $150' : 'Консультация · 7 500 ₽'}</span>
+            </a>
             <a id="sidebar-pdf-link" class="sidebar-pdf" title="${isEn ? 'Download Book PDF' : 'Скачать всю книгу в PDF'}" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 ${isEn ? 'Download PDF Book' : 'Скачать книгу (PDF)'}
@@ -1533,10 +1537,44 @@ async function main() {
             setTimeout(initYM, 3500);
         })();
     </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/109681708" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
+    <!-- Non-Intrusive Floating Consultation Toast -->
+    <div id="consultation-toast" class="consult-toast" style="display:none;">
+        <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="${isEn ? 'Close' : 'Закрыть'}">✕</button>
+        <div class="consult-toast-body">
+            <div class="consult-toast-title">
+                <span>📞</span> <strong>${isEn ? '1-on-1 Calls & Review' : 'Личные 1-on-1 звонки и разбор'}</strong>
+                <span class="consult-toast-badge">${isEn ? '$150 / hour' : '7 500 ₽ / час'}</span>
+            </div>
+            <p class="consult-toast-text">
+                ${isEn ? 'Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:' : 'Индивидуальные консультации и аудит выздоровления проводятся только платно:'}
+            </p>
+            <div class="consult-toast-links">
+                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram @Hmjim</a>
+                ${!isEn ? '<a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max">MAX</a>' : ''}
+                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">fhmjim@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var toast = document.getElementById('consultation-toast');
+        if (!toast) return;
+        if (!localStorage.getItem('consult_toast_closed')) {
+            setTimeout(function() {
+                if (toast && !localStorage.getItem('consult_toast_closed')) {
+                    toast.style.display = 'block';
+                }
+            }, 3000);
+        }
+        window.openConsultToast = function() {
+            if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
+        };
+        window.closeConsultToast = function() {
+            if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
+        };
+    })();
+    </script>
 </body>
 </html>`;
     }
@@ -1619,22 +1657,6 @@ async function main() {
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
                                 <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
                             </span>
-                        </div>
-                    </div>
-
-                    <div class="paywall-consultation-card">
-                        <div class="paywall-consultation-header">
-                            <div class="paywall-consultation-title">
-                                <span>📞</span> Индивидуальные 1-on-1 звонки и разбор
-                            </div>
-                            <div class="paywall-consultation-price">7 500 ₽ / час</div>
-                        </div>
-                        <p class="paywall-consultation-desc">
-                            Личные консультации и персональный разбор клинического случая проводятся <strong>только на платной основе</strong>. Запись и согласование времени в мессенджерах:
-                        </p>
-                        <div class="paywall-consultation-actions">
-                            <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Записаться в Telegram</a>
-                            <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="paywall-consult-btn max">Записаться в Max</a>
                         </div>
                     </div>
 
@@ -1806,22 +1828,6 @@ async function main() {
                                 <svg width="13" height="15" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.3 23.5l1.2-7.5h3.8c4.2 0 7.4-2.1 8-6.1.4-2.6-.7-4.5-2.6-5.7C15.7 3.5 13.9 3 11.5 3H3.2L0 23.5h6.3z" fill="#003087"/><path d="M7.5 16l1.3-8.3h4.7c3 0 5.3 1.2 5.8 4.2.5 3.3-1.6 5.6-4.9 5.6H10l-1 5.5H5.8L7.5 16z" fill="#0079C1"/></svg>
                                 <span style="color:#003087;font-size:0.72rem;">PayPal</span>
                             </span>
-                        </div>
-                    </div>
-
-                    <div class="paywall-consultation-card">
-                        <div class="paywall-consultation-header">
-                            <div class="paywall-consultation-title">
-                                <span>📞</span> 1-on-1 Personal Calls & Case Review
-                            </div>
-                            <div class="paywall-consultation-price">$150 / hour</div>
-                        </div>
-                        <p class="paywall-consultation-desc">
-                            Personal 1-on-1 video consultations and recovery roadmap reviews are conducted <strong>strictly on a paid basis</strong>. Booking & scheduling via direct message:
-                        </p>
-                        <div class="paywall-consultation-actions">
-                            <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Book via Telegram</a>
-                            <a href="mailto:info@pppd.app" class="paywall-consult-btn email">Book via Email</a>
                         </div>
                     </div>
 

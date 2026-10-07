@@ -138,6 +138,10 @@
 <div class="toc-module">Приложения</div><a class="toc-item" href="25_appendix.html">Приложения и материалы</a>
         </nav>
         <div class="sidebar-footer">
+            <a href="javascript:void(0)" onclick="openConsultToast()" id="sidebar-consult-btn" class="sidebar-consult-btn" title="Индивидуальная консультация (7 500 ₽/ч)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Консультация · 7 500 ₽</span>
+            </a>
             <a id="sidebar-pdf-link" class="sidebar-pdf" title="Скачать всю книгу в PDF" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Скачать книгу (PDF)
@@ -377,9 +381,43 @@
             setTimeout(initYM, 3500);
         })();
     </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/109681708" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
+    <!-- Non-Intrusive Floating Consultation Toast -->
+    <div id="consultation-toast" class="consult-toast" style="display:none;">
+        <button class="consult-toast-close" onclick="closeConsultToast()" aria-label="Закрыть">✕</button>
+        <div class="consult-toast-body">
+            <div class="consult-toast-title">
+                <span>📞</span> <strong>Личные 1-on-1 звонки и разбор</strong>
+                <span class="consult-toast-badge">7 500 ₽ / час</span>
+            </div>
+            <p class="consult-toast-text">
+                Индивидуальные консультации и аудит выздоровления проводятся только платно:
+            </p>
+            <div class="consult-toast-links">
+                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram @Hmjim</a>
+                <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max">MAX</a>
+                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">fhmjim@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var toast = document.getElementById('consultation-toast');
+        if (!toast) return;
+        if (!localStorage.getItem('consult_toast_closed')) {
+            setTimeout(function() {
+                if (toast && !localStorage.getItem('consult_toast_closed')) {
+                    toast.style.display = 'block';
+                }
+            }, 3000);
+        }
+        window.openConsultToast = function() {
+            if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
+        };
+        window.closeConsultToast = function() {
+            if (toast) { toast.style.display = 'none'; localStorage.setItem('consult_toast_closed', '1'); }
+        };
+    })();
+    </script>
 </body>
 </html>

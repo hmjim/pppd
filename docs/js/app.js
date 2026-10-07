@@ -271,22 +271,6 @@ function renderPaywall(chapterEl, index) {
                     </div>
                 </div>
 
-                <div class="paywall-consultation-card">
-                    <div class="paywall-consultation-header">
-                        <div class="paywall-consultation-title">
-                            <span>📞</span> 1-on-1 Personal Calls & Case Review
-                        </div>
-                        <div class="paywall-consultation-price">$150 / hour</div>
-                    </div>
-                    <p class="paywall-consultation-desc">
-                        Personal 1-on-1 video consultations and recovery roadmap reviews are conducted <strong>strictly on a paid basis</strong>. Booking & scheduling via direct message:
-                    </p>
-                    <div class="paywall-consultation-actions">
-                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Book via Telegram</a>
-                        <a href="mailto:info@pppd.app" class="paywall-consult-btn email">Book via Email</a>
-                    </div>
-                </div>
-
                 <div class="paywall-key-section">
                     <div class="paywall-key-title">Already have an access key?</div>
                     <div class="paywall-form-compact">
@@ -360,22 +344,6 @@ function renderPaywall(chapterEl, index) {
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
                             <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
                         </span>
-                    </div>
-                </div>
-
-                <div class="paywall-consultation-card">
-                    <div class="paywall-consultation-header">
-                        <div class="paywall-consultation-title">
-                            <span>📞</span> Индивидуальные 1-on-1 звонки и разбор
-                        </div>
-                        <div class="paywall-consultation-price">7 500 ₽ / час</div>
-                    </div>
-                    <p class="paywall-consultation-desc">
-                        Личные консультации и персональный разбор клинического случая проводятся <strong>только на платной основе</strong>. Запись и согласование времени в мессенджерах:
-                    </p>
-                    <div class="paywall-consultation-actions">
-                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Записаться в Telegram</a>
-                        <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="paywall-consult-btn max">Записаться в Max</a>
                     </div>
                 </div>
 
@@ -850,4 +818,38 @@ document.addEventListener('DOMContentLoaded', () => {
             showLanding();
         }
     }
+
+    // Initialize non-intrusive consultation toast
+    initConsultToast();
 });
+
+// ── Non-Intrusive Consultation Toast Functions ──
+function initConsultToast() {
+    const toast = document.getElementById('consultation-toast');
+    if (!toast) return;
+    const isDismissed = localStorage.getItem('consult_toast_closed');
+    if (!isDismissed) {
+        setTimeout(() => {
+            if (toast && !localStorage.getItem('consult_toast_closed')) {
+                toast.style.display = 'block';
+            }
+        }, 3000);
+    }
+}
+
+window.openConsultToast = function() {
+    const toast = document.getElementById('consultation-toast');
+    if (toast) {
+        toast.style.display = 'block';
+        toast.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }
+};
+
+window.closeConsultToast = function() {
+    const toast = document.getElementById('consultation-toast');
+    if (toast) {
+        toast.style.display = 'none';
+        localStorage.setItem('consult_toast_closed', '1');
+    }
+};
+

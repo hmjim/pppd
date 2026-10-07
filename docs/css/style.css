@@ -958,107 +958,184 @@ body.light .paywall-container {
     text-decoration: none !important;
 }
 
-/* ── Consultation Card ── */
-.paywall-consultation-card {
-    margin-top: 18px;
-    padding: 16px;
-    background: rgba(56, 139, 253, 0.05);
-    border: 1px solid rgba(56, 139, 253, 0.25);
-    border-radius: 8px;
-    text-align: left;
-}
-
-body.light .paywall-consultation-card {
-    background: rgba(9, 105, 218, 0.04);
-    border-color: rgba(9, 105, 218, 0.2);
-}
-
-.paywall-consultation-header {
+/* ── Sidebar Consultation Button ── */
+.sidebar-consult-btn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 6px;
+    padding: 7px 10px;
+    margin-bottom: 8px;
+    background: rgba(56, 139, 253, 0.08);
+    border: 1px solid rgba(56, 139, 253, 0.25);
+    border-radius: 6px;
+    color: #58a6ff !important;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all var(--transition);
+    cursor: pointer;
 }
 
-.paywall-consultation-title {
-    font-weight: 600;
-    font-size: 0.92rem;
+.sidebar-consult-btn:hover {
+    background: rgba(56, 139, 253, 0.18);
+    border-color: #58a6ff;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+body.light .sidebar-consult-btn {
+    background: rgba(9, 105, 218, 0.06);
+    border-color: rgba(9, 105, 218, 0.25);
+    color: #0969da !important;
+}
+
+body.light .sidebar-consult-btn:hover {
+    background: rgba(9, 105, 218, 0.12);
+    border-color: #0969da;
+}
+
+/* ── Non-Intrusive Floating Consultation Toast ── */
+.consult-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    max-width: 380px;
+    width: calc(100% - 32px);
+    background: rgba(22, 27, 34, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 139, 253, 0.3);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 1px rgba(56, 139, 253, 0.4);
+    z-index: 1000;
+    font-size: 0.84rem;
     color: var(--text-primary);
+    animation: toastSlideUp 0.3s ease-out;
+}
+
+body.light .consult-toast {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(9, 105, 218, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes toastSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.consult-toast-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    border-radius: 4px;
+    transition: color 0.15s;
+}
+
+.consult-toast-close:hover {
+    color: var(--text-primary);
+}
+
+.consult-toast-title {
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    padding-right: 20px;
 }
 
-.paywall-consultation-price {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #58a6ff;
+.consult-toast-badge {
     background: rgba(56, 139, 253, 0.15);
     border: 1px solid rgba(56, 139, 253, 0.3);
-    padding: 2px 8px;
+    color: #58a6ff;
+    padding: 1px 6px;
     border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
 }
 
-body.light .paywall-consultation-price {
+body.light .consult-toast-badge {
+    background: rgba(9, 105, 218, 0.08);
+    border-color: rgba(9, 105, 218, 0.2);
     color: #0969da;
-    background: rgba(9, 105, 218, 0.1);
-    border-color: rgba(9, 105, 218, 0.25);
 }
 
-.paywall-consultation-desc {
-    font-size: 0.82rem;
+.consult-toast-text {
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    line-height: 1.5;
-    margin: 0 0 10px;
+    margin: 4px 0 8px;
+    line-height: 1.4;
 }
 
-.paywall-consultation-actions {
+.consult-toast-links {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
-.paywall-consult-btn {
+.consult-toast-btn {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 0.8rem;
+    gap: 4px;
+    padding: 4px 9px;
+    font-size: 0.75rem;
     font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 6px;
+    border-radius: 5px;
     text-decoration: none !important;
     transition: all var(--transition);
 }
 
-.paywall-consult-btn.tg {
+.consult-toast-btn.tg {
     background: #1f6feb;
     color: #ffffff !important;
 }
-
-.paywall-consult-btn.tg:hover {
+.consult-toast-btn.tg:hover {
     background: #388bfd;
 }
 
-.paywall-consult-btn.max {
+.consult-toast-btn.max {
     background: #6e40c9;
     color: #ffffff !important;
 }
-
-.paywall-consult-btn.max:hover {
+.consult-toast-btn.max:hover {
     background: #8957e5;
 }
 
-.paywall-consult-btn.email {
-    background: var(--bg-hover);
+.consult-toast-btn.email {
+    background: var(--bg-primary);
     border: 1px solid var(--border);
+    color: var(--text-secondary) !important;
+}
+.consult-toast-btn.email:hover {
     color: var(--text-primary) !important;
+    border-color: var(--text-muted);
 }
 
-.paywall-consult-btn.email:hover {
-    background: var(--bg-active);
-    border-color: var(--text-muted);
+@media (max-width: 600px) {
+    .consult-toast {
+        bottom: 12px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+    }
 }
 
 /* ── Language Switcher ── */
