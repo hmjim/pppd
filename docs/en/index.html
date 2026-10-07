@@ -478,9 +478,9 @@
         <div class="sidebar-header">
             <h2 class="sidebar-title"><a href="#" id="home-link" style="text-decoration:none;color:inherit;">Point of Support</a></h2>
             <p class="sidebar-subtitle">Overcoming PPPD</p>
-            <div class="lang-switch-container" style="margin-top:8px;font-size:0.85rem;display:flex;gap:6px;">
-                <a href="../" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a>
-                <span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>
+            <div class="lang-switch-container">
+                <a href="../" class="lang-badge-link">🇷🇺 RU</a>
+                <span class="lang-badge-active">🇬🇧 EN</span>
             </div>
         </div>
         <nav id="toc" class="toc" aria-label="Table of Contents"><a class="toc-item" href="chapters/00_introduction.html">Introduction</a>
@@ -789,7 +789,7 @@
         (function () {
             if (localStorage.getItem('point-of-support-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'e_8b3a9c72d1f40e56.pdf?v=1791389690577?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'e_8b3a9c72d1f40e56.pdf?v=1791390399975?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Point_of_Support_PPPD_Guide.pdf'; s.style.display = ''; }

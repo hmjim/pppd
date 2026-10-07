@@ -111,10 +111,10 @@ function updateLangSwitcher(index) {
     if (index === -1) {
         if (isEn) {
             const ruTarget = isSubdir ? '../../' : '../';
-            container.innerHTML = `<a href="${ruTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a><span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>`;
+            container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">🇷🇺 RU</a><span class="lang-badge-active">🇬🇧 EN</span>`;
         } else {
             const enTarget = isSubdir ? '../en/' : 'en/';
-            container.innerHTML = `<span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">RU</span><a href="${enTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">EN</a>`;
+            container.innerHTML = `<span class="lang-badge-active">🇷🇺 RU</span><a href="${enTarget}" class="lang-badge-link">🇬🇧 EN</a>`;
         }
         return;
     }
@@ -122,10 +122,10 @@ function updateLangSwitcher(index) {
     const chId = (index >= 0 && index < CHAPTERS.length) ? CHAPTERS[index].id : '00_introduction';
     if (isEn) {
         const ruTarget = isSubdir ? `../../chapters/${chId}.html` : `../chapters/${chId}.html`;
-        container.innerHTML = `<a href="${ruTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">RU</a><span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">EN</span>`;
+        container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">🇷🇺 RU</a><span class="lang-badge-active">🇬🇧 EN</span>`;
     } else {
         const enTarget = isSubdir ? `../en/chapters/${chId}.html` : `en/chapters/${chId}.html`;
-        container.innerHTML = `<span style="background:var(--accent);color:#fff;padding:2px 8px;border-radius:4px;font-weight:600;">RU</span><a href="${enTarget}" style="color:var(--text-secondary);text-decoration:none;padding:2px 8px;border-radius:4px;border:1px solid var(--border);">EN</a>`;
+        container.innerHTML = `<span class="lang-badge-active">🇷🇺 RU</span><a href="${enTarget}" class="lang-badge-link">🇬🇧 EN</a>`;
     }
 }
 
@@ -239,7 +239,7 @@ function renderPaywall(chapterEl, index) {
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Direct Support (@Hmjim)</span>
+                        <span>All Future Updates & Guides</span>
                     </div>
                 </div>
 
@@ -268,6 +268,22 @@ function renderPaywall(chapterEl, index) {
                             <svg width="13" height="15" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.3 23.5l1.2-7.5h3.8c4.2 0 7.4-2.1 8-6.1.4-2.6-.7-4.5-2.6-5.7C15.7 3.5 13.9 3 11.5 3H3.2L0 23.5h6.3z" fill="#003087"/><path d="M7.5 16l1.3-8.3h4.7c3 0 5.3 1.2 5.8 4.2.5 3.3-1.6 5.6-4.9 5.6H10l-1 5.5H5.8L7.5 16z" fill="#0079C1"/></svg>
                             <span style="color:#003087;font-size:0.72rem;">PayPal</span>
                         </span>
+                    </div>
+                </div>
+
+                <div class="paywall-consultation-card">
+                    <div class="paywall-consultation-header">
+                        <div class="paywall-consultation-title">
+                            <span>📞</span> 1-on-1 Personal Calls & Case Review
+                        </div>
+                        <div class="paywall-consultation-price">$150 / hour</div>
+                    </div>
+                    <p class="paywall-consultation-desc">
+                        Personal 1-on-1 video consultations and recovery roadmap reviews are conducted <strong>strictly on a paid basis</strong>. Booking & scheduling via direct message:
+                    </p>
+                    <div class="paywall-consultation-actions">
+                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Book via Telegram</a>
+                        <a href="mailto:info@pppd.app" class="paywall-consult-btn email">Book via Email</a>
                     </div>
                 </div>
 
@@ -312,7 +328,7 @@ function renderPaywall(chapterEl, index) {
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Поддержка автора в TG / Max</span>
+                        <span>Все обновления книги и протоколы</span>
                     </div>
                 </div>
 
@@ -344,6 +360,22 @@ function renderPaywall(chapterEl, index) {
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
                             <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
                         </span>
+                    </div>
+                </div>
+
+                <div class="paywall-consultation-card">
+                    <div class="paywall-consultation-header">
+                        <div class="paywall-consultation-title">
+                            <span>📞</span> Индивидуальные 1-on-1 звонки и разбор
+                        </div>
+                        <div class="paywall-consultation-price">7 500 ₽ / час</div>
+                    </div>
+                    <p class="paywall-consultation-desc">
+                        Личные консультации и персональный разбор клинического случая проводятся <strong>только на платной основе</strong>. Запись и согласование времени в мессенджерах:
+                    </p>
+                    <div class="paywall-consultation-actions">
+                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-consult-btn tg">Записаться в Telegram</a>
+                        <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="paywall-consult-btn max">Записаться в Max</a>
                     </div>
                 </div>
 

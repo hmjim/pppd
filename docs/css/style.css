@@ -958,6 +958,149 @@ body.light .paywall-container {
     text-decoration: none !important;
 }
 
+/* ── Consultation Card ── */
+.paywall-consultation-card {
+    margin-top: 18px;
+    padding: 16px;
+    background: rgba(56, 139, 253, 0.05);
+    border: 1px solid rgba(56, 139, 253, 0.25);
+    border-radius: 8px;
+    text-align: left;
+}
+
+body.light .paywall-consultation-card {
+    background: rgba(9, 105, 218, 0.04);
+    border-color: rgba(9, 105, 218, 0.2);
+}
+
+.paywall-consultation-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.paywall-consultation-title {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.paywall-consultation-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #58a6ff;
+    background: rgba(56, 139, 253, 0.15);
+    border: 1px solid rgba(56, 139, 253, 0.3);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+body.light .paywall-consultation-price {
+    color: #0969da;
+    background: rgba(9, 105, 218, 0.1);
+    border-color: rgba(9, 105, 218, 0.25);
+}
+
+.paywall-consultation-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.paywall-consultation-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.paywall-consult-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all var(--transition);
+}
+
+.paywall-consult-btn.tg {
+    background: #1f6feb;
+    color: #ffffff !important;
+}
+
+.paywall-consult-btn.tg:hover {
+    background: #388bfd;
+}
+
+.paywall-consult-btn.max {
+    background: #6e40c9;
+    color: #ffffff !important;
+}
+
+.paywall-consult-btn.max:hover {
+    background: #8957e5;
+}
+
+.paywall-consult-btn.email {
+    background: var(--bg-hover);
+    border: 1px solid var(--border);
+    color: var(--text-primary) !important;
+}
+
+.paywall-consult-btn.email:hover {
+    background: var(--bg-active);
+    border-color: var(--text-muted);
+}
+
+/* ── Language Switcher ── */
+.lang-switch-container {
+    margin-top: 8px;
+    font-size: 0.82rem;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.lang-badge-active {
+    background: var(--accent);
+    color: #ffffff !important;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+}
+
+.lang-badge-link {
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1;
+    transition: all var(--transition);
+}
+
+.lang-badge-link:hover {
+    color: var(--text-primary) !important;
+    border-color: var(--text-muted);
+    background: var(--bg-hover);
+}
+
 .paywall-methods-row {
     display: flex;
     align-items: center;
