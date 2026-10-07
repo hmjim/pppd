@@ -1129,6 +1129,43 @@ body.light .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-soci
     color: var(--accent);
 }
 
+/* ── Paywall Payment Badges ── */
+.paywall-methods-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 16px 0 16px;
+}
+
+.paywall-method-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 30px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paywall-method-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.paywall-method-badge svg {
+    display: block;
+    flex-shrink: 0;
+}
+
 /* ── Copy Protection removed for SEO ── */
 
 /* ── PDF Download Button (licensed users only) ── */
