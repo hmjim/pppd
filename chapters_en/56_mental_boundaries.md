@@ -34,21 +34,14 @@ Your brain clings to this illusion of exceptionalism with fanatic devotion. Beca
 You feel trapped in an inescapable labyrinth not because there is no exit, but because **you are attempting to solve the problem using the exact same thinking that created it**.
 
 How does the boxed-in mind operate?
-```
-[Symptom: Rocking / Brain Fog]
-           │
-           ▼
-[Level of Thinking: "Find organic damage, take a magic pill, fix the broken hardware"]
-           │
-           ▼
-[Action: 15th MRI, IV drips, manual therapy, whining on forums, waiting for a savior]
-           │
-           ▼
-[Result: Zero. The symptom remains.]
-           │
-           ▼
-[Mind's Conclusion: "I am incurable! My case is unique! Nothing works!"]
-```
+
+| Stage | What Happens in the Mind & Actions |
+| :--- | :--- |
+| **1. Symptom** | Unsteadiness, derealization, neck muscle spasm, brain fog. |
+| **2. Level of Thinking** | *“I must find hidden structural damage, find a magic pill, and fix my body like a broken machine.”* |
+| **3. Actions** | 15th MRI, continuous IV infusions, chiropractors, venting on forums, passive waiting for a miracle. |
+| **4. Result** | **Zero.** The symptom persists, while anxiety and hyper-focus escalate. |
+| **5. False Conclusion** | *“I am incurable! My case is uniquely complex! Nothing in modern medicine works!”* |
 
 This is the exact behavior of a fly crashing full-speed into a windowpane.
 
@@ -88,23 +81,10 @@ If you draw a closed circle around a Flatlander with a pencil, to him it becomes
 
 Yet if he had the capacity to look upward into the third dimension (3D), he would see: **there is no ceiling**. All it takes is a single step upward in the 3rd dimension — and he is free.
 
-```
-          ┌──────────────────────────────────────────────────────────┐
-          │               THE THIRD DIMENSION (THE EXIT)             │
-          │     * Releasing overcontrol & shifting context           │
-          │     * Accepting your ordinary biological nature          │
-          │     * Permission to rest, be vulnerable & change life    │
-          │     * Somatic exposure & ending rumination (MCT)         │
-          └────────────────────────────▲─────────────────────────────┘
-                                       │  [STEP UPWARD: META-POSITION]
-    ───────────────────────────────────┼───────────────────────────────────
-                                       │
-       ┌───────────────────────────────┴───────────────────────────────┐
-       │             THE FLATLAND OF YOUR IMPASSE (2D)                 │
-       │  "Seek organic flaw ➔ Fix neck ➔ Self-pity ➔ I am unique"    │
-       │  [Running endless loops along the drawn circle]              │
-       └───────────────────────────────────────────────────────────────┘
-```
+| Perceptual Dimension | Focus of Attention & Cognitive Pattern | Actions & Outcome |
+| :--- | :--- | :--- |
+| **Flatland (2D)**<br>*(The Impasse Trap)* | **“How do I eliminate dizziness? What pill should I take? Who is to blame?”**<br>Constant body scanning, chasing organic damage, self-pity, belief in an "unprecedented severe case." | Running endless loops: doctors $\rightarrow$ neck scans $\rightarrow$ doom-scrolling $\rightarrow$ despair.<br><br>**Outcome:** Chronification of symptoms. |
+| **The Third Dimension (3D)**<br>*(Meta-Position & Exit)* | **“Why did I corner myself here? What is the symptom shielding me from? How do I reclaim my life?”**<br>Accepting the ordinary biology of nervous exhaustion, shedding the tragic martyr identity. | Shifting life context, dismantling hypercontrol, somatic exposure, and metacognitive therapy.<br><br>**Outcome:** Full and lasting recovery. |
 
 Your cognitive boundaries have locked you in Flatland:
 * **Flatland:** "How do I make my body stop rocking? What supplement should I take? Whose fault is this?"

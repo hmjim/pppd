@@ -215,14 +215,14 @@ function renderPaywall(chapterEl, index) {
                 <h2 class="paywall-title">This Chapter Requires an Access Key</h2>
                 <p class="paywall-text">
                     The chapter "${ch.title || 'Protected Chapter'}" is part of the advanced modules. 
-                    The first 14 chapters are <strong>completely free</strong>. Full access to all chapters, protocols, and PDF guide is available with an access key.
+                    The first 14 chapters are <strong>completely free</strong>. Full 1-year access to all paid chapters, protocols, and PDF guide — <strong>$99</strong>.
                 </p>
                 <div class="paywall-form">
                     <input type="text" id="paywall-key" class="paywall-input" placeholder="Enter access key">
                     <button id="paywall-submit" class="paywall-btn">Activate Access</button>
                     <p id="paywall-error" style="color:#ff6b6b;font-size:0.85rem;display:none;margin-top:4px;"></p>
                 </div>
-                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Contact author on Telegram (@Hmjim) for access purchase</a>
+                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Purchase 1-year access ($99) — Telegram @Hmjim</a>
             </div>
         `;
     } else {
