@@ -1209,17 +1209,17 @@ async function main() {
             return `${moduleHeader}<a class="toc-item${isActive ? ' active' : ''}" href="${chUrl}">${ch.title}</a>`;
         }).join('\n');
 
-        // Language Switcher Buttons with SVG flags
-        const flagRuSVG = `<svg class="lang-flag-svg" width="16" height="11" viewBox="0 0 640 480" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffffff" d="M0 0h640v480H0z"/><path fill="#0039a6" d="M0 160h640v320H0z"/><path fill="#d52b1e" d="M0 320h640v160H0z"/></g></svg>`;
-        const flagEnSVG = `<svg class="lang-flag-svg" width="16" height="11" viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#ffffff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#ffffff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg>`;
+        // Language Switcher Buttons with SVG flags (Icons only)
+        const flagRuSVG = `<svg class="lang-flag-svg" width="18" height="12" viewBox="0 0 640 480" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffffff" d="M0 0h640v480H0z"/><path fill="#0039a6" d="M0 160h640v320H0z"/><path fill="#d52b1e" d="M0 320h640v160H0z"/></g></svg>`;
+        const flagEnSVG = `<svg class="lang-flag-svg" width="18" height="12" viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#ffffff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#ffffff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg>`;
         const ruHref = isIndex ? (isEn ? '../../' : '../') : (isEn ? `../../chapters/${chapter.id}.html` : '#');
         const enHref = isIndex ? (isEn ? '#' : 'en/') : (isEn ? '#' : `../en/chapters/${chapter.id}.html`);
 
         const langSwitcherHTML = `
             <div class="lang-switch-container">
                 ${isEn 
-                    ? `<a href="${ruHref}" class="lang-badge-link">${flagRuSVG} RU</a><span class="lang-badge-active">${flagEnSVG} EN</span>` 
-                    : `<span class="lang-badge-active">${flagRuSVG} RU</span><a href="${enHref}" class="lang-badge-link">${flagEnSVG} EN</a>`
+                    ? `<a href="${ruHref}" class="lang-badge-link" title="Русская версия">${flagRuSVG}</a><span class="lang-badge-active" title="English version">${flagEnSVG}</span>` 
+                    : `<span class="lang-badge-active" title="Русская версия">${flagRuSVG}</span><a href="${enHref}" class="lang-badge-link" title="English version">${flagEnSVG}</a>`
                 }
             </div>
         `;
