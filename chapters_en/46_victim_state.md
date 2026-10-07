@@ -36,26 +36,26 @@ As long as you remain in the position of the Victim, **you will never be cured**
 The victim attitude is not just “bad character” or “bad mood.” This is a specific, severe functional state of the neural networks of your brain.
 
 ```
-[Хронический стресс / непонятный телесный симптом]
+[Chronic stress / unexplained somatic symptom]
                         │
                         ▼
-   [Иллюзия отсутствия контроля: «Я ничего не могу сделать»]
+   [Illusion of zero control: "There is nothing I can do"]
                         │
                         ▼
- [Активация Дорсального ядра шва (DRN) + Блок Дофамина в Striatum]
+  [Dorsal Raphe Nucleus (DRN) activation + Dopamine block in Striatum]
                         │
                         ▼
-    [Дорсальный вагальный коллапс (Dorsal Vagal Shutdown по Порджесу)]
-    [Биологическая реакция замирания (Freeze / Play Dead)]
+     [Dorsal Vagal Shutdown (Porges Polyvagal Theory)]
+     [Biological Freeze / Play Dead response]
                         │
                         ▼
-    [Снижение мышечного тонуса коры ➔ Искажение проприоцепции шеи]
-    [Сенсорная депривация: мозг перестает фильтровать вестибулярный шум]
+     [Reduced cortical motor tone ➔ Distorted cervical proprioception]
+     [Sensory gating failure: brain stops filtering vestibular noise]
                         │
                         ▼
        ════════════════════════════════════════════════════
-       ИТОГ: Хроническая неустойчивость, туман в голове,
-             ватные ноги, полная потеря энергии
+       RESULT: Chronic unsteadiness, brain fog,
+             heavy/jelly legs, complete loss of energy
        ════════════════════════════════════════════════════
 ```
 
@@ -113,17 +113,17 @@ You've probably heard about Stephen Karpman's dramatic triangle: **Victim - Pers
 But few people understand that a neurotic person spins around this triangle with dizziness for a reason, but for the sake of **a powerful neurochemical dose**.
 
 ```
-                   [ СПАСАТЕЛЬ ]
-            Поиск волшебных врачей, БАДов,
-             гуру, чатов взаимопомощи
+                   [ RESCUER ]
+            Searching for miracle doctors, supplements,
+             gurus, support chat groups
                   /           \
                  /             \
                 /               \
                ▼                 ▼
-        [ ЖЕРТВА ] ════════► [ ПРЕСЛЕДОВАТЕЛЬ ]
-   «Я бедный, больной,      «Врачи — коновалы! Близкие
-    меня опять качает,       черствые сухари! Ненавижу
-     жизнь сломана»           своё проклятое тело!»
+        [ VICTIM ] ════════► [ PERSECUTOR ]
+   "Poor, sick me,        "Doctors are butchers! Family
+    staggering again,      members are cold & selfish!
+     my life is ruined"     I hate my broken body!"
 ```
 
 Let's see how you navigate this carousel: 
@@ -261,18 +261,18 @@ Draw two concentric circles on paper:
 
 ```
     ┌──────────────────────────────────────────────┐
-    │          ВНЕШНИЙ КРУГ: ЗОНА ШУМА             │
-    │  (Погода, геомагнитные бури, диагнозы МРТ,   │
-    │   мнения родственников, курс валют, прошлое) │
-    │         Управление: 0% ➔ ЗАБИТЬ              │
+    │          OUTER CIRCLE: NOISE ZONE            │
+    │  (Weather, geomagnetic storms, MRI reports,  │
+    │   opinions of relatives, economy, the past)  │
+    │         Control: 0% ➔ LET IT GO              │
     │                                              │
     │       ┌──────────────────────────────┐       │
-    │       │  ВНУТРЕННИЙ КРУГ: МОЙ КОНТРОЛЬ│      │
-    │       │ (Дисциплина экспозиции,      │       │
-    │       │  релаксация по Джекобсону,   │       │
-    │       │  сон 8 часов, осанка, шаги,  │       │
-    │       │  реакция на симптом)         │       │
-    │       │    Управление: 100% ➔ ДЕЛАТЬ  │       │
+    │       │  INNER CIRCLE: MY CONTROL    │       │
+    │       │ (Exposure discipline,        │       │
+    │       │  Jacobson relaxation,        │       │
+    │       │  8h sleep, posture, steps,   │       │
+    │       │  response to symptoms)       │       │
+    │       │    Control: 100% ➔ TAKE ACTION│      │
     │       └──────────────────────────────┘       │
     └──────────────────────────────────────────────┘
 ```

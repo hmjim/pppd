@@ -79,18 +79,18 @@ Forget about the straight line “bad → good”. Recovery looks like an **upwa
 ```
      ___
     /   \
-   |  ↑  |  ← Подъём 3 (стабильность)
+   |  ↑  |  ← Ascent 3 (Stability)
     \___/
         ___
        /   \
-      |  ↑  |  ← Подъём 2 (хорошо)
+      |  ↑  |  ← Ascent 2 (Feeling good)
        \___/
            ___
           /   \
-         |  ↑  |  ← Подъём 1 (первые улучшения)
+         |  ↑  |  ← Ascent 1 (First improvements)
           \___/
               ↑
-          СТАРТ
+            START
 ```
 
 Each “turn” of the spiral is a cycle: improvement → rollback → improvement at a higher level. Keyword: **at a higher level**. Each new rollback is softer than the previous one, and each new rise is higher. 

@@ -69,7 +69,7 @@ Your task this week is to complete one border protection action:
 Write a 1-page document - this is not an affirmation or a dream. This is **engineering specification for the new you**. Format:
 
 ```
-МАНИФЕСТ НОВОЙ ЛИЧНОСТИ
+MANIFESTO OF A NEW IDENTITY
 
 Date:___________ 
 

@@ -135,7 +135,7 @@ Sit down together and agree on the rules. Write them down. This is not a formali
 Example contract:
 
 ```
-КОНТРАКТ НА ВЫЗДОРОВЛЕНИЕ
+RECOVERY CONTRACT
 
 Date:___________ 
 

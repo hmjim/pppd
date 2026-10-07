@@ -87,7 +87,7 @@ Many people, after taking this test, realize for the first time: “Wow, I score
 Take a piece of paper. Or a note on your phone. Write down today's date and results:
 
 ```
-Дата: ___________
+Date: ___________
 
 HADS-A (alarm): ___ / 21
 HADS-D (depression): ___ / 21

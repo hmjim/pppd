@@ -49,26 +49,26 @@ But here is the system law: **any displaced program continues to be executed in 
 Let's look at the hardware. What happens in your skull and body when you once again “swallow” an insult or hide a weakness?
 
 ```
-[Внешний триггер: несправедливость / хамство / перегруз]
+[External trigger: injustice / boundary violation / overload]
                         │
                         ▼
-   [Амигдала + Ствол мозга: выработка норадреналина и кортизола]
-   [Тело готовит атаку: сжатие челюстей, трапеций, диафрагмы]
+   [Amygdala + Brainstem: release of noradrenaline and cortisol]
+   [Body prepares for action: clenching jaws, trapezius, diaphragm]
                         │
                         ▼
-   [Префронтальная кора (Цензор): «СТОП! Злиться нельзя! Ты же хороший!»]
-   [Активное торможение / Active Inhibition: блок моторного действия]
+   [Prefrontal Cortex (Censor): "STOP! You cannot be angry! Be polite!"]
+   [Active Inhibition: motor impulse blocked]
                         │
                         ▼
-   [Спазм застревает в скелетных мышцах: шея, жевательные, затылок]
+   [Chronic spasm trapped in skeletal muscles: suboccipitals, neck, jaw]
                         │
                         ▼
-   [Искажение проприоцепции от спазмированной шеи в вестибулярные ядра]
-   [Интероцептивный сигнал в Insula: «Тело спазмировано ➔ кругом опасность!»]
+   [Distorted proprioception from tense neck to vestibular nuclei]
+   [Interoceptive alarm in Insula: "Body is locked down ➔ danger everywhere!"]
                         │
                         ▼
        ═════════════════════════════════════════════════════
-       ИТОГ: Хроническая шаткость, туман в голове, паника, ПППГ
+       RESULT: Chronic unsteadiness, brain fog, panic, PPPD
        ═════════════════════════════════════════════════════
 ```
 

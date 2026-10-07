@@ -42,18 +42,18 @@ When you close your eyes in a quiet room:
 If meditation is built taking into account neurophysiology, it ceases to be esoteric and becomes a powerful biochemical regulator of the central nervous system.
 
 ```
-[Хронический стресс / ПППГ]
-  ➔ Высокий Бета-ритм (18–30 Гц)
-  ➔ Спазм артерий и мышц шеи
+[Chronic stress / PPPD]
+  ➔ High Beta rhythm (18–30 Hz)
+  ➔ Spasm of vertebral arteries & neck muscles
               │
               ▼
-[Специализированная аудио-медитация]
-  (NSDR / аудио-заземление)
+[Specialized Audio Meditation]
+  (NSDR / Somatic Audio Grounding)
               │
               ▼
-[Торможение таламуса и DMN]
-  ➔ Альфа-ритмы (8–12 Гц)
-  ➔ Активация Вентрального Вагуса
+[Inhibition of Thalamus & DMN]
+  ➔ Alpha rhythms (8–12 Hz)
+  ➔ Ventral Vagal activation
 ```
 
 ### 1. Switch from Beta waves to Alpha rhythm (8-12 Hz) 
