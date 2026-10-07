@@ -49,6 +49,9 @@
     --sidebar-width: 300px;
     --content-max: 720px;
 
+    --bg-fade-transparent: rgba(15, 17, 23, 0);
+    --bg-fade-solid: #0f1117;
+
     --transition: 0.25s ease;
 }
 
@@ -59,6 +62,9 @@ body.light {
     --bg-sidebar: #f5f5f7;
     --bg-card: #ffffff;
     --bg-hover: #eeeef2;
+
+    --bg-fade-transparent: rgba(250, 250, 250, 0);
+    --bg-fade-solid: #fafafa;
 
     --text-primary: #1a1a2e;
     --text-secondary: #555577;
@@ -81,6 +87,23 @@ body.light {
 
     --warning-bg: #fffaf0;
     --warning-border: #8a8a3a;
+}
+
+/* Teaser & Paywall Fade Overlay */
+.teaser-content {
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.teaser-fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    background: linear-gradient(to bottom, var(--bg-fade-transparent) 0%, var(--bg-primary) 95%);
+    pointer-events: none;
 }
 
 html {
