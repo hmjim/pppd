@@ -102,6 +102,9 @@ function updateTocHrefs() {
     });
 }
 
+const FLAG_RU_SVG = `<svg class="lang-flag-svg" width="16" height="11" viewBox="0 0 640 480" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffffff" d="M0 0h640v480H0z"/><path fill="#0039a6" d="M0 160h640v320H0z"/><path fill="#d52b1e" d="M0 320h640v160H0z"/></g></svg>`;
+const FLAG_EN_SVG = `<svg class="lang-flag-svg" width="16" height="11" viewBox="0 0 60 30" aria-hidden="true"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#ffffff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/><path stroke="#C8102E" stroke-width="4" d="M0 0l60 30M60 0L0 30"/><path stroke="#ffffff" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></svg>`;
+
 // ── Update Language Switcher Links ──
 function updateLangSwitcher(index) {
     const isSubdir = window.location.pathname.includes('/chapters/');
@@ -111,10 +114,10 @@ function updateLangSwitcher(index) {
     if (index === -1) {
         if (isEn) {
             const ruTarget = isSubdir ? '../../' : '../';
-            container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">🇷🇺 RU</a><span class="lang-badge-active">🇬🇧 EN</span>`;
+            container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">${FLAG_RU_SVG} RU</a><span class="lang-badge-active">${FLAG_EN_SVG} EN</span>`;
         } else {
             const enTarget = isSubdir ? '../en/' : 'en/';
-            container.innerHTML = `<span class="lang-badge-active">🇷🇺 RU</span><a href="${enTarget}" class="lang-badge-link">🇬🇧 EN</a>`;
+            container.innerHTML = `<span class="lang-badge-active">${FLAG_RU_SVG} RU</span><a href="${enTarget}" class="lang-badge-link">${FLAG_EN_SVG} EN</a>`;
         }
         return;
     }
@@ -122,10 +125,10 @@ function updateLangSwitcher(index) {
     const chId = (index >= 0 && index < CHAPTERS.length) ? CHAPTERS[index].id : '00_introduction';
     if (isEn) {
         const ruTarget = isSubdir ? `../../chapters/${chId}.html` : `../chapters/${chId}.html`;
-        container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">🇷🇺 RU</a><span class="lang-badge-active">🇬🇧 EN</span>`;
+        container.innerHTML = `<a href="${ruTarget}" class="lang-badge-link">${FLAG_RU_SVG} RU</a><span class="lang-badge-active">${FLAG_EN_SVG} EN</span>`;
     } else {
         const enTarget = isSubdir ? `../en/chapters/${chId}.html` : `en/chapters/${chId}.html`;
-        container.innerHTML = `<span class="lang-badge-active">🇷🇺 RU</span><a href="${enTarget}" class="lang-badge-link">🇬🇧 EN</a>`;
+        container.innerHTML = `<span class="lang-badge-active">${FLAG_RU_SVG} RU</span><a href="${enTarget}" class="lang-badge-link">${FLAG_EN_SVG} EN</a>`;
     }
 }
 
