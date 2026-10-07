@@ -1125,7 +1125,7 @@ async function main() {
 
         const siteTitle = isEn ? 'Point of Support — Overcoming PPPD' : 'Точка Опоры — Выход из ПППГ';
         const authorName = isEn ? 'Maxim' : 'Максим';
-        const rootPath = isEn ? '../..' : '..';
+        const rootPath = isIndex ? (isEn ? '..' : '.') : (isEn ? '../..' : '..');
 
         // Schema.org JSON-LD
         // Schema.org 2026 Connected Knowledge Graph (for Google, Gemini, AI Overviews & Yandex)
@@ -1322,7 +1322,7 @@ async function main() {
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
     </noscript>
-    <link rel="stylesheet" href="${isEn ? '../../css/style.css' : '../css/style.css'}">
+    <link rel="stylesheet" href="${rootPath}/css/style.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
