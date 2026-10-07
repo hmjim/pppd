@@ -423,7 +423,7 @@ body.light .sidebar-overlay {
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    padding: 7px 12px;
+    padding: 8px 12px;
     margin-bottom: 6px;
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -434,7 +434,7 @@ body.light .sidebar-overlay {
     font-weight: 600;
     transition: all var(--transition);
     outline: none !important;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent !important;
     user-select: none;
     cursor: pointer;
     box-sizing: border-box;
@@ -453,15 +453,16 @@ body.light .sidebar-overlay {
 .sidebar-consult-btn:focus-visible {
     outline: none !important;
     border-color: #58a6ff;
-    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+    box-shadow: none !important;
 }
 
 .sidebar-consult-label {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
     color: var(--text-primary);
     font-weight: 600;
+    font-size: 0.8rem;
 }
 
 .sidebar-consult-label svg {
@@ -497,17 +498,18 @@ body.light .sidebar-overlay {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    max-width: 360px;
+    max-width: 380px;
     width: calc(100vw - 32px);
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    padding: 18px 20px;
+    z-index: 99999 !important;
     animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     box-sizing: border-box;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 @keyframes toastSlideUp {

@@ -476,6 +476,15 @@ Look for an <strong>otoneurologist</strong> or <strong>vestibulologist</strong> 
             }, 3000);
         }
         window.openConsultToast = function() {
+            var sidebar = document.getElementById('sidebar');
+            var overlay = document.getElementById('sidebar-overlay');
+            var toggle = document.getElementById('menu-toggle');
+            if (sidebar && sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                if (overlay) overlay.classList.remove('active');
+                if (toggle) toggle.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
             if (toast) { toast.style.display = 'block'; toast.scrollIntoView({ behavior: 'smooth', block: 'end' }); }
         };
         window.closeConsultToast = function() {

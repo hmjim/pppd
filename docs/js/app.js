@@ -841,7 +841,18 @@ function initConsultToast() {
 }
 
 window.openConsultToast = function() {
-    const toast = document.getElementById('consultation-toast');
+    // If mobile sidebar is open, close it so toast is immediately visible
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('sidebar-overlay');
+    var toggle = document.getElementById('menu-toggle');
+    if (sidebar && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
+        if (toggle) toggle.classList.remove('active');
+        document.body.classList.remove('sidebar-open');
+    }
+
+    var toast = document.getElementById('consultation-toast');
     if (toast) {
         toast.style.display = 'block';
         toast.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -849,7 +860,7 @@ window.openConsultToast = function() {
 };
 
 window.closeConsultToast = function() {
-    const toast = document.getElementById('consultation-toast');
+    var toast = document.getElementById('consultation-toast');
     if (toast) {
         toast.style.display = 'none';
         localStorage.setItem('consult_toast_closed', '1');
