@@ -1089,6 +1089,21 @@ async function main() {
 
     const dateISO = new Date().toISOString().split('T')[0];
 
+    // Helper to extract ~25-30% teaser from Markdown for paid chapters (Google & Yandex indexing)
+    function extractTeaserMarkdown(rawMd) {
+        const match = rawMd.search(/^##\s+(?:3|4)\./m);
+        if (match !== -1) {
+            return rawMd.substring(0, match).trim();
+        }
+        const paragraphs = rawMd.split(/\n\n+/);
+        let teaser = '';
+        for (const p of paragraphs) {
+            if ((teaser + p).length > 2800 && teaser.length > 1200) break;
+            teaser += (teaser ? '\n\n' : '') + p;
+        }
+        return teaser || rawMd;
+    }
+
     // Helper to build HTML page
     function buildHTML(chapter, bodyContent, lang, isIndex = false) {
         const isEn = lang === 'en';
@@ -1156,6 +1171,14 @@ async function main() {
                     "headline": chapter.seoTitle,
                     "description": chapter.description,
                     "inLanguage": isEn ? "en-US" : "ru",
+                    "isAccessibleForFree": chapter.paid ? "False" : "True",
+                    ...(chapter.paid ? {
+                        "hasPart": {
+                            "@type": "WebPageElement",
+                            "isAccessibleForFree": "False",
+                            "cssSelector": "#paywall-container"
+                        }
+                    } : {}),
                     "datePublished": "2026-06-01",
                     "dateModified": dateISO,
                     "isPartOf": { "@id": `${SITE_URL}/#website` },
@@ -1493,13 +1516,22 @@ async function main() {
     CHAPTERS_RU.forEach(chapter => {
         let htmlContent;
         if (chapter.paid) {
+            const srcPath = path.join(SRC_RU_DIR, `${chapter.id}.md`);
+            let teaserHtml = '';
+            if (fs.existsSync(srcPath)) {
+                const rawMd = fs.readFileSync(srcPath, 'utf8');
+                const teaserMd = extractTeaserMarkdown(rawMd);
+                teaserHtml = marked.parse(teaserMd);
+            }
             htmlContent = `
             <div id="paywall-screen">
-                <h1>${chapter.title}</h1>
-                <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
-                    ${chapter.description}
-                </p>
-                <div class="paywall-container">
+                <div id="teaser-wrapper" style="position:relative;margin-bottom:0;">
+                    <div class="teaser-content" style="max-height:650px;overflow:hidden;position:relative;">
+                        ${teaserHtml}
+                        <div class="teaser-fade-overlay" style="position:absolute;bottom:0;left:0;right:0;height:240px;background:linear-gradient(to bottom, rgba(10,14,26,0) 0%, rgba(10,14,26,0.85) 60%, var(--bg-primary, #0a0e1a) 100%);pointer-events:none;"></div>
+                    </div>
+                </div>
+                <div id="paywall-container" class="paywall-container" style="position:relative;z-index:5;margin-top:-60px;">
                     <span class="paywall-icon">🔐</span>
                     <h2 class="paywall-title">Эта глава доступна по ключу</h2>
                     <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 14 глав — <strong>бесплатно</strong>. Модули 2–4 доступны по лицензионному ключу.</p>
@@ -1599,13 +1631,22 @@ async function main() {
     CHAPTERS_EN.forEach(chapter => {
         let htmlContent;
         if (chapter.paid) {
+            const srcPath = path.join(SRC_EN_DIR, `${chapter.id}.md`);
+            let teaserHtml = '';
+            if (fs.existsSync(srcPath)) {
+                const rawMd = fs.readFileSync(srcPath, 'utf8');
+                const teaserMd = extractTeaserMarkdown(rawMd);
+                teaserHtml = marked.parse(teaserMd);
+            }
             htmlContent = `
             <div id="paywall-screen">
-                <h1>${chapter.title}</h1>
-                <p style="font-size:1.1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:24px;">
-                    ${chapter.description}
-                </p>
-                <div class="paywall-container">
+                <div id="teaser-wrapper" style="position:relative;margin-bottom:0;">
+                    <div class="teaser-content" style="max-height:650px;overflow:hidden;position:relative;">
+                        ${teaserHtml}
+                        <div class="teaser-fade-overlay" style="position:absolute;bottom:0;left:0;right:0;height:240px;background:linear-gradient(to bottom, rgba(10,14,26,0) 0%, rgba(10,14,26,0.85) 60%, var(--bg-primary, #0a0e1a) 100%);pointer-events:none;"></div>
+                    </div>
+                </div>
+                <div id="paywall-container" class="paywall-container" style="position:relative;z-index:5;margin-top:-60px;">
                     <span class="paywall-icon">🔐</span>
                     <h2 class="paywall-title">This Chapter Requires an Access Key</h2>
                     <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 14 chapters are <strong>completely free</strong>. Modules 2–4 are available with a license access key.</p>
