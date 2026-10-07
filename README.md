@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Chapters-38-6366f1" alt="38 chapters">
+  <img src="https://img.shields.io/badge/Chapters-39-6366f1" alt="39 chapters">
   <img src="https://img.shields.io/badge/Modules-5-10b981" alt="5 modules">
   <img src="https://img.shields.io/badge/Free_Chapters-14-f59e0b" alt="14 free chapters">
   <img src="https://img.shields.io/badge/Lighthouse-95%2B-00c853" alt="Lighthouse 95+">
@@ -27,7 +27,7 @@
 
 **“Point of Support”** is a comprehensive guide for individuals dealing with **PPPD** (Persistent Postural-Perceptual Dizziness), written by an author who personally navigated through six months of unsteadiness, derealization, and severe anxiety — and achieved **full recovery**.
 
-This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 38 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
+This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 39 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
 
 ---
 
