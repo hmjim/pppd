@@ -1381,15 +1381,15 @@ body.light .sidebar-consult-btn:hover {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    max-width: 390px;
+    max-width: 380px;
     width: calc(100% - 32px);
     background: rgba(22, 27, 34, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(56, 139, 253, 0.35);
+    border: 1px solid rgba(56, 139, 253, 0.4);
     border-radius: 12px;
-    padding: 14px 16px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 1px rgba(56, 139, 253, 0.4);
+    padding: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65), 0 0 1px rgba(56, 139, 253, 0.5);
     z-index: 99999 !important;
     font-size: 0.84rem;
     color: var(--text-primary);
@@ -1398,8 +1398,8 @@ body.light .sidebar-consult-btn:hover {
 
 body.light .consult-toast {
     background: rgba(255, 255, 255, 0.98);
-    border-color: rgba(9, 105, 218, 0.28);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+    border-color: rgba(9, 105, 218, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes toastSlideUp {
@@ -1415,56 +1415,58 @@ body.light .consult-toast {
 
 .consult-toast-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 8px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    padding-right: 24px;
 }
 
-.consult-toast-title-box {
+.consult-toast-title-row {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.consult-toast-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: rgba(56, 139, 253, 0.12);
+    border: 1px solid rgba(56, 139, 253, 0.25);
+    border-radius: 8px;
+    flex-shrink: 0;
+    color: #58a6ff;
+}
+
+body.light .consult-toast-icon-wrap {
+    background: rgba(9, 105, 218, 0.08);
+    border-color: rgba(9, 105, 218, 0.2);
+    color: #0969da;
 }
 
 .consult-toast-title {
-    display: flex;
-    align-items: center;
-    gap: 6px;
     font-size: 0.88rem;
     font-weight: 700;
     color: var(--text-primary);
-}
-
-.consult-toast-close {
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    cursor: pointer;
-    line-height: 1;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: color 0.15s, background 0.15s;
-    margin-top: -2px;
-    margin-right: -4px;
-}
-
-.consult-toast-close:hover {
-    color: var(--text-primary);
-    background: var(--bg-hover);
+    white-space: nowrap;
 }
 
 .consult-toast-badge {
-    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
     background: rgba(56, 139, 253, 0.15);
     border: 1px solid rgba(56, 139, 253, 0.35);
     color: #58a6ff;
     padding: 2px 7px;
-    border-radius: 4px;
-    font-size: 0.76rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 body.light .consult-toast-badge {
@@ -1473,17 +1475,41 @@ body.light .consult-toast-badge {
     color: #0969da;
 }
 
+.consult-toast-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.consult-toast-close:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
 .consult-toast-text {
     font-size: 0.78rem;
     color: var(--text-secondary);
-    margin: 6px 0 10px;
+    margin: 6px 0 12px;
     line-height: 1.4;
 }
 
 .consult-toast-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
+    gap: 8px;
 }
 
 .consult-toast-links.en {
@@ -1494,6 +1520,7 @@ body.light .consult-toast-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
     height: 32px;
     padding: 0 8px;
     font-size: 0.78rem;
@@ -1504,12 +1531,17 @@ body.light .consult-toast-badge {
     text-align: center;
 }
 
+.consult-toast-btn svg {
+    flex-shrink: 0;
+}
+
 .consult-toast-btn.tg {
     background: #1f6feb;
     color: #ffffff !important;
 }
 .consult-toast-btn.tg:hover {
     background: #388bfd;
+    box-shadow: 0 2px 8px rgba(31, 111, 235, 0.35);
 }
 
 .consult-toast-btn.max {
@@ -1518,6 +1550,7 @@ body.light .consult-toast-badge {
 }
 .consult-toast-btn.max:hover {
     background: #8957e5;
+    box-shadow: 0 2px 8px rgba(110, 64, 201, 0.35);
 }
 
 .consult-toast-btn.email {
