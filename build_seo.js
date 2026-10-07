@@ -1549,9 +1549,9 @@ async function main() {
                 ${isEn ? 'Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:' : 'Индивидуальные консультации и аудит выздоровления проводятся только платно:'}
             </p>
             <div class="consult-toast-links">
-                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram @Hmjim</a>
+                <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">Telegram</a>
                 ${!isEn ? '<a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max">MAX</a>' : ''}
-                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">fhmjim@gmail.com</a>
+                <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">Email</a>
             </div>
         </div>
     </div>
