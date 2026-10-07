@@ -574,18 +574,40 @@ function initTheme() {
 function initMobileMenu() {
     const toggle = document.getElementById('menu-toggle');
     const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function closeSidebar() {
+        if (sidebar) sidebar.classList.remove('open');
+        if (toggle) toggle.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.classList.remove('sidebar-open');
+    }
+
+    function openSidebar() {
+        if (sidebar) sidebar.classList.add('open');
+        if (toggle) toggle.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.classList.add('sidebar-open');
+    }
 
     if (toggle && sidebar) {
-        toggle.addEventListener('click', () => {
-            toggle.classList.toggle('active');
-            sidebar.classList.toggle('open');
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (sidebar.classList.contains('open')) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
         });
+
+        if (overlay) {
+            overlay.addEventListener('click', closeSidebar);
+        }
 
         const content = document.getElementById('content');
         if (content) {
             content.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-                toggle.classList.remove('active');
+                if (sidebar.classList.contains('open')) closeSidebar();
             });
         }
     }

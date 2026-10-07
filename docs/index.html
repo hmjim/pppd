@@ -505,6 +505,7 @@
     <button id="menu-toggle" class="menu-toggle" aria-label="Открыть меню">
         <span></span><span></span><span></span>
     </button>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
     <!-- Sidebar / Table of Contents -->
     <aside id="sidebar" class="sidebar">
@@ -921,7 +922,7 @@
         (function () {
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1791389184682?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1791389466647?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; s.style.display = ''; }
