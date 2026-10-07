@@ -1,4 +1,4 @@
-# Psychosomatics: why everything you learned here works not only for PPPD 
+# Psychosomatics: why everything you will learn here works not only for PPPD 
 
 *PPPD is not a separate disease. This is one of dozens of languages ​​in which an overloaded nervous system shouts “Stop!” And all the tools in this book are tailored not to a specific symptom, but to the screaming mechanism itself.*
 
@@ -14,7 +14,7 @@ Different lights on the dashboard. Same overheated engine.
 
 Psychosomatics is not “fiction”. It's not "it seems to you." This is a **functional disorder** in which the actual physical symptoms are not caused by a broken organ, but by a glitch in the software of the nervous system. And here is the main secret that is worth this entire book: 
 
-**All the techniques you learned here work for ANY psychosomatic symptom. Because they don't hit the light bulb, but the engine.**
+**All the techniques you will learn in this book work for ANY psychosomatic symptom. Because they don't hit the light bulb, but the engine.**
 
 ---
 
