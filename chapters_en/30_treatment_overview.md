@@ -81,7 +81,7 @@ To avoid wasting months on empty methods:
 | **Betagistine** | Effective for Meniere's disease, but not for PPPD | 
 | **Osteopathy** | Same problems as with manual therapy | 
 | **"Just don't think about it"** | Doesn't work without specific psychotherapeutic techniques | 
-| **Avoiding Triggers** | Strengthens PPPV in the long term | 
+| **Avoiding Triggers** | Strengthens PPPD in the long term | 
 
 ## How long does it take to treat PPPD 
 

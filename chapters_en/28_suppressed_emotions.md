@@ -97,7 +97,7 @@ Truth: People who reject you for honestly expressing your feelings are people wh
 
 ## 5. Point of Support: Insight
 
-> You didn't get PPPV because you were “weak” or “nervous.” You got sick because you were **strong** for too long. You held the lid on the boiling pot of your emotions with such force that your fuses blew. Neurosis is not weakness. This is the **price of suppressed power**. It's time to open the lid - carefully, in a controlled, adult way.
+> You didn't get PPPD because you were “weak” or “nervous.” You got sick because you were **strong** for too long. You held the lid on the boiling pot of your emotions with such force that your fuses blew. Neurosis is not weakness. This is the **price of suppressed power**. It's time to open the lid - carefully, in a controlled, adult way.
 
 ---
 

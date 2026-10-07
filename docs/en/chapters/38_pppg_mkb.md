@@ -24,7 +24,7 @@ In practice, doctors in Russia use the following replacement codes:
 
 | ICD-10 code | Diagnosis | Comment | 
 |------------|---------|------------| 
-| **H81.1** | Benign paroxysmal positional vertigo (BPPV) | Often put “out of habit”, although PPPV ≠ BPPV | 
+| **H81.1** | Benign paroxysmal positional vertigo (BPPV) | Often put “out of habit”, although PPPD ≠ BPPV | 
 | **H81.4** | Vertigo of central origin | If a neurologist suspects central vertigo | 
 | **H81.9** | Vestibular function disorder, unspecified | The most common "junk" code | 
 | **H82** | Vestibular syndrome in diseases classified elsewhere | Rarely used | 

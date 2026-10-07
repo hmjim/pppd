@@ -1,6 +1,6 @@
 # PPPD symptoms - complete list of signs 
 
-*Detailed list of all symptoms of PPPV (persistent postural-perceptual dizziness) with explanations. If you recognize yourself in at least 3-4 points, you are in the right place.* 
+*Detailed list of all symptoms of PPPD (persistent postural-perceptual dizziness) with explanations. If you recognize yourself in at least 3-4 points, you are in the right place.* 
 
 ## 5 diagnostic criteria for PPPD (Barany Society, 2017) 
 
@@ -56,7 +56,7 @@ The official criteria for diagnosing PPPD are:
 
 If you have anything from this list, you need to be further examined:
 
-- **Loss of consciousness** (fainting) is not PPPV 
+- **Loss of consciousness** (fainting) is not PPPD 
 - **True rotational vertigo** (attacks of 5-60 seconds when turning the head) is more likely to be BPPV 
 - **Hearing loss in one ear** - may indicate Meniere's disease 
 - **Double vision** - neurological pathology 

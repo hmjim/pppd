@@ -6,55 +6,55 @@
 
 ## 1. Essence and issues: the cry of your body 
 
-When a person has PPPD, he perceives it as a sudden catastrophe: * “I was living a normal life, working, making plans, and suddenly - bam! — Out of the blue, I felt dizzy. This is an unfair accident.”* 
+When a person has PPPD, they often perceive it as a sudden catastrophe: *"I was living a normal life, working, making plans, and suddenly — bam! — out of nowhere, intense dizziness hit me. This is just an unfair accident."*
 
-But neurosis never comes out of nowhere. It doesn't just fall on your head. Unsteadiness and panic attacks are the **cry of your body**, which for a long time endured what could not be tolerated. For a long time you went against yourself, pushed your true needs into the background, endured toxic relationships, worked hard at a job you didn’t like, or for years did not allow yourself proper rest without feeling guilty. For a long time, your nervous system sent signals in the form of fatigue and mild anxiety, but you brushed them off and continued to run. As a result, the brain has exhausted all available resources and forcibly “pulled the pin,” forcing you to stop due to dizziness. 
+But a neurosis never strikes in a vacuum. It doesn't just fall from the sky. Unsteadiness and panic attacks are the **cry of your body**, which for a long time endured what was intolerable. For years you may have worked against your own interests, sidelined your authentic needs, stayed in toxic relationships, pushed through exhaustion at an unfulfilling job, or refused to allow yourself true rest without guilt. Your autonomic nervous system sent persistent warning signals — fatigue, muscle tightness, mild anxiety — but you brushed them aside and kept running. Eventually, the brain depleted its compensatory reserves and pulled the emergency brake through constant dizziness.
 
-## 2. Physiological explanation: neurosis as a vegetative fuse 
+## 2. Physiological Explanation: Neurosis as an Autonomic Circuit Breaker
 
-The autonomic nervous system cannot remain in overload mode indefinitely. 
+The autonomic nervous system cannot operate under chronic overload indefinitely.
 
-If there is a constant, background source of stress in your life (for example, an unloved partner that you want to leave, but you’re scared, or a job you hate that you’re afraid to quit), your brain scans this unsolvable problem around the clock. Since there is no solution, tension accumulates in the limbic system. 
+When there is a persistent, unresolved background stressor in your life (for instance, an unfulfilling relationship you fear ending, or a career draining you dry that you feel trapped in), your subconscious scans this unsolvable deadlock 24/7. With no resolution in sight, emotional and physiological tension builds up within the limbic system.
 
-When the level of this tension exceeds a critical level, the brain turns on a defense mechanism - **functional failure of the autonomic system**. It's like a fuse in an electrical panel. If you plug in a washing machine, heater and iron at the same time, the wiring will overheat and the fuse will blow, cutting off power to the entire house. PPPD and panic - this is the “knocked out fuse”. Your body has de-energized you, rendering you unable to walk and function normally, so that you are physically unable to continue to destroy yourself at the same rate. 
+When this tension exceeds a critical threshold, the brain triggers a protective failure mode: **functional autonomic deregulation**. It functions exactly like a circuit breaker in an electrical panel. If you plug in a space heater, a washing machine, and an iron into a single overloaded outlet, the circuit overheats and trips the breaker, shutting down power to protect the house from catching fire. PPPD and panic attacks are that tripped circuit breaker. Your central nervous system deliberately slows you down — through unsteadiness and sensory overload — so you physically cannot continue destroying yourself at the same unsustainable pace.
 
-Here lies the psychological phenomenon of **secondary benefit**. This is an unconscious mechanism: you are not pretending to be sick on purpose. But your brain understands that illness is the only legal way to get what you vitally need or avoid what is unbearable for you. 
-For example: 
-* The disease allows you to lie down and take a break from the status of “strong and independent” without feeling lazy. 
-* The disease saves you from making a terrible decision (divorce or change of profession). 
-* Illness forces loved ones to take care of you and give you the attention that was lacking.
+Here lies the clinical phenomenon of **secondary gain**. This is an unconscious coping mechanism: you are not faking illness intentionally. Rather, the brain realizes that somatic symptoms are the only legitimate way to obtain desperately needed rest or avoid an unbearable reality.
+For example:
+* Illness grants permission to step down from the exhausting role of being "invincible and self-sufficient" without feeling lazy.
+* Symptoms postpone frightening life decisions (such as changing careers or ending an unhealthy marriage).
+* Physical vulnerability compels loved ones to finally provide care and attention that was previously missing.
 
-### The brain is like a computer: unsolved problem = frozen process 
+### The Brain as a Processor: Unresolved Problem = Frozen System Thread
 
-Your brain works like a task processor. There is a task - the brain solves it - exhales - and takes on the next one. Balance. But when a task appears that **cannot be solved** - a toxic relationship that you have endured for years; a job that makes you sick, but you “can’t quit”; a financial hole from which there is no way out - this task becomes **dominant**. The brain spins it like a jammed record: the organ of anxiety plays 24/7, and you don’t even realize what you’re listening to. 
+Your brain processes challenges systematically: identify problem → resolve → reset baseline → move forward. But when an **unresolvable conflict** persists — years in a toxic environment, chronic financial dread, or suppressing core values — that task becomes a runaway background thread. It consumes 100% of your cognitive and autonomic bandwidth, running a continuous alarm loop in the background.
 
-And the most insidious thing is that you are lying to yourself. You say: * “No, everything is fine with my husband/wife” * - but in fact this person is already shaking you. You say: *"20 thousand a month is normal"* - but inside a voice screams: *"I don't have enough!"*. You put on a **social mask** - “good father”, “strong woman”, “reliable employee” - and you’re afraid to take it off, because without the mask you don’t know who you are. 
+And the most insidious part is self-deception. You tell yourself: *"Everything is fine at home,"* while subconsciously dreading returning there. You convince yourself: *"My current paycheck is fine,"* while feeling deep existential burnout. You put on a **social mask** — the selfless parent, the indefatigable executive, the agreeable colleague — and fear taking it off because your sense of identity has become attached to it.
 
-Three areas in which that same unresolved conflict is almost always buried: 
-1. **Relationships** - with yourself, with your partner, with your parents, with your children, with your boss. If there is something that doesn’t suit you in any of these relationships, and you endure it for years, this is your stressor. 
-2. **Finance and implementation** - I want one thing, I get another, and I don’t accept it. I've been running in circles for years without deciding. 
-3. **Place in the world** - *“Where am I in this whole story?”*. A woman at home who is supported by her husband, but who thinks: * “What am I capable of?”*. Or a specialist who has been sitting in a position below his potential for years and is angry with himself. 
+Three core domains where unresolved conflict almost always hides:
+1. **Relationships:** With yourself, your partner, parents, children, or superiors. Chronic suppression of boundaries in any core relationship is a constant autonomic trigger.
+2. **Career & Financial Fulfillment:** A persistent gap between your values, efforts, and outcomes that you endure without resolving.
+3. **Existential Meaning & Self-Realization:** Suppressing your true capabilities and settling into a diminished role out of fear.
 
-## 3. Victim syndrome: the trap of passive suffering 
+## 3. The Victim Mindset: The Trap of Passive Helplessness
 
-In addition to secondary benefits, there is another quagmire that concretes you into illness - **victim syndrome**. 
+Alongside secondary gain, another psychological trap cements chronic symptoms: **learned helplessness and the victim mindset**.
 
-At some point in neurosis, you imperceptibly shift the steering wheel of your life to external factors. The victim does not act - she endures. 
-* *“I would do relaxation, but today the weather is bad / magnetic storms / I’m shaking too much”*. 
-* *“Doctors in my city don’t understand anything, medicine is powerless, so I can’t be cured”*. 
-* *“Nobody helps me, my loved ones don’t understand me, I’m alone with this hell”*. 
+When chronic symptoms persist, people frequently surrender control to external circumstances:
+* *"I would practice somatic tracking, but today the weather is bad / magnetic storms are high / my dizziness is too severe."*
+* *"Doctors in my city don't understand PPPD, so recovery is impossible for me."*
+* *"Nobody supports me; I am completely alone in this nightmare."*
 
-The victim's position is very comfortable for the frightened brain. Why? Because **the victim is completely freed from personal responsibility**. If it's all the fault of the doctors, the weather, or "incurable" PPPV, then you don't need to do anything. You can just lie there, complain on forums, collect sympathy likes and endlessly google symptoms.
+Adopting the victim role is protective for a frightened brain because **it eliminates personal accountability**. If recovery depends entirely on weather, perfect doctors, or external miracles, you don't have to confront scary exposures, tolerate discomfort, or do the daily work of nervous system regulation.
 
-But here’s the bitter systemic truth for you, leather: **the victim never recovers**. Recovery begins exactly the second you take 100% responsibility for your condition. It's not the weather that shakes your legs. It's your brain sending incorrect signals to your muscles. And only you - with your actions, your discipline in exposure and relaxation - can fix it. No doctor will do Jacobson relaxation for you. No psychic will reflash your amygdala. Either you take control of the autopilot into your own hands, or you remain a passive passenger in a falling plane. 
+However, the objective neurological reality is clear: **passive waiting never produces neuroplastic recovery**. Healing begins the precise moment you assume 100% agency over your rehabilitation. Weather does not shake your legs; hyper-sensitized vestibular processing in your brain does. And only systematic retraining — through daily graded exposure, autonomic down-regulation, and CBT protocols — rewires those circuits. No physician can execute vestibular habituation or Jacobson relaxation on your behalf. You must take the pilot's controls of your own nervous system.
 
-> We will discuss a complete neurobiological analysis of learned helplessness, the dorsal vagus and a step-by-step protocol for returning the steering wheel in a separate chapter: **[Exiting the Victim Position](46_victim_state.html)**. 
+> For an in-depth neurobiological analysis of learned helplessness, dorsal vagal states, and a structured recovery protocol, see **[Exiting the Victim State](46_victim_state.html)**.
 
-## 4. Cognitive traps: “I will first recover, and then solve life’s problems” 
+## 4. The Cognitive Trap: "First I must heal 100%, then I will fix my life"
 
-Major Cognitive Trap: *“Now is not the time to deal with relationships or work. I first need to completely get rid of the dizziness, get back on my feet, and only then I will think about life.”* 
+A pervasive mental barrier is the belief: *"Now is not the time to address relationship stress or career burnout. I must first become completely symptom-free, and only then will I fix my life."*
 
-This is the procrastination trap. You're trying to fix the check engine light on your car's dashboard without looking under the hood. PPPD is a consequence of your life's dead end. If you remove the symptoms with pills or gymnastics, but return to the same toxic environment, the same partner or the same burning job, your vegetative system will fail again. Recovery is impossible without changing the conditions that led you to the disease. 
+This is backwards. PPPD developed as a somatic manifestation of systemic chronic overload. If you temporarily quiet symptoms with medication but return to the exact same toxic patterns, boundary violations, and emotional suppression, the nervous system will inevitably trip the breaker again. Sustained recovery requires changing the conditions that caused your central nervous system to crash in the first place. 
 
 ## 5. Point of Support: Insight 
 

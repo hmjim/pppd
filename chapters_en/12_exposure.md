@@ -6,7 +6,7 @@
 
 ## 1. Essence and problems: life within four walls 
 
-Between PPPV and the fear of dizziness, your world gradually becomes smaller. First you gave up traveling on the subway, then you stopped going to large shopping centers. Then you excluded public transport, hairdressers and cafes from your life. As a result, your living area has been reduced to the “bed - kitchen - nearest trash can” trajectory, and every step outside this radius causes wild panic. 
+Between PPPD and the fear of dizziness, your world gradually becomes smaller. First you gave up traveling on the subway, then you stopped going to large shopping centers. Then you excluded public transport, hairdressers and cafes from your life. As a result, your living area has been reduced to the “bed - kitchen - nearest trash can” trajectory, and every step outside this radius causes wild panic. 
 
 You hope that by staying at home, your nervous system will “calm down”, and then you will begin to live again. But the opposite happens. The longer you stay at home, the scarier the usual going out becomes. Your brain has declared war on the entire outside world, hanging the label “Danger to Life” on every corner. 
 

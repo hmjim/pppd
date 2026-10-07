@@ -33,21 +33,21 @@ But there is one more trigger that occurs more often than all the others combine
 
 6. **“I felt better - I quit practicing”** - this is trap number 1. You feel better within 2-3 weeks. You decide: “Well, that’s it, it’s over!”* - and without noticing to yourself, you remove from your life everything that pulled you out. You stop doing Jacobson. You give up on meditation. You stop walking. You return to old thought patterns: * “I owe everything, the children owe it, everything at work must be perfect”*. And a week later - bam, rollback. And you’re in a panic: *“Nothing helped!”*. 
 
-No, leather. It helped. It was **because** what you did that made you feel better. And when he stopped, he returned to the old rails. 
+No. It actually helped. It was **because** of what you did that made you feel better. And when you stopped, your nervous system returned to the old habits. 
 
-**Iron rule:** Jacobson's relaxation, meditation, cardio and thinking work are not emergency pills. It's **daily hygiene**, like brushing your teeth. You don't stop brushing your teeth when they stop hurting, do you? Here too - at least once a day, no discussions, no omissions. 
+**Iron rule:** Jacobson's relaxation, meditation, cardio and cognitive restructuring are not emergency pills. They are **daily neural hygiene**, like brushing your teeth. You don't stop brushing your teeth when they stop hurting, do you? Same here — daily practice without negotiation or skipping. 
 
 ## 3. Cognitive traps: the illusion of zeroing 
 
-Main cognitive trap: * “I'm back to square one. My progress is zero.”* 
+Main cognitive trap: *"I'm back to square one. My progress is zero."* 
 
-This is a lie from your frightened mind. Neuroplasticity cannot be “erased” in one day. The new neural connections that you spent weeks building are still there. They are simply temporarily blocked out by adrenaline noise, like a radio station during a thunderstorm. As soon as the storm subsides, the music of calm will play again. A rollback is not a reset. This is just a temporary rebound from the old program. 
+This is a lie from your frightened mind. Neuroplasticity cannot be “erased” in one day. The new neural connections that you spent weeks building are still there. They are simply temporarily blocked out by adrenaline noise, like a radio station during a thunderstorm. As soon as the storm subsides, the signal of calm will come through again. A setback is not a reset. This is just a temporary flare-up of the old alarm system. 
 
-The second pitfall is trying to “immediately fix yourself” right during a rollback. You start feverishly doing gymnastics, meditating 5 times a day, getting angry and checking your symptoms every 5 minutes. This adds tons of control and tension to the system, delaying the rollback for weeks. 
+The second pitfall is trying to “immediately fix yourself” right during a setback. You start feverishly doing exercises, meditating 5 times a day, getting angry and checking your symptoms every 5 minutes. This injects intense anxiety and control back into the system, prolonging the setback for weeks. 
 
 ## 4. Point of Support: Insight 
 
-<blockquote>Rollback is not the enemy. This is your ally. This is a litmus test that shows that your system is overloaded. If the unsteadiness returned, the brain was not broken. He simply tells you: “Leather, we are overheated. Please park the car on the side of the road, turn off the engine and let us rest." Thank the symptom for the warning and slow down.</blockquote>
+<blockquote>A setback is not your enemy. It is your ally. It is a biological litmus test showing that your system reached overload. If unsteadiness temporarily increases, your brain is not broken. It is simply signaling: “System is overheated. Please pull over, turn off the engine, and allow us to recharge.” Acknowledge the warning without panic, and allow yourself to slow down.</blockquote>
 
 ---
 

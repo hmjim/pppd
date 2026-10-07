@@ -36,7 +36,7 @@ CBT helps you gradually give up “crutches” so that the brain becomes convinc
 
 1. **Digitization of the state:** Assessment of the level of anxiety and disability (HADS, DHI tests). 
 2. **Exposure therapy:** Step-by-step return to frightening places without the use of protective behavior. 
-3. **Recalibrating Interpretations:** Teaching that PPPV unsteadiness is a harmless false signal from the brain and not a threat to life.
+3. **Recalibrating Interpretations:** Teaching that PPPD unsteadiness is a harmless false signal from the brain and not a threat to life.
 
 ---
 

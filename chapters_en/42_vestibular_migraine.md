@@ -66,7 +66,7 @@ Why? Because vestibular migraine is the **perfect trigger** for PPPD.
 2. **The second blow is cognitive.** After the attack, you begin to fear the next one. *“When will this happen again? What if this happens at work? On the subway? Are you driving?”* Anticipatory anxiety triggers an **anticipatory panic loop**: you are so afraid of the next attack that you live in constant tension. 
 3. **The third blow is behavioral.** You begin to avoid triggers: bright light, noise, movement, public places. But the more you avoid, the more sensitized your brain becomes. The sensitivity threshold drops. Now even a weak stimulus causes an attack. 
 
-Bottom line: migraine triggered PPPD. PPPD worsened the migraine through anxiety. Migraines have become more frequent. PPPV has intensified. Snowball.
+Bottom line: migraine triggered PPPD. PPPD worsened the migraine through anxiety. Migraines have become more frequent. PPPD has intensified. Snowball.
 
 ---
 
@@ -173,7 +173,7 @@ Do 4-7-8 twice a day: in the morning (immediately after getting up, before the c
 
 ### Technique 5: Biobehavioral Desensitization to Light and Sound 
 
-In migraine sufferers, the brain is **sensitized** to sensory stimuli: bright lights, loud sounds, flashing screens. With PPPV, you already practice visual desensitization (Chapter 8). For migraine we add: 
+In migraine sufferers, the brain is **sensitized** to sensory stimuli: bright lights, loud sounds, flashing screens. With PPPD, you already practice visual desensitization (Chapter 8). For migraine we add: 
 
 **Light exposure (graded):** 
 1. Start with a room with dim lighting (40-50% brightness) 

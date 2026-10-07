@@ -207,54 +207,39 @@ async function decryptContent(encryptedPayload, password) {
 
 // ── Render Paywall ──
 function renderPaywall(chapterEl, index) {
+    const ch = CHAPTERS[index] || {};
     if (isEn) {
         chapterEl.innerHTML = `
             <div class="paywall-container">
                 <span class="paywall-icon">🔐</span>
-                <h2 class="paywall-title">Restricted Access: Modules 2–4</h2>
+                <h2 class="paywall-title">This Chapter Requires an Access Key</h2>
                 <p class="paywall-text">
-                    The clinical and therapeutic system of "Point of Support" covering adrenaline loops, 
-                    cognitive traps, secondary gain, and full neuro-vestibular recovery is locked.
+                    The chapter "${ch.title || 'Protected Chapter'}" is part of the advanced modules. 
+                    The first 14 chapters are <strong>completely free</strong>. Full access to all chapters, protocols, and PDF guide is available with an access key.
                 </p>
-                <div class="paywall-features">
-                    <ul>
-                        <li>Adrenaline loop regulation and 5-4-3-2-1 scanner switching</li>
-                        <li>Somatic tracking and attention focus recalibration</li>
-                        <li>Graded exposure and paradoxical intention protocols</li>
-                        <li>Metacognitive therapy, Ego analysis, and Inner Child healing</li>
-                        <li>Secondary gain analysis, victim mindset exit, and setback mastery</li>
-                    </ul>
-                </div>
                 <div class="paywall-form">
-                    <input type="text" id="paywall-key" class="paywall-input" placeholder="Enter license key">
-                    <button id="paywall-submit" class="paywall-btn">Unlock All Modules</button>
+                    <input type="text" id="paywall-key" class="paywall-input" placeholder="Enter access key">
+                    <button id="paywall-submit" class="paywall-btn">Activate Access</button>
+                    <p id="paywall-error" style="color:#ff6b6b;font-size:0.85rem;display:none;margin-top:4px;"></p>
                 </div>
-                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Contact the author on Telegram (@Hmjim) to purchase access</a>
+                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Contact author on Telegram (@Hmjim) for access purchase</a>
             </div>
         `;
     } else {
         chapterEl.innerHTML = `
             <div class="paywall-container">
                 <span class="paywall-icon">🔐</span>
-                <h2 class="paywall-title">Доступ ограничен: Модули 2–4</h2>
+                <h2 class="paywall-title">Эта глава доступна по ключу</h2>
                 <p class="paywall-text">
-                    Практическая и терапевтическая часть системы «Точка Опоры» по работе с адреналиновыми петлями, 
-                    когнитивными ловушками, вторичными выгодами и выходом в полноценную жизнь заблокирована.
+                    Глава «${ch.title || 'Закрытая глава'}» входит в платный блок. Первые 14 глав доступны <strong>бесплатно</strong>. 
+                    Полный доступ ко всем платным главам, протоколам и PDF на 1 год — <strong>5 000 ₽</strong>.
                 </p>
-                <div class="paywall-features">
-                    <ul>
-                        <li>Работа с адреналиновой петлей и переключение сканера 5-4-3-2-1</li>
-                        <li>Соматический трекинг и тренировка фокуса внимания</li>
-                        <li>Экспозиция страхов и парадоксальная интенция</li>
-                        <li>Метакогнитивная терапия, разбор Эго и Внутреннего ребенка</li>
-                        <li>Анализ вторичных выгод, синдрома жертвы и преодоление откатов</li>
-                    </ul>
-                </div>
                 <div class="paywall-form">
                     <input type="text" id="paywall-key" class="paywall-input" placeholder="Введи ключ доступа">
                     <button id="paywall-submit" class="paywall-btn">Активировать доступ</button>
+                    <p id="paywall-error" style="color:#ff6b6b;font-size:0.85rem;display:none;margin-top:4px;"></p>
                 </div>
-                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Связаться с автором в Telegram (@Hmjim) для покупки доступа</a>
+                <a href="https://t.me/Hmjim" target="_blank" class="paywall-link">Купить доступ на 1 год (5 000 ₽) — Telegram @Hmjim</a>
             </div>
         `;
     }

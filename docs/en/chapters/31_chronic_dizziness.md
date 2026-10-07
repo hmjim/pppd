@@ -61,7 +61,7 @@ The fog goes away as PPPD is treated. There is no need to treat it separately.
 ### Step 1: Rule out organic causes 
 Undergo basic examinations: MRI of the brain, ultrasound examination of neck vessels, examination by an otoneurologist, audiometry. A detailed checklist is in the chapter [What examinations to undergo](02_medical_checkup.html). 
 
-### Step 2: Accept the diagnosis of PPPV 
+### Step 2: Accept the diagnosis of PPPD 
 If the examination is normal, it is PPPD. Not a “mystery disease.” Not “psychosomatics that you can’t do anything about.” A specific diagnosis with a specific treatment protocol. 
 
 ### Step 3: Start comprehensive treatment 
@@ -80,7 +80,7 @@ PPPD is always accompanied by chronic muscle spasm. Jacobson relaxation is a pro
 ## Frequently asked questions 
 
 **“I’m 25/30/40 years old. Can I have PPPD at my age?”** 
-Yes. PPPV most often begins between the ages of 20 and 50, often after stress, a panic attack, or a history of BPPV. 
+Yes. PPPD most often begins between the ages of 20 and 50, often after stress, a panic attack, or a history of BPPV. 
 
 **“I’m dizzy from stress. Is this PPPD?”** 
 If dizziness persists after a stressful event for more than 3 months, this is one of the criteria for PPPD. Stress is a trigger, not a cause. 

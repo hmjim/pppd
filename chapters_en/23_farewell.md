@@ -22,7 +22,7 @@ Many people who have completely overcome PPPD and returned to a full life (trave
 
 This is not a sign of the disease returning. This is a **healthy physiological reaction** of the vegetative to overload. 
 
-The average person gets a headache or a stomach ache when they don't get enough sleep. As someone who has gone through PPPD, your overload sensor is now a slight feeling of instability. This is your built-in indicator: *“Leather, we didn’t sleep for 2 days and drank a bucket of coffee. It's time to go to bed."* This sensor is your ally, protecting you from burnout again. There is no need to be afraid of him. 
+The average person gets a headache or a stomach ache when they don't get enough sleep. As someone who has gone through PPPD, your overload sensor is now a slight feeling of instability. This is your built-in indicator: *"Hey, we didn’t sleep for 2 days and drank a bucket of coffee. It's time to go to bed."* This sensor is your ally, protecting you from burnout again. There is no need to be afraid of it. 
 
 ## 3. Cognitive traps: the search for eternal stability 
 
@@ -70,7 +70,7 @@ Forgotten desires will begin to return. You will want to go somewhere, meet frie
 **Possible pitfall:** You may start doing “too much too fast” - walking for 5 hours, working out every day, staying up late with friends. And after a week you get a kickback. It's not a disaster. This is calibration. The brain shows you a new acceptable load range. Just slow down for a couple of days and carry on. 
 
 ### Third month and beyond 
-At this point, PPPV is no longer the central theme of your life. You will remember him the way they remember a bad flu - * “Yes, it was hard. But it passed.”* You will notice that you have become a different person: more aware, less anxious, better understanding your body and your boundaries. 
+At this point, PPPD is no longer the central theme of your life. You will remember him the way they remember a bad flu - * “Yes, it was hard. But it passed.”* You will notice that you have become a different person: more aware, less anxious, better understanding your body and your boundaries. 
 
 Many people who have gone through PPCP have a natural desire to **help others** - to share their experience, to support those who have just begun the journey. This is a healthy impulse. But be careful not to turn helping others into a new form of hypercontrol. You don't have to save the world. You have to live your life. 
 

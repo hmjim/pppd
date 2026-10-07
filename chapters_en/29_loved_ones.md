@@ -164,7 +164,7 @@ code word [_______], and we return to the contract.
 Signatures: ___________ / ___________ 
 ``` 
 
-### How to talk to children about PPPV 
+### How to talk to children about PPPD 
 
 If you have children, they **already** feel that something is wrong. Children read their parents' anxiety instantly. If you are silent, the child fills the void with fantasies: *“Mom/Dad is sick with something terrible”*, *“It’s because of me”*, *“We’re all going to die”*. 
 

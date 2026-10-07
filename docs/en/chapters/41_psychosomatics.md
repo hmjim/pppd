@@ -90,7 +90,7 @@ Now I'll give you a list. Long. And for each point you will see: this is the sam
 | **Nausea, loss of appetite** | Cortisol suppresses digestion (not before eating when the “tiger is nearby”) | Gastroscopy is normal | 
 | **Bloating, cramping** | Hypertonicity of intestinal smooth muscles | Ultrasound, coprogram - clean | 
 
-### 🖐️ Leather and more 
+### 🖐️ Skin & Systemic Symptoms 
 | Symptom | Mechanism | Why doctors don't find anything | 
 |:---|:---|:---| 
 | **Itching, scabies without rash** | Histamine response to stress + central sensitization | Dermatologist: “Nervous” | 
@@ -124,7 +124,7 @@ You've learned to watch the anxious thoughts of dizziness like trains passing by
 
 ### 4. Exposure → any avoidance behavior 
 
-With PPPV, you avoided shops and public transport. A person with cardiophobia avoids stairs and sports. A person with IBS avoids restaurants and long trips. A person with a lump in the throat avoids swallowing solid food.
+With PPPD, you avoided shops and public transport. A person with cardiophobia avoids stairs and sports. A person with IBS avoids restaurants and long trips. A person with a lump in the throat avoids swallowing solid food.
 
 Exposure is a **universal neurobiological relearning tool**. You show the amygdala: “Look, we came to a terrible place, and nothing happened. You can reduce your anxiety level." Every time you DON'T run away, you weaken the old neural pathway of fear and create a new, safe one. The mechanism of **extinction learning** (extinction of a conditioned reflex) works identically for any stimulus. 
 

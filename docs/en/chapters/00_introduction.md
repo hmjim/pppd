@@ -34,7 +34,7 @@ From July to January - six months of daily work. Vestibular gymnastics, CBT, exp
 
 If you think you're the only one, here are some statistics:
 
-* PPPV is the **second most common** reason for visits to otoneurologists in the world (after BPPV).
+* PPPD is the **second most common** reason for visits to otoneurologists in the world (after BPPV).
 *According to Staab et al. (2017), PPPD is diagnosed in **15–20%** of all patients attending specialized vestibular clinics.
 * The average age of onset is **30–50 years**, but occurs at 18 and 65.
 * Women get sick **2-3 times more often** than men (although among my subscribers the proportion is almost equal).

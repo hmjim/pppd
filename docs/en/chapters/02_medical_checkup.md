@@ -28,7 +28,7 @@ If the MRI is clean, your brain is physically fine. The instability is not cause
 
 What we exclude: BPPV (benign positional vertigo - when the crystals in the ear are displaced), Meniere's disease, vestibular neuronitis.
 
-If you have BPPV, an otoneurologist can cure it in one session using the Epley maneuver. It's not PPPV, it's a completely different story. And that's good news.
+If you have BPPV, an otoneurologist can cure it in one session using the Epley maneuver. It's not PPPD, it's a completely different story. And that's good news.
 
 ### Vessels
 
@@ -82,7 +82,7 @@ Most neurologists and therapists in clinics **do not know what PPPD is**. This i
 Here are ready-made phrases that will help:
 
 **If the doctor says “You have VAD (autonomic dysfunction)”:**
-> *“Thank you. I know that VAD (autonomic dysfunction) is an outdated diagnosis. Would you consider a diagnosis of PPPV (persistent postural perceptual dizziness, ICD-11: AA36)? My symptoms fully meet the criteria of Staab et al. 2017.”*
+> *“Thank you. I know that VAD (autonomic dysfunction) is an outdated diagnosis. Would you consider a diagnosis of PPPD (persistent postural perceptual dizziness, ICD-11: AA36)? My symptoms fully meet the criteria of Staab et al. 2017.”*
 
 **If the doctor prescribes nootropics (Mexidol, Actovegin, Cavinton):**
 > *“Thank you for the appointment. Is there any clinical trial data on the effectiveness of these drugs in PPPD? I read that only SSRIs and CBT have an evidence base.”*

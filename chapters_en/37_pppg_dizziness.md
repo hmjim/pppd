@@ -37,7 +37,7 @@ Chronic stress → cortisol release → [muscle armor](04_muscle_armor.html) →
 | **MRI** | Norma | Norma | Norma | Norma | 
 | **Treatment** | CBT + gymnastics | Epley Maneuver | Medicines | Gymnastics + time | 
 
-**Important:** PPPV often develops **after** BPPV or vestibular neuronitis. The attack itself has passed, but the brain “remembered” the feeling and continues to reproduce it. This is [adrenaline loop](09_adrenaline_loop.html). 
+**Important:** PPPD often develops **after** BPPV or vestibular neuronitis. The attack itself has passed, but the brain “remembered” the feeling and continues to reproduce it. This is [adrenaline loop](09_adrenaline_loop.html). 
 
 ## When the dizziness gets worse
 
