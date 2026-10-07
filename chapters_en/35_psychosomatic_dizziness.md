@@ -6,7 +6,7 @@
 
 ## What is psychosomatic (psychogenic) dizziness 
 
-**Psychosomatic dizziness** is a term that is often used in everyday life to describe functional vestibular disorders (primarily **PPD** and anxiety disorders). 
+**Psychosomatic dizziness** is a term that is often used in everyday life to describe functional vestibular disorders (primarily **PPPD** and anxiety disorders). 
 
 The main difference: a person **does not have organic damage** to the brain, blood vessels or inner ear, but the physical sensation of unsteadiness, lightheadedness and a “floating world” is absolutely real. 
 

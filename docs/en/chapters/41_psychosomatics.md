@@ -1,6 +1,6 @@
 # Psychosomatics: why everything you learned here works not only for PPPD 
 
-*PPG is not a separate disease. This is one of dozens of languages ​​in which an overloaded nervous system shouts “Stop!” And all the tools in this book are tailored not to a specific symptom, but to the screaming mechanism itself.*
+*PPPD is not a separate disease. This is one of dozens of languages ​​in which an overloaded nervous system shouts “Stop!” And all the tools in this book are tailored not to a specific symptom, but to the screaming mechanism itself.*
 
 ---
 
@@ -138,7 +138,7 @@ Audit of life areas, secondary benefits, suppressed emotions, inner child - all 
 
 ### 7. Information diet → works for any hypochondria 
 
-You stopped googling “PPG symptoms.” But if at the same time you google “is heart pain dangerous”, “why does your hand go numb”, “nausea and headache at the same time” - you just switched to another needle. The Information Diet (Cold Turkey Protocol) should cover **all** bodily symptoms without exception. Any search query about health is a tranche of adrenaline into your adrenal glands.
+You stopped googling “PPPD symptoms.” But if at the same time you google “is heart pain dangerous”, “why does your hand go numb”, “nausea and headache at the same time” - you just switched to another needle. The Information Diet (Cold Turkey Protocol) should cover **all** bodily symptoms without exception. Any search query about health is a tranche of adrenaline into your adrenal glands.
 
 ---
 

@@ -7,7 +7,7 @@
 ## Case 1. Anton (32 years old, Senior Backend Developer) 
 * **Symptoms:** Unsteadiness, wobbly head, inability to look at the monitor (visual addiction), panic when scrolling code, muscle block in the neck. Duration of illness: 1.5 years. 
 * **Trigger:** Deadline + processing + coffee 6 cups a day for 3 months. 
-* **Trap:** I tried to cure PPPD through “Doctor shopping” - I went through 4 MRIs, an ultrasound scan, donated blood for all markers, took a handful of nootropics and vascular drugs. The result is zero. I spent more than 200,000 rubles on “treatment.” 
+* **Trap:** I tried to cure PPPD through “Doctor shopping” - I went through 4 MRIs, an ultrasound scan, donated blood for all markers, took a handful of nootropics and vascular drugs. The result is zero. I spent more than $2,500 on “treatment.” 
 * **How it came out:** 
 1. **Digitization (Chapter 3):** Passed HADS (alarm 16/21) and DHI (68/100). I saw the numbers and stopped considering myself dying. 
 2. **Closed the door to the clinic.** Recognized that it was a software failure, not a hardware failure. 

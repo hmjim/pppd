@@ -72,7 +72,7 @@ Five areas that work for PPPD:
 4. Regular physical activity 
 5. SSRIs (as prescribed by a doctor) 
 
-Complete Guide: [PPG Treatment](30_treatment_overview.html). 
+Complete Guide: [PPPD Treatment](30_treatment_overview.html). 
 
 ### Step 4: Relieve Muscle Tension 
 PPPD is always accompanied by chronic muscle spasm. Jacobson relaxation is a proven technique for relieving it. [Step-by-step instructions](05_relaxation.html). 

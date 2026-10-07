@@ -136,9 +136,9 @@ At this moment, the adrenal glands produce an even background of cortisol. Corti
 ### Phase 2. Rescuer (Search for the magic pill) 
 The victim cannot save himself - by definition. She needs an external Messiah. 
 
-You open a forum on PPCP, a Telegram chat with sufferers, or go on YouTube: 
+You open a forum on PPPD, a Telegram chat with sufferers, or go on YouTube: 
 * You are looking for a new “luminary otoneurologist” who will “definitely figure it out.” 
-* You read a diagram with a rare nootropic, microdosing or osteopathic reduction of the atlas for 50,000 rubles. 
+* You read a diagram with a rare nootropic, microdosing or osteopathic reduction of the atlas for $500. 
 * You write in the chat: * “Guys, today I’m shaking like in a nine-point storm, who experienced this?”*. 
 
 At the moment when they answer you: *“Hold on, honey, I feel the same way too, hugs!” *, your brain receives a microdose of **oxytocin and endogenous opioids**. There comes a fleeting, surrogate relief. But it lasts exactly 15 minutes. 

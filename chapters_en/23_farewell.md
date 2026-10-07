@@ -72,7 +72,7 @@ Forgotten desires will begin to return. You will want to go somewhere, meet frie
 ### Third month and beyond 
 At this point, PPPD is no longer the central theme of your life. You will remember him the way they remember a bad flu - * “Yes, it was hard. But it passed.”* You will notice that you have become a different person: more aware, less anxious, better understanding your body and your boundaries. 
 
-Many people who have gone through PPCP have a natural desire to **help others** - to share their experience, to support those who have just begun the journey. This is a healthy impulse. But be careful not to turn helping others into a new form of hypercontrol. You don't have to save the world. You have to live your life. 
+Many people who have gone through PPPD have a natural desire to **help others** - to share their experience, to support those who have just begun the journey. This is a healthy impulse. But be careful not to turn helping others into a new form of hypercontrol. You don't have to save the world. You have to live your life. 
 
 ### About residual symptoms 
 

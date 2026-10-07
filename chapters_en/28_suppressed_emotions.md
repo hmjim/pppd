@@ -64,7 +64,7 @@ Anger is a tricky emotion. When you stop yourself from being angry, it doesn't g
 Chronic fatigue is one of the main symptoms of suppressed anger. Suppressing emotions requires enormous energy expenditure. Imagine that you continuously keep the lid on a boiling pan. Your hands get tired, your body gets tired, but the pan still gurgles. You're not tired of work. You're tired of **holding yourself back**. 
 
 ### Mask 2: “I'm not angry. I'm worried" 
-Anxiety and anger are two ends of the same stick. When anger is directed outward, it is aggression. When it is directed **inward** (because it cannot be released) - it is anxiety. Many PPPS sufferers who are “just worried” are actually **furiously angry**—at their partner, at their parents, at their job, at themselves. But admitting anger is scarier than admitting anxiety. An anxious person is a “poor, sick little man.” And evil is “an aggressor, a bad person.” And you unconsciously choose anxiety. 
+Anxiety and anger are two ends of the same stick. When anger is directed outward, it is aggression. When it is directed **inward** (because it cannot be released) - it is anxiety. Many PPPD sufferers who are “just worried” are actually **furiously angry**—at their partner, at their parents, at their job, at themselves. But admitting anger is scarier than admitting anxiety. An anxious person is a “poor, sick little man.” And evil is “an aggressor, a bad person.” And you unconsciously choose anxiety. 
 
 ### Mask 3: “I'm not angry. I'm offended" 
 Resentment is frozen anger. You're angry, but you don't allow yourself to act. Instead, you “puff up”, become isolated and wait for the offender to figure it out and apologize. He has no idea. You get “offended” even more. The neck turns to stone. My head is spinning.
