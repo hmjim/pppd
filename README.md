@@ -77,6 +77,7 @@ PPPD is the **second most common cause** of dizziness consultations in otoneurol
 |---|---|
 | 🌐 **Web Version** | [hmjim.github.io/pppd](https://hmjim.github.io/pppd/) |
 | 💬 **Telegram Community** | [@pppd_vertigo](https://t.me/pppd_vertigo) |
+| 📸 **Instagram** | [@max_pppd](https://www.instagram.com/max_pppd) |
 | ✉️ **Author** | [@Hmjim](https://t.me/Hmjim) |
 
 ---
