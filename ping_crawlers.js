@@ -13,7 +13,10 @@ const URL_LIST = [
     `https://${HOST}/pppd/sitemap.xml`,
     `https://${HOST}/pppd/chapters/06_vestibular.html`,
     `https://${HOST}/pppd/chapters/03_baseline_tests.html`,
-    `https://${HOST}/pppd/chapters/30_treatment_overview.html`
+    `https://${HOST}/pppd/chapters/30_treatment_overview.html`,
+    `https://${HOST}/pppd/chapters/36_pppg_symptoms.html`,
+    `https://${HOST}/pppd/chapters/37_pppg_dizziness.html`,
+    `https://${HOST}/pppd/chapters/35_psychosomatic_dizziness.html`
 ];
 
 function postIndexNow(endpointHost) {

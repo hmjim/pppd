@@ -551,10 +551,28 @@ async function loadChapter(index) {
 
     localStorage.setItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter', index);
 
+    closeSidebar();
+}
+
+// ── Mobile Menu Helpers ──
+function closeSidebar() {
     const sidebar = document.getElementById('sidebar');
-    const menuToggle = document.getElementById('menu-toggle');
+    const toggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('sidebar-overlay');
     if (sidebar) sidebar.classList.remove('open');
-    if (menuToggle) menuToggle.classList.remove('active');
+    if (toggle) toggle.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
+    document.body.classList.remove('sidebar-open');
+}
+
+function openSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const toggle = document.getElementById('menu-toggle');
+    const overlay = document.getElementById('sidebar-overlay');
+    if (sidebar) sidebar.classList.add('open');
+    if (toggle) toggle.classList.add('active');
+    if (overlay) overlay.classList.add('active');
+    document.body.classList.add('sidebar-open');
 }
 
 // ── Theme Toggle ──
@@ -584,20 +602,6 @@ function initMobileMenu() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
 
-    function closeSidebar() {
-        if (sidebar) sidebar.classList.remove('open');
-        if (toggle) toggle.classList.remove('active');
-        if (overlay) overlay.classList.remove('active');
-        document.body.classList.remove('sidebar-open');
-    }
-
-    function openSidebar() {
-        if (sidebar) sidebar.classList.add('open');
-        if (toggle) toggle.classList.add('active');
-        if (overlay) overlay.classList.add('active');
-        document.body.classList.add('sidebar-open');
-    }
-
     if (toggle && sidebar) {
         toggle.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -618,6 +622,8 @@ function initMobileMenu() {
                 if (sidebar.classList.contains('open')) closeSidebar();
             });
         }
+
+        window.addEventListener('pageshow', closeSidebar);
     }
 }
 
@@ -710,6 +716,8 @@ function showLanding() {
 
     updateTocHrefs();
     updateLangSwitcher(-1);
+
+    closeSidebar();
 
     requestAnimationFrame(() => {
         updateCachedHeight();
@@ -845,16 +853,7 @@ function initConsultToast() {
 }
 
 window.openConsultToast = function() {
-    // If mobile sidebar is open, close it so toast is immediately visible
-    var sidebar = document.getElementById('sidebar');
-    var overlay = document.getElementById('sidebar-overlay');
-    var toggle = document.getElementById('menu-toggle');
-    if (sidebar && sidebar.classList.contains('open')) {
-        sidebar.classList.remove('open');
-        if (overlay) overlay.classList.remove('active');
-        if (toggle) toggle.classList.remove('active');
-        document.body.classList.remove('sidebar-open');
-    }
+    closeSidebar();
 
     var toast = document.getElementById('consultation-toast');
     if (toast) {
