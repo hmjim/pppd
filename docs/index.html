@@ -209,6 +209,22 @@
             margin-bottom: 40px;
         }
 
+        .seo-landing p {
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .seo-landing ul,
+        .seo-landing ol {
+            margin: 16px 0 20px;
+            padding-left: 24px;
+        }
+
+        .seo-landing li {
+            margin-bottom: 8px;
+            line-height: 1.65;
+        }
+
         .seo-landing a:not(.seo-toc-item):not(.seo-cta-btn):not(.seo-cta-social-btn):not(.seo-cta-pdf) {
             color: #6c8cff;
             color: var(--accent);
@@ -1156,7 +1172,7 @@
         (function () {
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1792179763591?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1792180465636?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; s.style.display = ''; }
