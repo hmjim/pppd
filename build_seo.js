@@ -104,6 +104,14 @@ async function main() {
             module: 'Модуль 0: База',
         },
         {
+            id: '57_secondary_gains',
+            title: 'Вторичные выгоды болезни',
+            seoTitle: 'Вторичные выгоды при ПППГ и неврозе — почему мозг саботирует выздоровление | Точка Опоры',
+            description: 'Вторичные выгоды головокружения и ПППГ: почему подсознание держится за болезнь, как мозг рассчитывает ROI невроза, 5 скрытых выгод и пошаговый протокол демонтажа саботажа.',
+            keywords: 'вторичные выгоды невроза, вторичные выгоды головокружение, почему не проходит ПППГ, саботаж выздоровления, психосоматика выгоды, психогенное головокружение причины',
+            module: 'Модуль 0: База',
+        },
+        {
             id: '30_treatment_overview',
             title: 'Лечение ПППГ',
             seoTitle: 'Лечение ПППГ — как лечить психогенное головокружение | Точка Опоры',
@@ -614,6 +622,14 @@ async function main() {
             seoTitle: 'DHI & HADS Tests for PPPD — Objective Progress Tracking | Point of Support',
             description: 'Objective inventories for tracking PPPD severity: Dizziness Handicap Inventory (DHI) and Hospital Anxiety and Depression Scale (HADS). How to measure your recovery progress.',
             keywords: 'DHI test, HADS test, dizziness handicap inventory, PPPD tracking, anxiety scale, dizziness severity',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '57_secondary_gains',
+            title: 'Secondary Gains of Illness',
+            seoTitle: 'Secondary Gains in PPPD & Neurosis — Why the Brain Sabotages Recovery | Point of Support',
+            description: 'Secondary gains in chronic dizziness and PPPD: how the subconscious uses illness as a protective shield, calculating the ROI of sickness, 5 psychological masks and recovery protocol.',
+            keywords: 'secondary gains PPPD, why dizziness won\'t go away, subconscious sabotage recovery, psychosomatic secondary gain, functional dizziness psychology',
             module: 'Module 0: Foundation',
         },
         {
