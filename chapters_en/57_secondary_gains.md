@@ -41,29 +41,19 @@ Evolution does not care if you feel joyful, visit fancy restaurants, or fulfill 
 
 Your ventromedial prefrontal cortex (vmPFC) and amygdala operate around the clock calculating what economists call *ROI* (Return on Investment) — balancing costs against perceived safety:
 
-```
-                  ┌──────────────────────────────┐
-                  │   Unresolved Life Crisis     │
-                  │   (divorce, firing, ruin)    │
-                  └──────────────┬───────────────┘
-                                 │
-                                 ▼
-                     Amygdala Threat Appraisal:
-                   “MORTAL THREAT TO SOCIAL EGO”
-                                 │
-         ┌───────────────────────┴───────────────────────┐
-         │                                               │
-         ▼                                               ▼
-Option A: Confront Reality             Option B: Somatization (PPPD)
-• Risk of total rejection              • Rocking, swaying, nausea, fear
-• Social shame / vulnerability         • BUT: you are safe inside the den
-• Massive energy expenditure           • Others cater to you, zero demands
-• Unpredictable catastrophe            • Crisis frozen with medical excuse
-         │                                               │
-         ▼                                               ▼
- Cost: Existential terror               Cost: Unsteadiness (tolerable toll)
- BRAIN DECISION: REJECT                 BRAIN DECISION: APPROVE!
-```
+> **Subconscious Decision Logic:**
+> 1. **Incoming Signal:** Unresolved life crisis (toxic marriage, career burnout, dead-end life).
+> 2. **Amygdala Appraisal:** “Confronting this directly risks tribal exile, ego annihilation, and intolerable shame.”
+> 3. **Circuit Breaker Action:** Block the dangerous confrontation and divert all conscious bandwidth toward somatic survival.
+
+| Evaluation Metric | Option A: Confront the Crisis | Option B: Somatization (PPPD) |
+|:---|:---|:---|
+| **Direct Action** | Divorce, resignation, open confrontation | Lie on the couch, sway, doctor shop |
+| **Threat to Ego** | Catastrophic (fear of rejection and guilt) | Zero (“it’s not my fault, I am sick”) |
+| **Social Standing** | “Failure who ruined marriage / quit job” | “Brave patient battling chronic illness” |
+| **Interpersonal Dynamics** | Blame, demands, intense friction | Leniency, care, sympathy, and support |
+| **Psychic Toll** | Overwhelming distress (felt as “death”) | Unsteadiness & brain fog (tolerable trade-off) |
+| **AMYGDALA VERDICT** | ❌ **REJECT (Too Dangerous)** | ✅ **APPROVE (Safe Somatic Alibi)** |
 
 To your primitive survival circuits, confronting deep interpersonal conflict, divorcing, or admitting professional failure feels like **exile from the tribe and psychological death**.
 
