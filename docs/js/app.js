@@ -226,13 +226,13 @@ function renderPaywall(chapterEl, index) {
                 <h2 class="paywall-title">Unlock the Complete Protocol</h2>
                 <p class="paywall-text">
                     The chapter "${ch.title || 'Protected Chapter'}" is part of the advanced modules. 
-                    The first 14 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.
+                    The first 15 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.
                 </p>
                 
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>58 In-Depth Chapters</span>
+                        <span>59 In-Depth Chapters</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -298,14 +298,14 @@ function renderPaywall(chapterEl, index) {
                 </div>
                 <h2 class="paywall-title">Открыть полную систему выздоровления</h2>
                 <p class="paywall-text">
-                    Глава «${ch.title || 'Закрытая глава'}» входит в платный блок. Первые 14 глав доступны <strong>бесплатно</strong>. 
+                    Глава «${ch.title || 'Закрытая глава'}» входит в платный блок. Первые 15 глав доступны <strong>бесплатно</strong>. 
                     Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.
                 </p>
                 
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>58 глав книги (Модули 0–4)</span>
+                        <span>59 глав книги (Модули 0–4)</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>

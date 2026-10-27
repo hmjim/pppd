@@ -15,9 +15,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Chapters-58-6366f1" alt="58 chapters">
+  <img src="https://img.shields.io/badge/Chapters-59-6366f1" alt="59 chapters">
   <img src="https://img.shields.io/badge/Modules-5-10b981" alt="5 modules">
-  <img src="https://img.shields.io/badge/Free_Chapters-14-f59e0b" alt="14 free chapters">
+  <img src="https://img.shields.io/badge/Free_Chapters-15-f59e0b" alt="15 free chapters">
   <img src="https://img.shields.io/badge/Lighthouse-95%2B-00c853" alt="Lighthouse 95+">
 </p>
 
@@ -27,7 +27,7 @@
 
 **“Point of Support”** is a comprehensive guide for individuals dealing with **PPPD** (Persistent Postural-Perceptual Dizziness), written by an author who personally navigated through six months of unsteadiness, derealization, and severe anxiety — and achieved **full recovery**.
 
-This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 58 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
+This is not a purely theoretical monograph. It is an **engineering-grade manual** consisting of 59 chapters organized into 5 structured modules, built entirely on evidence-based therapeutic protocols.
 
 ---
 
@@ -35,13 +35,13 @@ This is not a purely theoretical monograph. It is an **engineering-grade manual*
 
 | # | Module | Core Topics | Access |
 |---|--------|-------------|--------|
-| 0 | **Basics** | Understanding PPPD, diagnostic checklist, HADS / DHI assessments | 🟢 Free |
+| 0 | **Basics** | Understanding PPPD, diagnostic checklist, HADS / DHI assessments, secondary gains | 🟢 Free |
 | 1 | **Body** | Muscle armor, Jacobson progressive relaxation, vestibular rehabilitation (VRT), neurophysiology, visual dependence, sleep optimization | 🟢 Free |
 | 2 | **Battery** | Adrenaline loop, Cognitive Attentional Syndrome (CAS), health anxiety & hypochondria, graded exposure, physical exercise, vestibular migraine, derealization | 🔒 Key Access |
 | 3 | **Mindset** | Neuroplasticity, metacognitive therapy (MCT), cognitive distortions, root causes, ego dynamics, inner child, suppressed emotions | 🔒 Key Access |
 | 4 | **Recovery** | Setback anatomy, the “Storm” protocol, identity transformation, navigating relationships & PPPD | 🔒 Key Access |
 
-The first **14 chapters are free** — accessible immediately without registration or limitations.
+The first **15 chapters are free** — accessible immediately without registration or limitations.
 
 ---
 

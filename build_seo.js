@@ -1666,12 +1666,12 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Открыть полную систему выздоровления</h2>
-                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 14 глав доступны <strong>бесплатно</strong>. Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
+                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 15 глав доступны <strong>бесплатно</strong>. Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>58 глав книги (Модули 0–4)</span>
+                            <span>59 глав книги (Модули 0–4)</span>
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -1840,12 +1840,12 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Unlock the Complete Protocol</h2>
-                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 14 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
+                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 15 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>58 In-Depth Chapters</span>
+                            <span>59 In-Depth Chapters</span>
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
