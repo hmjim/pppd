@@ -112,6 +112,14 @@ async function main() {
             module: 'Модуль 0: База',
         },
         {
+            id: '61_fear_of_death_insanity',
+            title: 'Страх смерти и безумия',
+            seoTitle: 'Страх смерти, обморока и сойти с ума при ПППГ и панике | Точка Опоры',
+            description: 'Почему при ПППГ и тревоге кажется, что сейчас упадёшь в обморок, случится инсульт или сойдёшь с ума. Физиология давления при панике, отличие невроза от шизофрении и протокол разминирования страха.',
+            keywords: 'страх упасть в обморок, страх сойти с ума при неврозе, танатофобия, лиссофобия, обморок при панической атаке, невроз или шизофрения, страх смерти при головокружении, ПППГ обморок',
+            module: 'Модуль 0: База',
+        },
+        {
             id: '30_treatment_overview',
             title: 'Лечение ПППГ',
             seoTitle: 'Лечение ПППГ — как лечить психогенное головокружение | Точка Опоры',
@@ -392,6 +400,15 @@ async function main() {
             paid: true,
         },
         {
+            id: '59_safety_crutches',
+            title: 'Костыли безопасности',
+            seoTitle: 'Костыли безопасности при ПППГ — охранительное поведение и скрытое избегание | Точка Опоры',
+            description: 'Почему таблетка в кармане, бутылка воды, тёмные очки и опора на тележку в супермаркете блокируют полное выздоровление от ПППГ. Эксперимент Салковскиса и 14-дневный протокол отказа от костылей.',
+            keywords: 'охранительное поведение, костыли безопасности невроз, почему не проходит шаткость до конца, избегающее поведение КПТ, таблетка на всякий случай, ПППГ 80 процентов',
+            module: 'Модуль 2: Батарейка',
+            paid: true,
+        },
+        {
             id: '13_sport',
             title: 'Спорт и перезагрузка',
             seoTitle: 'Спорт при ПППГ — физическая активность как лекарство | Точка Опоры',
@@ -424,6 +441,15 @@ async function main() {
             seoTitle: 'ПТСР при ПППГ — техника ДПДГ (EMDR) для переработки травмы | Точка Опоры',
             description: 'ПТСР при ПППГ: почему первый приступ головокружения становится травмой. Техника ДПДГ (EMDR) — пошаговый протокол билатеральной стимуляции.',
             keywords: 'ПТСР ПППГ, ДПДГ, EMDR, ДПДГ головокружение, EMDR тревога, посттравматический стресс',
+            module: 'Модуль 2: Батарейка',
+            paid: true,
+        },
+        {
+            id: '58_symptom_migration',
+            title: 'Миграция симптома',
+            seoTitle: 'Миграция симптома при неврозе и ПППГ — ком в горле, экстрасистолы, СРК | Точка Опоры',
+            description: 'Почему когда проходит головокружение и шаткость, появляется ком в горле, экстрасистолы в сердце, нехватка воздуха, звон в ушах или СРК. Нейробиология блуждающего нерва и протокол обнуления маски.',
+            keywords: 'миграция симптома невроз, ком в горле и головокружение, экстрасистолы при неврозе, нехватка воздуха ВСД, блуждающий нерв симптомы, прошли головокружения началось другое',
             module: 'Модуль 2: Батарейка',
             paid: true,
         },
@@ -518,6 +544,15 @@ async function main() {
             paid: true,
         },
         {
+            id: '60_good_person_syndrome',
+            title: 'Синдром «Хорошего человека»',
+            seoTitle: 'Синдром хорошего человека при ПППГ — угодничество, вина и неумение говорить Нет | Точка Опоры',
+            description: 'Как хроническое угодничество (реакция Fawn), страх обидеть, гиперответственность и подавленная аутоагрессия вызывают спазм шеи и головокружение при ПППГ. Протокол выстраивания личных границ.',
+            keywords: 'синдром хорошего человека, неумение говорить нет психосоматика, угодничество невроз, чувство вины тревога, аутоагрессия головокружение, личные границы ПППГ',
+            module: 'Модуль 3: Мышление',
+            paid: true,
+        },
+        {
             id: '20_setback_anatomy',
             title: 'Анатомия отката',
             seoTitle: 'Откат при ПППГ — почему симптомы возвращаются | Точка Опоры',
@@ -541,6 +576,15 @@ async function main() {
             seoTitle: 'Новая личность после ПППГ — кем вы станете | Точка Опоры',
             description: 'Новая личность после ПППГ: как болезнь меняет человека, обретение внутренней силы, новые ценности и жизнь без страха головокружения.',
             keywords: 'жизнь после ПППГ, выздоровление ПППГ, новая личность, трансформация, психологический рост',
+            module: 'Модуль 4: Выход',
+            paid: true,
+        },
+        {
+            id: '62_recovery_plateau',
+            title: 'Выход на плато',
+            seoTitle: 'Плато при выздоровлении от ПППГ — как убрать последние 20% шаткости | Точка Опоры',
+            description: 'Почему выздоровление от ПППГ застревает на уровне «плюс-минус терпимо» (80%). Феномен хрустальной вазы, страх усталости, кофе, недосыпа и поездок. Протокол антихрупкости для выхода на 100%.',
+            keywords: 'плато при неврозе, остаточная шаткость ПППГ, страх усталости, страх летать при ПППГ, антихрупкость нервной системы, как вылечить ПППГ до конца',
             module: 'Модуль 4: Выход',
             paid: true,
         },
@@ -630,6 +674,14 @@ async function main() {
             seoTitle: 'Secondary Gains in PPPD & Neurosis — Why the Brain Sabotages Recovery | Point of Support',
             description: 'Secondary gains in chronic dizziness and PPPD: how the subconscious uses illness as a protective shield, calculating the ROI of sickness, 5 psychological masks and recovery protocol.',
             keywords: 'secondary gains PPPD, why dizziness won\'t go away, subconscious sabotage recovery, psychosomatic secondary gain, functional dizziness psychology',
+            module: 'Module 0: Foundation',
+        },
+        {
+            id: '61_fear_of_death_insanity',
+            title: 'Fear of Death & Insanity',
+            seoTitle: 'Fear of Fainting, Dying & Going Crazy in PPPD & Panic | Point of Support',
+            description: 'Why PPPD and panic trigger terrifying fears of fainting, stroke, or losing your mind. Hemodynamics of syncope vs panic, neurosis vs psychosis, and real-time defusal protocols.',
+            keywords: 'fear of fainting dizziness, fear of going crazy anxiety, thanatophobia, lyssophobia, syncope vs panic attack, neurosis vs psychosis, PPPD fainting fear',
             module: 'Module 0: Foundation',
         },
         {
@@ -913,6 +965,15 @@ async function main() {
             paid: true,
         },
         {
+            id: '59_safety_crutches',
+            title: 'Safety Crutches',
+            seoTitle: 'Safety Behaviors & Crutches in PPPD — Why the Final 20% Lingers | Point of Support',
+            description: 'How emergency pills in your pocket, water bottles, sunglasses, and gripping shopping carts block amygdala inhibitory learning in PPPD. Paul Salkovskis\' model and 14-day disarmament protocol.',
+            keywords: 'safety behaviors PPPD, subtle avoidance anxiety, pocket pills panic, inhibitory learning exposure, why PPPD plateaus at 80 percent',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
             id: '13_sport',
             title: 'Exercise & Cardiovascular Reset',
             seoTitle: 'Exercise & Physical Activity for PPPD Recovery | Point of Support',
@@ -945,6 +1006,15 @@ async function main() {
             seoTitle: 'Medical PTSD & Bilateral EMDR Protocols in PPPD | Point of Support',
             description: 'PTSD from the initial vertigo attack: how traumatic vestibular memories become trapped in the amygdala. Bilateral stimulation (EMDR) protocol.',
             keywords: 'PTSD PPPD, EMDR dizziness, vertigo trauma, bilateral stimulation, butterfly hug technique, medical PTSD',
+            module: 'Module 2: The Battery',
+            paid: true,
+        },
+        {
+            id: '58_symptom_migration',
+            title: 'Symptom Migration',
+            seoTitle: 'Symptom Migration in PPPD — Throat Tightness, Palpitations & IBS | Point of Support',
+            description: 'Why receding dizziness gets replaced by skipped heartbeats, globus pharyngeus (lump in throat), air hunger, tinnitus, or IBS. Insular cortex, vagus nerve neurobiology, and the Mask Reset protocol.',
+            keywords: 'symptom migration anxiety, somatic shifting PPPD, lump in throat dizziness, ectopic heartbeats anxiety, vagus nerve symptoms, air hunger',
             module: 'Module 2: The Battery',
             paid: true,
         },
@@ -1039,6 +1109,15 @@ async function main() {
             paid: true,
         },
         {
+            id: '60_good_person_syndrome',
+            title: 'The "Good Person" Syndrome',
+            seoTitle: 'The "Good Person" Syndrome in PPPD — People-Pleasing, Guilt & Boundaries | Point of Support',
+            description: 'How chronic people-pleasing (the Fawn response), fear of conflict, and suppressed auto-aggression lock the suboccipital neck muscles and fuel PPPD dizziness. Assertiveness & boundary protocol.',
+            keywords: 'people pleasing dizziness, fawn response anxiety, inability to say no psychosomatic, auto aggression neurosis, healthy boundaries PPPD',
+            module: 'Module 3: Mindset',
+            paid: true,
+        },
+        {
             id: '20_setback_anatomy',
             title: 'Anatomy of a Setback',
             seoTitle: 'Anatomy of a Setback in PPPD — Why Flare-ups Happen | Point of Support',
@@ -1062,6 +1141,15 @@ async function main() {
             seoTitle: 'The New Identity After PPPD — Life Beyond Dizziness | Point of Support',
             description: 'Life after recovery: how enduring and conquering PPPD transforms resilience, emotional boundaries, and lifelong biological health.',
             keywords: 'life after PPPD, full recovery dizziness, post traumatic growth, upgraded identity, emotional freedom',
+            module: 'Module 4: Recovery',
+            paid: true,
+        },
+        {
+            id: '62_recovery_plateau',
+            title: 'Breaking the Recovery Plateau',
+            seoTitle: 'Breaking the PPPD Recovery Plateau — From 80% to 100% Remission | Point of Support',
+            description: 'Why PPPD recovery stalls in the "good enough" 80% plateau. Overcoming the porcelain vase mindset, fear of fatigue, caffeine, poor sleep, and travel through nervous system antifragility.',
+            keywords: 'PPPD recovery plateau, residual dizziness 80 percent, fear of fatigue anxiety, antifragility nervous system, full remission PPPD',
             module: 'Module 4: Recovery',
             paid: true,
         },
@@ -1666,12 +1754,12 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Открыть полную систему выздоровления</h2>
-                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 15 глав доступны <strong>бесплатно</strong>. Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
+                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 16 глав доступны <strong>бесплатно</strong>. Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>59 глав книги (Модули 0–4)</span>
+                            <span>64 главы книги (Модули 0–4)</span>
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -1840,12 +1928,12 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Unlock the Complete Protocol</h2>
-                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 15 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
+                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 16 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>59 In-Depth Chapters</span>
+                            <span>64 In-Depth Chapters</span>
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>

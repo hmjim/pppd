@@ -10,6 +10,7 @@ const CHAPTERS_RU = [
     { id: '02_medical_checkup',        title: 'Закрываем дверь в поликлинику',       module: 'Модуль 0: База' },
     { id: '03_baseline_tests',         title: 'Оцифровка: тесты',                    module: 'Модуль 0: База' },
     { id: '57_secondary_gains',        title: 'Вторичные выгоды болезни',            module: 'Модуль 0: База' },
+    { id: '61_fear_of_death_insanity', title: 'Страх смерти и безумия',              module: 'Модуль 0: База' },
     { id: '04_muscle_armor',           title: 'Мышечный панцирь',                    module: 'Модуль 1: Тело' },
     { id: '05_relaxation',             title: 'Релаксация по Джекобсону',            module: 'Модуль 1: Тело' },
     { id: '06_vestibular',             title: 'Вестибулярная гимнастика',            module: 'Модуль 1: Тело' },
@@ -23,10 +24,12 @@ const CHAPTERS_RU = [
     { id: '10_cas_trap',               title: 'Капкан CAS',                          module: 'Модуль 2: Батарейка', paid: true },
     { id: '11_hypochondria',           title: 'Ипохондрия',                          module: 'Модуль 2: Батарейка', paid: true },
     { id: '12_exposure',               title: 'Экспозиция',                          module: 'Модуль 2: Батарейка', paid: true },
+    { id: '59_safety_crutches',        title: 'Костыли безопасности',                module: 'Модуль 2: Батарейка', paid: true },
     { id: '13_sport',                  title: 'Спорт и перезагрузка',                module: 'Модуль 2: Батарейка', paid: true },
     { id: '42_vestibular_migraine',    title: 'Вестибулярная мигрень',               module: 'Модуль 2: Батарейка', paid: true },
     { id: '27_depersonalization',      title: 'Дереализация',                      module: 'Модуль 2: Батарейка', paid: true },
     { id: '43_ptsd_emdr',              title: 'ПТСР и техника ДПДГ (EMDR)',        module: 'Модуль 2: Батарейка', paid: true },
+    { id: '58_symptom_migration',      title: 'Миграция симптома',                   module: 'Модуль 2: Батарейка', paid: true },
     { id: '14_neuroplasticity',        title: 'Нейропластичность',                   module: 'Модуль 3: Мышление', paid: true },
     { id: '15_metacognition',          title: 'Метакогнитивная терапия',              module: 'Модуль 3: Мышление', paid: true },
     { id: '16_cognitive_distortions',  title: 'Когнитивные искажения',               module: 'Модуль 3: Мышление', paid: true },
@@ -36,9 +39,12 @@ const CHAPTERS_RU = [
     { id: '28_suppressed_emotions',    title: 'Подавленные эмоции',                  module: 'Модуль 3: Мышление', paid: true },
     { id: '46_victim_state',           title: 'Выход из позиции Жертвы',             module: 'Модуль 3: Мышление', paid: true },
     { id: '45_shadow_work',            title: 'Принятие Тени',                       module: 'Модуль 3: Мышление', paid: true },
+    { id: '56_mental_boundaries',      title: 'Ментальные границы',                  module: 'Модуль 3: Мышление', paid: true },
+    { id: '60_good_person_syndrome',   title: 'Синдром «Хорошего человека»',         module: 'Модуль 3: Мышление', paid: true },
     { id: '20_setback_anatomy',        title: 'Анатомия отката',                     module: 'Модуль 4: Выход', paid: true },
     { id: '21_storm_strategy',         title: 'Стратегия «Шторм»',                   module: 'Модуль 4: Выход', paid: true },
     { id: '22_new_identity',           title: 'Новая личность',                      module: 'Модуль 4: Выход', paid: true },
+    { id: '62_recovery_plateau',       title: 'Выход на плато',                      module: 'Модуль 4: Выход', paid: true },
     { id: '23_farewell',               title: 'Выход в жизнь',                       module: 'Модуль 4: Выход', paid: true },
     { id: '29_loved_ones',             title: 'Близкие и ПППГ',                      module: 'Модуль 4: Выход', paid: true },
     { id: '24_case_studies',           title: 'Истории выздоровления',               module: 'Кейсы', paid: true },
@@ -52,6 +58,7 @@ const CHAPTERS_EN = [
     { id: '02_medical_checkup',        title: 'Closing the Clinic Door',             module: 'Module 0: Foundation' },
     { id: '03_baseline_tests',         title: 'Baseline Assessment & Tests',         module: 'Module 0: Foundation' },
     { id: '57_secondary_gains',        title: 'Secondary Gains of Illness',          module: 'Module 0: Foundation' },
+    { id: '61_fear_of_death_insanity', title: 'Fear of Death & Insanity',            module: 'Module 0: Foundation' },
     { id: '04_muscle_armor',           title: 'Muscle Armor',                        module: 'Module 1: Body' },
     { id: '05_relaxation',             title: 'Jacobson Progressive Relaxation',     module: 'Module 1: Body' },
     { id: '06_vestibular',             title: 'Vestibular Rehabilitation',           module: 'Module 1: Body' },
@@ -65,10 +72,12 @@ const CHAPTERS_EN = [
     { id: '10_cas_trap',               title: 'The CAS Trap',                        module: 'Module 2: Battery', paid: true },
     { id: '11_hypochondria',           title: 'Health Anxiety & Hypochondria',       module: 'Module 2: Battery', paid: true },
     { id: '12_exposure',               title: 'Graded Exposure',                     module: 'Module 2: Battery', paid: true },
+    { id: '59_safety_crutches',        title: 'Safety Crutches',                     module: 'Module 2: Battery', paid: true },
     { id: '13_sport',                  title: 'Physical Activity & Reset',           module: 'Module 2: Battery', paid: true },
     { id: '42_vestibular_migraine',    title: 'Vestibular Migraine',                 module: 'Module 2: Battery', paid: true },
     { id: '27_depersonalization',      title: 'Derealization & Depersonalization',   module: 'Module 2: Battery', paid: true },
     { id: '43_ptsd_emdr',              title: 'PTSD & EMDR Therapy',                 module: 'Module 2: Battery', paid: true },
+    { id: '58_symptom_migration',      title: 'Symptom Migration',                   module: 'Module 2: Battery', paid: true },
     { id: '14_neuroplasticity',        title: 'Neuroplasticity & Rewiring',          module: 'Module 3: Cognition', paid: true },
     { id: '15_metacognition',          title: 'Metacognitive Therapy (MCT)',         module: 'Module 3: Cognition', paid: true },
     { id: '16_cognitive_distortions',  title: 'Cognitive Distortions',               module: 'Module 3: Cognition', paid: true },
@@ -78,9 +87,12 @@ const CHAPTERS_EN = [
     { id: '28_suppressed_emotions',    title: 'Suppressed Emotions',                 module: 'Module 3: Cognition', paid: true },
     { id: '46_victim_state',           title: 'Exiting the Victim Role',             module: 'Module 3: Cognition', paid: true },
     { id: '45_shadow_work',            title: 'Shadow Work & Integration',           module: 'Module 3: Cognition', paid: true },
+    { id: '56_mental_boundaries',      title: 'Mental Boundaries',                   module: 'Module 3: Cognition', paid: true },
+    { id: '60_good_person_syndrome',   title: 'The "Good Person" Syndrome',          module: 'Module 3: Cognition', paid: true },
     { id: '20_setback_anatomy',        title: 'Anatomy of a Setback',                module: 'Module 4: Breakthrough', paid: true },
     { id: '21_storm_strategy',         title: 'The Storm Protocol',                  module: 'Module 4: Breakthrough', paid: true },
     { id: '22_new_identity',           title: 'New Identity & Integration',          module: 'Module 4: Breakthrough', paid: true },
+    { id: '62_recovery_plateau',       title: 'Breaking the Recovery Plateau',       module: 'Module 4: Breakthrough', paid: true },
     { id: '23_farewell',               title: 'Return to Full Life',                 module: 'Module 4: Breakthrough', paid: true },
     { id: '29_loved_ones',             title: 'Loved Ones & PPPD Support',           module: 'Module 4: Breakthrough', paid: true },
     { id: '24_case_studies',           title: 'Clinical Case Studies',               module: 'Case Studies', paid: true },
@@ -226,13 +238,13 @@ function renderPaywall(chapterEl, index) {
                 <h2 class="paywall-title">Unlock the Complete Protocol</h2>
                 <p class="paywall-text">
                     The chapter "${ch.title || 'Protected Chapter'}" is part of the advanced modules. 
-                    The first 15 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.
+                    The first 16 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.
                 </p>
                 
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>59 In-Depth Chapters</span>
+                        <span>64 In-Depth Chapters</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -298,14 +310,14 @@ function renderPaywall(chapterEl, index) {
                 </div>
                 <h2 class="paywall-title">Открыть полную систему выздоровления</h2>
                 <p class="paywall-text">
-                    Глава «${ch.title || 'Закрытая глава'}» входит в платный блок. Первые 15 глав доступны <strong>бесплатно</strong>. 
+                    Глава «${ch.title || 'Закрытая глава'}» входит в платный блок. Первые 16 глав доступны <strong>бесплатно</strong>. 
                     Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.
                 </p>
                 
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>59 глав книги (Модули 0–4)</span>
+                        <span>64 главы книги (Модули 0–4)</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
