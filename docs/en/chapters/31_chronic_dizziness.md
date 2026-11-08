@@ -94,3 +94,10 @@ No. Osteochondrosis occurs in 90% of people over 30 years of age and does not ca
 ---
 
 > **The book “Point of Support” is a step-by-step system for exiting the PPPD. The first 16 chapters are free — no registration required.**
+
+---
+
+### See also:
+- [PPPD After COVID: Why the Dizziness Won't Go Away After COVID-19](73_pppd_after_covid.html)
+- [You Were Told "VSD"? Here's What's Actually Happening to Your Body](74_vsd_is_pppd.html)
+- [Recovery Roadmap: What to Expect Each Month](77_recovery_roadmap.html)

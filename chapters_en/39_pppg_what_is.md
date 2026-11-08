@@ -1,68 +1,77 @@
-# PPPD - what is it in simple words 
+# PPPD — What It Actually Is, in Plain English
 
-*We explain PPPD in a way that anyone without medical education can understand. No Latin, no abstruse terms.* 
+*No Latin, no jargon, no "we must differentiate the clinical pattern." Just straight talk.*
 
-## Short answer 
+## The Short Version
 
-**PPPD** is when you are constantly swaying, swaying, spinning, your legs are like cotton wool, your head is foggy - but all the tests and MRI are normal. Doctors shrug their shoulders. But this doesn’t make it any easier for you, because it really pumps you up. 
+**PPPD** is when you're constantly swaying, rocking, your legs feel like jelly, your head is full of fog — and every test and MRI comes back normal. Doctors shrug. And that doesn't help one bit, because the swaying is very, very real.
 
-Explanation: **P**ersisting **P**ostural-**Perceptive **G**dizziness. 
-- **Persistent** - constant, chronic (not in attacks, but in the background) 
-- **Postural** - related to body position (worse standing and walking) 
-- **Perceptual** - related to perception (the brain processes signals incorrectly) 
+It stands for **P**ersistent **P**ostural-**P**erceptual **D**izziness.
+- **Persistent** — constant, chronic. Not in attacks, but as background noise. Like the hum of a fan.
+- **Postural** — related to body position. Worse when standing and walking. Better when lying down.
+- **Perceptual** — related to perception. Your brain is misprocessing signals from your body.
 
-In English - **PPPD** (Persistent Postural-Perceptual Dizziness). ICD-11 code: [AB32.0](38_pppg_mkb.html). 
+ICD-11 code: [AB32.0](38_pppg_mkb.html).
 
-## Analogy for understanding 
+## The Analogy That Explains Everything
 
-Imagine a computer. You brought it to the service center because it is slow. The technician checked: the hard drive is working, the RAM is normal, the processor is not overheating. All hardware is in good order. 
+Imagine a computer. You bring it to a repair shop: "It's lagging, freezing, glitching." The technician checks: hard drive works, RAM is fine, CPU isn't overheating. All the hardware is in perfect shape.
 
-But the computer still slows down. Why? Because **antivirus** (your alarm) is running at maximum and scanning every file (every sensation in the body) for a deadly threat. The processor is overloaded. The system freezes. 
+But the computer still lags. Why?
 
-PPPD is a **software glitch**, not a breakdown of parts. The iron is intact. The software is buggy. 
+Because the **antivirus** (your anxiety) is cranked up to maximum and scanning every single file (every sensation in your body) for a lethal threat. The CPU is overloaded. The system hangs. Errors pop up that have nothing to do with the hardware — but you can see them right there on the screen.
 
-## How it begins 
+PPPD is a **software glitch**, not a hardware failure. The parts are fine. It's the software that's bugging out. And it's the software you need to fix — not swap out the graphics card.
 
-Typically, PPPD is triggered by a specific trigger event: 
+## How It Starts
 
-- **BPPV** (benign paroxysmal positional vertigo) - “pebbles” in the inner ear caused an acute attack. He was cured with the Epley maneuver, but the brain “remembered” the sensation 
-- **Panic attack** - the first panic attack was so terrible that the brain went into constant alarm mode 
-- **Severe stress** - prolonged overload (work, relationships, finances) has exhausted the nervous system 
-- **Vestibular neuronitis** - inflammation of the nerve has passed, but the brain has not “recalibrated” back 
+PPPD doesn't appear out of thin air. There's usually a specific trigger event:
 
-After the trigger, the brain gets stuck in “DANGER” mode and cannot turn off the alarm scanner. This is [adrenaline loop](09_adrenaline_loop.html). 
+- **[BPPV](54_dppg_vs_pppg_difference.html)** — tiny crystals in the inner ear caused an acute spinning episode. It was fixed with the Epley maneuver, but the brain "remembered" the sensation and keeps replaying it
+- **Panic attack** — the first episode was so terrifying that the brain switched into permanent high-alert mode
+- **Severe stress** — prolonged overload (work, relationships, finances, loss) burned out the nervous system
+- **Vestibular neuritis** — the inflammation of the vestibular nerve healed, but the brain never "recalibrated" back to normal
 
-## What does PPPD feel like?
+After the trigger, the brain gets stuck in "DANGER" mode and can't turn off the alarm scanner. This is the [adrenaline loop](09_adrenaline_loop.html): symptom → fear → adrenaline → symptom gets worse → even more fear.
 
-- 🚶 **Unsteadiness when walking** - [like on the deck of a ship](32_unsteadiness.html) 
-- 🌫 **Fog in the head** - [cotton wool, heaviness, lethargy](33_brain_fog.html) 
-- 😰 **Anxiety** - fear of falling, losing consciousness, “going crazy” 
-- 👁 **Discomfort from visual load** - shops, screens, crowds 
-- 💤 **Fatigue** - even after sleep 
-- 🪨 **Tension in the neck and shoulders** - [muscle armor](04_muscle_armor.html) 
-- 😶‍🌫️ **Derealization** - the world [as if behind glass](27_depersonalization.html) 
+## What PPPD Feels Like
 
-Full [list of PPPD symptoms](36_pppg_symptoms.html) - with Barany Society criteria. 
+- 🚶 **Unsteadiness when walking** — [like being on the deck of a ship](32_unsteadiness.html)
+- 🌫 **[Brain fog](33_brain_fog.html)** — cotton wool, heaviness, "can't think straight"
+- 😰 **Anxiety** — fear of falling, passing out, "losing your mind"
+- 👁 **Discomfort from visual stimulation** — stores, screens, crowds
+- 💤 **Exhaustion** — even after 10 hours of sleep
+- 🪨 **Neck and shoulder tension** — [muscle armor](04_muscle_armor.html)
+- 😶‍🌫️ **[Derealization](27_depersonalization.html)** — the world feels like it's behind glass
 
-## Can PPPD be cured? 
+Full [list of PPPD symptoms](36_pppg_symptoms.html) — with Bárány Society criteria.
 
-**Yes.** PPPD is a completely reversible functional disorder. Not organic. Not progressive. Not fatal. 
+## Can PPPD Be Cured?
 
-Recovery time: 
-- During active work: **2–6 months** 
-- Without treatment: can last for years (the record in our group is 30 years) 
+**Yes.** Completely. This is not a chronic condition you "learn to live with." It's a functional glitch, and it is **reversible**.
 
-Evidence-based treatments: 
-1. [Vestibular gymnastics](06_vestibular.html) 
-2. [Cognitive behavioral therapy](34_cbt_for_dizziness.html) 
-3. [Exposure](12_exposure.html) (gradual immersion in frightening situations) 
-4. [Physical activity](13_sport.html) 
-5. SSRIs (as prescribed by a doctor) 
+Recovery timeline:
+- With active daily work: **2–6 months**
+- Without treatment: can drag on for years (in our community, the record is 30 years of waiting for it to "go away on its own")
 
-Detailed [PPPD treatment guide](30_treatment_overview.html). 
+Five evidence-based methods:
+1. [Vestibular rehabilitation](06_vestibular.html) — retraining the brain
+2. [Cognitive behavioral therapy](34_cbt_for_dizziness.html) — working with thought patterns
+3. [Exposure therapy](12_exposure.html) — stepping into the situations that scare you
+4. [Physical activity](13_sport.html) — lowering cortisol
+5. SSRIs (prescribed by a doctor) — [more on medication](51_medications_for_pppg.html)
 
-## Where to read next 
+Detailed [PPPD treatment guide](30_treatment_overview.html).
 
-The book “[Point of Support](../)” is a step-by-step system for exiting the PPPD. 64 chapters, 5 modules. Written by someone who went through PPPD himself and made a full recovery. The first 16 chapters are free. 
+## Where to Read More
 
-[Telegram support group for people with PPPD →](https://t.me/pppd_vertigo)
+The book "[Point of Support](../)" — a step-by-step system for overcoming PPPD. 64 chapters, 5 modules. Written by someone who went through PPPD themselves and fully recovered. First 16 chapters — free.
+
+[PPPD Telegram community →](https://t.me/pppd_vertigo)
+
+---
+
+### See also:
+- [PPPD Symptoms — The Complete Checklist](36_pppg_symptoms.html)
+- [PPPD — ICD-10 and ICD-11 Codes](38_pppg_mkb.html)
+- [PPPD Treatment: A Complete Guide to Recovery](30_treatment_overview.html)

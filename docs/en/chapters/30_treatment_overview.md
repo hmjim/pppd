@@ -111,3 +111,10 @@ Not necessarily. SSRIs are a tool that helps reduce the intensity of symptoms in
 ---
 
 > **This chapter is an overview. Each of the five treatment methods is described in detail in separate chapters of the book “Point of Support”. The first 16 chapters are free.**
+
+---
+
+### See also:
+- [Recovery Roadmap: What to Expect Each Month](77_recovery_roadmap.html)
+- [Your Day from Wake-Up to Sleep: The Complete Protocol](76_daily_protocol.html)
+- [How to Treat Psychosomatics: A Step-by-Step Recovery Plan](69_how_to_cure_psychosomatics.html)

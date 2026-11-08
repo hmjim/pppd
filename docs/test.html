@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Самооценка головокружения и тревожности — тесты DHI и HADS из книги «Точка Опоры» о восстановлении при ПППГ">
+<meta name="keywords" content="DHI, HADS, ПППГ, PPPD, головокружение, тревожность, депрессия, самооценка, Точка Опоры">
+<meta name="author" content="Точка Опоры">
+<title>Тест DHI и HADS — Точка Опоры</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#1a1a2e;--bg2:#16213e;--bg3:#0f3460;
+--card:#1e2746;--card-hover:#253256;
+--text:#e0e0e0;--text-muted:#8892a4;--text-heading:#f5f5f5;
+--accent:#e94560;--accent2:#f5a623;--accent3:#00b894;
+--green:#00b894;--yellow:#f5a623;--red:#e94560;
+--border:#2a3a5c;
+--radius:12px;--radius-sm:8px;
+--shadow:0 4px 24px rgba(0,0,0,.3);
+--transition:all .3s ease;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.header{background:linear-gradient(135deg,var(--bg2),var(--bg3));padding:1.5rem;text-align:center;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.header h1{font-size:1.6rem;color:var(--text-heading);margin-bottom:.25rem}
+.header p{color:var(--text-muted);font-size:.9rem}
+.header-controls{display:flex;justify-content:center;gap:.75rem;margin-top:.75rem;flex-wrap:wrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.2rem;border:none;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--transition);font-family:inherit}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#d63851;transform:translateY(-1px)}
+.btn-secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--card-hover)}
+.btn-sm{padding:.35rem .8rem;font-size:.8rem}
+.btn-icon{width:36px;height:36px;padding:0;justify-content:center;border-radius:50%}
+
+/* Lang toggle */
+.lang-toggle{background:var(--card);border:1px solid var(--border);color:var(--text);padding:.4rem .8rem;border-radius:var(--radius-sm);cursor:pointer;font-size:.85rem;font-weight:600}
+.lang-toggle:hover{background:var(--card-hover)}
+
+/* Progress */
+.progress-wrap{background:var(--bg2);padding:.75rem 1.5rem;border-bottom:1px solid var(--border)}
+.progress-bar{height:6px;background:var(--card);border-radius:3px;overflow:hidden;margin-top:.4rem}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:3px;transition:width .4s ease;width:0%}
+.progress-text{font-size:.8rem;color:var(--text-muted)}
+
+/* Main */
+.container{max-width:800px;margin:0 auto;padding:1.5rem 1rem 4rem}
+
+/* Tabs */
+.tabs{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.tab{flex:1;min-width:120px;padding:.7rem;border:2px solid var(--border);border-radius:var(--radius-sm);background:var(--card);color:var(--text-muted);font-size:.9rem;font-weight:600;cursor:pointer;text-align:center;transition:var(--transition)}
+.tab.active{border-color:var(--accent);color:var(--text-heading);background:rgba(233,69,96,.1)}
+.tab:hover:not(.active){border-color:var(--text-muted)}
+
+/* Section */
+.section{display:none;animation:fadeIn .4s ease}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Question Card */
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;margin-bottom:1rem;transition:var(--transition)}
+.q-card:hover{border-color:var(--accent);background:var(--card-hover)}
+.q-card.answered{border-left:3px solid var(--green)}
+.q-num{font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:.4rem;letter-spacing:.5px}
+.q-text{font-size:1rem;color:var(--text-heading);margin-bottom:.8rem;line-height:1.5}
+.q-options{display:flex;flex-wrap:wrap;gap:.5rem}
+.q-opt{flex:1;min-width:80px;padding:.5rem .6rem;border:1px solid var(--border);border-radius:var(--radius-sm);background:transparent;color:var(--text);font-size:.85rem;cursor:pointer;transition:var(--transition);text-align:center;font-family:inherit}
+.q-opt:hover{border-color:var(--accent2);background:rgba(245,166,35,.08)}
+.q-opt.selected{background:rgba(233,69,96,.15);border-color:var(--accent);color:#fff;font-weight:600}
+
+/* Results */
+.results-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem}
+.results-panel h2{color:var(--text-heading);margin-bottom:1rem;font-size:1.3rem}
+.score-block{background:var(--bg2);border-radius:var(--radius-sm);padding:1rem;margin-bottom:1rem}
+.score-label{font-size:.85rem;color:var(--text-muted);margin-bottom:.3rem}
+.score-value{font-size:2rem;font-weight:800}
+.score-value.green{color:var(--green)}
+.score-value.yellow{color:var(--yellow)}
+.score-value.red{color:var(--red)}
+.score-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin:.5rem 0}
+.score-bar-fill{height:100%;border-radius:4px;transition:width .6s ease}
+.score-desc{font-size:.85rem;color:var(--text-muted);margin-top:.3rem}
+.severity-badge{display:inline-block;padding:.2rem .7rem;border-radius:20px;font-size:.8rem;font-weight:700;margin-top:.3rem}
+.severity-badge.green{background:rgba(0,184,148,.15);color:var(--green)}
+.severity-badge.yellow{background:rgba(245,166,35,.15);color:var(--yellow)}
+.severity-badge.red{background:rgba(233,69,96,.15);color:var(--red)}
+
+.recommendation{background:linear-gradient(135deg,rgba(233,69,96,.08),rgba(245,166,35,.08));border:1px solid var(--accent);border-radius:var(--radius);padding:1.2rem;margin-top:1rem;font-size:.9rem;line-height:1.6}
+.recommendation strong{color:var(--accent)}
+
+.subscale-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.subscale-item{flex:1;min-width:140px;background:var(--bg2);border-radius:var(--radius-sm);padding:.8rem;text-align:center}
+.subscale-item .label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px}
+.subscale-item .val{font-size:1.5rem;font-weight:800;margin:.2rem 0}
+
+/* History */
+.history-section{margin-top:2rem}
+.history-entry{background:var(--bg2);border-radius:var(--radius-sm);padding:.8rem;margin-bottom:.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.history-entry .date{font-size:.8rem;color:var(--text-muted)}
+.history-entry .scores{font-size:.85rem}
+.history-empty{color:var(--text-muted);font-size:.9rem;font-style:italic}
+
+/* Info */
+.info-box{background:var(--bg2);border-left:3px solid var(--accent2);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem;margin-bottom:1.5rem;font-size:.85rem;color:var(--text-muted);line-height:1.6}
+.info-box strong{color:var(--text)}
+
+/* Footer */
+.footer{text-align:center;padding:2rem 1rem;color:var(--text-muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:2rem}
+
+/* Print */
+@media print{
+  .header,.progress-wrap,.tabs,.btn,.lang-toggle,.history-section,.footer,.no-print{display:none!important}
+  body{background:#fff;color:#000}
+  .container{max-width:100%;padding:0}
+  .q-card,.results-panel,.score-block,.subscale-item{background:#f9f9f9;border:1px solid #ddd;color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .q-text,.score-value,.score-label{color:#000!important}
+  .score-value.green{color:#00855a!important}
+  .score-value.yellow{color:#b87a00!important}
+  .score-value.red{color:#c0392b!important}
+  .severity-badge{border:1px solid #999}
+  .recommendation{border:1px solid #c0392b;background:#fff5f5}
+}
+
+/* Responsive */
+@media(max-width:600px){
+  .header h1{font-size:1.3rem}
+  .q-options{flex-direction:column}
+  .q-opt{min-width:auto}
+  .subscale-row{flex-direction:column}
+  .score-value{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 id="mainTitle">📋 Самооценка: DHI и HADS</h1>
+  <p id="mainSubtitle">Валидированные клинические опросники из книги «Точка Опоры»</p>
+  <div class="header-controls">
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">EN 🌐</button>
+    <button class="btn btn-secondary btn-sm no-print" onclick="resetAll()" id="resetBtn">🔄 Сбросить</button>
+    <button class="btn btn-secondary btn-sm no-print" onclick="window.print()" id="printBtn">🖨️ Печать</button>
+  </div>
+</div>
+
+<div class="progress-wrap" id="progressWrap">
+  <div class="progress-text"><span id="progressLabel">Прогресс</span>: <span id="progressCount">0</span> / <span id="progressTotal">39</span></div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+</div>
+
+<div class="container">
+  <div class="tabs no-print">
+    <button class="tab active" onclick="showSection('dhi')" id="tabDHI">DHI — <span data-i18n="tabDHILabel">Головокружение</span></button>
+    <button class="tab" onclick="showSection('hads')" id="tabHADS">HADS — <span data-i18n="tabHADSLabel">Тревога и Депрессия</span></button>
+    <button class="tab" onclick="showSection('results')" id="tabResults"><span data-i18n="tabResultsLabel">Результаты</span></button>
+    <button class="tab" onclick="showSection('history')" id="tabHistory"><span data-i18n="tabHistoryLabel">История</span></button>
+  </div>
+
+  <!-- DHI SECTION -->
+  <div class="section active" id="sec-dhi">
+    <div class="info-box" id="dhiInfo">
+      <strong>DHI (Dizziness Handicap Inventory)</strong> — стандартизированный опросник из 25 вопросов для оценки влияния головокружения на повседневную жизнь. Категории: <strong>P</strong> — физические, <strong>E</strong> — эмоциональные, <strong>F</strong> — функциональные аспекты. Максимум: 100 баллов.
+    </div>
+    <div id="dhiQuestions"></div>
+  </div>
+
+  <!-- HADS SECTION -->
+  <div class="section" id="sec-hads">
+    <div class="info-box" id="hadsInfo">
+      <strong>HADS (Hospital Anxiety and Depression Scale)</strong> — госпитальная шкала тревоги и депрессии. 14 вопросов: 7 на тревожность (A) и 7 на депрессию (D). Максимум по каждой шкале: 21 балл.
+    </div>
+    <div id="hadsQuestions"></div>
+  </div>
+
+  <!-- RESULTS SECTION -->
+  <div class="section" id="sec-results">
+    <div class="results-panel" id="resultsPanel">
+      <h2 id="resultsTitle">📊 Ваши результаты</h2>
+      <div id="resultsContent">
+        <p id="resultsPlaceholder" style="color:var(--text-muted);font-style:italic">Ответьте на все вопросы, чтобы увидеть результаты.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HISTORY SECTION -->
+  <div class="section" id="sec-history">
+    <div class="results-panel">
+      <h2 id="historyTitle">📅 История результатов</h2>
+      <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem" id="historyDesc">Результаты сохраняются в вашем браузере для отслеживания прогресса.</p>
+      <div id="historyList"></div>
+      <button class="btn btn-secondary btn-sm no-print" onclick="clearHistory()" id="clearHistBtn" style="margin-top:1rem">🗑️ Очистить историю</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><a href="../index.html" id="bookLink">← Вернуться к книге «Точка Опоры»</a></p>
+  <p style="margin-top:.5rem" id="footerDisclaimer">Данные тесты носят информационный характер и не заменяют консультацию специалиста.</p>
+</div>
+
+<script>
+// ===== DATA =====
+const DATA = {
+  ru: {
+    mainTitle: '📋 Самооценка: DHI и HADS',
+    mainSubtitle: 'Валидированные клинические опросники из книги «Точка Опоры»',
+    langBtn: 'EN 🌐',
+    resetBtn: '🔄 Сбросить',
+    printBtn: '🖨️ Печать',
+    progressLabel: 'Прогресс',
+    tabDHILabel: 'Головокружение',
+    tabHADSLabel: 'Тревога и Депрессия',
+    tabResultsLabel: 'Результаты',
+    tabHistoryLabel: 'История',
+    dhiInfo: '<strong>DHI (Dizziness Handicap Inventory)</strong> — стандартизированный опросник из 25 вопросов для оценки влияния головокружения на повседневную жизнь. Категории: <strong>P</strong> — физические, <strong>E</strong> — эмоциональные, <strong>F</strong> — функциональные аспекты. Максимум: 100 баллов.',
+    hadsInfo: '<strong>HADS (Hospital Anxiety and Depression Scale)</strong> — госпитальная шкала тревоги и депрессии. 14 вопросов: 7 на тревожность (A) и 7 на депрессию (D). Максимум по каждой шкале: 21 балл.',
+    resultsTitle: '📊 Ваши результаты',
+    resultsPlaceholder: 'Ответьте на все вопросы, чтобы увидеть результаты.',
+    historyTitle: '📅 История результатов',
+    historyDesc: 'Результаты сохраняются в вашем браузере для отслеживания прогресса.',
+    clearHistBtn: '🗑️ Очистить историю',
+    bookLink: '← Вернуться к книге «Точка Опоры»',
+    footerDisclaimer: 'Данные тесты носят информационный характер и не заменяют консультацию специалиста.',
+    saveBtn: '💾 Сохранить результат',
+    printResBtn: '🖨️ Печать результатов',
+    dhiLabel: 'DHI — Общий балл',
+    dhiPhysical: 'Физические (P)',
+    dhiEmotional: 'Эмоциональные (E)',
+    dhiFunctional: 'Функциональные (F)',
+    hadsAnxiety: 'HADS — Тревожность (A)',
+    hadsDepression: 'HADS — Депрессия (D)',
+    mild: 'Лёгкая степень',
+    moderate: 'Умеренная степень',
+    severe: 'Тяжёлая степень',
+    norm: 'Норма',
+    subclinical: 'Субклинический уровень',
+    clinical: 'Клинический уровень',
+    of: 'из',
+    saved: 'Результат сохранён!',
+    historyEmpty: 'История пуста. Пройдите тесты и сохраните результат.',
+    cleared: 'История очищена.',
+    yes: 'Да',
+    sometimes: 'Иногда',
+    no: 'Нет',
+    dhiQuestions: [
+      {id:'P1',cat:'P',text:'Взглянув наверх, усиливается ли проблема?'},
+      {id:'E2',cat:'E',text:'Чувствуете ли вы себя подавленным из-за этой проблемы?'},
+      {id:'F3',cat:'F',text:'Ограничиваете ли вы путешествия (работу/отдых) из-за этой проблемы?'},
+      {id:'P4',cat:'P',text:'Увеличивает ли прогулка по магазину эту проблему?'},
+      {id:'F5',cat:'F',text:'Испытываете ли вы трудности, ложась в кровать или вставая, из-за проблемы?'},
+      {id:'F6',cat:'F',text:'Значительно ли эта проблема ограничивает участие в общественных мероприятиях?'},
+      {id:'F7',cat:'F',text:'Трудно ли вам читать из-за этой проблемы?'},
+      {id:'P8',cat:'P',text:'Усиливает ли проблему выполнение более сложных действий, таких как спорт, танцы, работа по дому?'},
+      {id:'E9',cat:'E',text:'Боитесь ли вы выходить из дома без сопровождения?'},
+      {id:'E10',cat:'E',text:'Испытывали ли вы неловкость перед другими из-за этой проблемы?'},
+      {id:'P11',cat:'P',text:'Усиливают ли быстрые движения головой эту проблему?'},
+      {id:'F12',cat:'F',text:'Избегаете ли вы высоты из-за этой проблемы?'},
+      {id:'P13',cat:'P',text:'Усиливается ли проблема при повороте в кровати?'},
+      {id:'F14',cat:'F',text:'Трудно ли вам делать тяжёлую работу по дому или во дворе из-за этой проблемы?'},
+      {id:'E15',cat:'E',text:'Боитесь ли вы, что люди могут подумать, что вы пьяны?'},
+      {id:'F16',cat:'F',text:'Трудно ли вам ходить одному из-за этой проблемы?'},
+      {id:'P17',cat:'P',text:'Усиливается ли проблема при ходьбе по тротуару?'},
+      {id:'E18',cat:'E',text:'Трудно ли вам сосредоточиться из-за этой проблемы?'},
+      {id:'F19',cat:'F',text:'Трудно ли вам ходить по дому в темноте из-за этой проблемы?'},
+      {id:'E20',cat:'E',text:'Боитесь ли вы оставаться дома одному из-за этой проблемы?'},
+      {id:'E21',cat:'E',text:'Чувствуете ли вы себя инвалидом из-за этой проблемы?'},
+      {id:'E22',cat:'E',text:'Вызывала ли эта проблема напряжение в отношениях с близкими или друзьями?'},
+      {id:'E23',cat:'E',text:'Чувствуете ли вы себя подавленным из-за этой проблемы?'},
+      {id:'F24',cat:'F',text:'Ухудшается ли проблема из-за выполнения рабочих обязанностей?'},
+      {id:'P25',cat:'P',text:'Наклоны усиливают проблему?'}
+    ],
+    hadsQuestions: [
+      {id:'A1',cat:'A',text:'Я испытываю напряжение, мне не по себе:',opts:[
+        {text:'Всё время',val:3},{text:'Часто',val:2},{text:'Время от времени',val:1},{text:'Совсем не испытываю',val:0}
+      ]},
+      {id:'D2',cat:'D',text:'То, что приносило мне большое удовольствие, и сейчас вызывает такое же чувство:',opts:[
+        {text:'Определённо, это так',val:0},{text:'Наверное, это так',val:1},{text:'Лишь в очень малой степени',val:2},{text:'Это совсем не так',val:3}
+      ]},
+      {id:'A3',cat:'A',text:'Я испытываю страх, кажется, будто что-то ужасное может вот-вот случиться:',opts:[
+        {text:'Определённо это так, и страх очень велик',val:3},{text:'Да, но страх не очень велик',val:2},{text:'Иногда, но это меня не беспокоит',val:1},{text:'Совсем не испытываю',val:0}
+      ]},
+      {id:'D4',cat:'D',text:'Я способен рассмеяться и увидеть в том или ином событии смешное:',opts:[
+        {text:'Определённо, это так',val:0},{text:'Наверное, это так',val:1},{text:'Лишь в очень малой степени',val:2},{text:'Совсем не способен',val:3}
+      ]},
+      {id:'A5',cat:'A',text:'Беспокойные мысли крутятся у меня в голове:',opts:[
+        {text:'Постоянно',val:3},{text:'Большую часть времени',val:2},{text:'Время от времени',val:1},{text:'Только иногда',val:0}
+      ]},
+      {id:'D6',cat:'D',text:'Я испытываю бодрость:',opts:[
+        {text:'Совсем не испытываю',val:3},{text:'Очень редко',val:2},{text:'Иногда',val:1},{text:'Практически всё время',val:0}
+      ]},
+      {id:'A7',cat:'A',text:'Я легко могу сесть и расслабиться:',opts:[
+        {text:'Определённо, это так',val:0},{text:'Наверное, это так',val:1},{text:'Лишь изредка это так',val:2},{text:'Совсем не могу',val:3}
+      ]},
+      {id:'D8',cat:'D',text:'Мне кажется, что я стал всё делать очень медленно:',opts:[
+        {text:'Практически всё время',val:3},{text:'Часто',val:2},{text:'Иногда',val:1},{text:'Совсем нет',val:0}
+      ]},
+      {id:'A9',cat:'A',text:'Я испытываю внутреннее напряжение или дрожь:',opts:[
+        {text:'Совсем не испытываю',val:0},{text:'Иногда',val:1},{text:'Часто',val:2},{text:'Очень часто',val:3}
+      ]},
+      {id:'D10',cat:'D',text:'Я не слежу за своей внешностью:',opts:[
+        {text:'Определённо, это так',val:3},{text:'Я не уделяю этому столько времени, сколько нужно',val:2},{text:'Может быть, я стал меньше уделять этому внимания',val:1},{text:'Я слежу за собой так же, как и раньше',val:0}
+      ]},
+      {id:'A11',cat:'A',text:'Я испытываю неусидчивость, словно мне постоянно нужно двигаться:',opts:[
+        {text:'Определённо, это так',val:3},{text:'Наверное, это так',val:2},{text:'Лишь в некоторой степени это так',val:1},{text:'Совсем не испытываю',val:0}
+      ]},
+      {id:'D12',cat:'D',text:'Я считаю, что мои дела (занятия, увлечения) могут принести мне чувство удовлетворения:',opts:[
+        {text:'Точно так же, как и обычно',val:0},{text:'Да, но не в той степени, как раньше',val:1},{text:'Значительно меньше',val:2},{text:'Совсем так не считаю',val:3}
+      ]},
+      {id:'A13',cat:'A',text:'У меня бывает внезапное чувство паники:',opts:[
+        {text:'Очень часто',val:3},{text:'Довольно часто',val:2},{text:'Не так уж часто',val:1},{text:'Совсем не бывает',val:0}
+      ]},
+      {id:'D14',cat:'D',text:'Я могу получить удовольствие от хорошей книги, радио- или телепрограммы:',opts:[
+        {text:'Часто',val:0},{text:'Иногда',val:1},{text:'Редко',val:2},{text:'Очень редко',val:3}
+      ]}
+    ],
+    dhiSeverity: function(s){return s<=30?'mild':s<=60?'moderate':'severe'},
+    hadsSeverity: function(s){return s<=7?'norm':s<=10?'subclinical':'clinical'},
+    recommendation: function(dhi,anx,dep){
+      var parts=[];
+      if(dhi>60) parts.push('Ваш DHI — '+dhi+' — это указывает на <strong>тяжёлую степень</strong> влияния головокружения. Книга «Точка Опоры» может помочь снизить этот показатель на 60–80% за 4–6 месяцев.');
+      else if(dhi>30) parts.push('Ваш DHI — '+dhi+' — это <strong>умеренная степень</strong> влияния. Упражнения и подходы из «Точки Опоры» помогут значительно улучшить состояние.');
+      else parts.push('Ваш DHI — '+dhi+' — это <strong>лёгкая степень</strong>. Продолжайте работу по восстановлению!');
+      if(anx>10) parts.push('Уровень тревожности ('+anx+') указывает на <strong>клинически значимую тревогу</strong>. Рекомендуется обратиться к специалисту.');
+      else if(anx>7) parts.push('Уровень тревожности ('+anx+') — <strong>субклинический</strong>. Обратите внимание на техники управления тревогой из книги.');
+      if(dep>10) parts.push('Уровень депрессии ('+dep+') указывает на <strong>клинически значимую депрессию</strong>. Рекомендуется консультация специалиста.');
+      else if(dep>7) parts.push('Уровень депрессии ('+dep+') — <strong>субклинический</strong>. Программа восстановления поможет улучшить настроение.');
+      return parts.join('<br><br>');
+    }
+  },
+  en: {
+    mainTitle: '📋 Self-Assessment: DHI & HADS',
+    mainSubtitle: 'Validated clinical questionnaires from "Point of Support" (Точка Опоры)',
+    langBtn: 'RU 🌐',
+    resetBtn: '🔄 Reset',
+    printBtn: '🖨️ Print',
+    progressLabel: 'Progress',
+    tabDHILabel: 'Dizziness',
+    tabHADSLabel: 'Anxiety & Depression',
+    tabResultsLabel: 'Results',
+    tabHistoryLabel: 'History',
+    dhiInfo: '<strong>DHI (Dizziness Handicap Inventory)</strong> — a standardized 25-question survey assessing the impact of dizziness on daily life. Categories: <strong>P</strong> — Physical, <strong>E</strong> — Emotional, <strong>F</strong> — Functional. Maximum: 100 points.',
+    hadsInfo: '<strong>HADS (Hospital Anxiety and Depression Scale)</strong> — a hospital anxiety and depression scale. 14 questions: 7 for anxiety (A) and 7 for depression (D). Maximum per subscale: 21 points.',
+    resultsTitle: '📊 Your Results',
+    resultsPlaceholder: 'Answer all questions to see your results.',
+    historyTitle: '📅 Results History',
+    historyDesc: 'Results are saved in your browser to track progress over time.',
+    clearHistBtn: '🗑️ Clear History',
+    bookLink: '← Back to "Point of Support" book',
+    footerDisclaimer: 'These tests are for informational purposes only and do not replace professional consultation.',
+    saveBtn: '💾 Save Result',
+    printResBtn: '🖨️ Print Results',
+    dhiLabel: 'DHI — Total Score',
+    dhiPhysical: 'Physical (P)',
+    dhiEmotional: 'Emotional (E)',
+    dhiFunctional: 'Functional (F)',
+    hadsAnxiety: 'HADS — Anxiety (A)',
+    hadsDepression: 'HADS — Depression (D)',
+    mild: 'Mild',
+    moderate: 'Moderate',
+    severe: 'Severe',
+    norm: 'Normal',
+    subclinical: 'Subclinical',
+    clinical: 'Clinical',
+    of: 'of',
+    saved: 'Result saved!',
+    historyEmpty: 'No history yet. Complete the tests and save a result.',
+    cleared: 'History cleared.',
+    yes: 'Yes',
+    sometimes: 'Sometimes',
+    no: 'No',
+    dhiQuestions: [
+      {id:'P1',cat:'P',text:'Does looking up increase your problem?'},
+      {id:'E2',cat:'E',text:'Because of your problem, do you feel frustrated?'},
+      {id:'F3',cat:'F',text:'Because of your problem, do you restrict your travel for business or recreation?'},
+      {id:'P4',cat:'P',text:'Does walking down the aisle of a supermarket increase your problem?'},
+      {id:'F5',cat:'F',text:'Because of your problem, do you have difficulty getting into or out of bed?'},
+      {id:'F6',cat:'F',text:'Does your problem significantly restrict your participation in social activities?'},
+      {id:'F7',cat:'F',text:'Because of your problem, do you have difficulty reading?'},
+      {id:'P8',cat:'P',text:'Does performing more ambitious activities like sports, dancing, household chores increase your problem?'},
+      {id:'E9',cat:'E',text:'Because of your problem, are you afraid to leave your home without having someone accompany you?'},
+      {id:'E10',cat:'E',text:'Because of your problem, have you been embarrassed in front of others?'},
+      {id:'P11',cat:'P',text:'Do quick movements of your head increase your problem?'},
+      {id:'F12',cat:'F',text:'Because of your problem, do you avoid heights?'},
+      {id:'P13',cat:'P',text:'Does turning over in bed increase your problem?'},
+      {id:'F14',cat:'F',text:'Because of your problem, is it difficult for you to do strenuous housework or yard work?'},
+      {id:'E15',cat:'E',text:'Because of your problem, are you afraid people may think you are intoxicated?'},
+      {id:'F16',cat:'F',text:'Because of your problem, is it difficult for you to go for a walk by yourself?'},
+      {id:'P17',cat:'P',text:'Does walking down a sidewalk increase your problem?'},
+      {id:'E18',cat:'E',text:'Because of your problem, is it difficult for you to concentrate?'},
+      {id:'F19',cat:'F',text:'Because of your problem, is it difficult for you to walk around your house in the dark?'},
+      {id:'E20',cat:'E',text:'Because of your problem, are you afraid to stay home alone?'},
+      {id:'E21',cat:'E',text:'Because of your problem, do you feel handicapped?'},
+      {id:'E22',cat:'E',text:'Has the problem placed stress on your relationships with members of your family or friends?'},
+      {id:'E23',cat:'E',text:'Because of your problem, are you depressed?'},
+      {id:'F24',cat:'F',text:'Does your problem interfere with your job or household responsibilities?'},
+      {id:'P25',cat:'P',text:'Does bending over increase your problem?'}
+    ],
+    hadsQuestions: [
+      {id:'A1',cat:'A',text:'I feel tense or wound up:',opts:[
+        {text:'Most of the time',val:3},{text:'A lot of the time',val:2},{text:'From time to time',val:1},{text:'Not at all',val:0}
+      ]},
+      {id:'D2',cat:'D',text:'I still enjoy the things I used to enjoy:',opts:[
+        {text:'Definitely as much',val:0},{text:'Not quite so much',val:1},{text:'Only a little',val:2},{text:'Hardly at all',val:3}
+      ]},
+      {id:'A3',cat:'A',text:'I get a sort of frightened feeling as if something awful is about to happen:',opts:[
+        {text:'Very definitely and quite badly',val:3},{text:'Yes, but not too badly',val:2},{text:'A little, but it doesn\'t worry me',val:1},{text:'Not at all',val:0}
+      ]},
+      {id:'D4',cat:'D',text:'I can laugh and see the funny side of things:',opts:[
+        {text:'As much as I always could',val:0},{text:'Not quite so much now',val:1},{text:'Definitely not so much now',val:2},{text:'Not at all',val:3}
+      ]},
+      {id:'A5',cat:'A',text:'Worrying thoughts go through my mind:',opts:[
+        {text:'A great deal of the time',val:3},{text:'A lot of the time',val:2},{text:'From time to time',val:1},{text:'Only occasionally',val:0}
+      ]},
+      {id:'D6',cat:'D',text:'I feel cheerful:',opts:[
+        {text:'Not at all',val:3},{text:'Not often',val:2},{text:'Sometimes',val:1},{text:'Most of the time',val:0}
+      ]},
+      {id:'A7',cat:'A',text:'I can sit at ease and feel relaxed:',opts:[
+        {text:'Definitely',val:0},{text:'Usually',val:1},{text:'Not often',val:2},{text:'Not at all',val:3}
+      ]},
+      {id:'D8',cat:'D',text:'I feel as if I am slowed down:',opts:[
+        {text:'Nearly all the time',val:3},{text:'Very often',val:2},{text:'Sometimes',val:1},{text:'Not at all',val:0}
+      ]},
+      {id:'A9',cat:'A',text:'I get a sort of frightened feeling like butterflies in the stomach:',opts:[
+        {text:'Not at all',val:0},{text:'Occasionally',val:1},{text:'Quite often',val:2},{text:'Very often',val:3}
+      ]},
+      {id:'D10',cat:'D',text:'I have lost interest in my appearance:',opts:[
+        {text:'Definitely',val:3},{text:'I don\'t take as much care',val:2},{text:'I may not take quite as much care',val:1},{text:'I take just as much care',val:0}
+      ]},
+      {id:'A11',cat:'A',text:'I feel restless as if I have to be on the move:',opts:[
+        {text:'Very much indeed',val:3},{text:'Quite a lot',val:2},{text:'Not very much',val:1},{text:'Not at all',val:0}
+      ]},
+      {id:'D12',cat:'D',text:'I look forward with enjoyment to things:',opts:[
+        {text:'As much as I ever did',val:0},{text:'Rather less than I used to',val:1},{text:'Definitely less',val:2},{text:'Hardly at all',val:3}
+      ]},
+      {id:'A13',cat:'A',text:'I get sudden feelings of panic:',opts:[
+        {text:'Very often indeed',val:3},{text:'Quite often',val:2},{text:'Not very often',val:1},{text:'Not at all',val:0}
+      ]},
+      {id:'D14',cat:'D',text:'I can enjoy a good book or radio or TV program:',opts:[
+        {text:'Often',val:0},{text:'Sometimes',val:1},{text:'Not often',val:2},{text:'Very seldom',val:3}
+      ]}
+    ],
+    dhiSeverity: function(s){return s<=30?'mild':s<=60?'moderate':'severe'},
+    hadsSeverity: function(s){return s<=7?'norm':s<=10?'subclinical':'clinical'},
+    recommendation: function(dhi,anx,dep){
+      var parts=[];
+      if(dhi>60) parts.push('Your DHI is '+dhi+' — this indicates a <strong>severe</strong> dizziness handicap. The book "Point of Support" can help you reduce this score by 60–80% in 4–6 months.');
+      else if(dhi>30) parts.push('Your DHI is '+dhi+' — this indicates a <strong>moderate</strong> handicap. Exercises and approaches from "Point of Support" can significantly improve your condition.');
+      else parts.push('Your DHI is '+dhi+' — this is a <strong>mild</strong> level. Keep up the recovery work!');
+      if(anx>10) parts.push('Your anxiety level ('+anx+') indicates <strong>clinically significant anxiety</strong>. Professional consultation is recommended.');
+      else if(anx>7) parts.push('Your anxiety level ('+anx+') is <strong>subclinical</strong>. Consider anxiety management techniques from the book.');
+      if(dep>10) parts.push('Your depression level ('+dep+') indicates <strong>clinically significant depression</strong>. Professional consultation is recommended.');
+      else if(dep>7) parts.push('Your depression level ('+dep+') is <strong>subclinical</strong>. The recovery program can help improve your mood.');
+      return parts.join('<br><br>');
+    }
+  }
+};
+
+// ===== STATE =====
+var lang = 'ru';
+var answers = {dhi:{},hads:{}};
+
+function L(key){return DATA[lang][key]||key}
+
+// ===== RENDER =====
+function renderDHI(){
+  var c=document.getElementById('dhiQuestions');
+  c.innerHTML='';
+  var qs=DATA[lang].dhiQuestions;
+  qs.forEach(function(q,i){
+    var card=document.createElement('div');
+    card.className='q-card'+(answers.dhi[q.id]!==undefined?' answered':'');
+    card.id='dhi-card-'+q.id;
+    card.innerHTML='<div class="q-num">'+q.id+' ('+q.cat+')</div>'+
+      '<div class="q-text">'+(i+1)+'. '+q.text+'</div>'+
+      '<div class="q-options">'+
+        '<button class="q-opt'+(answers.dhi[q.id]===4?' selected':'')+'" onclick="selectDHI(\''+q.id+'\',4,this)">'+L('yes')+' (4)</button>'+
+        '<button class="q-opt'+(answers.dhi[q.id]===2?' selected':'')+'" onclick="selectDHI(\''+q.id+'\',2,this)">'+L('sometimes')+' (2)</button>'+
+        '<button class="q-opt'+(answers.dhi[q.id]===0?' selected':'')+'" onclick="selectDHI(\''+q.id+'\',0,this)">'+L('no')+' (0)</button>'+
+      '</div>';
+    c.appendChild(card);
+  });
+}
+
+function renderHADS(){
+  var c=document.getElementById('hadsQuestions');
+  c.innerHTML='';
+  var qs=DATA[lang].hadsQuestions;
+  qs.forEach(function(q,i){
+    var card=document.createElement('div');
+    card.className='q-card'+(answers.hads[q.id]!==undefined?' answered':'');
+    card.id='hads-card-'+q.id;
+    var optsHtml='<div class="q-options" style="flex-direction:column">';
+    q.opts.forEach(function(o){
+      optsHtml+='<button class="q-opt'+(answers.hads[q.id]===o.val?' selected':'')+'" style="text-align:left;min-width:auto" onclick="selectHADS(\''+q.id+'\','+o.val+',this)">'+o.text+' <span style="opacity:.5">('+o.val+')</span></button>';
+    });
+    optsHtml+='</div>';
+    card.innerHTML='<div class="q-num">'+q.id+' ('+q.cat+')</div>'+
+      '<div class="q-text">'+(i+1)+'. '+q.text+'</div>'+optsHtml;
+    c.appendChild(card);
+  });
+}
+
+function selectDHI(id,val,btn){
+  answers.dhi[id]=val;
+  var card=document.getElementById('dhi-card-'+id);
+  card.className='q-card answered';
+  card.querySelectorAll('.q-opt').forEach(function(b){b.classList.remove('selected')});
+  btn.classList.add('selected');
+  updateProgress();
+  updateResults();
+}
+
+function selectHADS(id,val,btn){
+  answers.hads[id]=val;
+  var card=document.getElementById('hads-card-'+id);
+  card.className='q-card answered';
+  card.querySelectorAll('.q-opt').forEach(function(b){b.classList.remove('selected')});
+  btn.classList.add('selected');
+  updateProgress();
+  updateResults();
+}
+
+function updateProgress(){
+  var total=39;
+  var done=Object.keys(answers.dhi).length+Object.keys(answers.hads).length;
+  document.getElementById('progressCount').textContent=done;
+  document.getElementById('progressFill').style.width=(done/total*100)+'%';
+}
+
+function calcScores(){
+  var dhiTotal=0,dhiP=0,dhiE=0,dhiF=0;
+  var qs=DATA[lang].dhiQuestions;
+  qs.forEach(function(q){
+    var v=answers.dhi[q.id];
+    if(v===undefined) v=0;
+    dhiTotal+=v;
+    if(q.cat==='P') dhiP+=v;
+    else if(q.cat==='E') dhiE+=v;
+    else dhiF+=v;
+  });
+  var anxTotal=0,depTotal=0;
+  var hq=DATA[lang].hadsQuestions;
+  hq.forEach(function(q){
+    var v=answers.hads[q.id];
+    if(v===undefined) v=0;
+    if(q.cat==='A') anxTotal+=v;
+    else depTotal+=v;
+  });
+  return {dhiTotal:dhiTotal,dhiP:dhiP,dhiE:dhiE,dhiF:dhiF,anxTotal:anxTotal,depTotal:depTotal};
+}
+
+function sevColor(sev){
+  if(sev==='mild'||sev==='norm') return 'green';
+  if(sev==='moderate'||sev==='subclinical') return 'yellow';
+  return 'red';
+}
+
+function updateResults(){
+  var dhiDone=Object.keys(answers.dhi).length;
+  var hadsDone=Object.keys(answers.hads).length;
+  if(dhiDone===0 && hadsDone===0){
+    document.getElementById('resultsContent').innerHTML='<p style="color:var(--text-muted);font-style:italic">'+L('resultsPlaceholder')+'</p>';
+    return;
+  }
+  var sc=calcScores();
+  var dhiSev=DATA[lang].dhiSeverity(sc.dhiTotal);
+  var anxSev=DATA[lang].hadsSeverity(sc.anxTotal);
+  var depSev=DATA[lang].hadsSeverity(sc.depTotal);
+  var html='';
+
+  // DHI
+  html+='<div class="score-block">';
+  html+='<div class="score-label">'+L('dhiLabel')+'</div>';
+  html+='<div class="score-value '+sevColor(dhiSev)+'">'+sc.dhiTotal+' <span style="font-size:.9rem;font-weight:400">/ 100</span></div>';
+  html+='<div class="score-bar"><div class="score-bar-fill" style="width:'+sc.dhiTotal+'%;background:var(--'+sevColor(dhiSev)+')"></div></div>';
+  html+='<span class="severity-badge '+sevColor(dhiSev)+'">'+L(dhiSev)+'</span>';
+  html+='<div class="subscale-row" style="margin-top:.8rem">';
+  html+='<div class="subscale-item"><div class="label">'+L('dhiPhysical')+'</div><div class="val '+sevColor(dhiSev)+'">'+sc.dhiP+'</div><div class="label">/ 28</div></div>';
+  html+='<div class="subscale-item"><div class="label">'+L('dhiEmotional')+'</div><div class="val '+sevColor(dhiSev)+'">'+sc.dhiE+'</div><div class="label">/ 36</div></div>';
+  html+='<div class="subscale-item"><div class="label">'+L('dhiFunctional')+'</div><div class="val '+sevColor(dhiSev)+'">'+sc.dhiF+'</div><div class="label">/ 36</div></div>';
+  html+='</div></div>';
+
+  // HADS Anxiety
+  html+='<div class="score-block">';
+  html+='<div class="score-label">'+L('hadsAnxiety')+'</div>';
+  html+='<div class="score-value '+sevColor(anxSev)+'">'+sc.anxTotal+' <span style="font-size:.9rem;font-weight:400">/ 21</span></div>';
+  html+='<div class="score-bar"><div class="score-bar-fill" style="width:'+(sc.anxTotal/21*100)+'%;background:var(--'+sevColor(anxSev)+')"></div></div>';
+  html+='<span class="severity-badge '+sevColor(anxSev)+'">'+L(anxSev)+'</span>';
+  html+='</div>';
+
+  // HADS Depression
+  html+='<div class="score-block">';
+  html+='<div class="score-label">'+L('hadsDepression')+'</div>';
+  html+='<div class="score-value '+sevColor(depSev)+'">'+sc.depTotal+' <span style="font-size:.9rem;font-weight:400">/ 21</span></div>';
+  html+='<div class="score-bar"><div class="score-bar-fill" style="width:'+(sc.depTotal/21*100)+'%;background:var(--'+sevColor(depSev)+')"></div></div>';
+  html+='<span class="severity-badge '+sevColor(depSev)+'">'+L(depSev)+'</span>';
+  html+='</div>';
+
+  // Recommendation
+  var rec=DATA[lang].recommendation(sc.dhiTotal,sc.anxTotal,sc.depTotal);
+  if(rec){
+    html+='<div class="recommendation"><strong>💡 '+(lang==='ru'?'Рекомендация':'Recommendation')+':</strong><br><br>'+rec+'</div>';
+  }
+
+  // Buttons
+  html+='<div style="display:flex;gap:.5rem;margin-top:1.2rem;flex-wrap:wrap" class="no-print">';
+  html+='<button class="btn btn-primary" onclick="saveResult()">'+L('saveBtn')+'</button>';
+  html+='<button class="btn btn-secondary" onclick="window.print()">'+L('printResBtn')+'</button>';
+  html+='</div>';
+
+  document.getElementById('resultsContent').innerHTML=html;
+}
+
+// ===== SECTIONS & TABS =====
+function showSection(name){
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active')});
+  document.getElementById('sec-'+name).classList.add('active');
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+  var tabs={dhi:'tabDHI',hads:'tabHADS',results:'tabResults',history:'tabHistory'};
+  document.getElementById(tabs[name]).classList.add('active');
+  if(name==='results') updateResults();
+  if(name==='history') renderHistory();
+}
+
+// ===== LANGUAGE =====
+function toggleLang(){
+  lang=lang==='ru'?'en':'ru';
+  applyLang();
+}
+
+function applyLang(){
+  document.getElementById('mainTitle').textContent=L('mainTitle');
+  document.getElementById('mainSubtitle').textContent=L('mainSubtitle');
+  document.getElementById('langBtn').textContent=L('langBtn');
+  document.getElementById('resetBtn').textContent=L('resetBtn');
+  document.getElementById('printBtn').textContent=L('printBtn');
+  document.getElementById('progressLabel').textContent=L('progressLabel');
+  document.querySelector('[data-i18n="tabDHILabel"]').textContent=L('tabDHILabel');
+  document.querySelector('[data-i18n="tabHADSLabel"]').textContent=L('tabHADSLabel');
+  document.querySelector('[data-i18n="tabResultsLabel"]').textContent=L('tabResultsLabel');
+  document.querySelector('[data-i18n="tabHistoryLabel"]').textContent=L('tabHistoryLabel');
+  document.getElementById('dhiInfo').innerHTML=L('dhiInfo');
+  document.getElementById('hadsInfo').innerHTML=L('hadsInfo');
+  document.getElementById('resultsTitle').textContent=L('resultsTitle');
+  document.getElementById('historyTitle').textContent=L('historyTitle');
+  document.getElementById('historyDesc').textContent=L('historyDesc');
+  document.getElementById('clearHistBtn').textContent=L('clearHistBtn');
+  document.getElementById('bookLink').textContent=L('bookLink');
+  document.getElementById('footerDisclaimer').textContent=L('footerDisclaimer');
+  document.documentElement.lang=lang;
+  renderDHI();
+  renderHADS();
+  updateResults();
+  renderHistory();
+}
+
+// ===== RESET =====
+function resetAll(){
+  answers={dhi:{},hads:{}};
+  renderDHI();
+  renderHADS();
+  updateProgress();
+  updateResults();
+  showSection('dhi');
+}
+
+// ===== HISTORY (localStorage) =====
+function getHistory(){
+  try{return JSON.parse(localStorage.getItem('tochka_opory_test_history')||'[]')}catch(e){return[]}
+}
+function setHistory(h){
+  localStorage.setItem('tochka_opory_test_history',JSON.stringify(h));
+}
+
+function saveResult(){
+  var sc=calcScores();
+  var entry={
+    date:new Date().toISOString(),
+    dhi:sc.dhiTotal,dhiP:sc.dhiP,dhiE:sc.dhiE,dhiF:sc.dhiF,
+    anxiety:sc.anxTotal,depression:sc.depTotal
+  };
+  var h=getHistory();
+  h.push(entry);
+  setHistory(h);
+  alert(L('saved'));
+  renderHistory();
+}
+
+function renderHistory(){
+  var h=getHistory();
+  var c=document.getElementById('historyList');
+  if(!h.length){
+    c.innerHTML='<p class="history-empty">'+L('historyEmpty')+'</p>';
+    return;
+  }
+  var html='';
+  h.slice().reverse().forEach(function(e,i){
+    var d=new Date(e.date);
+    var ds=d.toLocaleDateString(lang==='ru'?'ru-RU':'en-US',{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+    html+='<div class="history-entry">'+
+      '<span class="date">'+ds+'</span>'+
+      '<span class="scores">DHI: <strong>'+e.dhi+'</strong> | A: <strong>'+e.anxiety+'</strong> | D: <strong>'+e.depression+'</strong></span>'+
+    '</div>';
+  });
+  c.innerHTML=html;
+}
+
+function clearHistory(){
+  localStorage.removeItem('tochka_opory_test_history');
+  renderHistory();
+  alert(L('cleared'));
+}
+
+// ===== INIT =====
+renderDHI();
+renderHADS();
+updateProgress();
+renderHistory();
+</script>
+</body>
+</html>
