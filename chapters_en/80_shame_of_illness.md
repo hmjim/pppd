@@ -1,11 +1,4 @@
----
-title: "The Shame of Illness: Why You Hide Your Dizziness"
-description: "How shame over PPPD destroys you from the inside, why it amplifies your symptoms, and how to stop being ashamed of an illness nobody can see"
-keywords: ["shame of illness", "PPPD shame", "ashamed of being sick", "dizziness shame", "hiding illness"]
-hidden: true
----
-
-# The Shame of Illness: Why You Hide Your Dizziness
+﻿# The Shame of Illness: Why You Hide Your Dizziness
 
 ## The Invisible Wound
 

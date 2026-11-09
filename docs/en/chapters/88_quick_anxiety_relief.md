@@ -1,11 +1,4 @@
----
-title: "Quick Anxiety Relief"
-description: "Emergency anxiety relief techniques: 5-4-3-2-1 grounding, 4-7-8 breathing, cold water, progressive muscle relaxation — and why they work"
-keywords: ["quick anxiety relief", "anxiety techniques", "panic attack what to do", "grounding anxiety"]
-hidden: true
----
-
-# Quick Anxiety Relief: A First-Aid Kit for Your Nervous System
+﻿# Quick Anxiety Relief: A First-Aid Kit for Your Nervous System
 
 It hit you. Your hands are shaking. Your heart is pounding. Your thoughts are racing. The world is spinning. You want it to stop right now.
 

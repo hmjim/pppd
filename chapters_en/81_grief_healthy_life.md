@@ -1,11 +1,4 @@
----
-title: "Grieving Your Healthy Life: How to Mourn the Person You Used to Be"
-description: "The five stages of grief with PPPD — from denial to acceptance. How to stop clinging to your past self and start building a new one"
-keywords: ["grieving healthy life", "PPPD loss", "accepting illness", "PPPD stages of grief", "grieving chronic illness"]
-hidden: true
----
-
-# Grieving Your Healthy Life: How to Mourn the Person You Used to Be
+﻿# Grieving Your Healthy Life: How to Mourn the Person You Used to Be
 
 ## The Photo on the Desktop
 

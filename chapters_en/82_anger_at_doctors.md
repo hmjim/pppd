@@ -1,11 +1,4 @@
----
-title: "Anger at Doctors: How to Stop Hating the Ones Who Didn't Listen"
-description: "Why doctors fail to diagnose PPPD, how years of wrong treatment destroy trust, and why you need to forgive those who got it wrong"
-keywords: ["anger at doctors", "PPPD doctors", "misdiagnosis", "VSD dizziness", "Mexidol doesn't help"]
-hidden: true
----
-
-# Anger at Doctors: How to Stop Hating the Ones Who Didn't Listen
+﻿# Anger at Doctors: How to Stop Hating the Ones Who Didn't Listen
 
 ## "You're Fine, Go Home"
 

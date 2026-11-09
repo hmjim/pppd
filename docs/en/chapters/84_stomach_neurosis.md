@@ -1,11 +1,4 @@
----
-title: "Stomach Neurosis and IBS from Anxiety"
-description: "Why anxiety causes stomach pain, where stomach neurosis and IBS come from, and what the vagus nerve and serotonin have to do with it"
-keywords: ["stomach neurosis", "IBS from anxiety", "functional dyspepsia anxiety", "stomach pain from nerves"]
-hidden: true
----
-
-# Stomach Neurosis and IBS from Anxiety: When Your Gut Is a Second Brain
+﻿# Stomach Neurosis and IBS from Anxiety: When Your Gut Is a Second Brain
 
 You've done every test. Gastroscopy, colonoscopy, ultrasound. The doctor looked at the results, shrugged, and said: "Everything's normal. Try some digestive enzymes."
 

@@ -1,11 +1,4 @@
----
-title: "Asthenia and Chronic Fatigue in Neurosis"
-description: "Why anxiety and PPPD make you feel constantly exhausted, where asthenia comes from, and why rest doesn't help"
-keywords: ["asthenia neurosis", "chronic fatigue anxiety", "fatigue PPPD", "exhaustion from nerves"]
-hidden: true
----
-
-# Asthenia and Chronic Fatigue in Neurosis: Battery Full, Charger Broken
+﻿# Asthenia and Chronic Fatigue in Neurosis: Battery Full, Charger Broken
 
 You slept ten hours. Woke up feeling like you'd been unloading freight cars all night. Had coffee — didn't help. Lay down — didn't help. Took a week off — first two days seemed a little better, then on the third you were a wrung-out lemon again.
 

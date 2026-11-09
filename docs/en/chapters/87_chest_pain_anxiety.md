@@ -1,11 +1,4 @@
----
-title: "Chest Pain from Anxiety"
-description: "Why anxiety causes chest pain, how nerve-related pain differs from heart pain, and when you should actually call an ambulance"
-keywords: ["chest pain from anxiety", "heart pain from nerves", "cardiac neurosis", "chest pain stress"]
-hidden: true
----
-
-# Chest Pain from Anxiety: When You're Sure You're Dying, but the ECG Is Normal
+﻿# Chest Pain from Anxiety: When You're Sure You're Dying, but the ECG Is Normal
 
 A stab in your chest. Your heart lurches. Your left arm goes slightly numb. You dialed 911 and sat on the floor, back pressed against the wall, saying your goodbyes to life.
 

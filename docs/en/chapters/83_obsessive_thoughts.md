@@ -1,11 +1,4 @@
----
-title: "Obsessive Thoughts and OCD in PPPD"
-description: "Why PPPD triggers obsessive health-related thoughts, how it differs from OCD, and how to stop the anxious broken record in your head"
-keywords: ["obsessive thoughts PPPD", "OCD dizziness", "intrusive thoughts anxiety", "health anxiety obsessive thoughts"]
-hidden: true
----
-
-# Obsessive Thoughts and OCD in PPPD: When Your Head Won't Let Go
+﻿# Obsessive Thoughts and OCD in PPPD: When Your Head Won't Let Go
 
 "What if it's a tumor?"
 "What if I collapse right here on the subway?"
