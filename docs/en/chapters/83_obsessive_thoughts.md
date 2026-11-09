@@ -1,4 +1,4 @@
-﻿# Obsessive Thoughts and OCD in PPPD: When Your Head Won't Let Go
+# Obsessive Thoughts and OCD in PPPD: When Your Head Won't Let Go
 
 "What if it's a tumor?"
 "What if I collapse right here on the subway?"

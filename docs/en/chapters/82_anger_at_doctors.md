@@ -1,4 +1,4 @@
-﻿# Anger at Doctors: How to Stop Hating the Ones Who Didn't Listen
+# Anger at Doctors: How to Stop Hating the Ones Who Didn't Listen
 
 ## "You're Fine, Go Home"
 

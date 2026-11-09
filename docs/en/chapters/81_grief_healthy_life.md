@@ -1,4 +1,4 @@
-﻿# Grieving Your Healthy Life: How to Mourn the Person You Used to Be
+# Grieving Your Healthy Life: How to Mourn the Person You Used to Be
 
 ## The Photo on the Desktop
 

@@ -1,4 +1,4 @@
-﻿# Chest Pain from Anxiety: When You're Sure You're Dying, but the ECG Is Normal
+# Chest Pain from Anxiety: When You're Sure You're Dying, but the ECG Is Normal
 
 A stab in your chest. Your heart lurches. Your left arm goes slightly numb. You dialed 911 and sat on the floor, back pressed against the wall, saying your goodbyes to life.
 

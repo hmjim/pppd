@@ -1,4 +1,4 @@
-﻿# Itching and Skin Symptoms from Stress: When Your Skin Screams for the Nervous System
+# Itching and Skin Symptoms from Stress: When Your Skin Screams for the Nervous System
 
 You're itching for no visible reason. The dermatologist looked, scraped, ran tests — no allergies, no fungus, no parasites.
 

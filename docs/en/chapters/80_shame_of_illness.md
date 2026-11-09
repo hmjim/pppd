@@ -1,4 +1,4 @@
-﻿# The Shame of Illness: Why You Hide Your Dizziness
+# The Shame of Illness: Why You Hide Your Dizziness
 
 ## The Invisible Wound
 

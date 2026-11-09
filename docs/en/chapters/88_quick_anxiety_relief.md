@@ -1,4 +1,4 @@
-﻿# Quick Anxiety Relief: A First-Aid Kit for Your Nervous System
+# Quick Anxiety Relief: A First-Aid Kit for Your Nervous System
 
 It hit you. Your hands are shaking. Your heart is pounding. Your thoughts are racing. The world is spinning. You want it to stop right now.
 

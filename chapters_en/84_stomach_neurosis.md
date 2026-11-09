@@ -1,4 +1,4 @@
-﻿# Stomach Neurosis and IBS from Anxiety: When Your Gut Is a Second Brain
+# Stomach Neurosis and IBS from Anxiety: When Your Gut Is a Second Brain
 
 You've done every test. Gastroscopy, colonoscopy, ultrasound. The doctor looked at the results, shrugged, and said: "Everything's normal. Try some digestive enzymes."
 
