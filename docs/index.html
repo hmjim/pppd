@@ -2,22 +2,22 @@
 <html lang="ru">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K4QD4CK8');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z4JVYQE1S"></script>
+    <!-- Google Tag Manager (deferred) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-6Z4JVYQE1S');
+      setTimeout(function(){
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(w,d,'script','dataLayer','GTM-K4QD4CK8');
+        var gs=d.createElement('script');gs.async=true;gs.src='https://www.googletagmanager.com/gtag/js?id=G-6Z4JVYQE1S';d.head.appendChild(gs);
+      }.bind(null,window,document), 2500);
     </script>
-    <!-- End Google tag (gtag.js) -->
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="yandex-verification" content="6be3b87c7d2e2742" />
@@ -356,7 +356,19 @@
         }
 
         .seo-toc-item.locked {
-            opacity: 0.7;
+            color: #8b949e;
+        }
+
+        .seo-toc-item.locked .ch-num {
+            color: #6e7681;
+        }
+
+        body.light .seo-toc-item.locked {
+            color: #656d76;
+        }
+
+        body.light .seo-toc-item.locked .ch-num {
+            color: #8c959f;
         }
 
         .seo-toc-item.locked::after {
@@ -1235,7 +1247,7 @@
         (function () {
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var isSubdir = window.location.pathname.includes('/chapters/');
-                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1795527766499?v=' + Date.now();
+                var pdfUrl = (isSubdir ? '../' : '') + 'r_015744dc3f28b49e.pdf?v=1795528302149?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
                 var c = document.getElementById('cta-pdf-link');
                 if (s) { s.href = pdfUrl; s.download = 'Точка_Опоры_Выход_из_ПППГ.pdf'; s.style.display = ''; }
