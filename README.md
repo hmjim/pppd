@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://hmjim.github.io/pppd/"><img src="https://img.shields.io/badge/🌐_Read_Online-hmjim.github.io%2Fpppd-6366f1?style=for-the-badge" alt="Read Online"></a>
+  <a href="https://pppd.tech/"><img src="https://img.shields.io/badge/🌐_Read_Online-pppd.tech-6366f1?style=for-the-badge" alt="Read Online"></a>
   <a href="https://t.me/pppd_vertigo"><img src="https://img.shields.io/badge/Telegram-PPPD_Community-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
 </p>
 
@@ -75,7 +75,7 @@ PPPD is the **second most common cause** of dizziness consultations in otoneurol
 
 | Resource | Link |
 |---|---|
-| 🌐 **Web Version** | [hmjim.github.io/pppd](https://hmjim.github.io/pppd/) |
+| 🌐 **Web Version** | [pppd.tech](https://pppd.tech/) |
 | 💬 **Telegram Community** | [@pppd_vertigo](https://t.me/pppd_vertigo) |
 | 📸 **Instagram** | [@max_pppd](https://www.instagram.com/max_pppd) |
 | ✉️ **Author** | [@Hmjim](https://t.me/Hmjim) |

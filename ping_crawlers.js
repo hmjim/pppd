@@ -1,7 +1,7 @@
 const https = require('https');
 
 const KEY = '8d7f2a1b5c4e9f3a0d6e8b1c2a4f5d6e';
-const HOST = 'hmjim.github.io';
+const HOST = 'pppd.tech';
 const KEY_LOCATION = `https://${HOST}/pppd/${KEY}.txt`;
 
 const URL_LIST = [

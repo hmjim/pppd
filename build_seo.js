@@ -7,7 +7,7 @@ let minifiedCss = '';
 async function main() {
     const { marked } = await import('marked');
 
-    const SITE_URL = 'https://hmjim.github.io/pppd';
+    const SITE_URL = 'https://pppd.tech';
     const DOCS_DIR = path.join(__dirname, 'docs');
     const SRC_RU_DIR = path.join(__dirname, 'chapters_src');
     const SRC_EN_DIR = path.join(__dirname, 'chapters_en');

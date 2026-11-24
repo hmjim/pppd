@@ -54,4 +54,4 @@ Allow: /
 Disallow: /*.pdf
 Disallow: /*.md
 
-Sitemap: https://hmjim.github.io/pppd/sitemap.xml
+Sitemap: https://pppd.tech/sitemap.xml
