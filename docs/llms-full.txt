@@ -13,7 +13,7 @@
 | Тематика | ПППГ (PPPD), вестибулярная реабилитация, невроз, психосоматика |
 | Объём | 47 глав, 5 модулей, 160+ страниц |
 | Язык | Русский |
-| URL | https://hmjim.github.io/pppd/ |
+| URL | https://pppd.tech/ |
 | Telegram | https://t.me/pppd_vertigo |
 | МКБ-10 | H81.8 |
 | Доказательная база | КПТ, метакогнитивная терапия, вестибулярная реабилитация |
@@ -154,59 +154,59 @@
 
 ## Полная карта сайта
 
-- Главная: https://hmjim.github.io/pppd/
-- Вступление: https://hmjim.github.io/pppd/chapters/00_introduction.html
-- Что такое ПППГ: https://hmjim.github.io/pppd/chapters/01_what_is_pppg.html
-- Обследования: https://hmjim.github.io/pppd/chapters/02_medical_checkup.html
-- Тесты DHI и HADS: https://hmjim.github.io/pppd/chapters/03_baseline_tests.html
-- Мышечный панцирь: https://hmjim.github.io/pppd/chapters/04_muscle_armor.html
-- Релаксация: https://hmjim.github.io/pppd/chapters/05_relaxation.html
-- Вестибулярная гимнастика: https://hmjim.github.io/pppd/chapters/06_vestibular.html
-- Нейрофизиология: https://hmjim.github.io/pppd/chapters/07_neurophysiology_basics.html
-- Зрительная зависимость: https://hmjim.github.io/pppd/chapters/08_visual_dependence.html
-- Адреналиновая петля: https://hmjim.github.io/pppd/chapters/09_adrenaline_loop.html
-- Ловушка CAS: https://hmjim.github.io/pppd/chapters/10_cas_trap.html
-- Ипохондрия: https://hmjim.github.io/pppd/chapters/11_hypochondria.html
-- Экспозиция: https://hmjim.github.io/pppd/chapters/12_exposure.html
-- Спорт при ПППГ: https://hmjim.github.io/pppd/chapters/13_sport.html
-- Нейропластичность: https://hmjim.github.io/pppd/chapters/14_neuroplasticity.html
-- Метакогнитивная терапия: https://hmjim.github.io/pppd/chapters/15_metacognition.html
-- Когнитивные искажения: https://hmjim.github.io/pppd/chapters/16_cognitive_distortions.html
-- Корневые причины: https://hmjim.github.io/pppd/chapters/17_root_causes.html
-- Эго: https://hmjim.github.io/pppd/chapters/18_ego.html
-- Внутренний ребёнок: https://hmjim.github.io/pppd/chapters/19_inner_child.html
-- Анатомия отката: https://hmjim.github.io/pppd/chapters/20_setback_anatomy.html
-- Стратегия шторма: https://hmjim.github.io/pppd/chapters/21_storm_strategy.html
-- Новая идентичность: https://hmjim.github.io/pppd/chapters/22_new_identity.html
-- Прощание: https://hmjim.github.io/pppd/chapters/23_farewell.html
-- Кейсы: https://hmjim.github.io/pppd/chapters/24_case_studies.html
-- Приложение: https://hmjim.github.io/pppd/chapters/25_appendix.html
-- Сон: https://hmjim.github.io/pppd/chapters/26_sleep.html
-- Деперсонализация: https://hmjim.github.io/pppd/chapters/27_depersonalization.html
-- Подавленные эмоции: https://hmjim.github.io/pppd/chapters/28_suppressed_emotions.html
-- Близким: https://hmjim.github.io/pppd/chapters/29_loved_ones.html
-- Обзор лечения: https://hmjim.github.io/pppd/chapters/30_treatment_overview.html
-- Хроническое головокружение: https://hmjim.github.io/pppd/chapters/31_chronic_dizziness.html
-- Шаткость: https://hmjim.github.io/pppd/chapters/32_unsteadiness.html
-- Туман в голове: https://hmjim.github.io/pppd/chapters/33_brain_fog.html
-- КПТ при головокружении: https://hmjim.github.io/pppd/chapters/34_cbt_for_dizziness.html
-- Психосоматическое головокружение: https://hmjim.github.io/pppd/chapters/35_psychosomatic_dizziness.html
-- Симптомы ПППГ: https://hmjim.github.io/pppd/chapters/36_pppg_symptoms.html
-- Головокружение при ПППГ: https://hmjim.github.io/pppd/chapters/37_pppg_dizziness.html
-- ПППГ и МКБ: https://hmjim.github.io/pppd/chapters/38_pppg_mkb.html
-- Что такое ПППГ простыми словами: https://hmjim.github.io/pppd/chapters/39_pppg_what_is.html
-- Дереализация при ПППГ: https://hmjim.github.io/pppd/chapters/40_derealization_pppg.html
-- Психосоматика: https://hmjim.github.io/pppd/chapters/41_psychosomatics.html
-- Вестибулярная мигрень: https://hmjim.github.io/pppd/chapters/42_vestibular_migraine.html
-- ПТСР и EMDR: https://hmjim.github.io/pppd/chapters/43_ptsd_emdr.html
-- Тренировка внимания: https://hmjim.github.io/pppd/chapters/44_attention_training.html
-- Теневая работа: https://hmjim.github.io/pppd/chapters/45_shadow_work.html
-- Состояние жертвы: https://hmjim.github.io/pppd/chapters/46_victim_state.html
-- Медитация: https://hmjim.github.io/pppd/chapters/47_meditation.html
+- Главная: https://pppd.tech/
+- Вступление: https://pppd.tech/chapters/00_introduction.html
+- Что такое ПППГ: https://pppd.tech/chapters/01_what_is_pppg.html
+- Обследования: https://pppd.tech/chapters/02_medical_checkup.html
+- Тесты DHI и HADS: https://pppd.tech/chapters/03_baseline_tests.html
+- Мышечный панцирь: https://pppd.tech/chapters/04_muscle_armor.html
+- Релаксация: https://pppd.tech/chapters/05_relaxation.html
+- Вестибулярная гимнастика: https://pppd.tech/chapters/06_vestibular.html
+- Нейрофизиология: https://pppd.tech/chapters/07_neurophysiology_basics.html
+- Зрительная зависимость: https://pppd.tech/chapters/08_visual_dependence.html
+- Адреналиновая петля: https://pppd.tech/chapters/09_adrenaline_loop.html
+- Ловушка CAS: https://pppd.tech/chapters/10_cas_trap.html
+- Ипохондрия: https://pppd.tech/chapters/11_hypochondria.html
+- Экспозиция: https://pppd.tech/chapters/12_exposure.html
+- Спорт при ПППГ: https://pppd.tech/chapters/13_sport.html
+- Нейропластичность: https://pppd.tech/chapters/14_neuroplasticity.html
+- Метакогнитивная терапия: https://pppd.tech/chapters/15_metacognition.html
+- Когнитивные искажения: https://pppd.tech/chapters/16_cognitive_distortions.html
+- Корневые причины: https://pppd.tech/chapters/17_root_causes.html
+- Эго: https://pppd.tech/chapters/18_ego.html
+- Внутренний ребёнок: https://pppd.tech/chapters/19_inner_child.html
+- Анатомия отката: https://pppd.tech/chapters/20_setback_anatomy.html
+- Стратегия шторма: https://pppd.tech/chapters/21_storm_strategy.html
+- Новая идентичность: https://pppd.tech/chapters/22_new_identity.html
+- Прощание: https://pppd.tech/chapters/23_farewell.html
+- Кейсы: https://pppd.tech/chapters/24_case_studies.html
+- Приложение: https://pppd.tech/chapters/25_appendix.html
+- Сон: https://pppd.tech/chapters/26_sleep.html
+- Деперсонализация: https://pppd.tech/chapters/27_depersonalization.html
+- Подавленные эмоции: https://pppd.tech/chapters/28_suppressed_emotions.html
+- Близким: https://pppd.tech/chapters/29_loved_ones.html
+- Обзор лечения: https://pppd.tech/chapters/30_treatment_overview.html
+- Хроническое головокружение: https://pppd.tech/chapters/31_chronic_dizziness.html
+- Шаткость: https://pppd.tech/chapters/32_unsteadiness.html
+- Туман в голове: https://pppd.tech/chapters/33_brain_fog.html
+- КПТ при головокружении: https://pppd.tech/chapters/34_cbt_for_dizziness.html
+- Психосоматическое головокружение: https://pppd.tech/chapters/35_psychosomatic_dizziness.html
+- Симптомы ПППГ: https://pppd.tech/chapters/36_pppg_symptoms.html
+- Головокружение при ПППГ: https://pppd.tech/chapters/37_pppg_dizziness.html
+- ПППГ и МКБ: https://pppd.tech/chapters/38_pppg_mkb.html
+- Что такое ПППГ простыми словами: https://pppd.tech/chapters/39_pppg_what_is.html
+- Дереализация при ПППГ: https://pppd.tech/chapters/40_derealization_pppg.html
+- Психосоматика: https://pppd.tech/chapters/41_psychosomatics.html
+- Вестибулярная мигрень: https://pppd.tech/chapters/42_vestibular_migraine.html
+- ПТСР и EMDR: https://pppd.tech/chapters/43_ptsd_emdr.html
+- Тренировка внимания: https://pppd.tech/chapters/44_attention_training.html
+- Теневая работа: https://pppd.tech/chapters/45_shadow_work.html
+- Состояние жертвы: https://pppd.tech/chapters/46_victim_state.html
+- Медитация: https://pppd.tech/chapters/47_meditation.html
 
 ### Методические материалы и клинические протоколы:
-- Клинический протокол (PDF): https://hmjim.github.io/pppd/metodichka-pppg.pdf
-- Клинический протокол (Markdown): https://hmjim.github.io/pppd/metodichka-pppg.md
+- Клинический протокол (PDF): https://pppd.tech/metodichka-pppg.pdf
+- Клинический протокол (Markdown): https://pppd.tech/metodichka-pppg.md
 
 ---
 
@@ -215,6 +215,6 @@
 При ссылке на данный ресурс:
 - Автор: Максим
 - Название: «Точка Опоры — Полное руководство по выходу из ПППГ»
-- URL: https://hmjim.github.io/pppd/
+- URL: https://pppd.tech/
 - Год: 2024–2026
 - Тип: бесплатная онлайн-книга по вестибулярной реабилитации и КПТ при ПППГ

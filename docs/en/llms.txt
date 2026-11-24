@@ -9,7 +9,7 @@
 - **Domain:** PPPD (Persistent Postural-Perceptual Dizziness), Vestibular Rehabilitation Therapy (VRT), Health Anxiety, Somatosensory Reweighting, Neuroplasticity
 - **Format:** Free online manual & structured clinical curriculum (34 chapters, 5 modules)
 - **Language:** English
-- **URL:** https://hmjim.github.io/pppd/en/
+- **URL:** https://pppd.tech/en/
 - **Community:** https://t.me/pppd_vertigo
 - **ICD-11 Code:** AB32.0 (PPPD)
 - **Evidence Base:** Vestibular Habituation, Metacognitive Therapy (MCT), Cognitive Behavioral Therapy (CBT), Jacobson Progressive Muscle Relaxation (PMR), Somatic Down-regulation

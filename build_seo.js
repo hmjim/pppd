@@ -28,27 +28,12 @@ async function main() {
         console.error('Failed to run encryption:', e.message);
     }
 
-    // Ensure PDFs are replicated to all subdirectories (docs/, docs/chapters/, docs/en/, docs/en/chapters/)
-    const ruPdfSrc = path.join(DOCS_DIR, 'r_015744dc3f28b49e.pdf');
-    const enPdfSrc = path.join(DOCS_DIR, 'e_8b3a9c72d1f40e56.pdf');
-    
-    const targetDirs = [
-        DOCS_DIR,
-        path.join(DOCS_DIR, 'chapters'),
-        path.join(DOCS_DIR, 'en'),
-        path.join(DOCS_DIR, 'en', 'chapters')
-    ];
-
-    targetDirs.forEach(dir => {
-        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-        if (fs.existsSync(ruPdfSrc)) {
-            const dest = path.join(dir, 'r_015744dc3f28b49e.pdf');
-            if (dest !== ruPdfSrc) fs.copyFileSync(ruPdfSrc, dest);
-        }
-        if (fs.existsSync(enPdfSrc)) {
-            const dest = path.join(dir, 'e_8b3a9c72d1f40e56.pdf');
-            if (dest !== enPdfSrc) fs.copyFileSync(enPdfSrc, dest);
-        }
+    // Keep PDFs only in DOCS_DIR root (avoid 24 MB duplicate copies across subdirectories)
+    ['chapters', 'en', path.join('en', 'chapters')].forEach(sub => {
+        ['r_015744dc3f28b49e.pdf', 'e_8b3a9c72d1f40e56.pdf'].forEach(pdfName => {
+            const dup = path.join(DOCS_DIR, sub, pdfName);
+            if (fs.existsSync(dup)) fs.unlinkSync(dup);
+        });
     });
 
     const pdfVersion = Date.now();
@@ -1661,6 +1646,302 @@ async function main() {
 
     const dateISO = new Date().toISOString().split('T')[0];
 
+    // Escape HTML attribute quotes safely & trim overlong SEO titles (>68 chars) without losing keywords
+    function escAttr(str) {
+        return String(str || '').replace(/&(?!(?:amp|quot|apos|lt|gt|#\d+);)/g, '&amp;').replace(/"/g, '&quot;');
+    }
+
+    function fitSeoTitle(rawTitle) {
+        let t = String(rawTitle || '').trim();
+        if (t.length <= 68) return t;
+        t = t.replace(/\s*\|\s*(?:Точка Опоры|Point of Support)$/i, '').trim();
+        if (t.length <= 68) return t;
+        // Trim cleanly at word boundary if still > 68
+        const cut = t.slice(0, 66);
+        const lastSpace = cut.lastIndexOf(' ');
+        return (lastSpace > 40 ? cut.slice(0, lastSpace).replace(/[—–:,;-]+$/, '') : cut) + '…';
+    }
+
+    function fitMetaDesc(rawDesc, chapterTitle, isEn) {
+        let d = String(rawDesc || '').trim();
+        if (d.length < 70) {
+            d += isEn
+                ? ` Evidence-based PPPD recovery protocol from "Point of Support" (${chapterTitle}).`
+                : ` Доказательный протокол выхода из ПППГ и невроза из книги «Точка Опоры» (${chapterTitle}).`;
+        }
+        if (d.length > 168) {
+            const cut = d.slice(0, 165);
+            const lastDot = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '));
+            if (lastDot > 95) return cut.slice(0, lastDot + 1);
+            const lastSpace = cut.lastIndexOf(' ');
+            return (lastSpace > 110 ? cut.slice(0, lastSpace).replace(/[,;:-]+$/, '') : cut) + '…';
+        }
+        return d;
+    }
+
+    // Helper to build prefilled contact URLs
+    function getContactLinks(isEn, contextTitle) {
+        const ctx = contextTitle ? ` (${contextTitle})` : '';
+        if (isEn) {
+            return {
+                bookTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want full lifetime access to the "Point of Support" guide + PDF ($99)${ctx}. How can I pay?`)}`,
+                bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want the "Full Guide + 1-on-1 Consultation" bundle ($219)${ctx}.`)}`,
+                consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I would like to book a 1-on-1 PPPD recovery consultation ($150/hour)${ctx}.`)}`,
+                consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('PPPD 1-on-1 Consultation / Access')}&body=${encodeURIComponent(`Hi Maxim,\n\nI am writing from pppd.tech${ctx}. I would like to inquire about: `)}`
+            };
+        }
+        return {
+            bookTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу получить бессрочный доступ к книге «Точка Опоры» + PDF (5 000 ₽)${ctx}. Пришли реквизиты СБП.`)}`,
+            bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу взять пакет «Полная книга + Личная консультация 1 час» (10 900 ₽)${ctx}.`)}`,
+            consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу записаться на личную консультацию (7 500 ₽ / час)${ctx}.`)}`,
+            maxUrl: 'https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0',
+            consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('Точка Опоры — доступ / консультация')}&body=${encodeURIComponent(`Привет, Максим!\n\nПишу с сайта pppd.tech${ctx}. Хочу узнать по поводу: `)}`
+        };
+    }
+
+    // Interactive 12-question Niigata PPPD Questionnaire (NPQ) widget for 52_dhi_hads_niigata_tests
+    function buildNiigataQuizHTML(isEn) {
+        const questions = isEn ? [
+            { cat: 0, q: '1. Standing upright for a long time (in line, in the kitchen, at a stop)' },
+            { cat: 0, q: '2. Walking at your normal pace on a flat surface' },
+            { cat: 0, q: '3. Walking fast or over uneven ground / stairs' },
+            { cat: 0, q: '4. Standing or walking without holding onto anything' },
+            { cat: 1, q: '5. Quick head turns or nodding while sitting or standing' },
+            { cat: 1, q: '6. Bending forward, standing up from a chair or bed' },
+            { cat: 1, q: '7. Riding in a car, bus, subway, or elevator' },
+            { cat: 1, q: '8. Turning over or changing posture quickly' },
+            { cat: 2, q: '9. Walking past supermarket aisles or bright shelves' },
+            { cat: 2, q: '10. Watching moving crowds, traffic, or action scenes' },
+            { cat: 2, q: '11. Scrolling on a phone or working at a computer monitor' },
+            { cat: 2, q: '12. Looking at striped patterns, tiles, or flickering light' }
+        ] : [
+            { cat: 0, q: '1. Долго стоять на месте (в очереди, у плиты, на остановке)' },
+            { cat: 0, q: '2. Идти обычным шагом по ровной поверхности' },
+            { cat: 0, q: '3. Идти быстро или по неровной дороге / лестнице' },
+            { cat: 0, q: '4. Стоять или идти без опоры и возможности за что-то взяться' },
+            { cat: 1, q: '5. Поворачивать голову или кивать сидя / стоя' },
+            { cat: 1, q: '6. Наклоняться вперёд, вставать со стула или с кровати' },
+            { cat: 1, q: '7. Ехать в машине, автобусе, метро или в лифте' },
+            { cat: 1, q: '8. Менять положение тела при бытовых делах' },
+            { cat: 2, q: '9. Находиться в супермаркете среди пёстрых полок и света' },
+            { cat: 2, q: '10. Смотреть на толпу людей, поток машин или экшен-сцены' },
+            { cat: 2, q: '11. Скроллить ленту в телефоне или работать за монитором' },
+            { cat: 2, q: '12. Смотреть на плитку, полосатые узоры, эскалатор' }
+        ];
+
+        const qItems = questions.map((item, idx) => `
+            <div class="quiz-q-item" data-q="${idx}" data-cat="${item.cat}">
+                <div class="quiz-q-label">${item.q}</div>
+                <div class="quiz-scale" role="group" aria-label="${escAttr(item.q)}">
+                    ${[0,1,2,3,4,5,6].map(v => `<button type="button" class="quiz-opt-btn" data-val="${v}">${v}</button>`).join('')}
+                </div>
+                <div class="quiz-scale-hints">
+                    <span>${isEn ? '0 — None' : '0 — Нет симптомов'}</span>
+                    <span>${isEn ? '3 — Moderate' : '3 — Умеренно'}</span>
+                    <span>${isEn ? '6 — Unbearable' : '6 — Невыносимо'}</span>
+                </div>
+            </div>
+        `).join('');
+
+        return `
+        <section id="pppd-quiz" class="pppd-quiz-box">
+            <div class="pppd-quiz-header">
+                <div class="article-offer-eyebrow">${isEn ? 'INTERACTIVE CLINICAL CALCULATOR' : 'ОНЛАЙН-КАЛЬКУЛЯТОР НИИГАТЫ (NPQ)'}</div>
+                <h2>${isEn ? 'Check Your PPPD Severity & Dominant Trigger in 60 Seconds' : 'Проверь тяжесть своего ПППГ и главный триггер за 60 секунд'}</h2>
+                <p class="pppd-quiz-legend">${isEn
+                    ? 'Rate how much each situation triggers dizziness, swaying, or unsteadiness from 0 (none) to 6 (severe). Clinical threshold for PPPD is ≥ 27 points.'
+                    : 'Оцени, насколько каждая ситуация усиливает шаткость, «ватность» или дурноту от 0 (совсем нет) до 6 (невыносимо). Клинический порог ПППГ — от 27 баллов.'}</p>
+            </div>
+            <div id="npq-questions">${qItems}</div>
+            <div id="npq-result" class="quiz-result-box" style="display:none;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+                    <div>
+                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your Total NPQ Score:' : 'Твой общий балл NPQ:'}</span>
+                        <span id="npq-total" class="quiz-score-big">0 / 72</span>
+                    </div>
+                    <span id="npq-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
+                </div>
+                <p id="npq-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Upright Posture & Walking' : 'Вертикальная поза и ходьба'}</span><strong id="npq-c0">0 / 24</strong></div>
+                    <div class="quiz-bar-track"><div id="npq-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Active & Passive Motion' : 'Движение головы и транспорт'}</span><strong id="npq-c1">0 / 24</strong></div>
+                    <div class="quiz-bar-track"><div id="npq-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Visual Dependence (Stores / Screens)' : 'Зрительная перегрузка (магазины / экраны)'}</span><strong id="npq-c2">0 / 24</strong></div>
+                    <div class="quiz-bar-track"><div id="npq-b2" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <p id="npq-advice" style="font-size:0.88rem;color:var(--text-secondary);margin:14px 0;"></p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:14px;">
+                    <a id="npq-tg-consult" href="https://t.me/Hmjim" target="_blank" rel="noopener" class="paywall-tier-btn accent">
+                        ${isEn ? 'Send Score to Maxim (1-on-1 Review)' : 'Отправить результат автору на разбор →'}
+                    </a>
+                    <a id="npq-tg-book" href="09_adrenaline_loop.html" class="paywall-tier-btn primary">
+                        ${isEn ? 'Unlock Full Recovery System ($99)' : 'Открыть полную систему (5 000 ₽)'}
+                    </a>
+                </div>
+            </div>
+        </section>
+        <script>
+        (function(){
+            var box = document.getElementById('pppd-quiz');
+            if (!box) return;
+            var isEn = ${isEn ? 'true' : 'false'};
+            var answers = {};
+            var items = box.querySelectorAll('.quiz-q-item');
+            box.addEventListener('click', function(e){
+                var btn = e.target.closest('.quiz-opt-btn');
+                if (!btn) return;
+                var row = btn.closest('.quiz-q-item');
+                var qIdx = row.getAttribute('data-q');
+                row.querySelectorAll('.quiz-opt-btn').forEach(function(b){ b.classList.remove('selected'); });
+                btn.classList.add('selected');
+                answers[qIdx] = { val: parseInt(btn.getAttribute('data-val'), 10), cat: parseInt(row.getAttribute('data-cat'), 10) };
+                updateScore();
+            });
+            function updateScore() {
+                var keys = Object.keys(answers);
+                if (keys.length === 0) return;
+                var c = [0, 0, 0], total = 0;
+                keys.forEach(function(k){ c[answers[k].cat] += answers[k].val; total += answers[k].val; });
+                document.getElementById('npq-result').style.display = 'block';
+                document.getElementById('npq-total').textContent = total + ' / 72' + (keys.length < 12 ? (isEn ? ' (' + keys.length + '/12 answered)' : ' (отвечено ' + keys.length + '/12)') : '');
+                for (var i = 0; i < 3; i++) {
+                    document.getElementById('npq-c' + i).textContent = c[i] + ' / 24';
+                    document.getElementById('npq-b' + i).style.width = Math.round((c[i] / 24) * 100) + '%';
+                }
+                var stageEl = document.getElementById('npq-stage');
+                var sumEl = document.getElementById('npq-summary');
+                if (total >= 45) {
+                    stageEl.textContent = isEn ? 'Severe PPPD Pattern' : 'Выраженная стадия ПППГ';
+                    sumEl.textContent = isEn
+                        ? 'Score ≥ 45 indicates strong central sensitization and protective avoidance. Structured daily VRT + graded exposure + breaking the adrenaline loop (Modules 1–3) is critical.'
+                        : 'Балл ≥ 45 говорит о сильной центральной сенситизации и включённом режиме тревожного контроля. Нужна связка: снятие зажима шеи + ВРТ + выход из адреналиновой петли и экспозиция (Модули 1–3).';
+                } else if (total >= 27) {
+                    stageEl.textContent = isEn ? 'Clinical PPPD Threshold (≥27)' : 'Клинический порог ПППГ (≥27)';
+                    sumEl.textContent = isEn
+                        ? 'Your score crosses the clinical Niigata cutoff (27 pts). Your hardware is intact, but your brain balance filter is stuck on manual threat control.'
+                        : 'Твой балл выше клинического порога опросника Ниигаты (27 баллов). Железо здорово, но мозг застрял на ручном контроле равновесия.';
+                } else {
+                    stageEl.textContent = isEn ? 'Mild / Subclinical (<27)' : 'Лёгкая / остаточная стадия (<27)';
+                    sumEl.textContent = isEn
+                        ? 'Mild sensitization or recovery phase. Consistent vestibular habits and removing safety crutches will bring this down to zero.'
+                        : 'Умеренная сенситизация или фаза выхода на плато. Регулярная гимнастика, отказ от костылей безопасности и работа с откатами доведут балл до нуля.';
+                }
+                var maxCat = c[2] >= c[0] && c[2] >= c[1] ? 2 : (c[0] >= c[1] ? 0 : 1);
+                var adviceMap = isEn ? [
+                    'Dominant trigger: Upright Posture & Proprioception. Focus on Chapter 4 (Muscle Armor), Chapter 6 (VRT), and Module 2 (Safety Crutches & Exposure).',
+                    'Dominant trigger: Motion Sensitivity. Focus on VOR gaze stabilization (Chapter 6 & 6b) and dismantling the Adrenaline Loop (Chapter 10).',
+                    'Dominant trigger: Visual Dependence. Focus on Chapter 8 (Visual Dependence), optokinetic retraining (6b), and Supermarket Graded Exposure (Chapter 13).'
+                ] : [
+                    'Ведущий триггер: Поза и опора. В первую очередь разбери Главу 4 (Мышечный панцирь), Главу 6 (Гимнастика) и Модуль 2 (Костыли безопасности + Экспозиция).',
+                    'Ведущий триггер: Чувствительность к движению. Ключ — перекалибровка VOR (Главы 6 и 6b) и разрыв Адреналиновой петли (Глава 10).',
+                    'Ведущий триггер: Зрительная зависимость. Твои главные точки роста — Глава 8 (Зрительная зависимость), тренажёры 6b и ступенчатая Экспозиция в магазинах (Глава 13).'
+                ];
+                document.getElementById('npq-advice').textContent = adviceMap[maxCat];
+                var msgConsult = isEn
+                    ? 'Hi Maxim! My NPQ test score on pppd.tech is ' + total + '/72 (Posture: ' + c[0] + ', Motion: ' + c[1] + ', Visual: ' + c[2] + '). I want to book a 1-on-1 consultation ($150) or bundle ($219).'
+                    : 'Привет, Максим! Прошёл тест NPQ на сайте: ' + total + '/72 (Поза: ' + c[0] + ', Движение: ' + c[1] + ', Зрение: ' + c[2] + '). Хочу разобрать мой случай на консультации (7 500 ₽) или взять пакет с книгой (10 900 ₽).';
+                var msgBook = isEn
+                    ? 'Hi Maxim! My NPQ score is ' + total + '/72. I want full lifetime access to the Point of Support guide ($99).'
+                    : 'Привет, Максим! Мой балл NPQ — ' + total + '/72. Хочу купить полный доступ к книге «Точка Опоры» (5 000 ₽) по СБП.';
+                document.getElementById('npq-tg-consult').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgConsult);
+                document.getElementById('npq-tg-book').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgBook);
+                document.getElementById('npq-tg-book').target = '_blank';
+            }
+        })();
+        <\/script>`;
+    }
+
+    // Conversion block appended to all free chapters & SEO articles
+    function buildFreeArticleOfferHTML(chapter, isEn) {
+        const links = getContactLinks(isEn, chapter.title);
+        const showQuizLink = chapter.id !== '52_dhi_hads_niigata_tests';
+        if (isEn) {
+            return `
+            <section id="article-offer" class="article-offer-box">
+                <div class="article-offer-eyebrow">COMPLETE RECOVERY SYSTEM</div>
+                <h2 class="article-offer-title">Stop Piecing Articles Together — Follow the Step-by-Step Protocol</h2>
+                <p class="article-offer-lead">This article covers one piece of the puzzle. In <strong>Modules 2–4</strong> of “Point of Support”, you get the complete engineering protocol: breaking the Adrenaline Loop, dismantling CAS & health anxiety, Supermarket Exposure ladders, Derealization reset, and Setback defense.</p>
+                ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Take the 60-second Niigata PPPD Severity Test →</a>` : ''}
+                <div class="paywall-tiers" style="margin-bottom:8px;">
+                    <div class="paywall-tier">
+                        <div>
+                            <div class="paywall-tier-name">Full Book + PDF Edition</div>
+                            <div class="paywall-tier-price-row">
+                                <span class="paywall-tier-price">$99</span>
+                            </div>
+                            <div class="paywall-tier-note">✓ Lifetime access + all future updates</div>
+                            <p class="paywall-tier-desc">All 45 chapters (Modules 0–4), downloadable full PDF book, printable DHI/HADS worksheets & daily protocols.</p>
+                        </div>
+                        <div class="paywall-tier-actions">
+                            <a href="${links.bookTg}" target="_blank" rel="noopener" class="paywall-tier-btn primary">Get Full Access via Telegram →</a>
+                            <a href="09_adrenaline_loop.html" class="paywall-tier-btn secondary">Preview Locked Modules (Free Teaser)</a>
+                        </div>
+                    </div>
+                    <div class="paywall-tier featured">
+                        <div>
+                            <span class="paywall-tier-badge">VIP · Save $30</span>
+                            <div class="paywall-tier-name">Full Book + 1-on-1 Author Review</div>
+                            <div class="paywall-tier-price-row">
+                                <span class="paywall-tier-price">$219</span>
+                                <span class="paywall-tier-old">$249</span>
+                            </div>
+                            <div class="paywall-tier-note">✓ 60-min private call + Full Book forever</div>
+                            <p class="paywall-tier-desc">Personal audit of your symptoms & scans with Maxim, custom recovery roadmap, plus lifetime access to the book & PDF (or <a href="${links.consultTg}" target="_blank" rel="noopener">book a standalone 1h call for $150</a>).</p>
+                        </div>
+                        <div class="paywall-tier-actions">
+                            <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Book 1-on-1 + Full Guide →</a>
+                            <a href="${links.consultMail}" class="paywall-tier-btn secondary">Request via Email</a>
+                        </div>
+                    </div>
+                </div>
+            </section>`;
+        }
+        return `
+        <section id="article-offer" class="article-offer-box">
+            <div class="article-offer-eyebrow">СЛЕДУЮЩИЙ ШАГ К ВЫЗДОРОВЛЕНИЮ</div>
+            <h2 class="article-offer-title">Хватит собирать пазл по кускам — пройди систему целиком</h2>
+            <p class="article-offer-lead">Эта статья — только один элемент. В закрытых <strong>Модулях 2–4</strong> книги «Точка Опоры» собрана полная пошаговая система: разрыв адреналиновой петли, выход из ипохондрии и капкана CAS, таблицы экспозиции для магазинов и улиц, снятие дереализации и защита от откатов.</p>
+            ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Пройти 60-секундный тест тяжести ПППГ (шкала Ниигаты) →</a>` : ''}
+            <div class="paywall-tiers" style="margin-bottom:8px;">
+                <div class="paywall-tier">
+                    <div>
+                        <div class="paywall-tier-name">Полная система (Книга + PDF)</div>
+                        <div class="paywall-tier-price-row">
+                            <span class="paywall-tier-price">5 000 ₽</span>
+                        </div>
+                        <div class="paywall-tier-note">✓ Бессрочный доступ + все обновления</div>
+                        <p class="paywall-tier-desc">Все 45 глав книги (Модули 0–4), полная PDF-версия для чтения офлайн, рабочие тетради СМЭР и шкалы DHI/HADS.</p>
+                    </div>
+                    <div class="paywall-tier-actions">
+                        <a href="${links.bookTg}" target="_blank" rel="noopener" class="paywall-tier-btn primary">Забрать доступ в Telegram (СБП) →</a>
+                        <a href="09_adrenaline_loop.html" class="paywall-tier-btn secondary">Читать отрывок закрытого Модуля 2</a>
+                    </div>
+                </div>
+                <div class="paywall-tier featured">
+                    <div>
+                        <span class="paywall-tier-badge">Под ключ · Выгода 1 600 ₽</span>
+                        <div class="paywall-tier-name">Книга + Личный разбор с автором</div>
+                        <div class="paywall-tier-price-row">
+                            <span class="paywall-tier-price">10 900 ₽</span>
+                            <span class="paywall-tier-old">12 500 ₽</span>
+                        </div>
+                        <div class="paywall-tier-note">✓ 1 час созвона + Полная книга навсегда</div>
+                        <p class="paywall-tier-desc">Разбор твоих обследований и затыков лично с Максимом, индивидуальный план выхода без лишних врачей + полный доступ к книге и PDF (отдельно созвон — <a href="${links.consultTg}" target="_blank" rel="noopener">7 500 ₽/ч</a>).</p>
+                    </div>
+                    <div class="paywall-tier-actions">
+                        <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Записаться на разбор + Книга →</a>
+                        <a href="${links.maxUrl}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Написать в MAX</a>
+                    </div>
+                </div>
+            </div>
+        </section>`;
+    }
+
     // Helper to extract ~25-30% teaser from Markdown for paid chapters (Google & Yandex indexing)
     function extractTeaserMarkdown(rawMd) {
         const match = rawMd.search(/^##\s+(?:3|4)\./m);
@@ -1698,6 +1979,9 @@ async function main() {
         const siteTitle = isEn ? 'Point of Support — Overcoming PPPD' : 'Точка Опоры — Выход из ПППГ';
         const authorName = isEn ? 'Maxim' : 'Максим';
         const rootPath = isIndex ? (isEn ? '..' : '.') : (isEn ? '../..' : '..');
+        const cleanSeoTitle = fitSeoTitle(chapter.seoTitle);
+        const cleanDesc = fitMetaDesc(chapter.description, chapter.title, isEn);
+        const contactLinks = getContactLinks(isEn, chapter.title);
 
         // Schema.org JSON-LD
         // Schema.org 2026 Connected Knowledge Graph (for Google, Gemini, AI Overviews & Yandex)
@@ -1740,8 +2024,8 @@ async function main() {
                     "@type": "MedicalWebPage",
                     "@id": `${pageUrl}#webpage`,
                     "url": pageUrl,
-                    "headline": chapter.seoTitle,
-                    "description": chapter.description,
+                    "headline": cleanSeoTitle,
+                    "description": cleanDesc,
                     "inLanguage": isEn ? "en-US" : "ru",
                     "isAccessibleForFree": chapter.paid ? "False" : "True",
                     ...(chapter.paid ? {
@@ -1796,38 +2080,43 @@ async function main() {
             </div>
         `;
 
-        // Related chapters (Smart semantic clustering)
-        const currentIdx = chaptersList.findIndex(c => c.id === chapter.id);
-        let related = [];
-        if (chapter.hidden) {
-            const otherHidden = chaptersList.filter(c => c.hidden && c.id !== chapter.id);
-            const hidden1 = otherHidden[(currentIdx + 1) % otherHidden.length];
-            const hidden2 = otherHidden[(currentIdx + 3) % otherHidden.length];
-            const coreVisible = chaptersList.filter(c => c.id === '01_what_is_pppg' || c.id === '06_vestibular' || c.id === '00_introduction');
-            related = [hidden1, hidden2, ...coreVisible].filter(Boolean).slice(0, 4);
-        } else {
-            const coreRelated = chaptersList.filter((c, idx) => idx !== currentIdx && !c.hidden).slice(0, 2);
-            const guide = chaptersList.find(c => c.id === '30_treatment_overview') || chaptersList.find(c => c.id === '36_pppg_symptoms');
-            related = (guide && guide.id !== chapter.id) ? [...coreRelated, guide] : chaptersList.filter((c, idx) => idx !== currentIdx && !c.hidden).slice(0, 3);
-        }
+        // Related chapters (Keyword-scored semantic clustering)
+        const myWords = new Set(String(chapter.keywords || '').toLowerCase().split(/[,;\s]+/).filter(w => w.length > 3));
+        const scoredCandidates = chaptersList
+            .filter(c => c.id !== chapter.id)
+            .map((c, idx) => {
+                const words = String(c.keywords || '').toLowerCase().split(/[,;\s]+/).filter(w => w.length > 3);
+                let score = 0;
+                words.forEach(w => { if (myWords.has(w)) score += 3; });
+                if (c.module && c.module === chapter.module && !c.hidden && !chapter.hidden) score += 4;
+                // Deterministic tie-breaker so links distribute evenly across all 90 pages
+                score += ((idx + chapter.id.charCodeAt(0)) % 5) * 0.1;
+                return { ch: c, score };
+            })
+            .sort((a, b) => b.score - a.score);
+
+        const related = scoredCandidates.slice(0, 4).map(x => x.ch);
         const relatedHTML = related.map(ch => `
             <a href="${ch.id}.html" style="display:block;padding:12px 18px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);text-decoration:none;font-size:0.92rem;transition:all 0.25s;"
             onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateX(4px)'"
-            onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}</a>
+            onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">${ch.title}${ch.paid ? ' 🔒' : ''}</a>
         `).join('\n');
 
-        const prevChapter = currentIdx > 0 ? chaptersList[currentIdx - 1] : null;
-        const nextChapter = currentIdx < chaptersList.length - 1 ? chaptersList[currentIdx + 1] : null;
+        // Separate navigation sequences: Book chapters navigate strictly through book chapters; SEO guides through SEO guides
+        const navPool = chapter.hidden ? chaptersList.filter(c => c.hidden) : visibleChapters;
+        const navIdx = navPool.findIndex(c => c.id === chapter.id);
+        const prevChapter = navIdx > 0 ? navPool[navIdx - 1] : null;
+        const nextChapter = (navIdx !== -1 && navIdx < navPool.length - 1) ? navPool[navIdx + 1] : null;
 
         const prevHTML = prevChapter 
             ? `<a href="${prevChapter.id}.html" class="chapter-nav-btn prev">← ${isEn ? 'Previous: ' : 'Назад: '}${prevChapter.title}</a>` 
             : '<span></span>';
         const nextHTML = nextChapter 
-            ? `<a href="${nextChapter.id}.html" class="chapter-nav-btn next">${isEn ? 'Next: ' : 'Далее: '}${nextChapter.title} →</a>` 
+            ? `<a href="${nextChapter.id}.html" class="chapter-nav-btn next">${isEn ? 'Next: ' : 'Далее: '}${nextChapter.title}${nextChapter.paid ? ' 🔒' : ''} →</a>` 
             : '<span></span>';
 
         const pdfDownloadName = isEn ? 'Point_of_Support_PPPD_Guide.pdf' : 'Точка_Опоры_Выход_из_ПППГ.pdf';
-        const pdfFileSrc = isEn ? '../e_8b3a9c72d1f40e56.pdf' : '../r_015744dc3f28b49e.pdf';
+        const pdfFileSrc = isEn ? '/e_8b3a9c72d1f40e56.pdf' : '/r_015744dc3f28b49e.pdf';
 
         return `<!DOCTYPE html>
 <html lang="${isEn ? 'en' : 'ru'}">
@@ -1859,9 +2148,9 @@ async function main() {
     <link rel="apple-touch-icon" href="${rootPath}/apple-touch-icon.png">
 
     <!-- SEO Meta -->
-    <title>${chapter.seoTitle}</title>
-    <meta name="description" content="${chapter.description}">
-    <meta name="keywords" content="${chapter.keywords}">
+    <title>${escAttr(cleanSeoTitle)}</title>
+    <meta name="description" content="${escAttr(cleanDesc)}">
+    <meta name="keywords" content="${escAttr(chapter.keywords)}">
     <meta name="author" content="${authorName}">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="${canonicalUrl}">
@@ -1871,10 +2160,10 @@ async function main() {
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="${chapter.seoTitle}">
-    <meta property="og:description" content="${chapter.description}">
+    <meta property="og:title" content="${escAttr(cleanSeoTitle)}">
+    <meta property="og:description" content="${escAttr(cleanDesc)}">
     <meta property="og:url" content="${pageUrl}">
-    <meta property="og:image" content="${SITE_URL}/${isEn ? 'cover_en.png' : 'cover.png'}">
+    <meta property="og:image" content="${SITE_URL}/${isEn ? 'og-cover-en.jpg' : 'og-cover.jpg'}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="${siteTitle}">
@@ -1883,9 +2172,9 @@ async function main() {
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${chapter.seoTitle}">
-    <meta name="twitter:description" content="${chapter.description}">
-    <meta name="twitter:image" content="${SITE_URL}/${isEn ? 'cover_en.png' : 'cover.png'}">
+    <meta name="twitter:title" content="${escAttr(cleanSeoTitle)}">
+    <meta name="twitter:description" content="${escAttr(cleanDesc)}">
+    <meta name="twitter:image" content="${SITE_URL}/${isEn ? 'og-cover-en.jpg' : 'og-cover.jpg'}">
 
     <!-- Schema.org 2026 Connected Graph -->
     <script type="application/ld+json">${schemaGraph}</script>
@@ -1983,7 +2272,7 @@ async function main() {
         </nav>
 
         <article class="chapter" itemscope itemtype="https://schema.org/Article">
-            <meta itemprop="headline" content="${chapter.seoTitle}">
+            <meta itemprop="headline" content="${escAttr(cleanSeoTitle)}">
             <meta itemprop="author" content="${authorName}">
             ${bodyContent}
         </article>
@@ -2067,7 +2356,7 @@ async function main() {
             window.addEventListener('pageshow', closeSidebar);
         }
 
-        // Show PDF download for licensed users
+        // Show PDF download for licensed users & hide free-article offer card if already unlocked
         var licenseKeyName = '${isEn ? 'point-of-support-license-key' : 'tochka-opory-license-key'}';
         if (localStorage.getItem(licenseKeyName)) {
             var pdfLink = document.getElementById('sidebar-pdf-link');
@@ -2076,6 +2365,8 @@ async function main() {
                 pdfLink.download = '${pdfDownloadName}';
                 pdfLink.style.display = '';
             }
+            var offerBox = document.getElementById('article-offer');
+            if (offerBox) offerBox.style.display = 'none';
         }
     })();
     </script>
@@ -2143,12 +2434,12 @@ async function main() {
             ${isEn ? 'Private recovery consultations & roadmap reviews are conducted strictly on a paid basis:' : 'Индивидуальные консультации и персональный аудит выздоровления проводятся платно. Запись:'}
         </p>
         <div class="consult-toast-links ${isEn ? 'en' : ''}">
-            <a href="https://t.me/Hmjim" target="_blank" class="consult-toast-btn tg">
+            <a href="${contactLinks.consultTg}" target="_blank" rel="noopener" class="consult-toast-btn tg">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
                 <span>Telegram</span>
             </a>
-            ${!isEn ? '<a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="consult-toast-btn max"><span>MAX</span></a>' : ''}
-            <a href="mailto:fhmjim@gmail.com" class="consult-toast-btn email">
+            ${!isEn ? `<a href="${contactLinks.maxUrl}" target="_blank" rel="noopener" class="consult-toast-btn max"><span>MAX</span></a>` : ''}
+            <a href="${contactLinks.consultMail}" class="consult-toast-btn email">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span>Email</span>
             </a>
@@ -2221,7 +2512,7 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Открыть полную систему выздоровления</h2>
-                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 16 глав доступны <strong>бесплатно</strong>. Получи полный доступ на 1 год ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
+                    <p class="paywall-text">Глава «${chapter.title}» входит в ${chapter.module}. Первые 16 глав доступны <strong>бесплатно</strong>. Получи <strong>бессрочный доступ</strong> ко всем клиническим протоколам, практическим тетрадям и PDF-версии руководства.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
@@ -2238,39 +2529,53 @@ async function main() {
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>Все обновления книги и протоколы</span>
+                            <span>Бессрочный доступ + обновления</span>
                         </div>
                     </div>
 
-                    <div class="paywall-cta-box">
-                        <div class="paywall-price-tag">
-                            <span>5 000 ₽</span>
-                            <span class="paywall-price-sub">/ лицензия на 1 год</span>
+                    <div class="paywall-tiers">
+                        <div class="paywall-tier">
+                            <div>
+                                <div class="paywall-tier-name">Самостоятельный (Книга + PDF)</div>
+                                <div class="paywall-tier-price-row">
+                                    <span class="paywall-tier-price">5 000 ₽</span>
+                                </div>
+                                <div class="paywall-tier-note">✓ Навсегда + скачиваемый PDF</div>
+                                <p class="paywall-tier-desc">Мгновенная выдача ключа ко всем 45 главам на сайте, полная PDF-книга и все рабочие таблицы.</p>
+                            </div>
+                            <div class="paywall-tier-actions">
+                                <a href="${getContactLinks(false, chapter.title).bookTg}" target="_blank" rel="noopener" class="paywall-tier-btn primary">
+                                    <span>Забрать доступ в Telegram</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                                </a>
+                                <a href="${getContactLinks(false, chapter.title).maxUrl}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Получить доступ в MAX</a>
+                            </div>
                         </div>
-                        <div style="display:flex;flex-direction:column;gap:8px;max-width:380px;margin:12px auto 0;">
-                            <a href="https://t.me/Hmjim" target="_blank" class="paywall-buy-btn" style="margin:0;max-width:100%;">
-                                <span>Получить доступ в Telegram</span>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                            </a>
-                            <a href="https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0" target="_blank" class="paywall-secondary-btn">
-                                <span>Получить доступ в MAX</span>
-                            </a>
+                        <div class="paywall-tier featured">
+                            <div>
+                                <span class="paywall-tier-badge">Под ключ · Выгода 1 600 ₽</span>
+                                <div class="paywall-tier-name">Книга + Личный разбор (1 час)</div>
+                                <div class="paywall-tier-price-row">
+                                    <span class="paywall-tier-price">10 900 ₽</span>
+                                    <span class="paywall-tier-old">12 500 ₽</span>
+                                </div>
+                                <div class="paywall-tier-note">✓ Личный аудит с автором + Книга</div>
+                                <p class="paywall-tier-desc">Полный доступ к книге и PDF + 60 минут созвона с Максимом: разбор обследований, ошибок и твой персональный план.</p>
+                            </div>
+                            <div class="paywall-tier-actions">
+                                <a href="${getContactLinks(false, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Забрать пакет с разбором →</a>
+                                <a href="${getContactLinks(false, chapter.title).consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Только консультация (7 500 ₽)</a>
+                            </div>
                         </div>
-                        <div class="paywall-methods-row">
-                            <span class="paywall-method-badge" title="СБП">
-                                <span style="color:#000;font-size:0.75rem;font-weight:800;">СБП</span>
-                            </span>
-                            <span class="paywall-method-badge" title="МИР">
-                                <span style="color:#008b45;font-size:0.75rem;font-weight:800;">МИР</span>
-                            </span>
-                            <span class="paywall-method-badge" title="Банковская карта">
-                                <span style="color:#1a1a2e;font-size:0.72rem;">Карты РФ / Мир</span>
-                            </span>
-                            <span class="paywall-method-badge" title="USDT">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
-                                <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
-                            </span>
-                        </div>
+                    </div>
+                    <div class="paywall-methods-row" style="margin-bottom:16px;">
+                        <span class="paywall-method-badge" title="СБП"><span style="color:#000;font-size:0.75rem;font-weight:800;">СБП</span></span>
+                        <span class="paywall-method-badge" title="МИР"><span style="color:#008b45;font-size:0.75rem;font-weight:800;">МИР</span></span>
+                        <span class="paywall-method-badge" title="Банковская карта"><span style="color:#1a1a2e;font-size:0.72rem;">Карты РФ</span></span>
+                        <span class="paywall-method-badge" title="USDT">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
+                            <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
+                        </span>
                     </div>
 
                     <div class="paywall-key-section">
@@ -2354,6 +2659,16 @@ async function main() {
             if (fs.existsSync(srcPath)) {
                 const md = fs.readFileSync(srcPath, 'utf8');
                 htmlContent = marked.parse(md);
+                if (chapter.id === '52_dhi_hads_niigata_tests') {
+                    const firstH2 = htmlContent.indexOf('<h2');
+                    const secondH2 = firstH2 !== -1 ? htmlContent.indexOf('<h2', firstH2 + 4) : -1;
+                    if (secondH2 !== -1) {
+                        htmlContent = htmlContent.slice(0, secondH2) + buildNiigataQuizHTML(false) + htmlContent.slice(secondH2);
+                    } else {
+                        htmlContent = buildNiigataQuizHTML(false) + htmlContent;
+                    }
+                }
+                htmlContent += buildFreeArticleOfferHTML(chapter, false);
             } else {
                 htmlContent = `<p>Chapter content not found.</p>`;
             }
@@ -2395,7 +2710,7 @@ async function main() {
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                     </div>
                     <h2 class="paywall-title">Unlock the Complete Protocol</h2>
-                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 16 foundational chapters are <strong>completely free</strong>. Get full 1-year access to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
+                    <p class="paywall-text">The chapter “${chapter.title}” is part of ${chapter.module}. The first 16 foundational chapters are <strong>completely free</strong>. Get <strong>lifetime access</strong> to all clinical modules, advanced protocols, worksheets, and the complete PDF book edition.</p>
                     
                     <div class="paywall-benefits">
                         <div class="paywall-benefit-item">
@@ -2412,36 +2727,51 @@ async function main() {
                         </div>
                         <div class="paywall-benefit-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                            <span>All Future Updates & Guides</span>
+                            <span>Lifetime Access & Updates</span>
                         </div>
                     </div>
 
-                    <div class="paywall-cta-box">
-                        <div class="paywall-price-tag">
-                            <span>$99</span>
-                            <span class="paywall-price-sub">/ 1-year license</span>
+                    <div class="paywall-tiers">
+                        <div class="paywall-tier">
+                            <div>
+                                <div class="paywall-tier-name">Self-Paced (Full Guide + PDF)</div>
+                                <div class="paywall-tier-price-row">
+                                    <span class="paywall-tier-price">$99</span>
+                                </div>
+                                <div class="paywall-tier-note">✓ Lifetime access + offline PDF</div>
+                                <p class="paywall-tier-desc">Instant key to unlock all 45 chapters online, complete downloadable PDF book, and all clinical worksheets.</p>
+                            </div>
+                            <div class="paywall-tier-actions">
+                                <a href="${getContactLinks(true, chapter.title).bookTg}" target="_blank" rel="noopener" class="paywall-tier-btn primary">
+                                    <span>Get Access via Telegram</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                                </a>
+                                <a href="${getContactLinks(true, chapter.title).consultMail}" class="paywall-tier-btn secondary">Request Key via Email</a>
+                            </div>
                         </div>
-                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-buy-btn">
-                            <span>Get Instant Access via Telegram</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <div class="paywall-methods-row">
-                            <span class="paywall-method-badge" title="Visa">
-                                <svg width="34" height="11" viewBox="0 0 34 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 0.5L8.9 10.5H6.2L3.8 2.3C3.6 1.7 3.2 1.2 2.6 0.9C1.6 0.4 0.7 0.2 0 0.1L0.1 0.1H4.8C5.4 0.1 6 0.5 6.1 1.2L7.3 7.3L10.3 0.5H13.5ZM25.2 6.9C25.2 4.3 21.6 4.2 21.6 3C21.6 2.6 22 2.2 22.8 2.1C23.2 2.1 24.3 2 25.3 2.5L25.8 0.4C25.1 0.2 24.3 0 23.2 0C20.4 0 18.4 1.4 18.4 3.4C18.4 5 19.9 5.8 21 6.3C22.1 6.8 22.5 7.2 22.5 7.6C22.5 8.3 21.6 8.7 20.7 8.7C19.3 8.7 18.5 8.3 17.8 8L17.3 10.2C18 10.5 19.3 10.8 20.6 10.8C23.6 10.8 25.2 9.4 25.2 6.9ZM32.8 10.5H35.3L33.1 0.5H30.8C30.2 0.5 29.8 0.8 29.6 1.3L25.3 10.5H28.1L28.7 8.9H32.2L32.8 10.5ZM29.5 6.9L31 2.9L31.8 6.9H29.5ZM17.6 0.5L15.4 10.5H12.7L14.9 0.5H17.6Z" fill="#1A1F71"/></svg>
-                            </span>
-                            <span class="paywall-method-badge" title="Mastercard">
-                                <svg width="22" height="14" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="7.5" r="7.5" fill="#EB001B"/><circle cx="16.5" cy="7.5" r="7.5" fill="#F79E1B" fill-opacity="0.9"/><path d="M12 2.2a7.46 7.46 0 0 1 2.9 5.3 7.46 7.46 0 0 1-2.9 5.3 7.46 7.46 0 0 1-2.9-5.3A7.46 7.46 0 0 1 12 2.2z" fill="#FF5F00"/></svg>
-                                <span style="color:#222;font-size:0.72rem;">Mastercard</span>
-                            </span>
-                            <span class="paywall-method-badge" title="USDT (TRC20 / ERC20)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
-                                <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
-                            </span>
-                            <span class="paywall-method-badge" title="PayPal">
-                                <svg width="13" height="15" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.3 23.5l1.2-7.5h3.8c4.2 0 7.4-2.1 8-6.1.4-2.6-.7-4.5-2.6-5.7C15.7 3.5 13.9 3 11.5 3H3.2L0 23.5h6.3z" fill="#003087"/><path d="M7.5 16l1.3-8.3h4.7c3 0 5.3 1.2 5.8 4.2.5 3.3-1.6 5.6-4.9 5.6H10l-1 5.5H5.8L7.5 16z" fill="#0079C1"/></svg>
-                                <span style="color:#003087;font-size:0.72rem;">PayPal</span>
-                            </span>
+                        <div class="paywall-tier featured">
+                            <div>
+                                <span class="paywall-tier-badge">VIP · Save $30</span>
+                                <div class="paywall-tier-name">Full Guide + 1-on-1 Call (1h)</div>
+                                <div class="paywall-tier-price-row">
+                                    <span class="paywall-tier-price">$219</span>
+                                    <span class="paywall-tier-old">$249</span>
+                                </div>
+                                <div class="paywall-tier-note">✓ Private review with Maxim + Book</div>
+                                <p class="paywall-tier-desc">Lifetime access to the full book & PDF plus a 60-minute private call to audit your case and build a tailored roadmap.</p>
+                            </div>
+                            <div class="paywall-tier-actions">
+                                <a href="${getContactLinks(true, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Get Bundle + 1-on-1 Call →</a>
+                                <a href="${getContactLinks(true, chapter.title).consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">1-on-1 Call Only ($150)</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="paywall-methods-row" style="margin-bottom:16px;">
+                        <span class="paywall-method-badge" title="USDT (TRC20 / ERC20)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#26A17B"/><path d="M13.2 8.4V6.5h3.6V5H7.2v1.5h3.6v1.9c-3.1.2-5.4.9-5.4 1.8 0 .9 2.3 1.6 5.4 1.8v5.8h2.4V12c3.1-.2 5.4-.9 5.4-1.8 0-.9-2.3-1.6-5.4-1.8zm0 2.6c-2.3.1-4-.3-4-.8s1.7-.9 4-.9 4 .4 4 .9c0 .5-1.7.9-4 .8z" fill="#FFF"/></svg>
+                            <span style="color:#26A17B;font-size:0.72rem;">USDT</span>
+                        </span>
+                        <span class="paywall-method-badge" title="Crypto"><span style="color:#1f2328;font-size:0.72rem;">BTC / ETH / TON</span></span>
                     </div>
 
                     <div class="paywall-key-section">
@@ -2525,6 +2855,16 @@ async function main() {
             if (fs.existsSync(srcPath)) {
                 const md = fs.readFileSync(srcPath, 'utf8');
                 htmlContent = marked.parse(md);
+                if (chapter.id === '52_dhi_hads_niigata_tests') {
+                    const firstH2 = htmlContent.indexOf('<h2');
+                    const secondH2 = firstH2 !== -1 ? htmlContent.indexOf('<h2', firstH2 + 4) : -1;
+                    if (secondH2 !== -1) {
+                        htmlContent = htmlContent.slice(0, secondH2) + buildNiigataQuizHTML(true) + htmlContent.slice(secondH2);
+                    } else {
+                        htmlContent = buildNiigataQuizHTML(true) + htmlContent;
+                    }
+                }
+                htmlContent += buildFreeArticleOfferHTML(chapter, true);
             } else {
                 htmlContent = `<p>Chapter content not found.</p>`;
             }
@@ -2547,6 +2887,7 @@ async function main() {
         }).join('\n');
 
         const updatedHtml = templateHtml
+            .replace(/<style>\*,\s*\*::before[\s\S]*?<\/style>/, `<style>${minifiedCss}</style>`)
             .replace(/<nav id="toc" class="toc" aria-label="Оглавление"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Оглавление">${indexTocHTML}</nav>`)
             .replace(/r_015744dc3f28b49e\.pdf/g, `r_015744dc3f28b49e.pdf?v=${pdfVersion}`);
 
@@ -2566,6 +2907,7 @@ async function main() {
         }).join('\n');
 
         const updatedHtml = templateHtml
+            .replace(/<style>\*,\s*\*::before[\s\S]*?<\/style>/, `<style>${minifiedCss}</style>`)
             .replace(/<nav id="toc" class="toc" aria-label="Table of Contents"><\/nav>/g, `<nav id="toc" class="toc" aria-label="Table of Contents">${indexTocHTML}</nav>`)
             .replace(/e_8b3a9c72d1f40e56\.pdf/g, `e_8b3a9c72d1f40e56.pdf?v=${pdfVersion}`);
 

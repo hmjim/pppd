@@ -244,7 +244,7 @@ function renderPaywall(chapterEl, index) {
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>64 In-Depth Chapters</span>
+                        <span>45 In-Depth Chapters</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -256,16 +256,16 @@ function renderPaywall(chapterEl, index) {
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>All Future Updates & Guides</span>
+                        <span>Lifetime Access & Updates</span>
                     </div>
                 </div>
 
                 <div class="paywall-cta-box">
                     <div class="paywall-price-tag">
                         <span>$99</span>
-                        <span class="paywall-price-sub">/ 1-year license</span>
+                        <span class="paywall-price-sub">/ lifetime access</span>
                     </div>
-                    <a href="https://t.me/Hmjim" target="_blank" class="paywall-buy-btn">
+                    <a href="https://t.me/Hmjim?text=Hi%20Maxim!%20I%20want%20lifetime%20access%20to%20the%20Point%20of%20Support%20guide%20(%2499)." target="_blank" rel="noopener" class="paywall-buy-btn">
                         <span>Get Instant Access via Telegram</span>
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                     </a>
@@ -317,7 +317,7 @@ function renderPaywall(chapterEl, index) {
                 <div class="paywall-benefits">
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>64 главы книги (Модули 0–4)</span>
+                        <span>45 глав книги (Модули 0–4)</span>
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
@@ -329,17 +329,17 @@ function renderPaywall(chapterEl, index) {
                     </div>
                     <div class="paywall-benefit-item">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                        <span>Все обновления книги и протоколы</span>
+                        <span>Бессрочный доступ + обновления</span>
                     </div>
                 </div>
 
                 <div class="paywall-cta-box">
                     <div class="paywall-price-tag">
                         <span>5 000 ₽</span>
-                        <span class="paywall-price-sub">/ лицензия на 1 год</span>
+                        <span class="paywall-price-sub">/ бессрочный доступ</span>
                     </div>
                     <div style="display:flex;flex-direction:column;gap:8px;max-width:380px;margin:12px auto 0;">
-                        <a href="https://t.me/Hmjim" target="_blank" class="paywall-buy-btn" style="margin:0;max-width:100%;">
+                        <a href="https://t.me/Hmjim?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%20%D0%BA%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B5%20%C2%AB%D0%A2%D0%BE%D1%87%D0%BA%D0%B0%20%D0%9E%D0%BF%D0%BE%D1%80%D1%8B%C2%BB%20(5%20000%20%E2%82%BD)." target="_blank" rel="noopener" class="paywall-buy-btn" style="margin:0;max-width:100%;">
                             <span>Получить доступ в Telegram</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                         </a>
@@ -649,13 +649,17 @@ function updateCachedHeight() {
 }
 
 function initScrollProgress() {
+    updateCachedHeight();
     window.addEventListener('scroll', () => {
+        if (cachedDocHeight <= 0) updateCachedHeight();
         if (cachedDocHeight <= 0) return;
         const scrollTop = window.scrollY;
         const scrollPct = Math.min(1, Math.max(0, scrollTop / cachedDocHeight));
-        const chapterBase = currentIndex / CHAPTERS.length;
-        const chapterStep = 1 / CHAPTERS.length;
-        const totalPct = Math.round((chapterBase + chapterStep * scrollPct) * 100);
+        const seoLanding = document.getElementById('seo-landing');
+        const isLandingVisible = seoLanding && seoLanding.style.display !== 'none';
+        const totalPct = isLandingVisible
+            ? Math.round(scrollPct * 100)
+            : Math.round(((currentIndex / CHAPTERS.length) + (1 / CHAPTERS.length) * scrollPct) * 100);
         const fill = document.getElementById('progress-fill');
         if (fill) fill.style.width = totalPct + '%';
     }, { passive: true });
@@ -665,48 +669,8 @@ function initScrollProgress() {
     }, { passive: true });
 }
 
-// ── Keyboard Nav ──
-function initKeyboard() {
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') loadChapter(currentIndex - 1);
-        if (e.key === 'ArrowRight') loadChapter(currentIndex + 1);
-    });
-}
-
-// ── Copy Protection ──
-function initCopyProtection() {
-    document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-    });
-
-    document.addEventListener('selectstart', (e) => {
-        if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-            e.preventDefault();
-        }
-    });
-
-    document.addEventListener('copy', (e) => {
-        e.preventDefault();
-        alert(isEn 
-            ? 'The materials of "Point of Support" are protected by copyright.' 
-            : 'Копирование материалов книги «Точка Опоры» защищено авторским правом.');
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && ['c', 'a', 'u', 's'].includes(e.key.toLowerCase())) {
-            e.preventDefault();
-            return false;
-        }
-        if (e.key === 'F12') {
-            e.preventDefault();
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(e.key.toLowerCase())) {
-            e.preventDefault();
-            return false;
-        }
-    });
-}
+// ── Copy Protection (disabled on free content to preserve UX & behavioral SEO) ──
+function initCopyProtection() {}
 
 // ── Show Landing Page ──
 function showLanding() {
@@ -748,101 +712,39 @@ document.addEventListener('DOMContentLoaded', () => {
             const chapterIdx = parseInt(match[2], 10);
             localStorage.setItem(LICENSE_KEY_STORAGE, importedKey);
             history.replaceState(null, '', window.location.pathname);
-            buildTOC();
-            initTheme();
-            initMobileMenu();
-            initScrollProgress();
-            initKeyboard();
-            initCopyProtection();
-            const prevBtn = document.getElementById('prev-chapter');
-            const nextBtn = document.getElementById('next-chapter');
-            if (prevBtn) prevBtn.addEventListener('click', () => loadChapter(currentIndex - 1));
-            if (nextBtn) nextBtn.addEventListener('click', () => loadChapter(currentIndex + 1));
-            loadChapter(chapterIdx);
-            setTimeout(() => window.print(), 1500);
+            const runPrint = () => {
+                buildTOC();
+                initTheme();
+                initMobileMenu();
+                initScrollProgress();
+                loadChapter(chapterIdx);
+                setTimeout(() => window.print(), 1500);
+            };
+            if (typeof marked === 'undefined') {
+                const s = document.createElement('script');
+                s.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+                s.onload = runPrint;
+                document.head.appendChild(s);
+            } else {
+                runPrint();
+            }
             return;
         }
     }
 
-    buildTOC();
+    // Keep pre-rendered static TOC links intact so navigation uses fast, crawlable static chapter HTML pages
+    const toc = document.getElementById('toc');
+    if (toc && toc.children.length === 0) {
+        buildTOC();
+    }
     initTheme();
     initMobileMenu();
     initScrollProgress();
-    initKeyboard();
-    initCopyProtection();
 
-    const prevBtn = document.getElementById('prev-chapter');
-    const nextBtn = document.getElementById('next-chapter');
-    if (prevBtn) prevBtn.addEventListener('click', () => loadChapter(currentIndex - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => loadChapter(currentIndex + 1));
-
-    const homeLink = document.getElementById('home-link');
-    if (homeLink) {
-        homeLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            showLanding();
-        });
-    }
-
-    document.querySelectorAll('.seo-toc-item').forEach(link => {
-        if (!link.classList.contains('locked')) {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href && href.startsWith('chapters/')) {
-                    const id = href.replace('chapters/', '').replace('.html', '');
-                    const idx = CHAPTERS.findIndex(ch => ch.id === id);
-                    if (idx !== -1) {
-                        e.preventDefault();
-                        loadChapter(idx);
-                    }
-                }
-            });
-        }
+    // Close mobile sidebar when clicking any TOC link
+    document.querySelectorAll('.toc-item').forEach(link => {
+        link.addEventListener('click', () => closeSidebar());
     });
-
-    const ctaBtn = document.querySelector('.seo-cta-btn');
-    if (ctaBtn) {
-        ctaBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            loadChapter(0);
-        });
-    }
-
-    window.addEventListener('popstate', (e) => {
-        const match = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
-        if (match) {
-            const idx = CHAPTERS.findIndex(ch => ch.id === match[1]);
-            if (idx !== -1) {
-                loadChapter._fromPopState = true;
-                loadChapter(idx);
-                return;
-            }
-        }
-        if (e.state && typeof e.state.chapterIndex === 'number') {
-            loadChapter._fromPopState = true;
-            loadChapter(e.state.chapterIndex);
-        } else {
-            showLanding._fromPopState = true;
-            showLanding();
-        }
-    });
-
-    const initialMatch = window.location.pathname.match(/\/chapters\/([^/]+)\.html$/);
-    if (initialMatch) {
-        const idx = CHAPTERS.findIndex(ch => ch.id === initialMatch[1]);
-        if (idx !== -1) {
-            loadChapter(idx);
-        } else {
-            showLanding();
-        }
-    } else {
-        const saved = parseInt(localStorage.getItem(isEn ? 'point-of-support-chapter' : 'tochka-opory-chapter'), 10);
-        if (!isNaN(saved)) {
-            loadChapter(saved);
-        } else {
-            showLanding();
-        }
-    }
 
     // Initialize non-intrusive consultation toast
     initConsultToast();
