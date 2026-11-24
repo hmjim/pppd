@@ -1893,12 +1893,11 @@ async function main() {
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap">
     </noscript>
-    <link rel="stylesheet" href="${rootPath}/css/style.css">
+    <style>${minifiedCss}</style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1927,13 +1926,13 @@ async function main() {
             ${tocHTML}
         </nav>
         <div class="sidebar-footer">
-            <a href="javascript:void(0)" onclick="openConsultToast()" id="sidebar-consult-btn" class="sidebar-consult-btn" title="${isEn ? '1-on-1 Personal Consultation ($150/h)' : 'Индивидуальная консультация (7 500 ₽/ч)'}">
+            <button type="button" onclick="openConsultToast()" id="sidebar-consult-btn" class="sidebar-consult-btn" title="${isEn ? '1-on-1 Personal Consultation ($150/h)' : 'Индивидуальная консультация (7 500 ₽/ч)'}">
                 <span class="sidebar-consult-label">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     <span>${isEn ? '1-on-1 Call' : 'Консультация'}</span>
                 </span>
                 <span class="sidebar-consult-price">${isEn ? '$150' : '7 500 ₽'}</span>
-            </a>
+            </button>
             <a id="sidebar-pdf-link" class="sidebar-pdf" title="${isEn ? 'Download Book PDF' : 'Скачать всю книгу в PDF'}" style="display:none">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 ${isEn ? 'Download PDF Book' : 'Скачать книгу (PDF)'}
