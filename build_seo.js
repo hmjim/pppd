@@ -2182,12 +2182,15 @@ async function main() {
             if (copyBtn) {
                 copyBtn.addEventListener('click', function(){
                     var today = new Date().toISOString().split('T')[0];
-                    var txt = (isEn ? 'PPPD Baseline (' + today + '):\n' : 'Точка замера ПППГ (' + today + '):\n')
-                        + 'DHI: ' + (totals.dhi !== null ? totals.dhi : '—') + ' / 100\n'
-                        + 'HADS-A: ' + (totals.hadsA !== null ? totals.hadsA : '—') + ' / 21\n'
-                        + 'HADS-D: ' + (totals.hadsD !== null ? totals.hadsD : '—') + ' / 21\n'
-                        + 'NPQ: ' + (totals.npq !== null ? totals.npq : '—') + ' / 72\n'
-                        + 'https://pppd.tech/';
+                    var nl = String.fromCharCode(10);
+                    var txt = [
+                        (isEn ? 'PPPD Baseline (' + today + '):' : 'Точка замера ПППГ (' + today + '):'),
+                        'DHI: ' + (totals.dhi !== null ? totals.dhi : '—') + ' / 100',
+                        'HADS-A: ' + (totals.hadsA !== null ? totals.hadsA : '—') + ' / 21',
+                        'HADS-D: ' + (totals.hadsD !== null ? totals.hadsD : '—') + ' / 21',
+                        'NPQ: ' + (totals.npq !== null ? totals.npq : '—') + ' / 72',
+                        'https://pppd.tech/'
+                    ].join(nl);
                     if (navigator.clipboard && navigator.clipboard.writeText) {
                         navigator.clipboard.writeText(txt);
                     }
