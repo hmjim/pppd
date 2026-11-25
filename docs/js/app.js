@@ -8,7 +8,7 @@ const CHAPTERS_RU = [
     { id: '41_psychosomatics',         title: 'Психосоматика: универсальный ключ',    module: 'Модуль 0: База' },
     { id: '01_what_is_pppg',           title: 'Что такое ПППГ',                      module: 'Модуль 0: База' },
     { id: '02_medical_checkup',        title: 'Закрываем дверь в поликлинику',       module: 'Модуль 0: База' },
-    { id: '03_baseline_tests',         title: 'Оцифровка: тесты',                    module: 'Модуль 0: База' },
+    { id: '03_baseline_tests',         title: 'Точка А и трекер динамики',           module: 'Модуль 0: База' },
     { id: '57_secondary_gains',        title: 'Вторичные выгоды болезни',            module: 'Модуль 0: База' },
     { id: '61_fear_of_death_insanity', title: 'Страх смерти и безумия',              module: 'Модуль 0: База' },
     { id: '04_muscle_armor',           title: 'Мышечный панцирь',                    module: 'Модуль 1: Тело' },
@@ -56,7 +56,7 @@ const CHAPTERS_EN = [
     { id: '41_psychosomatics',         title: 'Psychosomatics: Universal Key',       module: 'Module 0: Foundation' },
     { id: '01_what_is_pppg',           title: 'What is PPPD',                        module: 'Module 0: Foundation' },
     { id: '02_medical_checkup',        title: 'Closing the Clinic Door',             module: 'Module 0: Foundation' },
-    { id: '03_baseline_tests',         title: 'Baseline Assessment & Tests',         module: 'Module 0: Foundation' },
+    { id: '03_baseline_tests',         title: 'Point A & Progress Tracker',          module: 'Module 0: Foundation' },
     { id: '57_secondary_gains',        title: 'Secondary Gains of Illness',          module: 'Module 0: Foundation' },
     { id: '61_fear_of_death_insanity', title: 'Fear of Death & Insanity',            module: 'Module 0: Foundation' },
     { id: '04_muscle_armor',           title: 'Muscle Armor',                        module: 'Module 1: Body' },
@@ -468,8 +468,13 @@ async function loadChapter(index) {
                     }
                 }
 
-                let html = marked.parse(md);
-                chapterEl.innerHTML = html;
+                chapterEl.innerHTML = marked.parse(md);
+                chapterEl.querySelectorAll('table').forEach(t => {
+                    const w = document.createElement('div');
+                    w.className = 'table-wrap';
+                    t.parentNode.insertBefore(w, t);
+                    w.appendChild(t);
+                });
 
                 if (isLicensed) {
                     const isSubdir = window.location.pathname.includes('/chapters/');

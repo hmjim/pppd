@@ -1,77 +1,48 @@
-# DHI, HADS, and Niigata Tests: How to Measure Your PPPD
+# PPPD Online Tests: DHI, HADS & Niigata Questionnaire (NPQ)
 
-*"How bad am I on a scale of 1 to 10?" — that's not a question you can answer by gut feeling. That's what standardized tests are for. They'll show you the objective picture — and help you track your progress.*
+*Clinical three-scale diagnostic suite for quantifying dizziness handicap, autonomic anxiety fuel, and dominant PPPD triggers. Switch between tabs below — your answers save automatically.*
 
-## Why Even Bother with Tests?
+## Clinical Scoring Reference
 
-When you're living with PPPD day in, day out, it feels like nothing ever changes. Morning — wobbly. Afternoon — wobbly. Evening — wobbly. "What's the point of these exercises?"
+After completing the interactive tests in the diagnostic suite above, compare your scores against international neuro-otology thresholds (Barány Society / Niigata University):
 
-Then you look at the numbers — and you see: a month ago your DHI was 68, today it's 42. Objectively, you've gotten better. Your brain doesn't notice, because it's still stuck in [anxious scanning](10_cas_trap.html) mode. But numbers don't lie.
+### 1. Dizziness Handicap Inventory — DHI (0–100 points)
 
-Tests are like the dashboard in your car. You can "feel" that you're running low on gas, or you can look at the gauge. The second option is more reliable.
+The global gold standard measuring how severely dizziness restricts daily life across three subscales: **Physical (P, max 28)**, **Emotional (E, max 36)**, and **Functional (F, max 36)**.
 
-My recommendation: take the tests **once a month**. Write down the results. After 3 months, you'll have a graph that shows real, measurable progress.
+| DHI Score | Clinical Severity & Practical Meaning |
+| :--- | :--- |
+| **0–30 points** | **Mild Handicap.** Background unsteadiness is present without major restrictions on work or mobility. Either early stage or late-stage recovery. |
+| **31–60 points** | **Moderate Handicap.** Noticeable narrowing of daily life, effortful walking, and situational avoidance. Requires structured [vestibular rehabilitation](06_vestibular.html) and eliminating safety behaviors. |
+| **61–100 points** | **Severe Handicap.** Heavy mobility restriction and agoraphobic avoidance. Calls for a combined protocol: somatic relaxation, VRT, [graded exposure](12_exposure.html), and discussing [SSRIs](51_medications_for_pppg.html) with your doctor if needed. |
 
-## DHI — Dizziness Handicap Inventory
+### 2. Hospital Anxiety and Depression Scale — HADS (0–21 points each)
 
-**Dizziness Handicap Inventory** — the gold standard for assessing dizziness severity. A 25-question survey, each scored: "always" (4 points), "sometimes" (2 points), "never" (0 points).
+Measures the autonomic "fuel" keeping your balance system locked in high-alert threat scanning:
 
-### Three Dimensions
+| HADS Score | Anxiety Subscale (HADS-A) | Exhaustion / Depression (HADS-D) |
+| :--- | :--- | :--- |
+| **0–7 points** | **Normal** — calm autonomic baseline | **Normal** — preserved nervous system reserve |
+| **8–10 points** | **Subclinical / Borderline** — elevated somatic vigilance | **Subclinical** — fatigue from fighting chronic symptoms |
+| **11–21 points** | **Clinically Significant Anxiety** — primary fuel driving PPPD and the [CAS trap](10_cas_trap.html) | **Clinical Burnout / Depression** (if D > 14, consider medical SSRI support) |
 
-- **Emotional (E)** — 9 questions. How much dizziness affects your mood: fear, irritability, feeling down, anxiety about being alone.
-- **Functional (F)** — 9 questions. How limited your life has become: work, household chores, reading, travel, social activities.
-- **Physical (P)** — 7 questions. When exactly symptoms get worse: bending over, walking, rolling over in bed, being in crowds.
+### 3. Niigata PPPD Questionnaire — NPQ (0–72 points)
 
-### How to Read Your Score
+Developed specifically by Japanese neuro-otologists around the three core PPPD trigger domains: **upright posture (0–24)**, **active/passive motion (0–24)**, and **visual stimulation (0–24)**.
 
-| DHI Score | What It Means |
-|-----------|---------------|
-| **0–30** | Mild. Dizziness is present, but life isn't severely limited. You're on the home stretch. |
-| **31–60** | Moderate. Life has narrowed — you're avoiding places, feeling anxious, limited at work. Active effort is needed. |
-| **61–100** | Severe. Major mobility restrictions, fear of going out, significant anxiety. A comprehensive approach is needed — [vestibular exercises](06_vestibular.html), [exposure therapy](12_exposure.html), possibly [SSRIs](51_medications_for_pppg.html). |
+| NPQ Score | Niigata University Clinical Interpretation |
+| :--- | :--- |
+| **0–26 points** | **Below Clinical PPPD Cutoff** — mild sensory sensitivity or late remission phase. |
+| **27–44 points** | **Classic Clinical PPPD Profile (cutoff ≥ 27).** Pinpoints whether posture, motion, or [visual dependence](08_visual_dependence.html) dominates your symptoms. |
+| **45–72 points** | **Severe Central Sensitization.** Multi-channel sensory hypersensitivity requiring systematic daily recalibration. |
 
-Most people with PPPD start in the 40–70 range. After 3–6 months of work — 10–25.
+## What to Do With Your Numbers Next
 
-## HADS — Hospital Anxiety and Depression Scale
-
-**Hospital Anxiety and Depression Scale** — 14 statements. 7 about anxiety, 7 about depression. Each scored from 0 to 3.
-
-### How to Read Your Score
-
-| Score | Anxiety (A) | Depression (D) |
-|-------|-------------|----------------|
-| **0–7** | Normal | Normal |
-| **8–10** | Subclinical — anxiety is present, but not yet a disorder | Subclinical — mood is low, but not clinical depression |
-| **11+** | Clinically significant anxiety disorder | Clinical depression |
-
-With PPPD, the anxiety scale (A) is almost always **11+**. That's normal for your condition — anxiety *is* the "fuel" that drives PPPD. As you do the work, this number comes down.
-
-The depression scale (D) is often **8–12**. This isn't clinical depression in the classic sense — it's burnout from the constant battle with symptoms. When PPPD goes away — so does this.
-
-**Important:** If D > 14 — it's worth discussing SSRIs with your doctor. Antidepressants can help with both PPPD and depression simultaneously.
-
-## NPQ — Niigata PPPD Questionnaire
-
-**Niigata PPPD Questionnaire** — a specialized questionnaire developed by Japanese researchers specifically for PPPD. 12 questions, three factors:
-
-1. **Dizziness while standing and walking** — how much you sway in an upright position
-2. **Motion-triggered dizziness** — from your own body movements and moving objects around you
-3. **Visual stimulation** — how badly you're affected by screens, stores, flickering lights, scrolling
-
-The NPQ is more sensitive than the DHI specifically for PPPD, because it's designed around the three key triggers: posture, movement, and visual load.
-
-## How to Use These Tests in Practice
-
-1. **Take all three tests today.** Write down your results: DHI = ?, HADS-A = ?, HADS-D = ?, NPQ = ?
-2. **Repeat in one month.** Same conditions — morning, before exercise, no coffee.
-3. **Compare the numbers.** Even a 5-point drop on the DHI is real progress that you might not notice subjectively.
-4. **Keep a tracking table.** Date → DHI → HADS-A → HADS-D. After six months, you'll have rock-solid proof that you're getting better.
-
-More on testing and quantifying your condition — in the chapter "[Baseline: HADS and DHI Tests](03_baseline_tests.html)" of the book "[Point of Support](../)". Printable forms — in the [Appendices](25_appendix.html).
+Do not re-take these scales every few days — compulsive testing becomes another anxious safety check. Copy your scores above, lock them into the 90-day recovery log in **"[Point A & Progress Tracker](03_baseline_tests.html)"** (where you can also run the 12-month Holmes–Rahe stress audit), and re-test in exactly **30 days**.
 
 ---
 
 ### See also:
+- [Point A & Progress Tracker: Holmes–Rahe Stress Audit & 90-Day Log](03_baseline_tests.html)
 - [Recovery Roadmap: What to Expect Each Month](77_recovery_roadmap.html)
-- [Your Day from Wake-Up to Sleep: The Complete Protocol](76_daily_protocol.html)
-- [PPPD Treatment: A Complete Guide to Recovery](30_treatment_overview.html)
+- [PPPD Treatment Overview: The 5 Evidence-Based Pillars](30_treatment_overview.html)

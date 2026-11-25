@@ -82,10 +82,10 @@ async function main() {
         },
         {
             id: '03_baseline_tests',
-            title: 'Оцифровка: тесты HADS и DHI',
-            seoTitle: 'Тесты при ПППГ — HADS, DHI, шкала тревоги | Точка Опоры',
-            description: 'Тесты для оценки тяжести ПППГ: шкала HADS (тревога и депрессия), DHI (инвалидизация от головокружения). Как отслеживать прогресс выздоровления.',
-            keywords: 'ПППГ тесты, HADS тест, DHI тест, тревога тест, головокружение тест, шкала тревоги',
+            title: 'Точка А и трекер динамики',
+            seoTitle: 'Точка А и динамика при ПППГ — шкала Холмса-Раэ и трекер | Точка Опоры',
+            description: 'Как отслеживать прогресс при ПППГ: почему мозг обесценивает улучшения, интерактивная шкала стресса Холмса–Раэ за 12 месяцев и дневник динамики на 90 дней.',
+            keywords: 'ПППГ динамика, точка А невроз, шкала стресса Холмса Раэ онлайн, трекер выздоровления ПППГ, оценка тяжести головокружения',
             module: 'Модуль 0: База',
         },
         {
@@ -881,10 +881,10 @@ async function main() {
         },
         {
             id: '03_baseline_tests',
-            title: 'Quantifying Metrics: HADS & DHI',
-            seoTitle: 'DHI & HADS Tests for PPPD — Objective Progress Tracking | Point of Support',
-            description: 'Objective inventories for tracking PPPD severity: Dizziness Handicap Inventory (DHI) and Hospital Anxiety and Depression Scale (HADS). How to measure your recovery progress.',
-            keywords: 'DHI test, HADS test, dizziness handicap inventory, PPPD tracking, anxiety scale, dizziness severity',
+            title: 'Point A & Progress Tracker',
+            seoTitle: 'Point A & PPPD Progress Tracker — Holmes-Rahe Scale | Point of Support',
+            description: 'Objective PPPD recovery tracking: why baseline shifting hides progress, interactive 12-month Holmes–Rahe stress inventory, and 90-day recovery log.',
+            keywords: 'PPPD progress tracker, Holmes Rahe stress scale online, PPPD recovery milestones, dizziness baseline tracking',
             module: 'Module 0: Foundation',
         },
         {
@@ -1679,55 +1679,34 @@ async function main() {
         return d;
     }
 
-    // Helper to build prefilled contact URLs
+    function wrapTables(html) {
+        return String(html || '')
+            .replace(/<table[\s>]/gi, '<div class="table-wrap">$&')
+            .replace(/<\/table>/gi, '</table></div>');
+    }
+
+    // Helper to build prefilled contact URLs (with explicit PAID consultation wording)
     function getContactLinks(isEn, contextTitle) {
         const ctx = contextTitle ? ` (${contextTitle})` : '';
         if (isEn) {
             return {
                 bookTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want full lifetime access to the "Point of Support" guide + PDF ($99)${ctx}. How can I pay?`)}`,
-                bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want the "Full Guide + 1-on-1 Consultation" bundle ($219)${ctx}.`)}`,
-                consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I would like to book a 1-on-1 PPPD recovery consultation ($150/hour)${ctx}.`)}`,
-                consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('PPPD 1-on-1 Consultation / Access')}&body=${encodeURIComponent(`Hi Maxim,\n\nI am writing from pppd.tech${ctx}. I would like to inquire about: `)}`
+                bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want to purchase the PAID "Full Guide + 1-on-1 Consultation" bundle ($219)${ctx}.`)}`,
+                consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Hi Maxim! I want to book a PAID 1-on-1 PPPD consultation ($150 / hour)${ctx}.`)}`,
+                consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('PPPD Paid 1-on-1 Consultation ($150/hr) / Full Guide ($99)')}&body=${encodeURIComponent(`Hi Maxim,\n\nI am writing from pppd.tech${ctx}. I would like to purchase: `)}`
             };
         }
         return {
-            bookTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу получить бессрочный доступ к книге «Точка Опоры» + PDF (5 000 ₽)${ctx}. Пришли реквизиты СБП.`)}`,
-            bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу взять пакет «Полная книга + Личная консультация 1 час» (10 900 ₽)${ctx}.`)}`,
-            consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу записаться на личную консультацию (7 500 ₽ / час)${ctx}.`)}`,
+            bookTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу оплатить бессрочный доступ к книге «Точка Опоры» + PDF (5 000 ₽)${ctx}. Пришли реквизиты СБП.`)}`,
+            bundleTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу оплатить пакет «Полная книга + Платный личный разбор 1 час» (10 900 ₽)${ctx}.`)}`,
+            consultTg: `https://t.me/Hmjim?text=${encodeURIComponent(`Привет, Максим! Хочу записаться на ПЛАТНУЮ личную консультацию (7 500 ₽ / час)${ctx}.`)}`,
             maxUrl: 'https://max.ru/u/f9LHodD0cOK99TnsJAEXE_g24SCeGsQlkAfccI-5wA5uxzDMTHnJ-WOPDw0',
-            consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('Точка Опоры — доступ / консультация')}&body=${encodeURIComponent(`Привет, Максим!\n\nПишу с сайта pppd.tech${ctx}. Хочу узнать по поводу: `)}`
+            consultMail: `mailto:fhmjim@gmail.com?subject=${encodeURIComponent('Точка Опоры — платная консультация (7 500 ₽) / доступ к книге (5 000 ₽)')}&body=${encodeURIComponent(`Привет, Максим!\n\nПишу с сайта pppd.tech${ctx}. Хочу оплатить: `)}`
         };
     }
 
-    // Full 3-Test Clinical Diagnostic Suite (DHI 25q + HADS 14q + Niigata NPQ 12q + Combined Summary Tracker)
+    // Premium 4-Tab Clinical Diagnostic Suite (DHI 25q + HADS 14q + Niigata NPQ 12q + Paid-Explicit Summary)
     function injectClinicalTestsSuite(htmlContent, isEn) {
-        // 1. Top 3-test quick jump navigator
-        const navHTML = `
-        <div id="pppd-quiz" class="quiz-nav-cards" role="navigation" aria-label="${isEn ? 'Clinical Tests Navigation' : 'Навигация по тестам'}">
-            <a href="#dhi-quiz" class="quiz-nav-card">
-                <div>
-                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 1 · 25 QUESTIONS' : 'ТЕСТ 1 · 25 ВОПРОСОВ'}</div>
-                    <div class="quiz-nav-card-title">${isEn ? 'DHI — Dizziness Handicap' : 'DHI — Индекс головокружения'}</div>
-                </div>
-                <div id="nav-stat-dhi" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (0–100 pts)' : 'Перейти к тесту ↓ (0–100 б.)'}</div>
-            </a>
-            <a href="#hads-quiz" class="quiz-nav-card">
-                <div>
-                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 2 · 14 QUESTIONS' : 'ТЕСТ 2 · 14 ВОПРОСОВ'}</div>
-                    <div class="quiz-nav-card-title">${isEn ? 'HADS — Anxiety & Depression' : 'HADS — Шкала тревоги и депрессии'}</div>
-                </div>
-                <div id="nav-stat-hads" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (A & D 0–21)' : 'Перейти к тесту ↓ (0–21 б.)'}</div>
-            </a>
-            <a href="#npq-quiz" class="quiz-nav-card">
-                <div>
-                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 3 · 12 QUESTIONS' : 'ТЕСТ 3 · 12 ВОПРОСОВ'}</div>
-                    <div class="quiz-nav-card-title">${isEn ? 'NPQ — Niigata PPPD Scale' : 'NPQ — Опросник Ниигаты ПППГ'}</div>
-                </div>
-                <div id="nav-stat-npq" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (0–72 pts)' : 'Перейти к тесту ↓ (0–72 б.)'}</div>
-            </a>
-        </div>`;
-
-        // 2. DHI — 25 clinical items (P=0, E=1, F=2; Yes=4, Sometimes=2, No=0)
         const dhiItems = isEn ? [
             [0, '1. Does looking up increase your dizziness or unsteadiness?'],
             [1, '2. Because of your problem, do you feel frustrated?'],
@@ -1782,54 +1761,6 @@ async function main() {
             [0, '25. Усиливается ли головокружение при наклоне туловища вперёд?']
         ];
 
-        const dhiHTML = `
-        <section id="dhi-quiz" class="pppd-quiz-box">
-            <div class="pppd-quiz-header">
-                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 1 · DHI (25 ITEMS)' : 'ОНЛАЙН-ТЕСТ 1 · ШКАЛА DHI (25 ВОПРОСОВ)'}</div>
-                <h3>${isEn ? 'Take the DHI Test Online' : 'Пройти тест DHI онлайн'}</h3>
-                <p class="pppd-quiz-legend">${isEn
-                    ? 'Answer how things have been over the past week: Yes (4 pts), Sometimes (2 pts), No (0 pts).'
-                    : 'Отвечай по ощущениям за последнюю неделю: «Да» (4 балла), «Иногда» (2 балла), «Нет» (0 баллов).'}</p>
-            </div>
-            <div id="dhi-questions">
-                ${dhiItems.map((it, i) => `
-                <div class="quiz-q-item" data-quiz="dhi" data-q="${i}" data-cat="${it[0]}">
-                    <div class="quiz-q-label">${it[1]}</div>
-                    <div class="quiz-scale-3" role="group" aria-label="${escAttr(it[1])}">
-                        <button type="button" class="quiz-opt-btn" data-val="4">${isEn ? 'Yes (4)' : 'Да (4)'}</button>
-                        <button type="button" class="quiz-opt-btn" data-val="2">${isEn ? 'Sometimes (2)' : 'Иногда (2)'}</button>
-                        <button type="button" class="quiz-opt-btn" data-val="0">${isEn ? 'No (0)' : 'Нет (0)'}</button>
-                    </div>
-                </div>`).join('')}
-            </div>
-            <div id="dhi-result" class="quiz-result-box" style="display:none;">
-                <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
-                    <div>
-                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your DHI Score:' : 'Твой индекс DHI:'}</span>
-                        <span id="dhi-total" class="quiz-score-big">0 / 100</span>
-                    </div>
-                    <span id="dhi-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
-                </div>
-                <p id="dhi-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Physical Subscale (P)' : 'Физическая шкала (P — движения, позы)'}</span><strong id="dhi-c0">0 / 28</strong></div>
-                    <div class="quiz-bar-track"><div id="dhi-b0" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Emotional Subscale (E)' : 'Эмоциональная шкала (E — страх, подавленность)'}</span><strong id="dhi-c1">0 / 36</strong></div>
-                    <div class="quiz-bar-track"><div id="dhi-b1" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Functional Subscale (F)' : 'Функциональная шкала (F — работа, улица, быт)'}</span><strong id="dhi-c2">0 / 36</strong></div>
-                    <div class="quiz-bar-track"><div id="dhi-b2" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div style="margin-top:14px;">
-                    <a href="#hads-quiz" class="paywall-tier-btn secondary">${isEn ? 'Next: Take HADS Anxiety & Depression Test ↓' : 'Далее: перейти к тесту тревоги HADS ↓'}</a>
-                </div>
-            </div>
-        </section>`;
-
-        // 3. HADS — 14 clinical items (cat 0 = Anxiety A, cat 1 = Depression D)
         const hadsItems = isEn ? [
             { cat: 0, q: '1. I feel tense or "wound up"', opts: [[3,'Most of the time'],[2,'A lot of the time'],[1,'From time to time'],[0,'Not at all']] },
             { cat: 1, q: '2. I still enjoy the things I used to enjoy', opts: [[0,'Definitely as much'],[1,'Not quite so much'],[2,'Only a little'],[3,'Hardly at all']] },
@@ -1862,53 +1793,6 @@ async function main() {
             { cat: 1, q: '14. Я могу получить удовольствие от хорошей книги, фильма или музыки', opts: [[0,'Часто'],[1,'Иногда'],[2,'Редко'],[3,'Очень редко']] }
         ];
 
-        const hadsHTML = `
-        <section id="hads-quiz" class="pppd-quiz-box">
-            <div class="pppd-quiz-header">
-                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 2 · HADS (14 ITEMS)' : 'ОНЛАЙН-ТЕСТ 2 · ШКАЛА HADS (14 ВОПРОСОВ)'}</div>
-                <h3>${isEn ? 'Take the HADS Anxiety & Depression Test Online' : 'Пройти госпитальную шкалу тревоги и депрессии HADS онлайн'}</h3>
-                <p class="pppd-quiz-legend">${isEn
-                    ? 'Select the reply that comes closest to how you have been feeling in the past 7 days. Don\'t overthink — your first reaction is most accurate.'
-                    : 'Выбирай ответ, который точнее всего описывает твоё состояние за последние 7 дней. Не думай долго — первая реакция самая верная.'}</p>
-            </div>
-            <div id="hads-questions">
-                ${hadsItems.map((it, i) => `
-                <div class="quiz-q-item" data-quiz="hads" data-q="${i}" data-cat="${it.cat}">
-                    <div class="quiz-q-label">${it.q}</div>
-                    <div class="quiz-scale-hads" role="group" aria-label="${escAttr(it.q)}">
-                        ${it.opts.map(o => `<button type="button" class="quiz-opt-btn hads-opt" data-val="${o[0]}">${o[1]}</button>`).join('')}
-                    </div>
-                </div>`).join('')}
-            </div>
-            <div id="hads-result" class="quiz-result-box" style="display:none;">
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:14px;">
-                    <div>
-                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Anxiety (HADS-A):' : 'Шкала тревоги (HADS-A):'}</span>
-                        <span id="hads-a-score" class="quiz-score-big">0 / 21</span>
-                        <div id="hads-a-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
-                    </div>
-                    <div>
-                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Depression / Exhaustion (HADS-D):' : 'Шкала депрессии / истощения (HADS-D):'}</span>
-                        <span id="hads-d-score" class="quiz-score-big">0 / 21</span>
-                        <div id="hads-d-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
-                    </div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Anxiety Fuel (HADS-A)' : 'Уровень тревоги (HADS-A)'}</span><strong id="hads-c0">0 / 21</strong></div>
-                    <div class="quiz-bar-track"><div id="hads-b0" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Depressive Burnout (HADS-D)' : 'Уровень истощения / депрессии (HADS-D)'}</span><strong id="hads-c1">0 / 21</strong></div>
-                    <div class="quiz-bar-track"><div id="hads-b1" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <p id="hads-summary" style="font-size:0.9rem;line-height:1.6;margin:12px 0;"></p>
-                <div style="margin-top:12px;">
-                    <a href="#npq-quiz" class="paywall-tier-btn secondary">${isEn ? 'Next: Take Niigata PPPD Trigger Test (NPQ) ↓' : 'Далее: пройти опросник триггеров ПППГ Ниигаты (NPQ) ↓'}</a>
-                </div>
-            </div>
-        </section>`;
-
-        // 4. NPQ — 12 clinical items (0..6)
         const npqItems = isEn ? [
             [0, '1. Standing upright for a long time (in line, in the kitchen, at a stop)'],
             [0, '2. Walking at your normal pace on a flat surface'],
@@ -1937,92 +1821,364 @@ async function main() {
             [2, '12. Смотреть на плитку, полосатые узоры, эскалатор']
         ];
 
-        const npqHTML = `
-        <section id="npq-quiz" class="pppd-quiz-box">
-            <div class="pppd-quiz-header">
-                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 3 · NIIGATA NPQ (12 ITEMS)' : 'ОНЛАЙН-ТЕСТ 3 · ОПРОСНИК НИИГАТЫ NPQ (12 ВОПРОСОВ)'}</div>
-                <h3>${isEn ? 'Take the Niigata PPPD Questionnaire Online' : 'Пройти опросник Ниигаты (NPQ) онлайн'}</h3>
-                <p class="pppd-quiz-legend">${isEn
-                    ? 'Rate how much each situation triggers swaying or dizziness from 0 (none) to 6 (unbearable). Clinical PPPD cutoff is ≥ 27 points.'
-                    : 'Оцени от 0 (совсем нет) до 6 (невыносимо), насколько ситуация усиливает шаткость или дурноту. Клинический порог ПППГ — от 27 баллов.'}</p>
-            </div>
-            <div id="npq-questions">
-                ${npqItems.map((it, i) => `
-                <div class="quiz-q-item" data-quiz="npq" data-q="${i}" data-cat="${it[0]}">
-                    <div class="quiz-q-label">${it[1]}</div>
-                    <div class="quiz-scale" role="group" aria-label="${escAttr(it[1])}">
-                        ${[0,1,2,3,4,5,6].map(v => `<button type="button" class="quiz-opt-btn" data-val="${v}">${v}</button>`).join('')}
-                    </div>
-                    <div class="quiz-scale-hints">
-                        <span>${isEn ? '0 — None' : '0 — Нет'}</span>
-                        <span>${isEn ? '3 — Moderate' : '3 — Умеренно'}</span>
-                        <span>${isEn ? '6 — Unbearable' : '6 — Невыносимо'}</span>
-                    </div>
-                </div>`).join('')}
-            </div>
-            <div id="npq-result" class="quiz-result-box" style="display:none;">
-                <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
-                    <div>
-                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your Total NPQ Score:' : 'Твой общий балл NPQ:'}</span>
-                        <span id="npq-total" class="quiz-score-big">0 / 72</span>
-                    </div>
-                    <span id="npq-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
-                </div>
-                <p id="npq-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Upright Posture & Walking' : 'Вертикальная поза и ходьба'}</span><strong id="npq-c0">0 / 24</strong></div>
-                    <div class="quiz-bar-track"><div id="npq-b0" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Active & Passive Motion' : 'Движение головы и транспорт'}</span><strong id="npq-c1">0 / 24</strong></div>
-                    <div class="quiz-bar-track"><div id="npq-b1" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <div class="quiz-bar-row">
-                    <div class="quiz-bar-label"><span>${isEn ? 'Visual Dependence (Stores / Screens)' : 'Зрительная перегрузка (магазины / экраны)'}</span><strong id="npq-c2">0 / 24</strong></div>
-                    <div class="quiz-bar-track"><div id="npq-b2" class="quiz-bar-fill" style="width:0%"></div></div>
-                </div>
-                <p id="npq-advice" style="font-size:0.88rem;color:var(--text-secondary);margin:14px 0 0;"></p>
-            </div>
-        </section>`;
+        const cLinks = getContactLinks(isEn, isEn ? 'Diagnostic Tests' : 'Тесты ПППГ');
 
-        // 5. Combined Point-A Summary Dashboard + Unified JS Controller
-        const summaryAndScriptHTML = `
-        <section id="tests-summary-card" class="pppd-quiz-box" style="border-color:var(--accent);">
-            <div class="article-offer-eyebrow">${isEn ? 'YOUR BASELINE SCORECARD (POINT A)' : 'ТВОЯ СВОДКА РЕЗУЛЬТАТОВ («ТОЧКА А»)'}</div>
-            <h3 style="margin:0 0 8px 0;">${isEn ? 'Combined Diagnostic Profile' : 'Все твои баллы в одном месте'}</h3>
-            <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:14px;">${isEn
-                ? 'As you answer DHI, HADS, and NPQ above, your scores automatically populate here. Save them to compare in 30 days.'
-                : 'По мере ответов в тестах DHI, HADS и NPQ выше твои цифры автоматически собираются здесь. Скопируй их в заметки, чтобы сравнить ровно через 30 дней.'}</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:16px;">
-                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">DHI (${isEn ? 'Handicap' : 'Шаткость'})</div>
-                    <div id="sum-dhi" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 100</div>
-                </div>
-                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">HADS-A (${isEn ? 'Anxiety' : 'Тревога'})</div>
-                    <div id="sum-hads-a" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 21</div>
-                </div>
-                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">HADS-D (${isEn ? 'Burnout' : 'Депрессия'})</div>
-                    <div id="sum-hads-d" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 21</div>
-                </div>
-                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">NPQ (${isEn ? 'Niigata' : 'Ниигата'})</div>
-                    <div id="sum-npq" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 72</div>
-                </div>
+        const appHTML = `
+        <div id="pppd-quiz" class="diag-app">
+            <div class="diag-tabs" role="tablist" aria-label="${isEn ? 'Clinical Diagnostic Scales' : 'Клинические диагностические шкалы'}">
+                <button type="button" class="diag-tab active" role="tab" aria-selected="true" data-tab="dhi">
+                    <span class="diag-tab-top">${isEn ? 'SCALE 1 · 25 ITEMS' : 'ТЕСТ 1 · 25 ВОПРОСОВ'}</span>
+                    <span class="diag-tab-name">${isEn ? 'DHI · Dizziness' : 'DHI · Шаткость'}</span>
+                    <span id="pill-dhi" class="diag-tab-pill">0 / 25</span>
+                </button>
+                <button type="button" class="diag-tab" role="tab" aria-selected="false" data-tab="hads">
+                    <span class="diag-tab-top">${isEn ? 'SCALE 2 · 14 ITEMS' : 'ТЕСТ 2 · 14 ВОПРОСОВ'}</span>
+                    <span class="diag-tab-name">${isEn ? 'HADS · Anxiety' : 'HADS · Тревога'}</span>
+                    <span id="pill-hads" class="diag-tab-pill">0 / 14</span>
+                </button>
+                <button type="button" class="diag-tab" role="tab" aria-selected="false" data-tab="npq">
+                    <span class="diag-tab-top">${isEn ? 'SCALE 3 · 12 ITEMS' : 'ТЕСТ 3 · 12 ВОПРОСОВ'}</span>
+                    <span class="diag-tab-name">${isEn ? 'NPQ · Niigata PPPD' : 'NPQ · Ниигата ПППГ'}</span>
+                    <span id="pill-npq" class="diag-tab-pill">0 / 12</span>
+                </button>
+                <button type="button" class="diag-tab" role="tab" aria-selected="false" data-tab="summary">
+                    <span class="diag-tab-top">${isEn ? 'RESULTS' : 'ИТОГ ЗАМЕРА'}</span>
+                    <span class="diag-tab-name">${isEn ? 'Scorecard (Point A)' : 'Сводка («Точка А»)'}</span>
+                    <span id="pill-sum" class="diag-tab-pill">${isEn ? 'Profile' : 'Профиль'}</span>
+                </button>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;">
-                <button type="button" id="copy-scores-btn" class="paywall-tier-btn secondary">${isEn ? '📋 Copy Results to Clipboard' : '📋 Скопировать результаты в заметки'}</button>
-                <a id="all-tg-consult" href="${getContactLinks(isEn, isEn ? 'Diagnostic Tests' : 'Тесты ПППГ').consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">${isEn ? 'Send Scores to Maxim (1-on-1 Review) →' : 'Отправить баллы Максиму на разбор →'}</a>
-            </div>
-        </section>
+
+            <!-- TAB 1: DHI -->
+            <section id="dhi-quiz" class="diag-panel active" role="tabpanel" data-panel="dhi">
+                <div class="diag-panel-head">
+                    <div>
+                        <div class="article-offer-eyebrow">${isEn ? 'SCALE 1 OF 3 · DIZZINESS HANDICAP INVENTORY' : 'ШКАЛА 1 ИЗ 3 · ИНДЕКС ГОЛОВОКРУЖЕНИЯ DHI'}</div>
+                        <h3>${isEn ? 'DHI — How Much Dizziness Limits Your Life' : 'Шкала DHI — Индекс инвалидизации при головокружении'}</h3>
+                        <p class="pppd-quiz-legend">${isEn
+                            ? 'Rate based on the past 7 days: Yes (4 pts), Sometimes (2 pts), No (0 pts).'
+                            : 'Отвечай по ощущениям за последние 7 дней: «Да» (4 балла), «Иногда» (2 балла), «Нет» (0 баллов).'}</p>
+                    </div>
+                    <button type="button" class="diag-reset-btn" data-reset="dhi">${isEn ? 'Reset DHI' : 'Сбросить'}</button>
+                </div>
+                <div class="diag-prog-wrap">
+                    <div class="diag-prog-meta"><span>${isEn ? 'Progress' : 'Отвечено вопросов'}</span><span id="prog-txt-dhi">0 / 25</span></div>
+                    <div class="quiz-bar-track"><div id="prog-bar-dhi" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div id="dhi-questions">
+                    ${dhiItems.map((it, i) => `
+                    <div class="quiz-q-item" data-quiz="dhi" data-q="${i}" data-cat="${it[0]}">
+                        <div class="quiz-q-label">${it[1]}</div>
+                        <div class="quiz-scale-3" role="group" aria-label="${escAttr(it[1])}">
+                            <button type="button" class="quiz-opt-btn" data-val="4">${isEn ? 'Yes · 4' : 'Да · 4'}</button>
+                            <button type="button" class="quiz-opt-btn" data-val="2">${isEn ? 'Sometimes · 2' : 'Иногда · 2'}</button>
+                            <button type="button" class="quiz-opt-btn" data-val="0">${isEn ? 'No · 0' : 'Нет · 0'}</button>
+                        </div>
+                    </div>`).join('')}
+                </div>
+                <div id="dhi-result" class="quiz-result-box" style="display:none;">
+                    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+                        <div>
+                            <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your DHI Score:' : 'Твой индекс DHI:'}</span>
+                            <span id="dhi-total" class="quiz-score-big">0 / 100</span>
+                        </div>
+                        <span id="dhi-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
+                    </div>
+                    <p id="dhi-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Physical Subscale (P)' : 'Физическая шкала (P — движения, позы)'}</span><strong id="dhi-c0">0 / 28</strong></div>
+                        <div class="quiz-bar-track"><div id="dhi-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Emotional Subscale (E)' : 'Эмоциональная шкала (E — страх, подавленность)'}</span><strong id="dhi-c1">0 / 36</strong></div>
+                        <div class="quiz-bar-track"><div id="dhi-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Functional Subscale (F)' : 'Функциональная шкала (F — работа, улица, быт)'}</span><strong id="dhi-c2">0 / 36</strong></div>
+                        <div class="quiz-bar-track"><div id="dhi-b2" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                </div>
+                <div style="margin-top:16px;">
+                    <button type="button" class="paywall-tier-btn accent" data-goto-tab="hads">${isEn ? 'Step 2: Take HADS Anxiety & Depression Scale (14 items) →' : 'Шаг 2: Перейти к шкале тревоги и депрессии HADS (14 вопросов) →'}</button>
+                </div>
+            </section>
+
+            <!-- TAB 2: HADS -->
+            <section id="hads-quiz" class="diag-panel" role="tabpanel" data-panel="hads">
+                <div class="diag-panel-head">
+                    <div>
+                        <div class="article-offer-eyebrow">${isEn ? 'SCALE 2 OF 3 · HOSPITAL ANXIETY & DEPRESSION SCALE' : 'ШКАЛА 2 ИЗ 3 · ГОСПИТАЛЬНАЯ ШКАЛА ТРЕВОГИ И ДЕПРЕССИИ'}</div>
+                        <h3>${isEn ? 'HADS — Autonomic Anxiety & Nervous Exhaustion' : 'Шкала HADS — Уровень тревоги и нервного истощения'}</h3>
+                        <p class="pppd-quiz-legend">${isEn
+                            ? 'Pick your immediate reaction based on the past 7 days — do not overthink.'
+                            : 'Выбирай первый пришедший в голову ответ по состоянию за последние 7 дней.'}</p>
+                    </div>
+                    <button type="button" class="diag-reset-btn" data-reset="hads">${isEn ? 'Reset HADS' : 'Сбросить'}</button>
+                </div>
+                <div class="diag-prog-wrap">
+                    <div class="diag-prog-meta"><span>${isEn ? 'Progress' : 'Отвечено вопросов'}</span><span id="prog-txt-hads">0 / 14</span></div>
+                    <div class="quiz-bar-track"><div id="prog-bar-hads" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div id="hads-questions">
+                    ${hadsItems.map((it, i) => `
+                    <div class="quiz-q-item" data-quiz="hads" data-q="${i}" data-cat="${it.cat}">
+                        <div class="quiz-q-label">${it.q}</div>
+                        <div class="quiz-scale-hads" role="group" aria-label="${escAttr(it.q)}">
+                            ${it.opts.map(o => `<button type="button" class="quiz-opt-btn hads-opt" data-val="${o[0]}">${o[1]}</button>`).join('')}
+                        </div>
+                    </div>`).join('')}
+                </div>
+                <div id="hads-result" class="quiz-result-box" style="display:none;">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:14px;">
+                        <div>
+                            <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Anxiety (HADS-A):' : 'Шкала тревоги (HADS-A):'}</span>
+                            <span id="hads-a-score" class="quiz-score-big">0 / 21</span>
+                            <div id="hads-a-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
+                        </div>
+                        <div>
+                            <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Burnout / Depression (HADS-D):' : 'Истощение / депрессия (HADS-D):'}</span>
+                            <span id="hads-d-score" class="quiz-score-big">0 / 21</span>
+                            <div id="hads-d-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
+                        </div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Anxiety Fuel (HADS-A)' : 'Уровень тревоги (HADS-A)'}</span><strong id="hads-c0">0 / 21</strong></div>
+                        <div class="quiz-bar-track"><div id="hads-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Depressive Burnout (HADS-D)' : 'Уровень истощения / депрессии (HADS-D)'}</span><strong id="hads-c1">0 / 21</strong></div>
+                        <div class="quiz-bar-track"><div id="hads-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <p id="hads-summary" style="font-size:0.9rem;line-height:1.6;margin:12px 0 0;"></p>
+                </div>
+                <div style="margin-top:16px;">
+                    <button type="button" class="paywall-tier-btn accent" data-goto-tab="npq">${isEn ? 'Step 3: Take Niigata PPPD Trigger Scale (12 items) →' : 'Шаг 3: Перейти к опроснику Ниигаты ПППГ (12 вопросов) →'}</button>
+                </div>
+            </section>
+
+            <!-- TAB 3: NPQ -->
+            <section id="npq-quiz" class="diag-panel" role="tabpanel" data-panel="npq">
+                <div class="diag-panel-head">
+                    <div>
+                        <div class="article-offer-eyebrow">${isEn ? 'SCALE 3 OF 3 · NIIGATA PPPD QUESTIONNAIRE' : 'ШКАЛА 3 ИЗ 3 · ЯПОНСКИЙ ОПРОСНИК НИИГАТЫ NPQ'}</div>
+                        <h3>${isEn ? 'NPQ — Dominant PPPD Trigger Profile' : 'NPQ — Специализированный опросник триггеров ПППГ'}</h3>
+                        <p class="pppd-quiz-legend">${isEn
+                            ? 'Rate from 0 (no difficulty) to 6 (unbearable). Clinical PPPD cutoff is ≥ 27 points.'
+                            : 'Оцени от 0 (совсем не мешает) до 6 (невыносимо). Клинический порог ПППГ — от 27 баллов.'}</p>
+                    </div>
+                    <button type="button" class="diag-reset-btn" data-reset="npq">${isEn ? 'Reset NPQ' : 'Сбросить'}</button>
+                </div>
+                <div class="diag-prog-wrap">
+                    <div class="diag-prog-meta"><span>${isEn ? 'Progress' : 'Отвечено вопросов'}</span><span id="prog-txt-npq">0 / 12</span></div>
+                    <div class="quiz-bar-track"><div id="prog-bar-npq" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div id="npq-questions">
+                    ${npqItems.map((it, i) => `
+                    <div class="quiz-q-item" data-quiz="npq" data-q="${i}" data-cat="${it[0]}">
+                        <div class="quiz-q-label">${it[1]}</div>
+                        <div class="quiz-scale" role="group" aria-label="${escAttr(it[1])}">
+                            ${[0,1,2,3,4,5,6].map(v => `<button type="button" class="quiz-opt-btn" data-val="${v}">${v}</button>`).join('')}
+                        </div>
+                        <div class="quiz-scale-hints">
+                            <span>${isEn ? '0 — None' : '0 — Нет'}</span>
+                            <span>${isEn ? '3 — Moderate' : '3 — Умеренно'}</span>
+                            <span>${isEn ? '6 — Unbearable' : '6 — Невыносимо'}</span>
+                        </div>
+                    </div>`).join('')}
+                </div>
+                <div id="npq-result" class="quiz-result-box" style="display:none;">
+                    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+                        <div>
+                            <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your Total NPQ Score:' : 'Твой общий балл NPQ:'}</span>
+                            <span id="npq-total" class="quiz-score-big">0 / 72</span>
+                        </div>
+                        <span id="npq-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
+                    </div>
+                    <p id="npq-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Upright Posture & Walking' : 'Вертикальная поза и ходьба'}</span><strong id="npq-c0">0 / 24</strong></div>
+                        <div class="quiz-bar-track"><div id="npq-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Active & Passive Motion' : 'Движение головы и транспорт'}</span><strong id="npq-c1">0 / 24</strong></div>
+                        <div class="quiz-bar-track"><div id="npq-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <div class="quiz-bar-row">
+                        <div class="quiz-bar-label"><span>${isEn ? 'Visual Dependence (Stores / Screens)' : 'Зрительная перегрузка (магазины / экраны)'}</span><strong id="npq-c2">0 / 24</strong></div>
+                        <div class="quiz-bar-track"><div id="npq-b2" class="quiz-bar-fill" style="width:0%"></div></div>
+                    </div>
+                    <p id="npq-advice" style="font-size:0.88rem;color:var(--text-secondary);margin:14px 0 0;"></p>
+                </div>
+                <div style="margin-top:16px;">
+                    <button type="button" class="paywall-tier-btn primary" data-goto-tab="summary">${isEn ? 'Open Complete Diagnostic Scorecard (Point A) →' : 'Открыть сводную карту результатов («Точка А») →'}</button>
+                </div>
+            </section>
+
+            <!-- TAB 4: MASTER SCORECARD & EXPLICIT PAID OPTIONS -->
+            <section id="tests-summary-card" class="diag-panel" role="tabpanel" data-panel="summary">
+                <div class="diag-panel-head">
+                    <div>
+                        <div class="article-offer-eyebrow">${isEn ? 'YOUR BASELINE SCORECARD (POINT A)' : 'СВОДНАЯ КАРТА РЕЗУЛЬТАТОВ («ТОЧКА А»)'}</div>
+                        <h3>${isEn ? 'Combined Diagnostic Profile' : 'Все твои показатели в одном месте'}</h3>
+                        <p class="pppd-quiz-legend">${isEn
+                            ? 'Your scores save automatically in your browser and sync with the 90-Day Tracker in Chapter 3.'
+                            : 'Результаты автоматически сохраняются в твоём браузере и синхронизируются с 90-дневным трекером в Главе 3.'}</p>
+                    </div>
+                    <button type="button" class="diag-reset-btn" data-reset="all">${isEn ? 'Reset All' : 'Сбросить всё'}</button>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0;">
+                    <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:10px;padding:14px;">
+                        <div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:4px;">DHI (${isEn ? 'Handicap' : 'Шаткость'})</div>
+                        <div id="sum-dhi" style="font-size:1.45rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;">— / 100</div>
+                    </div>
+                    <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:10px;padding:14px;">
+                        <div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:4px;">HADS-A (${isEn ? 'Anxiety' : 'Тревога'})</div>
+                        <div id="sum-hads-a" style="font-size:1.45rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;">— / 21</div>
+                    </div>
+                    <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:10px;padding:14px;">
+                        <div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:4px;">HADS-D (${isEn ? 'Burnout' : 'Истощение'})</div>
+                        <div id="sum-hads-d" style="font-size:1.45rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;">— / 21</div>
+                    </div>
+                    <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:10px;padding:14px;">
+                        <div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:4px;">NPQ (${isEn ? 'Niigata' : 'Ниигата'})</div>
+                        <div id="sum-npq" style="font-size:1.45rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;">— / 72</div>
+                    </div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-bottom:20px;">
+                    <button type="button" id="copy-scores-btn" class="paywall-tier-btn secondary">${isEn ? '📋 Copy My Scores to Notes' : '📋 Скопировать мои баллы в заметки'}</button>
+                    <a href="03_baseline_tests.html#point-a-tracker" class="paywall-tier-btn secondary">${isEn ? '📈 Open 90-Day Tracker & Stress Audit →' : '📈 Открыть 90-дневный трекер (Глава 3) →'}</a>
+                </div>
+
+                <div class="paywall-tiers" style="margin:0;">
+                    <div class="paywall-tier">
+                        <div>
+                            <div class="paywall-tier-name">${isEn ? 'Self-Paced Recovery System' : 'Самостоятельный выход (Книга + PDF)'}</div>
+                            <div class="paywall-tier-price-row">
+                                <span class="paywall-tier-price">${isEn ? '$99' : '5 000 ₽'}</span>
+                            </div>
+                            <div class="paywall-tier-note">${isEn ? '✓ Lifetime access to all 45 chapters + PDF' : '✓ Бессрочный доступ ко всем 45 главам + PDF'}</div>
+                            <p class="paywall-tier-desc">${isEn
+                                ? 'Step-by-step protocol for dismantling the Adrenaline Loop, CAS trap, visual vertigo, and supermarket exposure.'
+                                : 'Полная пошаговая система (Модули 0–4): разрыв адреналиновой петли, выход из капкана CAS и таблицы экспозиции.'}</p>
+                        </div>
+                        <div class="paywall-tier-actions">
+                            <a href="${cLinks.bookTg}" target="_blank" rel="noopener" class="paywall-tier-btn primary">${isEn ? 'Get Full Book Access ($99) →' : 'Забрать доступ к книге (5 000 ₽) →'}</a>
+                        </div>
+                    </div>
+                    <div class="paywall-tier featured">
+                        <div>
+                            <span class="paywall-tier-badge">${isEn ? 'PAID 1-ON-1 CONSULTATION' : 'СТРОГО ПЛАТНЫЙ РАЗБОР'}</span>
+                            <div class="paywall-tier-name">${isEn ? 'Personal Case Review with Maxim' : 'Платный личный разбор с Максимом'}</div>
+                            <div class="paywall-tier-price-row">
+                                <span class="paywall-tier-price">${isEn ? '$150' : '7 500 ₽'}</span>
+                                <span style="font-size:0.82rem;color:var(--text-secondary);">${isEn ? '/ 60 min' : '/ 60 минут'}</span>
+                            </div>
+                            <div class="paywall-tier-note">${isEn ? '✓ Or $219 VIP Bundle (Call + Full Book)' : '✓ Или пакет «Книга + Разбор» за 10 900 ₽'}</div>
+                            <p class="paywall-tier-desc">${isEn
+                                ? '60-minute private call to review your test profile, medical scans, and build your personal recovery plan.'
+                                : 'Часовой личный созвон: разбор твоих баллов, МРТ/обследований, ошибок в практике и персональный маршрут выхода.'}</p>
+                        </div>
+                        <div class="paywall-tier-actions">
+                            <a id="all-tg-consult" href="${cLinks.consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">${isEn ? 'Book Paid 1-on-1 Review ($150) →' : 'Записаться на платный разбор (7 500 ₽) →'}</a>
+                            <a id="all-tg-bundle" href="${cLinks.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">${isEn ? 'VIP Bundle: Book + Review ($219)' : 'Пакет «Книга + Разбор» (10 900 ₽)'}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diag-paid-notice">
+                    <strong>${isEn ? 'Important:' : 'Важно:'}</strong> ${isEn
+                        ? 'Individual review of your test scores, medical workups, and personal recovery planning is conducted strictly on a paid basis ($150/hr or $219 bundle). Free private reviews in direct messages are not offered.'
+                        : 'Индивидуальный разбор результатов тестов, обследований и составление личного плана проводятся строго платно (7 500 ₽ / час или пакет с книгой за 10 900 ₽). Бесплатных разборов и консультаций в личных сообщениях нет.'}
+                </div>
+            </section>
+        </div>
         <script>
         (function(){
             var isEn = ${isEn ? 'true' : 'false'};
+            var STORAGE_KEY = 'pppd_diag_v1';
             var state = { dhi: {}, hads: {}, npq: {} };
             var totals = { dhi: null, hadsA: null, hadsD: null, npq: null };
 
+            function switchTab(tabName, scroll) {
+                document.querySelectorAll('.diag-tab').forEach(function(t){
+                    var active = t.getAttribute('data-tab') === tabName;
+                    t.classList.toggle('active', active);
+                    t.setAttribute('aria-selected', active ? 'true' : 'false');
+                });
+                document.querySelectorAll('.diag-panel').forEach(function(p){
+                    p.classList.toggle('active', p.getAttribute('data-panel') === tabName);
+                });
+                if (scroll) {
+                    var box = document.getElementById('pppd-quiz');
+                    if (box) box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            function saveStorage() {
+                try {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                        state: state,
+                        totals: totals,
+                        updatedAt: new Date().toISOString().split('T')[0]
+                    }));
+                } catch(e) {}
+            }
+
+            function restoreStorage() {
+                try {
+                    var raw = localStorage.getItem(STORAGE_KEY);
+                    if (!raw) return;
+                    var parsed = JSON.parse(raw);
+                    if (!parsed || !parsed.state) return;
+                    ['dhi', 'hads', 'npq'].forEach(function(qType){
+                        if (!parsed.state[qType]) return;
+                        state[qType] = parsed.state[qType];
+                        Object.keys(state[qType]).forEach(function(qIdx){
+                            var entry = state[qType][qIdx];
+                            var row = document.querySelector('.quiz-q-item[data-quiz="' + qType + '"][data-q="' + qIdx + '"]');
+                            if (!row) return;
+                            row.classList.add('answered');
+                            var btn = row.querySelector('.quiz-opt-btn[data-val="' + entry.val + '"]');
+                            if (btn) btn.classList.add('selected');
+                        });
+                    });
+                    calcDHI();
+                    calcHADS();
+                    calcNPQ();
+                    syncMasterSummary();
+                } catch(e) {}
+            }
+
             document.addEventListener('click', function(e){
+                var tabBtn = e.target.closest('.diag-tab');
+                if (tabBtn) {
+                    switchTab(tabBtn.getAttribute('data-tab'), false);
+                    return;
+                }
+                var gotoBtn = e.target.closest('[data-goto-tab]');
+                if (gotoBtn) {
+                    switchTab(gotoBtn.getAttribute('data-goto-tab'), true);
+                    return;
+                }
+                var resetBtn = e.target.closest('[data-reset]');
+                if (resetBtn) {
+                    var target = resetBtn.getAttribute('data-reset');
+                    var list = target === 'all' ? ['dhi', 'hads', 'npq'] : [target];
+                    list.forEach(function(qType){
+                        state[qType] = {};
+                        document.querySelectorAll('.quiz-q-item[data-quiz="' + qType + '"]').forEach(function(r){
+                            r.classList.remove('answered');
+                            r.querySelectorAll('.quiz-opt-btn').forEach(function(b){ b.classList.remove('selected'); });
+                        });
+                    });
+                    if (list.indexOf('dhi') !== -1) { totals.dhi = null; document.getElementById('dhi-result').style.display = 'none'; document.getElementById('prog-txt-dhi').textContent = '0 / 25'; document.getElementById('prog-bar-dhi').style.width = '0%'; var pd = document.getElementById('pill-dhi'); pd.textContent = '0 / 25'; pd.classList.remove('done'); }
+                    if (list.indexOf('hads') !== -1) { totals.hadsA = null; totals.hadsD = null; document.getElementById('hads-result').style.display = 'none'; document.getElementById('prog-txt-hads').textContent = '0 / 14'; document.getElementById('prog-bar-hads').style.width = '0%'; var ph = document.getElementById('pill-hads'); ph.textContent = '0 / 14'; ph.classList.remove('done'); }
+                    if (list.indexOf('npq') !== -1) { totals.npq = null; document.getElementById('npq-result').style.display = 'none'; document.getElementById('prog-txt-npq').textContent = '0 / 12'; document.getElementById('prog-bar-npq').style.width = '0%'; var pn = document.getElementById('pill-npq'); pn.textContent = '0 / 12'; pn.classList.remove('done'); }
+                    syncMasterSummary();
+                    saveStorage();
+                    return;
+                }
                 var btn = e.target.closest('.quiz-opt-btn');
                 if (!btn) return;
                 var row = btn.closest('.quiz-q-item');
@@ -2032,21 +2188,25 @@ async function main() {
                 var qIdx = row.getAttribute('data-q');
                 row.querySelectorAll('.quiz-opt-btn').forEach(function(b){ b.classList.remove('selected'); });
                 btn.classList.add('selected');
+                row.classList.add('answered');
                 state[qType][qIdx] = { val: parseInt(btn.getAttribute('data-val'), 10), cat: parseInt(row.getAttribute('data-cat'), 10) };
                 if (qType === 'dhi') calcDHI();
                 if (qType === 'hads') calcHADS();
                 if (qType === 'npq') calcNPQ();
                 syncMasterSummary();
+                saveStorage();
             });
 
             function calcDHI() {
                 var keys = Object.keys(state.dhi);
+                document.getElementById('prog-txt-dhi').textContent = keys.length + ' / 25';
+                document.getElementById('prog-bar-dhi').style.width = Math.round((keys.length / 25) * 100) + '%';
                 if (!keys.length) return;
                 var c = [0, 0, 0], total = 0, maxes = [28, 36, 36];
                 keys.forEach(function(k){ c[state.dhi[k].cat] += state.dhi[k].val; total += state.dhi[k].val; });
                 totals.dhi = total;
                 document.getElementById('dhi-result').style.display = 'block';
-                document.getElementById('dhi-total').textContent = total + ' / 100' + (keys.length < 25 ? (isEn ? ' (' + keys.length + '/25)' : ' (' + keys.length + '/25 вопр.)') : '');
+                document.getElementById('dhi-total').textContent = total + ' / 100' + (keys.length < 25 ? ' (' + keys.length + '/25)' : '');
                 for (var i = 0; i < 3; i++) {
                     document.getElementById('dhi-c' + i).textContent = c[i] + ' / ' + maxes[i];
                     document.getElementById('dhi-b' + i).style.width = Math.round((c[i] / maxes[i]) * 100) + '%';
@@ -2056,24 +2216,28 @@ async function main() {
                 if (total >= 61) {
                     st.textContent = isEn ? 'Severe Handicap (61–100)' : 'Тяжёлая степень (61–100)';
                     sm.textContent = isEn
-                        ? 'Dizziness significantly restricts your daily mobility and triggers strong avoidance. Structured VRT + graded exposure + breaking the adrenaline loop is essential.'
-                        : 'Головокружение сильно сузило твою жизнь и запустило избегание. Хорошая новость: с высоких цифр балл падает быстрее всего при связке ВРТ + экспозиция + работа с тревогой.';
+                        ? 'Dizziness significantly restricts mobility and triggers avoidance. Structured VRT + graded exposure + breaking the adrenaline loop is essential.'
+                        : 'Головокружение сильно сузило жизнь и запустило избегание. С высоких цифр балл падает быстрее всего при связке ВРТ + экспозиция + работа с тревогой.';
                 } else if (total >= 31) {
                     st.textContent = isEn ? 'Moderate Handicap (31–60)' : 'Умеренная степень (31–60)';
                     sm.textContent = isEn
-                        ? 'Moderate restriction. You function with effort and avoid specific triggers. Systematic daily rehabilitation will bring you below 20.'
-                        : 'Жизнь ограничена, но ты функционируешь через усилие. Главная ловушка здесь — застрять на «терпимом» уровне. Нужна системная экспозиция и снятие костылей.';
+                        ? 'Moderate restriction. You function with effort and avoid triggers. Systematic daily rehabilitation brings this below 20.'
+                        : 'Жизнь ограничена, но ты функционируешь через усилие. Главная ловушка — застрять на «терпимом» уровне. Нужна системная экспозиция и снятие костылей.';
                 } else {
                     st.textContent = isEn ? 'Mild Handicap (0–30)' : 'Лёгкая степень (0–30)';
                     sm.textContent = isEn
                         ? 'Mild impact. Keep up consistent vestibular hygiene and eliminate subtle safety behaviors.'
                         : 'Лёгкая степень. Жизнь почти не ограничена — ты либо в начале, либо уже на финишной прямой.';
                 }
-                document.getElementById('nav-stat-dhi').textContent = '✓ DHI: ' + total + ' / 100 (' + keys.length + '/25)';
+                var pill = document.getElementById('pill-dhi');
+                pill.textContent = (keys.length === 25 ? '✓ ' : '') + total + ' / 100';
+                pill.classList.toggle('done', keys.length === 25);
             }
 
             function calcHADS() {
                 var keys = Object.keys(state.hads);
+                document.getElementById('prog-txt-hads').textContent = keys.length + ' / 14';
+                document.getElementById('prog-bar-hads').style.width = Math.round((keys.length / 14) * 100) + '%';
                 if (!keys.length) return;
                 var c = [0, 0];
                 keys.forEach(function(k){ c[state.hads[k].cat] += state.hads[k].val; });
@@ -2087,43 +2251,38 @@ async function main() {
                 document.getElementById('hads-b0').style.width = Math.round((c[0] / 21) * 100) + '%';
                 document.getElementById('hads-b1').style.width = Math.round((c[1] / 21) * 100) + '%';
 
-                function labelLevel(v, isDep) {
+                function labelLevel(v) {
                     if (v >= 11) return { txt: isEn ? 'Clinically Significant (11+)' : 'Клинически выраженный уровень (11+)', col: '#f85149' };
                     if (v >= 8) return { txt: isEn ? 'Subclinical / Borderline (8–10)' : 'Субклинический уровень (8–10)', col: '#d29922' };
                     return { txt: isEn ? 'Normal Range (0–7)' : 'Норма (0–7)', col: '#3fb950' };
                 }
-                var la = labelLevel(c[0], false), ld = labelLevel(c[1], true);
+                var la = labelLevel(c[0]), ld = labelLevel(c[1]);
                 var ba = document.getElementById('hads-a-badge'), bd = document.getElementById('hads-d-badge');
                 ba.textContent = la.txt; ba.style.color = la.col;
                 bd.textContent = ld.txt; bd.style.color = ld.col;
 
-                var msg = '';
-                if (c[0] >= 11) {
-                    msg = isEn
-                        ? 'Your Anxiety (A = ' + c[0] + ') is the main fuel keeping your balance system hyper-vigilant. Start with somatic down-regulation (Chapter 5) and dismantling the Adrenaline Loop (Module 2).'
-                        : 'Тревога (A = ' + c[0] + ') сейчас выступает главным топливом твоей шаткости: амигдала держит систему равновесия в режиме боевой тревоги. Начинай с релаксации по Джекобсону (Глава 5) и разрыва Адреналиновой петли (Модуль 2).';
-                } else {
-                    msg = isEn
-                        ? 'Your anxiety score is moderate/controlled — ideal ground for VRT and active supermarket exposure.'
-                        : 'Тревога в рабочей зоне — отличная база для вестибулярной гимнастики и активной экспозиции.';
-                }
+                var msg = c[0] >= 11
+                    ? (isEn ? 'Anxiety (A=' + c[0] + ') is fueling balance hyper-vigilance. Start with Jacobson PMR (Ch. 5) and dismantling the Adrenaline Loop (Module 2).' : 'Тревога (A=' + c[0] + ') выступает главным топливом шаткости. Начинай с релаксации по Джекобсону (Глава 5) и разрыва Адреналиновой петли (Модуль 2).')
+                    : (isEn ? 'Anxiety is in a manageable range — ideal ground for VRT and active exposure.' : 'Тревога в рабочей зоне — отличная база для вестибулярной гимнастики и активной экспозиции.');
                 if (c[1] > 14) {
-                    msg += isEn
-                        ? ' Note: HADS-D > 14 indicates heavy nervous exhaustion — consider discussing temporary SSRI support with a neurologist/psychiatrist.'
-                        : ' Важно: HADS-D > 14 говорит о сильном нервном истощении — имеет смысл обсудить с врачом поддержку СИОЗС, чтобы дать мозгу ресурс на практику.';
+                    msg += isEn ? ' HADS-D > 14 indicates heavy exhaustion — consider discussing SSRI support with a physician.' : ' HADS-D > 14 говорит о сильном истощении — имеет смысл обсудить с врачом поддержку СИОЗС.';
                 }
-                document.getElementById('hads-summary').textContent = msg + (keys.length < 14 ? (isEn ? ' (' + keys.length + '/14 answered)' : ' (отвечено ' + keys.length + '/14)') : '');
-                document.getElementById('nav-stat-hads').textContent = '✓ HADS: A=' + c[0] + ', D=' + c[1] + ' (' + keys.length + '/14)';
+                document.getElementById('hads-summary').textContent = msg;
+                var pill = document.getElementById('pill-hads');
+                pill.textContent = (keys.length === 14 ? '✓ ' : '') + 'A:' + c[0] + ' D:' + c[1];
+                pill.classList.toggle('done', keys.length === 14);
             }
 
             function calcNPQ() {
                 var keys = Object.keys(state.npq);
+                document.getElementById('prog-txt-npq').textContent = keys.length + ' / 12';
+                document.getElementById('prog-bar-npq').style.width = Math.round((keys.length / 12) * 100) + '%';
                 if (!keys.length) return;
                 var c = [0, 0, 0], total = 0;
                 keys.forEach(function(k){ c[state.npq[k].cat] += state.npq[k].val; total += state.npq[k].val; });
                 totals.npq = total;
                 document.getElementById('npq-result').style.display = 'block';
-                document.getElementById('npq-total').textContent = total + ' / 72' + (keys.length < 12 ? (isEn ? ' (' + keys.length + '/12)' : ' (' + keys.length + '/12 вопр.)') : '');
+                document.getElementById('npq-total').textContent = total + ' / 72' + (keys.length < 12 ? ' (' + keys.length + '/12)' : '');
                 for (var i = 0; i < 3; i++) {
                     document.getElementById('npq-c' + i).textContent = c[i] + ' / 24';
                     document.getElementById('npq-b' + i).style.width = Math.round((c[i] / 24) * 100) + '%';
@@ -2132,32 +2291,28 @@ async function main() {
                 var sumEl = document.getElementById('npq-summary');
                 if (total >= 45) {
                     stageEl.textContent = isEn ? 'Severe PPPD Pattern (≥45)' : 'Выраженная стадия ПППГ (≥45)';
-                    sumEl.textContent = isEn
-                        ? 'Strong central sensitization across triggers. Daily VRT + graded exposure + cognitive/somatic reset (Modules 1–3) is required.'
-                        : 'Сильная центральная сенситизация. Нужна связка: снятие мышечного панциря + ВРТ + выход из адреналиновой петли и экспозиция (Модули 1–3).';
+                    sumEl.textContent = isEn ? 'Strong central sensitization across triggers. Daily VRT + graded exposure + somatic reset (Modules 1–3) is required.' : 'Сильная центральная сенситизация. Нужна связка: снятие мышечного панциря + ВРТ + выход из адреналиновой петли и экспозиция (Модули 1–3).';
                 } else if (total >= 27) {
                     stageEl.textContent = isEn ? 'Clinical PPPD Threshold (≥27)' : 'Клинический порог ПППГ (≥27)';
-                    sumEl.textContent = isEn
-                        ? 'Crosses the clinical Niigata PPPD cutoff (27 pts). Hardware is healthy, software filter is stuck on manual threat control.'
-                        : 'Балл выше клинического порога Ниигаты (27 баллов). Железо здорово, но мозг застрял на ручном контроле равновесия.';
+                    sumEl.textContent = isEn ? 'Crosses the clinical Niigata PPPD cutoff (27 pts). Hardware is healthy; software filter is stuck on manual threat control.' : 'Балл выше клинического порога Ниигаты (27 баллов). Железо здорово, но мозг застрял на ручном контроле равновесия.';
                 } else {
-                    stageEl.textContent = isEn ? 'Mild / Subclinical (<27)' : 'Лёгкая / остаточная стадия (<27)';
-                    sumEl.textContent = isEn
-                        ? 'Mild sensitization or recovery plateau. Removing safety crutches and consistent VRT will finish the job.'
-                        : 'Умеренная сенситизация или выход на плато. Отказ от костылей безопасности и регулярная практика доведут балл до нуля.';
+                    stageEl.textContent = isEn ? 'Below Cutoff (<27)' : 'Лёгкая / остаточная стадия (<27)';
+                    sumEl.textContent = isEn ? 'Mild sensitization or recovery plateau. Removing safety crutches and consistent VRT will finish the job.' : 'Умеренная сенситизация или выход на плато. Отказ от костылей безопасности и регулярная практика доведут балл до нуля.';
                 }
                 var maxCat = c[2] >= c[0] && c[2] >= c[1] ? 2 : (c[0] >= c[1] ? 0 : 1);
                 var adviceMap = isEn ? [
-                    'Dominant trigger: Upright Posture & Proprioception → Focus on Chapter 4 (Muscle Armor), Chapter 6 (VRT), and Module 2 (Safety Crutches).',
-                    'Dominant trigger: Motion Sensitivity → Focus on VOR gaze stabilization (Chapters 6 & 6b) and breaking the Adrenaline Loop (Chapter 10).',
-                    'Dominant trigger: Visual Dependence (Stores/Screens) → Focus on Chapter 8 (Visual Dependence), 6b simulators, and Supermarket Exposure (Chapter 13).'
+                    'Dominant trigger: Upright Posture → Focus on Chapter 4 (Muscle Armor), Chapter 6 (VRT), and Module 2 (Safety Crutches).',
+                    'Dominant trigger: Motion Sensitivity → Focus on VOR drills (Chapters 6 & 6b) and breaking the Adrenaline Loop (Chapter 10).',
+                    'Dominant trigger: Visual Dependence → Focus on Chapter 8 (Visual Dependence), 6b simulators, and Supermarket Exposure (Chapter 13).'
                 ] : [
                     'Ведущий триггер: Поза и опора → Разбери Главу 4 (Мышечный панцирь), Главу 6 (Гимнастика) и Модуль 2 (Костыли безопасности).',
-                    'Ведущий триггер: Чувствительность к движению → Перекалибровка VOR (Главы 6 и 6b) + разрыв Адреналиновой петли (Глава 10).',
-                    'Ведущий триггер: Зрительная зависимость (магазины / экраны) → Глава 8 (Зрительная зависимость), тренажёры 6b и Экспозиция (Глава 13).'
+                    'Ведущий триггер: Движение → Перекалибровка VOR (Главы 6 и 6b) + разрыв Адреналиновой петли (Глава 10).',
+                    'Ведущий триггер: Зрительная нагрузка → Глава 8 (Зрительная зависимость), тренажёры 6b и Экспозиция (Глава 13).'
                 ];
                 document.getElementById('npq-advice').textContent = adviceMap[maxCat];
-                document.getElementById('nav-stat-npq').textContent = '✓ NPQ: ' + total + ' / 72 (' + keys.length + '/12)';
+                var pill = document.getElementById('pill-npq');
+                pill.textContent = (keys.length === 12 ? '✓ ' : '') + total + ' / 72';
+                pill.classList.toggle('done', keys.length === 12);
             }
 
             function syncMasterSummary() {
@@ -2170,11 +2325,19 @@ async function main() {
                 if (totals.dhi !== null) parts.push('DHI=' + totals.dhi + '/100');
                 if (totals.hadsA !== null) parts.push('HADS-A=' + totals.hadsA + '/21, HADS-D=' + totals.hadsD + '/21');
                 if (totals.npq !== null) parts.push('NPQ=' + totals.npq + '/72');
+                var pillSum = document.getElementById('pill-sum');
+                pillSum.classList.toggle('done', parts.length === 3);
+                pillSum.textContent = parts.length ? (parts.length + '/3 ✓') : (isEn ? 'Profile' : 'Профиль');
+
                 if (parts.length) {
-                    var msg = isEn
-                        ? 'Hi Maxim! My test scores on pppd.tech: ' + parts.join('; ') + '. I want to book a 1-on-1 review ($150) or bundle ($219).'
-                        : 'Привет, Максим! Прошёл тесты на сайте: ' + parts.join('; ') + '. Хочу разобрать мой случай на консультации (7 500 ₽) или взять пакет с книгой (10 900 ₽).';
-                    document.getElementById('all-tg-consult').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msg);
+                    var msgConsult = isEn
+                        ? 'Hi Maxim! I want to book a PAID 1-on-1 consultation ($150/hr). My test scores: ' + parts.join('; ') + '.'
+                        : 'Привет, Максим! Хочу записаться на ПЛАТНУЮ личную консультацию (7 500 ₽ / час). Мои баллы: ' + parts.join('; ') + '.';
+                    var msgBundle = isEn
+                        ? 'Hi Maxim! I want to purchase the PAID VIP Bundle: Full Book + 1h Review ($219). My test scores: ' + parts.join('; ') + '.'
+                        : 'Привет, Максим! Хочу оплатить пакет «Полная книга + Платный разбор 1 час» (10 900 ₽). Мои баллы: ' + parts.join('; ') + '.';
+                    document.getElementById('all-tg-consult').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgConsult);
+                    document.getElementById('all-tg-bundle').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgBundle);
                 }
             }
 
@@ -2194,36 +2357,313 @@ async function main() {
                     if (navigator.clipboard && navigator.clipboard.writeText) {
                         navigator.clipboard.writeText(txt);
                     }
-                    copyBtn.textContent = isEn ? '✓ Copied!' : '✓ Скопировано в буфер!';
+                    copyBtn.textContent = isEn ? '✓ Copied!' : '✓ Скопировано!';
                     setTimeout(function(){
-                        copyBtn.textContent = isEn ? '📋 Copy Results to Clipboard' : '📋 Скопировать результаты в заметки';
+                        copyBtn.textContent = isEn ? '📋 Copy My Scores to Notes' : '📋 Скопировать мои баллы в заметки';
                     }, 2200);
+                });
+            }
+
+            // Hash deep-linking (#dhi-quiz, #hads-quiz, #npq-quiz, #tests-summary-card)
+            function checkHash() {
+                var h = (location.hash || '').toLowerCase();
+                if (h.indexOf('hads') !== -1) switchTab('hads', false);
+                else if (h.indexOf('npq') !== -1) switchTab('npq', false);
+                else if (h.indexOf('summary') !== -1) switchTab('summary', false);
+                else if (h.indexOf('dhi') !== -1) switchTab('dhi', false);
+            }
+            restoreStorage();
+            checkHash();
+            window.addEventListener('hashchange', checkHash);
+        })();
+        <\/script>`;
+
+        const firstH2 = htmlContent.search(/<h2[\s>]/i);
+        if (firstH2 !== -1) {
+            return htmlContent.slice(0, firstH2) + appHTML + htmlContent.slice(firstH2);
+        }
+        return appHTML + htmlContent;
+    }
+
+    // Interactive Holmes–Rahe 12-Month Stress Calculator + Synced 90-Day Baseline Tracker for Chapter 3
+    function injectBaselineTrackerSuite(htmlContent, isEn) {
+        const hrEvents = isEn ? [
+            [73, 'Divorce or painful breakup of a major relationship'],
+            [63, 'Death or severe illness of a close family member'],
+            [53, 'Acute illness, injury, surgery, or violent BPPV episode'],
+            [50, 'Marriage or moving in with a partner'],
+            [47, 'Job loss, layoff, or business failure'],
+            [39, 'Career change, new job, or birth of a child'],
+            [38, 'Major financial stress, mortgage, or large debt'],
+            [35, 'Ongoing family or marital conflict'],
+            [30, 'Legal disputes, audits, or high-stakes deadlines'],
+            [29, 'Sharp increase in work responsibility / burnout'],
+            [29, 'Close family member leaving home or relocating'],
+            [26, 'Months of working without vacation or rest'],
+            [25, 'Moving to a new city, house, or apartment'],
+            [24, 'Chronic sleep disruption or night shifts'],
+            [22, 'Major home renovation or living in chaos'],
+            [20, 'High-pressure exams, certification, or thesis']
+        ] : [
+            [73, 'Развод или тяжёлый разрыв значимых отношений'],
+            [63, 'Утрата или тяжёлая болезнь близкого человека'],
+            [53, 'Острая болезнь, операция, травма или приступ ДППГ'],
+            [50, 'Свадьба или начало совместной жизни'],
+            [47, 'Увольнение, потеря дохода или закрытие дела'],
+            [39, 'Смена работы / профессии или рождение ребёнка'],
+            [38, 'Крупный кредит, ипотека или финансовая яма'],
+            [35, 'Затяжной семейный конфликт и напряжение дома'],
+            [30, 'Судебные споры, проверки, жёсткие дедлайны'],
+            [29, 'Резкий рост ответственности и работа на износ'],
+            [29, 'Отъезд близкого члена семьи или эмиграция'],
+            [26, 'Полгода-год работы вообще без полноценного отпуска'],
+            [25, 'Переезд в другую квартиру, город или страну'],
+            [24, 'Хронический недосып, сбитый режим или ночные смены'],
+            [22, 'Затяжной ремонт или стройка'],
+            [20, 'Тяжёлые экзамены, защита проекта или аккредитация']
+        ];
+
+        const hrWidgetHTML = `
+        <section id="hr-calculator" class="pppd-quiz-box">
+            <div class="pppd-quiz-header">
+                <div class="article-offer-eyebrow">${isEn ? 'INTERACTIVE AUDIT · PAST 12 MONTHS' : 'ИНТЕРАКТИВНЫЙ РАСЧЁТ · ПОСЛЕДНИЕ 12 МЕСЯЦЕВ'}</div>
+                <h3>${isEn ? 'Calculate Your Holmes–Rahe Stress Score' : 'Посчитай свой балл стресса Холмса–Раэ'}</h3>
+                <p class="pppd-quiz-legend">${isEn
+                    ? 'Tap every life event that happened to you over the past 12 months before or during PPPD onset:'
+                    : 'Отметь события, которые происходили в твоей жизни за последние 12 месяцев до начала или на фоне ПППГ:'}</p>
+            </div>
+            <div class="hr-grid" id="hr-items-grid">
+                ${hrEvents.map((ev, idx) => `
+                <div class="hr-item" data-hr-idx="${idx}" data-pts="${ev[0]}" role="checkbox" aria-checked="false" tabindex="0">
+                    <span>${ev[1]}</span>
+                    <span class="hr-pts">+${ev[0]}</span>
+                </div>`).join('')}
+            </div>
+            <div class="quiz-result-box" style="margin-top:8px;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+                    <div>
+                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? '12-Month Cumulative Stress:' : 'Накопленная нагрузка за 12 месяцев:'}</span>
+                        <span id="hr-total-val" class="quiz-score-big">0</span>
+                    </div>
+                    <span id="hr-risk-badge" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;">${isEn ? 'Low Load (<150)' : 'Низкая нагрузка (<150)'}</span>
+                </div>
+                <p id="hr-risk-desc" style="font-size:0.88rem;color:var(--text-secondary);margin:10px 0 0;">${isEn
+                    ? 'Select events above to see your nervous system load.'
+                    : 'Отметь события выше, чтобы увидеть реальный износ твоей вегетативной системы.'}</p>
+            </div>
+        </section>`;
+
+        const trackerRows = isEn
+            ? ['Point A (Start)', '+30 Days', '+60 Days', '+90 Days']
+            : ['Точка А (Старт)', '+30 дней', '+60 дней', '+90 дней'];
+
+        const trackerWidgetHTML = `
+        <section id="point-a-tracker" class="pppd-quiz-box" style="border-color:var(--accent);">
+            <div class="pppd-quiz-header">
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+                    <div>
+                        <div class="article-offer-eyebrow">${isEn ? 'AUTO-SAVED IN YOUR BROWSER' : 'АВТОСОХРАНЕНИЕ В ТВОЁМ БРАУЗЕРЕ'}</div>
+                        <h3>${isEn ? 'Interactive 90-Day Recovery Tracker' : 'Интерактивный 90-дневный трекер динамики'}</h3>
+                    </div>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                        <button type="button" id="import-diag-btn" class="diag-reset-btn" style="border-color:var(--accent);color:var(--accent);">${isEn ? '↓ Import Scores from Tests' : '↓ Подтянуть баллы из тестов'}</button>
+                        <a href="52_dhi_hads_niigata_tests.html" class="diag-reset-btn" style="text-decoration:none;">${isEn ? 'Open Tests →' : 'Пройти тесты →'}</a>
+                    </div>
+                </div>
+                <p id="tracker-delta-banner" class="pppd-quiz-legend" style="margin-top:6px !important;">${isEn
+                    ? 'Fill in your starting scores today and revisit every 30 days. Everything stays saved locally on your device.'
+                    : 'Заполни стартовую строку сегодня и возвращайся раз в 30 дней. Все цифры сохраняются прямо на твоём устройстве.'}</p>
+            </div>
+            <div class="table-wrap" style="margin:0 0 14px 0;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>${isEn ? 'Checkpoint' : 'Этап'}</th>
+                            <th>${isEn ? 'Date' : 'Дата'}</th>
+                            <th>DHI</th>
+                            <th>HADS-A</th>
+                            <th>HADS-D</th>
+                            <th>NPQ</th>
+                            <th>${isEn ? 'Key Win / Note' : 'Главная победа'}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${trackerRows.map((label, r) => `
+                        <tr>
+                            <td><strong>${label}</strong></td>
+                            <td><input type="text" class="tracker-input" data-tr="${r}" data-col="date" placeholder="${isEn ? 'YYYY-MM-DD' : 'ДД.ММ.ГГ'}"></td>
+                            <td><input type="number" min="0" max="100" class="tracker-input" data-tr="${r}" data-col="dhi" placeholder="0–100"></td>
+                            <td><input type="number" min="0" max="21" class="tracker-input" data-tr="${r}" data-col="ha" placeholder="0–21"></td>
+                            <td><input type="number" min="0" max="21" class="tracker-input" data-tr="${r}" data-col="hd" placeholder="0–21"></td>
+                            <td><input type="number" min="0" max="72" class="tracker-input" data-tr="${r}" data-col="npq" placeholder="0–72"></td>
+                            <td><input type="text" class="tracker-input" style="min-width:130px;" data-tr="${r}" data-col="note" placeholder="${r === 0 ? (isEn ? 'Baseline' : 'Точка старта') : '...'}"></td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" id="copy-tracker-btn" class="paywall-tier-btn secondary" style="max-width:300px;">${isEn ? '📋 Copy 90-Day Log to Notes' : '📋 Скопировать дневник в заметки'}</button>
+        </section>
+        <script>
+        (function(){
+            var isEn = ${isEn ? 'true' : 'false'};
+            var HR_KEY = 'pppd_hr_v1';
+            var TR_KEY = 'pppd_tracker_v1';
+            var DIAG_KEY = 'pppd_diag_v1';
+            var hrChecked = {};
+            var trData = [{},{},{},{}];
+
+            function renderHR() {
+                var sum = 0;
+                document.querySelectorAll('.hr-item').forEach(function(el){
+                    var idx = el.getAttribute('data-hr-idx');
+                    var on = !!hrChecked[idx];
+                    el.classList.toggle('checked', on);
+                    el.setAttribute('aria-checked', on ? 'true' : 'false');
+                    if (on) sum += parseInt(el.getAttribute('data-pts'), 10);
+                });
+                document.getElementById('hr-total-val').textContent = sum + (isEn ? ' pts' : ' б.');
+                var b = document.getElementById('hr-risk-badge');
+                var d = document.getElementById('hr-risk-desc');
+                if (sum >= 300) {
+                    b.textContent = isEn ? 'High Overload (300+)' : 'Критическая перегрузка (300+)';
+                    d.textContent = isEn
+                        ? 'Your nervous system absorbed massive cumulative stress over 12 months. PPPD was a predictable overload fuse — not a mysterious disease.'
+                        : 'За год твоя нервная система выдержала колоссальный износ. ПППГ стало предсказуемым срабатыванием предохранителя, а не «загадочной поломкой».';
+                } else if (sum >= 150) {
+                    b.textContent = isEn ? 'Moderate Overload (150–299)' : 'Умеренная перегрузка (150–299)';
+                    d.textContent = isEn
+                        ? 'Substantial background load depleted your autonomic reserve before symptoms started.'
+                        : 'Накопленный фон заметно истощил вегетативный ресурс ещё до появления шаткости.';
+                } else {
+                    b.textContent = isEn ? 'Low Load (<150)' : 'Низкая нагрузка (<150)';
+                    d.textContent = isEn
+                        ? 'Low life-event score — your PPPD is likely driven primarily by an acute vestibular scare (BPPV/panic) and anxious scanning.'
+                        : 'Фоновый стресс умеренный — скорее всего, ПППГ запустилось острым испугом (ДППГ / панической атакой) и привычкой сканировать тело.';
+                }
+            }
+
+            try {
+                var savedHR = JSON.parse(localStorage.getItem(HR_KEY) || '{}');
+                if (savedHR && typeof savedHR === 'object') hrChecked = savedHR;
+            } catch(e) {}
+            renderHR();
+
+            document.querySelectorAll('.hr-item').forEach(function(el){
+                el.addEventListener('click', function(){
+                    var idx = el.getAttribute('data-hr-idx');
+                    hrChecked[idx] = !hrChecked[idx];
+                    try { localStorage.setItem(HR_KEY, JSON.stringify(hrChecked)); } catch(e) {}
+                    renderHR();
+                });
+            });
+
+            function updateDeltaBanner() {
+                var startDhi = parseInt(trData[0] && trData[0].dhi, 10);
+                var latestDhi = null;
+                for (var i = 3; i >= 1; i--) {
+                    var v = parseInt(trData[i] && trData[i].dhi, 10);
+                    if (!isNaN(v)) { latestDhi = v; break; }
+                }
+                if (!isNaN(startDhi) && latestDhi !== null) {
+                    var diff = startDhi - latestDhi;
+                    var el = document.getElementById('tracker-delta-banner');
+                    if (diff > 0) {
+                        el.textContent = isEn
+                            ? '✓ Verified Progress: Your DHI dropped by ' + diff + ' points (from ' + startDhi + ' to ' + latestDhi + ')' + (diff >= 18 ? ' — Clinically Significant Recovery!' : '!')
+                            : '✓ Подтверждённый прогресс: твой DHI снизился на ' + diff + ' б. (с ' + startDhi + ' до ' + latestDhi + ')' + (diff >= 18 ? ' — клинически значимый прорыв!' : '!');
+                        el.style.color = '#3fb950';
+                    }
+                }
+            }
+
+            function syncInputsFromData() {
+                document.querySelectorAll('.tracker-input').forEach(function(inp){
+                    var r = parseInt(inp.getAttribute('data-tr'), 10);
+                    var c = inp.getAttribute('data-col');
+                    inp.value = (trData[r] && trData[r][c] !== undefined) ? trData[r][c] : '';
+                });
+                updateDeltaBanner();
+            }
+
+            function importFromDiag(onlyIfEmpty) {
+                try {
+                    var raw = JSON.parse(localStorage.getItem(DIAG_KEY) || 'null');
+                    if (!raw || !raw.totals) return false;
+                    var t = raw.totals;
+                    if (t.dhi === null && t.hadsA === null && t.npq === null) return false;
+                    if (onlyIfEmpty && (trData[0].dhi || trData[0].ha || trData[0].npq)) return false;
+                    trData[0].date = raw.updatedAt || new Date().toISOString().split('T')[0];
+                    if (t.dhi !== null) trData[0].dhi = String(t.dhi);
+                    if (t.hadsA !== null) trData[0].ha = String(t.hadsA);
+                    if (t.hadsD !== null) trData[0].hd = String(t.hadsD);
+                    if (t.npq !== null) trData[0].npq = String(t.npq);
+                    if (!trData[0].note) trData[0].note = isEn ? 'Baseline imported' : 'Точка старта';
+                    localStorage.setItem(TR_KEY, JSON.stringify(trData));
+                    syncInputsFromData();
+                    return true;
+                } catch(e) { return false; }
+            }
+
+            try {
+                var savedTR = JSON.parse(localStorage.getItem(TR_KEY) || 'null');
+                if (Array.isArray(savedTR) && savedTR.length === 4) trData = savedTR;
+            } catch(e) {}
+            if (!importFromDiag(true)) syncInputsFromData();
+
+            document.querySelectorAll('.tracker-input').forEach(function(inp){
+                inp.addEventListener('input', function(){
+                    var r = parseInt(inp.getAttribute('data-tr'), 10);
+                    var c = inp.getAttribute('data-col');
+                    if (!trData[r]) trData[r] = {};
+                    trData[r][c] = inp.value;
+                    try { localStorage.setItem(TR_KEY, JSON.stringify(trData)); } catch(e) {}
+                    updateDeltaBanner();
+                });
+            });
+
+            var impBtn = document.getElementById('import-diag-btn');
+            if (impBtn) {
+                impBtn.addEventListener('click', function(){
+                    var ok = importFromDiag(false);
+                    impBtn.textContent = ok
+                        ? (isEn ? '✓ Imported into Point A!' : '✓ Баллы подтянуты в Точку А!')
+                        : (isEn ? 'Take the tests first →' : 'Сначала пройди онлайн-тесты →');
+                    if (!ok) setTimeout(function(){ location.href = '52_dhi_hads_niigata_tests.html'; }, 700);
+                });
+            }
+
+            var cpBtn = document.getElementById('copy-tracker-btn');
+            if (cpBtn) {
+                cpBtn.addEventListener('click', function(){
+                    var nl = String.fromCharCode(10);
+                    var labels = isEn ? ['Point A', '+30d', '+60d', '+90d'] : ['Точка А', '+30 дн.', '+60 дн.', '+90 дн.'];
+                    var lines = [isEn ? 'PPPD 90-Day Recovery Log:' : 'Дневник динамики ПППГ (90 дней):'];
+                    trData.forEach(function(row, i){
+                        lines.push(labels[i] + ' (' + (row.date || '—') + '): DHI=' + (row.dhi || '—') + ', HADS-A=' + (row.ha || '—') + ', HADS-D=' + (row.hd || '—') + ', NPQ=' + (row.npq || '—') + (row.note ? ' — ' + row.note : ''));
+                    });
+                    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(lines.join(nl));
+                    cpBtn.textContent = isEn ? '✓ Copied!' : '✓ Скопировано!';
+                    setTimeout(function(){ cpBtn.textContent = isEn ? '📋 Copy 90-Day Log to Notes' : '📋 Скопировать дневник в заметки'; }, 2000);
                 });
             }
         })();
         <\/script>`;
 
-        // Inject each test right into its exact H2 section!
-        const h2Positions = [...htmlContent.matchAll(/<h2[\s>]/gi)].map(m => m.index);
-        if (h2Positions.length >= 5) {
-            // h2[0]=Why, h2[1]=DHI, h2[2]=HADS, h2[3]=NPQ, h2[4]=How to use
+        const h2List = [...htmlContent.matchAll(/<h2[\s>]/gi)].map(m => m.index);
+        // h2[0]=Habituation, h2[1]=Tactical Key, h2[2]=Holmes-Rahe, h2[3]=90-Day Tracker
+        if (h2List.length >= 4) {
             const hrPos = htmlContent.lastIndexOf('<hr');
-            const endPracticePos = hrPos > h2Positions[4] ? hrPos : htmlContent.length;
+            const afterTrackerSection = hrPos > h2List[3] ? hrPos : htmlContent.length;
+            // Replace the static placeholder table inside section 4 with our interactive tracker
+            const sec4Clean = htmlContent.slice(h2List[3], afterTrackerSection).replace(/<div class="table-wrap">[\s\S]*?<\/div>|<table[\s\S]*?<\/table>/i, trackerWidgetHTML);
             return (
-                htmlContent.slice(0, h2Positions[1]) +
-                navHTML +
-                htmlContent.slice(h2Positions[1], h2Positions[2]) +
-                dhiHTML +
-                htmlContent.slice(h2Positions[2], h2Positions[3]) +
-                hadsHTML +
-                htmlContent.slice(h2Positions[3], h2Positions[4]) +
-                npqHTML +
-                htmlContent.slice(h2Positions[4], endPracticePos) +
-                summaryAndScriptHTML +
-                htmlContent.slice(endPracticePos)
+                htmlContent.slice(0, h2List[3]) +
+                hrWidgetHTML +
+                sec4Clean +
+                htmlContent.slice(afterTrackerSection)
             );
         }
-        return navHTML + dhiHTML + hadsHTML + npqHTML + summaryAndScriptHTML + htmlContent;
+        return htmlContent + hrWidgetHTML + trackerWidgetHTML;
     }
 
     // Conversion block appended to all free chapters & SEO articles
@@ -2264,7 +2704,7 @@ async function main() {
                             <p class="paywall-tier-desc">Personal audit of your symptoms & scans with Maxim, custom recovery roadmap, plus lifetime access to the book & PDF (or <a href="${links.consultTg}" target="_blank" rel="noopener">book a standalone 1h call for $150</a>).</p>
                         </div>
                         <div class="paywall-tier-actions">
-                            <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Book 1-on-1 + Full Guide →</a>
+                            <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Get Paid Bundle ($219) →</a>
                             <a href="${links.consultMail}" class="paywall-tier-btn secondary">Request via Email</a>
                         </div>
                     </div>
@@ -2304,8 +2744,8 @@ async function main() {
                         <p class="paywall-tier-desc">Разбор твоих обследований и затыков лично с Максимом, индивидуальный план выхода без лишних врачей + полный доступ к книге и PDF (отдельно созвон — <a href="${links.consultTg}" target="_blank" rel="noopener">7 500 ₽/ч</a>).</p>
                     </div>
                     <div class="paywall-tier-actions">
-                        <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Записаться на разбор + Книга →</a>
-                        <a href="${links.maxUrl}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Написать в MAX</a>
+                        <a href="${links.bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Взять пакет с разбором (10 900 ₽) →</a>
+                        <a href="${links.maxUrl}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Написать в MAX (платно)</a>
                     </div>
                 </div>
             </div>
@@ -2580,6 +3020,15 @@ async function main() {
             <h2 class="sidebar-title"><a href="../" style="text-decoration:none;color:inherit;">${isEn ? 'Point of Support' : 'Точка Опоры'}</a></h2>
             <p class="sidebar-subtitle">${isEn ? 'Overcoming PPPD' : 'Выход из ПППГ'}</p>
             ${langSwitcherHTML}
+        </div>
+        <div class="sidebar-tests-bar">
+            <a href="${isIndex ? 'chapters/52_dhi_hads_niigata_tests.html' : '52_dhi_hads_niigata_tests.html'}" class="sidebar-tests-btn${chapter.id === '52_dhi_hads_niigata_tests' ? ' active' : ''}" title="${isEn ? 'Take Interactive DHI, HADS & Niigata PPPD Tests' : 'Пройти клинические онлайн-тесты DHI, HADS и NPQ'}">
+                <span class="sidebar-tests-left">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    <span>${isEn ? 'PPPD Online Tests' : 'Онлайн-тесты ПППГ'}</span>
+                </span>
+                <span class="sidebar-tests-badge">${isEn ? '3 scales' : '3 шкалы'}</span>
+            </a>
         </div>
         <nav id="toc" class="toc" aria-label="${isEn ? 'Table of Contents' : 'Оглавление'}">
             ${tocHTML}
@@ -2863,7 +3312,7 @@ async function main() {
             if (fs.existsSync(srcPath)) {
                 const rawMd = fs.readFileSync(srcPath, 'utf8');
                 const teaserMd = extractTeaserMarkdown(rawMd);
-                teaserHtml = marked.parse(teaserMd);
+                teaserHtml = wrapTables(marked.parse(teaserMd));
             }
             htmlContent = `
             <div id="paywall-screen">
@@ -2933,7 +3382,7 @@ async function main() {
                                 <p class="paywall-tier-desc">Полный доступ к книге и PDF + 60 минут созвона с Максимом: разбор обследований, ошибок и твой персональный план.</p>
                             </div>
                             <div class="paywall-tier-actions">
-                                <a href="${getContactLinks(false, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Забрать пакет с разбором →</a>
+                                <a href="${getContactLinks(false, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Забрать пакет (10 900 ₽) →</a>
                                 <a href="${getContactLinks(false, chapter.title).consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">Только консультация (7 500 ₽)</a>
                             </div>
                         </div>
@@ -2995,6 +3444,7 @@ async function main() {
                         var el = document.getElementById('chapter-content');
                         el.style.display = '';
                         el.innerHTML = marked.parse(md);
+                        el.querySelectorAll('table').forEach(function(t){ var w = document.createElement('div'); w.className = 'table-wrap'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
                     }).catch(function() {
                         localStorage.removeItem('tochka-opory-license-key');
                     });
@@ -3013,6 +3463,7 @@ async function main() {
                         var el = document.getElementById('chapter-content');
                         el.style.display = '';
                         el.innerHTML = marked.parse(md);
+                        el.querySelectorAll('table').forEach(function(t){ var w = document.createElement('div'); w.className = 'table-wrap'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
                     } catch(e) {
                         errEl.textContent = 'Неверный ключ. Проверьте правильность ввода.';
                         errEl.style.display = '';
@@ -3028,13 +3479,11 @@ async function main() {
             const srcPath = path.join(SRC_RU_DIR, `${chapter.id}.md`);
             if (fs.existsSync(srcPath)) {
                 const md = fs.readFileSync(srcPath, 'utf8');
-                htmlContent = marked.parse(md);
+                htmlContent = wrapTables(marked.parse(md));
                 if (chapter.id === '52_dhi_hads_niigata_tests') {
                     htmlContent = injectClinicalTestsSuite(htmlContent, false);
                 } else if (chapter.id === '03_baseline_tests') {
-                    htmlContent = htmlContent
-                        .replace(/<p>Найти тест можно, загуглив[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#hads-quiz" class="paywall-tier-btn accent" style="max-width:360px;">Пройти онлайн-тест HADS прямо на сайте →</a></p>`)
-                        .replace(/<p>Тоже ищется по запросу[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#dhi-quiz" class="paywall-tier-btn primary" style="max-width:360px;">Пройти онлайн-тест DHI (25 вопросов) →</a></p>`);
+                    htmlContent = injectBaselineTrackerSuite(htmlContent, false);
                 }
                 htmlContent += buildFreeArticleOfferHTML(chapter, false);
             } else {
@@ -3059,7 +3508,7 @@ async function main() {
             if (fs.existsSync(srcPath)) {
                 const rawMd = fs.readFileSync(srcPath, 'utf8');
                 const teaserMd = extractTeaserMarkdown(rawMd);
-                teaserHtml = marked.parse(teaserMd);
+                teaserHtml = wrapTables(marked.parse(teaserMd));
             }
             htmlContent = `
             <div id="paywall-screen">
@@ -3129,7 +3578,7 @@ async function main() {
                                 <p class="paywall-tier-desc">Lifetime access to the full book & PDF plus a 60-minute private call to audit your case and build a tailored roadmap.</p>
                             </div>
                             <div class="paywall-tier-actions">
-                                <a href="${getContactLinks(true, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Get Bundle + 1-on-1 Call →</a>
+                                <a href="${getContactLinks(true, chapter.title).bundleTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">Get Paid Bundle ($219) →</a>
                                 <a href="${getContactLinks(true, chapter.title).consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn secondary">1-on-1 Call Only ($150)</a>
                             </div>
                         </div>
@@ -3189,6 +3638,7 @@ async function main() {
                         var el = document.getElementById('chapter-content');
                         el.style.display = '';
                         el.innerHTML = marked.parse(md);
+                        el.querySelectorAll('table').forEach(function(t){ var w = document.createElement('div'); w.className = 'table-wrap'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
                     }).catch(function() {
                         localStorage.removeItem('point-of-support-license-key');
                     });
@@ -3207,6 +3657,7 @@ async function main() {
                         var el = document.getElementById('chapter-content');
                         el.style.display = '';
                         el.innerHTML = marked.parse(md);
+                        el.querySelectorAll('table').forEach(function(t){ var w = document.createElement('div'); w.className = 'table-wrap'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
                     } catch(e) {
                         errEl.textContent = 'Invalid access key. Please check spelling.';
                         errEl.style.display = '';
@@ -3222,13 +3673,11 @@ async function main() {
             const srcPath = path.join(SRC_EN_DIR, `${chapter.id}.md`);
             if (fs.existsSync(srcPath)) {
                 const md = fs.readFileSync(srcPath, 'utf8');
-                htmlContent = marked.parse(md);
+                htmlContent = wrapTables(marked.parse(md));
                 if (chapter.id === '52_dhi_hads_niigata_tests') {
                     htmlContent = injectClinicalTestsSuite(htmlContent, true);
                 } else if (chapter.id === '03_baseline_tests') {
-                    htmlContent = htmlContent
-                        .replace(/<p>You can find the test by googling[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#hads-quiz" class="paywall-tier-btn accent" style="max-width:360px;">Take the HADS Test Online on This Site →</a></p>`)
-                        .replace(/<p>Also searched for[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#dhi-quiz" class="paywall-tier-btn primary" style="max-width:360px;">Take the 25-Question DHI Test Online →</a></p>`);
+                    htmlContent = injectBaselineTrackerSuite(htmlContent, true);
                 }
                 htmlContent += buildFreeArticleOfferHTML(chapter, true);
             } else {
