@@ -1699,60 +1699,267 @@ async function main() {
         };
     }
 
-    // Interactive 12-question Niigata PPPD Questionnaire (NPQ) widget for 52_dhi_hads_niigata_tests
-    function buildNiigataQuizHTML(isEn) {
-        const questions = isEn ? [
-            { cat: 0, q: '1. Standing upright for a long time (in line, in the kitchen, at a stop)' },
-            { cat: 0, q: '2. Walking at your normal pace on a flat surface' },
-            { cat: 0, q: '3. Walking fast or over uneven ground / stairs' },
-            { cat: 0, q: '4. Standing or walking without holding onto anything' },
-            { cat: 1, q: '5. Quick head turns or nodding while sitting or standing' },
-            { cat: 1, q: '6. Bending forward, standing up from a chair or bed' },
-            { cat: 1, q: '7. Riding in a car, bus, subway, or elevator' },
-            { cat: 1, q: '8. Turning over or changing posture quickly' },
-            { cat: 2, q: '9. Walking past supermarket aisles or bright shelves' },
-            { cat: 2, q: '10. Watching moving crowds, traffic, or action scenes' },
-            { cat: 2, q: '11. Scrolling on a phone or working at a computer monitor' },
-            { cat: 2, q: '12. Looking at striped patterns, tiles, or flickering light' }
+    // Full 3-Test Clinical Diagnostic Suite (DHI 25q + HADS 14q + Niigata NPQ 12q + Combined Summary Tracker)
+    function injectClinicalTestsSuite(htmlContent, isEn) {
+        // 1. Top 3-test quick jump navigator
+        const navHTML = `
+        <div id="pppd-quiz" class="quiz-nav-cards" role="navigation" aria-label="${isEn ? 'Clinical Tests Navigation' : 'Навигация по тестам'}">
+            <a href="#dhi-quiz" class="quiz-nav-card">
+                <div>
+                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 1 · 25 QUESTIONS' : 'ТЕСТ 1 · 25 ВОПРОСОВ'}</div>
+                    <div class="quiz-nav-card-title">${isEn ? 'DHI — Dizziness Handicap' : 'DHI — Индекс головокружения'}</div>
+                </div>
+                <div id="nav-stat-dhi" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (0–100 pts)' : 'Перейти к тесту ↓ (0–100 б.)'}</div>
+            </a>
+            <a href="#hads-quiz" class="quiz-nav-card">
+                <div>
+                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 2 · 14 QUESTIONS' : 'ТЕСТ 2 · 14 ВОПРОСОВ'}</div>
+                    <div class="quiz-nav-card-title">${isEn ? 'HADS — Anxiety & Depression' : 'HADS — Шкала тревоги и депрессии'}</div>
+                </div>
+                <div id="nav-stat-hads" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (A & D 0–21)' : 'Перейти к тесту ↓ (0–21 б.)'}</div>
+            </a>
+            <a href="#npq-quiz" class="quiz-nav-card">
+                <div>
+                    <div class="quiz-nav-card-tag">${isEn ? 'TEST 3 · 12 QUESTIONS' : 'ТЕСТ 3 · 12 ВОПРОСОВ'}</div>
+                    <div class="quiz-nav-card-title">${isEn ? 'NPQ — Niigata PPPD Scale' : 'NPQ — Опросник Ниигаты ПППГ'}</div>
+                </div>
+                <div id="nav-stat-npq" class="quiz-nav-card-status">${isEn ? 'Jump to test ↓ (0–72 pts)' : 'Перейти к тесту ↓ (0–72 б.)'}</div>
+            </a>
+        </div>`;
+
+        // 2. DHI — 25 clinical items (P=0, E=1, F=2; Yes=4, Sometimes=2, No=0)
+        const dhiItems = isEn ? [
+            [0, '1. Does looking up increase your dizziness or unsteadiness?'],
+            [1, '2. Because of your problem, do you feel frustrated?'],
+            [2, '3. Because of your problem, do you restrict your business or recreational travel?'],
+            [0, '4. Does walking down the aisle of a supermarket increase your problem?'],
+            [2, '5. Because of your problem, do you have difficulty getting into or out of bed?'],
+            [2, '6. Does your problem significantly restrict your participation in social activities (dinner, movies, parties)?'],
+            [2, '7. Because of your problem, do you have difficulty reading?'],
+            [0, '8. Does performing more ambitious activities such as sports, dancing, or household chores increase your problem?'],
+            [1, '9. Because of your problem, are you afraid to leave your home without having someone accompany you?'],
+            [1, '10. Because of your problem, have you been embarrassed in front of others?'],
+            [0, '11. Do quick movements of your head increase your problem?'],
+            [2, '12. Because of your problem, do you avoid heights or stairs?'],
+            [0, '13. Does turning over in bed increase your problem?'],
+            [2, '14. Because of your problem, is it difficult for you to do strenuous housework or yard work?'],
+            [1, '15. Because of your problem, are you afraid people may think you are intoxicated?'],
+            [2, '16. Because of your problem, is it difficult for you to go for a walk by yourself?'],
+            [0, '17. Does walking down a sidewalk increase your problem?'],
+            [1, '18. Because of your problem, is it difficult for you to concentrate?'],
+            [2, '19. Because of your problem, is it difficult for you to walk around your house in the dark?'],
+            [1, '20. Because of your problem, are you afraid to stay home alone?'],
+            [1, '21. Because of your problem, do you feel handicapped or broken?'],
+            [1, '22. Has your problem placed stress on your relationships with family or friends?'],
+            [1, '23. Because of your problem, do you feel depressed or down?'],
+            [2, '24. Does your problem interfere with your job or household responsibilities?'],
+            [0, '25. Does bending over increase your problem?']
         ] : [
-            { cat: 0, q: '1. Долго стоять на месте (в очереди, у плиты, на остановке)' },
-            { cat: 0, q: '2. Идти обычным шагом по ровной поверхности' },
-            { cat: 0, q: '3. Идти быстро или по неровной дороге / лестнице' },
-            { cat: 0, q: '4. Стоять или идти без опоры и возможности за что-то взяться' },
-            { cat: 1, q: '5. Поворачивать голову или кивать сидя / стоя' },
-            { cat: 1, q: '6. Наклоняться вперёд, вставать со стула или с кровати' },
-            { cat: 1, q: '7. Ехать в машине, автобусе, метро или в лифте' },
-            { cat: 1, q: '8. Менять положение тела при бытовых делах' },
-            { cat: 2, q: '9. Находиться в супермаркете среди пёстрых полок и света' },
-            { cat: 2, q: '10. Смотреть на толпу людей, поток машин или экшен-сцены' },
-            { cat: 2, q: '11. Скроллить ленту в телефоне или работать за монитором' },
-            { cat: 2, q: '12. Смотреть на плитку, полосатые узоры, эскалатор' }
+            [0, '1. Усиливается ли головокружение или шаткость, когда ты смотришь вверх?'],
+            [1, '2. Чувствуешь ли ты разочарование и досаду из-за своего состояния?'],
+            [2, '3. Ограничиваешь ли ты поездки по делам или на отдых из-за головокружения?'],
+            [0, '4. Усиливается ли шаткость при проходе вдоль рядов в супермаркете?'],
+            [2, '5. Трудно ли тебе ложиться в кровать или вставать с неё из-за этого состояния?'],
+            [2, '6. Ограничивает ли головокружение твоё общение (походы в гости, кафе, встречи с друзьями)?'],
+            [2, '7. Трудно ли тебе читать с листа или с экрана из-за головокружения?'],
+            [0, '8. Усиливают ли симптомы активные движения, спорт или уборка по дому?'],
+            [1, '9. Боишься ли ты выходить из дома в одиночку без сопровождающего?'],
+            [1, '10. Бывало ли тебе неловко или стыдно перед другими людьми из-за шаткости?'],
+            [0, '11. Усиливают ли головокружение быстрые повороты головы?'],
+            [2, '12. Избегаешь ли ты высоты или лестниц из-за своего состояния?'],
+            [0, '13. Усиливается ли головокружение, когда ты переворачиваешься в кровати?'],
+            [2, '14. Трудно ли тебе выполнять тяжёлую работу по дому или на участке?'],
+            [1, '15. Боишься ли ты, что прохожие подумают, будто ты пьян(а)?'],
+            [2, '16. Трудно ли тебе выйти на прогулку на улицу совсем одному?'],
+            [0, '17. Усиливается ли шаткость при обычной ходьбе по тротуару?'],
+            [1, '18. Трудно ли тебе концентрировать внимание из-за этого состояния?'],
+            [2, '19. Трудно ли тебе ходить по квартире в темноте?'],
+            [1, '20. Страшно ли тебе оставаться дома в полном одиночестве?'],
+            [1, '21. Чувствуешь ли ты себя неполноценным или «сломанным» из-за болезни?'],
+            [1, '22. Создало ли твоё состояние напряжение в отношениях с семьёй или друзьями?'],
+            [1, '23. Чувствуешь ли ты подавленность и угнетённость из-за головокружения?'],
+            [2, '24. Мешает ли это состояние полноценно работать или вести быт?'],
+            [0, '25. Усиливается ли головокружение при наклоне туловища вперёд?']
         ];
 
-        const qItems = questions.map((item, idx) => `
-            <div class="quiz-q-item" data-q="${idx}" data-cat="${item.cat}">
-                <div class="quiz-q-label">${item.q}</div>
-                <div class="quiz-scale" role="group" aria-label="${escAttr(item.q)}">
-                    ${[0,1,2,3,4,5,6].map(v => `<button type="button" class="quiz-opt-btn" data-val="${v}">${v}</button>`).join('')}
-                </div>
-                <div class="quiz-scale-hints">
-                    <span>${isEn ? '0 — None' : '0 — Нет симптомов'}</span>
-                    <span>${isEn ? '3 — Moderate' : '3 — Умеренно'}</span>
-                    <span>${isEn ? '6 — Unbearable' : '6 — Невыносимо'}</span>
-                </div>
-            </div>
-        `).join('');
-
-        return `
-        <section id="pppd-quiz" class="pppd-quiz-box">
+        const dhiHTML = `
+        <section id="dhi-quiz" class="pppd-quiz-box">
             <div class="pppd-quiz-header">
-                <div class="article-offer-eyebrow">${isEn ? 'INTERACTIVE CLINICAL CALCULATOR' : 'ОНЛАЙН-КАЛЬКУЛЯТОР НИИГАТЫ (NPQ)'}</div>
-                <h2>${isEn ? 'Check Your PPPD Severity & Dominant Trigger in 60 Seconds' : 'Проверь тяжесть своего ПППГ и главный триггер за 60 секунд'}</h2>
+                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 1 · DHI (25 ITEMS)' : 'ОНЛАЙН-ТЕСТ 1 · ШКАЛА DHI (25 ВОПРОСОВ)'}</div>
+                <h3>${isEn ? 'Take the DHI Test Online' : 'Пройти тест DHI онлайн'}</h3>
                 <p class="pppd-quiz-legend">${isEn
-                    ? 'Rate how much each situation triggers dizziness, swaying, or unsteadiness from 0 (none) to 6 (severe). Clinical threshold for PPPD is ≥ 27 points.'
-                    : 'Оцени, насколько каждая ситуация усиливает шаткость, «ватность» или дурноту от 0 (совсем нет) до 6 (невыносимо). Клинический порог ПППГ — от 27 баллов.'}</p>
+                    ? 'Answer how things have been over the past week: Yes (4 pts), Sometimes (2 pts), No (0 pts).'
+                    : 'Отвечай по ощущениям за последнюю неделю: «Да» (4 балла), «Иногда» (2 балла), «Нет» (0 баллов).'}</p>
             </div>
-            <div id="npq-questions">${qItems}</div>
+            <div id="dhi-questions">
+                ${dhiItems.map((it, i) => `
+                <div class="quiz-q-item" data-quiz="dhi" data-q="${i}" data-cat="${it[0]}">
+                    <div class="quiz-q-label">${it[1]}</div>
+                    <div class="quiz-scale-3" role="group" aria-label="${escAttr(it[1])}">
+                        <button type="button" class="quiz-opt-btn" data-val="4">${isEn ? 'Yes (4)' : 'Да (4)'}</button>
+                        <button type="button" class="quiz-opt-btn" data-val="2">${isEn ? 'Sometimes (2)' : 'Иногда (2)'}</button>
+                        <button type="button" class="quiz-opt-btn" data-val="0">${isEn ? 'No (0)' : 'Нет (0)'}</button>
+                    </div>
+                </div>`).join('')}
+            </div>
+            <div id="dhi-result" class="quiz-result-box" style="display:none;">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+                    <div>
+                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Your DHI Score:' : 'Твой индекс DHI:'}</span>
+                        <span id="dhi-total" class="quiz-score-big">0 / 100</span>
+                    </div>
+                    <span id="dhi-stage" class="paywall-tier-badge" style="font-size:0.78rem;padding:4px 10px;"></span>
+                </div>
+                <p id="dhi-summary" style="font-size:0.9rem;line-height:1.6;margin-bottom:14px;"></p>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Physical Subscale (P)' : 'Физическая шкала (P — движения, позы)'}</span><strong id="dhi-c0">0 / 28</strong></div>
+                    <div class="quiz-bar-track"><div id="dhi-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Emotional Subscale (E)' : 'Эмоциональная шкала (E — страх, подавленность)'}</span><strong id="dhi-c1">0 / 36</strong></div>
+                    <div class="quiz-bar-track"><div id="dhi-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Functional Subscale (F)' : 'Функциональная шкала (F — работа, улица, быт)'}</span><strong id="dhi-c2">0 / 36</strong></div>
+                    <div class="quiz-bar-track"><div id="dhi-b2" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div style="margin-top:14px;">
+                    <a href="#hads-quiz" class="paywall-tier-btn secondary">${isEn ? 'Next: Take HADS Anxiety & Depression Test ↓' : 'Далее: перейти к тесту тревоги HADS ↓'}</a>
+                </div>
+            </div>
+        </section>`;
+
+        // 3. HADS — 14 clinical items (cat 0 = Anxiety A, cat 1 = Depression D)
+        const hadsItems = isEn ? [
+            { cat: 0, q: '1. I feel tense or "wound up"', opts: [[3,'Most of the time'],[2,'A lot of the time'],[1,'From time to time'],[0,'Not at all']] },
+            { cat: 1, q: '2. I still enjoy the things I used to enjoy', opts: [[0,'Definitely as much'],[1,'Not quite so much'],[2,'Only a little'],[3,'Hardly at all']] },
+            { cat: 0, q: '3. I get a frightened feeling as if something awful is about to happen', opts: [[3,'Very definitely and badly'],[2,'Yes, but not too badly'],[1,'A little, doesn\'t worry me'],[0,'Not at all']] },
+            { cat: 1, q: '4. I can laugh and see the funny side of things', opts: [[0,'As much as I always could'],[1,'Not quite so much now'],[2,'Definitely not so much'],[3,'Not at all']] },
+            { cat: 0, q: '5. Worrying thoughts go through my mind', opts: [[3,'A great deal of the time'],[2,'A lot of the time'],[1,'From time to time'],[0,'Only occasionally']] },
+            { cat: 1, q: '6. I feel cheerful', opts: [[3,'Not at all'],[2,'Not often'],[1,'Sometimes'],[0,'Most of the time']] },
+            { cat: 0, q: '7. I can sit at ease and feel relaxed', opts: [[0,'Definitely'],[1,'Usually'],[2,'Not often'],[3,'Not at all']] },
+            { cat: 1, q: '8. I feel as if I am slowed down', opts: [[3,'Nearly all the time'],[2,'Very often'],[1,'Sometimes'],[0,'Not at all']] },
+            { cat: 0, q: '9. I get a frightened feeling like "butterflies" or tremor inside', opts: [[0,'Not at all'],[1,'Occasionally'],[2,'Quite often'],[3,'Very often']] },
+            { cat: 1, q: '10. I have lost interest in my appearance', opts: [[3,'Definitely'],[2,'Don\'t take as much care'],[1,'May not take quite as much care'],[0,'Take just as much care as ever']] },
+            { cat: 0, q: '11. I feel restless as if I have to be on the move', opts: [[3,'Very much indeed'],[2,'Quite a lot'],[1,'Not very much'],[0,'Not at all']] },
+            { cat: 1, q: '12. I look forward with enjoyment to things', opts: [[0,'As much as I ever did'],[1,'Rather less than I used to'],[2,'Definitely less than I used to'],[3,'Hardly at all']] },
+            { cat: 0, q: '13. I get sudden feelings of panic', opts: [[3,'Very often indeed'],[2,'Quite often'],[1,'Not very often'],[0,'Not at all']] },
+            { cat: 1, q: '14. I can enjoy a good book, movie, or music', opts: [[0,'Often'],[1,'Sometimes'],[2,'Not often'],[3,'Very seldom']] }
+        ] : [
+            { cat: 0, q: '1. Я испытываю внутреннее напряжение, мне не по себе', opts: [[3,'Всё время'],[2,'Часто'],[1,'Время от времени'],[0,'Совсем не испытываю']] },
+            { cat: 1, q: '2. То, что приносило мне удовольствие раньше, и сейчас вызывает такое же чувство', opts: [[0,'Определённо это так'],[1,'Наверное, это так'],[2,'Лишь в очень малой степени'],[3,'Это совсем не так']] },
+            { cat: 0, q: '3. Я испытываю страх — кажется, что вот-вот может случиться что-то ужасное', opts: [[3,'Определённо да, и страх очень сильный'],[2,'Да, но страх не очень сильный'],[1,'Иногда, но это не беспокоит'],[0,'Совсем не испытываю']] },
+            { cat: 1, q: '4. Я способен рассмеяться и увидеть в том или ином событии смешное', opts: [[0,'Определённо это так'],[1,'Наверное, чуть меньше'],[2,'Лишь в очень малой степени'],[3,'Совсем не способен']] },
+            { cat: 0, q: '5. Беспокойные и тревожные мысли крутятся у меня в голове', opts: [[3,'Постоянно'],[2,'Большую часть времени'],[1,'Время от времени'],[0,'Только изредка']] },
+            { cat: 1, q: '6. Я чувствую бодрость и хорошее настроение', opts: [[3,'Совсем не чувствую'],[2,'Очень редко'],[1,'Иногда'],[0,'Практически всё время']] },
+            { cat: 0, q: '7. Я легко могу сесть и спокойно расслабиться', opts: [[0,'Определённо это так'],[1,'Наверное, это так'],[2,'Лишь изредка'],[3,'Совсем не могу']] },
+            { cat: 1, q: '8. Мне кажется, что я стал всё делать очень медленно (заторможенность)', opts: [[3,'Практически всё время'],[2,'Часто'],[1,'Иногда'],[0,'Совсем нет']] },
+            { cat: 0, q: '9. Я ощущаю внутреннюю дрожь, «ком» или холодок под ложечкой', opts: [[0,'Совсем не испытываю'],[1,'Иногда'],[2,'Часто'],[3,'Очень часто']] },
+            { cat: 1, q: '10. Я перестал следить за своей внешностью', opts: [[3,'Определённо это так'],[2,'Не уделяю столько времени, сколько нужно'],[1,'Может быть, стал уделять чуть меньше'],[0,'Слежу так же, как и раньше']] },
+            { cat: 0, q: '11. Я испытываю неусидчивость, словно мне постоянно нужно двигаться', opts: [[3,'Определённо это так'],[2,'Наверное, это так'],[1,'Лишь в некоторой степени'],[0,'Совсем не испытываю']] },
+            { cat: 1, q: '12. Я с удовольствием жду предстоящих дел и событий', opts: [[0,'Так же, как и всегда'],[1,'Чуть меньше, чем раньше'],[2,'Заметно меньше, чем раньше'],[3,'Почти совсем не жду']] },
+            { cat: 0, q: '13. У меня бывает внезапное чувство паники', opts: [[3,'Очень часто'],[2,'Довольно часто'],[1,'Не так уж часто'],[0,'Совсем не бывает']] },
+            { cat: 1, q: '14. Я могу получить удовольствие от хорошей книги, фильма или музыки', opts: [[0,'Часто'],[1,'Иногда'],[2,'Редко'],[3,'Очень редко']] }
+        ];
+
+        const hadsHTML = `
+        <section id="hads-quiz" class="pppd-quiz-box">
+            <div class="pppd-quiz-header">
+                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 2 · HADS (14 ITEMS)' : 'ОНЛАЙН-ТЕСТ 2 · ШКАЛА HADS (14 ВОПРОСОВ)'}</div>
+                <h3>${isEn ? 'Take the HADS Anxiety & Depression Test Online' : 'Пройти госпитальную шкалу тревоги и депрессии HADS онлайн'}</h3>
+                <p class="pppd-quiz-legend">${isEn
+                    ? 'Select the reply that comes closest to how you have been feeling in the past 7 days. Don\'t overthink — your first reaction is most accurate.'
+                    : 'Выбирай ответ, который точнее всего описывает твоё состояние за последние 7 дней. Не думай долго — первая реакция самая верная.'}</p>
+            </div>
+            <div id="hads-questions">
+                ${hadsItems.map((it, i) => `
+                <div class="quiz-q-item" data-quiz="hads" data-q="${i}" data-cat="${it.cat}">
+                    <div class="quiz-q-label">${it.q}</div>
+                    <div class="quiz-scale-hads" role="group" aria-label="${escAttr(it.q)}">
+                        ${it.opts.map(o => `<button type="button" class="quiz-opt-btn hads-opt" data-val="${o[0]}">${o[1]}</button>`).join('')}
+                    </div>
+                </div>`).join('')}
+            </div>
+            <div id="hads-result" class="quiz-result-box" style="display:none;">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:14px;">
+                    <div>
+                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Anxiety (HADS-A):' : 'Шкала тревоги (HADS-A):'}</span>
+                        <span id="hads-a-score" class="quiz-score-big">0 / 21</span>
+                        <div id="hads-a-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
+                    </div>
+                    <div>
+                        <span style="font-size:0.8rem;color:var(--text-secondary);display:block;">${isEn ? 'Depression / Exhaustion (HADS-D):' : 'Шкала депрессии / истощения (HADS-D):'}</span>
+                        <span id="hads-d-score" class="quiz-score-big">0 / 21</span>
+                        <div id="hads-d-badge" style="font-size:0.8rem;font-weight:700;margin-top:4px;"></div>
+                    </div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Anxiety Fuel (HADS-A)' : 'Уровень тревоги (HADS-A)'}</span><strong id="hads-c0">0 / 21</strong></div>
+                    <div class="quiz-bar-track"><div id="hads-b0" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <div class="quiz-bar-row">
+                    <div class="quiz-bar-label"><span>${isEn ? 'Depressive Burnout (HADS-D)' : 'Уровень истощения / депрессии (HADS-D)'}</span><strong id="hads-c1">0 / 21</strong></div>
+                    <div class="quiz-bar-track"><div id="hads-b1" class="quiz-bar-fill" style="width:0%"></div></div>
+                </div>
+                <p id="hads-summary" style="font-size:0.9rem;line-height:1.6;margin:12px 0;"></p>
+                <div style="margin-top:12px;">
+                    <a href="#npq-quiz" class="paywall-tier-btn secondary">${isEn ? 'Next: Take Niigata PPPD Trigger Test (NPQ) ↓' : 'Далее: пройти опросник триггеров ПППГ Ниигаты (NPQ) ↓'}</a>
+                </div>
+            </div>
+        </section>`;
+
+        // 4. NPQ — 12 clinical items (0..6)
+        const npqItems = isEn ? [
+            [0, '1. Standing upright for a long time (in line, in the kitchen, at a stop)'],
+            [0, '2. Walking at your normal pace on a flat surface'],
+            [0, '3. Walking fast or over uneven ground / stairs'],
+            [0, '4. Standing or walking without holding onto anything'],
+            [1, '5. Quick head turns or nodding while sitting or standing'],
+            [1, '6. Bending forward, standing up from a chair or bed'],
+            [1, '7. Riding in a car, bus, subway, or elevator'],
+            [1, '8. Changing body posture during daily activities'],
+            [2, '9. Walking past supermarket aisles or bright shelves'],
+            [2, '10. Watching moving crowds, traffic, or action scenes'],
+            [2, '11. Scrolling on a phone or working at a computer monitor'],
+            [2, '12. Looking at striped patterns, tiles, or flickering light']
+        ] : [
+            [0, '1. Долго стоять на месте (в очереди, у плиты, на остановке)'],
+            [0, '2. Идти обычным шагом по ровной поверхности'],
+            [0, '3. Идти быстро или по неровной дороге / лестнице'],
+            [0, '4. Стоять или идти без опоры и возможности за что-то взяться'],
+            [1, '5. Поворачивать голову или кивать сидя / стоя'],
+            [1, '6. Наклоняться вперёд, вставать со стула или с кровати'],
+            [1, '7. Ехать в машине, автобусе, метро или в лифте'],
+            [1, '8. Менять положение тела при бытовых делах'],
+            [2, '9. Находиться в супермаркете среди пёстрых полок и света'],
+            [2, '10. Смотреть на толпу людей, поток машин или экшен-сцены'],
+            [2, '11. Скроллить ленту в телефоне или работать за монитором'],
+            [2, '12. Смотреть на плитку, полосатые узоры, эскалатор']
+        ];
+
+        const npqHTML = `
+        <section id="npq-quiz" class="pppd-quiz-box">
+            <div class="pppd-quiz-header">
+                <div class="article-offer-eyebrow">${isEn ? 'ONLINE TEST 3 · NIIGATA NPQ (12 ITEMS)' : 'ОНЛАЙН-ТЕСТ 3 · ОПРОСНИК НИИГАТЫ NPQ (12 ВОПРОСОВ)'}</div>
+                <h3>${isEn ? 'Take the Niigata PPPD Questionnaire Online' : 'Пройти опросник Ниигаты (NPQ) онлайн'}</h3>
+                <p class="pppd-quiz-legend">${isEn
+                    ? 'Rate how much each situation triggers swaying or dizziness from 0 (none) to 6 (unbearable). Clinical PPPD cutoff is ≥ 27 points.'
+                    : 'Оцени от 0 (совсем нет) до 6 (невыносимо), насколько ситуация усиливает шаткость или дурноту. Клинический порог ПППГ — от 27 баллов.'}</p>
+            </div>
+            <div id="npq-questions">
+                ${npqItems.map((it, i) => `
+                <div class="quiz-q-item" data-quiz="npq" data-q="${i}" data-cat="${it[0]}">
+                    <div class="quiz-q-label">${it[1]}</div>
+                    <div class="quiz-scale" role="group" aria-label="${escAttr(it[1])}">
+                        ${[0,1,2,3,4,5,6].map(v => `<button type="button" class="quiz-opt-btn" data-val="${v}">${v}</button>`).join('')}
+                    </div>
+                    <div class="quiz-scale-hints">
+                        <span>${isEn ? '0 — None' : '0 — Нет'}</span>
+                        <span>${isEn ? '3 — Moderate' : '3 — Умеренно'}</span>
+                        <span>${isEn ? '6 — Unbearable' : '6 — Невыносимо'}</span>
+                    </div>
+                </div>`).join('')}
+            </div>
             <div id="npq-result" class="quiz-result-box" style="display:none;">
                 <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
                     <div>
@@ -1774,41 +1981,149 @@ async function main() {
                     <div class="quiz-bar-label"><span>${isEn ? 'Visual Dependence (Stores / Screens)' : 'Зрительная перегрузка (магазины / экраны)'}</span><strong id="npq-c2">0 / 24</strong></div>
                     <div class="quiz-bar-track"><div id="npq-b2" class="quiz-bar-fill" style="width:0%"></div></div>
                 </div>
-                <p id="npq-advice" style="font-size:0.88rem;color:var(--text-secondary);margin:14px 0;"></p>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin-top:14px;">
-                    <a id="npq-tg-consult" href="https://t.me/Hmjim" target="_blank" rel="noopener" class="paywall-tier-btn accent">
-                        ${isEn ? 'Send Score to Maxim (1-on-1 Review)' : 'Отправить результат автору на разбор →'}
-                    </a>
-                    <a id="npq-tg-book" href="09_adrenaline_loop.html" class="paywall-tier-btn primary">
-                        ${isEn ? 'Unlock Full Recovery System ($99)' : 'Открыть полную систему (5 000 ₽)'}
-                    </a>
+                <p id="npq-advice" style="font-size:0.88rem;color:var(--text-secondary);margin:14px 0 0;"></p>
+            </div>
+        </section>`;
+
+        // 5. Combined Point-A Summary Dashboard + Unified JS Controller
+        const summaryAndScriptHTML = `
+        <section id="tests-summary-card" class="pppd-quiz-box" style="border-color:var(--accent);">
+            <div class="article-offer-eyebrow">${isEn ? 'YOUR BASELINE SCORECARD (POINT A)' : 'ТВОЯ СВОДКА РЕЗУЛЬТАТОВ («ТОЧКА А»)'}</div>
+            <h3 style="margin:0 0 8px 0;">${isEn ? 'Combined Diagnostic Profile' : 'Все твои баллы в одном месте'}</h3>
+            <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:14px;">${isEn
+                ? 'As you answer DHI, HADS, and NPQ above, your scores automatically populate here. Save them to compare in 30 days.'
+                : 'По мере ответов в тестах DHI, HADS и NPQ выше твои цифры автоматически собираются здесь. Скопируй их в заметки, чтобы сравнить ровно через 30 дней.'}</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:16px;">
+                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
+                    <div style="font-size:0.75rem;color:var(--text-secondary);">DHI (${isEn ? 'Handicap' : 'Шаткость'})</div>
+                    <div id="sum-dhi" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 100</div>
                 </div>
+                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
+                    <div style="font-size:0.75rem;color:var(--text-secondary);">HADS-A (${isEn ? 'Anxiety' : 'Тревога'})</div>
+                    <div id="sum-hads-a" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 21</div>
+                </div>
+                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
+                    <div style="font-size:0.75rem;color:var(--text-secondary);">HADS-D (${isEn ? 'Burnout' : 'Депрессия'})</div>
+                    <div id="sum-hads-d" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 21</div>
+                </div>
+                <div style="background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:12px;">
+                    <div style="font-size:0.75rem;color:var(--text-secondary);">NPQ (${isEn ? 'Niigata' : 'Ниигата'})</div>
+                    <div id="sum-npq" style="font-size:1.35rem;font-weight:800;color:var(--accent);">— / 72</div>
+                </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;">
+                <button type="button" id="copy-scores-btn" class="paywall-tier-btn secondary">${isEn ? '📋 Copy Results to Clipboard' : '📋 Скопировать результаты в заметки'}</button>
+                <a id="all-tg-consult" href="${getContactLinks(isEn, isEn ? 'Diagnostic Tests' : 'Тесты ПППГ').consultTg}" target="_blank" rel="noopener" class="paywall-tier-btn accent">${isEn ? 'Send Scores to Maxim (1-on-1 Review) →' : 'Отправить баллы Максиму на разбор →'}</a>
             </div>
         </section>
         <script>
         (function(){
-            var box = document.getElementById('pppd-quiz');
-            if (!box) return;
             var isEn = ${isEn ? 'true' : 'false'};
-            var answers = {};
-            var items = box.querySelectorAll('.quiz-q-item');
-            box.addEventListener('click', function(e){
+            var state = { dhi: {}, hads: {}, npq: {} };
+            var totals = { dhi: null, hadsA: null, hadsD: null, npq: null };
+
+            document.addEventListener('click', function(e){
                 var btn = e.target.closest('.quiz-opt-btn');
                 if (!btn) return;
                 var row = btn.closest('.quiz-q-item');
+                if (!row) return;
+                var qType = row.getAttribute('data-quiz');
+                if (!qType || !state[qType]) return;
                 var qIdx = row.getAttribute('data-q');
                 row.querySelectorAll('.quiz-opt-btn').forEach(function(b){ b.classList.remove('selected'); });
                 btn.classList.add('selected');
-                answers[qIdx] = { val: parseInt(btn.getAttribute('data-val'), 10), cat: parseInt(row.getAttribute('data-cat'), 10) };
-                updateScore();
+                state[qType][qIdx] = { val: parseInt(btn.getAttribute('data-val'), 10), cat: parseInt(row.getAttribute('data-cat'), 10) };
+                if (qType === 'dhi') calcDHI();
+                if (qType === 'hads') calcHADS();
+                if (qType === 'npq') calcNPQ();
+                syncMasterSummary();
             });
-            function updateScore() {
-                var keys = Object.keys(answers);
-                if (keys.length === 0) return;
+
+            function calcDHI() {
+                var keys = Object.keys(state.dhi);
+                if (!keys.length) return;
+                var c = [0, 0, 0], total = 0, maxes = [28, 36, 36];
+                keys.forEach(function(k){ c[state.dhi[k].cat] += state.dhi[k].val; total += state.dhi[k].val; });
+                totals.dhi = total;
+                document.getElementById('dhi-result').style.display = 'block';
+                document.getElementById('dhi-total').textContent = total + ' / 100' + (keys.length < 25 ? (isEn ? ' (' + keys.length + '/25)' : ' (' + keys.length + '/25 вопр.)') : '');
+                for (var i = 0; i < 3; i++) {
+                    document.getElementById('dhi-c' + i).textContent = c[i] + ' / ' + maxes[i];
+                    document.getElementById('dhi-b' + i).style.width = Math.round((c[i] / maxes[i]) * 100) + '%';
+                }
+                var st = document.getElementById('dhi-stage');
+                var sm = document.getElementById('dhi-summary');
+                if (total >= 61) {
+                    st.textContent = isEn ? 'Severe Handicap (61–100)' : 'Тяжёлая степень (61–100)';
+                    sm.textContent = isEn
+                        ? 'Dizziness significantly restricts your daily mobility and triggers strong avoidance. Structured VRT + graded exposure + breaking the adrenaline loop is essential.'
+                        : 'Головокружение сильно сузило твою жизнь и запустило избегание. Хорошая новость: с высоких цифр балл падает быстрее всего при связке ВРТ + экспозиция + работа с тревогой.';
+                } else if (total >= 31) {
+                    st.textContent = isEn ? 'Moderate Handicap (31–60)' : 'Умеренная степень (31–60)';
+                    sm.textContent = isEn
+                        ? 'Moderate restriction. You function with effort and avoid specific triggers. Systematic daily rehabilitation will bring you below 20.'
+                        : 'Жизнь ограничена, но ты функционируешь через усилие. Главная ловушка здесь — застрять на «терпимом» уровне. Нужна системная экспозиция и снятие костылей.';
+                } else {
+                    st.textContent = isEn ? 'Mild Handicap (0–30)' : 'Лёгкая степень (0–30)';
+                    sm.textContent = isEn
+                        ? 'Mild impact. Keep up consistent vestibular hygiene and eliminate subtle safety behaviors.'
+                        : 'Лёгкая степень. Жизнь почти не ограничена — ты либо в начале, либо уже на финишной прямой.';
+                }
+                document.getElementById('nav-stat-dhi').textContent = '✓ DHI: ' + total + ' / 100 (' + keys.length + '/25)';
+            }
+
+            function calcHADS() {
+                var keys = Object.keys(state.hads);
+                if (!keys.length) return;
+                var c = [0, 0];
+                keys.forEach(function(k){ c[state.hads[k].cat] += state.hads[k].val; });
+                totals.hadsA = c[0];
+                totals.hadsD = c[1];
+                document.getElementById('hads-result').style.display = 'block';
+                document.getElementById('hads-a-score').textContent = c[0] + ' / 21';
+                document.getElementById('hads-d-score').textContent = c[1] + ' / 21';
+                document.getElementById('hads-c0').textContent = c[0] + ' / 21';
+                document.getElementById('hads-c1').textContent = c[1] + ' / 21';
+                document.getElementById('hads-b0').style.width = Math.round((c[0] / 21) * 100) + '%';
+                document.getElementById('hads-b1').style.width = Math.round((c[1] / 21) * 100) + '%';
+
+                function labelLevel(v, isDep) {
+                    if (v >= 11) return { txt: isEn ? 'Clinically Significant (11+)' : 'Клинически выраженный уровень (11+)', col: '#f85149' };
+                    if (v >= 8) return { txt: isEn ? 'Subclinical / Borderline (8–10)' : 'Субклинический уровень (8–10)', col: '#d29922' };
+                    return { txt: isEn ? 'Normal Range (0–7)' : 'Норма (0–7)', col: '#3fb950' };
+                }
+                var la = labelLevel(c[0], false), ld = labelLevel(c[1], true);
+                var ba = document.getElementById('hads-a-badge'), bd = document.getElementById('hads-d-badge');
+                ba.textContent = la.txt; ba.style.color = la.col;
+                bd.textContent = ld.txt; bd.style.color = ld.col;
+
+                var msg = '';
+                if (c[0] >= 11) {
+                    msg = isEn
+                        ? 'Your Anxiety (A = ' + c[0] + ') is the main fuel keeping your balance system hyper-vigilant. Start with somatic down-regulation (Chapter 5) and dismantling the Adrenaline Loop (Module 2).'
+                        : 'Тревога (A = ' + c[0] + ') сейчас выступает главным топливом твоей шаткости: амигдала держит систему равновесия в режиме боевой тревоги. Начинай с релаксации по Джекобсону (Глава 5) и разрыва Адреналиновой петли (Модуль 2).';
+                } else {
+                    msg = isEn
+                        ? 'Your anxiety score is moderate/controlled — ideal ground for VRT and active supermarket exposure.'
+                        : 'Тревога в рабочей зоне — отличная база для вестибулярной гимнастики и активной экспозиции.';
+                }
+                if (c[1] > 14) {
+                    msg += isEn
+                        ? ' Note: HADS-D > 14 indicates heavy nervous exhaustion — consider discussing temporary SSRI support with a neurologist/psychiatrist.'
+                        : ' Важно: HADS-D > 14 говорит о сильном нервном истощении — имеет смысл обсудить с врачом поддержку СИОЗС, чтобы дать мозгу ресурс на практику.';
+                }
+                document.getElementById('hads-summary').textContent = msg + (keys.length < 14 ? (isEn ? ' (' + keys.length + '/14 answered)' : ' (отвечено ' + keys.length + '/14)') : '');
+                document.getElementById('nav-stat-hads').textContent = '✓ HADS: A=' + c[0] + ', D=' + c[1] + ' (' + keys.length + '/14)';
+            }
+
+            function calcNPQ() {
+                var keys = Object.keys(state.npq);
+                if (!keys.length) return;
                 var c = [0, 0, 0], total = 0;
-                keys.forEach(function(k){ c[answers[k].cat] += answers[k].val; total += answers[k].val; });
+                keys.forEach(function(k){ c[state.npq[k].cat] += state.npq[k].val; total += state.npq[k].val; });
+                totals.npq = total;
                 document.getElementById('npq-result').style.display = 'block';
-                document.getElementById('npq-total').textContent = total + ' / 72' + (keys.length < 12 ? (isEn ? ' (' + keys.length + '/12 answered)' : ' (отвечено ' + keys.length + '/12)') : '');
+                document.getElementById('npq-total').textContent = total + ' / 72' + (keys.length < 12 ? (isEn ? ' (' + keys.length + '/12)' : ' (' + keys.length + '/12 вопр.)') : '');
                 for (var i = 0; i < 3; i++) {
                     document.getElementById('npq-c' + i).textContent = c[i] + ' / 24';
                     document.getElementById('npq-b' + i).style.width = Math.round((c[i] / 24) * 100) + '%';
@@ -1816,44 +2131,96 @@ async function main() {
                 var stageEl = document.getElementById('npq-stage');
                 var sumEl = document.getElementById('npq-summary');
                 if (total >= 45) {
-                    stageEl.textContent = isEn ? 'Severe PPPD Pattern' : 'Выраженная стадия ПППГ';
+                    stageEl.textContent = isEn ? 'Severe PPPD Pattern (≥45)' : 'Выраженная стадия ПППГ (≥45)';
                     sumEl.textContent = isEn
-                        ? 'Score ≥ 45 indicates strong central sensitization and protective avoidance. Structured daily VRT + graded exposure + breaking the adrenaline loop (Modules 1–3) is critical.'
-                        : 'Балл ≥ 45 говорит о сильной центральной сенситизации и включённом режиме тревожного контроля. Нужна связка: снятие зажима шеи + ВРТ + выход из адреналиновой петли и экспозиция (Модули 1–3).';
+                        ? 'Strong central sensitization across triggers. Daily VRT + graded exposure + cognitive/somatic reset (Modules 1–3) is required.'
+                        : 'Сильная центральная сенситизация. Нужна связка: снятие мышечного панциря + ВРТ + выход из адреналиновой петли и экспозиция (Модули 1–3).';
                 } else if (total >= 27) {
                     stageEl.textContent = isEn ? 'Clinical PPPD Threshold (≥27)' : 'Клинический порог ПППГ (≥27)';
                     sumEl.textContent = isEn
-                        ? 'Your score crosses the clinical Niigata cutoff (27 pts). Your hardware is intact, but your brain balance filter is stuck on manual threat control.'
-                        : 'Твой балл выше клинического порога опросника Ниигаты (27 баллов). Железо здорово, но мозг застрял на ручном контроле равновесия.';
+                        ? 'Crosses the clinical Niigata PPPD cutoff (27 pts). Hardware is healthy, software filter is stuck on manual threat control.'
+                        : 'Балл выше клинического порога Ниигаты (27 баллов). Железо здорово, но мозг застрял на ручном контроле равновесия.';
                 } else {
                     stageEl.textContent = isEn ? 'Mild / Subclinical (<27)' : 'Лёгкая / остаточная стадия (<27)';
                     sumEl.textContent = isEn
-                        ? 'Mild sensitization or recovery phase. Consistent vestibular habits and removing safety crutches will bring this down to zero.'
-                        : 'Умеренная сенситизация или фаза выхода на плато. Регулярная гимнастика, отказ от костылей безопасности и работа с откатами доведут балл до нуля.';
+                        ? 'Mild sensitization or recovery plateau. Removing safety crutches and consistent VRT will finish the job.'
+                        : 'Умеренная сенситизация или выход на плато. Отказ от костылей безопасности и регулярная практика доведут балл до нуля.';
                 }
                 var maxCat = c[2] >= c[0] && c[2] >= c[1] ? 2 : (c[0] >= c[1] ? 0 : 1);
                 var adviceMap = isEn ? [
-                    'Dominant trigger: Upright Posture & Proprioception. Focus on Chapter 4 (Muscle Armor), Chapter 6 (VRT), and Module 2 (Safety Crutches & Exposure).',
-                    'Dominant trigger: Motion Sensitivity. Focus on VOR gaze stabilization (Chapter 6 & 6b) and dismantling the Adrenaline Loop (Chapter 10).',
-                    'Dominant trigger: Visual Dependence. Focus on Chapter 8 (Visual Dependence), optokinetic retraining (6b), and Supermarket Graded Exposure (Chapter 13).'
+                    'Dominant trigger: Upright Posture & Proprioception → Focus on Chapter 4 (Muscle Armor), Chapter 6 (VRT), and Module 2 (Safety Crutches).',
+                    'Dominant trigger: Motion Sensitivity → Focus on VOR gaze stabilization (Chapters 6 & 6b) and breaking the Adrenaline Loop (Chapter 10).',
+                    'Dominant trigger: Visual Dependence (Stores/Screens) → Focus on Chapter 8 (Visual Dependence), 6b simulators, and Supermarket Exposure (Chapter 13).'
                 ] : [
-                    'Ведущий триггер: Поза и опора. В первую очередь разбери Главу 4 (Мышечный панцирь), Главу 6 (Гимнастика) и Модуль 2 (Костыли безопасности + Экспозиция).',
-                    'Ведущий триггер: Чувствительность к движению. Ключ — перекалибровка VOR (Главы 6 и 6b) и разрыв Адреналиновой петли (Глава 10).',
-                    'Ведущий триггер: Зрительная зависимость. Твои главные точки роста — Глава 8 (Зрительная зависимость), тренажёры 6b и ступенчатая Экспозиция в магазинах (Глава 13).'
+                    'Ведущий триггер: Поза и опора → Разбери Главу 4 (Мышечный панцирь), Главу 6 (Гимнастика) и Модуль 2 (Костыли безопасности).',
+                    'Ведущий триггер: Чувствительность к движению → Перекалибровка VOR (Главы 6 и 6b) + разрыв Адреналиновой петли (Глава 10).',
+                    'Ведущий триггер: Зрительная зависимость (магазины / экраны) → Глава 8 (Зрительная зависимость), тренажёры 6b и Экспозиция (Глава 13).'
                 ];
                 document.getElementById('npq-advice').textContent = adviceMap[maxCat];
-                var msgConsult = isEn
-                    ? 'Hi Maxim! My NPQ test score on pppd.tech is ' + total + '/72 (Posture: ' + c[0] + ', Motion: ' + c[1] + ', Visual: ' + c[2] + '). I want to book a 1-on-1 consultation ($150) or bundle ($219).'
-                    : 'Привет, Максим! Прошёл тест NPQ на сайте: ' + total + '/72 (Поза: ' + c[0] + ', Движение: ' + c[1] + ', Зрение: ' + c[2] + '). Хочу разобрать мой случай на консультации (7 500 ₽) или взять пакет с книгой (10 900 ₽).';
-                var msgBook = isEn
-                    ? 'Hi Maxim! My NPQ score is ' + total + '/72. I want full lifetime access to the Point of Support guide ($99).'
-                    : 'Привет, Максим! Мой балл NPQ — ' + total + '/72. Хочу купить полный доступ к книге «Точка Опоры» (5 000 ₽) по СБП.';
-                document.getElementById('npq-tg-consult').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgConsult);
-                document.getElementById('npq-tg-book').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msgBook);
-                document.getElementById('npq-tg-book').target = '_blank';
+                document.getElementById('nav-stat-npq').textContent = '✓ NPQ: ' + total + ' / 72 (' + keys.length + '/12)';
+            }
+
+            function syncMasterSummary() {
+                document.getElementById('sum-dhi').textContent = (totals.dhi !== null ? totals.dhi : '—') + ' / 100';
+                document.getElementById('sum-hads-a').textContent = (totals.hadsA !== null ? totals.hadsA : '—') + ' / 21';
+                document.getElementById('sum-hads-d').textContent = (totals.hadsD !== null ? totals.hadsD : '—') + ' / 21';
+                document.getElementById('sum-npq').textContent = (totals.npq !== null ? totals.npq : '—') + ' / 72';
+
+                var parts = [];
+                if (totals.dhi !== null) parts.push('DHI=' + totals.dhi + '/100');
+                if (totals.hadsA !== null) parts.push('HADS-A=' + totals.hadsA + '/21, HADS-D=' + totals.hadsD + '/21');
+                if (totals.npq !== null) parts.push('NPQ=' + totals.npq + '/72');
+                if (parts.length) {
+                    var msg = isEn
+                        ? 'Hi Maxim! My test scores on pppd.tech: ' + parts.join('; ') + '. I want to book a 1-on-1 review ($150) or bundle ($219).'
+                        : 'Привет, Максим! Прошёл тесты на сайте: ' + parts.join('; ') + '. Хочу разобрать мой случай на консультации (7 500 ₽) или взять пакет с книгой (10 900 ₽).';
+                    document.getElementById('all-tg-consult').href = 'https://t.me/Hmjim?text=' + encodeURIComponent(msg);
+                }
+            }
+
+            var copyBtn = document.getElementById('copy-scores-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function(){
+                    var today = new Date().toISOString().split('T')[0];
+                    var txt = (isEn ? 'PPPD Baseline (' + today + '):\n' : 'Точка замера ПППГ (' + today + '):\n')
+                        + 'DHI: ' + (totals.dhi !== null ? totals.dhi : '—') + ' / 100\n'
+                        + 'HADS-A: ' + (totals.hadsA !== null ? totals.hadsA : '—') + ' / 21\n'
+                        + 'HADS-D: ' + (totals.hadsD !== null ? totals.hadsD : '—') + ' / 21\n'
+                        + 'NPQ: ' + (totals.npq !== null ? totals.npq : '—') + ' / 72\n'
+                        + 'https://pppd.tech/';
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(txt);
+                    }
+                    copyBtn.textContent = isEn ? '✓ Copied!' : '✓ Скопировано в буфер!';
+                    setTimeout(function(){
+                        copyBtn.textContent = isEn ? '📋 Copy Results to Clipboard' : '📋 Скопировать результаты в заметки';
+                    }, 2200);
+                });
             }
         })();
         <\/script>`;
+
+        // Inject each test right into its exact H2 section!
+        const h2Positions = [...htmlContent.matchAll(/<h2[\s>]/gi)].map(m => m.index);
+        if (h2Positions.length >= 5) {
+            // h2[0]=Why, h2[1]=DHI, h2[2]=HADS, h2[3]=NPQ, h2[4]=How to use
+            const hrPos = htmlContent.lastIndexOf('<hr');
+            const endPracticePos = hrPos > h2Positions[4] ? hrPos : htmlContent.length;
+            return (
+                htmlContent.slice(0, h2Positions[1]) +
+                navHTML +
+                htmlContent.slice(h2Positions[1], h2Positions[2]) +
+                dhiHTML +
+                htmlContent.slice(h2Positions[2], h2Positions[3]) +
+                hadsHTML +
+                htmlContent.slice(h2Positions[3], h2Positions[4]) +
+                npqHTML +
+                htmlContent.slice(h2Positions[4], endPracticePos) +
+                summaryAndScriptHTML +
+                htmlContent.slice(endPracticePos)
+            );
+        }
+        return navHTML + dhiHTML + hadsHTML + npqHTML + summaryAndScriptHTML + htmlContent;
     }
 
     // Conversion block appended to all free chapters & SEO articles
@@ -1866,7 +2233,7 @@ async function main() {
                 <div class="article-offer-eyebrow">COMPLETE RECOVERY SYSTEM</div>
                 <h2 class="article-offer-title">Stop Piecing Articles Together — Follow the Step-by-Step Protocol</h2>
                 <p class="article-offer-lead">This article covers one piece of the puzzle. In <strong>Modules 2–4</strong> of “Point of Support”, you get the complete engineering protocol: breaking the Adrenaline Loop, dismantling CAS & health anxiety, Supermarket Exposure ladders, Derealization reset, and Setback defense.</p>
-                ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Take the 60-second Niigata PPPD Severity Test →</a>` : ''}
+                ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Take the Interactive DHI, HADS & Niigata PPPD Tests →</a>` : ''}
                 <div class="paywall-tiers" style="margin-bottom:8px;">
                     <div class="paywall-tier">
                         <div>
@@ -1906,7 +2273,7 @@ async function main() {
             <div class="article-offer-eyebrow">СЛЕДУЮЩИЙ ШАГ К ВЫЗДОРОВЛЕНИЮ</div>
             <h2 class="article-offer-title">Хватит собирать пазл по кускам — пройди систему целиком</h2>
             <p class="article-offer-lead">Эта статья — только один элемент. В закрытых <strong>Модулях 2–4</strong> книги «Точка Опоры» собрана полная пошаговая система: разрыв адреналиновой петли, выход из ипохондрии и капкана CAS, таблицы экспозиции для магазинов и улиц, снятие дереализации и защита от откатов.</p>
-            ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Пройти 60-секундный тест тяжести ПППГ (шкала Ниигаты) →</a>` : ''}
+            ${showQuizLink ? `<a href="52_dhi_hads_niigata_tests.html#pppd-quiz" class="article-offer-quiz-link">📊 Пройти онлайн-тесты DHI, HADS и опросник Ниигаты →</a>` : ''}
             <div class="paywall-tiers" style="margin-bottom:8px;">
                 <div class="paywall-tier">
                     <div>
@@ -2660,13 +3027,11 @@ async function main() {
                 const md = fs.readFileSync(srcPath, 'utf8');
                 htmlContent = marked.parse(md);
                 if (chapter.id === '52_dhi_hads_niigata_tests') {
-                    const firstH2 = htmlContent.indexOf('<h2');
-                    const secondH2 = firstH2 !== -1 ? htmlContent.indexOf('<h2', firstH2 + 4) : -1;
-                    if (secondH2 !== -1) {
-                        htmlContent = htmlContent.slice(0, secondH2) + buildNiigataQuizHTML(false) + htmlContent.slice(secondH2);
-                    } else {
-                        htmlContent = buildNiigataQuizHTML(false) + htmlContent;
-                    }
+                    htmlContent = injectClinicalTestsSuite(htmlContent, false);
+                } else if (chapter.id === '03_baseline_tests') {
+                    htmlContent = htmlContent
+                        .replace(/<p>Найти тест можно, загуглив[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#hads-quiz" class="paywall-tier-btn accent" style="max-width:360px;">Пройти онлайн-тест HADS прямо на сайте →</a></p>`)
+                        .replace(/<p>Тоже ищется по запросу[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#dhi-quiz" class="paywall-tier-btn primary" style="max-width:360px;">Пройти онлайн-тест DHI (25 вопросов) →</a></p>`);
                 }
                 htmlContent += buildFreeArticleOfferHTML(chapter, false);
             } else {
@@ -2856,13 +3221,11 @@ async function main() {
                 const md = fs.readFileSync(srcPath, 'utf8');
                 htmlContent = marked.parse(md);
                 if (chapter.id === '52_dhi_hads_niigata_tests') {
-                    const firstH2 = htmlContent.indexOf('<h2');
-                    const secondH2 = firstH2 !== -1 ? htmlContent.indexOf('<h2', firstH2 + 4) : -1;
-                    if (secondH2 !== -1) {
-                        htmlContent = htmlContent.slice(0, secondH2) + buildNiigataQuizHTML(true) + htmlContent.slice(secondH2);
-                    } else {
-                        htmlContent = buildNiigataQuizHTML(true) + htmlContent;
-                    }
+                    htmlContent = injectClinicalTestsSuite(htmlContent, true);
+                } else if (chapter.id === '03_baseline_tests') {
+                    htmlContent = htmlContent
+                        .replace(/<p>You can find the test by googling[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#hads-quiz" class="paywall-tier-btn accent" style="max-width:360px;">Take the HADS Test Online on This Site →</a></p>`)
+                        .replace(/<p>Also searched for[^<]*<\/p>/i, `<p><a href="52_dhi_hads_niigata_tests.html#dhi-quiz" class="paywall-tier-btn primary" style="max-width:360px;">Take the 25-Question DHI Test Online →</a></p>`);
                 }
                 htmlContent += buildFreeArticleOfferHTML(chapter, true);
             } else {
