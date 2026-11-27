@@ -2479,8 +2479,82 @@ body.light .quiz-opt-btn.selected {
     outline: none;
 }
 
+/* ── SEO-Safe English Edition Prompt for Non-RU Browsers ── */
+.en-detect-banner {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    z-index: 1003;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px 8px 14px;
+    background: rgba(22, 27, 34, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(88, 166, 255, 0.45);
+    border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(1, 4, 9, 0.65);
+    font-size: 0.82rem;
+    color: var(--text-primary);
+}
+
+body.light .en-detect-banner {
+    background: rgba(255, 255, 255, 0.97);
+    border-color: rgba(9, 105, 218, 0.35);
+    box-shadow: 0 8px 24px rgba(31, 35, 40, 0.14);
+}
+
+.en-detect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    background: #1f6feb;
+    color: #ffffff !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+}
+
+.en-detect-btn:hover {
+    background: #388bfd;
+    color: #ffffff !important;
+}
+
+.en-detect-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.95rem;
+    line-height: 1;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.en-detect-close:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+@media (max-width: 600px) {
+    .en-detect-banner {
+        left: 58px;
+        right: 12px;
+        top: 12px;
+        justify-content: space-between;
+        padding: 7px 10px;
+        font-size: 0.78rem;
+    }
+}
+
 /* ── Print Styles ── */
 @media print {
+    .en-detect-banner,
     .sidebar,
     .menu-toggle,
     .progress-bar,

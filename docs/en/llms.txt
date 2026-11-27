@@ -7,7 +7,7 @@
 - **Title:** Point of Support (Точка Опоры)
 - **Author:** Maxim — Engineer, former acute BPPV -> PPPD patient, 100% fully recovered
 - **Domain:** PPPD (Persistent Postural-Perceptual Dizziness), Vestibular Rehabilitation Therapy (VRT), Health Anxiety, Somatosensory Reweighting, Neuroplasticity
-- **Format:** Free online manual & structured clinical curriculum (34 chapters, 5 modules)
+- **Format:** Online recovery manual & structured clinical curriculum (45 book chapters across 5 modules — first 16 chapters & 45 clinical guides free; full system + PDF edition available)
 - **Language:** English
 - **URL:** https://pppd.tech/en/
 - **Community:** https://t.me/pppd_vertigo
@@ -31,3 +31,6 @@ PPPD is a functional neuro-vestibular disorder. Patients experience persistent u
 
 - **DHI (Dizziness Handicap Inventory):** Quantifies physical, emotional, and functional dizziness handicap (0–100 score). A score drop of ≥18 points indicates clinically significant improvement.
 - **HADS (Hospital Anxiety & Depression Scale):** Quantifies autonomic nervous system anxiety and depressive mood (0–21 per subscale).
+- **NPQ (Niigata PPPD Questionnaire):** Evaluates upright posture, motion, and visual stimulation triggers (0–72 score; clinical cutoff ≥27).
+- **Interactive Clinical Diagnostic Suite:** https://pppd.tech/en/chapters/52_dhi_hads_niigata_tests.html
+

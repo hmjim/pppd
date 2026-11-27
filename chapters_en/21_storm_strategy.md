@@ -1,114 +1,114 @@
-# Strategy “Storm”: algorithm for surviving relapse 
+# The "Storm" Protocol: A Survival Algorithm for Setbacks
 
-*How to wait out a vegetative storm, the three-day rule and the therapeutic power of “Letters to yourself” in moments of falling.*
-
----
-
-## 1. Essence and issues: panic during a storm 
-
-When a pullback hits, your brain instantly goes into disaster mode. A wave of thoughts covers you: * “Nothing works! Everything is gone! I will never be cured!”*. 
-
-In a panic, you begin to take chaotic actions: feverishly do gymnastics, meditate, call loved ones, frantically search for new symptoms on Google and drink sedatives. You try to bail water out of a sinking boat with a leaky bucket while running around the deck during a storm. But these throwing only intensify the pumping, throwing new portions of adrenaline into your already inflamed nervous system. 
-
-The storm cannot be defeated by force or vanity. You can only wait it out. 
-
-## 2. Physiological explanation: the law of conservation of energy of the central nervous system 
-
-Neurological backlash is an inflamed, hypersensitive state of your autonomic system. Your brain is temporarily exhausted. If at this moment you begin to get angry, panic and demand immediate recovery from yourself, you are forcing the exhausted system to work at its limit. 
-
-It's like trying to drive an overheated engine with the pedal to the floor. 
-
-In physiology, this period requires a severe reduction in stimulation. The brain must receive a signal of absolute safety in order to turn off the “fight or flight” mode and start self-regulatory processes. 
-
-To do this, we use the **3-day rule** - the period of maximum reduction in external and internal load. We need to remove all the “irritants” that feed the amygdala and give the body a physical resource to restore autonomic balance. 
-
-## 3. Cognitive Traps: “I need to fix myself immediately.” 
-
-Main cognitive trap: * “If I relax and lie down now, I will admit defeat and the disease will win. I have to fight!”*. 
-
-Fighting symptoms is neurosis. Your resistance, anger, and attempts to “fix it now” create 90% of the tension during a rollback. Remember: **you cannot force the vegetative system to calm down with the power of thought**. But you can stop preventing her from recovering. Your task during a storm is not to fight the waves, but to drop anchor and drift. 
-
-## 4. Point of Support: Insight 
-
-> The captain of a ship during a storm does not try to bail out the ocean with buckets and does not shout at the waves. He removes the sails, battens down the hatches, throws a reliable anchor and waits for the elements to subside. Do the same. The storm will end because it always runs out of energy. Your task is simply to wait it out.
+*How to ride out an autonomic storm, the Three-Day Rule, and the grounding power of a "Setback Letter" to yourself when symptoms flare up.*
 
 ---
 
-## 5. Practice: Storm Protocol 
+## 1. The Core Problem: Panic on a Stormy Deck
 
-When you are hit by a strong pullback, immediately turn on this algorithm for **3 days**: 
+The moment a setback hits, your brain slams straight into catastrophe mode. A wave of alarming thoughts crashes over you: *"Nothing works! Everything is ruined! I'm never going to recover!"*
 
-### Why exactly 3 days? 
+Blinded by panic, you start scrambling frantically: drilling vestibular exercises out of desperation, forcing meditation, calling family in tears, furiously Googling new symptoms, and reaching for sedatives. You look like someone sprinting across a pitching deck in a gale, trying to bail out a boat with a leaky bucket. All that frantic thrashing only rocks the boat harder, dumping fresh surges of adrenaline into an already raw, sensitized nervous system.
 
-The physiology of a vegetative storm follows a predictable pattern: 
-* **Day 1:** Amygdala is on full alert. Adrenaline and cortisol are at their peak. Maximum instability. The brain screams: *“We are dying!”*. Any attempts to “fix yourself” increase panic. 
-* **Day 2:** If you didn’t add any more fuel (googling, panicking, trying to “do Jacobson 5 times in a row”), your cortisol levels begin to drop. Adrenaline receptors are desensitized. The unsteadiness remains, but the panic subsides. The first “windows” of clarity appear, lasting 15–30 minutes. 
-* **Day 3:** Vegetation begins to return to the background. Shakiness is reduced by 30–50% of peak. Sleep improves. The brain switches from “fight” mode to “wary observation” mode. 
+You cannot muscle or hustle your way out of a storm. You can only ride it out.
 
-Three days is the minimum biological cycle during which the body utilizes excess stress hormones and reboots the vegetative balance. Don't expect instant results. But don’t stretch the “gentle regime” for weeks - otherwise it will become an avoidance. 
+## 2. The Physiology: Conserving Central Nervous System Energy
 
-### Step 1. Three Day Rule 
-1. **Double your body practice:** Do Jacobson relaxation 2 times a day (in the morning and before bed). Use the Kuznetsov applicator. Take a warm shower on your neck. We need to release physical tension. 
-2. **Information vacuum:** For 3 days, completely delete social networks, do not read the news and close all chats. Your brain is now an open wound. Don’t pour the salt of other people’s emotions and anxieties into it. 
-3. **Energy saving mode:** Lower the bar of requirements for yourself to zero. Is the house not cleaned? Okay. Dumplings for dinner? Wonderful. Failed an unnecessary task at work? The world won't collapse. Your only goal for these 3 days is to simply live them comfortably. 
-4. **Prohibition of evaluation and guilt:** Stop checking every 5 minutes whether you are pumping or not. Tell yourself: * “Yes, I’m shaking. This is a rollback. I accept this. We will remain in this state for several days, it will pass.”* Don't blame yourself for the decline - you didn't make a mistake, it's a normal biological process. 
+A neurological setback is an acute, hypersensitized flare-up of your autonomic nervous system (ANS). Your brain is temporarily running on fumes. If you react by getting angry, panicking, and demanding instant recovery right this second, you are forcing a depleted system to redline.
 
-### Do/Don’t Memo
+It's like flooring the gas pedal on an already overheated engine.
 
-| ✅ DO | ❌ DON'T | 
-| :--- | :--- | 
-| Warm shower on the neck 2 times a day | Google new symptoms | 
-| Jacobson morning and evening | Do Jacobson 5 times a day “to be on the safe side” | 
-| Walk outside for 20–30 minutes at a calm pace | Run 10 km “to burn off the adrenaline” | 
-| Go to bed an hour earlier | Scrolling through your phone until 2am | 
-| Eat warm food, drink water | Drink 3 cups of coffee “for vigor” | 
-| Tell loved ones: “I need peace now” | Calling friends and discussing symptoms for hours | 
-| Watch a light series or listen to a podcast | Read neurotic forums | 
-| Accept: “This will pass in 2-3 days” | Screaming: “Why am I feeling bad again?!” | 
+Physiologically, this window requires an aggressive drop in sensory and cognitive load. Your brain needs an unmistakable signal of absolute safety before it will switch off fight-or-flight mode and restart its self-regulatory processes.
 
-### Step 2. Schedule Day 1 (hardest day) 
+To deliver that signal, we use the **Three-Day Rule**—a deliberate window of minimal external and internal demand. Our job is to strip away every unnecessary irritant feeding the amygdala and give your body the physical bandwidth it needs to restore autonomic balance.
 
-Here is a specific checklist of actions for the first day of the storm: 
+## 3. Cognitive Traps: "I Have to Fix Myself Right Now"
 
-**Morning (7:00–10:00):** 
-* When you wake up, don’t check your head. Stand up. Drink a glass of warm water. 
-* Contrast shower (30 seconds warm → 15 seconds cool × 3 cycles). 
-* Light breakfast. No coffee - replace it with herbal tea or cocoa. 
-* Relaxation according to Jacobson (20 minutes). 
+The main cognitive trap: *"If I ease up and lie down right now, I'm admitting defeat and letting the disorder win. I have to fight through this!"*
 
-**Day (10:00–18:00):** 
-* Go outside. Slow walking for 20–30 minutes. Horizon Rule. No headphones. 
-* Do a simple routine (cook a meal, organize a shelf, watch a movie). 
-* For each wave of anxiety - Emergency card from Appendix A. 
-* Do not engage in dialogue with thoughts. “Detached observation” technique. 
+Fighting your symptoms *is* the anxiety loop. Your resistance, anger, and frantic attempts to "fix yourself right now" generate 90% of the tension during a setback. Memorize this: **you cannot use sheer willpower to force your autonomic nervous system to calm down**. What you *can* do is stop getting in its way while it recovers. Your job during a storm isn't to punch the waves—it's to drop anchor and ride the swell.
 
-**Evening (18:00–22:00):** 
-* Warm shower on neck and shoulders (5 minutes). 
-* Kuznetsov applicator (15 minutes). 
-* Relaxation according to Jacobson (20 minutes). 
-*No screens an hour before bed. 
-* Go to bed before 23:00. 
+## 4. Point of Support: Core Insight
 
-### Step 3. Letter to yourself in case of a rollback 
-When you are in a panic, your brain, under the influence of adrenaline, lies to you, drawing pictures of incurability. You need an authoritative opinion. And the best authority for you should be **you yourself are in a calm state**. 
-
-Here is an example of such a letter - rewrite it in your own words while you are calm:
-
-> *“Hi, it’s me—you’re fine. I know that right now it seems to you that everything is lost. That the treatment doesn't work. That you'll never get better. But I want to remind you of something:* 
-> 
-> *Three weeks ago you went to the store without panicking. You slept fine. You laughed. It was real. I didn't dream about it. And it will happen again - because the neural connections that you built have not gone away. They are simply temporarily drowned out by adrenaline.* 
-> 
-> *Now you are in a storm. The storm lasts 2–3 days. No more. Because the adrenaline is running out of fuel. Don’t add firewood—don’t Google, don’t panic, don’t try to “fix” yourself. Just wait it out.* 
-> 
-> *I believe in you. Because I am you. And I know what we are capable of.”* 
-
-Open the template [4.2_setback_letter.pdf](../materials/4.2_setback_letter.pdf) and rewrite it by hand. Save to favorites on your phone. 
-
-At the moment when you feel like “everything is broken,” take out your phone and read this letter **out loud**. Trust your calm self, not your panicking self.
+> A seasoned ship captain caught in a storm doesn't try to bail out the ocean with buckets or stand on deck shouting at the waves. They take down the sails, batten down the hatches, drop a solid anchor, and wait for the squall to blow itself out. Do the exact same thing. Every storm ends because every storm eventually runs out of fuel. Your only job is to wait it out.
 
 ---
 
-### Homework (DZ): 
-1. **Write your personal “Kickback Letter”** on a piece of paper or in your phone notes right now, while you are calm. Include 3 specific facts about your progress (what you were able to do last week that you couldn’t do a month ago). 
-2. Print or handwrite the Do/Don’t chart and hang it on your refrigerator. 
-3. Apply the “Storm” protocol at the first sign of deterioration in health. Record in your notebook what day after the start of the protocol you were released.
+## 5. Practice: The "Storm" Protocol
+
+Whenever a heavy setback hits, switch onto this exact **3-day** protocol immediately:
+
+### Why 3 Days?
+
+The physiology of an autonomic storm follows a predictable biological curve:
+* **Day 1:** Your amygdala is on full combat alert. Adrenaline and cortisol are peaking. Unsteadiness is maxed out. Your brain is screaming: *"We're dying!"* Any frantic attempt to "fix yourself" only intensifies the panic.
+* **Day 2:** Provided you didn't throw fresh fuel on the fire (no Googling, no spiraling, no frantically doing Jacobson's relaxation five times in a row), cortisol levels begin to drop. Adrenergic receptors start desensitizing. The unsteadiness lingers, but the terror loosens its grip. Your first 15- to 30-minute "windows" of clarity appear.
+* **Day 3:** Your autonomic nervous system begins settling back toward baseline. Unsteadiness drops by 30–50% from its peak. Sleep improves. Your brain shifts out of active combat mode into quiet, watchful recovery.
+
+Three days is the minimum biological cycle your body needs to clear excess stress hormones and reboot autonomic balance. Don't expect instant relief in an hour. At the same time, don't drag "gentle mode" out for weeks—otherwise it turns into avoidance.
+
+### Step 1. The Three-Day Rule
+1. **Double your somatic release practice:** Do Jacobson's progressive muscle relaxation twice a day (morning and bedtime). Lie on an acupressure mat (such as a Kuznetsov mat) and let a warm shower run over the back of your neck. We need to drain stored physical tension.
+2. **Enforce an information blackout:** For 3 full days, take social media off your phone, skip the news, and close every group chat. Right now your brain is an open wound—don't pour the salt of other people's emotions and anxieties into it.
+3. **Switch to Energy-Saving Mode:** Drop your demands on yourself to zero. House messy? Leave it. Dumplings or takeout for dinner? Wonderful. Pushed an optional task at work? The world won't end. Your sole objective for these 3 days is simply to get through them comfortably.
+4. **Ban symptom-checking and guilt:** Stop checking every five minutes to see whether you're still swaying. Tell yourself plainly: *"Yes, I'm rocking right now. This is a setback. I accept it. We'll sit with this state for a couple of days, and it will pass."* Don't blame yourself for the dip—you didn't make a mistake; this is a normal biological process.
+
+### Quick-Reference Do / Don't Chart
+
+| ✅ DO | ❌ DON'T |
+| :--- | :--- |
+| Run a warm shower over your neck twice a day | Google new symptoms |
+| Practice Jacobson's PMR morning and night | Drill Jacobson's PMR 5 times a day "just to be safe" |
+| Walk outside for 20–30 min at an easy pace | Run 10 km "to burn off the adrenaline" |
+| Go to bed an hour earlier than usual | Doomscroll on your phone until 2:00 a.m. |
+| Eat warm meals and drink plenty of water | Drink 3 cups of coffee "to push through the fog" |
+| Tell loved ones: "I need quiet rest right now" | Call friends to rehash your symptoms for hours |
+| Watch a light comfort show or listen to a podcast | Lurk on health-anxiety and dizziness forums |
+| Accept: "This will pass in 2–3 days" | Scream inwardly: "Why do I feel awful again?!" |
+
+### Step 2. Day 1 Schedule (The Hardest Day)
+
+Here is a concrete, step-by-step checklist for Day 1 of the storm:
+
+**Morning (7:00–10:00 a.m.):**
+* Wake up—do *not* check your head for dizziness. Get up and drink a glass of warm water.
+* Mild contrast shower (30 seconds warm → 15 seconds cool × 3 cycles).
+* Light breakfast. Zero coffee—swap it for herbal tea or warm cocoa.
+* Jacobson's progressive muscle relaxation (20 minutes).
+
+**Daytime (10:00 a.m.–6:00 p.m.):**
+* Step outside for a slow, unhurried 20- to 30-minute walk. Apply the Horizon Rule. No headphones.
+* Stick to simple, grounding tasks (cook a meal, tidy one shelf, watch a movie).
+* For every wave of anxiety, use your Emergency Grounding Card from Appendix A.
+* Refuse to argue with intrusive thoughts. Practice "Detached Observation."
+
+**Evening (6:00–10:00 p.m.):**
+* Warm shower over your neck and shoulders (5 minutes).
+* Acupressure mat session (15 minutes).
+* Jacobson's progressive muscle relaxation (20 minutes).
+* Zero screens for an hour before bed.
+* Lights out before 11:00 p.m.
+
+### Step 3. Your Personal Setback Letter
+When you are in the grip of panic, an adrenaline-soaked brain lies shamelessly to you, painting vivid pictures of permanent illness. You need a voice of authority you can trust. And the best authority you will ever have is **yourself in a calm, clear-headed state**.
+
+Here is a sample letter—rewrite it in your own words right now, while you feel steady:
+
+> *"Hey, it's me—you on a normal, steady day. I know right now it feels like everything is ruined. Like recovery isn't working. Like you're never going to get better. But I want to remind you of something:*
+>
+> *Three weeks ago, you walked into a grocery store without panicking. You slept normally. You laughed. That was real—you didn't dream it. And it will happen again, because the neural pathways you spent weeks building haven't vanished. Right now, they are simply drowned out temporarily by adrenaline.*
+>
+> *You are caught in a storm. A storm lasts 2–3 days—no longer—because adrenaline always runs out of fuel. Don't throw firewood on it: don't Google, don't panic, and don't try to 'fix' yourself today. Just wait it out.*
+>
+> *I believe in you. Because I am you. And I know what we are capable of."*
+
+Open the template [4.2_setback_letter.pdf](../materials/4.2_setback_letter.pdf) and rewrite your version by hand. Save a photo of it to your Favorites folder on your phone.
+
+The exact moment your mind tells you *"everything is broken again,"* pull out your phone and read that letter **out loud**. Trust Calm You—not Panicking You.
+
+---
+
+### Homework
+1. **Write your personal "Setback Letter"** on paper or in your phone's notes app right now, while you are calm. Include 3 concrete facts proving your progress (things you were able to do last week that you couldn't do a month ago).
+2. Print out—or copy by hand—the Do / Don't chart and tape it to your refrigerator.
+3. Activate **The "Storm" Protocol** at the very first sign of a symptom flare-up, and note in your journal which day after starting the protocol the wave began to lift.

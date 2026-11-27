@@ -1681,6 +1681,11 @@ async function main() {
 
     function wrapTables(html) {
         return String(html || '')
+            .replace(/<p>\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(?:<br\s*\/?>|\n)?/gi, function(_, tag) {
+                var labels = { NOTE: 'Note', TIP: 'Tip', IMPORTANT: 'Important', WARNING: 'Warning', CAUTION: 'Caution' };
+                var u = tag.toUpperCase();
+                return '<p><strong>' + (labels[u] || u) + ':</strong> ';
+            })
             .replace(/<table[\s>]/gi, '<div class="table-wrap">$&')
             .replace(/<\/table>/gi, '</table></div>');
     }
@@ -3013,6 +3018,7 @@ async function main() {
         <span></span><span></span><span></span>
     </button>
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    ${!isEn ? `<div id="en-detect-banner" class="en-detect-banner" role="region" aria-label="English language switch"><span>Reading in English?</span><a href="${enHref}" class="en-detect-btn">English Edition →</a><button type="button" class="en-detect-close" aria-label="Dismiss" onclick="document.getElementById('en-detect-banner').style.display='none';try{localStorage.setItem('en_banner_dismissed','1')}catch(e){}">✕</button></div>` : ''}
 
     <!-- Sidebar / Table of Contents -->
     <aside id="sidebar" class="sidebar">
@@ -3174,6 +3180,18 @@ async function main() {
             });
             window.addEventListener('pageshow', closeSidebar);
         }
+
+        // Show English switch banner for non-RU/CIS human browsers on Russian pages
+        ${!isEn ? `try {
+            if (!localStorage.getItem('en_banner_dismissed')) {
+                var ua = navigator.userAgent || '';
+                var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).join(',').toLowerCase();
+                if (langs && !/\\b(ru|uk|be|kk)\\b/.test(langs) && !/bot|crawl|spider|slurp|lighthouse|google|yandex|bing/i.test(ua)) {
+                    var eb = document.getElementById('en-detect-banner');
+                    if (eb) eb.style.display = 'flex';
+                }
+            }
+        } catch(e) {}` : ''}
 
         // Show PDF download for licensed users & hide free-article offer card if already unlocked
         var licenseKeyName = '${isEn ? 'point-of-support-license-key' : 'tochka-opory-license-key'}';
@@ -3792,6 +3810,8 @@ Disallow: /r_015744dc3f28b49e.pdf
 Disallow: /chapters/*.pdf
 Disallow: /en/*.pdf
 Disallow: /en/chapters/*.pdf
+Disallow: /materials/*.pdf
+Disallow: /en/materials/*.pdf
 
 User-agent: Googlebot
 Allow: /

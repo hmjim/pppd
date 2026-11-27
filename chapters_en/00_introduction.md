@@ -1,123 +1,123 @@
 # Introduction
 
-*This book is not another article from the Internet. This is a map. The map I drew while I was getting out of hell.*
+*This book isn't just another article off the internet. It's a map—the map I drew while clawing my own way out of hell.*
 
 ---
 
-Hello. My name is Maxim.
+Hi. My name is Maxim.
 
-If you are reading this, it means your world has lost stability. I know what it's like. When the floor floats under your feet. When every trip to the store is a marathon for survival. When doctors look at their pictures, throw up their hands and say: “Well, take a sedative.”
+If you're reading this, your world has lost its footing. I know exactly what that feels like. When the floor seems to shift and roll beneath your feet. When every trip to the grocery store turns into a survival marathon. When doctors stare at your scans, shrug, and say, "Well, try taking a sedative."
 
-You're not going crazy. You're not dying. And you're definitely not the first to go through this.
+You're not losing your mind. You're not dying. And you are definitely not the first person to go through this.
 
-I walked this path myself. **I have been completely healthy since January 2021.** But before that I was at rock bottom. Endless MRIs, panicky fear of every step, complete misunderstanding - why my body is betraying me. I visited dozens of doctors. I was given “VAD (autonomic dysfunction)”, “cervical osteochondrosis”, “dyscirculatory encephalopathy” - dummy diagnoses with nothing behind them. They don't heal. They don't even explain.
+I walked this exact road myself. **Since January 2021, I have been 100% healthy.** Before that, though, I hit rock bottom. Endless MRIs, sheer terror before every single step, and zero understanding of why my own body was betraying me. I saw dozens of doctors. They slapped me with labels like "VSD" (a post-Soviet catch-all label for autonomic dysfunction), "cervical osteochondrosis" (routine age-related neck wear misdiagnosed as a cause of dizziness), and "dyscirculatory encephalopathy" (a vague post-Soviet label for "poor brain blood flow")—junk diagnoses with nothing clinical behind them. They don't cure anything. They don't even explain anything.
 
-I was desperate. But I found a way out.
-
----
-
-## My story - short and without embellishment
-
-In January 2020, I experienced **BPPV** - benign paroxysmal positional vertigo. Classic: lay down in bed, turn your head - and the room spins like a carousel. Treated with vasodilator therapy. A month later, the external dizziness went away. But the **internal** remained - that same “cotton wool”, unsteadiness, the feeling that the floor was floating under your feet. I was diagnosed with PPPD and generalized anxiety disorder.
-
-The doctors offered the standard Russian prescription: a course of antidepressants for a year and a half. I specifically went to the mental health institute to pick up the drug. I couldn’t drink - the side effects were worse than the dizziness itself. They offered another one - same story. Pharmacology didn't work for me.
-
-Then I started digging myself. In the Russian segment of the Internet, there was practically no information on rehabilitation after PPPD. I found sources in English - studies, books on vestibular rehabilitation, neurophysiology. I consulted with doctors in Germany and Israel who work specifically with such dizziness. I spent a lot of money on all this. But I gathered a complete picture: what is happening to me, why and what to do about it.
-
-In July I started studying seriously. My symptoms at that time: my head began to feel dizzy after 20–30 minutes of normal walking, there were sharp “dips” - as if you were losing consciousness for a second, like a lag in a computer game. Everything intensified in public places.
-
-From July to January - six months of daily work. Vestibular gymnastics, CBT, exposure, physical activity. Dull, routine, daily discipline without breaks or days off.
-
-**Result: I am completely healthy.** Not 90%, not “almost”. 100% The dizziness is gone. The fear is gone. I live a normal life and no longer think about every step.
-
-## Some numbers
-
-If you think you're the only one, here are some statistics:
-
-* PPPD is the **second most common** reason for visits to otoneurologists in the world (after BPPV).
-*According to Staab et al. (2017), PPPD is diagnosed in **15–20%** of all patients attending specialized vestibular clinics.
-* The average age of onset is **30–50 years**, but occurs at 18 and 65.
-* Women get sick **2-3 times more often** than men (although among my subscribers the proportion is almost equal).
-*It is estimated that **up to 70%** of people with PPPD have a co-occurring anxiety disorder.
-*The average time from the onset of symptoms to correct diagnosis is **6 months to 3 years**. Three years of going back and forth from neurologist to ENT specialist and back.
-
-You are not a unique broken specimen. You are part of a huge army of people whom medicine has not yet learned to quickly recognize and treat. But the good news is that **treatments exist**, they work, and I've compiled them in this book.
+I was desperate. Eventually, I found the way out.
 
 ---
 
-## How to work with this book
+## My Story—Short and Unfiltered
 
-This is not a fiction novel that is read from cover to cover in an evening. This is a **workbook**. Here are the rules:
+In January 2020, I got hit with **BPPV**—Benign Paroxysmal Positional Vertigo. Classic textbook onset: I lay down in bed, turned my head, and the room spun like a carnival ride. Doctors put me on vasodilator drips. A month later, the external spinning stopped. What stayed behind was **internal** dizziness—that unmistakable "cotton-wool head," constant unsteadiness, and the sensation that the floor was pitching under my feet. Eventually, I was diagnosed with PPPD and Generalized Anxiety Disorder (GAD).
 
-### Rule 1: Don't swallow everything in one gulp
-Read **one chapter a day**, maximum two. After each chapter, you need time to digest the information and do your homework. If you read everything in an evening, you will gain knowledge, but not skills. And skills are the only thing that will cure you.
+Doctors handed me the standard prescription: a 12-to-18-month course of antidepressants. I even checked myself into a mental health institute to titrate the right medication under supervision. I couldn't tolerate taking it—the side effects hit harder than the dizziness itself. They switched me to another SSRI; same story. Medication wasn't going to be my answer.
 
-### Rule 2: Do the homework
-Each chapter ends with a specific homework assignment. **Don’t skip it.** I understand that you are tired, that you are shaking, that “I’ll do it later.” But “later” is never. Those who do DZ come out of PPPD in 2–4 months. Those who just read sit in it for years.
+So I started digging on my own. At the time, virtually zero credible information on PPPD recovery existed in Russian. I tracked down English-language clinical papers, textbooks on vestibular rehabilitation (VRT), and neurophysiology research. I booked consultations with specialists in Germany and Israel who treat functional dizziness every day. I spent a small fortune on all of it—but I finally pieced together the full picture: what was happening to me, why it was happening, and how to fix it.
 
-### Rule 3: Keep a diary
-Buy a notebook or create a note on your phone. Write there:
-* Test results (HADS, DHI) every month.
-* Observations after exercise.
-* Your cognitive traps that you caught.
-* Level of shakyness/anxiety in the morning (on a scale of 1-10).
+In July, I committed to doing the daily work for real. Here is where my symptoms stood at that point: dizziness would kick in after 20–30 minutes of ordinary walking, punctuated by sudden "drops"—like blacking out for a split second, or hitting a frame-rate lag spike in a video game. Crowded public spaces cranked everything up tenfold.
 
-The diary is your mirror. In a month you will re-read the first entries and will not believe that you wrote it.
+From July to January, I put in six months of relentless daily work. Vestibular rehabilitation exercises, CBT, Graded Exposure, and physical training. Unglamorous, repetitive, day-in, day-out discipline with no shortcuts and no days off.
 
-### Rule 4: Don't jump over
-The chapters are in strict order. Module 0 (base) → Module 1 (body) → Module 2 (panic) → Module 3 (thinking) → Module 4 (exit). Don’t get into “Thinking” until you have worked on “Body”. You can't fix software while the hardware is smoking.
+**The result: I am completely recovered.** Not 90%, not "mostly manageable." One hundred percent. The dizziness is gone. The fear is gone. I live a normal life and never think twice about taking a step.
 
-### Rule 5: It will get worse before it gets better
-When you start doing vestibular gymnastics, in the first days the unsteadiness may **increase**. When you start making exposure, panic may temporarily **grow**. This is fine. This means that the brain is being rebuilt. Don't give up practice at this stage. You are renovating a building, and during the renovation the apartment is a mess. This does not mean that repairs are useless.
+## A Few Hard Numbers
 
----
+If you feel like you're the only person on earth dealing with this, look at the clinical data:
 
-## Who is this book for?
+* PPPD is the **second most common** diagnosis in neuro-otology clinics worldwide (right behind BPPV).
+* According to Staab et al. (2017), PPPD accounts for **15–20%** of all patients seen at specialized vestibular centers.
+* The average age of onset is **30–50**, though it strikes people anywhere from 18 to 65+.
+* Women are diagnosed **2 to 3 times more often** than men (though in my own recovery community, the split is nearly 50/50).
+* Studies estimate that **up to 70%** of people with PPPD have a co-occurring anxiety disorder.
+* The average delay from first symptom to accurate diagnosis is **6 months to 3 years**—three years of bouncing back and forth between neurologists and ENTs.
 
-Let's be honest right away. My channel is not for everyone. And this book is not for everyone. It's for people like me.
-
-For people who have PPPD - persistent postural-perceptual vertigo. It doesn’t matter whether you were officially diagnosed or not. If you are shaking, swaying, the picture is floating, the ground is disappearing from under your feet, and the doctors cannot find anything - you are at the right place.
-
-It's for people who are **ready to work**. Don't look for a magic pill. Don't wander around the forums. Don't expect someone else to do everything for them.
-
-People come to me and say: “I’m ready to eat the earth, just so that this will pass.” These are the people I work with. The rest - understand, forgive, pass by.
-
-## What do you get here
-
-This book is not theory for theory's sake. This is a **step by step system** that I pieced together. I translated some of the information from English - from advanced research that simply does not exist in Russian. Some of it comes from the experience of dozens of people who have already gotten out. Some of it is my personal experience, lived in my own skin.
-
-Here's what awaits you:
-
-**Module 0 - Base.** We'll figure out what's going on with you. No panic, no scary diagnoses. You will understand the mechanics. As a programmer - not as a patient.
-
-**Module 1 - Body.** You can't fix the head while the body is stuck in concrete. Muscle armor, spasms, “cotton head” - we will remove this first.
-
-**Module 2 - Battery.** Let's look at the adrenaline loop, hypochondria, panic. You will understand why you are “covered” - and why it is not dangerous.
-
-**Module 3 - Thinking.** The deepest. Neuroplasticity, cognitive traps, ego, inner child. We'll get to the root of why you came here in the first place.
-
-**Module 4 - Exit.** Setbacks, fear of relapse, new identity. How to live after. How not to return.
-
-Each chapter ends with a **specific homework assignment**. Without practice, it's just letters on a screen. Don't fool yourself - do it.
-
-## Important rule
-
-Personal growth is always painful. It’s unpleasant to realize that you have driven yourself into this hole. It's not pleasant to get out. I won't feel sorry for you. I'll pull you out.
-
-In war, all methods are good.
-
-## To whom I am grateful
-
-**I dedicate this book to the memory of my grandmother, who, unfortunately, is no longer with me.** When you feel relief and solid ground under your feet, light a candle for her repose. For me this will be the best gratitude.
-
-## Disclaimer
-
-This book does not replace medical advice. Before working on this program, make sure that you have completed basic examinations and excluded organic matter. We'll cover this in detail in Module 0.
-
-I'm not a doctor. I'm a person who went through it and came out. The information here is the most advanced in the world. But only two things are needed from you: **desire and action**.
-
-Let's go.
+You are not some medical anomaly or uniquely broken specimen. You're part of a massive population that mainstream medicine is still painfully slow to recognize and treat. The good news? **Evidence-based treatments exist**, they work, and I've put the entire system into this book.
 
 ---
 
-> **My experience is not “survivor’s error.”** Our community contains dozens of stories of people who have returned to normal life. People who fly on planes again, stand in lines, walk through shopping centers and don't think about every step. I was there, at that very bottom - and I will lead you out.
+## How to Use This Book
+
+This isn't a novel meant to be binged cover-to-cover in one night. It's a **field manual and workbook**. Here are the ground rules:
+
+### Rule 1: Don't Binge-Read It
+Read **one chapter a day**—two at the absolute most. After each chapter, you need time to digest the material and complete the Homework. If you blow through the whole book in an evening, you'll walk away with information, not skills. And skills are the only thing that will get you better.
+
+### Rule 2: Do the Homework
+Every chapter ends with concrete Homework. **Do not skip it.** I know you're exhausted, I know the room feels unstable, and I know how tempting it is to say, "I'll do it later." "Later" means never. People who actually do the Homework climb out of PPPD in 2 to 4 months. People who just read stay stuck in it for years.
+
+### Rule 3: Keep a Recovery Log
+Grab a physical notebook or open a dedicated notes app on your phone. Track the following:
+* Monthly clinical scale scores (HADS, DHI).
+* Post-exercise observations.
+* Cognitive traps you catch yourself falling into.
+* Morning unsteadiness and anxiety ratings (on a 1–10 scale).
+
+Your log is your mirror. A month from now, you'll read back your first entries and barely recognize the person who wrote them.
+
+### Rule 4: Don't Skip Ahead
+The chapters are sequenced deliberately: Module 0 (Foundation) → Module 1 (Body) → Module 2 (Panic) → Module 3 (Mindset) → Module 4 (Full Recovery). Don't jump straight into "Mindset" before stabilizing "Body." You can't debug software while the hardware is smoking.
+
+### Rule 5: Expect Things to Feel Worse Before They Feel Better
+During your first few days of vestibular rehabilitation (VRT), your unsteadiness may **spike**. When you start Graded Exposure, your panic may temporarily **flare up**. That's normal—it means your brain is actively recalibrating. Do not quit when this happens. You're renovating an apartment, and renovations are messy while the walls are open. Dust on the floor doesn't mean the remodel is failing.
+
+---
+
+## Who This Book Is For
+
+Let's be upfront right now. My community isn't for everyone, and neither is this book. I wrote it for people wired like me.
+
+It's for people dealing with PPPD—Persistent Postural-Perceptual Dizziness. Whether you have an official diagnosis on paper or not doesn't matter. If you're rocking, swaying, dealing with visual swimming, feeling the ground drop out from under your feet while every medical test comes back normal—you're in the right place.
+
+It's for people who are **ready to do the work**—not hunt for a magic pill, doomscroll symptom forums, or wait around for someone else to rescue them.
+
+People message me saying, "I'll chew through dirt if that's what it takes to put this behind me." Those are the people I work with. Anyone else—no hard feelings, wish you well, keep moving.
+
+## What You'll Get Inside
+
+This book isn't academic theory for theory's sake. It's a **step-by-step system** I pieced together from the ground up. Part of it comes from cutting-edge English-language clinical research that simply didn't exist in Russian when I needed it. Part of it comes from the real-world recoveries of dozens of people who have already made it out. And part of it was earned the hard way, lived in my own skin.
+
+Here is what lies ahead:
+
+**Module 0 — Foundation.** We'll break down what is actually happening inside your system. Zero panic, zero bogeyman diagnoses. You'll understand the exact mechanics—like a software engineer, not a helpless patient.
+
+**Module 1 — The Body.** You can't fix your head while your body is locked in concrete. Chronic muscle armor, neck spasms, "cotton-wool head"—we strip that off first.
+
+**Module 2 — The Battery.** We'll dismantle the adrenaline loop, health anxiety, and panic attacks. You'll understand why symptoms hit in waves—and why none of it is dangerous.
+
+**Module 3 — Mindset.** The deepest layer: neuroplasticity, cognitive traps, ego defenses, and your inner child. We get straight to the root of how you ended up here in the first place.
+
+**Module 4 — Full Recovery.** Navigating setbacks, dropping the fear of relapse, and building a new identity. How to live on the other side—and never slide back.
+
+Every single chapter ends with **specific Homework**. Without daily practice, these are just words on a screen. Don't kid yourself—do the work.
+
+## One Crucial Rule
+
+Personal growth always stings. Realizing that your own stress patterns helped dig this hole is uncomfortable. Climbing out of it is uncomfortable too. I'm not going to feel sorry for you. I'm going to pull you out.
+
+All's fair in war.
+
+## Dedication
+
+**I dedicate this book to the memory of my grandmother, who is sadly no longer with me.** When you finally feel real relief and solid ground beneath your feet again, light a candle in her memory. For me, there is no greater thank-you.
+
+## Medical Disclaimer
+
+This book does not replace professional medical advice. Before starting this program, make sure you have completed baseline medical evaluations to rule out structural or organic conditions. We'll cover that exact checklist in Module 0.
+
+I'm not a doctor. I'm someone who went through PPPD firsthand and came out the other side. The science in these pages reflects the best evidence-based clinical knowledge in the world. All it takes from you are two things: **commitment and action**.
+
+Let's get to work.
+
+---
+
+> **My recovery isn't "survivorship bias."** Our community holds dozens of stories of people who returned to completely normal lives—people who fly on planes again, stand in checkout lines, stroll through busy shopping malls, and never think twice about taking a step. I was down at that exact rock bottom—and I'll help lead you out.

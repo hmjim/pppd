@@ -1,174 +1,174 @@
-# CAS trap: why the internal scanner prevents you from recovering
+# The CAS Trap: Why Your "Internal Scanner" Is Blocking Your Recovery
 
-*What is cognitive-attention syndrome, how Ukhtomsky’s law of dominance concretes your symptoms, why the “firewall” of the thalamus breaks down and how to turn off the internal seismograph.*
-
----
-
-## 1. Essence and problems: life under the gun of a seismograph
-
-You wake up in the morning. Your eyelids are still closed, but your operating system has already launched the morning self-diagnosis script. Before you have time to take your first breath, you scan your body: * “So... it shakes? Is your head heavy? Wobbly in place? Are there microshocks?”*. You listen to the signals in your neck as if the survival of humanity depends on it. 
-
-Your whole day is subject to this endless monitoring. 
-You go outside and instantly activate the internal seismograph: 
-* *“How did I step on the asphalt? Didn’t your leg fall in?”*
-* *“What if I turn my head 45 degrees to the left? My vision is blurred again!”*
-* *“The supermarket has high ceilings and colorful shelves. I'm shaking more. You need to fix your gaze on the price tag.”*
-* *“I’m standing in line at the checkout. The floor under your feet begins to float backwards, like an escalator. I think I'm falling over."*
-
-You live not in the outside world, but inside your head. You are locked in an eternal cycle of testing your autonomic system. In clinical psychotherapy, this condition is called **CAS (Cognitive Attentional Syndrome)** - cognitive-attentional syndrome, or simply “internal scanner”. 
-
-The biggest trap is that you sincerely consider this scanner to be your salvation. Your amygdala whispers: *“Control your balance, listen to your body, otherwise you will fall, embarrass yourself or lose consciousness.”* But the reality is diametrically opposite: **it is this scanner that makes you dizzy**. This is not a diagnosis of a breakdown - it is the breakdown itself in action.
+*What Cognitive Attentional Syndrome is, how Ukhtomsky's Law of the Dominant cements your symptoms in place, why your thalamic "firewall" goes down—and how to shut off your internal seismograph.*
 
 ---
 
-## 2. Physiological explanation: thalamus, Ukhtomsky dominant and selective attention
+## 1. The Core Problem: Living Under the Crosshairs of a Seismograph
 
-To understand how attention physically generates symptoms, let's look under the hood of our brains. 
+You wake up in the morning. Your eyelids are still shut, yet your operating system has already booted its morning self-diagnostic script. Before you even draw your first breath, you're scanning your body: *"Okay... am I rocking? Does my head feel heavy? Is the unsteadiness still there? Any micro-jolts?"* You monitor every faint signal from your neck as if the survival of the human race hung in the balance.
 
-### Brain Firewall: Thalamus and the Salience Network
-Every second of time, your body is bombarded with millions of sensory signals. The skin feels clothes, the ears catch the background hum, the vestibular apparatus constantly adjusts the position of the body when breathing, the eyes record the micro-vibrations of objects. 
+Your entire day is hijacked by this relentless background monitoring.
+Step out the front door, and your internal seismograph switches on instantly:
+* *"How did my foot just hit the pavement? Did it feel like the ground gave way?"*
+* *"What happens if I turn my head 45 degrees to the left? Yep—vision smeared again!"*
+* *"This supermarket has high ceilings and busy, colorful shelves. I'm swaying harder. Better lock my eyes onto a price tag."*
+* *"Standing in the checkout line. The floor underneath me feels like it's sliding backward like an escalator. I think I'm tipping over."*
 
-Normally, the brain does not allow all this “garbage” into your consciousness. The **thalamus** is responsible for this - the main control center and system firewall of the brain. It filters incoming traffic. A healthy person does not feel how his vestibular apparatus makes thousands of micro-corrections per second to keep the body upright. For him, this is a background process.
+You aren't living out in the real world anymore—you're living trapped inside your own skull, locked in a non-stop stress-test of your autonomic nervous system (ANS). In clinical psychotherapy, this pattern is called **CAS (Cognitive Attentional Syndrome)**—or simply the "internal scanner."
 
-But when you are in a state of chronic anxiety, the **Salience Network** turns on. For your brain, signals from the neck and vestibular system receive the highest safety priority. The Amygdala gives the command: * “There is a virus in the system!” Open all ports for testing!”*. 
-
-The thalamus obediently turns off filtering. The entire technical log file of vegetatives breaks into consciousness. You begin to feel physiological noise that a healthy brain simply rejects: micro-fluctuations of fluid in the inner ear, natural muscle tremors, proprioceptive noise. And because you haven't felt it before, you interpret this natural noise as "catastrophic vertigo."
-
-### Ukhtomsky's law of dominance
-Neurophysiologist Alexey Ukhtomsky discovered a fundamental law of brain function: in the central nervous system there is always a **dominant** - a temporarily dominant focus of excitation, which attracts signals from other zones and inhibits their work.
-
-When your "scanner" is turned on, the dominant **"Search for threat in the body"** is 100% active. Attention is a lens that focuses electromagnetic radiation. Where this spotlight is directed, the sensitivity of the receptors is physically turned to its maximum. 
-*Are you listening to the back of your head? Neurons in this zone go into superconductivity mode. You will begin to feel the pulsation of every microartery and the tension of every muscle fiber. 
-*Are you scanning your gait? The brain lays out a multi-lane neural highway there. The more you scan, the stronger this dominant becomes. It literally “concrete” the symptoms in your brain.
+Here is the cruelest part of the trap: you genuinely believe this scanner is keeping you safe. Your amygdala whispers: *"Monitor your balance, watch every sensation in your body, or you'll fall flat on your face, humiliate yourself, or pass out."* Reality is the exact opposite: **the scanner itself is what generates your dizziness**. It isn't diagnosing the glitch—it *is* the glitch in action.
 
 ---
 
-## 3. Cognitive traps: manual autopilot mode
+## 2. The Physiology: The Thalamus, Ukhtomsky's Dominant, and Selective Attention
 
-The main misconception of an excellent neurotic student: * “Control equals safety. If I stop thinking about the steps, my legs will give way.”*
+To understand how attention physically manufactures bodily symptoms, let's pop the hood on the human brain.
 
-Let's look at this from a system architecture perspective.
-Body balance is a deeply automated process. It is regulated by ancient structures: the cerebellum, brain stem and vestibular nuclei. This is the “firmware” of your body. It operates at submillisecond speeds.
+### The Brain's Firewall: The Thalamus and the Salience Network
+Every single second, millions of raw sensory packets slam into your nervous system. Your skin registers the touch of your shirt, your ears pick up background hum, your vestibular system makes constant micro-adjustments every time your ribcage expands to breathe, and your eyes track subtle micro-shifts across the room.
 
-When you try to control your step consciously (through the cerebral cortex), you switch the system from automatic to manual. This is the same as trying to code a complex web interface by manually rearranging bits in RAM using CPU interrupts. It's too slow!
+Under normal conditions, your brain blocks almost all of this raw noise from ever reaching conscious awareness. That job belongs to the **thalamus**—the brain's central routing hub and system firewall. It filters incoming traffic. A healthy person never consciously feels their vestibular system making thousands of micro-corrections per second to keep their body upright. It runs silently in the background.
 
-* **Autopilot:** The signal from the foot came to the cerebellum ➔ The cerebellum instantly adjusted the tone of the lower leg muscles. The reaction speed is hundredths of a second. The movement is smooth.
-* **Manual control:** The signal came to the conscious cortex ➔ The cortex thought: * “Okay, it swung to the left, you need to tense your right leg.”* ➔ The cortex sent an impulse to the motor zone ➔ The muscle tensed. The reaction speed dropped 10 times. The step became ragged, jerky, artificial.
+When you're stuck in chronic anxiety, however, your brain's **Salience Network** goes into overdrive. Signals coming from your neck and vestibular apparatus are flagged as top-level security threats. Your amygdala barks an emergency order: *"Virus detected in the system! Open every port for deep inspection!"*
 
-As a result, your unsteady gait is not a consequence of the disease. This is the physical result of the fact that you are trying to consciously control something that should work fully automatically. You tighten your muscles yourself, creating an artificial pumping.
+Obediently, the thalamus drops its firewall filters. Suddenly, the entire raw debug log of your autonomic nervous system floods straight into your conscious mind. You start feeling ordinary physiological background noise that a healthy brain effortlessly discards: microscopic fluid shifts in your inner ear, normal baseline muscle micro-tremor, routine proprioceptive static. And because you never consciously felt any of this before, you misread normal biological static as "catastrophic dizziness."
 
----
+### Ukhtomsky's Law of the Dominant
+Neurophysiologist Alexei Ukhtomsky discovered a fundamental operating law of the central nervous system: at any given moment, the CNS is governed by a **dominant focus**—a ruling hub of neural excitation that pulls in stray signals from other brain regions to feed itself while inhibiting competing circuits.
 
-## 4. Point of Support: Insight
-
-> Your brain is an overloaded web server. Having launched the “internal scanner”, you hung an infinite loop on it `while(true) { checkBalance(); }`. This process consumes 90% of RAM and processor resources. The server does not have the capacity to process real life. Turn off this debug loop. Your autopilot will do just fine without manual control.
-
----
-
-## 5. Practice: Tools for managing the attention spotlight
-
-We cannot tell the brain to “not think about the symptoms” (hello to the polar bear that cannot be imagined). Fighting a thought is also paying attention to it. Our task is to teach the brain to switch the spotlight of attention at our request.
-
-### Tool 1: Sensory Overload “5-4-3-2-1”
-*This tool is your emergency patch. It physically clogs the RAM with external signals, leaving no resources for the amygdala to generate panic.*
-
-As soon as you catch yourself scanning your neck or asphalt, firmly command yourself: ** “STOP. The log is full. Switch"** and find in the outside world:
-1. 👁 **5 items of different textures/colors** (wood, glass, metal, blue sign, red brick). Describe their shape.
-2. 👂 **4 separate sound sources** (air conditioner noise, tire rustle, conversation of a passer-by, your own step).
-3. ✋ **3 physical sensations** (pressure of the bag strap on the shoulder, contact of the foot with the sole, warmth of the wind on the face).
-4. 👃 **2 smells** (the smell of coffee, dust, your perfume).
-5. 👅 **1 taste** (take a sip of water or just taste the air).
-
-This algorithm temporarily switches the brain from the Default Mode Network, where anxious rumination lives, to the Central Executive Network. The brain is physiologically incapable of panicking when it is busy processing 15 external sensory streams.
+When your internal scanner is switched on, the **"Threat-Scan in the Body"** dominant is running at 100% power. Attention acts like a magnifying lens focusing electromagnetic energy: wherever you aim that spotlight, receptor sensitivity gets physically cranked to maximum gain.
+* Hyper-focusing on the base of your skull? Neurons in that zone shift into hair-trigger sensitivity. Soon you'll feel the throb of every tiny micro-artery and the pull of every individual muscle fiber.
+* Constantly scanning how you walk? Your brain paves a multi-lane neural superhighway straight to that circuit. The more you scan, the stronger that dominant hub grows—literally cementing the symptoms into your neural wiring.
 
 ---
 
-### Tool 2: Spotlight Training (Daily Debug)
-*Attention is a muscle. In a neurotic person, it is atrophied by clip thinking and an anxious search for symptoms on Google. We will download it every day.*
+## 3. Cognitive Traps: Overriding Autopilot with Manual Control
 
-1. **Pure Focus Practice (2 minutes per day):**
-    * Place any simple object in front of you (key, coin, pen).
-    * Start the timer for **2 minutes**.
-    * Keep 100% attention on the object. Study its micro-scratches, glare of light, shadow.
-    * **Critical important:** as soon as a thought enters your head (about symptoms, about work, about exercise) - don’t be angry with yourself and don’t try to “erase” it. This is a normal background process. Just notice its existence and gently, unemotionally return your gaze to the object. Treat thoughts like pop-up windows in your browser - just close them with a cross and continue reading the main text.
-2. **Practice “Reading avidly” (20 minutes a day):**
-    * Read exclusively fiction (no non-fiction or articles on medicine!). You need an exciting plot - detectives, science fiction, adventures.
-    * Read without your phone. Your goal is to catch a state of flow (“narrative transportation”), when you forget where you are.
-    * *Physiological meaning:* Reading a complex literary narrative forcibly transfers the brain from threat scanning mode to image generation mode. This is a natural detox for the amygdala.
+The classic delusion of the anxious perfectionist goes like this: *"Control equals safety. If I stop consciously watching every step, my legs will buckle underneath me."*
+
+Let's look at that claim through the lens of systems architecture.
+Human balance is a deeply automated, low-level process governed by some of the oldest structures in your brain: the cerebellum, the brainstem, and the vestibular nuclei. That is your body's **firmware**, and it executes at sub-millisecond speeds.
+
+The moment you try to consciously micromanage each step through your cerebral cortex, you rip the system out of automatic mode and force it into manual override. That is the equivalent of trying to render a complex web interface by manually flipping individual bits in RAM via CPU interrupts. It's orders of magnitude too slow!
+
+* **Autopilot:** A signal from the sole of your foot hits the cerebellum ➔ The cerebellum adjusts calf muscle tone instantaneously. Reaction time: hundredths of a second. Result: smooth, fluid motion.
+* **Manual Override:** The signal gets routed all the way up to your conscious cortex ➔ The cortex deliberates: *"Whoa, swayed left—better tense the right leg!"* ➔ The cortex dispatches an impulse to the motor strip ➔ The muscle clenches. Reaction speed drops tenfold. Your stride turns ragged, jerky, stiff, and unnatural.
+
+In the end, your unsteady gait isn't the result of neurological disease. It is the direct mechanical result of trying to consciously micromanage a process built to run on full autopilot. By bracing your own muscles, *you* are generating the artificial rocking.
+
+---
+
+## 4. Point of Support: Core Insight
+
+> Your brain is an overloaded web server. By firing up your "internal scanner," you've hung an infinite loop on the main thread: `while(true) { checkBalance(); }`. That runaway process chews up 90% of your RAM and CPU cycles, leaving the server with zero capacity to render real life. Kill the debug loop. Your autopilot handles balance brilliantly without manual supervision.
+
+---
+
+## 5. Practical Protocol: Tools for Steering the Spotlight of Attention
+
+We cannot simply order the brain to "stop thinking about symptoms" (try *not* picturing a white bear right now). Fighting a thought is just another way of feeding it attention. Instead, our mission is to train your brain to swing the spotlight of attention wherever *you* tell it to go.
+
+### Tool 1: The "5-4-3-2-1" Sensory Override
+*Think of this tool as your emergency hotfix. It deliberately floods your working memory with external sensory streams, starving the amygdala of the RAM it needs to generate panic.*
+
+The instant you catch yourself scanning your neck or staring down at the asphalt, snap a firm mental command: **"STOP. Log buffer full. Switching channels."** Then look out into the real world and lock onto:
+1. 👁 **5 objects of different textures or colors** (wood grain, glass, brushed metal, a blue street sign, red brick). Mentally trace their shapes.
+2. 👂 **4 distinct sound sources** (the hum of an AC unit, tires rolling past, a snippet of a passerby's conversation, the sound of your own footsteps).
+3. ✋ **3 physical touch sensations** (the pressure of a bag strap on your shoulder, your foot pressing into the insole of your shoe, cool wind against your face).
+4. 👃 **2 scents** (roasting coffee, dust, your own soap or cologne).
+5. 👅 **1 taste** (take a sip of water, or simply notice the taste of the air).
+
+This sequence pulls your brain out of the **Default Mode Network** (where anxious rumination loops endlessly) and engages the **Central Executive Network**. Biologically, your brain is incapable of sustaining panic while actively processing 15 distinct streams of external sensory data.
+
+---
+
+### Tool 2: Spotlight Training (Daily Attentional Debugging)
+*Attention is a muscle. In chronic anxiety, that muscle has atrophied from fragmented screen habits and frantic symptom searches on Google. We are going to train it every single day.*
+
+1. **"Pure Focus" Practice (2 minutes a day):**
+   * Set any simple everyday object down in front of you (a key, a coin, a pen).
+   * Start a timer for **2 minutes**.
+   * Hold 100% of your attention on that object. Study its micro-scratches, glints of light, edges, and shadow.
+   * **Critically important:** the moment a stray thought barges in (about symptoms, work, or swaying)—don't get mad at yourself and don't try to "erase" it. Background pop-ups are normal. Simply register that the thought showed up and calmly, without emotion, return your gaze to the object. Treat intrusive thoughts like browser pop-up windows: click the "X" and keep reading the main page.
+2. **Deep-Immersion Fiction Reading (20 minutes a day):**
+   * Read **fiction exclusively** (zero non-fiction, self-help, or medical articles!). Pick something with a gripping plot—a detective thriller, sci-fi, or adventure novel.
+   * Put your phone in another room. Your goal is to hit **narrative transportation**—that deep flow state where you get so pulled into the story that you forget where you're sitting.
+   * *Why it works physiologically:* Following a rich fictional narrative forces your brain out of threat-scanning mode and into mental imagery generation. It is a natural detox for an overworked amygdala.
 
 ---
 
 ### Tool 3: Somatic Tracking and Mindfulness (Perceptual Retraining)
 
-If previous tools were aimed at *switching* attention outward, then this one is aimed at **directly reprogramming the reaction to a symptom**. 
+Where the first two tools train you to *redirect* attention outward, this one **directly rewrites your brain's reaction to the symptom itself**.
 
-With PPPD, your brain is in a closed loop: you feel dizzy ➔ you get scared ➔ adrenaline is released ➔ the spasm of the digitalized neck muscles intensifies ➔ the dizziness increases. Somatic tracking breaks this cycle at the very beginning. This is the practice of conscious, non-judgmental observation of sensations in the body.
+In PPPD, your brain is trapped in a closed feedback loop: you feel dizzy ➔ you get scared ➔ adrenaline dumps into your blood ➔ spasm in your hyper-monitored neck muscles intensifies ➔ dizziness spikes even higher. **Somatic tracking** breaks this cycle right at the source. It is the practice of conscious, non-judgmental observation of physical sensations in your body.
 
-Your task is to prove to the amygdala that these symptoms themselves are safe. That this is not a “critical system failure”, but just noise on the line.
+Your task is to prove to your amygdala that these sensations themselves are completely safe—not a "critical system failure," just harmless static on the line.
 
-**Execution algorithm:**
+**Step-by-Step Protocol:**
 
-1. **Take a safe position:** Sit or lie down. Relax. You are not in danger, you will not fall.
-2. **Close your eyes and direct the spotlight of attention directly to the epicenter of the symptom:** To unsteadiness, “cotton wool” in the head or heaviness in the neck. Stop running away from this feeling.
-3. **Turn on the “Data Analyzer” mode:** Start describing symptoms in dry, technical language from the third person, discarding any emotions. 
-    * *Forbidden words: * “terrible”, “rocking like a ship in a storm”, “I’m about to fall”, “unbearable”.
-    * *Allowed words (physical parameters):* “I feel vibrations with a frequency of approximately 1-2 Hz”, “I feel pressure in the back of my head weighing 200 grams”, “swaying goes from left to right”, “warm/cold sensation, blurry at the edges”.
-4. **Breathe slowly and hold this observation for 3-5 minutes:** Let the symptom be. Don't try to stop it, reduce it or fix it. Mindfulness is the acceptance of reality “as it is.” Whisper to yourself: * “Yes, I’m shaking right now. This is simply a sensor calibration failure. Signals are sent, but there is no harm to the body. I'm safe."*
+1. **Settle into a safe posture:** Sit back in a chair or lie down. Let your body sink in. Nothing threatens you here; you cannot fall.
+2. **Close your eyes and aim the spotlight of attention straight into the epicenter of the symptom:** Right into the unsteadiness, the "cotton-wool" head fog, or the heavy tightness in your neck. Stop running away from the sensation.
+3. **Switch into "Data Analyzer" mode:** Describe the sensations in dry, objective, third-person technical language, stripping away all emotional drama.
+   * *Banned words:* "horrible," "rocking like a ship in a storm," "I'm about to collapse," "unbearable."
+   * *Approved words (raw physical parameters):* "detecting an oscillation at roughly 1–2 Hz," "feeling pressure at the base of the skull weighing roughly 200 grams," "lateral sway moving left to right," "sensation feels warm/cool, diffuse around the edges."
+4. **Breathe slowly and hold this neutral observation for 3 to 5 minutes:** Let the symptom simply exist. Don't try to stop it, shrink it, or fix it. Mindfulness means accepting present reality *as is*. Quietly tell yourself: *"Yes, I feel rocking right now. It's just a sensor calibration glitch. Signals are coming through, but zero harm is happening to my body. I am safe."*
 
-By doing this, you deprive the amygdala of food - your fear. Without fear, the dominant threat begins to fade, and the brain gradually erases this symptom from priority tasks.
+When you practice this, you starve the amygdala of its favorite fuel—your fear. Without fear, the threat dominant begins to fade, and your brain gradually drops this symptom off its priority watchlist.
 
-#### What to do if you panic while trekking?
-If, when concentrating on a symptom, your pulse soars and fear sets in, apply the **“Pressure Relief”** algorithm:
-1. **Tell yourself:** *“This is just an adrenaline rush. The physiological half-life of adrenaline in the blood is 3-5 minutes. I don't need to be saved. I’ll just wait until this cocktail wears off.”*
-2. **Open your eyes slightly** and transfer 50% of your attention to a solid object in front of you (floor, chair leg). Feel the ground with your feet: * “The ground is solid. I sit firmly. There is no physical fall.”*
-3. **Make your breathing “square”** or with an extended exhalation (inhale for 4 counts - hold for 4 - exhale for 6 - hold for 2). This will forcefully activate the vagus nerve and inhibit the amygdala.
-4. When the storm subsides, gently return to the non-judgmental description of the symptom. Your victory is not that the symptom disappears, but that you stop being afraid of it.
+#### What If Panic Flares Up During Somatic Tracking?
+If tuning into a symptom sends your heart racing and triggers a wave of fear, run the **"Pressure-Relief" protocol**:
+1. **Tell yourself:** *"This is just an adrenaline surge. Adrenaline clears out of the bloodstream within 3 to 5 minutes. I don't need to rescue myself—I'll just wait while this chemical cocktail wears off."*
+2. **Crack your eyes open** and shift 50% of your attention onto a solid object right in front of you (the floor, a chair leg). Feel the ground beneath your soles: *"The floor is solid. I'm sitting securely. Zero physical falling is occurring."*
+3. **Switch to Box Breathing or extended-exhale breathing** (inhale for 4 counts — hold for 4 — exhale for 6 — pause for 2). This mechanically stimulates the vagus nerve and puts the brakes on the amygdala.
+4. Once the squall passes, gently return to your dry, non-judgmental description of the sensation. Your victory isn't making the symptom vanish—it's ceasing to be afraid of it.
 
-### Tool 4: 4-7-8 Breathing - Physiological Emergency Braking Hack
+### Tool 4: 4-7-8 Breathing — A Physiological Hack for Emergency Braking
 
-When panic is in full swing and you can’t switch your attention, there is one reliable physiological trick. The whole secret is that **exhalation is longer than inhalation**:
+When panic is surging hard and redirecting your focus feels impossible, use one of physiology's most reliable overrides. The entire secret lies in making your **exhale much longer than your inhale**:
 
-1. Inhale calmly through the nose for **4 counts**.
+1. Inhale quietly through your nose for **4 counts**.
 2. Hold your breath for **7 counts**.
-3. Slowly exhale smoothly through the mouth for **8 counts** - as if the air is coming out through a thin straw.
+3. Exhale slowly and smoothly through pursed lips for **8 counts**—as if blowing air out through a narrow straw.
 
-The abdomen inflates as you inhale and deflates as you exhale (diaphragmatic breathing). This rhythm forcibly activates the parasympathetic nervous system - your internal brake. The brain reads a clear signal: * “Since breathing is so slow, it means the danger has passed” *. 3-4 cycles - and the pulse will begin to decrease.
+Let your belly expand on the inhale and gently draw in on the exhale (diaphragmatic breathing). This rhythm mechanically engages your parasympathetic nervous system—your internal brake pedal. Your brainstem reads an unmistakable signal: *"If our breathing is this slow and steady, the danger must be over."* Run 3 to 4 cycles, and your pulse will start coming down.
 
-### Tool 5: Contrast Muscle Relaxation (Micro-Jacobson)
+### Tool 5: Contrast Muscle Release (Micro-Jacobson PMR)
 
-If you feel that your body is one continuous spasm, use the principle of **contrast**:
+When your entire body feels locked into one continuous defensive spasm, use the principle of **neuromuscular contrast**:
 
-1. Clench your fists **as hard as possible** for 5-7 seconds - until you tremble slightly.
-2. **Release sharply** and direct all your attention to the pleasant warmth that spreads through your hands.
-3. Walk like this from hands to feet: shoulders, stomach, buttocks, thighs, legs.
+1. Clench both fists **as tightly as you can** for 5 to 7 seconds—right up to a slight tremor.
+2. **Drop the tension instantly** and focus all your attention on the wave of pleasant warmth spreading through your hands.
+3. Work your way systematically from hands to feet: shoulders, stomach, glutes, thighs, calves.
 
-The brain cannot keep a spasm in a muscle that has just received maximum load. This is the dismantling of even the oldest muscle blocks in which stress has accumulated over the years.
-
----
-
-## Frequently asked questions about CAS and internal scanner
-
-**“What if I lose control of my balance and actually fall?”**
-In all the months (or years) of illness, how many times did you actually fall? Zero. Because the autopilot works. Even when you are “stormed”, you stand. Even when the “floor is floating,” you walk. You never fell apart. Your cerebellum is doing its job every second while you are trying to take control from it. Stop disturbing him.
-
-**“I tried not scanning, but it didn’t work. Thoughts come on their own"**
-That's right. Thoughts about symptoms will come - this is a normal product of an overstimulated limbic system. The goal is not to block them (this is impossible), but to not get involved. A thought came → you noticed it → you didn’t “think” about it → switched to the outside world. This is a muscle. The first 2 weeks will be difficult. In a month it will become easier. After 3 months - automatically.
-
-**“In the morning, the scanner turns on before I even open my eyes. How to deal with this?”**
-The morning scanner is CAR (Cortisol Awakening Response). In the first 30 minutes after waking up, cortisol levels soar by 50-75%. It's biology, not your weakness. Antidote: Don’t lie in bed “listening to your head.” Set the alarm for one minute - and during that minute, get up, wash your face with cold water, drink a glass of water. Switch your brain from internal scanning mode to external mode from the first second. Over time, the CAR surge will stop triggering panic because you won't feed it.
-
-**“The scanner is amplified in certain places - shops, transport. I'm fine at home"**
-This is called a "contextual trigger." Your amygdala has linked certain locations to danger. At home, the thalamic firewall is partially restored because the brain considers the home a safe zone. In new or visually challenging environments (high ceilings, colorful shelves, flashing people), the brain goes into hyper-vigilance mode and turns off filtering. There is only one solution - exposure. The more often you visit these places without a catastrophe, the faster the amygdala removes the “dangerous” label from them.
+Your brain cannot hold onto a chronic spasm in a muscle that just completed a maximal contraction. This dismantles even stubborn, years-old muscular armor where chronic stress has been locked away.
 
 ---
 
-## 6. Homework (HZ):
+## Frequently Asked Questions About CAS and the Internal Scanner
 
-1. **Do the “5-4-3-2-1” practice at least 5 times a day** for a week. Do this preventatively, without waiting for strong pitching. You need to train your switching skill until it becomes automatic.
-2. **Morning ban on scanning:** When waking up, forbid yourself to lie down and “listen to your head.” I caught the scanner ➔ instantly get out of bed and switch to physical actions (washing my face, brushing my teeth, drinking a glass of water). Switch your brain to external mode from the first second of the day.
-3. **Somatic tracking (1 time per day):** Do the practice for 3-5 minutes in the afternoon, when fatigue accumulates. Keep a short diary on your phone:
-    * *Date/Time:*
-    * *Dry description of the symptom (without emotions):*
-    * *Level of fear before tracking (from 1 to 10):*
-    * *Fear level after tracking (from 1 to 10):*
-4. **Fiction Reading:** Read a book of your choice for at least 20 minutes every night before bed. No screens 30 minutes before bed.
+**"What if I stop consciously controlling my balance and actually fall?"**
+Across all the months (or years) you've lived with PPPD—how many times have you actually collapsed onto the ground? Zero. Because your autopilot works. Even when it feels like a storm is tossing you around, you stay standing. Even when the floor feels like it's floating, you keep walking. Not once have you fallen apart. Your cerebellum is doing its job every single second while your conscious mind keeps trying to hijack the controls. Stop getting in its way.
+
+**"I tried not scanning—it doesn't work. The thoughts barge in on their own."**
+That's completely normal. Intrusive thoughts about symptoms *will* show up—that's what an over-sensitized limbic system produces. The goal isn't to block thoughts from appearing (that's impossible), but to refuse to get hooked by them. Thought shows up → you notice it → you decline to keep chewing on it → you shift focus back out to the real world. Think of it as strength training. The first 2 weeks feel tough. After a month, it gets noticeably easier. After 3 months, it becomes automatic.
+
+**"In the morning, my scanner switches on before I even open my eyes. How do I beat that?"**
+That morning ambush is driven by your **CAR (Cortisol Awakening Response)**. During the first 30 minutes after waking up, cortisol naturally spikes by 50–75%. That's human biology, not personal weakness. The antidote: stop lying in bed "listening to your head." Give yourself a one-minute rule—within 60 seconds of waking, get your feet on the floor, splash cold water on your face, and drink a full glass of water. Flip your brain out of internal-scan mode and into external-action mode from second one. Over time, that morning cortisol rise stops triggering panic because you stop feeding it fuel.
+
+**"My scanner goes into overdrive in specific places—supermarkets, public transit—while at home I'm fine."**
+That's called a **contextual trigger**. Your amygdala has linked specific environments with danger. At home, your thalamic firewall comes partially back online because your brain tags home as a safe zone. Step into an unfamiliar or visually complex space—high ceilings, colorful store aisles, crowds moving past—and your brain shifts into hypervigilance, dropping sensory filtration. There is only one cure: **Graded Exposure**. The more often you spend time in those environments without a catastrophe occurring, the faster your amygdala strips the "DANGER" tag off them.
+
+---
+
+## 6. Homework:
+
+1. **Run the "5-4-3-2-1" practice at least 5 times a day** for a full week. Do it preventatively—don't wait until strong swaying hits. You need to drill this attentional gear-shift until it becomes second nature.
+2. **Enforce a Morning No-Scan Rule:** Upon waking, forbid yourself from lying in bed "checking on your head." Catch the scanner running ➔ get out of bed immediately and engage in concrete physical actions (washing your face, brushing your teeth, drinking a glass of water). Put your brain into external mode from the very first second of the day.
+3. **Somatic Tracking (once daily):** Practice for 3 to 5 minutes in the afternoon or evening, when daily fatigue builds up. Keep a brief log on your phone:
+   * *Date / Time:*
+   * *Dry, technical description of the symptom (zero emotional words):*
+   * *Fear level before tracking (1 to 10):*
+   * *Fear level after tracking (1 to 10):*
+4. **Evening Fiction Reading:** Read a novel of your choice for at least 20 minutes every night before bed. Zero screens for the final 30 minutes before sleep.

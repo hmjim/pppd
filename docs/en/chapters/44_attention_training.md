@@ -1,297 +1,297 @@
-# Focus for anxiety and PPPD: how to stop listening to the body 
+# Attention Training for Anxiety and PPPD: How to Stop Scanning Your Body
 
-*Why anxiety tightly rivets attention to the body, how hyperfocus increases unsteadiness and panic tenfold, and evidence-based attention training techniques (ATT, Open Focus, exteroception) to regain control.*
-
----
-
-## 1. Essence and problems: attention is held hostage by anxiety 
-
-Think back to your typical day with constant dizziness or anxiety. 
-
-You open your eyes in the morning, and before your feet even hit the floor, your internal processor is already running a background self-diagnosis script: 
-* *“So, is your head heavy or not?”* 
-* *“Does the picture float before your eyes?”* 
-* *“Is your neck strained? Is your pulse even?”* 
-
-You get out of bed, go to the bathroom - and your entire consciousness narrows to a microscopic point: you listen to every millimeter of your body. You scan the way your foot steps on the tile, whether there is any swaying in the hallway, whether your vision has darkened when you lean over the sink. 
-
-When you go outside, this mode does not turn off for a second. In a supermarket, you don’t choose products—you watch how your eyes react to the rows of colorful packages and fluorescent light. In a conversation with a colleague, you are half absent, because the other half of your brain is busy with every second measurement: * “It seems that the floor under your feet has swayed. If I fall now, will I have time to grab the table?”*. 
-
-In clinical psychology and psychiatry this is called **interoceptive hyperscanning** (*body checking*) and **loss of flexibility of attention**. 
-
-### Trap "Get distracted!" 
-
-Every person with neurosis, PPPD or panic disorder has heard this “brilliant” advice at least once from loved ones or incompetent doctors: * “Just don’t think about it! Take a break from work, read a book, watch a TV series.”* 
-
-And you honestly tried. You open the book, start reading the page... and after two paragraphs you catch yourself with your eyes running over the lines, and all your attention focused on the pulsation in your temples or the wobbly legs. 
-
-Why does the attempt to “just get distracted” fail miserably? 
-
-Because a fundamental law of neuropsychology, discovered by Harvard professor Daniel Wegner, is working in your head - **the theory of ironic processes** (the famous *“don’t think about the white monkey” effect*). 
-
-When you tell your brain: *“Stop paying attention to the dizziness!”*, the brain is forced to launch two parallel processes: 
-1. **Operation process:** tries to find a third-party object (book, movie, work). 
-2. **Monitoring process (supervisor):** checks with high frequency - *“Are we sure we’re not thinking about dizziness right now?”*. 
-
-For the second task, the supervisor must constantly keep the image of the symptom in working memory! As a result, an attempt at volitional suppression only **concretes the symptom** in the focus of your consciousness. You are trying to put out a fire with gasoline.
-
-If you have already read the chapter on [CAS trap](10_cas_trap.html), you will recognize this pattern: symptom monitoring, rumination, attempt at suppression - three gears of one mechanism. This chapter gives you specific tools to jam the main gear - monitoring. 
-
-To stop being a hostage to symptoms, you need to stop fighting them and understand the physics of how attention works in your brain.
+*Why anxiety locks your attention onto bodily sensations, how hyperfocus amplifies swaying and panic tenfold, and evidence-based attention training protocols (ATT, Open Focus, exteroception) to take back the controls.*
 
 ---
 
-## 2. Neurophysiology: hardware architecture of attention 
+## 1. The Core Problem: Attention Held Hostage by Anxiety
 
-Attention is not an abstract philosophical concept. This is a strictly localized physiological process of managing the resources of the central nervous system. It's a **hardware traffic router** in your brain. 
+Picture your typical day living with constant dizziness or chronic anxiety.
 
-Where your attention is directed, the brain throws up to 90% of its processing power, metabolic resources and blood flow there: 
+You open your eyes in the morning, and before your feet even touch the floor, your internal processor is already running a background diagnostic script:
+* *"Okay—does my head feel heavy today or not?"*
+* *"Is the room swimming when I move my eyes?"*
+* *"Is my neck tight? Is my heart rate steady?"*
 
-> **How your attention beam works:** 
-> * **Focus to body:** Natural noise ➔ **Hyperfocus (lens)** ➔ Signal amplified 10x 
-> * **Outward Focus:** External World ➔ **Exteroception (radar)** ➔ Background symptom fades 
+You get out of bed and walk to the bathroom—and your entire conscious awareness shrinks to the size of a pinhole, monitoring every millimeter of your body. You track how your bare foot hits the bathroom tile, check whether you swayed in the hallway, and test whether your vision dims when you lean over the sink.
 
-Let's look at four key neurobiological nodes that determine your state of anxiety: 
+When you step outside, that scanner never powers down for a single second. In the grocery store, you aren't actually shopping for food—you're monitoring how your eyes react to rows of bright packaging and overhead fluorescent lights. Halfway through a conversation with a coworker, you're mentally absent because the other half of your CPU is busy running real-time telemetry: *"Did the floor just shift under my feet? If I go down right now, can I grab the edge of the desk in time?"*
 
-### 1. DMN vs CEN: Brain mode switch 
-In neurobiology, there are two competing global neural networks: 
+In clinical psychology and psychiatry, this is called **interoceptive hyperscanning** (*body checking*) paired with **attentional inflexibility**.
 
-* **DMN (Default Mode Network):** activates when you are self-absorbed, ruminating (["mental chewing gum"](15_metacognition.html)), remembering past attacks, worrying about the future and scanning the body. The DMN is an incubator for anxiety disorders. 
-* **CEN / TPN (Central Executive Network / Task-Positive Network):** activated when your attention is directed outward to solving specific sensory or motor tasks (looking at parts, solving an engineering problem, actively listening to street sounds). 
+### The "Just Distract Yourself!" Trap
 
-Main law: **DMN and CEN are in a reciprocal (mutually exclusive) relationship**. They work like a swing. When you activate attention externally (CEN), the activity of the area of ​​rumination and fear (DMN) **automatically drops at the level of functional MRI**. You physically cannot panic and deeply scan your body at a time when your attention is 100% occupied by a complex external sensory task. 
+Everyone who has ever dealt with chronic anxiety, PPPD, or panic disorder has heard this "brilliant" piece of advice from well-meaning relatives or clueless doctors: *"Just stop thinking about it! Throw yourself into work, read a book, put on a show."*
 
-### 2. Thalamus and sensory gating 
-The **thalamus** is located in the brain stem - the main firewall of the nervous system. Every second, gigabytes of sensory noise enter the body: micro-oscillations of the endolymph in the cochlea, tension of the fascia of the neck during breathing, pulsation of the carotid arteries, contractions of the smooth muscles of the intestines. 
+And you genuinely tried. You crack open a book, start reading page one... and two paragraphs later, you catch your eyes skimming across the words while 100% of your actual attention stays glued to your throbbing temples or jelly legs.
 
-Normally, the thalamus operates in strict spam filter mode: it cuts off 99.9% of this technical noise and does not allow it to enter the cerebral cortex. A healthy person does not feel how his vestibular nuclei make micro-corrections to the tone of the calf muscles every second.
+Why does trying to "just distract yourself" crash and burn every single time?
 
-But when there is anxiety, the **amygdala** sounds the alarm and starts the [adrenaline loop](09_adrenaline_loop.html): *“We are in danger! Failure of the vestibular apparatus is possible!”*. On this command, the thalamus opens the gates (sensory gating breaks down). All the noise under the hood of vegetation spills straight into consciousness. 
+Because your brain runs on a fundamental law of cognitive psychology discovered by Harvard professor Daniel Wegner: **ironic process theory** (the famous *"don't think of a white bear"* effect).
 
-You begin to physically feel the normal mechanics of the vestibular system. And your frightened mind labels this natural noise: * “I’m stormy, I’m having a stroke, I’m dying”*. 
+The moment you issue a top-down command—*"Stop paying attention to the dizziness!"*—your brain has to spin up two parallel background threads:
+1. **The operating process:** hunts for something else to focus on (your book, a movie, your spreadsheet).
+2. **The monitoring process (the supervisor):** polls your mind several times a second to verify—*"Wait, are we sure we aren't noticing the dizziness right now?"*
 
-### 3. Neurosensory amplification (Macro lens effect) 
-Attention works exactly like a macro lens with 10x zoom. 
+To run that check, the supervisor has to keep a live template of the symptom loaded in active RAM! As a result, white-knuckle suppression **cements the symptom** dead-center in your awareness. You are trying to put out a grease fire with gasoline.
 
-If you put a coin under a microscope, its micro-scratches will appear as deep canyons. The same thing happens with the body: 
-* Light tension in the trapezius when focusing turns into a feeling as if the neck was chained in concrete. 
-* The natural micro-oscillation of the center of gravity when standing (which all people have from birth) when fixing attention is felt like a force nine storm on the deck of a destroyer. 
+If you've already read the chapter on the [CAS trap](10_cas_trap.html), you'll recognize this exact machinery: symptom monitoring, rumination, and thought suppression are three interlocking gears of one engine. This chapter hands you the wrench to jam the primary gear—symptom monitoring.
 
-The neurons of the somatosensory cortex have the property of plasticity: the more time you spend listening to a certain part of the body, the wider the representation of this zone in the brain becomes and the lower the threshold of its excitability falls. You train your brain to feel dizziness more acutely. Read more about how chronic spasm of the neck muscles enhances this effect in the chapter on [muscle armor](04_muscle_armor.html). 
-
-#### Vicious circle of attention: 
-
-> 1. **Body sensation** (microvibration, neck spasm, pulsation) ➔ 
-> 2. **Amygdala:** alarm signal *“We are in danger!”* ➔ 
-> 3. **Narrowing of attention:** focus is firmly tied to the symptom ➔ 
-> 4. **Neurosensory amplification:** the signal is inflated 10 times ➔ 
-> 5. **Adrenaline surge:** vasospasm and panic intensify ➔ *the circle closes*. 
-
-### 4. Narrow focus vs Open focus: Sympathetic and Parasympathetic 
-The nature of your attention directly switches the autonomic nervous system:
-
-* **Narrow, tunnel focus (Focus on Threat):** when the gaze is fixed at one point, the eyes are motionless, all attention is clenched into a fist on the symptom. For the evolutionary brain, this is a signal: * “We see a predator! Turn on your sympathy!”*. There is an instant release of norepinephrine, spasm of the neck vessels, dilation of the pupils - the unsteadiness intensifies. 
-* **Open/Panoramic Focus:** Soft peripheral vision, perception of space between objects, simultaneous 360-degree coverage of the sound field. For the brain, this is a biological marker of complete safety: there is no predator, the clearing is clean. The **dorsal nucleus of the vagus nerve (n. vagus)** is instantly activated, parasympathetic activity is activated, the heart rate drops, and the spasmodic suboccipital muscles relax.
+To stop being held hostage by sensations, you have to quit wrestling with them and learn the actual hardware physics of how attention operates inside your skull.
 
 ---
 
-## 3. Why attention training is the basis for recovery 
+## 2. Neurophysiology: The Hardware Architecture of Attention
 
-Most people believe that attention is a slave to their thoughts and symptoms. *“I felt bad, that’s why my attention is there”*. 
+Attention isn't some vague philosophical metaphor. It is a concrete neurophysiological mechanism that allocates bandwidth across your central nervous system. Think of it as the **hardware traffic router** inside your brain.
 
-This is a fundamental mistake. 
+Wherever you point the spotlight of your attention, your brain routes up to 90% of its active processing power, metabolic fuel, and regional blood flow:
 
-Attention is not a thought. Attention is a **muscle** (more precisely, a network of the dorsolateral prefrontal cortex) that can and should be consciously controlled. 
+> **How Your Attentional Spotlight Works:**
+> * **Inward Focus:** Normal bodily noise ➔ **Hyperfocus (magnifying lens)** ➔ Signal amplified 10x
+> * **Outward Focus:** External world ➔ **Exteroception (wide radar)** ➔ Background symptom fades out
 
-If this muscle is weak and atrophied, any physiological sneeze, any vascular spasm instantly takes consciousness hostage. You become a passive spectator of a horror film that is spinning in your body. 
+Let's break down the four neurobiological hubs driving what you feel when anxiety takes the wheel:
 
-Attention training is a gym for the prefrontal cortex. You teach your brain: 
-1. **Notice the moment of capture:** Instantly register when attention fell into the body and stuck to unsteadiness. 
-2. **Unstick the beam:** With an effort of will, tear the spotlight away from the somatic sensation, without fighting with it. 
-3. **Redirect and Hold:** Voluntarily direct processor resources to neutral or external stimuli. 
+### 1. DMN vs. CEN: Your Brain's Mode Switch
+Neuroscience identifies two competing large-scale brain networks:
 
-When you master this skill, dizziness is deprived of its main fuel - **your emotionally charged energy**. A symptom, deprived of attention, quickly fades out, like a fire into which they have stopped throwing dry branches.
+* **DMN (Default Mode Network):** lights up when you turn inward, get stuck in [rumination ("mental chewing gum")](15_metacognition.html), replay past flare-ups, catastrophize about tomorrow, and scan your body. An overactive DMN is the primary incubator of chronic anxiety.
+* **CEN / TPN (Central Executive Network / Task-Positive Network):** lights up when your attention locks onto the outside world to execute concrete sensory or motor tasks (inspecting physical details, solving an engineering problem, tracking street sounds in real space).
 
----
+Here is the ironclad hardware rule: **the DMN and CEN are reciprocally wired—they operate like a seesaw.** When you actively engage outward-directed executive attention (CEN), activity in your rumination-and-dread network (DMN) **automatically drops on functional MRI**. You physically cannot spiral into full-blown body-scanning panic at the exact same moment your attentional bandwidth is 100% occupied by a demanding external sensory task.
 
-## 4. Point of Support: Main insight 
+### 2. The Thalamus and Sensory Gating
+Deep at the gateway above your brainstem sits the **thalamus**—your nervous system's master firewall. Every single second, gigabytes of raw sensory telemetry pour in from your body: microscopic fluid shifts in your inner ear, subtle pull in your neck fascia as you inhale, the pulse of your carotid arteries, routine contractions of your gut.
 
-> Anxiety and somatoform dizziness cannot exist in an empty space. They are parasites that feed solely on your attention. Your symptoms do not grow from physical illness, but from the spotlight directed at them. 
-> 
-> Take away the light from them - and they will have nothing to cling to in your nervous system. 
+In a calibrated nervous system, the thalamus runs a strict spam filter: it blocks 99.9% of that under-the-hood mechanical noise before it ever reaches conscious awareness in your cerebral cortex. A healthy person never consciously feels their vestibular nuclei making micro-adjustments to calf-muscle tone ten times a second.
 
-*Andrey, 34 years old, programmer: “I walked around the apartment with a pulse oximeter on my finger. I checked my pulse every 15 minutes. When my wife was cooking soup, I heard not the sound of water, but the beating of my own heart. Three cardiologists said everything was normal. When I started doing ATT 12 minutes a day, after 10 days I forgot to check my pulse for the first time in a year and a half. Not because I forced myself - but because my brain just switched.”*
+Under chronic anxiety, however, your **amygdala** pulls the fire alarm and triggers the [adrenaline loop](09_adrenaline_loop.html): *"Danger! Potential balance-system failure!"* On that command, the thalamus throws its floodgates wide open—a breakdown of **sensory gating**. Every scrap of raw background noise from your autonomic nervous system dumps straight onto your conscious dashboard.
 
----
+Suddenly, you physically feel the normal, everyday mechanics of human balance. And your terrified mind slaps an emergency label on routine background static: *"I'm pitching like a boat, I'm having a stroke, I'm dying."*
 
-## 5. Evidence-based attention training techniques 
+### 3. Somatosensory Amplification (The Macro-Lens Effect)
+Attention behaves exactly like a 10x macro camera lens.
 
-Below are 4 of the most powerful, clinically validated techniques for working with focus. They are used in metacognitive therapy (MCT), neurofeedback and body-oriented regulation protocols.
+Put an ordinary coin under a microscope and microscopic surface scratches look like jagged canyons. The exact same distortion happens inside your body:
+* Mild tension in your upper trapezius, under a locked attentional spotlight, feels like your neck has been poured full of concrete.
+* Natural postural sway while standing still—micro-movements every human being has had since learning to walk—suddenly feels like pitching on the deck of a destroyer in a Force-9 gale.
 
----
+Neurons in your somatosensory cortex are neuroplastic: the more hours you spend listening to a specific body region, the more cortical real estate your brain dedicates to that region—and the lower its firing threshold drops. Unintentionally, you have been training your brain to become an Olympic athlete at detecting dizziness. (For how chronic neck tightness compounds this loop, review the chapter on [muscle armor](04_muscle_armor.html).)
 
-### Technique No. 1. ATT (Attention Training Technique) by Adrian Wells 
+#### The Vicious Cycle of Attention:
 
-Developed by Adrian Wells, professor of clinical psychology at the University of Manchester. This is the gold standard [metacognitive therapy](15_metacognition.html) for breaking [cognitive attention syndrome (CAS)](10_cas_trap.html). 
+> 1. **Routine bodily sensation** (natural postural micro-sway, tight neck, pulse) ➔
+> 2. **Amygdala:** fires threat alarm *"We aren't safe!"* ➔
+> 3. **Attentional narrowing:** spotlight glues itself onto the sensation ➔
+> 4. **Somatosensory amplification:** signal gets magnified 10x ➔
+> 5. **Adrenaline surge:** vascular constriction and panic spike ➔ *loop locks shut*.
 
-ATT is **not meditation or [Jacobson relaxation](05_relaxation.html)**. Your goal here is not to calm down or relax. Your goal is to give the prefrontal cortex a tough training load on coordination and attention switching. 
+### 4. Narrow Focus vs. Open Focus: Sympathetic vs. Parasympathetic
+The geometry of your attention directly flips switches in your autonomic nervous system:
 
-#### Preparation: 
-* Sit comfortably in a chair, close your eyes (or keep a soft, defocused gaze at one point). 
-* Select from 5 to 8 different sound sources: 
-* **In the room (near field):** the ticking of a clock, the hum of a laptop cooler, the sound of breathing in the nose. 
-* **Outside (far field):** the noise of cars outside the window, birds singing, footsteps on the stairs, the sound of the wind. 
-
-The protocol consists of 3 consecutive phases with a total duration of 10–12 minutes: 
-
-#### Phase 1: Selective Attention (5-6 minutes) 
-You learn to focus the spotlight on one specific sound and completely ignore the rest. 
-*Focus **only** on the ticking of the clock. Listen to its volume, intervals, timbre for 45 seconds. If your brain is distracted by thoughts or sounds of machines, gently, without self-criticism, return the beam to the ticking of the clock. 
-* Now turn the beam **only** to the noise of the laptop cooler. Isolate it from the sound stream. Listen to him for 45 seconds only. 
-* Turn your focus to the most distant sound outside the window - the hum of passing cars. Hold for 45 seconds. 
-* Go through 5-6 different sounds one by one. 
-
-#### Phase 2. Rapid attention shift (3-4 minutes) 
-Now you train the speed of moving the focus. Like ping pong: 
-* Hear the cooler sound (3 seconds). 
-* Instantly switch to the birds outside the window (3 seconds). 
-* Instantly when the clock ticks (3 seconds). 
-* On the breathing of the neighbor behind the wall (3 seconds). 
-* Repeat fast jumping tricks in a circle for 3 minutes. You should feel your prefrontal cortex actively flicking switches. 
-
-#### Phase 3: Divided/Divided Attention (2 minutes) 
-The most powerful step that completely turns off the DMN: 
-* Try to expand your auditory radar so that you can **hold all sounds in your mind at once**. 
-* You hear the cooler, the ticking of the clock, the cars outside the window, and your own breathing as a single symphony. 
-*Hold this polyphonic perception for 2 minutes. If the focus narrows to one sound, open it again to the entire panorama.
+* **Narrow, tunnel focus (Threat Lock):** eyes frozen on a single spot, visual field pinched tight, attention clenched like a fist around a symptom. To your ancient survival brain, tunnel vision means one thing: *"Predator in sight! Engage the sympathetic nervous system!"* Norepinephrine spikes instantly, neck vessels constrict, pupils dilate—and your unsteadiness surges.
+* **Wide, panoramic focus (Open Focus):** soft peripheral vision, awareness of the open space between objects, taking in a 360-degree soundscape all at once. Biologically, panoramic awareness tells your brainstem the coast is clear—no predator is stalking you. Your **vagus nerve (*n. vagus*)** engages immediately, parasympathetic recovery kicks in, heart rate slows, and locked suboccipital muscles at the base of your skull let go.
 
 ---
 
-### Technique No. 2. Open Focus by Dr. Lester Femi 
+## 3. Why Attention Training Is the Foundation of Recovery
 
-Lester Femi is a pioneer of neurofeedback who has spent many years studying the electrical activity of the brain using EEG. He found that people with anxiety, panic, and chronic pain are chronically stuck in a “narrow object focus.” 
+Most dizzy patients assume attention is a helpless passenger dragged around by symptoms: *"I feel awful—that's why my attention is stuck there."*
 
-The Open Focus technique instantly triggers **synchronous alpha rhythms (8-12 Hz)** in the cortex - a physiological marker of calm concentration without tension. 
+Dead wrong.
 
-#### Execution algorithm (5 minutes): 
-1. Sit up straight without straining your back. Direct your gaze straight ahead. 
-2. Stop looking at specific objects. Soften your gaze, let your eyes “blur” slightly, turning on your **peripheral vision**. 
-3. Without turning your pupils, notice what is to your left at the extreme limit of visibility. At the same time, notice what is on the right. 
-4. Ask yourself a series of metacognitive questions while maintaining an unfocused gaze: 
-* *“Can I feel the space between my eyes and the screen/wall?”* 
-* *“Can I become aware of the space between my ears inside my head?”* 
-* *“Can I feel the space between my fingertips and the floor?”* 
-* *“Can I be simultaneously aware of the space around my body and the silence between sounds?”* 
+Attention is not a thought, and it is not a feeling. Attention is a **trainable muscle**—specifically, an executive control network anchored in your dorsolateral prefrontal cortex—that you can and must learn to steer manually.
 
-Focusing on **space** (on “nothing” instead of “something”) makes it impossible for the brain to grasp onto a threat. The muscles of the face, eyes and suboccipital area instantly relax. Breathing deepens on its own.
+When that muscle is weak and deconditioned, every harmless vascular twinge or flicker of motion hijacks your consciousness on the spot. You get strapped into the front row of a horror movie playing inside your own body.
 
----
+Attention training is strength conditioning for your prefrontal cortex. You are teaching your brain three distinct reps:
+1. **Spot the hijack:** catch the exact second your attention drops inward and glues itself to swaying or heaviness.
+2. **Unstick the spotlight:** deliberately peel your focus off the sensation without wrestling with it or demanding that it vanish.
+3. **Redirect and hold:** route your CPU bandwidth onto external, neutral sensory targets and keep it there.
 
-### Technique No. 3. Field exteroceptive radar “360°” (For street and shops) 
-
-This is a first aid technique when going outside, to a shopping center or when walking, when the floor begins to “float” and your legs become weak. Goes well with [vestibular gymnastics](06_vestibular.html) - use both techniques together when walking. 
-
-When unsteadiness sets in, your natural reflex is to stare at the floor a meter away and tensely control your step. This guarantees increased pitching. 
-
-Instead, enable the **Radar 360°** protocol: 
-
-> **Protocol Express Route:** 
-> * **Step 1. Sensory anchor (Vision):** find 3 micro-details of textures (asphalt cracks, weave of jacket fabric). 
-> * **Step 2. Panoramic hearing (Hearing):** move your ears 10 meters outside (people's steps, rustling tires, wind). 
-> * **Step 3. Support on gravity (Body):** feel the stable contact of your soles with the surface of the planet. 
-
-1. **Take your eyes off the floor:** raise your chin parallel to the ground. Switch your eyes to wide lens mode (peripheral view). 
-2. **Scan Microtextures (Vision):** Look for three interesting details in the environment with your eyes. Not just “wood” or “car,” but specifics: *“what is the exact shade of rust on the fence?”*, *“what is the shape of the crack on the tile?”*, *“what is the font on the store sign?”*. 
-3. **Move the sensors outside (Hearing):** Intentionally move the point of auditory perception 10 meters away from you. Listen to the sound of a passing bus or the conversation of passers-by. 
-4. **Ground Your Soles (Proprioception):** Instead of checking your balance, simply feel the solid ground firmly pressing upward on your feet. The earth itself holds you. You don't need to hold her down with your thoughts. 
-
-You don't fight the unsteadiness. You allow your body to sway, but the entire processor is busy receiving external signals. After 60–90 seconds, the unsteadiness subsides because the adrenaline spasm subsides.
+Once you build that executive strength, PPPD loses its primary fuel source—**your emotionally supercharged attention**. Starved of the spotlight, background dizziness dies down like a campfire when you stop throwing dry wood onto the flames.
 
 ---
 
-### Technique No. 4. Decentering: "Train on the Platform" 
+## 4. Point of Support: Core Insight
 
-With anxiety disorders, the illusion of complete fusion arises: *“If I feel dizzy and scared, it means that I am this dizziness and this fear.”* 
+> Chronic anxiety and functional dizziness cannot survive in a vacuum. They are parasites that feed almost entirely on your attention. Your symptoms aren't kept alive by broken inner-ear hardware—they are kept alive by the floodlight you keep aimed straight at them.
+>
+> Cut the power to that floodlight, and the symptoms lose their grip on your nervous system.
 
-Decentering creates a saving gap between you (the observer) and the content of your consciousness. 
-
-1. Sit quietly and imagine that your mind is a train station platform. 
-2. Your symptoms, anxious thoughts and body sensations are like passing freight trains. 
-* A train passed by * “What if I faint now?” *. 
-* Here is the car *"Wady legs and compression in the back of the head"*. 
-* Here is the composition of *“I will never be cured”*. 
-3. Your usual automatic reaction is to jump on each of these trains at full speed and rush along with it into the abyss of panic. 
-4. New reaction: **stay standing on the platform**. 
-*Tell yourself: *“I notice the thought of fear. I notice a feeling of unsteadiness in my body. But I am not a train. I am the platform on which they pass. The platform remains motionless, no matter what trains rumble along it.”*
+*Andrey, 34, software engineer: "I used to pace around my apartment wearing a pulse oximeter clipped to my finger, checking my heart rate every 15 minutes. When my wife was making soup in the kitchen, I couldn't hear the boiling water—all I could hear was my own heartbeat thudding in my ears. Three separate cardiologists told me my heart was completely healthy. Ten days after I started doing 12 minutes of ATT every morning, I realized in the evening that I'd forgotten to check my pulse all day—for the first time in a year and a half. Not because I white-knuckled myself out of checking, but because my brain's router had finally clicked back outward."*
 
 ---
 
-## 6. Three mistakes when training attention 
+## 5. Evidence-Based Attention Training Protocols
 
-### Mistake 1. “I meditate, that means I’m training my attention” 
-
-Classic mindfulness meditation teaches you to observe sensations in your body. This is beneficial for a healthy person. But with PPPD and anxiety disorder, this can **intensify** interoceptive hyperfocus: you're already scanning your body 24/7, but meditation tells you to do it “consciously.” 
-
-ATT is the opposite approach. You don't watch the body. You purposefully train your brain to switch to **external** stimuli. The difference is like between an x-ray and a rearview mirror. 
-
-### Mistake 2. “You need to concentrate as hard as you can” 
-
-Overdoing the ATT creates additional muscle and cognitive stress. Clenched teeth, a frowning forehead, an attempt to “press” attention into the sound - all this activates sympathy instead of unloading it. 
-
-Correct metaphor: you don't grip the steering wheel until your knuckles turn white. You gently turn the sailboat's steering wheel. Easily, without strain, with curiosity. 
-
-### Error 3. “I’ll check after the exercise - did it help?” 
-
-You have completed 12 minutes of ATT and the first thing you do is scan your body: * “Well, are you wobbly? Is your pulse normal? Did it help?”*. Congratulations - you just restarted the [CAS loop](10_cas_trap.html) that you spent 12 minutes trying to break. 
-
-When I finished my practice, I got up and went about my business. No revision. No rating. The result will come as a side effect of regularity, and not as an instant pill.
+Below are the four highest-yield, clinically validated protocols for retraining attentional control, drawn directly from Metacognitive Therapy (MCT), EEG neurofeedback, and sensorimotor rehabilitation.
 
 ---
 
-## 7. Practice and Homework (HW) 
+### Technique #1: ATT (Attention Training Technique) by Adrian Wells
 
-The theory of attention without daily practice is worth nothing. Neural pathways are rewired only through regular physical repetition. 
+Developed by Professor Adrian Wells at the University of Manchester, ATT is the clinical gold standard in [Metacognitive Therapy](15_metacognition.html) for dismantling [Cognitive Attentional Syndrome (CAS)](10_cas_trap.html).
 
-Your attention training program for the next **14 days**: 
+Understand this upfront: **ATT is neither mindfulness meditation nor [Jacobson's progressive muscle relaxation](05_relaxation.html).** Your goal during ATT is *not* to bliss out, relax, or empty your mind. Your goal is to put your prefrontal cortex through a crisp, demanding workout in attentional aiming and switching.
 
-### Daily checklist (15–20 minutes per day): 
+#### Setup:
+* Sit upright in a comfortable chair and either close your eyes or rest a soft, unstrained gaze on a neutral spot on the wall.
+* Identify **5 to 8 distinct real-world sounds** (or play an ATT multi-track audio file):
+    * **Inside the room (near field):** a ticking wall clock, the hum of a laptop fan, air moving through vents, normal ambient room sound.
+    * **Outside the room (far field):** distant street traffic, birds outside the window, footsteps in the hallway, wind in the trees.
 
-| Time of day | Technique | Duration | Purpose of practice | 
-| :--- | :--- | :--- | :--- | 
-| **Morning (after rising)** | **ATT according to Wells** | 10–12 minutes | Pumping up the strength and flexibility of the prefrontal cortex, warming up the “attention muscle” | 
-| **Day (on the move/outdoors)** | **360° Radar** | 3-5 minutes (2-3 times) | Ripping the Velcro of attention from the body in the field, destroying agoraphobia | 
-| **Evening (before bedtime)** | **Open Focus** | 5 minutes | Relieving sympathetic tension of the day, switching the brain to alpha rhythm | 
+Run all 3 phases back-to-back for a total session of **10–12 minutes**:
 
-### Execution rules: 
-1. **No self-abuse.** If during ATT practice you find yourself thinking about work or listening to your neck for 2 minutes, great! The very fact that you **noticed** is already a victory. Calmly, without irritation, return the beam back. Each return of focus is one repetition of the barbell press for your prefrontal cortex. 
-2. **Prohibition on checking “it helped/didn’t help.”** Do not evaluate your condition immediately after the exercise: *“Well, has the wobbly stopped?”*. This check is the same old scanner. Your task is not to remove the symptom immediately, but to improve your attention management skills. The result in the body will come as a natural side effect. 
-3. **Keep a training diary:** mark each approach completed in a notepad. After 7-10 days, you will be surprised to notice how easily and naturally you will begin to pull yourself out of somatic loops throughout the day.
+#### Phase 1: Selective Attention (5–6 minutes)
+Here you train laser-like isolation—locking your spotlight onto one target sound while letting every other sound stay in the background.
+* Aim your full attention **exclusively** at the ticking clock for 45 seconds. Track its pitch, rhythm, and crispness. If intrusive thoughts, body sensations, or street noise pull you away, calmly—zero self-criticism—steer the beam right back to the clock.
+* Now swing the spotlight **exclusively** onto the hum of your laptop fan. Carve that single frequency out of the room's soundscape and hold it for 45 seconds.
+* Next, push your spotlight all the way out to the farthest sound you can detect—passing traffic blocks away. Hold it for 45 seconds.
+* Cycle systematically through 5–6 distinct sounds one at a time.
+
+#### Phase 2: Rapid Attention Switching (3–4 minutes)
+Now you drill switching speed—like mental table tennis:
+* Lock onto the laptop fan (3 seconds).
+* Snap instantly to the birds outside (3 seconds).
+* Snap instantly to the ticking clock (3 seconds).
+* Snap to muffled sounds in the next room or hallway (3 seconds).
+* Keep jumping cleanly from target to target every few seconds for 3–4 minutes. You should practically feel your prefrontal cortex flipping toggle switches.
+
+#### Phase 3: Divided / Broad Attention (2 minutes)
+This is the heaviest lift—and the phase that shuts down DMN rumination cold:
+* Widen your auditory radar as far as it will go and **hold every single sound in conscious awareness simultaneously**.
+* Hear the fan, the clock, the street traffic, and the birds all at once as a single wide-angle orchestra, without zooming in on any solo instrument.
+* Sustain that panoramic auditory field for 2 full minutes. Whenever your focus narrows onto one sound or drifts into your body, open the aperture back out to the entire soundscape.
 
 ---
 
-### Scientific base 
+### Technique #2: Open Focus by Dr. Lester Fehmi
 
-1. Wegner, D.M. (1994). *Ironic processes of mental control.* Psychological Review, 101(1), 34–52. 
-2. Wells, A. (1990). *Panic disorder in association with relaxation induced anxiety: An attentional training approach to treatment.* Behavior Therapy, 21(3), 273–280. 
-3. Wells, A. (2009). *Metacognitive Therapy for Anxiety and Depression.* Guilford Press. 
-4. Fehmi, L.G. & Robbins, J. (2007). *The Open-Focus Brain.* Trumpeter Books. 
+Dr. Lester Fehmi, a clinical psychologist and EEG neurofeedback pioneer at Princeton, spent decades studying brainwave patterns in chronic anxiety, panic, and pain. His core discovery: anxious brains stay chronically locked in rigid, narrow, object-fixated attention.
+
+Shifting into **Open Focus** triggers rapid, synchronous **alpha waves (8–12 Hz)** across the cerebral cortex—the unmistakable EEG signature of calm, unstrained alertness.
+
+#### Execution Protocol (5 minutes):
+1. Sit comfortably upright without stiffening your spine, looking straight ahead.
+2. Stop staring *at* objects. Let your eye muscles soften and slightly unfocus, unlocking wide **peripheral vision**.
+3. Without moving your eyeballs, become aware of everything at the far left edge of your visual field—and simultaneously everything at the far right edge, plus the ceiling above and floor below.
+4. Holding that wide peripheral field, silently drop these spatial questions into awareness (actually *feel* the space rather than thinking in words):
+    * *"Can I sense the physical volume of empty space between my eyes and the wall or screen in front of me?"*
+    * *"Can I imagine the open space between my left ear and my right ear?"*
+    * *"Can I sense the space between my fingertips and the floor?"*
+    * *"Can I simultaneously stay aware of the open space surrounding my whole body and the quiet space underneath the sounds in this room?"*
+
+Because empty **space** contains no solid threat object for your amygdala to latch onto, threat-scanning collapses within seconds. Your jaw, extraocular eye muscles, and suboccipital neck muscles let go automatically, and your breathing drops lower into your ribs on its own.
+
+---
+
+### Technique #3: The "360° Exteroceptive Radar" Field Protocol (For Streets and Stores)
+
+Use this as your on-the-fly tactical protocol whenever you step outside, walk down a bright supermarket aisle, or feel the sidewalk turn spongy and your legs go wobbly. Pair it directly with your outdoor walks and [vestibular rehabilitation exercises (VRT)](06_vestibular.html).
+
+The moment unsteadiness hits on a walk, your caveman reflex is to glue your eyes to the pavement three feet ahead of your shoes and micromanage every step. That reflex **guarantees** worse rocking.
+
+Override it immediately with **360° Radar**:
+
+> **Quick-Reference Field Protocol:**
+> * **Step 1. Visual Texture Lock (Sight):** spot 3 crisp external micro-textures (cracks in asphalt, brick mortar, fabric weave on a passerby's coat).
+> * **Step 2. Wide-Angle Audio (Sound):** push your listening radius 30 feet outward (footsteps, tires humming on pavement, wind).
+> * **Step 3. Gravity Trust (Proprioception):** feel the solid planet pressing firmly *up* into the soles of your shoes.
+
+1. **Peel your eyes off the floor:** bring your chin level with the horizon and switch your eyes into panoramic wide-angle lens mode.
+2. **Scan external micro-textures (Sight):** actively inspect three rich visual details out in the environment—not vague labels like *"car"* or *"tree,"* but high-definition specifics: *"What exact shade of rust is on that lamppost?"*, *"How are the bricks laid above that storefront?"*, *"What font is printed on that street sign?"*
+3. **Push your audio sensors outward (Sound):** deliberately project your listening point 30 feet away from your head. Track a passing bus, distant conversation, or leaves rustling down the block.
+4. **Drop down into your soles (Proprioception):** quit trying to "balance" from your neck up. Simply register the firm, unyielding pressure of the sidewalk pushing up against the bottoms of your feet. Gravity and concrete are already holding you upright—you don't have to hold the planet together with anxious thoughts.
+
+Notice what you're doing here: you aren't fighting the sway. Your body is allowed to feel boaty while 100% of your executive CPU stays busy processing external sensory data. Within 60–90 seconds, the adrenaline clamp eases off and your stride smooths out on its own.
+
+---
+
+### Technique #4: Decentering—"Standing on the Station Platform"
+
+Chronic anxiety breeds **cognitive fusion**—the illusion that *"Because I feel dizzy and terrified right now, I AM this dizziness and terror."*
+
+Decentering wedges clean daylight between **you (the observer)** and the noisy traffic passing through your nervous system.
+
+1. Sit quietly and picture your conscious awareness as the concrete platform of a train station.
+2. Every dizzy surge, catastrophic what-if, and weird bodily sensation is simply a noisy freight train rumbling past the platform:
+    * Here rolls the express train labeled *"What if I pass out right here on the floor?"*
+    * Next comes the boxcar labeled *"Jelly legs and tight band around the base of my skull."*
+    * Behind it rattles the caboose labeled *"I'm broken forever and I'll never get my old life back."*
+3. Your old conditioned habit was to sprint off the platform, leap aboard every single train at 60 miles an hour, and ride it straight off a cliff into panic.
+4. Your new move: **keep both feet planted on the platform**.
+    * Tell yourself plainly: *"I notice the thought about fainting. I notice a wave of rocking in my body. Those are passing trains—not orders I have to obey. I am the station platform. Trains come and go, and the platform stays right where it is."*
+
+---
+
+## 6. Three Classic Mistakes in Attention Training
+
+### Mistake 1: "I already meditate, so I'm training my attention"
+
+Traditional body-scan or breath-focused mindfulness asks you to sit quietly with closed eyes and closely observe internal sensations. For a calm, healthy nervous system, that's great. For someone with active PPPD or health anxiety, however, inward mindfulness often **backfires and cranks up interoceptive hyperfocus**—you already scan your body 24 hours a day, and now you're scanning it even harder under a "spiritual" label.
+
+ATT does the exact opposite. You do *not* watch your body. You systematically condition your brain to aim **outward** onto external soundscapes. It is the difference between staring at an internal X-ray and looking out through a wide, clean windshield.
+
+### Mistake 2: "I have to concentrate as hard as humanly possible"
+
+Gritting your teeth, furrowing your brow, and trying to "drill" your attention into the ticking clock generates fresh muscular tension and sympathetic arousal—the exact state we're dismantling.
+
+Use the right mechanical cue: don't white-knuckle the wheel like a stunt driver in a skid. Rest two light fingers on the helm of a sailboat—steady, curious, zero strain.
+
+### Mistake 3: "Let me check right after the drill—did it work?"
+
+You finish 12 minutes of ATT, open your eyes, and within half a second run a diagnostic scan: *"Well? Am I still swaying? How's my head? Did it work?"* Congratulations—you just rebooted the exact [CAS loop](10_cas_trap.html) you spent 12 minutes shutting down.
+
+When the timer goes off, stand up and walk straight into your next real-world task. Zero post-session body audit. Zero scorecard. Symptom relief arrives as an automatic downstream byproduct of consistent reps, never as an instant magic trick.
+
+---
+
+## 7. Practice and Homework
+
+Reading about neuroplasticity rewires zero synapses. Neural circuits remodel exclusively through daily physical reps.
+
+Here is your non-negotiable **14-day attention training block**:
+
+### Daily Training Checklist (15–20 minutes total):
+
+| Time of Day | Protocol | Duration | Neurological Target |
+| :--- | :--- | :--- | :--- |
+| **Morning (soon after waking)** | **Wells' ATT Protocol** | 10–12 minutes | Build dorsolateral prefrontal strength and attentional switching speed |
+| **Daytime (outdoors / in stores)** | **360° Exteroceptive Radar** | 3–5 minutes (2–3x/day) | Peel attention off bodily sensations in real-world motion environments |
+| **Evening (before bed)** | **Fehmi's Open Focus** | 5 minutes | Discharge daytime sympathetic lock-up and shift cortex into alpha rhythm |
+
+### Ground Rules for Execution:
+1. **Zero self-flagellation.** If halfway through ATT you realize you spent two full minutes thinking about an email or checking your neck tension—good! Catching the drift *is* the rep. Calmly steer the spotlight back to the target sound. Every single redirect is one clean bicep curl for your prefrontal cortex.
+2. **Strict ban on "did it help?" body checks.** Do not grade your dizziness before and right after ATT (*"Wait, am I steadier yet?"*). That check *is* the disorder talking. Your job right now isn't to force symptoms to zero—it's to build executive steering power. Quieter symptoms follow automatically.
+3. **Log your reps on paper:** check off each completed session in a notebook. Around Day 7 to Day 10, you'll catch yourself effortlessly snapping out of somatic spirals mid-stride without having to think twice.
+
+---
+
+### Scientific References
+
+1. Wegner, D.M. (1994). *Ironic processes of mental control.* Psychological Review, 101(1), 34–52.
+2. Wells, A. (1990). *Panic disorder in association with relaxation induced anxiety: An attentional training approach to treatment.* Behavior Therapy, 21(3), 273–280.
+3. Wells, A. (2009). *Metacognitive Therapy for Anxiety and Depression.* Guilford Press.
+4. Fehmi, L.G. & Robbins, J. (2007). *The Open-Focus Brain.* Trumpeter Books.
 5. Raichle, M.E. (2015). *The Brain's Default Mode Network.* Annual Review of Neuroscience, 38, 433–447.
 
 ---
 
-## Frequently asked questions 
+## Frequently Asked Questions
 
-### Why can't I just stop feeling dizzy? 
-Because Daniel Wegner's theory of ironic processes works: the command "don't think about it" causes the brain to constantly check whether you are thinking about it. What is needed is not a “distraction,” but systemic attention switching training (ATT), which restructures the neural circuits of the prefrontal cortex. 
+### Why can't I "just distract myself" from dizziness?
+Because of Daniel Wegner's ironic process theory: ordering yourself *"don't think about the swaying"* forces an unconscious supervisor process in your brain to constantly check whether you're still dizzy. You don't need superficial distraction—you need structured executive retraining (ATT) that upgrades how your prefrontal cortex allocates attention.
 
-### What is ATT - attention training technique? 
-ATT (Attention Training Technique) is a 12-minute daily protocol developed by Professor Adrian Wells within the framework of Metacognitive Therapy (MCT). Includes three phases: selective attention, rapid switching and divided attention. Clinically proven to be effective for generalized anxiety disorder, panic disorder and PPPD. 
+### What exactly is ATT (Attention Training Technique)?
+ATT is a structured 12-minute auditory protocol created by Professor Adrian Wells as a core pillar of Metacognitive Therapy (MCT). It cycles through three distinct phases—selective attention, rapid attention switching, and divided panoramic attention—and has strong clinical trial backing for panic disorder, generalized anxiety, health anxiety, and PPPD.
 
-### Does meditation help with PPPD and anxiety? 
-Classical mindfulness meditation can enhance interoceptive hyperfocus in PPPD because it teaches one to observe sensations in the body. ATT is the opposite approach: the focus is purposefully drawn outward, to external sounds. However, specialized techniques (NSDR, audio grounding, Open Focus) perfectly relieve autonomic arousal - for a detailed analysis and ready-made audio protocols, see [Chapter 47: Meditation for PPPD and anxiety](47_meditation.html). 
+### Does meditation help with PPPD and chronic anxiety?
+Standard eyes-closed, breath-focused mindfulness can actually worsen interoceptive hyperfocus early in PPPD because it directs your spotlight straight back inside your body. ATT deliberately trains focus *outward* onto external sounds. That said, targeted non-interoceptive protocols—such as NSDR, eyes-soft acoustic grounding, and Open Focus—are phenomenal for calming autonomic arousal. For the full clinical breakdown and guided audio protocols, head to [Chapter 47: Meditation for PPPD and Anxiety](47_meditation.html).
 
-### How much do you need to train your attention to make it easier? 
-With daily practice (15–20 minutes a day), the first lasting changes will be noticeable after 7–10 days: you will begin to automatically “catch” the moment when attention sticks to the symptom. Sustained rewiring of neural circuits requires 4-6 weeks of regular practice. 
+### How long does attention training take to make a noticeable difference?
+With 15–20 minutes of consistent daily reps, most people notice their first real shift within 7–10 days: you start catching the exact second your attention glues onto a sensation and unhooking it on the spot. Deep, durable remodeling of prefrontal-thalamic circuits takes 4–6 weeks of daily practice.
 
-### What is Open Focus and how does it relieve anxiety? 
-Open Focus is a neuroregulation method developed by Dr. Lester Femi based on years of EEG research. The transition from a narrow object focus to a soft peripheral perception of space instantly triggers synchronous alpha rhythms (8-12 Hz) in the cortex - a physiological marker of relaxed composure. The parasympathetic system is activated through the dorsal nucleus of the vagus nerve.
+### What is Open Focus, and how does it calm the nervous system so fast?
+Open Focus is an EEG-validated attentional method developed by Dr. Lester Fehmi. Shifting out of narrow, hard-staring tunnel vision into wide peripheral spatial awareness triggers synchronous cortical alpha waves (8–12 Hz) within seconds—engaging parasympathetic vagal pathways and releasing jaw, eye, and suboccipital neck tension.

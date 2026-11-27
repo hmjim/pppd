@@ -1,115 +1,115 @@
-# Excellent Student Syndrome: How Hypercontrol and Cognitive Distortions Keep You Neurotic 
+# Overachiever Syndrome: How Hypercontrol and Cognitive Distortions Keep You Stuck
 
-*Why perfectionism leads to autonomic failure, an analysis of the five main thinking traps and why the world copes just fine without your indispensability.*
-
----
-
-## 1. Essence and issues: portrait of an excellent student on the verge of a breakdown 
-
-95% of people suffering from PPPD have the same psychological profile. These are perfectionists. "Excellent students." People with a heightened sense of duty and hyper-responsibility. These are those who “bear” everything: difficult work, problems of relatives, everyday life, finances. These are people who don’t know how to say “no” and are terrified of letting others down or appearing weak. 
-
-Your motto in life: *“If not me, then who?”* or *“I must do everything perfectly”*. 
-When your neurosis began, you transferred this habit to your illness. Now you are trying to perfectly control everything in your body: breathing, neck position, placing your foot on the asphalt, the reaction of your pupils to light. You keep your central nervous system in the grip of total control 24/7. But it is precisely this attempt to control everything that burns the fuses of your brain, causing autonomic failure. 
-
-## 2. Physiological explanation: the cost of hypercontrol of the central nervous system 
-
-The human nervous system is not designed for continuous manual control of automatic processes. 
-
-In our body, the autonomic nervous system operates in automatic mode (autopilot). You don't need to think about how to contract your stomach after eating, how to expand your bronchi when running, or how to adjust the tone of hundreds of small muscles in your feet and lower legs when you step. This is done by an ancient, autonomous part of the brain. 
-
-When you engage hypercontrol, you are trying to control the autopilot manually. The cerebral cortex (consciousness) begins to send hundreds of extra impulses to the motor areas. This creates a constant, colossal overload of the central nervous system. Imagine a computer whose processor is 100% loaded with background processes. Sooner or later the system will start to freeze. 
-
-Your brain just overheats from stress. Chronic tone of the cortex keeps the autonomic system in a state of constant combat readiness (sympathetic mode). The blood vessels are narrowed, the muscles are tense, and proprioception is distorted. Your unsteadiness is a physical cry from your body: *“Turn off manual control, my processor is overheated!”*. 
-
-## 3. Cognitive traps: the five horsemen of the anxiety apocalypse 
-
-Your brain is used to processing reality through distorting filters. Let's look at the five main cognitive traps of a neurotic:
-
-1. **Catastrophization:** *“If I get rocked now, I’ll fall, break my head, go crazy”*. 
-* *Truth:* During all the months or years of illness, you never fainted or went crazy. The Amygdala predicts a catastrophe that is biologically impossible (remember the physiology of pressure). 
-2. **Mind reading:** *“Everyone sees how I’m swaying and thinks I’m drunk or sick”*. 
-* *True:* People around me don’t care at all. 99% of passersby are buried in their phones or chewing on thoughts about their own loans, problems and relationships. Your walk is invisible to them. 
-3. **Must:** *“I should feel 10/10 every day. Any discomfort is unacceptable."* 
-* *True:* No living organism functions perfectly. Fatigue, poor sleep, weather - all this affects the tone. 6/10 is an excellent, working result for a person. 
-4. **Black and white thinking:** *“If I have even a little bit of unsteadiness left, it means I’m completely sick and nothing is working.”* 
-* *Truth:* Recovery is a spectrum. If before you were pumping 24/7, but now only in the evening when you are tired, this is a huge progress of 70%, and not a defeat. 
-5. **Depreciation:** *“Yesterday I walked normally, but today I’m shaking again. My efforts are useless."* 
-* *Truth:* The brain is rebuilt nonlinearly. Temporary decline is a normal physiological process of adaptation of the nervous system. 
-
-### Three horsemen you haven't noticed yet 
-
-In addition to the five classic traps above, the neurotic has three more distortions that work more subtly and unnoticed - like a rootkit in an operating system. You don't even suspect that they are active. 
-
-6. **Emotional reasoning:** *“I’m scared → that means the danger is real”*. 
-* This is the most insidious trap. You take your gut feeling as objective evidence. You are afraid to go to the subway - and you decide that the subway is really dangerous. You feel sick in the shopping center - and you are sure that the shopping center is harmful to your health. But emotion is not a fact. A person with arachnophobia is afraid to look at a cross spider, although this spider is absolutely harmless. Fear lies. He's not an informant, he's an alarmist. 
-* *Antidote:* Every time you catch yourself saying “I’m scared, that means it’s dangerous,” stop and ask: *“What objective facts confirm the danger? Not feelings, but facts.”* In 99% of cases there will be no facts.
-
-7. **Personalization:** *“The colleague frowned → it’s because of me. He noticed that I was shaking and now he thinks I’m an alcoholic/psycho.”* 
-* A neurotic person attaches to himself everything that happens around him. Did the salesperson at the checkout wince? It's because I saw your unsteady gait. Friend didn't reply to your message? He's probably tired of hearing about your dizziness. In fact, the salesman was thinking that his shift was ending, and his friend simply fell asleep with the phone in his hands. 
-* *Antidote:* Write down 5 alternative reasons for the other person’s behavior that are not related to you. You'll be surprised how few things in this world revolve around you. 
-
-8. **Tunnel vision (Selective abstraction):** *“Today I spent 7 hours at work normally, but for 20 minutes after lunch I was shaking - that means it was a terrible day.”*. 
-* The brain of a neurotic person works like a bad spam filter: it allows only “bad” messages into the consciousness and discards “good” ones. You can have a great day - walking, working, socializing - but you will only remember those 15 minutes when you felt symptoms. The entire day is coded in memory as “bad.” This is tunnel vision: you look at reality through a narrow gap into which only negative aspects fall. 
-* *Antidote:* Start a “Diary of Victories”. Every evening, write down **3 moments from the day when you felt normal or good**. This is not positive thinking, this is calibration of perception. You are literally training your brain to notice the good - because there is objectively more good in your day than bad, you just filter it.
+*Why perfectionism triggers autonomic burnout, a breakdown of the biggest thinking traps, and why the world runs just fine without you holding up the sky.*
 
 ---
 
-## Frequently asked questions about cognitive biases 
+## 1. The Core Problem: Portrait of an Overachiever on the Brink
 
-**“I know this is a distortion, but I’m still afraid. Knowledge doesn’t help!”** 
-It's okay. Knowledge is the cerebral cortex. Fear is the amygdala. They operate at different speeds. The amygdala reacts in 12 milliseconds, the cortex “thinks” in 300-500 milliseconds. Fear will always come first. But knowledge gives you a choice: continue to react to fear or switch. Every time you notice a distortion and don’t follow its lead, you create a new neural pathway. In 3-6 months this path will become a highway, and the old path of fear will be overgrown. 
+Roughly 95% of people suffering from PPPD share the exact same psychological profile. They are perfectionists. Lifelong straight-A overachievers. People wired with an oversized sense of duty and hyper-responsibility. They are the ones carrying everything on their own backs: demanding jobs, family crises, household logistics, finances. They don't know how to say "no," and they are terrified of letting others down or looking weak.
 
-**“If I stop controlling my body, will something serious happen and I won’t notice?”** 
-Your body is not a monitoring station that needs to be checked every 5 minutes. You have an automatic warning system - pain. If something really serious happens (heart attack, stroke), you will feel it clearly and clearly: sharp pain in the chest, numbness in half the body, loss of speech. These symptoms cannot be missed. But cloudy “swaying”, “cotton wool in the head” and “something is wrong” are just a signature of anxiety, not an organic disease. 
+Your lifelong motto has been *"If I don't do it, who will?"* or *"Anything worth doing must be done flawlessly."*
+When chronic anxiety and dizziness hit, you transferred that exact habit onto your condition. Now you try to micromanage everything inside your body to perfection: your breathing, the angle of your neck, how your foot strikes the asphalt, how your pupils react to light. You hold your central nervous system in a vise grip of total control 24/7. And it is that exact attempt to control everything that blows the fuses in your brain and triggers an autonomic crash.
 
-**“It seems to me that I have all 8 distortions at once. Is this normal?"** 
-Absolutely. Most neurotics have 4-6 distortions active at the same time, and they are intertwined. Catastrophizing triggers emotional reasoning, which is reinforced by tunnel vision. Don't try to work with everyone at once. Choose the 2 most common ones (usually catastrophizing and mind reading) and start tracking them in your SERM diary. The rest will catch up.
+## 2. The Physiology: The High Cost of Hijacking Your CNS
 
----
+The human nervous system was never engineered for continuous manual control of automatic processes.
 
-## 4. Point of Support: Insight 
+Inside your body, the autonomic nervous system (ANS) operates on autopilot. You don't have to consciously decide how to contract your stomach after lunch, dilate your airways while jogging, or fine-tune the tension of hundreds of tiny muscles in your feet and lower legs with every step. An ancient, autonomous subsystem of the brain handles all of that seamlessly behind the scenes.
 
-> Remember the last time you had the flu with a high fever. You lay there, didn’t control anything, didn’t solve work problems and didn’t save the world. So what happened? The world didn't collapse. Colleagues coped, the family survived, the sun continued to rise. Your indispensability is an illusion of your ego. Your main task now is not to be a perfect rescuer. Your task is to be alive and give your body a rest. Tell your inner overachiever: “Okay.”
+The moment you engage hypercontrol, you try to fly the autopilot manually. Your cerebral cortex (conscious awareness) starts firing hundreds of redundant override signals down into your motor centers. That creates relentless, massive overload across your central nervous system. Picture a computer whose CPU is pinned at 100% by runaway background processes — sooner or later, the entire system starts lagging and freezing.
 
----
+Your brain literally overheats from chronic strain. Nonstop cortical tension keeps your autonomic nervous system locked in round-the-clock combat readiness (sympathetic overdrive). Blood vessels constrict, muscles clamp down, and proprioception warps. Your unsteadiness is your body's physical distress cry: *"Turn off manual control — my CPU is overheating!"*
 
-## 5. Practice: SERM Diary and legal imperfection 
+## 3. Cognitive Traps: The Five Horsemen of the Anxiety Apocalypse
 
-We will use two tools to treat overachiever syndrome. 
+Your brain has gotten used to running raw reality through distorting filters. Let's break down the five classic cognitive traps of an anxious mind:
 
-### 1. Keeping a diary SERM (Situation - Thought - Emotion - Reaction) 
-Every time your anxiety spikes or your unsteadiness increases, record it in the table: 
-* **S (Situation):** Just the facts. *“Standing at the checkout counter at the supermarket”* (no drama). 
-* **M (Thought):** Your literal interpretation. *“Now I’ll fall, everyone will see my weakness”*. 
-* **E (Emotion):** Rate the strength of the emotion (Fear 80%, Shame 70%). 
-* **R (Reaction):** What the body and you did. *"Clenched his teeth, grabbed the cart, and quickly left"*. 
+1. **Catastrophizing:** *"If a wave of swaying hits right now, I'll collapse, crack my skull open, or lose my mind."*
+   * *Reality check:* Across all the months or years of your condition, you have never once fainted from PPPD or gone insane. Your amygdala is predicting a catastrophe that is biologically impossible (remember how blood pressure actually behaves during adrenaline surges).
+2. **Mind Reading:** *"Everyone can see me swaying — they all think I'm drunk or seriously sick."*
+   * *Reality check:* Strangers around you couldn't care less. Ninety-nine percent of passersby are buried in their phones or chewing on their own loans, deadlines, and relationship problems. Your walk doesn't even register to them.
+3. **"Should" Statements:** *"I should feel 10/10 every single day. Any discomfort is unacceptable."*
+   * *Reality check:* No living organism runs flawlessly every day. Fatigue, poor sleep, weather shifts — all of these affect your baseline tone. Feeling 6/10 is a completely solid, functional human day.
+4. **All-or-Nothing (Black-and-White) Thinking:** *"If I still have even a drop of unsteadiness left, I'm completely sick and nothing is working."*
+   * *Reality check:* Recovery happens on a spectrum. If you used to sway 24/7 and now only feel it in the evening when you're tired, that is a massive 70% breakthrough — not a defeat.
+5. **Discounting the Positive:** *"Yesterday I walked fine, and today I'm swaying again. All my effort is pointless."*
+   * *Reality check:* The brain rewires nonlinearly. A temporary setback is a normal physiological part of nervous system adaptation.
 
-After filling it out, look at the thought from column “M”: ask yourself what kind of cognitive distortion (Catastrophizing? Mind reading?) was at work here. Rewrite the thought into a realistic one: * “I’m shaking because of a spasm in my neck. It's unpleasant, but safe. Nobody looks at me."* The diary template is available in the application [3.3_smer_diary.pdf](../materials/3.3_smer_diary.pdf). 
+### Three Stealth Horsemen You Haven't Spotted Yet
 
-### 2. Practice “Legal Imperfection” 
-Once a day, do one action that is intentionally imperfect to prove to your brain that the world won’t collapse because of it: 
-* Leave the unwashed plate in the sink overnight. 
-* Reply to a colleague's email 2 hours late without apologizing. 
-* Make a report or task with a C grade (70% of the ideal) and send it. 
-* Delegate to your loved ones what you usually do yourself (buying groceries, cleaning). 
+Beyond the five classic traps above, anxious perfectionists run three subtler distortions that operate quietly in the background — like a rootkit buried deep in an operating system. Most people don't even realize they are active.
 
-### 3. Third-person habit decompilation (Distancing) 
-In cognitive behavioral therapy, this method is called **cognitive defusion**. When you say to yourself: * “I feel bad, I’m stormy, I’m going crazy” * - you completely merge with your condition. You become this state. 
+6. **Emotional Reasoning:** *"I feel scared → therefore, the danger must be real."*
+   * This is the most insidious trap of all. You mistake an internal gut feeling for objective proof. You feel scared walking into the subway — so you conclude the subway is genuinely dangerous. You feel unsteady in a shopping mall — so you become convinced malls harm your health. Yet an emotion is not a fact. Someone with arachnophobia feels sheer terror looking at a harmless garden spider, even though the spider poses zero threat. Fear lies. It isn't an informant; it's an alarmist.
+   * *Antidote:* Every time you catch yourself thinking *"I feel scared, so this must be dangerous,"* stop and ask: *"What objective facts prove danger right now? Not feelings — hard facts."* In 99% of cases, there won't be any.
 
-To break the automatic alarm script, you need to leave the role of a participant in the process and take the position of an external debugger (debugger), which simply reads the log file of the running program. 
+7. **Personalization:** *"My coworker frowned → it's because of me. He noticed me wobble, and now he thinks I'm an alcoholic or unstable."*
+   * Anxious minds make everything happening around them about themselves. Did the cashier wince at checkout? Must be because they spotted your unsteady gait. Did a friend not text back? Clearly they're sick of hearing about your dizziness. In reality, the cashier was counting the minutes until the end of their shift, and your friend fell asleep holding their phone.
+   * *Antidote:* Write down 5 alternative explanations for the other person's behavior that have nothing to do with you. You'll be surprised how little of this world actually revolves around you.
 
-**How to do it:** 
-Every time you catch yourself experiencing symptoms or behavior that is disturbing, begin to mentally (or out loud) describe what is happening **in the third person**, using your name or referring to yourself as the “object.”
-
-* **It was (merger):** *“I’m walking through the supermarket, the floor is floating, I’m dizzy, I’m afraid of falling, I’m clinging to the cart”*. 
-* **Became (distancing):** *“[Name] entered the zone of colorful visual stimuli. The brain recorded a divergence of signals from the neck and eyes. The standard fear routine is running. [Name] tensed his trapezius, clenched his jaw and automatically activated the auxiliary support (grabbed the cart). The system alarm level is 7 out of 10. The object continues to move.”* 
-
-**Why it works:** 
-When you refer to yourself as “he” or “she,” you activate the lateral areas of the prefrontal cortex and physically “turn off” the emotional overheating of the amygdala. You are no longer a victim, drowning in symptoms. You are a programmer monitoring the execution of crooked system code. The code works clumsily, but the hardware is fine.
+8. **Tunnel Vision (Selective Abstraction):** *"I worked fine for 7 hours today, then swayed for 20 minutes after lunch — today was a terrible day."*
+   * An anxious brain acts like a broken spam filter: it lets every "bad" message straight into conscious awareness and trashes every "good" one. You can have a great day — go for a walk, get work done, catch up with friends — and remember only the 15 minutes when symptoms flared. Your memory encodes the entire day as "bad." That is tunnel vision: looking at reality through a slit narrow enough to admit only negative moments.
+   * *Antidote:* Start a **Daily Wins Log**. Every evening, write down **3 moments from the day when you felt normal or good**. This isn't hollow positive thinking — it's perceptual calibration. Objectively, there is already far more good than bad in your day; you are simply training your brain to stop filtering it out.
 
 ---
 
-### Homework (DZ): 
-1. Complete **at least 3 situations in the SMER Diary** this week. 
-2. Complete **2 actions as part of the “Legal Imperfection” practice** and write down your emotions. 
-3. Every time you catch yourself trying to grab a wall, check your pupils, or panic from unsteadiness, **describe this situation in the third person** (make 3 entries in your phone notes in a week). Did you feel like an outside observer?
+## Frequently Asked Questions About Cognitive Distortions
+
+**"I know logically that it's a distortion, yet I'm still scared. Knowing doesn't help!"**
+That's completely normal. Knowledge lives in your cerebral cortex. Fear fires in your amygdala. They operate at wildly different speeds: the amygdala reacts in roughly 12 milliseconds, whereas the cortex takes 300–500 milliseconds to form a rational thought. Fear will *always* arrive first. What knowledge gives you is a choice right afterward: keep reacting to the fear, or pivot away. Every time you spot a distortion and refuse to follow its lead, you carve a new neural pathway. Within 3–6 months, that new trail becomes the main highway while the old footpath of fear grows over.
+
+**"If I stop monitoring my body, what if something medically serious happens and I miss it?"**
+Your body is not a monitoring station that needs manual checks every 5 minutes. It has a built-in emergency alert system — acute pain and unmistakable deficits. If a true medical emergency strikes (a heart attack or stroke), you will know immediately and unmistakably: crushing chest pain, sudden numbness or paralysis down half your body, loss of speech. Nobody misses those symptoms. Murky "swaying," "cotton wool in the head," and a vague feeling that *"something's off,"* on the other hand, are the classic signature of anxiety — not structural disease.
+
+**"I feel like all 8 distortions are firing in my head at once. Is that normal?"**
+100% normal. Most anxious people have 4–6 distortions active simultaneously, and they feed into one another: catastrophizing triggers emotional reasoning, which gets reinforced by tunnel vision. Don't try to tackle all eight at once. Pick your top 2 repeat offenders (usually catastrophizing and mind reading) and start tracking just those two in your CBT Thought Record (ABC Diary: Situation → Thought → Emotion → Response). Once those loosen up, the rest will follow.
+
+---
+
+## 4. Point of Support: Key Insight
+
+> Think back to the last time the flu knocked you flat with a high fever. You lay in bed, controlled nothing, solved zero work crises, and saved nobody. And what happened? The world didn't collapse. Your coworkers handled things, your family survived, and the sun kept rising on schedule. Your "indispensability" is an illusion of your ego. Your main job right now isn't to be a flawless rescuer — your job is to stay alive and let your body rest. Look your inner overachiever in the eye and say: "Good enough. Let it go."
+
+---
+
+## 5. Practice: The CBT Thought Record and Deliberate Imperfection
+
+We will use three practical tools to dismantle Overachiever Syndrome.
+
+### 1. Keeping a CBT Thought Record (ABC Diary: Situation → Thought → Emotion → Response)
+Every time your anxiety spikes or your unsteadiness intensifies, log the episode across four columns:
+* **S (Situation):** Pure facts, zero drama. *"Standing in the checkout line at the supermarket."*
+* **T (Thought):** Your verbatim interpretation. *"I'm about to fall right here, and everyone will see how weak I am."*
+* **E (Emotion):** Name and rate the intensity of each emotion (Fear 80%, Shame 70%).
+* **R (Response):** What your body and behavior did. *"Clenched my jaw, white-knuckled the cart, rushed out of the store."*
+
+Once it's written down, examine the **Thought** column: identify which specific cognitive distortion fired (Catastrophizing? Mind Reading?). Rewrite the thought into a grounded, realistic one: *"I'm swaying because my neck muscles tensed up. It's unpleasant, yet completely safe. Nobody in line is watching me."* A printable template is available in the Appendices & Worksheets: [CBT Thought Record Template (PDF)](../materials/3.3_smer_diary.pdf).
+
+### 2. "Deliberate Imperfection" Practice
+Once a day, do one thing intentionally imperfectly to prove to your brain that the world won't end:
+* Leave an unwashed plate in the sink overnight.
+* Reply to a coworker's non-urgent email 2 hours later without apologizing.
+* Complete a routine report or task at a "C-plus / 70% of perfection" level and hit send.
+* Delegate chores you normally insist on doing yourself (grocery runs, house cleaning) to family members.
+
+### 3. Third-Person Habit Decompilation (Self-Distancing)
+In Cognitive Behavioral Therapy, this technique is called **cognitive defusion** (or self-distancing). When you tell yourself, *"I feel awful, I'm spinning out, I'm losing my mind,"* you fuse completely with your state. You *become* that state.
+
+To break the automatic anxiety script, step out of the participant role and step into the seat of an **external debugger** calmly reading the runtime log file of a running program.
+
+**How to do it:**
+Every time you catch yourself experiencing symptoms or safety behaviors, narrate what is happening — silently or out loud — **in the third person**, using your first name or referring to yourself as *"the subject."*
+
+* **Before (Fused):** *"I'm walking down the supermarket aisle, the floor is pitching, I'm dizzy, I'm terrified of falling, I'm clinging to the cart."*
+* **After (Distanced):** *"[Name] entered a zone of busy visual stimuli. Brain logged a mismatch between neck proprioceptive input and visual signals. Standard fear subroutine launched. [Name] tensed his traps, clenched his jaw, and engaged auxiliary support (grabbed shopping cart). System anxiety level: 7 out of 10. Subject continues forward movement."*
+
+**Why it works:**
+Referring to yourself in the third person ("he," "she," or your name) activates the lateral prefrontal cortex and measurably dampens the emotional overheating of the amygdala. You stop being a helpless victim drowning in symptoms and become the programmer watching clunky legacy code run. The software is throwing messy warnings — and the hardware is completely intact.
+
+---
+
+### Homework:
+1. Log **at least 3 episodes in your CBT Thought Record (ABC Diary: Situation → Thought → Emotion → Response)** this week.
+2. Complete **2 acts of Deliberate Imperfection** and write down the emotions they bring up.
+3. Every time you catch yourself reaching for a wall, checking your pupils, or panicking over unsteadiness, **narrate the situation in the third person** (record at least 3 entries in your phone's Notes app this week). Did it shift you into the seat of an outside observer?

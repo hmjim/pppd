@@ -1,116 +1,116 @@
-# Neuroplasticity: how we trained our disease and how to erase it 
+# Neuroplasticity: How We Trained Our Condition and How to Erase It
 
-*Why your brain is plasticine, how London taxi drivers prove the possibility of recovery, and how long it takes to trodden new paths of peace.*
-
----
-
-## 1. Essence and problems: professional alarmist 
-
-When you've been neurotic for years, you feel like your anxiety and dizziness are part of your DNA. You find yourself thinking: * “I’m just that kind of person. Suspicious, anxious, always swinging. My brain is completely broken, and I will never return to the state of a normal person.”* 
-
-You react to symptoms automatically. As soon as you open your eyes, you habitually think about the bad. When you leave the house, you habitually shrink. You have brought your panic reactions to absolute automatism. You react to fear faster than you think. And it seems to you that this program is firmly sewn into your head. But the truth is that you just trained her very well. 
-
-## 2. Physiological explanation: plasticine in your skull 
-
-Our brain is not a frozen circuit of wires. The brain has a unique property called **neuroplasticity** - the ability to physically change its structure, grow new neurons and destroy old connections depending on your experience. 
-
-In 2000, researcher Eleanor Maguire conducted a famous study of the brains of London taxi drivers. To obtain a license, a taxi driver in London must memorize 25,000 streets and thousands of landmarks. An MRI showed that in experienced drivers, the **posterior hippocampus** (the area of ​​the brain responsible for spatial memory) physically increased in size compared to ordinary people. The brain literally grew additional tissue for a regular task. 
-
-When you worry 24/7, scan your body, fear unsteadiness and google symptoms, you do the same thing. You're training your brain to worry. You have trampled a giant, wide, eight-lane neural highway of fear in your head. Signals travel through it at the speed of light. You became an “Olympic panic champion.” 
-
-But neuroplasticity works both ways. Neural connections live according to the principle: **“Use it or lose it”** (Use it or lose it). If we stop sending signals along the highway of fear and begin to forcibly direct them along a new, narrow path of calm, the old highway, as unnecessary, begins to be dismantled by brain cells. This process takes time (research shows that physical rewiring of neural networks takes **6 to 8 weeks** of daily practice), but biologically it is inevitable. Your brain will rewire itself. 
-
-## 3. Cognitive traps: “I should get well instantly”
-
-The main cognitive trap: expecting a linear and quick result. 
-You do Jacobson's relaxation for three days, go outside, catch the unsteadiness and shout: * “Nothing works! Everything is gone!”*. 
-
-You're trying to grow a century-old oak tree in three days. Neuroplasticity is a slow biological construction. You've been training the disturbing highway for years. It's impossible to disassemble it in a weekend. The lack of an immediate effect is not a sign that the method is bad. This is a sign that your brain cells have not yet physically rebuilt themselves. You just have to keep going. 
-
-## 4. Point of Support: Insight 
-
-> There is a path across the lawn in your yard. If you walk on it every day, it will be bare ground. Stop walking on it, and over the summer it will be completely overgrown with grass, and the ground will be trampled in place of the new path. Your illness is just an old trope. Stop walking on it. 
-
-### Why chronic pain techniques work for dizziness 
-
-This is one of the most unobvious, but powerful insights. Chronic pain and PPPD are **cousins**. Both conditions are functional neuroplastic disorders. The mechanism is the same: 
-
-1. **Initial trigger** - actual trauma, infection or stress. The body reacted normally. 
-2. **Fear and fixation** - the brain remembered the symptom and began to be afraid of it. For chronic pain: *“This back pain is a hernia, I can’t move”*. With PPPD: *"This dizziness is something in the brain, I'm going to fall"*. 
-3. **Neuroplastic consolidation** - fear → hypervigilance (constant scanning of the symptom) → strengthening of neural dominance → the symptom becomes chronic **without an organic cause**. 
-
-Pain Reprocessing Therapy (PRT) from Alan Gordon offers a paradoxical approach: **do not run away from the symptom or fight it, but turn to face it and deprive it of its status as a threat**. Translated to PPPD, this technique goes like this: 
-
-* “Well, dizziness, come on, spin me even more! Come on now! Pull me to the floor, I'm waiting! Come on, haven't you killed me yet? Why are you so weak?”* 
-
-When you genuinely **mocker** a symptom, you deprive the amygdala of its only weapon: your fear. The brain receives a signal: *“If the owner himself asks for increased dizziness, then it is definitely safe”*. The dominant threat begins to fade. This is not bravado - this is a conscious neuroplastic rewiring.
+*Why your brain works like modeling clay, how London cab drivers prove recovery is biologically possible, and how long it actually takes to carve new neural pathways of calm.*
 
 ---
 
-## 5. Practice: Map of new paths 
+## 1. The Core Problem: Becoming a Professional Panicker
 
-Our task is to create clear alternative routes for brain signals to stop using the old fear highway. 
+When you have been stuck in a chronic anxiety state for years, your anxiety and dizziness start to feel like part of your DNA. You catch yourself thinking: *"That's just how I'm wired. Hypervigilant, anxious, forever swaying. My brain is permanently broken, and I'll never get back to feeling like a normal human being."*
 
-1. **Create a table of alternatives:** Divide a piece of paper into two columns. 
-* In the left column, write your usual automatic reactions (Old Path). 
-* In the right column, write a new reaction of calm (New Path). 
+You react to symptoms on sheer autopilot. The second you open your eyes in the morning, your mind defaults to worst-case scenarios. Step out your front door, and your body reflexively braces for impact. You have drilled your panic responses to absolute perfection, reacting to fear faster than you can consciously think. It feels as if this faulty program is burned permanently into your hardware. Here is the truth: it isn't hardwired at all. You just trained it really, really well.
 
-| Situation | Old Trail (Autopilot) | New path (Informed choice) | 
-| :--- | :--- | :--- | 
-| **Swayed on the street** | Shrink, look at your feet, get scared, go home. | Raise your head (Horizon Rule), relax your shoulders, continue walking. | 
-| **Panic in the supermarket** | Throw the basket, run out into the street, call a taxi. | Stop, fix your gaze on the distant sign, turn on the timer for 5 minutes. | 
-| **Morning Clip** | Lie down and listen to your head, curse fate. | Get up immediately, drink warm water, and take a contrast shower. | 
+## 2. The Physiology: Modeling Clay Inside Your Skull
 
-2. **Keep Focus for 60 Days:** Hang this chart in a visible place. Your only goal for the next two months is to catch yourself at the moment of choice and consciously direct the signal along the right column. Even if at the beginning it seems artificial and difficult, continue. We build physical neural bridges in your head.
+Your brain is not a soldered circuit board frozen in its factory state. It possesses a remarkable biological property called **neuroplasticity** — the ability to physically remodel its own architecture, sprout new neurons and synaptic connections, and dismantle old wiring based on what you repeatedly do.
+
+In 2000, neuroscientist Eleanor Maguire ran a landmark MRI study on London black-cab drivers. To earn a license, a London cabbie has to memorize 25,000 streets and thousands of landmarks by heart. Brain scans revealed that in veteran drivers, the **posterior hippocampus** (the brain region responsible for spatial memory and navigation) had physically grown larger compared to the general public. Their brains literally built extra neural tissue to meet a daily demand.
+
+When you stay anxious 24/7, scan your body for sensations, dread unsteadiness, and Google symptoms, you are running the exact same training protocol. You are forcing your brain to strength-train anxiety. Over months or years, you have paved a massive, eight-lane neural superhighway of fear inside your skull. Signals blast down it at the speed of light. You have become an Olympic gold medalist in panic.
+
+Fortunately, neuroplasticity cuts both ways. Neural circuits live and die by one ruthless rule: **"Use it or lose it."** The moment we stop routing traffic down the fear superhighway and deliberately force signals onto a narrow, overgrown trail of calm, the brain's cleanup crew begins dismantling the old highway for parts. This remodeling takes time — clinical research shows that physically rewiring neural networks requires **6 to 8 weeks** of consistent daily practice — but biologically, it is inevitable. Your brain *will* rewire itself.
+
+## 3. Cognitive Traps: "I Should Be Cured Instantly"
+
+The biggest cognitive trap in recovery is demanding fast, linear results.
+You practice Jacobson's progressive muscle relaxation for three days, walk outside, get hit by a wave of swaying, and throw up your hands: *"Nothing works! I'm back to square one!"*
+
+You are trying to grow a hundred-year-old oak tree in three days. Neuroplasticity is slow biological construction work. You spent years paving that eight-lane highway of fear; you cannot tear it up over a weekend. Not getting an instant cure is not proof that the method failed. It is simply proof that your brain cells have not finished physically rebuilding yet. You just have to keep laying the bricks.
+
+## 4. Point of Support: Key Insight
+
+> Picture a dirt shortcut worn across the lawn in your yard. Walk across it every single day, and that strip stays packed, bare earth. Stop walking on it, and over a single summer grass completely reclaims the old trail while your footsteps pack down a brand-new path somewhere else. Your condition is nothing more than an old footpath. Stop walking on it.
+
+### Why Chronic Pain Techniques Work for Dizziness
+
+This is one of the least obvious yet most powerful insights in modern neuroscience: chronic pain and PPPD are **first cousins**. Both are functional neuroplastic disorders driven by the exact same three-stage mechanism:
+
+1. **The initial trigger** — a real physical injury, vestibular event, viral infection, or acute stress. Your body responded normally at first.
+2. **Fear and fixation** — the brain logged the symptom and started fearing it. In chronic back pain: *"This ache is a herniated disc; if I move wrong, I'll wreck my spine."* In PPPD: *"This dizziness means something is broken in my brain; I'm going to collapse."*
+3. **Neuroplastic consolidation** — fear → hypervigilance (nonstop symptom scanning) → reinforcement of a dominant threat loop → the symptom becomes chronic **with zero ongoing structural damage**.
+
+Pain Reprocessing Therapy (PRT), developed by Alan Gordon, flips the script with a paradoxical move: **do not run from the symptom and do not fight it — turn around, face it head-on, and strip away its status as a threat**. Applied to PPPD, that sounds like this:
+
+*"Come on, dizziness — spin me even harder! Right here, right now! Drop me to the floor, I'm waiting! Wait, you haven't killed me yet? Why are you hitting so weak?"*
+
+When you genuinely **mock** the symptom, you disarm the amygdala of its only weapon: your fear. Your brain receives an unmistakable status update: *"If the boss is actively asking to crank up the dizziness, this sensation must be completely safe."* The neural threat loop begins to fade. That isn't empty bravado — it is deliberate neuroplastic firmware reprogramming.
 
 ---
 
-### Homework (DZ): 
-1. **Write your personal path map** (minimum 5 situations). 
-2. Every time you manage to choose a “new path” instead of automatic fear, put a plus in your notebook. Your goal is to collect 50 pluses in a week.
+## 5. Practice: Mapping Your New Pathways
+
+Our objective is to build clear alternative routes for brain signals so you stop defaulting to the old fear highway.
+
+1. **Create an Alternatives Table:** Divide a sheet of paper into two columns.
+   * In the left column, write down your knee-jerk automatic reactions (**Old Path**).
+   * In the right column, write down your deliberate response of calm (**New Path**).
+
+| Situation | Old Path (Autopilot) | New Path (Conscious Choice) |
+| :--- | :--- | :--- |
+| **A wave of swaying hits on the street** | Tense up, stare down at your feet, panic, turn around and rush home. | Lift your head (Horizon Rule), drop your shoulders, and keep walking. |
+| **Panic spikes in the supermarket** | Ditch the shopping basket, bolt for the exit, call a cab. | Stop, anchor your gaze on a distant sign, and set a 5-minute timer. |
+| **Waking up locked in morning tension** | Lie in bed monitoring your head sensations and cursing your fate. | Get out of bed immediately, drink warm water, and step into a contrast shower. |
+
+2. **Hold Focus for 60 Days:** Tape this table somewhere you will see it every day. Your single mission over the next two months is to catch yourself at that split-second fork in the road and consciously route the signal down the right-hand column. Even if it feels mechanical, forced, and awkward at first — keep going. We are building physical neural bridges inside your skull.
 
 ---
 
-## PRT: Pain Reprocessing Therapy 
+### Homework:
+1. **Write out your personal Pathway Map** (at least 5 real-life trigger situations).
+2. Every time you catch yourself choosing a "New Path" instead of automatic fear, put a plus sign (`+`) in your notebook. Your target is to rack up **50 pluses in one week**.
 
-PRT is a method developed by Alan Gordon for chronic pain, but it works ideally for chronic dizziness as well. The point: teach the brain to perceive a symptom not as a threat, but as **safe neural noise**. 
+---
 
-### Step-by-step PRT protocol for PPPD: 
+## PRT: Pain Reprocessing Therapy
 
-**Step 1. Somatic Tracking** 
-When you feel unsteady, instead of being scared, start **observing the sensation** with curiosity: 
-* *“I wonder where exactly I feel this?”* 
-* *“Is it pulsating or smooth?”* 
-* *“Is it warm or cold?”* 
-* *“If you give it a form, what is it? Round? Spicy?”* 
+PRT was developed by Alan Gordon for neuroplastic chronic pain, and it works brilliantly for chronic dizziness as well. The core goal: teach your brain to interpret the symptom not as an active threat, but as **harmless neural noise**.
 
-This switches the brain out of “danger!” mode. to "research" mode. The amygdala calms down when you observe instead of react. 
+### Step-by-Step PRT Protocol for PPPD:
 
-**Step 2: Reassess security** 
-After tracking, tell yourself (mentally or out loud): 
-* *“This sensation is neural noise. The brain sends a false signal.”* 
-* *“My body is physically healthy. This has been confirmed by examinations.”* 
-* *“I'm safe. This feeling cannot harm me.”* 
+**Step 1. Somatic Tracking**
+When you feel unsteady, instead of recoiling in fear, start **observing the sensation** with detached curiosity:
+* *"Interesting — where exactly in my body do I feel this?"*
+* *"Is it pulsing or steady?"*
+* *"Does it feel warm or cool?"*
+* *"If I gave it a shape, what would it look like? Round? Sharp-edged?"*
 
-**Step 3: Positive Affect** 
-Find something that evokes a slight pleasant feeling - look at a beautiful tree, listen to your favorite song, remember a funny moment. The goal is to give the brain a signal: *“I am observing the symptom AND I AM GOOD at the same time”*. This breaks the symptom = suffering link. 
+This flips your brain out of *"Danger!"* mode and into *"Exploration"* mode. The amygdala powers down the moment you observe with curiosity instead of reacting with alarm.
 
-**Regularity:** Practice PRT with every episode of unsteadiness. After 2-4 weeks, the brain will begin to automatically reduce the intensity of the signal, because it will understand: this signal does not cause a fear reaction → it is useless → it can not be sent. 
+**Step 2. Safety Reappraisal**
+After tracking the sensation, tell yourself (silently or out loud):
+* *"This sensation is just benign neural noise. My brain is firing a false alarm."*
+* *"My body is physically sound. Medical workups have already confirmed that."*
+* *"I am safe. This feeling cannot harm me."*
 
-## How to speed up neuroplasticity: BDNF boost 
+**Step 3. Positive Affect**
+Find something that sparks a light, genuine pleasant feeling — look at sunlight filtering through a tree, put on a favorite song, or recall an absurdly funny memory. Your goal is to send the brain a clear message: *"I am observing the symptom AND I feel good at the exact same time."* That snaps the wired link between *symptom = suffering*.
 
-BDNF (Brain-Derived Neurotrophic Factor) is a protein that works as a “fertilizer” for neurons. The more BDNF, the faster new neural connections are formed and the faster the brain is rebuilt. 
+**Consistency:** Practice PRT during every episode of unsteadiness. Within 2–4 weeks, your brain will automatically begin turning down the signal's intensity once it realizes: *this signal triggers zero fear response → it is useless → no need to keep broadcasting it.*
 
-Here's what boosts BDNF: 
-* **Aerobic exercise** (running, swimming, fast walking) is the most powerful boost. 30 minutes a day increases BDNF by 200-300%. 
-* **Sleep** (7–8 hours). BDNF is synthesized primarily during sleep. 
-* **Meditation** (10+ minutes per day). 
-* **Omega-3** (fatty fish, flaxseed oil, walnuts). 
-* **Curcumin** (turmeric) - increases BDNF and reduces neuroinflammation. 
-* **Sunlight** (30 minutes per day) - via vitamin D. 
+## How to Accelerate Neuroplasticity: Boosting BDNF
 
-What reduces BDNF: 
-* Chronic stress (vicious circle: stress → low BDNF → slow adaptation → stress). 
-* Sugar and ultra-processed foods. 
-* Sedentary lifestyle. 
-*Lack of sleep.
+BDNF (Brain-Derived Neurotrophic Factor) is a protein that acts like biological fertilizer for your neurons. The higher your BDNF levels, the faster new synaptic connections form and the faster your brain remodels itself.
+
+What boosts BDNF:
+* **Aerobic exercise** (running, swimming, brisk walking) — the single most powerful boost. Just 30 minutes a day elevates BDNF by 200–300%.
+* **Sleep** (7–8 hours). BDNF is synthesized primarily during deep sleep.
+* **Meditation** (10+ minutes daily).
+* **Omega-3 fatty acids** (fatty fish, flaxseed oil, walnuts).
+* **Curcumin** (turmeric) — raises BDNF and lowers neuroinflammation.
+* **Sunlight** (30 minutes daily) — mediated through vitamin D synthesis.
+
+What tanks BDNF:
+* Chronic stress (creating a vicious cycle: stress → low BDNF → slow neural adaptation → more stress).
+* Sugar and ultra-processed foods.
+* A sedentary lifestyle.
+* Sleep deprivation.

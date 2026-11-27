@@ -1,120 +1,121 @@
-# PPPD Treatment: A Complete Guide to Recovery 
+# PPPD Treatment: The Complete Guide to Recovery
 
-*Can PPPD be cured? Yes. Here's everything that works - and everything that doesn't work.*
-
----
-
-## Can PPPD be cured forever? 
-
-The short answer is: **yes, PPPD is curable**. This is not a chronic disease that you need to “learn to live with.” This is a functional failure of the nervous system that can be corrected. 
-
-According to research, with proper comprehensive treatment, **significant improvement occurs in 70–80% of patients**. Full recovery is a reality, not a marketing slogan. The author of this book himself went from six months of daily dizziness to complete recovery. 
-
-Duration: from **2 to 6 months** of daily work. Not because the treatment is so long, but because the brain needs time to rebuild neural connections. 
-
-## Five areas of treatment for PPPD 
-
-PPPD is a multifactorial disorder. There is no one magic pill or one exercise. Only an **integrated approach** works: 
-
-### 1. Vestibular rehabilitation (exercises) 
-
-This is the foundation of treatment. Vestibular exercises force the brain to recalibrate the balance system: 
-
-- **Eye exercises** - restoration of the vestibulo-ocular reflex (VOR) 
-- **Head turns** - desensitization to movement 
-- **Balance exercises** - standing on one leg, tandem walking 
-- **Optokinetic training** - habituation to moving visual stimuli 
-
-A detailed set of exercises is in the chapter [Vestibular gymnastics for PPPD](06_vestibular.html). 
-
-### 2. Cognitive behavioral therapy (CBT) 
-
-CBT works with the **thought errors** that fuel PPPD: 
-
-- “I’m shaking → that means I’m seriously ill” - **catastrophizing** 
-- “I can’t go to the store, I’ll feel shaky there” - **avoidant behavior** 
-- “What if it’s a tumor and not PPPD?” - **hypochondriacal rumination** 
-
-CBT teaches you to notice these thoughts and not automatically react to them. It reduces anxiety → reduces muscle tension → reduces dizziness. 
-
-### 3. Exposure therapy 
-
-Exposure is **purposeful immersion** in situations that cause vertigo: 
-
-- Walking in shopping centers 
-- Traveling on the subway and public transport 
-- Being in a crowd 
-- Watch video with motion 
-
-Principle: if you avoid a frightening situation, your brain reinforces the belief that it is dangerous. If you enter it and nothing bad happens, your brain gradually stops sounding the alarm. 
-
-### 4. Physical activity 
-
-Sport is one of the most underrated tools for PPPD: 
-
-- **Cardio exercise** (running, swimming, cycling) - reduces the baseline level of anxiety 
-- **Strength training** - strengthens the proprioceptive system 
-- **Yoga and stretching** - remove muscle armor
-
-Recommendation: **30-40 minutes of moderate exercise, 4-5 times a week**. Start with walking if your current condition does not allow more. 
-
-### 5. Pharmacotherapy (SSRIs) 
-
-Medicines are not a replacement for therapy, but a **addition to it**: 
-
-- **SSRIs** (sertraline, escitalopram, paroxetine) are the only group with an evidence base for PPPD 
-- Reduce anxiety and symptoms of dizziness 
-- Begins working in 3–6 weeks 
-- Prescribed by a doctor, self-medication is unacceptable 
-
-**Important:** nootropics (Mexidol, Actovegin, Cerebrolysin, Cavinton) **have no proven effectiveness** for PPPD. 
-
-## What does NOT work for PPPD 
-
-To avoid wasting months on empty methods: 
-
-| Method | Why doesn't it work | 
-| :--- | :--- | 
-| **Neck massage** | Temporarily relieves spasm, but the command “stress” continues to come from the brain | 
-| **Manual therapy** | PPPD is a functional, not a structural disorder | 
-| **Nootropics** | There is no evidence base for PPPD | 
-| **Betagistine** | Effective for Meniere's disease, but not for PPPD | 
-| **Osteopathy** | Same problems as with manual therapy | 
-| **"Just don't think about it"** | Doesn't work without specific psychotherapeutic techniques | 
-| **Avoiding Triggers** | Strengthens PPPD in the long term | 
-
-## How long does it take to treat PPPD 
-
-Typical dynamics of recovery: 
-
-- **Weeks 1–4:** The most difficult period. Exercise may temporarily make symptoms worse. This is normal - the brain is being rebuilt. 
-- **Months 1–3:** The first “windows” are hours or days when symptoms are significantly milder. They are getting longer. 
-- **Months 3–6:** Sustained improvement. The symptoms are present, but no longer define life. 
-- **After 6 months:** Most people return to a full life. 
-
-> **Important:** Setbacks (temporary deterioration) are a normal part of recovery. This doesn't mean the treatment doesn't work. This means that the brain is rebooting. 
-
-## Frequently asked questions about PPPD treatment 
-
-**“I was diagnosed with PPPD, but I don’t believe in the diagnosis. Maybe this is something serious?”** 
-If you have undergone an MRI, ultrasound, examination by an otoneurologist - and everything is normal, then PPPD is the most likely diagnosis. For more information about what examinations are needed, see the chapter [What examinations to undergo](02_medical_checkup.html). 
-
-**“Can I treat PPPD on my own, without a psychotherapist?”** 
-Independent work is possible and effective. This book is designed to do just that. But if possible, working with a CBT therapist will speed up the process.
-
-**“I have had PPPD for 5 years. Is there anything that can help me?”** 
-Yes. Duration does not determine prognosis. Determines how systematically you work. There are people in our group who recovered after 10+ years. 
-
-**“Do I need to take antidepressants?”** 
-Not necessarily. SSRIs are a tool that helps reduce the intensity of symptoms initially. But many recover without them. The decision is made with the doctor.
+*Can PPPD be cured? Yes. Here is everything that works—and everything that doesn't.*
 
 ---
 
-> **This chapter is an overview. Each of the five treatment methods is described in detail in separate chapters of the book “Point of Support”. The first 16 chapters are free.**
+## Can PPPD Be Cured for Good?
+
+The short answer: **yes, PPPD is curable**. It is not a lifelong disease you just have to "learn to live with." It is a functional glitch in how your nervous system processes balance—and software glitches can be recalibrated.
+
+Clinical studies show that with proper multimodal treatment, **70–80% of patients achieve significant, lasting improvement**. Full recovery is a clinical reality, not a marketing slogan. The author of this book went from six months of relentless daily dizziness to a 100% recovery.
+
+Timeline: **2 to 6 months** of consistent daily practice. Not because treatment drags on artificially—but because neuroplasticity takes time, and your brain physically needs months to rewire its neural pathways.
+
+## The Five Pillars of PPPD Treatment
+
+PPPD is a multifactorial disorder (ICD-11: AB32.0). There is no single magic pill and no single miracle exercise. Only an **integrated, multimodal approach** works:
+
+### 1. Vestibular Rehabilitation (VRT Exercises)
+
+This is the physical foundation of recovery. Targeted vestibular exercises force your brain to recalibrate its balance system:
+
+- **Eye-tracking exercises** — restoring the vestibulo-ocular reflex (VOR)
+- **Head movements** — desensitizing the nervous system to motion
+- **Balance training** — single-leg stances and tandem (heel-to-toe) walking
+- **Optokinetic training** — habituating the brain to moving visual stimuli
+
+You will find the complete exercise routine in [Vestibular Rehabilitation for PPPD](06_vestibular.html).
+
+### 2. Cognitive Behavioral Therapy (CBT)
+
+CBT targets the **cognitive distortions** that keep PPPD running on a loop:
+
+- *"I'm swaying → something must be seriously wrong with me"* — **catastrophizing**
+- *"I can't go into that store, I'll get dizzy in there"* — **avoidance behavior**
+- *"What if the doctors missed a tumor and this isn't PPPD?"* — **health-anxiety rumination**
+
+CBT trains you to catch these thoughts in real time instead of reacting to them on autopilot. Lower anxiety → less protective muscle bracing → less dizziness.
+
+### 3. Graded Exposure Therapy
+
+Graded exposure means **deliberately stepping back into** the exact environments that trigger your dizziness:
+
+- Walking through shopping malls and supermarkets
+- Riding the subway and public transit
+- Navigating crowded spaces
+- Watching dynamic, fast-moving video on screens
+
+The rule is simple: every time you avoid a frightening situation, your brain locks in the belief that the place is dangerous. Every time you walk into it and nothing catastrophic happens, your brain gradually stops pulling the fire alarm.
+
+### 4. Physical Exercise
+
+Regular physical movement is one of the most underrated recovery tools in PPPD:
+
+- **Cardio** (running, swimming, cycling) — lowers your baseline anxiety
+- **Strength training** — reinforces your proprioceptive system (your brain's map of your body in space)
+- **Yoga and stretching** — releases chronic protective muscle guarding ("muscle armor")
+
+Target: **30–40 minutes of moderate activity, 4–5 times a week**. Start with plain walking if that is all your body allows right now.
+
+### 5. Medication (SSRIs)
+
+Medication is not a substitute for active rehab—it is **supportive scaffolding alongside it**:
+
+- **SSRIs** (sertraline, escitalopram, paroxetine) — the only medication class backed by clinical evidence for PPPD
+- Dial down both baseline anxiety and the intensity of dizziness symptoms
+- Take 3–6 weeks to kick in
+- Must be prescribed and monitored by a physician—self-medicating is off the table
+
+**Important:** Post-Soviet "nootropics" and "vascular boosters" (Mexidol, Actovegin, Cerebrolysin, Cavinton/vinpocetine) **have zero proven effectiveness** for PPPD.
+
+## What Does NOT Work for PPPD
+
+To save yourself months of wasted time and money on dead-end treatments:
+
+| Method | Why It Fails |
+| :--- | :--- |
+| **Neck massage** | Temporarily loosens tight muscles, while the brain keeps firing the command to brace right back up |
+| **Chiropractic / Manual therapy** | PPPD is a functional software glitch, not a structural alignment problem |
+| **Nootropics** | Zero clinical evidence for PPPD |
+| **Betahistine** | Effective for Ménière's disease, ineffective for PPPD |
+| **Osteopathy** | Fails for the exact same reason as manual therapy |
+| **"Just stop thinking about it"** | Useless without concrete CBT and attentional-retraining techniques |
+| **Avoiding triggers** | Actively entrenches and worsens PPPD over the long run |
+
+## How Long PPPD Recovery Takes
+
+Here is what a realistic recovery timeline looks like:
+
+- **Weeks 1–4:** The toughest stretch. Exercises and exposure can temporarily stir up symptoms. That is normal—your brain is recalibrating.
+- **Months 1–3:** Your first "clear windows"—hours or whole days when symptoms drop noticeably into the background. Gradually, those windows stretch longer.
+- **Months 3–6:** Steady, durable improvement. Symptoms may still flicker in the background, but they no longer dictate your life.
+- **Beyond 6 months:** Most people return to a full, unrestricted life.
+
+> **Important:** Setbacks (temporary flare-ups) are a completely normal part of recovery. A setback does not mean treatment stopped working—it means your brain is mid-reboot.
+
+## Frequently Asked Questions About PPPD Treatment
+
+**"I was diagnosed with PPPD, but I still don't trust the diagnosis. What if it's something serious?"**
+If your brain MRI, neck vessel Doppler ultrasound, and neuro-otologist exam all came back normal, PPPD is overwhelmingly the most likely diagnosis. Cross-check what you feel against [PPPD Symptoms: The Complete Checklist](36_pppg_symptoms.html) and [What Medical Tests to Get](02_medical_checkup.html).
+
+**"Can I recover from PPPD on my own, without a therapist?"**
+Yes—self-directed recovery is possible and backed by evidence; read the full breakdown in [Can You Recover from PPPD on Your Own?](48_can_pppg_be_cured_alone.html). This entire book was built as a step-by-step manual for solo daily practice. That said, if you have the option, working with a CBT therapist will speed up the process.
+
+**"I've had PPPD for 5 years. Can anything still help me?"**
+Yes. How long you have had PPPD does not determine your prognosis—how systematically you do the daily work does. People in our recovery community have made full recoveries after 10+ years of symptoms.
+
+**"Do I have to take antidepressants?"**
+Not necessarily. SSRIs are a tool that can take the sharp edge off symptoms early on, but many people recover completely without ever taking medication. For a detailed breakdown of medication options, read [Medications and Pills for PPPD](51_medications_for_pppg.html).
 
 ---
 
-### See also:
-- [Recovery Roadmap: What to Expect Each Month](77_recovery_roadmap.html)
+> **This chapter is an overview. Each of the five treatment pillars is unpacked in detail in its own dedicated chapter of *Point of Support*. The first 16 chapters are free.**
+> Related reading: [PPPD Symptoms](36_pppg_symptoms.html) · [Psychogenic Dizziness](35_psychosomatic_dizziness.html) · [What PPPD Dizziness Feels Like](37_pppg_dizziness.html)
+
+---
+
+### Further Reading:
+- [Recovery Roadmap: What to Expect Month by Month](77_recovery_roadmap.html)
 - [Your Day from Wake-Up to Sleep: The Complete Protocol](76_daily_protocol.html)
-- [How to Treat Psychosomatics: A Step-by-Step Recovery Plan](69_how_to_cure_psychosomatics.html)
+- [How to Recover from Psychosomatic Symptoms: A Step-by-Step Plan](69_how_to_cure_psychosomatics.html)

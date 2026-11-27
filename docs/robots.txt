@@ -12,6 +12,8 @@ Disallow: /r_015744dc3f28b49e.pdf
 Disallow: /chapters/*.pdf
 Disallow: /en/*.pdf
 Disallow: /en/chapters/*.pdf
+Disallow: /materials/*.pdf
+Disallow: /en/materials/*.pdf
 
 User-agent: Googlebot
 Allow: /

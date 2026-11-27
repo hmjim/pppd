@@ -468,7 +468,7 @@ async function loadChapter(index) {
                     }
                 }
 
-                chapterEl.innerHTML = marked.parse(md);
+                chapterEl.innerHTML = marked.parse(md).replace(/<p>\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(?:<br\s*\/?>|\n)?/gi, '<p><strong>$1:</strong> ');
                 chapterEl.querySelectorAll('table').forEach(t => {
                     const w = document.createElement('div');
                     w.className = 'table-wrap';

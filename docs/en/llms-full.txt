@@ -9,7 +9,7 @@
 | Guide Name | Point of Support (Точка Опоры) |
 | Author | Maxim (Engineer & Recovered PPPD Patient) |
 | Core Focus | Chronic functional balance disorders, visual vertigo, health anxiety |
-| Volume | 34 Chapters across 5 Modules |
+| Volume | 45 Book Chapters across 5 Modules + 45 Clinical Reference Guides |
 | Primary URL | https://pppd.tech/en/ |
 | ICD-11 Classification | AB32.0 |
 | Barany Society Criteria | Met (Staab et al., 2017) |

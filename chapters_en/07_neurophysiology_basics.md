@@ -1,80 +1,80 @@
-# Basic neurophysiology settings: fill the car with the right fuel
+# Baseline Neurophysiology: Putting the Right Fuel in the Race Car
 
-*Why it’s useless to meditate if you sleep for 5 hours and drown your anxiety in coffee, and how to set up your body’s hardware for recovery.*
-
----
-
-## 1. The essence and problems: morning hell and a dead battery
-
-If you have PPPD, your typical morning looks like this: you barely open your eyes, and you are already starting to feel stormy and swaying. Even before your feet touch the floor, a sticky anxiety grows in your chest, your heart is pounding, and your head seems empty and cottony. You drag yourself to the kitchen, brew a cup of strong coffee in the hope of “cheering up and collecting your brains,” but instead of vigor, all you get is increased internal tremors and tachycardia. 
-
-All day long you feel like a phone with a worn-out battery: the charge is draining before your eyes, you have no strength for anything, and every small task seems like an insurmountable obstacle. In the evening you go to bed in the hope of rest, but instead of sleep you get endless mental chewing gum (rumination) and wake up at 4 am in a cold sweat.
-
-## 2. Physiological explanation: morning peak of cortisol and adrenaline reservoir
-
-Why is morning the hardest time? This is pure physiology. Our body has a natural awakening mechanism called the Cortisol Awakening Response. 30 minutes before you wake up, the adrenal glands release a surge of cortisol (the stress hormone) and adrenaline to mobilize the body and raise blood sugar. 
-
-In a healthy person, this slight hormonal surge goes unnoticed. But in a neurotic person with PPPD, the “reservoir” of anxiety is already filled to the brim. The morning's natural surge of cortisol hits an already overheated nervous system. The brain interprets this physiological arousal as an alarm signal: * “It’s bad again, it’s shaking again!” * - it gets scared, makes a second release of adrenaline, squeezing the neck and causing that very “cotton” head.
-
-To stabilize the system, we need to tweak the body's basic biology:
-1. **Contrast shower** - trains the autonomic nervous system (vascular tone) and helps to quickly “wash away” morning cortisol, switching the system from sympathetic to parasympathetic.
-2. **Movement (10,000 steps)** - evolutionarily, our brain burns adrenaline only through the work of the leg muscles. While walking, you literally give your brain a bodily signal: * “We ran away from the tiger, the danger is behind us, we can reset our tone”*. If you are sitting on the sofa, adrenaline does not go away and continues to circulate in the blood, spasming the muscles of the neck.
-3. **Sleep hygiene and melatonin** - the sleep hormone melatonin is the main antioxidant and restorer of the nervous system. It is produced only in complete darkness. Blue light from smartphone screens an hour before bedtime reduces its production by 50%, depriving your brain of the resource for nightly repair of neural connections.
-
-## 3. Cognitive traps: “I’ll get cured first, and then I’ll get into a routine”
-
-The main cognitive trap of an excellent student in neurosis: * “I feel so bad now, what are 10,000 more steps? When it stops pumping, then I’ll go for a walk/do exercises/sleep normally.”* 
-
-It's an illusion. You're trying to pour 92-octane gasoline into a Formula 1 racing car and wonder why it sneezes and won't drive. Neuroplasticity and psychological CBT techniques will only work at 30% if your “hardware” (body) is physiologically depleted. The mode and basic settings are not a “bonus” to treatment, it is a foundation, without which the walls will collapse with any gust of wind.
-
-## 4. Point of Support: Insight
-
-> Stop demanding complex analytics from an overheated processor if you haven’t cleaned it of dust and replaced the thermal paste. Your body is a biological machine. Start with basic maintenance.
+*Why meditating is pointless when you're sleeping five hours a night and pouring coffee onto your anxiety — and how to tune your body's hardware for recovery.*
 
 ---
 
-## 5. Practice: “Basic Settings” Protocol
+## 1. The Core Problem: Morning Hell and a Dead Battery
 
-Implement these three rules every day, without compromise. Your brain needs a stable and predictable environment to believe it is safe.
+If you have PPPD, your typical morning looks like this: you barely crack your eyes open and you're already pitching and swaying. Before your feet even touch the floor, sticky anxiety pools in your chest, your heart is pounding, and your head feels hollow and stuffed with cotton. You drag yourself into the kitchen and brew a mug of strong coffee hoping to "wake up and pull your brain together" — yet instead of energy, all you get is worse internal trembling and a racing pulse.
 
-### 1. Morning Cortisol Reset Ritual
-* **Water balance:** Immediately after waking up, drink a glass of clean, warm water. This will reduce blood viscosity and ease the work of the heart.
-* **Contrast shower:** Get under the shower. Make the water comfortably warm. Then switch to cool (not ice!) for 15 seconds. Return warm water for 30 seconds. Repeat the cycle 3 times, ending with cool water. This instantly tones the blood vessels and “washes away” the morning stagnation of adrenaline.
-* **Morning meditation (10 minutes):** Perform strictly according to the safe vestibular protocol from [Chapter 47: Meditation for PPPD](47_meditation.html) (with half-open eyes and external audio accompaniment, so as not to cause an attack of unsteadiness from loss of vision). Harvard research (Hölzel, 2011) has shown that 8 weeks of regular practice physically thickens the **prefrontal cortex** (rational control area) and reduces gray matter density in the **amygdala** (fear center). You are literally growing a panic brake. Slow, rhythmic breathing stimulates the **vagus nerve**, switching the autonomic system from fight or flight mode to recovery mode. The activity of the **Default Mode Network**, the brain network where rumination and “mental chewing gum” live, also decreases. 10 minutes a day, every morning, no phones for the first 30 minutes of the day.
+All day long, you feel like a phone with a worn-out battery: your charge drains right before your eyes, you have zero strength left, and every tiny errand feels like an insurmountable wall. At night you get into bed hoping to finally rest, only to get stuck in endless mental chewing gum (rumination) and jolt awake at 4 a.m. in a cold sweat.
 
-### 2. Physical adrenaline burn (10,000 steps)
-* Buy a fitness bracelet or put a pedometer on your phone. 
-* Your task is to walk 10,000 steps outdoors every day. Walk at a medium pace. If you sway, keep your back straight and apply the “Horizon Rule” (look forward, not at your feet). Leg movement is a physiological stress reliever.
+## 2. The Physiology: The Morning Cortisol Spike and Your Adrenaline Tank
 
-### 3. Circadian Hygiene (Rule of Darkness)
-* **1 hour before bedtime:** No phones, tablets or TVs. The blue spectrum of the screen tricks the pineal gland into thinking it is daytime.
-* **Bedroom:** Hang blackout curtains or use a sleep mask. The room should be completely dark and cool.
+Why is morning the hardest part of the day? Pure physiology. Your body has a built-in wake-up mechanism called the **Cortisol Awakening Response (CAR)**. Roughly 30 minutes before you wake up, your adrenal glands release a sharp surge of cortisol (the stress hormone) and adrenaline to mobilize your body and raise blood sugar.
+
+In a healthy person, this mild hormonal surge goes completely unnoticed. When you have PPPD and chronic anxiety, however, your internal anxiety "reservoir" is already filled to the brim. That natural morning cortisol surge lands on an already overheated nervous system. Your brain misinterprets normal physiological arousal as an alarm bell: *"Here we go again — I feel awful, I'm shaking!"* It panics, fires a second wave of adrenaline, clamps your neck tight, and produces that classic "cotton-headed" fog.
+
+To stabilize the system, we have to tune your body's baseline biology:
+1. **Contrast showers** — train your autonomic nervous system (vascular tone) and rapidly "wash out" morning cortisol, flipping your system out of sympathetic overdrive and into parasympathetic recovery.
+2. **Daily movement (10,000 steps)** — evolutionarily, our brains burn off adrenaline through the rhythmic work of our leg muscles. Walking outdoors sends a literal bottom-up signal to your brain: *"We outran the tiger. The danger is behind us — safe to drop muscle tension."* If you stay parked on the couch, that adrenaline goes nowhere; it keeps circulating in your bloodstream and locking your neck muscles in spasm.
+3. **Sleep hygiene and melatonin** — melatonin isn't just a sleep hormone; it is a primary antioxidant and overnight repair agent for your nervous system. It is produced *only* in pitch darkness. Blue light from smartphone screens an hour before bed slashes melatonin output by 50%, starving your brain of the resources it needs for nightly neural repair.
+
+## 3. Cognitive Traps: "I'll Recover First, Then Fix My Routine"
+
+Here is the classic perfectionist trap in chronic anxiety: *"I feel way too awful right now — how could I possibly walk 10,000 steps? Once the swaying stops, THEN I'll go for walks, exercise, and fix my sleep."*
+
+That is an illusion. You're pouring cheap 87-octane pump gas into a Formula 1 race car and wondering why the engine sputters and stalls. Neuroplasticity and psychological CBT tools operate at barely 30% capacity when your biological "hardware" (your body) is physiologically depleted. Daily rhythm and baseline settings aren't an optional "bonus" tacked onto treatment — they are the concrete foundation. Without them, the walls will collapse in the first gust of wind.
+
+## 4. Point of Support: Key Insight
+
+> Stop demanding complex analytics from an overheating processor when you haven't blown out the dust or replaced the thermal paste. Your body is a biological machine. Start with basic hardware maintenance.
 
 ---
 
-### Homework (DZ):
-1. Implement a **morning protocol**: contrast shower → 10 minutes of meditation (using the technique from [Chapter 47](47_meditation.html)) → breakfast. Do it 7 days in a row without skipping. Record the level of unsteadiness in your diary in the morning (before the protocol) and 30 minutes later (after).
-2. Start walking **at least 10,000 steps per day**. Not necessarily for one walk - count in total.
-3. Read the section on the effects of caffeine and alcohol below. If you drink more than 2 cups of coffee, reduce it to 1 for a week and notice the difference.
+## 5. Practice: The "Baseline Settings" Protocol
+
+Lock these three rules into your daily life without compromise. Your brain needs a stable, predictable physiological environment before it will believe it is safe.
+
+### 1. Morning Cortisol-Reset Ritual
+* **Hydration:** Right after waking up, drink a full glass of plain warm water. This lowers blood viscosity after overnight dehydration and eases the workload on your heart.
+* **Contrast shower:** Step into the shower and set the water to comfortably warm. Switch to cool (refreshingly cool — never freezing ice water!) for 15 seconds. Return to warm water for 30 seconds. Repeat for 3 cycles, ending on cool water. This immediately tones blood vessels and flushes out stagnant morning adrenaline.
+* **Morning meditation (10 minutes):** Practice strictly according to the vestibular-safe protocol in [Chapter 47: Meditation for PPPD](47_meditation.html) (with half-open eyes and external audio guidance, so shutting off vision doesn't trigger a surge of unsteadiness). Harvard research (Hölzel, 2011) showed that 8 weeks of consistent practice physically thickens the **prefrontal cortex** (rational executive control) and reduces gray-matter density in the **amygdala** (the fear center). You are literally growing physical brakes for panic. Slow, rhythmic breathing stimulates the **vagus nerve**, switching your autonomic nervous system out of "fight-or-flight" and into recovery mode. It also quiets the **Default Mode Network** — the brain network where rumination and "mental chewing gum" live. 10 minutes a day, every morning, with zero phone screens during the first 30 minutes of your day.
+
+### 2. Burning Off Adrenaline Physically (10,000 Steps)
+* Get a fitness tracker or use the pedometer on your phone.
+* Your daily mission is **10,000 steps outdoors** at a moderate pace. If you feel unsteady, keep your posture tall and apply the **Horizon Rule** (look out ahead, not down at your shoes). Moving your legs is your body's built-in physiological stress incinerator.
+
+### 3. Circadian Hygiene (The Darkness Rule)
+* **1 hour before bed:** No phones, tablets, or TVs. Blue-spectrum screen light tricks your pineal gland into thinking it is still daytime.
+* **Bedroom:** Hang true blackout curtains or wear a sleep mask. Your room should be pitch-dark and cool.
 
 ---
 
-## Caffeine, alcohol, nicotine: effects on PPPD
+### Homework:
+1. Lock in the **morning protocol**: contrast shower → 10 minutes of meditation (using the technique in [Chapter 47](47_meditation.html)) → breakfast. Do it for 7 straight days without skipping. Log your morning unsteadiness score right upon waking (before the protocol) and 30 minutes afterward.
+2. Start walking **at least 10,000 steps a day**. It doesn't have to be a single long walk — cumulative daily steps count.
+3. Read the breakdown on caffeine, alcohol, and nicotine below. If you currently drink more than 2 cups of coffee a day, cut down to 1 cup for a week and notice the difference.
+
+---
+
+## Caffeine, Alcohol, and Nicotine: How They Affect PPPD
 
 ### Caffeine
-Caffeine blocks adenosine receptors, which are responsible for inhibiting the nervous system. Essentially, it “turns off the brakes” on vegetation. Result:
-*Elevated cortisol levels 2-3 hours after the cup.
-* Increased muscle tension (especially neck, jaw).
-* Deterioration in the quality of sleep (even if you drink coffee only in the morning - caffeine is eliminated within 6-8 hours).
+Caffeine blocks adenosine receptors — the brakes responsible for calming the nervous system down. Effectively, it cuts the brakes on your autonomic nervous system. The result:
+* Elevated cortisol levels for 2–3 hours after every cup.
+* Increased muscle tension (especially in your neck and jaw).
+* Degraded sleep quality (even if you only drink coffee in the morning — caffeine takes 6–8 hours to clear).
 
-**Recommendation:** Maximum 1 cup in the morning. Ideally, replace it with green tea (contains L-theanine, which softens the effect of caffeine) or cocoa (contains theobromine, a mild stimulant without affecting the vegetative system).
+**Recommendation:** Cap it at **1 cup max in the first half of the day**. Ideally, swap coffee for green tea (contains L-theanine, which smooths out caffeine's edge) or cocoa (contains theobromine — a gentle lift without slamming your autonomic nervous system).
 
 ### Alcohol
-Alcohol works as a GABA antagonist - for the first hour it relaxes, reduces anxiety, and removes unsteadiness. You feel like a “normal person.” But after 4–6 hours, a **ricochet effect** begins: the central nervous system, which was suppressed by alcohol, becomes compensatory excited. Result: morning anxiety, unsteadiness, panic - 2 times stronger than before drinking.
+Alcohol hijacks your brain's GABA system — for the first hour it sedates you, blunts anxiety, and quiets the swaying. You feel like a "normal person" again. Four to six hours later, however, the **rebound effect** kicks in: your central nervous system, artificially suppressed by alcohol, rebounds into hyperexcitability. The result: next-morning anxiety, unsteadiness, and panic twice as intense as before you drank.
 
-**Recommendation:** Complete abstinence from alcohol for at least 2 months of working on the book. Then - no more than 1-2 glasses of wine per week, only with food, not on an empty stomach. If you notice that after even 1 glass, unsteadiness returns in the morning, it means that your vegetative system is still too labile for alcohol. Wait another month.
+**Recommendation:** Cut out alcohol completely for at least your **first 2 months** of working through this book. After that — no more than 1–2 glasses of wine per week, strictly with food, never on an empty stomach. If you notice unsteadiness returning the morning after even a single glass, your autonomic nervous system is still too sensitized for alcohol. Give it another month.
 
 ### Nicotine
-Nicotine is a sympathomimetic. It directly stimulates the release of adrenaline and norepinephrine. Every cigarette is a mini-panic attack that you give yourself. Plus, nicotine constricts the blood vessels in the neck (already tight in people with PPPD), impairing cerebral blood flow.
+Nicotine is a sympathomimetic stimulant — it directly triggers surges of adrenaline and norepinephrine. Every cigarette is a mini panic response you're inflicting on yourself. On top of that, nicotine constricts blood vessels in the neck (already clamped tight in people with PPPD), impairing cerebral blood flow.
 
-**Recommendation:** Quit. Not “someday,” but now. If you can’t do it suddenly, switch to nicotine patches (they give a stable dose without adrenaline peaks from smoking). Vapes are not an alternative: they contain the same nicotine plus glycerin, which irritates the respiratory tract.
+**Recommendation:** Quit. Not "someday" — now. If you can't quit cold turkey, step down with nicotine patches (which provide a steady baseline dose without the sharp adrenaline spikes of smoking). Vapes are not a safe workaround: they deliver the exact same nicotine plus airway-irritating glycerin.

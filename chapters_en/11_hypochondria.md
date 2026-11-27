@@ -1,93 +1,93 @@
-# Hypochondria: why you won’t faint and how Google medicine is killing your nervous system
+# Hypochondria: Why You Cannot Faint from Panic and How "Dr. Google" Destroys Your Nervous System
 
-*We destroy the main fear of all alarmists, explain the physiology of pressure during panic and announce an information detox.*
-
----
-
-## 1. Essence and problems: fear of fainting and dependence on white coats
-
-If you have PPPD, your constant, paralyzing fear is passing out in the middle of the street, in the supermarket, or on the bus. It seems to you: * “My head is so weak and my legs are so weak that one more step and I’ll pass out and fall face down on the asphalt.”* Because of this, you are afraid to go out alone, you constantly check where the benches are, or you only walk along the walls, ready to lean on.
-
-Your second faithful companion is hypochondria. Your day starts with reading medical forums, PPPD groups on Telegram and articles on Google. You compare your feelings with symptoms of multiple sclerosis, brain tumor, amyotrophic lateral sclerosis and stroke. You have accumulated a giant folder with MRI, blood tests, ultrasound examination of neck vessels and neurologists’ reports. But the most paradoxical thing is: every visit to the doctor that brings the verdict “You are healthy” calms you down for exactly two hours. Then you go back to the Internet to look for “what the doctors missed.”
-
-## 2. Physiological explanation: why you physically cannot faint when you panic
-
-Let's break down the physiology of fainting down to the cogs.
-
-What is classic fainting (syncope)? This is a protective reaction of the brain to a **sharp drop in blood pressure**. When the pressure drops below a critical level, blood stops flowing to the brain in the required volume. The brain says: * “I don’t have enough oxygen. I move my body to a horizontal position so that it is easier for the heart to pump blood at the same level”* - and turns off consciousness. The body falls, the blood flow is restored, the person comes to his senses.
-
-Now let's see what happens to you during an attack of unsteadiness and a panic attack:
-1. The amygdala gets scared, the adrenal glands release **adrenaline**.
-2. Adrenaline instantly constricts peripheral blood vessels and makes the heart beat faster (tachycardia).
-3. Because of this, blood pressure **rises sharply** (for example, from 120/80 to 150/90).
-
-Physiologically, with high pressure, blood flows under great pressure to the brain. The brain is literally flooded with oxygen. Fainting in a state of panic and high blood pressure is **absolutely impossible**. Your feeling of “I’m going to fall” is just an illusion created by hyperventilation (fast breathing) and muscle spasms in the neck. Your “hard” is overloaded with nutrition, but not deficient in it.
-
-## 3. Cognitive Traps: Confirmation Bias on Google
-
-Your main trap is the illusion of control through information. You think: *“I have to find the exact reason for my unsteadiness on the Internet so that I know what to fight”*. 
-
-But the algorithms of Google and search engines work according to the laws of marketing. Articles with terrible diagnoses (tumors, sclerosis, strokes) collect millions of clicks and reposts. Articles about how “unsteadiness is just an anxiety disorder and a neck spasm” are of no interest to anyone; they hang on hundreds of pages of searches. 
-
-When you look for information about symptoms, you fall into the trap of **Confirmation Bias**. Your frightened brain ignores the phrase “in 99% of cases it’s a neurosis” and tightly clings to the phrase “in 1% of cases it’s fatal.” Every medical story you read on forums physically overloads your amygdala, starting a new cycle of the adrenaline loop. You treat the symptoms while simultaneously pouring tanks of informational poison into the brain.
-
-## 4. Point of Support: Insight
-
-> Stop playing Dr. House with the Google search bar. Your diagnosis is functional disorder. Your examinations are clear. Every click on a medical forum is a tranche of adrenaline into your adrenal glands. Declare war on those who profit from your fear.
+*Dismantling every panic sufferer's number-one fear, unpacking the blood-pressure physics of panic, and launching a strict medical-information detox.*
 
 ---
 
-## 5. Practice: Cold Turkey Protocol 
+## 1. The Core Problem: Fear of Fainting and Addiction to White Coats
 
-We are introducing strict, uncompromising quarantine on any medical information. 
+When you live with PPPD, one paralyzing fear shadows you everywhere: passing out cold in the middle of the street, a supermarket aisle, or a crowded bus. Your mind insists: *"My head feels so stuffed with cotton and my legs feel so weak that one more step and I'll black out—face-first onto the asphalt."* Because of that terror, you're afraid to go out alone, you constantly scan ahead for benches, or you walk hugging walls so you always have something to grab.
 
-### Quarantine rules: 
-1. **Deleting Bookmarks:** Delete all bookmarks with medical forums, self-help groups (where people chew on their symptoms for years) and articles about diseases. 
-2. **Google Ban:** A complete, 100% ban on Googling any bodily symptoms is being introduced. The finger itched, the eyelid twitched, swayed to the side - **no search**. Tell yourself: * “I passed the examinations. My brain is healthy. All my symptoms are autonomic noise.”* 
-3. **Switching attention:** If your hand reaches out to enter a symptom into the search bar, use the “5-4-3-2-1” technique or do 20 squats. 
+Your second constant companion is hypochondria (health anxiety). Your day starts by scrolling medical forums, PPPD group chats on Telegram, and symptom pages on Google. You cross-check every sensation in your body against multiple sclerosis, brain tumors, ALS, and stroke. You've built up a thick binder stuffed with brain MRIs, blood panels, neck artery Doppler ultrasounds, and neurologists' sign-offs. And here is the maddening paradox: every doctor's appointment that ends with the verdict *"You're completely healthy"* calms you down for roughly two hours. Two hours later, you're right back online hunting for *"what the doctors missed."*
 
-### “Closed Mouth” technique - filtering the information environment 
+## 2. The Physiology: Why It Is Physically Impossible to Faint During a Panic Attack
 
-It's not just Google. Your environment can also be a source of toxic information. There are three types of “stressors” that need to be strictly cut off: 
+Let's strip the physiology of fainting down to the bare bolts.
 
-1. **News and media.** Negative information background directly feeds the amygdala. Every news about a war, disaster or epidemic is a mini-release of cortisol. Remove news apps. Seriously. The world will not collapse without your participation. 
-2. **Toxic people.** You probably have friends who, after 10 minutes of communication, leave you feeling like the energy has been sucked out of you. They complain, shift their problems, criticize. “Closed mouth” technique: **do not discuss your condition with those who cannot help**. Don’t tell your mom, friend, or colleague about every bout of unsteadiness—their sympathy feeds your victim position. 
-3. **Forums and chats of “victims”.** Groups where people have been describing their symptoms for years and competing to see who has it worse - this is pure poison. You go there for support, and come out with three new symptoms that weren’t there before. The brain instantly tries on other people’s diagnoses for itself. **Remove from all such groups.** Leave only channels with specific recovery tools.
+What is a classic medical faint (**syncope**)? It is an emergency brain reflex triggered by a **sudden drop in blood pressure**. When blood pressure plunges below a critical threshold, your heart can no longer pump enough blood uphill to supply the brain. Your brainstem essentially says: *"Not enough oxygen up here. Putting the body horizontal so the heart can pump blood on a flat plane"*—and briefly switches consciousness off. The body drops horizontal, blood flow to the brain rebounds, and you wake right back up.
 
----
+Now compare that to what happens inside your body during a wave of unsteadiness and a panic attack:
+1. Your amygdala sounds the alarm, and your adrenal glands dump **adrenaline**.
+2. Adrenaline instantly constricts peripheral blood vessels and drives your heart rate up (**tachycardia**).
+3. Because of that, your blood pressure **spikes sharply upward** (for instance, from 120/80 to 150/90).
 
-## Reassurance-seeking: a trap for loved ones 
+Mechanically, when blood pressure rises, blood is pumped up into your brain under high pressure. Your brain is literally flooded with oxygen. Fainting while in a state of panic and elevated blood pressure is **physiologically impossible**. That terrifying *"I'm about to collapse"* sensation is nothing more than a sensory illusion generated by hyperventilation (rapid, shallow breathing) and tight neck muscles. Your hardware isn't starving for power—its power supply is running on overdrive.
 
-There is a second form of hypochondria that is not talked about much: **seeking reassurance from loved ones**. 
+## 3. Cognitive Traps: Confirmation Bias in the Search Bar
 
-You don’t just Google, you call your mom: * “Mom, I feel bad, tell me I’m not dying”*. You tug at your wife: *“Look at my pupils, are they the same?”*. You ask your friend: * “You see that I’m walking normally? Am I not wobbly?”*. 
+Your biggest cognitive trap here is the illusion of control through information. You tell yourself: *"I have to track down the exact cause of my unsteadiness online so I know what I'm fighting."*
 
-Every time they answer you *“It’s okay, you’re fine”*, you get instant relief. For 15–30 minutes. And then the anxiety returns, and you ask the same question again. This is reassurance-seeking - a behavioral drug. And it works exactly the same way as googling symptoms: short-term relief → return of anxiety → new dose → addiction. 
+Here's the catch: search-engine algorithms run on click economics, not medical probability. Terrifying diagnoses—tumors, multiple sclerosis, strokes—rack up millions of clicks and shares. Articles explaining that *"unsteadiness is just an anxiety loop combined with tight neck muscles"* bore readers to tears, so they sit buried deep in search results.
 
-**How to stop:** 
-1. Warn your loved ones: * “I will ask you questions about my health. Please don't answer them. Instead, say: “You know the answer yourself.”* 
-2. When you want to call your mom and ask, “Am I not dying?” - write this question in a notepad. Next to it, write the answer to yourself: * “No, I’m not dying. It's adrenaline. It will burn out in 5 minutes.”* 
-3. Please note: 30 minutes after you have NOT received reassurance, the anxiety will go away on its own. The brain will learn that without receiving a “dose”, it will still survive. 
+Every time you search your symptoms, you step straight into the trap of **Confirmation Bias**. Your frightened brain skips right past *"in 99% of cases this is benign anxiety"* and locks its jaws onto *"in 1% of cases it is fatal."* Every frightening patient story you read on a forum slams your amygdala, firing off yet another round of the adrenaline loop. You're trying to heal your symptoms with one hand while pouring tankfuls of informational poison into your brain with the other.
 
-## How to explain PPPD to loved ones 
+## 4. Point of Support: Core Insight
 
-Your family doesn't understand what's wrong with you. You look fine, the tests are clear, the MRI is fine. They start to think you're making it up or that you're "just nervous." It hurts. But it's not their fault - they don't know what a functional disorder is. 
-
-Here are phrases to help explain: 
-
-**For mom/dad:** 
-> *“I'm feeling dizzy, not because I'm sick, but because my brain is stuck in alarm mode. It's like a broken record. Physically everything is fine, but the nervous system is overheated. I need time and support, not advice “don’t be nervous”*. 
-
-**For partner:** 
-> *“I’m having a hard time right now, but I’m working on it. I don't need you to solve my problem. I need you to just be there and not ask every 5 minutes “are you feeling better?”*. 
-
-**For friends:** 
-> *“I’m fine, my nervous system is just malfunctioning. I don’t need to Google, I don’t need to poke nootropics either. Just invite me for a walk and don’t pay attention if I look strange.”*
+> Stop playing Dr. House in the Google search bar. Your diagnosis is a functional disorder. Your medical workups are clean. Every click on a medical forum is a direct deposit of adrenaline straight into your adrenal glands. Declare war on the algorithms profiting off your fear.
 
 ---
 
-### Homework (DZ): 
-1. **"Cold Turkey"**: delete medical bookmarks, exit neurotic chats, block medical sites. 
-2. Put on your phone screensaver: **“I’m not allowed to Google. I'm healthy. This is PPPD.”** 
-3. Go 7 days without searching Google for symptoms. Check the box every day. 
-4. Every time the thought *“What if the doctors missed something?”* appears in your head, answer it with one phrase: *“Organics are excluded. My software is buggy, but my hardware is fine.”*
+## 5. Practical Protocol: Going Cold Turkey
+
+We are enforcing a strict, zero-compromise quarantine on medical symptom-hunting.
+
+### Quarantine Rules:
+1. **Wipe Your Bookmarks:** Delete every bookmark pointing to medical forums, symptom-venting groups (where people spend years ruminating over their sensations), and articles about diseases.
+2. **100% Google Ban:** Effective immediately, Googling any bodily symptom is completely off-limits. Finger twitches, eyelid flutters, sudden sideways sway—**zero searches**. Tell yourself: *"I've completed my workups. My brain is healthy. Every symptom I feel right now is benign autonomic noise."*
+3. **Redirect Attention Immediately:** If your hand reaches for your phone to type a symptom into a search bar, immediately run the **"5-4-3-2-1" technique** or knock out 20 bodyweight squats.
+
+### The "Closed-Mouth" Technique — Filtering Your Information Environment
+
+Google isn't the only leak. Your daily environment can pump just as much toxic stress into your nervous system. Cut off these three external stressors ruthlessly:
+
+1. **News and Outrage Media.** A non-stop backdrop of bad news feeds straight into your amygdala. Every headline about war, disaster, or an epidemic triggers a micro-surge of cortisol. Delete your news apps. Seriously. The world will not fall apart without your constant monitoring.
+2. **Draining People and Symptom Talk.** You almost certainly know people who leave you feeling completely drained after ten minutes of conversation—chronic complainers, blamers, critics. Practice the **"Closed-Mouth" rule**: **stop discussing your condition with people who cannot actually help you recover**. Stop giving your mom, friend, or coworker a play-by-play of every wave of unsteadiness—well-meaning sympathy quietly feeds a victim mindset.
+3. **"Fellow Sufferer" Forums and Group Chats.** Online chats where members spend years trading symptom descriptions and competing over who has it worse are pure poison. You log on looking for support and log off carrying three brand-new symptoms you never had before—because an anxious brain instantly tries on other people's diagnoses for size. **Leave every single one of those groups.** Keep only channels focused on concrete recovery tools.
+
+---
+
+## Reassurance-Seeking: How Health Anxiety Traps Your Loved Ones
+
+There is a second form of hypochondria that rarely gets talked about: **compulsive reassurance-seeking from loved ones**.
+
+You don't just Google—you call your mom: *"Mom, I feel awful, tell me I'm not dying."* You grab your spouse: *"Look at my pupils—are they the same size?"* You quiz your friend: *"You can see I'm walking fine, right? I'm not swaying, am I?"*
+
+Every time someone answers, *"Everything's fine, you're totally okay,"* you get an instant hit of relief—for about 15 to 30 minutes. Then the anxiety creeps back in, and you ask the exact same question all over again. Clinicians call this **reassurance-seeking**, and it acts just like a behavioral drug—operating on the exact same loop as Googling symptoms: brief relief → rebound anxiety → craving a fresh hit → deeper dependence.
+
+**How to shut it down:**
+1. Warn the people closest to you ahead of time: *"I'm going to ask you reassurance questions about my health. Please don't answer them. Instead, just tell me: 'You already know the answer yourself.'"*
+2. Whenever you get the urge to call your mom and ask *"Am I dying?"*, write that question down in a notebook instead. Right next to it, write your own answer: *"No, I'm not dying. That's adrenaline. It'll burn off in 5 minutes."*
+3. Pay close attention to what happens next: 30 minutes after you do *not* get your reassurance fix, the anxiety subsides on its own anyway. Your brain learns a vital lesson—even without getting its "dose," it survives just fine.
+
+## How to Explain PPPD to Family and Friends
+
+Your family often struggles to grasp what's happening to you. On the outside you look normal, your bloodwork is clean, and your MRI is clear. Before long, people may think you're imagining things or "just working yourself up." That hurts. Yet it isn't their fault—most people have never heard of a functional neurological disorder.
+
+Here are clear, practical scripts you can use to explain it:
+
+**For Mom or Dad:**
+> *"I'm dealing with chronic dizziness—not because I have a dangerous disease, but because my brain got stuck in alarm mode, like a skipping record. Physically everything checks out fine, my nervous system just overheated. What I need right now is time and steady support, not advice to 'just stop stressing.'"*
+
+**For Your Partner:**
+> *"I'm going through a rough patch right now, and I'm actively working the recovery steps. I don't need you to fix this for me. What helps me most is just having you nearby normally—without asking me every five minutes, 'Are you feeling better yet?'"*
+
+**For Friends:**
+> *"I'm okay—my nervous system is just glitching right now. No need to Google things for me or push nootropics on me. Just keep inviting me out for walks and ignore it if I look a little awkward."*
+
+---
+
+### Homework:
+1. **Go Cold Turkey:** Delete your medical bookmarks, leave anxious symptom-swapping chats, and block medical symptom websites.
+2. Set your phone's lock screen to read: **"No Googling Allowed. I Am Healthy. It's Just PPPD."**
+3. Go **7 straight days** without running a single Google search about symptoms. Check off each day you complete.
+4. Every time the thought *"What if the doctors missed something?"* pops into your head, answer it with a single line: *"Structural disease has been ruled out. My software is glitching, but my hardware is solid."*

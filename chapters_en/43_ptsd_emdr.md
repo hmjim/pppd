@@ -1,155 +1,155 @@
-# PTSD and physical trauma: EMDR technique for PPPD 
+# PTSD and Somatic Trauma: Using EMDR for PPPD
 
-*Why the first attack of dizziness or panic turns into post-traumatic syndrome, how the amygdala gets “stuck” in that very day, and how to rewrite the traumatic trace using bilateral eye stimulation.*
-
----
-
-## 1. Essence and issues: “Event No. 0” and somatoform PTSD 
-
-Remember the day when it all began. 
-
-For some, it was acute vestibular neuronitis: the room suddenly turned around, uncontrollable vomiting began, and an ambulance arrived. Someone had a severe panic attack on the subway or at work: the heart jumped out, air did not enter the lungs, it seemed that a stroke or death would occur right now. Someone has a hypertensive crisis or severe poisoning. 
-
-We will call this day **"Event #0"**. 
-
-Most people think: * “Well, I got sick and got over it. The ambulance arrived, the doctors checked everything, the organic matter was restored. Why have I been reeling for six months now?”* 
-
-The answer lies in psychotraumatology: you have developed **somatoform PTSD (Post-traumatic stress disorder)**. 
-
-In classic PTSD (for example, in combat veterans or accident victims), the traumatic factor is an external threat. In PPPD, the traumatic factor was **your own body**. An acute attack of dizziness or panic was so shocking, helpless and frightening that your brain perceived it as an **imminent threat to survival**. 
-
-Bottom line: the body has been healthy for a long time, but the nervous system continues to live as if “Event No. 0” is happening right now.
+*Why your very first dizzy spell or panic attack can wire in a post-traumatic stress response, how the amygdala gets "stuck" in that day, and how to overwrite the trauma trace using bilateral eye stimulation.*
 
 ---
 
-## 2. Neurophysiology of trauma: why memory is not “archived” 
+## 1. The Core Problem: "Event Zero" and Somatoform PTSD
 
-Normally, any stressful experience goes through the following conveyor belt: 
+Think back to the day it all started.
 
-1. **Amygdala (amygdala)** registers danger and turns on the alarm. 
-2. **Hippocampus** assigns a time stamp and context to the event: *“This happened on May 15, 2023 at 14:00, it’s already over, we survived”*. 
-3. **Medial Prefrontal Cortex (mPFC)** packages experiences and stores them in long-term memory. 
+For some people, it was acute vestibular neuritis: the room violently spun like a carousel, relentless vomiting kicked in, and paramedics carried them out on a stretcher. For others, it was a massive panic attack on the subway or at their desk: heart hammering against their ribs, lungs refusing to draw a full breath, the absolute certainty that they were having a stroke or dying on the spot. For others, a blood pressure spike or brutal food poisoning.
 
-During psychotrauma, this conveyor **breaks**: 
+Let's call that day **"Event Zero."**
 
-* **The shock release of adrenaline and cortisol** at the moment of “Event No. 0” completely “freezes” the hippocampus. 
-* The event **does not receive a timestamp**. It is not sent to the archive. 
-* The neural network containing the original picture, the emotion of horror, muscle tension and the physiology of panic remains **isolated and hyperactive**. 
+Most people think: *"Okay, I had a medical scare and got through it. Paramedics checked me out, doctors ran every test, and whatever physical bug started it healed ages ago. So why am I still swaying six months later?"*
 
-Now any similar sensation (a slight jump in pressure, a stuffy room, eye fatigue, similar light) works as a **trigger**. The amygdala instantly opens this unprocessed container, and you experience a somatic flashback: a sharp surge of adrenaline, muscle armor, increased dizziness and horror. 
+The answer comes straight out of trauma neuroscience: you developed **somatoform PTSD (Post-Traumatic Stress Disorder)**—PTSD triggered from inside your own body.
 
-This is why logic doesn't work. You can repeat to yourself a thousand times in your head: * “I’m healthy, the MRI is clean”*. But the mPFC does not have access to the isolated amygdala network. You need to use a language that the deep brain understands.
+In classic PTSD (think combat veterans or highway pileup survivors), the trauma comes from an external threat. In PPPD, the threat came from **your own physiology**. That acute bout of vertigo or panic felt so catastrophic, helpless, and out of control that your survival brain logged it as a **near-death experience**.
+
+Bottom line: your body healed months ago, while your nervous system is still operating as if "Event Zero" is happening right this second.
 
 ---
 
-## 3. What is EMDR and how it rewires the brain 
+## 2. The Neurophysiology of Trauma: Why the Memory Never Gets "Archived"
 
-**EMDR** (Eye Movement Desensitization and Reprocessing) or **EMDR** (*Eye Movement Desensitization and Reprocessing*) is a method of psychotherapy developed by Francine Shapiro in 1987. It is one of the few methods officially recommended by the **World Health Organization (WHO)** and **FDA** for the treatment of PTSD and trauma. 
+Normally, every stressful experience moves down a three-stage neural assembly line:
 
-### How does bilateral stimulation (BLS) work? 
+1. **The amygdala** (your brain's threat detector) flags danger and pulls the alarm.
+2. **The hippocampus** stamps the event with a date, time, and context: *"This happened on May 15, 2023, at 2:00 PM; it is over, and we survived."*
+3. **The medial prefrontal cortex (mPFC)** packages the processed memory and files it away into long-term archive storage.
 
-When you rhythmically move your eyes left and right, **bilateral (two-way) stimulation** of the brain hemispheres occurs. This is analogous to the natural mechanism that occurs every night during the **REM sleep** (rapid eye movement) phase. 
+During acute trauma, that assembly line **jams**:
 
-During REM sleep, the brain processes emotions during the day. Rhythmic eye movements during waking EMDR trigger the following physiological processes: 
+* **A massive flood of adrenaline and cortisol** during "Event Zero" effectively knocks the hippocampus offline.
+* The memory **never gets a timestamp**. It never reaches long-term archive storage.
+* Instead, the raw neural cluster—holding the visual freeze-frame, sheer terror, muscular bracing, and autonomic panic physiology—stays **walled off, unindexed, and hair-trigger active**.
 
-1. **Decreased activity of the amygdala.** Bilateral eye movements activate the orientation reflex and simultaneously inhibit the amygdala through activation of the parasympathetic system. 
-2. **Synchronization of the hemispheres.** Connections between the emotional right hemisphere and the logical left are activated. 
-3. **Re-preservation of the traumatic network.** The stuck memory is retrieved from the amygdala, combined with the neural networks of the present experience (*"I am safe now"*) and rewritten by the hippocampus with the label *"This is in the past"*. 
+From that point on, any remotely similar bodily sensation—a tiny blood-pressure shift, a stuffy room, tired eyes, harsh fluorescent lighting—acts as a **trigger**. Within milliseconds, the amygdala rips open that unprocessed file, firing a full-blown **somatic flashback**: an instant adrenaline surge, protective muscle armor, surging dizziness, and dread.
 
-After a successful EMDR session, the memory of “Event No. 0” itself is not erased, but the emotional and somatic charge **completely disappears from it**. You remember that there was an attack, but your body no longer reacts to it with panic and dizziness.
-
----
-
-## 4. Cognitive Trauma Traps 
-
-### Trap #1: “I didn’t have a war or an accident, what else is PTSD?” 
-The brain absolutely doesn’t care what causes mortal horror - from an explosion or from the feeling that the floor is disappearing from under your feet and your heart is stopping. Loss of control over your own body is one of the biggest triggers of trauma. 
-
-### Trap No. 2: “I’ve already thought about this a thousand times, it didn’t help me” 
-Normal “chewing” (rumination) occurs in the left hemisphere and only strengthens the adrenaline loop. EMDR does not work through thinking, but through **combining a focus on somatic imprinting with bilateral eye movement**. 
-
-### Trap #3: “I’m scared to remember that day, in case it gets worse” 
-In EMDR you work in the so-called **"window of tolerance"**. You stand with one foot in the safe present (watching the movement of your eyes/finger), and with the other foot you only touch the past. This makes the process safe and controlled.
+That is why pep talks and pure logic fall flat. Consciously, you can tell yourself a thousand times: *"I'm healthy—my MRI came back clean."* Doesn't matter. Your mPFC doesn't have direct write-access to that walled-off amygdala circuit. To update the file, you have to speak a language the deep subcortical brain actually understands.
 
 ---
 
-## 5. Point of Support: Insight 
+## 3. What EMDR Is and How It Rewires the Brain
 
-> PPPD is not just a vestibular disorder, it is a **stuck startle reflex** from the First Attack. Your body froze on the day you felt sick. EMDR is a surgical tool that removes Event #0 from being a current threat and sends it back to where it belongs—to the archives of the past.
+**EMDR** (*Eye Movement Desensitization and Reprocessing*, known in Russian clinical literature as DPDG) is an evidence-based trauma therapy developed by Francine Shapiro in 1987. It is one of the very few therapies officially recommended by the **World Health Organization (WHO)**—and backed by **FDA**-cleared digital trauma devices and international PTSD guidelines—for resolving post-traumatic stress.
 
----
+### How Does Bilateral Stimulation (BLS) Work?
 
-## 6. Practice: Step-by-step EMDR self-help protocol 
+When you move your eyes rhythmically left and right, you create **bilateral (alternating left–right) stimulation** across both hemispheres of the brain. That directly taps into the exact built-in biological mechanism your brain runs every single night during **REM (rapid eye movement) sleep**.
 
-*Note: For severe PTSD, the protocol is conducted with a certified EMDR therapist. However, to independently process the somatic trigger “Event No. 0” in PPPD, an adapted self-help protocol is successfully used.* 
+During REM sleep, your brain digests and files away the emotional charge of the day. Triggering rhythmic bilateral eye movements while awake kicks off three physiological processes at once:
 
-### Preparation: Grounding and “Safe Place” 
+1. **Quieting the amygdala.** Bilateral eye movements trigger the brain's orienting reflex and simultaneously engage the parasympathetic brake, dialing down amygdala firing.
+2. **Synchronizing both hemispheres.** Functional connectivity opens up between the emotional, somatically wired right hemisphere and the logical, time-keeping left hemisphere.
+3. **Unlocking and updating the frozen trauma network.** The trapped memory is pulled out of isolation in the amygdala, linked up with present-day reality networks (*"I am sitting in my room right now, and I am safe"*), and finally rewritten by the hippocampus with a clean timestamp: *"This is over—it belongs to the past."*
 
-Before working with trauma, you need to create a resource anchor state in the brain: 
-1. Close your eyes. Remember a real or imaginary place where you feel completely safe and at peace (seashore, quiet room, forest clearing). 
-2. Immerse yourself in the details: what do you see, hear, feel on your skin? 
-3. Place your hands crosswise on your chest (butterfly hug) and make 10-12 slow pats with your palms on your shoulders (left-right-left-right). This is a light bilateral stimulation that “bakes” a state of rest.
-
----
-
-### Event No. 0 Rework Protocol 
-
-#### Step 1. Define the target 
-Remember the very day/attack that triggered your dizziness and anxiety. 
-* **Picture:** Select the brightest, most frightening still frame from that day (for example: *“I’m lying on the sofa, the room is spinning, an ambulance has arrived”* or *“I’m standing in a store, it’s getting dark before my eyes”*). 
-* **Negative belief (NB):** What thought about yourself arises in this frame? (*"I'm helpless"*, *"I'm dying"*, *"I have no control over my body"*, *"I'm going crazy"*). 
-* **Positive Belief (BP):** What would you like to think about yourself now when you remember this? (*"I'm safe"*, *"My body can handle it"*, *"I can handle this"*). 
-* **Emotion and somatics:** What emotion arises? (Horror, fear, hopelessness). Where in the body does it respond? (Tightness in the chest, lump in the throat, lump in the stomach, unsteadiness). 
-* **SUDS Scale (Level of Discomfort):** Rate from 0 to 10 how much of a storm you feel right now when looking at this frame (0 - complete peace, 10 - maximum horror). 
-
-#### Step 2. Starting Bilateral Stimulation (BLS) 
-
-Choose one of the methods of bilateral stimulation: 
-* **Option A (Video/App):** Turn on “EMDR ball tracking” on YouTube or on your phone (a ball moving left and right across the screen). 
-* **Option B (Manual):** Hold your index finger in front of your face at a distance of 30–40 cm. Move your finger left and right as wide as your eyes, following it only with your eyes (head still). 
-* **Option B (“Butterfly Hug”):** Hands cross across the chest, rhythmically patting the shoulders alternately with the left and right hand. 
-
-#### Step 3. Desensitization Set (Rework) 
-
-1. Hold the selected **freeze frame of “Event #0”** in your mind and the sensation in your body. 
-2. Start eye movements (or taps) in a rhythm of approximately 1-2 movements per second. 
-3. Do **25–30 passes** (movements left and right). 
-4. Stop. Take a deep breath in through your nose and out through your mouth. 
-5. Ask yourself the question: * “What is coming now? What picture, thought or sensation in the body?”* (Don’t judge, just notice - the picture may fade, change, other episodes may emerge). 
-6. Do the next set of 25-30 passes. 
-
-Repeat sets (usually 8-15 sets required). 
-**Signs of successful recycling:** 
-* The still image loses its brightness, becomes cloudy, or is deleted. 
-* Muscle tension in the body relaxes. 
-*SUDS scale is reduced from 8-10 to 0-2. 
-
-#### Step 4: Installing a Positive Belief
-
-When the level of discomfort (SUDS) has dropped to 0–2: 
-1. Connect the original still image with a **Positive Belief** (“I’m safe, my body can handle it.”*). 
-2. Do a set of 25–30 passes of bilateral stimulation. 
-3. On a scale of 1 to 7, rate how true this belief feels in your body (7 = absolutely true). Repeat sets until you reach 6-7. 
-
-#### Step 5: Body Scan 
-
-Close your eyes. Mentally run the scanner from head to toe, keeping the original event and new belief in mind. 
-If there is tension left somewhere (in the neck, stomach, chest), do 1-2 more sets of EMDR, focusing specifically on this somatic residue.
+After successful EMDR reprocessing, your factual memory of "Event Zero" isn't erased—you still remember the day happened—but its **visceral emotional and bodily charge is completely neutralized**. You can recall the attack without your body slamming on panic and dizziness.
 
 ---
 
-## 7. Practical plan for working with EMDR for PPPD 
+## 4. Cognitive Traps Around Trauma
 
-1. **Don’t try to process everything at once.** Take the most striking “Event #0” first. 
-2. **Sessions 2-3 times a week** for 15-20 minutes. 
-3. If severe anxiety arises during a session, immediately switch to the **Safe Place** technique and 4-7-8 diaphragmatic breathing (Chapter 42). 
-4. EMDR is ideally combined with **exposure** (Chapter 12): first you process the fear of a past attack through EMDR, then you take a real step into the feared situation.
+### Trap #1: "I wasn't in a war zone or a car wreck—how could I possibly have PTSD?"
+Your amygdala couldn't care less whether mortal terror came from an artillery shell or from the sudden sensation that the floor vanished beneath your feet while your heart felt ready to stop. Losing control over your own body from the inside is one of the most primal trauma triggers human beings can experience.
+
+### Trap #2: "I've replayed that day in my head a thousand times already, and it didn't help"
+Ordinary mental replay (rumination) spins inside left-hemisphere verbal loops and only feeds the adrenaline cycle. EMDR doesn't work by analyzing the memory—it works by **pairing brief attention to the somatic imprint with active bilateral stimulation**.
+
+### Trap #3: "I'm terrified to revisit that memory—what if it makes me spiral?"
+In EMDR, you operate inside what clinicians call your **"window of tolerance."** You keep one foot planted firmly in the safe present (tracking your moving finger or tapping your shoulders) while merely touching the past with the other toe. Dual attention keeps the process contained, grounded, and under your control.
 
 ---
 
-> **DZ for this chapter:** 
-> 
-> 1. Write down your **“Event No. 0”** in your notebook: the date, what happened, the most vivid still image and a negative belief (“I’m helpless”*). 
-> 2. Rate your current level of emotional charge on the SUDS scale (0–10). 
-> 3. Try the **Butterfly Hug** technique in the Safe Place exercise to get a feel for how bilateral stimulation works. 
-> 4. Conduct your first EMDR session according to the protocol (8-10 sets). Record the changed SUDS level after the session.
+## 5. Point of Support: Core Insight
+
+> PPPD isn't just a balance calibration glitch—for many people, it is a **frozen startle reflex** left over from Attack #1. Part of your nervous system is still locked in the afternoon everything went sideways. EMDR is the surgical tool that strips "Event Zero" of its "active emergency" status and files it where it belongs: in the archives of the past.
+
+---
+
+## 6. Practice: Step-by-Step Self-Guided EMDR Protocol
+
+*Clinical note: Severe, complex PTSD should always be treated alongside a certified EMDR clinician. However, for reprocessing a single somatic "Event Zero" trigger in PPPD, this adapted self-guided protocol is safe and widely used.*
+
+### Preparation: Grounding and Your "Safe Place"
+
+Before touching any stressful memory, build a physiological safety anchor in your nervous system:
+1. Close your eyes. Picture a real or imagined place where you feel 100% safe, calm, and unbothered (an empty beach at sunset, a quiet cabin, a sunlit forest clearing).
+2. Turn up the sensory resolution: What exact colors do you see? What sounds do you hear? How does the air feel against your skin?
+3. Cross your arms over your chest, resting each palm just below the opposite collarbone (**the Butterfly Hug**), and slowly tap your hands alternately—left, right, left, right—for 10–12 gentle pairs. This light bilateral stimulation "locks in" the state of calm so you can return to it anytime.
+
+---
+
+### Reprocessing Protocol for "Event Zero"
+
+#### Step 1. Define Your Target
+Bring to mind the specific episode or day that kicked off your chronic dizziness and health anxiety.
+* **Target Image:** Pick the single sharpest, scariest freeze-frame from that episode (for example: *"Lying flat on the couch watching the ceiling spin while paramedics walk in"* or *"Standing in the supermarket checkout aisle as my vision tunnels out"*).
+* **Negative Cognition (NC):** What gut-level belief about yourself goes with that snapshot? (*"I'm helpless,"* *"I'm dying,"* *"My body is out of control,"* *"I'm losing my mind"*).
+* **Positive Cognition (PC):** What realistic belief would you rather hold when looking back at that moment now? (*"I am safe now,"* *"My body survived and handled it,"* *"I can ride this out"*).
+* **Emotion & Body Sensation:** What emotion flares up right now? (Terror, dread, helplessness.) Where do you feel it physically? (Chest tightness, a lump in the throat, a knot in your stomach, swaying.)
+* **SUDS Score (Subjective Units of Disturbance):** On a scale from 0 to 10, rate how disturbing or activating that freeze-frame feels *right now* (0 = total calm, 10 = worst imaginable terror).
+
+#### Step 2. Start Bilateral Stimulation (BLS)
+
+Pick whichever bilateral stimulation method feels most comfortable (avoid rapid eye tracking if your vestibular symptoms are flaring too hard—use Option C instead):
+* **Option A (Video / App):** Pull up an "EMDR ball tracking" video on YouTube or an EMDR app on your phone/tablet and track the dot gliding left to right across the screen.
+* **Option B (Manual Finger Tracking):** Hold two fingers 12–16 inches (30–40 cm) in front of your nose. Sweep your hand smoothly from the far left edge of your visual field to the far right, keeping your head completely still and tracking strictly with your eyes.
+* **Option C ("Butterfly Hug" Tapping):** Cross your arms over your chest and tap your shoulders briskly and rhythmically—left, right, left, right.
+
+#### Step 3. Desensitization Sets (Reprocessing)
+
+1. Hold the **"Event Zero" freeze-frame** and its physical body sensation lightly in mind.
+2. Run your chosen bilateral movements (eye sweeps or shoulder taps) at a brisk pace of roughly 1–2 back-and-forth passes per second.
+3. Complete **25–30 bilateral passes** (one left–right pair = one pass).
+4. Pause. Take one slow inhale through your nose and let out a long exhale through your mouth.
+5. Ask yourself: *"What comes up right now? What image, thought, or body sensation is here?"* (Don't judge it or steer it—just notice. The image may blur, shift, or trigger a related memory, or the tightness may move.)
+6. Whatever you just noticed becomes your focus for the next set of 25–30 passes.
+
+Repeat for **8–15 sets**.
+**Signs of successful reprocessing:**
+* The mental freeze-frame loses its sharp edge, turns grainy or faded, or recedes into the distance.
+* Protective muscle tightness in your chest, throat, or gut softens and lets go.
+* Your SUDS disturbance score drops from an 8–10 down to a **0–2**.
+
+#### Step 4. Installing the Positive Cognition
+
+Once your distress score (SUDS) drops to 0–2:
+1. Pair the original memory alongside your **Positive Cognition** (*"I am safe now—my body got me through it"*).
+2. Run a set of 25–30 bilateral passes.
+3. On a scale from 1 to 7 (in EMDR, the *Validity of Cognition* scale), rate how *viscerally true* that statement feels in your gut right now (1 = feels completely false, 7 = feels 100% true). Repeat sets until it lands at **6 or 7**.
+
+#### Step 5. Body Scan
+
+Close your eyes. Hold both the original event and your new belief lightly in mind while mentally scanning your body from the crown of your head down to your heels.
+If you catch any pocket of leftover tightness (in your neck, belly, or chest), run 1–2 final sets of bilateral stimulation focused strictly on that lingering physical sensation until it clears.
+
+---
+
+## 7. Practical Game Plan for Using EMDR in PPPD
+
+1. **Don't try to clear your entire life history in one sitting.** Start strictly with your single most vivid "Event Zero."
+2. **Keep sessions to 15–20 minutes, 2–3 times a week.** Neuroplastic reprocessing continues quietly in the background during sleep over the next 24–48 hours.
+3. If anxiety spikes too high mid-session, stop reprocessing immediately and switch to your **"Safe Place"** anchor plus 4-7-8 diaphragmatic breathing (Chapter 42).
+4. Pair EMDR with **Graded Exposure** (Chapter 12) for a devastating one-two punch: first strip the trauma charge off past attacks using EMDR, then walk straight into the avoided real-world place to prove to your brain that the coast is clear.
+
+---
+
+> **Homework for This Chapter:**
+>
+> 1. Write down your **"Event Zero"** in your recovery journal: the date, what happened, your sharpest freeze-frame image, and the Negative Cognition attached to it (*"I'm helpless"*).
+> 2. Rate its current emotional charge on the SUDS scale (0–10).
+> 3. Practice the **"Butterfly Hug"** paired with the "Safe Place" exercise first so your body learns how bilateral stimulation feels in a calm state.
+> 4. Run your first 8–10 set EMDR reprocessing session using the protocol above, and log your new SUDS score afterward.

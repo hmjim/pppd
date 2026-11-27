@@ -696,6 +696,12 @@
     </button>
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
+    <div id="en-detect-banner" class="en-detect-banner" role="region" aria-label="English language switch">
+        <span>Reading in English?</span>
+        <a href="en/" class="en-detect-btn">English Edition →</a>
+        <button type="button" class="en-detect-close" aria-label="Dismiss" onclick="document.getElementById('en-detect-banner').style.display='none';try{localStorage.setItem('en_banner_dismissed','1')}catch(e){}">✕</button>
+    </div>
+
     <!-- Sidebar / Table of Contents -->
     <aside id="sidebar" class="sidebar">
         <div class="sidebar-header">
@@ -1258,8 +1264,18 @@
 
     <script src="js/app.js" defer></script>
     <script>
-        // Gate PDF downloads behind license key
+        // Gate PDF downloads behind license key & prompt non-RU human visitors with English Edition link
         (function () {
+            try {
+                if (!localStorage.getItem('en_banner_dismissed')) {
+                    var ua = navigator.userAgent || '';
+                    var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).join(',').toLowerCase();
+                    if (langs && !/\b(ru|uk|be|kk)\b/.test(langs) && !/bot|crawl|spider|slurp|lighthouse|google|yandex|bing/i.test(ua)) {
+                        var eb = document.getElementById('en-detect-banner');
+                        if (eb) eb.style.display = 'flex';
+                    }
+                }
+            } catch (e) {}
             if (localStorage.getItem('tochka-opory-license-key')) {
                 var pdfUrl = '/r_015744dc3f28b49e.pdf?v=' + Date.now();
                 var s = document.getElementById('sidebar-pdf-link');
