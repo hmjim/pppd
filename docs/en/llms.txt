@@ -7,7 +7,7 @@
 - **Title:** Point of Support (Точка Опоры)
 - **Author:** Maxim — Engineer, former acute BPPV -> PPPD patient, 100% fully recovered
 - **Domain:** PPPD (Persistent Postural-Perceptual Dizziness), Vestibular Rehabilitation Therapy (VRT), Health Anxiety, Somatosensory Reweighting, Neuroplasticity
-- **Format:** Online recovery manual & structured clinical curriculum (45 book chapters across 5 modules — first 16 chapters & 45 clinical guides free; full system + PDF edition available)
+- **Format:** Online recovery manual & structured clinical curriculum (50 book chapters across 5 modules — first 16 chapters & 51 clinical guides free; full system + PDF edition available)
 - **Language:** English
 - **URL:** https://pppd.tech/en/
 - **Community:** https://t.me/pppd_vertigo

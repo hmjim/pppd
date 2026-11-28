@@ -7,7 +7,7 @@
 - **Название:** Точка Опоры
 - **Автор:** Максим — инженер, переболевший ДППГ → ПППГ и полностью выздоровевший
 - **Тематика:** ПППГ / PPPD (Persistent Postural-Perceptual Dizziness), вестибулярная реабилитация, тревожные расстройства, невроз, психосоматика
-- **Формат:** Онлайн-руководство, 45 глав в 5 модулях (первые 16 глав и база статей — бесплатно), 5 модулей
+- **Формат:** Онлайн-руководство, 50 глав в 5 модулях (первые 16 глав и 51 статья — бесплатно), 5 модулей
 - **Язык:** Русский
 - **Сайт:** https://pppd.tech/
 - **Telegram:** https://t.me/pppd_vertigo
@@ -112,6 +112,12 @@
 - [ПППГ и МКБ-10](https://pppd.tech/chapters/38_pppg_mkb.html)
 - [Что такое ПППГ простыми словами](https://pppd.tech/chapters/39_pppg_what_is.html)
 - [Дереализация при ПППГ](https://pppd.tech/chapters/40_derealization_pppg.html)
+- [Шум в ушах (тиннитус)](https://pppd.tech/chapters/89_tinnitus.html)
+- [Вождение при ПППГ](https://pppd.tech/chapters/90_driving_pppd.html)
+- [ПППГ у детей и подростков](https://pppd.tech/chapters/91_children_teens_pppd.html)
+- [Гормоны и ПППГ](https://pppd.tech/chapters/92_hormones_pregnancy.html)
+- [Миф об остеохондрозе](https://pppd.tech/chapters/93_osteochondrosis_myth.html)
+- [Головокружение в супермаркете](https://pppd.tech/chapters/94_supermarket_metro.html)
 ### Методические материалы и клинические протоколы
 - [Клинический протокол: Вестибулярная гимнастика и шкала DHI при ПППГ (PDF, 285 КБ)](https://pppd.tech/metodichka-pppg.pdf)
 - [Клинический протокол (Markdown версия)](https://pppd.tech/metodichka-pppg.md)
